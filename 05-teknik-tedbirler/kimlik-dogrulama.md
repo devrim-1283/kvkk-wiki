@@ -1,14 +1,272 @@
 ---
-Doküman: Kimlik Doğrulama Politikası ve Standardı
-Bölüm: 05-teknik-tedbirler
-Sahip: IAM Ekip Lideri / CISO
-Onaylayan: BT Direktörü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni IdP, yeni MFA faktörü, breach trendi)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Kişisel Veri Güvenliği Rehberi — "Kullanıcı Hesap Yönetimi", "Şifreleme"
-İlgili Standart: ISO/IEC 27001:2022 A.5.16, A.5.17, A.8.5; NIST SP 800-63B (Digital Identity — Authentication); NIST CSF 2.0 PR.AA-3, PR.AA-5; OWASP ASVS V2 (Authentication); FIDO Alliance specs (FIDO2/WebAuthn)
+Doküman / Document: Kimlik Doğrulama Politikası ve Standardı / Authentication Policy and Standard
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: IAM Ekip Lideri / CISO / IAM Team Lead / CISO
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi / IT Director + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni IdP, yeni MFA faktörü, breach trendi) / Annual + triggered (new IdP, new MFA factor, breach trend)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Personal Data Security Guide — "User Account Management", "Encryption"
+İlgili Standart / Standard: ISO/IEC 27001:2022 A.5.16, A.5.17, A.8.5; NIST SP 800-63B (Digital Identity — Authentication); NIST CSF 2.0 PR.AA-3, PR.AA-5; OWASP ASVS V2 (Authentication); FIDO Alliance specs (FIDO2/WebAuthn)
 ---
+
+## English
+
+# Authentication
+
+## 1. Purpose
+
+Defines controls that prove a user, service, or device requesting access to a system **is actually the identity it claims to be**. Forms the identity side of the goal "preventing unauthorized access" under KVKK Art. 12.
+
+## 2. Definitions
+
+| Term | Definition |
+|-------|-------|
+| Authenticator | The thing used by the user to prove identity (password, hardware key, biometric, push, OTP). |
+| Factor | Knowledge, possession, inherence. |
+| MFA | Authentication with two or more **independent** factors. |
+| AAL | Authenticator Assurance Level (NIST 800-63B; AAL1, AAL2, AAL3). |
+| IdP | Identity Provider — central identity provider (Entra ID, Okta, Keycloak, etc.). |
+| SSO | Single Sign-On — access to multiple applications with a single session. |
+| FIDO2/WebAuthn | Phishing-resistant authentication based on asymmetric cryptography. |
+| Adaptive Auth | Dynamic policy that selects factor/method based on risk score. |
+
+## 3. Multi-Factor Authentication (MFA)
+
+### 3.1. MFA Requirement Matrix
+
+| Access Scenario | MFA | Preferred Factor |
+|------------------|-----|-----------------|
+| Admin / privileged account (every time) | **Mandatory** | FIDO2 (hardware) **or** authenticator app push + number matching |
+| Remote access (VPN, ZTNA, Citrix, RDS) | **Mandatory** | FIDO2 / authenticator app |
+| All applications containing personal data | **Mandatory** | Authenticator app + device compliance |
+| All corporate users (general) | **Mandatory (phased by end of 2026)** | Authenticator app |
+| Customer/data subject self-service portal | Recommended; **mandatory** for critical actions (password change, data download) | TOTP / push / WebAuthn |
+| API user | mTLS + short-lived token (not static MFA) | mTLS / signed assertion |
+
+### 3.2. Phishing-Resistant MFA Priority
+
+In line with NIST SP 800-63B AAL3 and CISA recommendations, **SMS OTP and voice call OTP are considered high-risk** and may not be used in the following situations:
+
+- All admin accounts.
+- Access to production systems containing personal data.
+- Access to corporate resources from abroad.
+
+Order of preference: **FIDO2/WebAuthn (hardware key / passkey) > Authenticator app + number matching > Authenticator app push (without number matching) > TOTP > SMS OTP (only as a last resort, for short-term transition).**
+
+### 3.3. Push Fatigue Countermeasures
+
+- **Number matching** mandatory.
+- User location/device/application info shown on the push screen.
+- Account lock after 3 failed pushes.
+- Multiple push requests by the same user in a short time triggers a SOC alarm.
+
+### 3.4. MFA Bypass Forbidden
+
+- Options like "Trusted device — skip MFA for 30 days" are disabled (only in low-risk SaaS scenarios, with KVKK Officer approval, max 7 days).
+- MFA is not skipped for service accounts; mTLS / managed identity is used.
+
+## 4. Single Sign-On (SSO) and IdP
+
+### 4.1. Single Identity Authority
+
+All corporate identities are managed in **a single IdP** (Entra ID / Okta / Keycloak / Auth0, etc.). Applications are federated to this IdP via **SAML 2.0 or OpenID Connect (OIDC)** wherever possible.
+
+### 4.2. Federation Benefits
+
+- Joiner/Mover/Leaver controlled from a single point.
+- MFA, conditional access, adaptive auth policies applied **in one place**.
+- Password-based attack surface reduced (user does not hold application passwords).
+- Logs in one place — SIEM correlation simplified.
+
+### 4.3. SAML / OIDC Implementation Standards
+
+- SAML signing algorithm at minimum **RSA-SHA256** or **ECDSA-SHA256**. SHA-1 forbidden.
+- Audience, recipient, NotOnOrAfter validation mandatory in SAML response.
+- OIDC: PKCE (Proof Key for Code Exchange) mandatory for **public clients**. Implicit flow forbidden.
+- ID token validation: signature + issuer + audience + nonce.
+- Refresh token ROTATE on use, all chain revoked on leak detection.
+- Token lifetimes: access token ≤ 60 min, refresh token ≤ 30 days (shorter if not used).
+
+### 4.4. Conditional Access / Adaptive Authentication
+
+Examples of dynamic policies based on risk score:
+
+```
+IF user IN "Admins"
+   AND signin_country NOT IN ("TR", "DE", "GB")
+THEN block
+
+IF resource = "Customer-Data-App"
+   AND device_compliant = false
+THEN require_MFA + block_download
+
+IF risk_level = "high" (atypical travel, leaked credential)
+THEN require_password_change + require_MFA + notify_SOC
+
+IF login_time NOT IN business_hours AND user IN "Privileged"
+THEN require_PIM_elevation_approval
+```
+
+## 5. Password Policy (NIST SP 800-63B Compliant)
+
+### 5.1. Philosophy Shift
+
+The KVKK Personal Data Security Guide's "strong password" approach is compatible with the modernized **NIST 800-63B-4** approach. The essence of the modern approach:
+
+- **Length** > complexity.
+- **Periodic forced rotation** ineffective; force change only **on suspicion**.
+- **Dictionary + breach corpus** check mandatory.
+- Instead of complexity enforcement (upper/lower/digit/special), password strength is measured by **actual entropy**.
+
+### 5.2. Standard Password Rules
+
+| Parameter | Rule |
+|-----------|-------|
+| Minimum length (user) | 12 characters |
+| Minimum length (admin) | 16 characters (alongside FIDO2) |
+| Maximum length | At least 64 characters supported |
+| Allowed characters | All printable Unicode + space (passphrase encouragement) |
+| Complexity requirement | **None** (substituted by dictionary check) |
+| Dictionary check | Top 100k password list + organization names + username variations |
+| Breach corpus check | Have I Been Pwned API or offline breach database |
+| Password age | **No forced rotation** unless leak / suspicion / privileged rotation |
+| Privileged password age | 90–180 days; automatic rotation under vault management |
+| Password hint / question | Forbidden |
+| Sending in cleartext | Forbidden (neither SMS nor email) |
+| Copy-paste of password | Allowed (password manager encouragement) |
+| Hash | Argon2id (preferred) / bcrypt (cost ≥ 12) / scrypt; SHA-1, MD5, plain SHA-2 forbidden |
+| Salt | Unique per account, ≥ 16 bytes |
+| Pepper | Optional; if applied, kept in HSM/KMS |
+
+### 5.3. New Password Setting Flow
+
+1. User generates the password in a recommended password manager (Bitwarden, 1Password Enterprise, etc.) vault.
+2. The form provides **instant feedback** for 800-63B-compliant passwords (weak/known → reject).
+3. Password is hashed (Argon2id), only hash + salt is written to DB.
+4. Event is logged (person, time, IP, user agent), password value not logged.
+
+### 5.4. Password Leak Response
+
+- IdP integrated with breach feed. If a match is detected, the account is flagged as "force change."
+- When the user logs in again, password change + invalidation of all active sessions + SIEM event.
+
+## 6. Account Lockout and Brute-Force Protection
+
+| Event | Threshold | Action |
+|------|------|---------|
+| Failed password attempt | 10 (rolling 15 min) | 15 min soft lock + CAPTCHA |
+| Failed MFA attempt | 5 (rolling 10 min) | 30 min lock + SOC alarm |
+| Suspicious IP / ASN | – | IP rate limit, ASN-based block (botnet) |
+| Same user 5 different countries | < 1 hour | Automatic password reset force + MFA challenge |
+| Successful login from known breach password | 1 | Account freeze + manual verify + mandatory reset |
+
+Account lock **is automatically released** (time-based); permanent lock is applied only after SOC analysis.
+
+## 7. Service Account and API Key Management
+
+### 7.1. Service Account Principles
+
+- Each service account is assigned **to one application / one task**; sharing forbidden.
+- Cannot be linked to a person; team / system owner assigned.
+- If possible, **not used**: instead, managed identity (Azure MI, AWS IAM Role, GCP Workload Identity Federation, Kubernetes ServiceAccount + OIDC).
+- If a static secret is required, on a **vault**, with automatic rotation (≤ 90 days), short-lived token generation.
+- Service account interactive login is **disabled** (Deny logon locally / no shell).
+
+### 7.2. API Key Standards
+
+- API key length at least 256 bits of entropy (32 bytes random, base64url).
+- The key is stored in DB as a **hash**; cleartext is shown only once at creation.
+- Per key: scope, rate limit, IP allowlist, validity period (≤ 1 year, ≤ 180 days for prod).
+- Key rotation automatic or scheduled.
+- Code repository scanning (gitleaks, trufflehog) mandatory in CI for key leak detection.
+
+### 7.3. OAuth 2.0 / OIDC Client Types
+
+- **Confidential client** (server): client secret in vault, Authorization Code Flow + PKCE.
+- **Public client** (SPA, mobile): no client secret, Authorization Code + PKCE mandatory.
+- **Machine-to-machine:** Client Credentials Flow + mTLS mandatory.
+
+## 8. Federated Identity and External Users
+
+### 8.1. B2B (Vendor/Consultant)
+
+- Where possible, guest user (B2B guest) added via IdP.
+- Account **automatically expires** with the contract end date.
+- Whitelist of resources guest accounts can access; default deny across the entire tenant.
+- MFA mandatory for guest sessions, no local account password (federation from their own tenant).
+
+### 8.2. B2C (Data Subject / Customer)
+
+- Separate CIAM (Customer IAM) tenant — do not mix with corporate IAM.
+- Email + password + optional WebAuthn passkey at registration.
+- If social login (Google, Apple) is supported, "minimum claims" are taken (reflected in the privacy notice).
+- Self-service account deletion (within KVKK Art. 11 rights) — see 09-ilgili-kisi-basvurulari.
+
+## 9. Linking Device Security with Identity
+
+- Device compliance (MDM/Intune): disk encrypted, AV up to date, OS up to date, not jailbroken/rooted.
+- Certificate-based device identity (mTLS) on critical applications.
+- BYOD policy separate (06-idari-tedbirler) together; work profile (Android Work Profile, iOS supervised) mandatory.
+
+## 10. Session Management
+
+| Parameter | Value |
+|-----------|-------|
+| Idle timeout (personal data application) | 15 minutes |
+| Idle timeout (general corporate) | 60 minutes |
+| Absolute session length | 12 hours (then re-authenticate) |
+| Session ID generation | ≥ 128 bit, cryptographically random |
+| Session cookie | HttpOnly, Secure, SameSite=Lax/Strict |
+| Logout | Server-side session invalidation, option to logout from all devices |
+| Concurrent session policy | Single session for admin accounts; allowed for general users with listing of every session |
+
+## 11. Self-Service and Account Recovery
+
+- Password reset: registered email + MFA + **not** a knowledge question (against NIST). Account recovery flow must be at least equal to MFA strength.
+- "Forgot MFA": identity verification through help desk, video call + ID document (in office) + second manager approval (against social engineering). This process is logged and visible to SOC.
+
+## 12. Identity Events to Log
+
+- Successful/failed login (user, IP, user agent, result).
+- MFA challenge result.
+- Password change/reset.
+- New device registration.
+- Persistent session (refresh) renewal.
+- Federation assertion.
+- Privilege elevation.
+- Account lock/unlock.
+- Service account creation/deletion/secret rotation.
+
+## 13. Checklist
+
+- [ ] Do all admin accounts log in with phishing-resistant MFA?
+- [ ] Is MFA mandatory for remote access?
+- [ ] Is SMS OTP disabled for admins/critical?
+- [ ] Is SSO coverage 95%+ (across application inventory)?
+- [ ] Is the password policy NIST 800-63B compliant (length, breach check)?
+- [ ] Is the password hash algorithm Argon2id/bcrypt?
+- [ ] Are account lockout + brute-force protection rules active?
+- [ ] Is managed identity used instead of service accounts?
+- [ ] Is API key rotation automatic?
+- [ ] Do guest accounts auto-expire when the contract ends?
+- [ ] Is device compliance mandatory for critical application access?
+- [ ] Are session timeout values policy-compliant?
+- [ ] Do all identity events go to SIEM?
+- [ ] Has account recovery been hardened against social engineering?
+- [ ] Are push fatigue defenses (number matching) active?
+
+## 14. KPI and Measurement
+
+- MFA coverage: 100% (admins, remote, personal data applications); general 95%+ (year-end target).
+- Password reset rate (helpdesk load): monthly tracking, user training trigger.
+- Phishing-resistant MFA rate: 75%+ (year-end), 100% (2 years).
+- Number of static secrets tied to service accounts: monthly decreasing trend.
+- Number of access attempts from non-compliant device: SOC dashboard.
+
+---
+
+## Türkçe
 
 # Kimlik Doğrulama
 

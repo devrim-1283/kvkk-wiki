@@ -1,13 +1,312 @@
 ---
-Doküman: Bağlayıcı Şirket Kuralları (BCR) Rehberi
-Bölüm: 07-aktarim
-Sahip: Hukuk Müdürlüğü + KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Yönetim Kurulu (BCR'nin kendisi)
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, grup yapısı değişikliği, Kurul yardımcı kılavuz güncellemesi)
-İlgili Mevzuat: KVKK m.9/4-(b); Kurul'un 04.06.2024 tarihli ve 2024/959 sayılı kararı (BCR Başvuru Formları + Yardımcı Kılavuz)
+Doküman / Document: Bağlayıcı Şirket Kuralları (BCR) Rehberi / Binding Corporate Rules (BCR) Guide
+Bölüm / Section: 07-aktarim
+Sahip / Owner: Hukuk Müdürlüğü + KVKK Sorumlusu / Legal Department + KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Yönetim Kurulu (BCR'nin kendisi) / Legal Director + Board of Directors (the BCR itself)
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (regulatory change, group structure change, Board helper guidance update)
+İlgili Mevzuat / Legal Reference: KVKK Art. 9/4-(b); Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024 (BCR Application Forms + Helper Guidance)
 ---
+
+## English
+
+# Binding Corporate Rules (BCR) Guide
+
+## 1. What are BCRs?
+
+**Binding Corporate Rules (BCR)** are internal rules — **prior-approved by the Personal Data Protection Board** and **binding all group companies** — that companies within the **same group of undertakings** will apply to cross-border transfers of personal data.
+
+Pursuant to KVKK Art. 9/4-(b), where Board-approved BCRs exist + the Art. 5/Art. 6 processing condition is satisfied, intra-group cross-border transfers can be made **without further Board authorization**.
+
+## 2. Scope and Limits of BCRs
+
+### 2.1. Scope
+
+BCRs are valid only for transfers between companies within the **same group of undertakings**. A group of undertakings means a community of legal persons under a single control structure. Typical structures:
+
+- Parent + affiliates (domestic and overseas),
+- Holding structures,
+- Multinational groups.
+
+### 2.2. Limits
+
+- **Out-of-group transfer:** Cannot be made under BCR; standard contract or another appropriate safeguard is required.
+- **Independent partners of group companies:** Outside BCR scope.
+- **Joint venture (JV):** A JV can be included if it sits in a group-equivalent control structure; otherwise, outside the scope.
+
+### 2.3. BCR + Art. 5/Art. 6 Processing Condition
+
+BCR legitimizes the transfer route; it does not legitimize the processing condition. Before transfer:
+
+- A processing condition under Art. 5 (general) or Art. 6 (special category) must be satisfied,
+- The data subject must have been informed.
+
+## 3. Board Approval Requirement
+
+A BCR is valid only if **prior-approved by the Board**. Approval process:
+
+```
++--------------------------------------------------+
+| 1. Drafting of intra-group BCR                   |
+| (KVKK Officer + Legal Department, in a joint     |
+| group process)                                   |
++--------------------------------------------------+
+                      |
+                      v
++--------------------------------------------------+
+| 2. Internal approvals (Board of each group       |
+| company)                                         |
++--------------------------------------------------+
+                      |
+                      v
++--------------------------------------------------+
+| 3. Application to the Authority — using the      |
+| BCR Application Form published by the Board      |
++--------------------------------------------------+
+                      |
+                      v
++--------------------------------------------------+
+| 4. Board's review and request for additional     |
+| information (may take months)                    |
++--------------------------------------------------+
+                      |
+                      v
++--------------------------------------------------+
+| 5. Board's approval or request for additional    |
+| changes                                          |
++--------------------------------------------------+
+                      |
+                      v
++--------------------------------------------------+
+| 6. Post-approval: no further authorization       |
+| required for intra-group transfers. Disclosure + |
+| inventory updated.                               |
++--------------------------------------------------+
+```
+
+The process is **long**; can run on a months-to-years scale. It is a strategic decision; not suitable for one-off transfers.
+
+## 4. Minimum Required Elements in BCR
+
+The **helper guidance** issued with Board Decision No. 2024/959 dated 04.06.2024 sets out the core elements that must be present in a BCR. At a practical level the following must be included:
+
+### 4.1. Structural Elements
+
+| Element | Description |
+|---------|-------------|
+| BCR scope | Which group companies, which data categories, which processing purposes, which recipient countries |
+| Bindingness | That BCR is binding on all group companies; internal control mechanism |
+| Third-party-beneficiary | Direct enforceability of BCR provisions by data subjects |
+| Jurisdiction | Jurisdiction of Turkish courts; accepted by foreign party |
+| Governing law | Republic of Turkey law |
+
+### 4.2. Data Protection Principles
+
+The BCR must include the following principles in compliance with KVKK:
+
+- Lawful and fair processing,
+- Accurate and, where necessary, up-to-date,
+- Specific, explicit and legitimate purposes,
+- Related to, limited to and proportionate to the purpose,
+- Retention duration suited to purpose,
+- Data minimization,
+- Data security (KVKK Art. 12),
+- Transparency and disclosure.
+
+### 4.3. Data Subject Rights
+
+The BCR must enable data subjects to exercise:
+
+- All rights under KVKK Art. 11,
+- Information about transfer,
+- Direct reliance on BCR provisions as third-party beneficiaries,
+- Right to complain (Authority, courts, intra-group complaint mechanism).
+
+### 4.4. Liability and Indemnity
+
+- The Turkish group company is **primarily liable** for damages from BCR breach,
+- Acceptance of liability by the foreign group company,
+- Burden of proof on the breaching party,
+- The person in Turkey can pursue indemnification before Turkish courts.
+
+### 4.5. Training and Awareness
+
+- Annual BCR training for all group employees,
+- Additional training for units with data processing roles,
+- Training attendance records.
+
+### 4.6. Audit and Internal Control
+
+- Periodic intra-group audit (at least annually),
+- Independent internal audit team or external auditor,
+- Audit reports submitted to top management,
+- Reporting obligation to the Board (upon request).
+
+### 4.7. Breach Management
+
+- Intra-group breach notification line,
+- Notification to the Authority within 72 hours,
+- Notification to affected data subjects,
+- Breach record system.
+
+### 4.8. Complaint Mechanism
+
+- Single point of contact within the group (KVKK Officer),
+- Independent complaint review,
+- Response within 30 days,
+- Path to Authority/courts open if response unsatisfactory.
+
+### 4.9. Update
+
+- Update of BCR upon regulatory changes,
+- Renotification to the Board for significant changes,
+- Version management and recordkeeping.
+
+### 4.10. Validity and Termination
+
+- Effective date of BCR,
+- Conditions for termination/cancellation,
+- Transitional measures and data destruction upon termination.
+
+## 5. BCR Application Process
+
+### 5.1. Preparation Phase
+
+| Step | Time | Owner |
+|------|------|-------|
+| Mapping group structure | 2-4 weeks | Legal + Strategy |
+| Scope and transfer inventory | 4-8 weeks | KVKK Officer + Group IT |
+| Drafting BCR | 8-12 weeks | Legal + KVKK Officer |
+| Group company review | 4-6 weeks | All companies |
+| Board approvals | 2-4 weeks | Each company's Board |
+| Filling in application form | 2 weeks | KVKK Officer |
+
+### 5.2. Board Phase
+
+The Board's review and decision time depends on additional information requested. Typical duration: **6-18 months**.
+
+### 5.3. Post-Approval
+
+After approval:
+- Disclosures are updated (BCR reference added),
+- Transfer inventory and VERBİS updated,
+- Internal training delivered,
+- Periodic audit calendar started.
+
+## 6. BCR Comparison
+
+### 6.1. BCR vs Standard Contract
+
+| Dimension | BCR | Standard Contract |
+|-----------|-----|-------------------|
+| Scope | Intra-group | Any cross-border party |
+| Approval process | Prior Board approval (long) | Notification to Authority (5 business days) |
+| Initial investment | High (months-years) | Low (days-weeks) |
+| Sustainability | Very high; whole group at once | Separate per pair |
+| Flexibility | High (all intra-group transfers) | No deviation from contract |
+| Cost | High (legal, consultancy) | Low |
+| Scale | Large multinationals | Any scale |
+
+### 6.2. Who Should Do BCR?
+
+BCR makes sense when:
+
+- The group operates in at least 3-4 countries,
+- Frequency of intra-group cross-border transfers is high,
+- HR, Finance, IT management is centralized in one group company (in or outside Turkey),
+- Signing a separate standard contract per transfer creates operational cost,
+- The group wishes to manage its privacy culture under a single uniform framework.
+
+BCR is **not appropriate** when:
+
+- Transfers are with only one or two foreign companies (standard contract is sufficient),
+- Group structure changes frequently,
+- The lengthy approval process is at odds with commercial speed.
+
+## 7. BCR Content — Summary Checklist
+
+- [ ] Group companies fully listed
+- [ ] Material scope (data categories, purposes, recipient countries) documented
+- [ ] Data protection principles (KVKK Art. 4) included
+- [ ] Data subject rights (Art. 11) included
+- [ ] Third-party-beneficiary clause present
+- [ ] Turkish law and Turkish court jurisdiction stated
+- [ ] Liability and indemnity provisions present
+- [ ] Training and awareness program stated
+- [ ] Periodic audit mechanism defined
+- [ ] Breach management (72-hour notification) included
+- [ ] Complaint mechanism and single point of contact defined
+- [ ] Update and version management procedure present
+- [ ] Termination and transition provisions included
+- [ ] Board resolutions of all group companies obtained
+- [ ] Application form completed and submitted to the Authority
+
+## 8. Common Mistakes
+
+| Mistake | Result | Mitigation |
+|---------|--------|------------|
+| Transferring under BCR without approval | No appropriate safeguard; KVKK Art. 18 fine risk | Use standard contract until approval |
+| Trying to use BCR with a non-group company | Outside BCR scope | Standard contract for non-group |
+| Assuming BCR is approved for a sub-group | No automatic continuity on structural change | Notify Board on structural change; reapply if needed |
+| BCR approved but no Art. 5/6 processing condition | Transfer not lawful | Processing condition required separately for each transfer |
+| Choosing foreign law instead of Turkish in BCR | BCR rejected by Board | Turkish law and Turkish court jurisdiction |
+| Missing third-party-beneficiary clause | Data subjects cannot exercise rights; rejected | Mandatory under Board guidance |
+| Vague training/audit mechanism | Board asks for more information; process drags | Concrete, measurable commitments |
+
+## 9. Post-BCR Lifecycle
+
+```
+Board Approval
+    |
+    v
++--------------------------+
+| Annual Outputs           |
+| - Training report        |
+| - Audit report           |
+| - Breach statistics      |
+| - Complaint statistics   |
++--------------------------+
+    |
+    v
++--------------------------+
+| Regulatory/Board         |
+| Decision Change          |
+| - Impact analysis        |
+| - BCR update             |
+| - Notification to        |
+|   Authority              |
++--------------------------+
+    |
+    v
++--------------------------+
+| Group Structure Change   |
+| - Adding new company     |
+| - Company leaving        |
+| - Notification to Board  |
++--------------------------+
+    |
+    v
++--------------------------+
+| 4-Year Review            |
+| - Whether BCR is         |
+|   sustainable            |
+| - Compatibility with new |
+|   Board decisions        |
++--------------------------+
+```
+
+## 10. Legal References and Sources
+
+- KVKK Art. 9/4-(b)
+- Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024
+- Authority's published **BCR Application Form** (separate for controller and processor)
+- Authority's published **BCR Helper Guidance** (for minimum content elements)
+- "Public Announcement on Documents Regarding Standard Contracts and Binding Corporate Rules"
+
+---
+
+## Türkçe
 
 # Bağlayıcı Şirket Kuralları (BCR) Rehberi
 

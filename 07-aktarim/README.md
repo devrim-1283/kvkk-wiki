@@ -1,13 +1,146 @@
 ---
-Doküman: Kişisel Verilerin Aktarımı — Bölüm Girişi
-Bölüm: 07-aktarim
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, Kurul kararı, yeni tedarikçi/aktarım rotası)
-İlgili Mevzuat: 6698 sayılı KVKK m.5, m.6, m.8, m.9; 12.03.2024 tarihli ve 7499 sayılı Kanun (yürürlük 01.06.2024); KVKK Kurul'un 04.06.2024 tarihli ve 2024/959 sayılı kararı (Standart Sözleşmeler ve BCR); Kurul'un yeterli korumalı ülkeler listesi
+Doküman / Document: Kişisel Verilerin Aktarımı — Bölüm Girişi / Personal Data Transfers — Section Introduction
+Bölüm / Section: 07-aktarim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (regulatory change, Board decision, new vendor/transfer route)
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 5, 6, 8, 9; Law No. 7499 dated 12.03.2024 (effective 01.06.2024); Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024 (Standard Contracts and BCRs); Authority's adequacy decision country list
 ---
+
+## English
+
+# Section 07 — Personal Data Transfers
+
+## 1. Purpose of the Section
+
+This section regulates the entire operational and legal framework for the data controller's transfer of personal data domestically (KVKK Art. 8) and abroad (KVKK Art. 9). With **Law No. 7499 on the Amendment of the Code of Criminal Procedure and Other Laws**, published in Official Gazette No. 32487 dated 12.03.2024, KVKK Art. 9 was substantially revised; the new regime entered into force on **01.06.2024**.
+
+The new regime envisages a **tiered architecture** for cross-border transfers:
+
+1. An **adequacy decision** for the destination country / sector / international organization;
+2. **Appropriate safeguards** (4 sub-methods);
+3. **Occasional/incidental cases** (a closed list of 6 exceptional cases).
+
+By Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024, the **standard contractual clauses (SCC) / standard contract texts** and **Binding Corporate Rules (BCR) application forms** along with helper guidelines have been published.
+
+Note on terminology: Turkey's "standard contract" is a domestic regime under KVKK Art. 9/4-(c) and is distinct from EU GDPR Standard Contractual Clauses (SCCs); they are not interchangeable.
+
+## 2. Section Contents
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 1 | [README.md](README.md) | Section introduction (this document) |
+| 2 | [yurtici-aktarim.md](yurtici-aktarim.md) | KVKK Art. 8 — domestic transfer regime |
+| 3 | [yurtdisi-aktarim-rejimi.md](yurtdisi-aktarim-rejimi.md) | KVKK Art. 9 — tiered regime, decision tree |
+| 4 | [standart-sozlesme-rehberi.md](standart-sozlesme-rehberi.md) | Standard contract application; notification flow |
+| 5 | [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md) | BCR scope, prior Board approval |
+| 6 | [arizi-aktarim.md](arizi-aktarim.md) | Occasional/incidental cases (Art. 9/6) — 6 exceptions |
+| 7 | [aktarim-degerlendirme-formu.md](aktarim-degerlendirme-formu.md) | Fillable form + samples |
+
+## 3. Transfer Regime Top View
+
+```
++------------------------------------------------------------+
+|                    PERSONAL DATA TRANSFER                  |
++------------------------------------------------------------+
+                              |
+              +---------------+----------------+
+              |                                |
+              v                                v
++--------------------------+    +--------------------------+
+| DOMESTIC (Art. 8)        |    | CROSS-BORDER (Art. 9)    |
+|                          |    |                          |
+| - Art. 5/Art. 6 condition|    | + TIERED REGIME:         |
+| - Separately required    |    |                          |
+|   for transfer too       |    |   1. Adequacy decision   |
+| - Explicit consent or    |    |   2. Appropriate         |
+|   exceptions             |    |      safeguards          |
+| - Contract obligation    |    |   3. Occasional cases    |
+|                          |    |                          |
+|                          |    | + Art. 5/6 condition is  |
+|                          |    |   separately required    |
+|                          |    |   on every path          |
++--------------------------+    +--------------------------+
+```
+
+## 4. Key Definitions and Distinctions
+
+### 4.1. Transfer
+
+KVKK does not explicitly define "transfer"; however, transfer is interpreted as **granting access** or **physically/digitally transmitting** personal data to another natural/legal person. Transfer covers all of the following:
+
+- Transfer by contract (supplier, service provider),
+- De facto sharing (email, file transfer),
+- Granting access via API,
+- Cloud hosting (counts as transfer if on the provider's infrastructure),
+- Remote access (a foreign office connecting to a system in Turkey).
+
+### 4.2. Controller — Processor Transfer
+
+Transfer can be **controller → processor** or **controller → controller**. They give rise to different obligations:
+
+| Dimension | C → P | C → C |
+|-----------|-------|-------|
+| Contract type | Data Processing Agreement (within meaning of KVKK Art. 12) | Transfer agreement + each party's independent KVKK compliance |
+| Control | C determines purpose and means; P acts on instructions | Both parties determine their own purpose and means |
+| Disclosure | C performs | Each party performs for its own role |
+| Liability | C primarily liable for P's breach | A breach by one does not automatically create liability for the other |
+| Joint controllership | Not present | Possible — reasoned analysis required |
+
+### 4.3. Domestic vs Cross-Border
+
+A transfer is "cross-border" when data is **physically written to a server outside Turkey** or **a natural/legal person abroad can access it**. Even if a cloud provider has a Turkey region, cross-border transfer may be triggered depending on the provider's foreign support/admin/access rights. A **Transfer Impact Assessment (TIA)** is required to clarify this.
+
+## 5. Common Obligation: Art. 5 and Art. 6 Processing Condition
+
+In both domestic and cross-border transfers, **before** transfer, the processing of the data must be grounded in a condition under KVKK Art. 5 (general) or Art. 6 (special category). The transfer itself is grounded separately:
+
+- Domestic: Art. 8 provisions,
+- Cross-border: Art. 9 provisions (adequacy / appropriate safeguard / occasional).
+
+Both grounds must be satisfied independently. An existing processing condition does not by itself legitimize transfer.
+
+## 6. Responsibilities
+
+| Role | Responsibility |
+|------|----------------|
+| Board of Directors | Approval of cross-border transfer strategy; acceptance of standard contract templates |
+| KVKK Officer | Management of transfer inventory; Transfer Impact Assessment (TIA) for each transfer; standard contract notifications; notification to the Authority within 5 business days |
+| Legal Department | Legal review of contract texts; analysis of recipient country law; Board permission applications |
+| Information Security | Implementation of technical measures (encryption, key management, supplementary measures); security of transfer infrastructure |
+| Procurement | Reflecting standard contract/DPA requirement at the tender stage |
+| IT | Technical implementation of transfer; cloud provider selection backed by compliance analysis |
+| Business Units | Notify the KVKK Officer of new transfer requests; business rationale |
+
+## 7. Relationship of This Section to Other Sections
+
+- **02 — Inventory and Registry:** The transfer inventory (recipient, country, category, basis) is the data source of this section; reflected in VERBİS notification.
+- **03 — Disclosure and Explicit Consent:** Where the legal basis for transfer is explicit consent, the consent text is written consistently with this section.
+- **05 — Technical Measures:** Supplementary technical measures in transfer (encryption, IP filtering, key management).
+- **08 — Breach Management:** Breach records in cross-border transfers require additional care.
+- **10 — Special Topics:** Cloud, call center, e-commerce transfer routes.
+
+## 8. Audit and KPIs
+
+- Transfer count consistency with the inventory
+- Share of transfers with signed standard contract (>95% target)
+- Notification rate within 5 business days (100% target)
+- Transfers without completed TIA (=0 target)
+- Share of cross-border transfers based on explicit consent (kept as low as possible; consent is revocable)
+
+## 9. Legal References
+
+- Law No. 6698 (KVKK) — Art. 5, 6, 8, 9 (as amended by Law No. 7499 dated 12.03.2024)
+- Official Gazette No. 32487 dated 12.03.2024 — Law No. 7499 (effective 01.06.2024)
+- Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024 — Standard Contracts and BCR
+- "Adequacy List of Countries" maintained on the Authority's website
+- "Guide on Cross-Border Transfer" issued by the Authority
+
+---
+
+## Türkçe
 
 # Bölüm 07 — Kişisel Verilerin Aktarımı
 

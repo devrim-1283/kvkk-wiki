@@ -1,14 +1,429 @@
 ---
-Doküman: KVKK ve Bilgi Güvenliği İç Denetim Standardı
-Bölüm: 06-idari-tedbirler
-Sahip: İç Denetim Yöneticisi / Denetim Komitesi
-Onaylayan: Denetim Komitesi + Yönetim Kurulu
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık
-İlgili Mevzuat: 6698 sayılı KVKK m.12 (uyum yükümlülüğü); KVKK Veri Güvenliği Rehberi — "Kurum İçi Periyodik ve/veya Rastgele Denetimler"; Sermaye Piyasası Kurulu denetim ve ihaleli denetim çerçeveleri (uygulanabildiğinde); BDDK / SPK iç denetim mevzuatı (sektörel)
-İlgili Standart: ISO/IEC 27001:2022 Clause 9.2 (Internal Audit), Clause 9.3 (Management Review); ISO/IEC 27701:2019; ISO 19011:2018 (Auditing Management Systems); IIA — Institute of Internal Auditors Standards (IPPF); COBIT; NIST CSF 2.0 GV.OV (Oversight); ISACA IS Audit Standards
+Doküman / Document: KVKK ve Bilgi Güvenliği İç Denetim Standardı / KVKK and Information Security Internal Audit Standard
+Bölüm / Section: 06-idari-tedbirler
+Sahip / Owner: İç Denetim Yöneticisi / Denetim Komitesi / Internal Audit Manager / Audit Committee
+Onaylayan / Approved by: Denetim Komitesi + Yönetim Kurulu / Audit Committee + Board of Directors
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık / Annual
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12 (compliance obligation); KVKK Personal Data Security Guide — "Periodic and/or Random Internal Audits"; CMB audit and tendered audit frameworks (where applicable); BDDK / CMB internal audit legislation (sectoral)
+İlgili Standart / Standard: ISO/IEC 27001:2022 Clause 9.2 (Internal Audit), Clause 9.3 (Management Review); ISO/IEC 27701:2019; ISO 19011:2018 (Auditing Management Systems); IIA — Institute of Internal Auditors Standards (IPPF); COBIT; NIST CSF 2.0 GV.OV (Oversight); ISACA IS Audit Standards
 ---
+
+## English
+
+# Internal Audit — KVKK and Information Security
+
+## 1. Purpose
+
+To independently and systematically verify that KVKK and information security compliance **operates as designed**; to surface deficiencies; to track corrective and preventive actions (CAPA); and to provide assurance to management and the KVKK Committee. The operational arm of the "Periodic Internal Audit" measure of the KVKK Personal Data Security Guide.
+
+Internal audit is **independent and objective**; the internal auditor reports separately from the audited process organizationally (Audit Committee / Board of Directors).
+
+## 2. Governance
+
+### 2.1. Structure
+
+```
+Board of Directors
+   └── Audit Committee (3+ independent members)
+         └── Internal Audit Manager (CAE — Chief Audit Executive)
+               └── Internal Audit Team (KVKK / IT / Process auditors)
+```
+
+### 2.2. Internal Audit Charter
+
+The internal audit charter, approved by the Board of Directors, includes at minimum:
+
+- Mission, scope, authority.
+- Independence and objectivity.
+- Resources (people, budget).
+- Right of access (to every system, document, person).
+- Reporting line.
+- Compliance with standards (IIA / ISO 19011).
+- Annual plan and reporting obligation.
+
+### 2.3. Competencies
+
+Annual development plan for internal audit team:
+
+- KVKK / GDPR certification (CIPP/E or local equivalent).
+- ISO 27001 LA / 27701 LI certification.
+- CISA (Certified Information Systems Auditor) / CIA (Certified Internal Auditor).
+- Sectoral expertise (banking, health, etc.).
+
+## 3. Annual Internal Audit Plan
+
+### 3.1. Risk-Based Plan
+
+The annual plan is prepared based on risk assessment results:
+
+- **High-risk areas:** annual full audit.
+- **Medium-risk areas:** audit every 2 years.
+- **Low-risk areas:** every 3 years or sampling.
+
+### 3.2. Typical Annual KVKK Audit Topics
+
+| Topic | Frequency |
+|------|--------|
+| KVKK Policy and document set currency | Annual |
+| Data inventory accuracy (sampling) | Annual |
+| VERBİS records currency | Annual |
+| Privacy notice field check (web, application, registration form) | Annual |
+| Explicit consent record sampling | Annual |
+| Retention and Destruction — periodic destruction records | Annual |
+| Data subject application SLA (30 days) | Annual |
+| Data breach record system and 72-hour notification | Annual |
+| Vendor contracts and due diligence evidence | Annual |
+| Cross-border transfer bases | Annual |
+| DPIA records and approval chain | Annual |
+| Personnel training completion evidence | Annual |
+| Confidentiality undertaking signature status | Annual |
+| Cookie management system | Every 2 years |
+| Marketing consents (IYS) | Annual |
+| Special-category data access audit | Annual |
+| Automated decision processes | Annual |
+
+### 3.3. Typical Annual Information Security Audit Topics
+
+| Topic | Frequency |
+|------|--------|
+| Access management (IAM, JML, RBAC, quarterly review) | Annual |
+| Authentication (MFA scope, password, SSO) | Annual |
+| Encryption (algorithm, key management, HSM/KMS) | Annual |
+| Network security (segmentation, FW rules, perimeter) | Annual |
+| Log management and SIEM scope | Annual |
+| Backup and restore drill | Annual |
+| Data masking / test environment | Annual |
+| DLP and leak prevention | Annual |
+| Application security (S-SDLC, SAST/DAST, penetration test) | Annual |
+| BCP / DR drill | Annual |
+| Incident management (IR runbook, KPI) | Annual |
+| Cloud security (CSPM, IAM, public bucket) | Annual |
+| Endpoint and mobile security | Annual |
+| Patch management SLA | Annual |
+| Physical security (data center, office) | Every 2 years |
+| Vendor right of audit usage | Annual |
+
+### 3.4. Annual Plan Approval
+
+- CAE prepares the plan draft.
+- KVKK Officer, CISO, IT Director, Legal provide opinions.
+- Audit Committee approves.
+- Board of Directors informed.
+
+## 4. Audit Process Steps
+
+### 4.1. Planning
+
+- Topic, scope, target, criteria, resources, timeline.
+- Risk assessment.
+- Audit questions and test procedure draft.
+- Pre-notification to affected teams (except random/spot audit).
+
+### 4.2. Fieldwork
+
+- Document review.
+- Interviews.
+- System review (application, log, config).
+- Sampling (random / risk-based).
+- Test procedure application.
+- Finding / evidence collection.
+
+### 4.3. Reporting
+
+- Findings categorized.
+- Root cause analysis.
+- Risk assessment.
+- Corrective and preventive action recommendation.
+- Process owner response (management response).
+- Formal report publication.
+
+### 4.4. Follow-up
+
+- CAPA action plan record.
+- Monthly / quarterly follow-up.
+- Verification after action closure.
+- Reporting open actions to Audit Committee.
+
+## 5. Test Procedures (Examples)
+
+### 5.1. Data Inventory Accuracy
+
+**Goal:** To verify that the inventory accurately reflects actual processing activities.
+
+**Test:**
+1. 20 records randomly selected from the inventory.
+2. Interview with process owner for each record.
+3. Record vs. actual activity comparison:
+   - Are data categories correct?
+   - Is the retention period applied in practice?
+   - Are transfers consistent with what's listed?
+   - Is the legal basis still valid?
+4. 10 records randomly selected from production, matched with the inventory; are there processes outside the inventory?
+
+**Finding examples:**
+- "Marketing automation CRM not in inventory but actively used."
+- "Health data tagged as 'general personal data' in inventory, special-category flag not set."
+- "Retention period documented as 2 years, in reality not deleted for 5 years."
+
+### 5.2. Privacy Notice Field Check
+
+**Test:**
+1. Website main page, registration form, payment, cookie banner — is the privacy notice accessible?
+2. Does the privacy notice contain Art. 10 elements (identity, purpose, legal basis, transfer, rights)?
+3. Is there a privacy notice within the mobile application?
+4. Does the call center initial announcement contain a KVKK privacy notice?
+5. Does the physical form (store, event) contain a privacy notice?
+
+### 5.3. Explicit Consent Record Sampling
+
+**Test:**
+1. 30 explicit consents randomly selected from the last 3 months.
+2. For each:
+   - Is the consent timestamp, IP, user agent recorded?
+   - Is the consent free (no package/condition)?
+   - Is the consent specific (purpose-specific)?
+   - Was the privacy notice shown before consent?
+   - Is withdrawal as easy?
+3. The withdrawal request implementation time in the record is measured.
+
+### 5.4. Vendor Contract Review
+
+**Test:**
+1. 10 contracts sampled from Class A/B vendors.
+2. For each contract:
+   - Is the data processor contract signed?
+   - Are minimum elements (instruction, confidentiality, sub-processor, breach notification, audit, termination) present?
+   - Is the cross-border transfer mechanism specific?
+   - Has annual SOC 2 / ISO 27001 report been received?
+3. Contract + implementation consistency (e.g., matching of sub-processor list as contract annex with actual vendor records).
+
+### 5.5. Periodic Destruction Records
+
+**Test:**
+1. Quarterly destruction periods (January / April / July / October) determined according to the Retention and Destruction Policy.
+2. The last 4 periods of destruction records:
+   - Signature chain (owner + witness + KVKK Officer).
+   - Number of records destroyed, category.
+   - Destruction method (delete / destroy / anonymize).
+   - Backup destruction flow.
+3. If crypto-shred used, key zeroize record.
+
+### 5.6. Data Subject Application SLA
+
+**Test:**
+1. Application records from the last 12 months (KVKK Officer CRM).
+2. 20 applications randomly:
+   - Application date → response date duration.
+   - Was 30-day SLA exceeded?
+   - Does the response contain Art. 13 elements?
+   - Is the rejected application's reason legal?
+   - Is the application evidence / document chain complete?
+
+### 5.7. Data Breach Record System
+
+**Test:**
+1. Recorded breach/near-miss incidents from the last 12 months.
+2. For each incident:
+   - Detection time → KVKK Committee notification → 72-hour Authority notification chain.
+   - If 72 hours exceeded, is the justification reasonable?
+   - Has notification been made to the affected data subject (if required)?
+   - Is root cause analysis + lessons learned documented?
+3. Reporting culture of near-miss incidents is evaluated.
+
+### 5.8. MFA Coverage Validation
+
+**Test:**
+1. List of admin / personal data application accessing users from IdP.
+2. MFA enrollment status of each user.
+3. MFA registered ≠ MFA enforced — is the policy actually active?
+4. Are there users using SMS OTP but who are admins?
+
+### 5.9. Test Environment Production Data Scan
+
+**Test:**
+1. With DLP discovery tool, test/dev databases + storage scan.
+2. Are there Turkish ID / IBAN / card no regex matches?
+3. Root cause + remediation period for matches.
+
+### 5.10. Training Evidence
+
+**Test:**
+1. LMS report: annual refresh completion rate.
+2. 30 random new starters:
+   - Was onboarding training completed (first 7 days)?
+   - Is the confidentiality undertaking signed?
+   - Is the knowledge test pass (≥80%)?
+
+## 6. Finding Classification
+
+| Class | Definition | Action SLA |
+|-------|-------|-------------|
+| **Critical** | Legislative violation, high personal data leak risk, severe financial/reputation loss | 30 days |
+| **High** | Major control deficiency, KVKK compliance impact medium-high | 60 days |
+| **Medium** | Improvement needed in control effectiveness | 90 days |
+| **Low** | Good practice recommendation, opportunity | 180 days |
+
+## 7. Report Format
+
+### 7.1. Standard Report Sections
+
+1. **Executive Summary** (1 page) — scope, period, result, critical findings.
+2. **Audit Information** — scope, criteria, period, team.
+3. **Methodology** — sampling, test procedure.
+4. **Findings** — for each finding: finding, root cause, risk, evidence, recommendation, management response.
+5. **Positive Observations** — good practices.
+6. **Annual Trend** — progress relative to the previous year.
+7. **Conclusion and Overall Assessment** — compliance level, maturity score.
+8. **Annexes** — evidence references (confidential, stakeholder-specific).
+
+### 7.2. Finding Template
+
+```
+Finding No: KVKK-2026-001
+Class: High
+Process: Privacy Notice Management
+Finding: In the website mobile view, the privacy notice link is under the
+       hidden menu, the data subject's access is practically blocked.
+Root Cause: KVKK Officer review flow not included in mobile design update.
+Risk: KVKK Art. 10 privacy notice obligation, EU GDPR Art. 12 (transparency).
+Evidence: Screenshots (Annex-3), test device list.
+Recommendation:
+   1. Privacy notice should be accessible in max 2 taps in all views.
+   2. KVKK Officer review mandatory CI gate for design changes.
+Management Response (Marketing Director):
+   "In mobile design, the link will be moved to the footer. CI gate added in Q3.
+    Action Owner: <name>. Date: <date>."
+Target Closure: <date>
+Verification: Re-test, screenshot evidence.
+```
+
+## 8. CAPA (Corrective and Preventive Action) Tracking
+
+- A CAPA is opened for each finding.
+- Tracked in ITSM / GRC tool (ServiceNow, Archer, OneTrust, etc.).
+- Action owner, target date, progress percentage, verification evidence.
+- Monthly reporting.
+- Open critical action over 90 days escalated to Audit Committee.
+- For repeating findings, **root cause repetition** analysis.
+
+## 9. Relationship with External Audit
+
+### 9.1. Certification Audit
+
+- ISO 27001 certification annual surveillance + recertification every 3 years.
+- ISO 27701 (PIMS) optional, strengthens KVKK compliance.
+- SOC 2 Type II — evidence value for international B2B customers.
+
+### 9.2. Sectoral Audit
+
+- BDDK audit (banking).
+- CMB audit (publicly traded companies).
+- Ministry of Health audit (health sector).
+- KVKK Authority audit (every sector; risk-based).
+
+### 9.3. Customer Audit
+
+- Corporate customers send "vendor security questionnaire" or perform site audit.
+- Internal audit reports are used as evidence in preparation for these audits.
+
+### 9.4. Independent KVKK Audit
+
+- Independent law firms / consulting firms (OneTrust, BSI, Deloitte, PwC, KPMG, EY) can provide annual KVKK compliance audit.
+- Comparison with internal audit results → assurance is strengthened.
+- Cost-benefit analysis evaluated annually.
+
+## 10. Management Report Template
+
+Top-level annual report content for KVKK Committee and Board of Directors:
+
+```
+1. SCOPE
+   - Audit Year: 2026
+   - Audited Processes: 14
+   - Total Person-Days: 320
+   - Number of Findings: 47 (Critical 3, High 11, Medium 24, Low 9)
+
+2. COMPLIANCE LEVEL
+   - KVKK Compliance Maturity Score: 78/100 (Competent)
+   - Previous Year: 72/100 (+6 points)
+   - Target: 85/100 (2027)
+
+3. SUMMARY OF CRITICAL FINDINGS
+   3.1. <finding>
+   3.2. <finding>
+   3.3. <finding>
+
+4. ACTION STATUS
+   - Open Action: 18
+   - This Year Closed: 41
+   - 90-Day Past Due: 2 (escalated)
+
+5. SECTORAL AND REGULATORY TRENDS
+
+6. RISK PROFILE CHANGE
+
+7. RECOMMENDATIONS (FOR SENIOR MANAGEMENT)
+
+8. NEXT YEAR'S PLAN
+```
+
+## 11. Maturity Model
+
+| Level | Definition |
+|--------|-------|
+| 1 — Initial | Ad-hoc, direct response to breach |
+| 2 — Repeatable | Some processes documented, person-dependent |
+| 3 — Defined | Policies documented, audit performed |
+| 4 — Managed | KPIs measured, continuous improvement |
+| 5 — Optimized | Predictive control, automation widespread |
+
+Target: Level 4 (Managed) within 2 years.
+
+## 12. Independence and Ethics
+
+- The internal auditor is organizationally separate from the audited process.
+- Annual conflict of interest declaration.
+- Gift / benefit policy.
+- Bound by IIA Ethics Rules.
+- Whistleblower hotline managed outside audit; but findings can be recorded.
+
+## 13. Checklist
+
+- [ ] Is the Internal Audit Charter approved, ≤24 months current?
+- [ ] Is the annual audit plan risk-based, Audit Committee approved?
+- [ ] Does the CAE have an independent reporting line?
+- [ ] Is the team competence (certification, experience) sufficient?
+- [ ] Are §3.2 and §3.3 topics included in the annual plan?
+- [ ] Are test procedures documented, standardized?
+- [ ] Are finding classifications and SLAs defined?
+- [ ] Is the report template standard, management response mechanism working?
+- [ ] Does the CAPA tool track all actions?
+- [ ] Are 90-day past due critical actions escalated to Audit Committee?
+- [ ] Is the annual management report being prepared?
+- [ ] Is there a coordination mechanism with external audit (ISO, SOC, KVKK)?
+- [ ] Is the independent KVKK compliance audit option evaluated annually?
+- [ ] Is the maturity score being measured, with annual trend tracking?
+- [ ] Is root cause repeat analysis done for repeating findings?
+- [ ] Is the ethics / conflict of interest declaration taken annually?
+
+## 14. Common Mistakes
+
+- Audit reduced to "yes/no" form, evidence weak.
+- Sampling small (5 records), statistically insufficient.
+- Management response not filled or evaded.
+- Action closure marked "closed" without evidence.
+- Same recurring finding year over year, root cause not solved.
+- KVKK and information security audits performed without coordination.
+- Sectoral additional regulations not included in audit scope.
+- Independence violation (auditor in former role in audited area).
+- Excessive trust in external audit reports without internal testing.
+- Audit results staying only in formal report, not converting to training/communication.
+
+---
+
+## Türkçe
 
 # İç Denetim — KVKK ve Bilgi Güvenliği
 

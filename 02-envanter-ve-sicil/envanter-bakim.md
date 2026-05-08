@@ -1,13 +1,368 @@
 ---
-Doküman: Envanter Bakım, Gözden Geçirme ve Değişiklik Yönetimi
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Çeyreklik (operasyonel) + Yıllık (tam revizyon) + Tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.10, m.12, m.16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5, 9, 13; Aydınlatma Tebliği MADDE 5; Saklama ve İmha Yön. MADDE 5
+Doküman / Document: Envanter Bakım, Gözden Geçirme ve Değişiklik Yönetimi / Inventory Maintenance, Review and Change Management
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Çeyreklik (operasyonel) + Yıllık (tam revizyon) + Tetiklenmiş / Quarterly (operational) + Annual (full revision) + Triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.10, m.12, m.16 / Law No. 6698 (KVKK) Art. 10, 12, 16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5, 9, 13 / Regulation on the Data Controllers' Registry Art. 5, 9, 13; Aydınlatma Tebliği MADDE 5 / Disclosure/Information Notice Communiqué Art. 5; Saklama ve İmha Yön. MADDE 5 / Erasure-Destruction Regulation Art. 5
 ---
+
+## English
+
+# Inventory Maintenance, Review and Change Management
+
+The inventory is not a "set and forget" document. Under Reg. Art. 5/d, registry information based on the inventory is the **basis** for satisfying the disclosure obligation, responding to data subject requests, and determining the scope of explicit consent. Therefore, when the inventory is out of date, **the entire compliance architecture goes wrong**.
+
+This document defines the operational regime for keeping the inventory current.
+
+## 1. Three-Layer Maintenance Model
+
+| Layer | Frequency | Purpose |
+|-------|-----------|---------|
+| Continuous (event-driven) | Immediate | Inventory updated as soon as a process changes; VERBİS notification within 7 days |
+| Quarterly review | Every 3 months | Process owners and KVKK Officer validate row by row |
+| Annual full revision | Once a year | Whole inventory is re-baselined and aligned with legislative and organisational changes |
+
+## 2. Continuous Maintenance — Event-Driven
+
+### 2.1 Change Triggers
+
+**Any** of the following events triggers an inventory update:
+
+| # | Trigger | Affected fields | Action |
+|---|---------|------------------|--------|
+| 1 | New process launched | New row | Inventory row before processing starts + VERBİS update |
+| 2 | New purpose added to existing process | Processing purpose, legal ground | Legal Department confirmation → update |
+| 3 | New data category processed | Data category, personal data items | Information notice also updated |
+| 4 | New person group (e.g., visitor monitoring for the first time) | Data subject group | Update information notice + signage |
+| 5 | New system/SaaS onboarded | Storage medium, technical measures, cross-border transfer | InfoSec assessment |
+| 6 | New supplier (data processor) | Recipient/recipient group | Sign DPA, then add |
+| 7 | Cross-border transfer started | Cross-border transfer, legal basis | Prepare KVKK Art. 9 legal basis |
+| 8 | Transfer stopped | Recipient/recipient group | Remove from row; record rationale in version notes |
+| 9 | Retention period change (legislative or internal policy) | Retention period, rationale | Align with destruction policy |
+| 10 | Legislative change (Law, Regulation, Board decision) | Legal ground, retention period, transfer | Legal Department review |
+| 11 | Organisational change (new/closed unit, role transfer) | Process owner, business unit | Update ownership |
+| 12 | M&A (merger, acquisition, demerger) | All inventory | Full re-baseline — new controller / legacy records |
+| 13 | Data breach detected | Technical measures, risk level | Breach assessment + remediation |
+| 14 | New technical measure deployed | Technical measures | InfoSec update |
+| 15 | A measure removed | Technical/administrative measures | Removal reason + compensating control |
+| 16 | New legal obligation (e.g., new tax legislation, new sectoral rule) | Legal ground, retention period | Legal Department |
+| 17 | Explicit-consent policy change | Explicit consent required, related consent text | CMP update |
+| 18 | Information notice update | Information-notice reference | Version tracking |
+| 19 | Gap discovered through a data subject request or Authority audit | Affected row(s) | Correction + internal notification |
+
+### 2.2 Trigger → Update Chain
+
+```
+Event detected
+    │
+    ▼
+Process Owner → KVKK Officer (ticket or e-mail, max 5 business days)
+    │
+    ▼
+Inventory row draft update (KVKK Officer, 2 business days)
+    │
+    ▼
+Legal Department confirmation (where required, max 3 business days)
+    │
+    ▼
+Information Security confirmation (if technical measures involved, max 3 business days)
+    │
+    ▼
+KVKK Committee acceptance (broad changes, where required)
+    │
+    ▼
+Inventory v.X.Y release + change log
+    │
+    ▼
+VERBİS update (Reg. Art. 13, 7 days) ← CRITICAL
+    │
+    ▼
+Information notice / retention-destruction policy / contract alignment check
+    │
+    ▼
+Notification to relevant stakeholders (process owner, training list)
+```
+
+### 2.3 Event Notification Template
+
+Process owners notify the KVKK Officer using the following format:
+
+```
+INVENTORY UPDATE REQUEST
+=========================================
+
+Date:                YYYY-MM-DD
+Process ID:          [e.g., HR-001]
+Process Name:        [...]
+Requested by:        [Name-Surname / Title]
+
+Type of change:
+[ ] New row
+[ ] Existing row revision
+[ ] Row archival (process discontinued)
+
+Affected fields:
+[ ] Data category       [ ] Personal data items
+[ ] Processing purpose  [ ] Legal ground
+[ ] Collection method   [ ] Storage medium
+[ ] Domestic recipient  [ ] Cross-border transfer
+[ ] Retention period    [ ] Destruction method
+[ ] Technical measure   [ ] Administrative measure
+
+Change description:
+[Detailed text]
+
+New state (old → new):
+- Field: [...]  →  [...]
+
+Impact analysis:
+- Information notice update needed? [Y/N]
+- Explicit consent needed? [Y/N]
+- VERBİS notification affected? [Y/N]
+- Contracts affected? [Y/N]
+
+Proposed effective date: YYYY-MM-DD
+```
+
+## 3. Quarterly Review
+
+### 3.1 Scope
+
+Each quarter, **all inventory rows** pass through the following checks:
+
+- [ ] Is the process owner still correct? (organisational change)
+- [ ] Does the processing purpose match operational reality?
+- [ ] Is the legal ground current?
+- [ ] Have any new recipients been added?
+- [ ] Cross-border transfer checkpoint: are SaaS server locations verified?
+- [ ] Is the retention period aligned with legislation (any changes during the year)?
+- [ ] Are technical measures current (new control added, control removed)?
+- [ ] Is the risk level realistic?
+- [ ] Is the information-notice reference correct and up to date?
+
+### 3.2 Quarterly Review Meeting
+
+Participants:
+- KVKK Officer (chair)
+- All Process Owners (per their rows)
+- Legal Department representative
+- Information Security representative
+- KVKK Committee as observer
+
+Duration: half a day (4-8 hours depending on scope).
+
+Outputs:
+- Quarterly review report
+- Action list (owner + date)
+- Version update
+
+### 3.3 Quarterly Review Template
+
+```
+QUARTERLY INVENTORY REVIEW REPORT
+==========================================
+
+Quarter:           [QX YYYY]
+Meeting Date:      YYYY-MM-DD
+Participants:      [Names]
+
+1. INVENTORY METRICS
+   - Total rows                : [n]
+   - New                       : [n]
+   - Updated                   : [n]
+   - Archived (discontinued)   : [n]
+   - High/Critical-risk rows   : [n]
+
+2. COMPLIANCE METRICS
+   - VERBİS updated on time?   : [Y/N]
+   - Information-notice align. : [%]
+   - Retention-destruction     : [%]
+   - Technical-measure align.  : [%]
+
+3. OPEN ITEMS
+   [ID] [Topic] [Owner] [Target Date]
+
+4. DECISIONS
+   [...]
+
+5. NEXT MEETING
+   Date: YYYY-MM-DD
+```
+
+## 4. Annual Full Revision
+
+### 4.1 Scope
+
+Once a year (ideally end of calendar year), the inventory is re-baselined **completely**:
+
+| Step | Content |
+|------|---------|
+| 1 | All inventory rows re-validated by process owners |
+| 2 | Sweep of legislative changes (Law, Regulation, Board decisions) |
+| 3 | Review of sectoral guideline updates |
+| 4 | Cross-alignment with information notices |
+| 5 | Cross-alignment with retention-destruction policy |
+| 6 | Alignment with contract stock (data processors, transfers) |
+| 7 | Risk reassessment (especially special-category data) |
+| 8 | Maturity-level measurement (1-5) |
+| 9 | Annual improvement plan |
+
+### 4.2 Annual Revision Output
+
+- Version **MAJOR** incremented (e.g., v1.0 → v2.0)
+- Annual evaluation report
+- KVKK Committee approval
+- Board of Directors summary
+- Bulk VERBİS update (where needed)
+
+## 5. Compliance Checklist (The Chain)
+
+The inventory is the **central** document of KVKK compliance. The "compliance chain" below is continuously checked:
+
+```
+Inventory ↔ VERBİS notification ↔ Information notice ↔ Explicit consent text ↔ Retention-destruction policy ↔ Contracts
+```
+
+### 5.1 Inventory ↔ VERBİS
+
+- [ ] Are inventory purposes present in VERBİS?
+- [ ] Are VERBİS categories present in the inventory?
+- [ ] Is cross-border transfer correctly notified in both?
+- [ ] Are retention periods consistent?
+- [ ] Did new processes reflect in VERBİS within 7 days (Reg. Art. 13)?
+
+### 5.2 Inventory ↔ Information Notices
+
+- [ ] Is there an information notice for each process (Disclosure Communiqué Art. 5/c)?
+- [ ] Do purposes in the notice match the inventory?
+- [ ] Does the legal ground in the notice match the inventory (Communiqué Art. 5/h)?
+- [ ] Do recipient groups match the inventory (Communiqué Art. 5/ı)?
+- [ ] Is cross-border information consistent?
+- [ ] Is the collection method (automated/non-automated) consistent (Communiqué Art. 5/i)?
+
+### 5.3 Inventory ↔ Explicit Consent Texts
+
+- [ ] For all rows showing "explicit consent" in the inventory, is consent actually being collected?
+- [ ] Is the consent collection channel (form, CMP, voice record) documented?
+- [ ] Is there a consent withdrawal mechanism?
+- [ ] Are there any rows showing "explicit consent" in the inventory where consent is not being taken? (There should be none.)
+
+### 5.4 Inventory ↔ Retention and Destruction Policy
+
+- [ ] Are retention periods consistent?
+- [ ] Is the destruction method specified?
+- [ ] Does periodic destruction occur within 6 months?
+- [ ] Are destruction records archived?
+- [ ] Have retention periods been refreshed after legislative changes?
+
+### 5.5 Inventory ↔ Contracts
+
+- [ ] Has a data-processor agreement been signed with each supplier?
+- [ ] Are there transfer agreements (standard contract for cross-border)?
+- [ ] Do contract purposes match the inventory?
+- [ ] Have expired contracts been renewed?
+
+## 6. Quarterly Cross-Check Matrix
+
+| Control | Quarterly (Q1-Q4) | Annual | Triggered |
+|---------|---|---|---|
+| Inventory row validation | Y | Y | Y |
+| VERBİS alignment | Y | Y | Y |
+| Information-notice currency | Y | Y | Y |
+| Retention-period legislative alignment | — | Y | Y |
+| Contract stock currency | — | Y | Y (new supplier) |
+| Risk assessment | — | Y | Y (new process, breach) |
+| Maturity-level measurement | — | Y | — |
+
+## 7. Ownership Model and RACI
+
+| Activity | Process Owner | KVKK Officer | Legal | InfoSec | KVKK Committee | Board |
+|----------|---|---|---|---|---|---|
+| New process inventory row | R | A | C | C | I | I |
+| Quarterly review | C | A/R | C | C | I | I |
+| Annual revision | C | R | C | C | A | I |
+| VERBİS update | I | A/R | C | I | I | I |
+| Extraordinary (Authority audit, etc.) | C | R | A | C | A | I |
+| M&A scope | C | A | C | C | C | A |
+
+R = Responsible | A = Accountable | C = Consulted | I = Informed
+
+## 8. Versioning Discipline
+
+### 8.1 Version Number
+
+Format: `MAJOR.MINOR.PATCH`
+- **MAJOR:** Annual full revision, architectural change (new column, broad re-organisation)
+- **MINOR:** Addition of a new process, meaningful row revision, alignment to new legislation
+- **PATCH:** Spelling, formatting, link fixes
+
+### 8.2 Change Log Template
+
+A `degisiklik-kutugu.md` (change log) is kept alongside the inventory file:
+
+```
+| Version | Date | Type | Change | Prepared by | Approved by |
+|---------|------|------|--------|-------------|-------------|
+| 1.0.0   | 2026-05-08 | Initial release | Initial inventory publication | KVKK Officer | KVKK Committee |
+| 1.1.0   | 2026-06-15 | MINOR | HR-011 (Internship Management) added | KVKK Officer | Head of Legal |
+| 1.1.1   | 2026-06-22 | PATCH | HR-001 retention rationale clarified | KVKK Officer | KVKK Officer |
+```
+
+## 9. Operational Risk Indicators (KPI)
+
+| KPI | Target | Warning threshold | Critical threshold |
+|-----|--------|-------------------|--------------------|
+| VERBİS update time | ≤ 5 days | > 5 days | > 7 days (regulatory breach) |
+| Quarterly review completion | 100% | < 95% | < 85% |
+| Process-owner-unsigned rows | 0 | > 0 | > 5 |
+| Processes without information notice | 0 | > 0 | > 2 |
+| Annual audit of high/critical-risk rows | 100% | < 100% | < 95% |
+| Retention period non-compliance | 0 | > 0 | > 1 |
+
+## 10. Annual Audit Preparation
+
+The following package is prepared ahead of a KVKK Authority audit or internal audit:
+
+| Document | Relevant article |
+|----------|------------------|
+| Current inventory (PDF + Excel) | Reg. Art. 4(h), 5(ç) |
+| VERBİS notification PDF summary | Reg. Art. 10 |
+| Retention and destruction policy | Erasure-Destruction Reg. Art. 5 |
+| All information notices (per channel) | Disclosure Communiqué Art. 5 |
+| Explicit consent texts and sample logs | KVKK Art. 5(1), Art. 6(2) |
+| Data-processor contract stock | KVKK Art. 12(2) |
+| Cross-border transfer agreements / standard contracts | KVKK Art. 9 |
+| Quarterly review reports | Internal document |
+| Data-breach notification records (if any) | KVKK Art. 12(5) |
+| Data subject application and response logs | KVKK Art. 13, Application Communiqué |
+| Training and awareness records | KVKK Art. 12(1) administrative measure |
+
+## 11. Checklist — Has the Maintenance Routine Been Established?
+
+- [ ] Quarterly review calendar set (Q1-Q4 dates)
+- [ ] Annual full revision date set
+- [ ] Event-notification ticketing (JIRA, ServiceNow, etc.) set up
+- [ ] Process owners trained
+- [ ] KVKK Committee agenda defined
+- [ ] VERBİS update responsibility clarified
+- [ ] Versioning discipline documented
+- [ ] KPI measurement method defined
+- [ ] Document set ready for annual audit
+- [ ] Legislative-tracking channel set up (KVKK bulletins, Official Gazette)
+
+## 12. Annexes
+
+- Inventory Guide: [kvki-envanteri-rehberi.md](./kvki-envanteri-rehberi.md)
+- Template: [envanter-sablonu.md](./envanter-sablonu.md)
+- VERBİS Registration: [verbis-kayit-rehberi.md](./verbis-kayit-rehberi.md)
+- Exception Assessment: [verbis-istisna-degerlendirmesi.md](./verbis-istisna-degerlendirmesi.md)
+
+---
+
+## Türkçe
 
 # Envanter Bakımı, Gözden Geçirme ve Değişiklik Yönetimi
 

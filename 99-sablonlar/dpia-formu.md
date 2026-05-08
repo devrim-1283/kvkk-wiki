@@ -1,13 +1,364 @@
 ---
-Doküman: Veri Koruma Etki Değerlendirmesi (DPIA / PIA) Formu
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu + Süreç Sahibi
-Onaylayan: KVKK Komitesi (yüksek risk durumunda)
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (süreç değişikliği, mevzuat, ihlal sonrası)
-İlgili Mevzuat: 6698 sayılı KVKK m.4 (ölçülülük, gereklilik), m.6 (özel nitelikli veri), m.12 (güvenlik); Kurul kararı 2018/10
+Doküman / Document: Veri Koruma Etki Değerlendirmesi (DPIA / PIA) Formu / Data Protection Impact Assessment (DPIA / PIA) Form
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu + Süreç Sahibi — KVKK Officer + Process Owner
+Onaylayan / Approved by: KVKK Komitesi (yüksek risk durumunda) — KVKK Committee (in high-risk cases)
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (süreç değişikliği, mevzuat, ihlal sonrası) — Annual + triggered (process change, regulatory, post-incident)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.4 (ölçülülük, gereklilik), m.6 (özel nitelikli veri), m.12 (güvenlik); Kurul kararı 2018/10 — KVKK Art. 4 (proportionality, necessity), Art. 6 (sensitive data), Art. 12 (security); Authority Decision 2018/10
 ---
+
+## English
+
+# Data Protection Impact Assessment (DPIA / PIA)
+
+> **WHEN MANDATORY:** A DPIA is mandatory in the following cases:
+> - Processes involving sensitive personal data (health, biometric, criminal conviction, religious-political belief etc.)
+> - Large-scale personal data processing (>10,000 data subjects)
+> - Profiling or automated decision-making (Art. 11/g)
+> - Processes involving cross-border transfer
+> - Use of new technologies (AI/ML, IoT, biometric recognition, behavioural tracking)
+> - CCTV / continuous monitoring systems
+> - Processes involving children's data
+> - Widespread monitoring in public areas
+> - Processing posing high risk to data subject's fundamental rights and freedoms
+
+The Turkish form below is the binding form. The English equivalent is parallel deployment material.
+
+---
+
+## DPIA FORM (English equivalent)
+
+```
+======================================================================
+PERSONAL DATA PROCESSING IMPACT ASSESSMENT (DPIA)
+======================================================================
+
+DPIA Reference No: DPIA-[YEAR]-[SEQ]
+Drafting Date    : ___________________________
+Drafted by       : ___________________________
+Process Owner Unit: ___________________________
+Process Owner    : ___________________________
+
+----------------------------------------------------------------------
+1. PROCESS DEFINITION
+----------------------------------------------------------------------
+
+1.1 Process name:
+1.2 Process inventory record no:
+1.3 Process description (1-2 paragraphs):
+1.4 Purpose(s) of processing:
+1.5 Service / system used:
+1.6 Process start date (planned / actual):
+1.7 Duration (continuous / project):
+
+----------------------------------------------------------------------
+2. PERSONAL DATA PROCESSED
+----------------------------------------------------------------------
+
+2.1 Data subject groups:
+    [ ] Employees
+    [ ] Applicants
+    [ ] Customers
+    [ ] Prospective customers
+    [ ] Supplier representatives
+    [ ] Children (special sensitivity)
+    [ ] Other: ___________________________
+
+2.2 Data categories:
+    [ ] Identity (name, ID, birth)
+    [ ] Contact (email, phone, address)
+    [ ] Location (GPS, IP)
+    [ ] Online identifier (cookie, device ID)
+    [ ] Customer transaction (order, invoice)
+    [ ] Finance (bank account)
+    [ ] Audio/visual (CCTV, voice, photo)
+    [ ] Education/professional (CV, certificate)
+    [ ] Marketing preference
+    [ ] Behaviour (web, app, product use)
+    [ ] SENSITIVE:
+        [ ] Health
+        [ ] Biometric
+        [ ] Genetic
+        [ ] Sexual life
+        [ ] Criminal conviction / security measure
+        [ ] Religious, philosophical, political belief
+        [ ] Race, ethnic origin
+        [ ] Union, association, foundation membership
+        [ ] Dress
+
+2.3 Estimated number of persons processed:
+2.4 Method of collection:
+    [ ] Directly from data subject
+    [ ] From third party
+    [ ] Automated (sensor, CCTV, log)
+    [ ] Public source
+
+----------------------------------------------------------------------
+3. DATA FLOW DIAGRAM
+----------------------------------------------------------------------
+
+```ascii
+[Data Source]                          [Storage]
+   │                                       ▲
+   │                                       │
+   ▼                                       │
+[Collection Channel] ──► [Processing] ──┐  │
+   (web/app/                            │  │
+    call/manual)                        │  │
+                                        ▼  │
+                                   [Transfer]
+                                   ├─domestic
+                                   └─cross-border
+                                        │
+                                        ▼
+                                   [Third Party]
+```
+(Draw your own flow diagram.)
+
+3.1 Data flow steps:
+    1) Source:
+    2) Collection:
+    3) Processing:
+    4) Storage:
+    5) Transfer:
+    6) Destruction:
+
+----------------------------------------------------------------------
+4. LEGAL BASIS AND PROPORTIONALITY
+----------------------------------------------------------------------
+
+4.1 Conditions of processing (KVKK Arts. 5/2 and 6/2-3):
+    [ ] Art. 5/2-a Provided by law
+    [ ] Art. 5/2-b Vital interest
+    [ ] Art. 5/2-c Conclusion/performance of contract
+    [ ] Art. 5/2-ç Legal obligation
+    [ ] Art. 5/2-d Made public
+    [ ] Art. 5/2-e Establishment/exercise/protection of right
+    [ ] Art. 5/2-f Legitimate interest (LIA required)
+    [ ] Art. 5/1 / Art. 6/2 Explicit consent
+    [ ] Art. 6/3 Health (person under duty of confidentiality)
+    [ ] Art. 6 (post-Law 7499) Other sensitive basis: ___________________
+
+4.2 NECESSITY TEST
+    Is this processing necessary to achieve the purpose?
+    Have less intrusive alternatives been considered?
+
+    Alternative 1: ____________________________________ → [Rejected/Accepted]
+    Alternative 2: ____________________________________ → [Rejected/Accepted]
+
+    Result: This processing is
+    [ ] necessary [ ] alternative can be chosen
+
+4.3 PROPORTIONALITY TEST
+    Are the processed data proportionate to the purpose?
+    Can data be minimised?
+
+    Justification per field (1 sentence each):
+    - [Field 1]:
+    - [Field 2]:
+    - [Field 3]:
+
+    Fields that may be removed:
+    Result: Processing is [ ] proportionate [ ] can be minimised
+
+4.4 PERIOD
+    Retention period and basis:
+
+----------------------------------------------------------------------
+5. TRANSFER
+----------------------------------------------------------------------
+
+5.1 Domestic transfer:
+    | Recipient | Purpose | Relation | DPA signed |
+    |-----------|---------|----------|-------------|
+    |           |         |          |             |
+
+5.2 Cross-border transfer:
+    | Recipient | Country | Legal basis (Art. 9) | TIA done |
+    |-----------|---------|----------------------|-----------|
+    |           |         |                      |           |
+
+----------------------------------------------------------------------
+6. DATA SUBJECT RIGHTS
+----------------------------------------------------------------------
+
+6.1 Privacy notice
+    [ ] Notice exists for the process
+    Link / location:
+    Legal sign-off date:
+
+6.2 Is explicit consent required?
+    [ ] Yes — consent text exists:
+    [ ] No
+
+6.3 How will Art. 11 rights be managed?
+    - Information:
+    - Correction:
+    - Erasure:
+    - Objection to automated decision:
+
+6.4 Special measures for children's data:
+
+----------------------------------------------------------------------
+7. RISK MAP
+----------------------------------------------------------------------
+
+For each threat: likelihood (1-5) × impact (1-5) = risk score
+
+| # | Threat | Likelihood | Impact | Score | Sensitivity |
+|---|--------|------------|--------|-------|--------------|
+| 1 | Unauthorised access (insider) |  |  |  |  |
+| 2 | Unauthorised access (external — cyber) |  |  |  |  |
+| 3 | Data leak (email, USB, wrong recipient) |  |  |  |  |
+| 4 | Data loss (hardware failure, backup) |  |  |  |  |
+| 5 | Wrong data (incomplete, inaccurate, outdated) |  |  |  |  |
+| 6 | Over-retention |  |  |  |  |
+| 7 | Supplier breach |  |  |  |  |
+| 8 | Insufficient cross-border protection |  |  |  |  |
+| 9 | Inability to exercise rights |  |  |  |  |
+| 10 | Automated decision — fairness, discrimination |  |  |  |  |
+| 11 | Profiling — unexpected use |  |  |  |  |
+| 12 | Re-identification (anonymisation weakness) |  |  |  |  |
+
+Risk level:
+- Low (1-6): Standard controls
+- Medium (7-12): Additional control recommended
+- High (13-20): Control mandatory, KVKK Committee approval
+- Critical (>20): Process design re-evaluated
+
+----------------------------------------------------------------------
+8. EXISTING AND PLANNED MEASURES
+----------------------------------------------------------------------
+
+8.1 Technical Measures
+    [ ] Encryption at rest (algorithm: ______)
+    [ ] Encryption in transit (TLS version: ______)
+    [ ] Access authorisation — RBAC
+    [ ] Multi-factor authentication (MFA)
+    [ ] Privileged access management (PAM)
+    [ ] Logging (retention: ___ months)
+    [ ] SIEM / anomaly detection
+    [ ] Data Loss Prevention (DLP)
+    [ ] Data masking / pseudonymisation
+    [ ] Anonymisation (test/analytics environment)
+    [ ] Backup (frequency: ___, retention: ___)
+    [ ] Patch management
+    [ ] Annual penetration test
+    [ ] Other:
+
+8.2 Administrative Measures
+    [ ] Policy and procedure
+    [ ] Authorisation list (who can access, count: ___)
+    [ ] Training (module: ______)
+    [ ] Confidentiality undertaking
+    [ ] Periodic audit
+    [ ] Supplier DPA
+    [ ] Incident response plan
+
+8.3 For Sensitive Data (Authority 2018/10) — if applicable
+    [ ] All requirements assessed (matrix attached)
+
+----------------------------------------------------------------------
+9. RESIDUAL RISK
+----------------------------------------------------------------------
+
+After measures:
+| Threat (# above) | Post-measure score | Acceptable |
+|------------------|---------------------|------------|
+| 1 |  |  |
+| 2 |  |  |
+| 3 |  |  |
+| ... |  |  |
+
+Overall residual risk:
+[ ] Low — acceptable
+[ ] Medium — acceptable, monitored
+[ ] High — additional measure required, KVKK Committee approval
+[ ] Critical — process must not start / must be suspended
+
+----------------------------------------------------------------------
+10. KVKK OFFICER OPINION
+----------------------------------------------------------------------
+
+Summary opinion:
+
+[ ] Approved
+[ ] Conditionally approved (conditions): _______________________________
+[ ] Not approved (reasons): ___________________________________________
+
+Name: ___________________________
+Date: ___________________________
+Signature: ___________________________
+
+----------------------------------------------------------------------
+11. APPROVALS
+----------------------------------------------------------------------
+
+Process Owner:
+Name: ____________________ Date: __________ Signature: __________
+
+Legal Counsel:
+Name: ____________________ Date: __________ Signature: __________
+
+KVKK Officer:
+Name: ____________________ Date: __________ Signature: __________
+
+KVKK Committee (for high risk):
+Meeting No / Date: ___________________________
+Decision: [ ] Approve [ ] Conditional [ ] Reject
+
+----------------------------------------------------------------------
+12. REVIEW SCHEDULE
+----------------------------------------------------------------------
+
+- First review: 6 months
+- Periodic review: annual
+- Triggered review:
+  - Process change
+  - Regulatory change
+  - Post-incident
+  - Supplier change
+  - New data category added
+
+======================================================================
+```
+
+## DPIA Method — Practical Tips
+
+### When DPIA Is Performed
+
+- **Before** process design begins (Privacy by Design)
+- Significant process change (new recipient, new purpose, new data category)
+- Part of root cause analysis post-incident
+- Annual refresh (high-risk processes)
+
+### Who Performs It
+
+- **Lead:** KVKK Officer
+- **Process knowledge:** Process Owner
+- **Legal basis:** Legal Counsel
+- **Technical knowledge:** IT / Information Security
+- **Data subject perspective:** survey or focus group where possible
+
+### Documentation
+
+- DPIA file in GRC platform
+- 5-year retention (7 years recommended for audit readiness)
+- KVKK Officer indexed list
+- Annual internal audit sample
+
+## Related Documents
+
+- [meşru-menfaat-degerlendirmesi.md](meşru-menfaat-degerlendirmesi.md)
+- [../12-mevzuat-arsiv/kurul-kararlari-ozeti.md](../12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+- [../10-ozel-konular/](../10-ozel-konular/)
+- [../05-teknik-tedbirler/](../05-teknik-tedbirler/)
+
+---
+
+## Türkçe
 
 # Veri Koruma Etki Değerlendirmesi (DPIA / PIA)
 

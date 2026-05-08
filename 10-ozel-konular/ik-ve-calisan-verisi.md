@@ -1,13 +1,380 @@
 ---
-Doküman: İnsan Kaynakları ve Çalışan Verisi Yönetimi
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + İK Direktörü + Bilgi Güvenliği
-Onaylayan: Hukuk Müdürü + KVKK Komitesi + Yönetim
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + AYM/Yargıtay içtihat değişikliklerinde
-İlgili Mevzuat: 6698 sayılı KVKK; 4857 sayılı İş Kanunu m.5, m.25, m.75; 6098 sayılı Borçlar Kanunu m.396, m.419; 5510 sayılı SGK; 6331 sayılı İSG; 6356 sayılı Sendikalar; AYM E.2014/180, E.2018/31447 (E. ve Diğerleri); ECtHR Bărbulescu v. Romania (2017), López Ribalda v. Spain (2019)
+Doküman / Document: İnsan Kaynakları ve Çalışan Verisi Yönetimi / Human Resources and Employee Data Management
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + İK Direktörü + Bilgi Güvenliği / KVKK Officer + HR Director + Information Security
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi + Yönetim / Head of Legal + KVKK Committee + Management
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + AYM/Yargıtay içtihat değişikliklerinde / Annual + on Constitutional Court / Court of Cassation case-law changes
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK); Law No. 4857 (Labor Law) Art. 5, 25, 75; Law No. 6098 (Code of Obligations) Art. 396, 419; Law No. 5510 (SGK); Law No. 6331 (OHS); Law No. 6356 (Unions); Constitutional Court E.2014/180, E.2018/31447; ECtHR Bărbulescu v. Romania (2017), López Ribalda v. Spain (2019)
 ---
+
+## English
+
+# Human Resources and Employee Data Management
+
+## 1. Purpose and Scope
+
+Management of candidate and employee data in line with KVKK, labor law, and human rights, throughout the lifecycle from recruitment through termination. Given our 500+ employee structure, this is one of the highest KVKK risk areas.
+
+## 2. Lifecycle Stages
+
+```
+[Job posting] -> [Application] -> [Interview] -> [Reference] -> [Hire]
+                                                                  |
+   [Post-exit retention] <- [Exit process] <- [Employment]
+```
+
+### 2.1. Recruitment
+
+**Data collected:**
+
+- Identity (name, T.R. ID, date of birth).
+- Contact.
+- Education, certifications, language proficiency.
+- Work experience.
+- References (third-party data).
+- Photo (in CV - optional).
+- Expected salary.
+- (Some roles) Driver's license, medical report.
+- (Limited cases) Special category - disability report (quota), military service status.
+
+**Legal grounds:**
+
+- Art. 5(2)(c) (negotiations directly related to forming a contract).
+- Art. 5(2)(f) (legitimate interest - assessing suitable candidates).
+
+**Candidate privacy notice:**
+
+- Data collected.
+- Purpose.
+- Retention (for unsuccessful applicants, **6 months - 1 year** recommended; extensible with explicit consent).
+- Inclusion in blacklist / talent pool?
+
+### 2.2. Interviews
+
+- Are interview notes recorded? -> recording is subject to KVKK.
+- Video interviews (Zoom, Teams) -> explicit consent for recording.
+- AI interview screening (HireVue, etc.) -> automated decision + DPIA.
+
+### 2.3. Reference Checks
+
+- With candidate's consent.
+- Third-party (former employer) data is also processed - care.
+- "Character references" sensitive; risk of personal-data leakage.
+
+### 2.4. Post-Hire Personal File
+
+- Photocopy of T.R. ID.
+- Diplomas, certificates.
+- Criminal record (limited roles - Art. 6 conviction is **special category**).
+- Military status.
+- IBAN.
+- Spouse, children info (minimum living allowance).
+- Medical report (OHS).
+- Emergency contact (spouse, parents - third-party data).
+
+### 2.5. During Employment
+
+- Performance reviews.
+- Training records.
+- Disciplinary actions.
+- Payroll, payments.
+- Absence, leave.
+- OHS training, accident records.
+- Employee surveys (engagement, culture).
+
+### 2.6. Post-Exit
+
+- End of employment (resignation, termination, retirement).
+- Retention periods (below).
+- Reference giving (with explicit consent of the former employee).
+
+## 3. Statutory Retention Periods
+
+| Data / Record | Period | Source |
+|---------------|--------|--------|
+| Payroll | **10 years** | Turkish Commercial Code Art. 82 |
+| SGK enrollment notice | **10 years** | Law 5510 |
+| Tax (income tax) | **5 years** | Tax Procedure Law Art. 253 |
+| Personnel file | Employment + **10 years** | Labor Law + statute of limitations |
+| Pre-employment medical | **15 years** | Law 6331 |
+| Work accident | **15 years** | Law 5510 + Labor Law |
+| Occupational disease | **30 years** | Court of Cassation case law |
+| Disciplinary records | Employment + **5 years** | HR good practice |
+| Performance reviews | Employment + **2-5 years** | HR good practice |
+| CCTV (production) | **30 days** | KVKK + reasonable period |
+| Departing-employee e-mail backup | **30-90 days** | DLP review |
+| Unsuccessful candidate CV | **6 months - 1 year** | HR good practice |
+
+> **Caution:** The longest legal period applies; unnecessarily long retention is grounds for the Authority to find a violation.
+
+## 4. Explicit Consent Issue - Employee Asymmetry
+
+### 4.1. Legal Framework
+
+KVKK Art. 3: explicit consent = "consent regarding a specific subject, **based on information**, and **declared by free will**".
+
+> **Problem:** In an employee-employer relationship, "free will" is easily contested. The employee may worry that refusal will jeopardize their employment -> **consent is invalid**.
+
+### 4.2. Practical Approach
+
+For employee data, **rely on other legal grounds wherever possible**:
+
+| Data / Activity | Preferred Ground |
+|-----------------|------------------|
+| Payroll, tax, SGK | Art. 5(2)(a) (express provision in laws) |
+| Performance reviews | Art. 5(2)(f) (legitimate interest) + employment contract |
+| OHS health | Art. 6(3) (workplace physician under secrecy obligation) |
+| Disciplinary | Art. 5(2)(c) (performance of contract) + Art. 5(2)(e) (establishment of right) |
+| Employee cameras | Art. 5(2)(f) + proportionality (not consent) |
+
+### 4.3. Cases Where Explicit Consent IS Needed
+
+- Profile photos (intranet, website).
+- Use of employee in marketing materials.
+- Wedding/birth/training celebration posts.
+- Body measurements, physical attributes (outside uniform - e.g., gifts).
+- Sharing of family information for celebrations.
+- BYOD app monitoring on a personal device.
+
+### 4.4. Designing Employee Explicit Consent
+
+- A single "I consent to all" form is **NOT acceptable**.
+- Separate checkboxes.
+- Refusal allowed - no negative consequence.
+- Withdrawal easy.
+- Records timestamped.
+
+## 5. Employee Monitoring
+
+### 5.1. Legal Framework
+
+- Labor Law Art. 5: employer's right to monitor.
+- Constitutional Court E.2014/180: monitoring proportionate, with prior notice, in reasonable scope.
+- ECtHR Bărbulescu (2017): privacy at work is protected; **prior notice + proportionality**.
+- ECtHR López Ribalda v. Spain (2019): hidden cameras exceptional, strong justification needed.
+
+### 5.2. Monitoring Types and Standards
+
+#### 5.2.1. E-mail Monitoring
+
+| Type | Standard |
+|------|----------|
+| Volume/metadata monitoring | Prior notice + DLP |
+| Content review | In incident, with KVKK + Legal approval + log |
+| Automated content scanning (DLP) | Prior notice; label-based, not personal |
+| Company rule: no personal use | In contract + on intranet |
+
+#### 5.2.2. Internet Use
+
+- Category-based blocking (productivity tools accessible).
+- Detailed per-employee logging is hard to justify under proportionality.
+- General reporting (aggregate + anonymized) is good practice.
+
+#### 5.2.3. GPS / Location
+
+- Vehicle GPS for field employees is reasonable (operational need).
+- No monitoring during breaks or personal use.
+- Off after working hours.
+
+#### 5.2.4. CCTV
+
+See `kamera-cctv.md`. In employee areas, proportionality + prior notice + union coordination.
+
+#### 5.2.5. Keystroke / Screen Recording
+
+- Excessively intrusive; **as a rule forbidden**.
+- Limited cases: call-center quality (prior notice, limited hours), suspected crime (Legal approval).
+
+#### 5.2.6. UEBA (User Entity Behavior Analytics)
+
+- Anomalous behavior detection.
+- Started anonymized; personalized on alarm.
+- Deepens with Legal + KVKK approval.
+
+### 5.3. Monitoring Privacy Notice
+
+Signed by the employee at start of employment:
+
+- Which systems are monitored.
+- For what purpose.
+- Retention period.
+- Access authorities.
+- Employee rights.
+
+## 6. BYOD and MDM (Bring Your Own Device / Mobile Device Management)
+
+### 6.1. BYOD Policy
+
+- Work data on personal device -> mixed area.
+- Work profile via MDM (Android Work Profile, iOS APNs).
+- Personal + work in separate containers.
+- The company manages only the work profile; does not see personal data.
+
+### 6.2. KVKK Compliance
+
+- Tell the employee: what data is visible, what is not.
+- On loss/theft, **selective wipe** (work profile only).
+- Geo-tracking only on loss/theft, with employee approval.
+
+### 6.3. Bans
+
+- Full device wipe (damaging personal data) -> exceptional, last resort.
+- SMS, call log monitoring -> as a rule forbidden.
+- Personal app list monitoring -> outside proportionality.
+
+## 7. WhatsApp / Telegram / Slack at Work
+
+### 7.1. Risks
+
+- Customer data on personal WhatsApp -> data breach.
+- WhatsApp groups hard to clean when an employee leaves.
+- Backup -> cloud -> abroad.
+- E2EE encryption is **opaque** to the data controller (us); auditing is hard.
+
+### 7.2. Policy
+
+- WhatsApp **should be banned for work** or restricted (Microsoft Teams, Slack preferred).
+- WhatsApp Business + approved templates - for customer communication only.
+- Slack/Teams corporate accounts - logging + retention compliant.
+- On exit, employee is removed from groups + access revoked.
+
+### 7.3. Implementation
+
+- WhatsApp Web/Desktop blocked on corporate devices (DLP + EDR).
+- Work conversations on personal WhatsApp forbidden (in contract + policy).
+- Violations are disciplinary grounds.
+
+## 8. Post-Exit Data Management
+
+### 8.1. Account Closure (D-Day)
+
+Last working day:
+
+- AD/Entra account disabled.
+- VPN, MFA, SSO closed.
+- Access card, corporate device returned.
+- E-mail auto-reply + forward (to authorized colleague).
+- Cloud drives (OneDrive, Google Drive) work folders transferred to manager.
+
+### 8.2. Data Protection
+
+| Data | Process |
+|------|---------|
+| E-mail | 30-90 days archive, then deletion (except legal retention) |
+| Personal folder | Work-related to manager; rest deleted |
+| Certificates, keys | Revoke + rotate |
+| Memberships (SaaS) | Disable + license return |
+
+### 8.3. References
+
+- Reference for former employee -> with **explicit consent**.
+- Negative reference is a legal risk (tort).
+- Standardized statements (role, employment dates).
+
+### 8.4. Blacklist / Talent Pool
+
+- "Do-not-rehire" list -> KVKK risky; must have a justification.
+- If a legal process requires it, Legal review.
+- Time-limited.
+
+### 8.5. LinkedIn etc. - Public Information
+
+- Public data (KVKK Art. 5(2)(d)) - limited processing.
+- Sharing former employee's public profile is acceptable.
+- Private messages / connection list -> not.
+
+## 9. Sensitive Topics
+
+### 9.1. Social Media Behavior
+
+- Monitoring an employee's personal social-media account -> privacy violation.
+- Forcing them to link the profile is forbidden.
+- Rules for using company expressions are in the contract.
+
+### 9.2. Pregnancy / Maternity Leave
+
+- Pregnancy info is sensitive even if not deemed special category - HR + relevant manager only.
+- KVKK + Labor Law Art. 74 in any role-change decisions.
+
+### 9.3. Sexual Harassment Complaints
+
+- Complaint records are special category (sex life).
+- Legal + KVKK + HR triple - tight access.
+- Long retention (statute of limitations).
+- Evidence chain.
+
+### 9.4. Union Membership
+
+- KVKK Art. 6 special category (union).
+- Processed only for lawful purposes (collective agreement, dues).
+- Member-list leak is critical.
+
+### 9.5. Ethnicity / Religion / Political Views
+
+- Must not be processed (discrimination risk).
+- May not be asked at recruitment.
+- Should not appear in any record.
+
+## 10. Automated Decisions (Performance, HR Analytics)
+
+### 10.1. Automated Performance Scoring
+
+- If an algorithm is used, it must be explainable.
+- Art. 11(g) - right to object.
+- DPIA mandatory.
+- Human approval required (HR-in-the-loop).
+
+### 10.2. AI in Recruitment
+
+- CV screening, automated rejection.
+- Bias risk -> regular audits.
+- Candidate informed.
+- Manual review guarantee.
+
+## 11. HR System Security
+
+- HRMS (Workday, SAP SuccessFactors, Logo, Mikro) access control.
+- RBAC + Segregation of Duties (SoD).
+- Encrypted payroll data.
+- Audit log.
+- Third-party payroll -> DPA.
+
+## 12. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Single "explicit consent" form for all HR | Differentiate by legal ground; specific consent rare |
+| Diagnosis in HR system | Physician system separate |
+| Customer data in WhatsApp group | Forbidden - corporate channel |
+| Former employee e-mail open for 5 years | 30-90 days, then delete |
+| Indefinitely retained candidate CVs | 6 months - 1 year, then delete/anonymize |
+| Social media monitoring | Forbidden - privacy |
+| Keystroke logger | Excessively intrusive, not lawful |
+| BYOD full wipe | Selective work-profile wipe |
+| Union membership in general system | Restricted access |
+
+## 13. KPIs
+
+| KPI | Target |
+|-----|--------|
+| HR privacy notice coverage | 100% of employees |
+| Exit-process SLA | Account closed on last day |
+| Candidate retention compliance | 100% |
+| BYOD policy compliance | 95%+ |
+| WhatsApp work-use violations | < 5/year |
+| Annual HR audit critical findings | Zero |
+
+## 14. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # İnsan Kaynakları ve Çalışan Verisi Yönetimi
 

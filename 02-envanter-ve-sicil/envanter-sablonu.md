@@ -1,13 +1,165 @@
 ---
-Doküman: Kişisel Veri İşleme Envanteri — Doldurulabilir Şablon
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.4-6, m.10, m.12, m.16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4(h), 5, 9; Saklama ve İmha Yön. MADDE 5
+Doküman / Document: Kişisel Veri İşleme Envanteri — Doldurulabilir Şablon / Personal Data Processing Inventory — Fillable Template
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.4-6, m.10, m.12, m.16 / Law No. 6698 (KVKK) Art. 4-6, 10, 12, 16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4(h), 5, 9 / Regulation on the Data Controllers' Registry Art. 4(h), 5, 9; Saklama ve İmha Yön. MADDE 5 / Erasure-Destruction Regulation Art. 5
 ---
+
+## English
+
+# Personal Data Processing Inventory — Template
+
+This file contains a **ready-to-use** inventory template, populated with three sample rows (HR recruitment, customer order, CCTV). New rows follow the same format.
+
+## 1. Template Table
+
+> The table is wide; horizontal scrolling may be required in markdown viewers. The CSV header row is given in section 3 and can be loaded into Excel.
+
+| Process ID / Süreç ID | Process Name / Süreç Adı | Business Unit / İş Birimi | Process Owner / Süreç Sahibi | Data Subject Group / Veri Konusu Kişi Grubu | Data Category / Veri Kategorisi | Personal Data Items / Kişisel Veri Öğeleri | Special Category (Y/N) / Özel Nitelikli (E/H) | Processing Purpose / İşleme Amacı | Legal Ground / Hukuki Sebep | Collection Method / Toplama Yöntemi | Storage Medium / Kayıt Ortamı | Internal Recipients / Aktarım Yapılan İç Birim | Domestic Recipient / Recipient Group / Yurt İçi Alıcı | Cross-Border Transfer (Y/N) / Yurt Dışı Aktarım | Foreign Recipient + Country / Yurt Dışı Alıcı + Ülke | Cross-Border Legal Basis / Yurt Dışı Hukuki Temel | Retention Period / Saklama Süresi | Retention Rationale / Saklama Gerekçesi | Destruction Method / İmha Yöntemi | Destruction Period / İmha Periyodu | Technical Measures / Teknik Tedbirler | Administrative Measures / İdari Tedbirler | Risk Level / Risk Seviyesi | Related Information Notice / İlgili Aydınlatma Metni | Explicit Consent Required? / Açık Rıza Gerekli mi? | Last Update / Son Güncelleme |
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+| HR-001 / IK-001 | Candidate Recruitment and CV Management / Çalışan Adayı İşe Alım ve Özgeçmiş Yönetimi | Human Resources / İnsan Kaynakları | Name Surname / HR Director / hr.director@firma.com.tr | Job Candidate / Çalışan Adayı | Identity; Contact; Professional Experience; Education; Visual/Audio | Name-surname, T.R. ID number, date of birth, telephone, e-mail, address, education, work experience, references, photograph, interview notes | N | Evaluation of candidates for open positions; interview; job offer; talent pool management | Necessary for the conclusion of a contract — application stage (Art. 5(2)/c); explicit consent for talent-pool retention | Automated (career site form, e-mail, career portal APIs); non-automated (paper application, events) | Electronic (ATS/HRIS, e-mail server, OneDrive); physical (personnel archive) | HR; hiring manager of the relevant department | Candidate-evaluation firms (ATS provider), legal partner (in case of dispute) | Y | LinkedIn Talent (USA); Greenhouse (USA/EU) | Standard contract + KVKK Board notification; explicit consent where needed | 1 year for non-hired candidates (2 years for talent pool with explicit consent); hired candidates pass to HR-002 | Statute-of-limitations analysis under Labour Law and applicable claims | Erasure (electronic) + destruction (physical) | 6-month periodic destruction calendar | TLS, AES-256 encryption, MFA, role-based access, audit log, ATS security certifications | Confidentiality undertaking, KVKK training, access authorisation matrix | Medium | INF-HR-01 (Recruitment Information Notice) | Y (for talent-pool retention) | 2026-05-08 / KVKK Officer |
+| CUS-002 / MUS-002 | E-commerce Order Management and Delivery / E-ticaret Sipariş Yönetimi ve Teslimat | Operations / Customer Service | Name Surname / Operations Manager / ops.manager@firma.com.tr | Customer (natural person); delivery-address holder (may be third party) | Identity; Contact; Customer Transaction; Location; Finance | Name-surname, T.R. ID (for e-invoice), telephone, e-mail, delivery address, order history, payment information (card data tokenised), IP address, device data | N | Order intake; payment collection; delivery; returns; e-invoice issuance; customer service | Performance of contract (Art. 5(2)/c); legal obligation — Tax Procedure Law (VUK), e-invoice legislation (Art. 5(2)/ç); protection of a right (Art. 5(2)/e) | Automated (website, mobile app, call center); non-automated (in-store order form) | Electronic (e-commerce platform, payment PSP, e-invoice provider, CRM); physical (waybill, invoice copies) | Operations, Accounting, Customer Service, IT | Payment PSP, courier company, e-invoice integrator, Tax Office (statutory), legal partner | Y | AWS (Ireland — cloud infrastructure); Sendgrid (USA — transactional e-mail) | Standard contract; AWS DPA; Sendgrid SCC | Financial records 10 years (TTK Art. 82, VUK Art. 253); customer account 10 years from the end of the relationship (TBK Art. 146 limitation) | TTK, VUK, TBK | Erasure (electronic); destruction (paper invoice copies after archive period) | 6-month periodic destruction | TLS, card tokenisation (PCI-DSS), WAF, IDS/IPS, log collection (SIEM), DDoS protection, encrypted backups | KVKK training, confidentiality undertaking, supplier contracts, periodic audits | High | INF-CUS-01 (Customer E-commerce Information Notice) | N (relies on contract performance); separate consent required for marketing | 2026-05-08 / KVKK Officer |
+| PHY-001 / FIZ-001 | Closed-Circuit Camera System (CCTV) / Kapalı Devre Kamera Sistemi (CCTV) | Security / Güvenlik | Name Surname / Security Manager / security.manager@firma.com.tr | Employee; visitor; supplier employee; third party (anyone in camera field of view) | Visual/Audio; Location | Image recording (face, clothing, action); timestamp; camera location | N | Building and perimeter security; crime prevention; occupational health and safety; asset protection | Legitimate interest (Art. 5(2)/f) — limited scope and duration; legal obligation for OHS (Art. 5(2)/ç) | Automated (CCTV cameras, NVR/DVR) | Electronic (recording server — corporate DC) | Security; Legal + senior management in case of incident | Authorised law enforcement (with judicial process); insurance company (in case of accident) | N | — | — | 30 days (rotating); incident records retained until incident closure | Legitimate interest balancing (PIA): short period + restricted access | Automatic overwrite; manual erasure or destruction for incident records | 30-day rotation | Access logs, MFA, network segmentation, physical lock on recording device, encrypted recording | Access authorisation (Security only), KVKK training, written process for record requests | Medium | INF-PHY-01 (CCTV Sign + Detailed Notice) | N (relies on legitimate interest) | 2026-05-08 / Security Manager |
+
+## 2. Blank Row Template (For New Process)
+
+Copy and fill the following table:
+
+| Field / Alan | Value / Değer |
+|--------------|---------------|
+| Process ID / Süreç ID | `[unit_abbrev]-[3-digit serial]` |
+| Process Name / Süreç Adı | `...` |
+| Business Unit / İş Birimi | `...` |
+| Process Owner / Süreç Sahibi | `Name Surname / Title / e-mail` |
+| Data Subject Group / Veri Konusu Kişi Grubu | `...` |
+| Data Category / Veri Kategorisi | `Identity; Contact; ...` |
+| Personal Data Items / Kişisel Veri Öğeleri | `...` |
+| Special Category (Y/N) / Özel Nitelikli | `N` |
+| Processing Purpose / İşleme Amacı | `Specific, explicit, legitimate purpose statement` |
+| Legal Ground / Hukuki Sebep | `KVKK Art. 5(2)/...` or `Explicit Consent` |
+| Collection Method / Toplama Yöntemi | `Automated / non-automated / mixed + channel` |
+| Storage Medium / Kayıt Ortamı | `Electronic (...) / Physical (...)` |
+| Internal Recipients / Aktarım Yapılan İç Birim | `...` |
+| Domestic Recipient / Yurt İçi Alıcı | `...` |
+| Cross-Border Transfer (Y/N) | `N` |
+| Foreign Recipient + Country | `—` (if none) |
+| Cross-Border Legal Basis | `—` |
+| Retention Period / Saklama Süresi | `... years/months` |
+| Retention Rationale / Saklama Gerekçesi | `Statutory reference or limitation analysis` |
+| Destruction Method / İmha Yöntemi | `Erasure / Destruction / Anonymisation` |
+| Destruction Period / İmha Periyodu | `6 months` (default) |
+| Technical Measures / Teknik Tedbirler | `Encryption, log, MFA, ...` |
+| Administrative Measures / İdari Tedbirler | `Training, confidentiality, ...` |
+| Risk Level / Risk Seviyesi | `Low / Medium / High / Critical` |
+| Related Information Notice / Aydınlatma Metni | `INF-...` |
+| Explicit Consent Required? / Açık Rıza | `Y/N + rationale` |
+| Last Update / Son Güncelleme | `YYYY-MM-DD / Preparer` |
+
+## 3. CSV Header Row (Copy-Paste, Bilingual)
+
+```csv
+process_id_surec_id,process_name_surec_adi,business_unit_is_birimi,process_owner_surec_sahibi,data_subject_group_veri_konusu_kisi_grubu,data_category_veri_kategorisi,personal_data_items_kisisel_veri_ogeleri,special_category_ozel_nitelikli,processing_purpose_isleme_amaci,legal_ground_hukuki_sebep,collection_method_toplama_yontemi,storage_medium_kayit_ortami,internal_recipients_aktarim_ic_birim,domestic_recipient_yurtici_alici,cross_border_transfer_yurtdisi_aktarim,foreign_recipient_country_yurtdisi_alici_ulke,cross_border_legal_basis_yurtdisi_hukuki_temel,retention_period_saklama_suresi,retention_rationale_saklama_gerekce,destruction_method_imha_yontemi,destruction_period_imha_periyodu,technical_measures_teknik_tedbirler,administrative_measures_idari_tedbirler,risk_level_risk_seviyesi,information_notice_aydinlatma_metni,explicit_consent_required_acik_riza_gerekli,last_update_son_guncelleme
+```
+
+### 3.1 Sample CSV Row
+
+```csv
+HR-001,Candidate Recruitment,Human Resources,HR Director,Job Candidate,Identity;Contact;Professional Experience;Education,"name-surname, T.R. ID, telephone, e-mail, education, work experience",N,"Candidate evaluation; interview; job offer","Art. 5(2)/c pre-contract measures; explicit consent for talent pool","Automated (career site); non-automated (paper)","Electronic (ATS, e-mail); physical (personnel)","HR; hiring department","Candidate-evaluation firms, legal partner",Y,"LinkedIn Talent (USA); Greenhouse (USA/EU)","Standard contract + Board notification",1 year (talent pool 2 years),"Statute-of-limitations analysis on job applications",Erasure + destruction,6 months,"TLS, AES-256, MFA, audit log","Confidentiality, KVKK training, authorisation",Medium,INF-HR-01,Y,2026-05-08
+```
+
+## 4. Field Definitions (Glossary)
+
+### 4.1 Process ID
+A unique internal identifier. Recommended format: `[Unit 2-3 letters]-[3-digit serial]` (e.g., HR-001, CUS-002, IT-014).
+
+### 4.2 Data Subject Group (Reg. Art. 4/n)
+"Category of data subjects whose personal data the data controllers process." Typical groups:
+- Employee, Job Candidate, Former Employee, Employee Relative
+- Customer, Prospect, Former Customer
+- Supplier Employee, Supplier Authorised Representative
+- Visitor, Intern, Consultant
+- Shareholder, Board Member
+- Third Party (reference, recipient, guarantor, etc.)
+- Child (data subject under 18)
+
+### 4.3 Data Category (Reg. Art. 4/m)
+"Class of personal data of one or more groups of data subjects, grouped according to common characteristics of personal data." VERBİS standard categories:
+
+- Identity (name-surname, T.R. ID, date of birth, gender)
+- Contact (telephone, e-mail, address)
+- Location (GPS, IP, location services)
+- Personnel File (personnel-file data)
+- Legal Proceeding (case data, power of attorney)
+- Customer Transaction (orders, invoices, history)
+- Physical Premises Security (CCTV, badge logs)
+- Transaction Security (logs, IP, sessions)
+- Risk Management (scoring, risk profile)
+- Finance (IBAN, tokenised card data, income)
+- Professional Experience (CV, education, certifications)
+- Marketing (preferences, habits, profile)
+- Visual/Audio (photo, voice recording, video)
+- Health Data (special category — KVKK Art. 6)
+- Sexual Life (special category)
+- Criminal Record and Security Measures (special category)
+- Biometric Data (special category)
+- Genetic Data (special category)
+- Philosophical belief, religion, sect, religious denomination (special category)
+- Association/foundation/union membership (special category)
+- Political opinion (special category)
+
+### 4.4 Legal Ground
+One of the clauses of KVKK Art. 5(2) (general data) or Art. 6(2)-(3) (special category). **Explicit consent is the last resort.**
+
+### 4.5 Collection Method (Disclosure Communiqué Art. 5/i)
+"Wholly or partly by automated means or non-automated means, where the data forms part of a data filing system" — explicit statement is mandatory.
+
+### 4.6 Recipient / Recipient Group (Reg. Art. 4/a)
+"Category of natural or legal persons to whom the personal data is transferred by the data controller." A category (e.g., "Courier companies", "Legal partners") may be used instead of listing each company; however, for cross-border transfers the company + country must be stated explicitly.
+
+### 4.7 Retention Period (Reg. Art. 9/4-5)
+- If a period is prescribed by legislation → that period.
+- If multiple periods exist → the longest.
+- When determining the period (Art. 9/4), consider sectoral practice, duration of the legal relationship, duration of legitimate interest, risk-cost, suitability for keeping up-to-date, statutory obligations, and statute of limitations.
+
+### 4.8 Destruction Method (Erasure-Destruction Reg. Art. 8-10)
+- **Erasure (silme):** Making personal data inaccessible and unusable for relevant users.
+- **Destruction (yok etme):** Making personal data inaccessible, irretrievable and unusable by anyone.
+- **Anonymisation:** Rendering data unrelatable to a specific or identifiable natural person, even when matched with other data.
+
+### 4.9 Destruction Period (Erasure-Destruction Reg. Art. 11)
+Periodic destruction must occur at most every **6 months**. Internal policy may set a shorter interval.
+
+### 4.10 Risk Level
+- **Low:** General data, small volume, limited sharing, low impact.
+- **Medium:** General data, medium volume, external sharing exists, medium impact.
+- **High:** Special-category data, large volume, automated decision-making, cross-border transfer.
+- **Critical:** Children's data, biometrics, health + large volume, high automated profiling, financial transactions.
+
+## 5. Table Display Note
+
+Because the markdown table is wide:
+- For viewing: VS Code Markdown preview, GitHub or GitLab.
+- For editing: export to Excel/CSV and paste back.
+- On a wiki: also viable as a Confluence or SharePoint list.
+
+## 6. Validation Checks
+
+After creating each row, run the following checks:
+
+- [ ] **Are legal ground + purpose consistent?** If "performance of contract" is stated, does the row really arise from a contract?
+- [ ] **Does the retention period conflict with legislation?** Watch out for differences such as VUK Art. 253 (5 years) vs. TTK Art. 82 (10 years).
+- [ ] **Cross-border transfer check:** Is the SaaS provider's server location verified? "AWS Frankfurt" written as "AWS Ireland" must be corrected.
+- [ ] **Was explicit consent misplaced?** The most common error is to list "explicit consent" while contract performance applies.
+- [ ] **Is the information notice present and current?** Otherwise Reg. Art. 5/d is breached.
+- [ ] **Is the VERBİS reflection done?** Update VERBİS within 7 days of adding a new row.
+
+---
+
+## Türkçe
 
 # Kişisel Veri İşleme Envanteri — Şablon
 

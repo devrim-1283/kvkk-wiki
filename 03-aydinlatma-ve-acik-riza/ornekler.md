@@ -1,13 +1,638 @@
 ---
-Doküman: Senaryo Bazlı Aydınlatma ve Açık Rıza Örnekleri
-Bölüm: 03-aydinlatma-ve-acik-riza
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.5, m.6, m.9, m.10, m.11; Aydınlatma Tebliği MADDE 4-5; 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ve İYS Yönetmeliği; ilgili sektör mevzuatı
+Doküman / Document: Senaryo Bazlı Aydınlatma ve Açık Rıza Örnekleri / Scenario-Based Disclosure and Explicit Consent Examples
+Bölüm / Section: 03-aydinlatma-ve-acik-riza
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.5, m.6, m.9, m.10, m.11 / Law No. 6698 (KVKK) Art. 5, 6, 9, 10, 11; Aydınlatma Tebliği MADDE 4-5 / Disclosure/Information Notice Communiqué Art. 4-5; 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun ve İYS Yönetmeliği / Law No. 6563 on the Regulation of Electronic Commerce and the İYS Regulation; ilgili sektör mevzuatı / relevant sectoral legislation
 ---
+
+## English
+
+# Scenario-Based Disclosure and Explicit Consent Examples
+
+This document shows the practical translation of disclosure and explicit-consent practice for commonly encountered scenarios. For each scenario:
+1. **Context** — operational situation
+2. **Legal analysis** — which ground, is consent required
+3. **Information notice** — abbreviated example for the appropriate channel
+4. **Consent screen / flow** — if any
+5. **Evidence and records** — what is logged and how
+6. **Common errors**
+
+---
+
+## Scenario 1 — Customer E-commerce Registration + Optional Marketing Consent
+
+### Context
+B2C e-commerce site, user registration form. Order placement and marketing communication are separate purposes.
+
+### Legal Analysis
+- **Account creation + contract:** KVKK Art. 5(2)/c (necessity for contract performance)
+- **Order tracking, invoicing:** Art. 5(2)/c, Art. 5(2)/ç (under Tax Procedure Law (VUK))
+- **Marketing (e-mail, SMS, push):** Explicit consent + İYS approval mandatory
+- **Profiling (recommendations based on purchase analysis):** Explicit consent
+- **Sharing for marketing with third parties:** Explicit consent
+
+### Form Design
+
+```
+[Page 1 — Membership Information]
+Full name: [____________]
+E-mail:    [____________]
+Phone:     [____________]
+Password:  [____________]
+
+→ "Next" button
+
+[Page 2 — Information and Approval]
+
+MANDATORY
+☐ I have read and understood the "Membership Information Notice" (INF-CUS-01).
+☐ I have read and accept the Distance Sales Pre-Information Form.
+☐ I have read and accept the Membership Agreement.
+
+OPTIONAL — EXPLICIT CONSENT
+The choices below are entirely up to you. Not giving them does not prevent
+you from receiving our service.
+
+☐ Marketing Explicit Consent
+   I accept receiving e-mail, SMS and push notifications about the Company's
+   open and closed campaigns, discounts and new product introductions.
+   (Information notice: INF-MKT-01) (İYS: e-mail + SMS)
+
+☐ Personalisation / Profiling Explicit Consent
+   I accept the analysis of my behaviour on the site and my purchase history
+   to receive personalised recommendations.
+   (Information notice: INF-MKT-02)
+
+☐ Sharing With Business Partners for Marketing
+   I accept sharing of marketing-related data with our business partners.
+   (Information notice: INF-MKT-03)
+
+[Sign Up]
+```
+
+### Evidence and Records
+
+CMP record:
+```
+{
+  "user_id": "U-394827",
+  "consent": [
+    { "category": "marketing_email_sms",   "status": "granted",   "version": "INF-MKT-01:1.2" },
+    { "category": "profiling",             "status": "withdrawn", "version": "INF-MKT-02:1.0" },
+    { "category": "third_party_sharing",   "status": "granted",   "version": "INF-MKT-03:1.1" }
+  ],
+  "channel": "web",
+  "ip": "85.x.x.x",
+  "user_agent": "Mozilla/5.0 ...",
+  "recorded_at": "2026-05-08T13:24:10Z",
+  "iys_record_id": "IYS-0000-0000"
+}
+```
+
+### Common Errors
+- Conditioning account creation on marketing consent
+- Combining disclosure and all consents into a single checkbox
+- "Tick all" defaulted on
+- No withdrawal channel
+
+---
+
+## Scenario 2 — Job Candidate Onboarding → Transition After Hire
+
+### Context
+Recruitment process → personnel-file process after start of employment. **Two different processes → two different information notices.**
+
+### Legal Analysis
+- **Candidate evaluation:** Art. 5(2)/c (pre-contract measures), Art. 5(2)/f (legitimate interest)
+- **Talent-pool retention (if not hired):** Explicit consent
+- **Personnel file after hire:** Art. 5(2)/c (contract performance), Art. 5(2)/ç (Labour Law, SGK), Art. 6(3) (health data by persons under a duty of confidentiality)
+
+### Disclosure Flow
+
+1. At application: **INF-HR-01 (Recruitment)** is shown.
+2. On hire: **INF-HR-02 (Personnel File)** is delivered separately and a signed copy taken.
+3. For medical reports: **INF-HR-07 (OHS)** + supplementary disclosure.
+4. If talent-pool retention is requested, separate explicit consent.
+
+### Talent-Pool Explicit Consent (Above the Form)
+
+```
+☐ In the event that I am not hired as a result of evaluation of my
+  application, I consent to the retention of my application data by the
+  Company for up to 2 years to be evaluated for suitable future positions.
+  (INF-HR-01)
+
+  I may withdraw this consent at any time by contacting
+  hr-kvkk@companyname.com.tr.
+```
+
+### Common Errors
+- A single notice failing to distinguish candidate vs. employee
+- No separate disclosure for OHS health data
+- Talent-pool retention without consent
+- Creating the impression that the employee "must" consent
+
+---
+
+## Scenario 3 — CCTV: Visitor Sign + Detailed Information Notice
+
+### Context
+The company building has CCTV. All entrances are monitored; toilets, changing rooms etc. are out of scope.
+
+### Legal Analysis
+- **Legal ground:** Art. 5(2)/f (legitimate interest — building security) + Art. 5(2)/ç (OHS legislation)
+- **Explicit consent not required**
+
+### Sign Text (Building Entrance — Visible Place)
+
+```
+┌──────────────────────────────────────────────────┐
+│ [Company logo]                                    │
+│                                                   │
+│ NOTICE — CLOSED-CIRCUIT CAMERA SYSTEM             │
+│                                                   │
+│ This area is monitored by CCTV for security       │
+│ purposes.                                         │
+│                                                   │
+│ Data Controller: [Full Company Title]             │
+│ Purpose: Building and perimeter security,         │
+│   entry/exit records under OHS                    │
+│ Legal Ground: KVKK Art. 5(2)/f and 5(2)/ç         │
+│                                                   │
+│ Detailed information notice:                      │
+│ www.companyname.com.tr/kvkk/cctv                  │
+│ [QR CODE]                                         │
+│                                                   │
+│ Retention: 30 days                                │
+│ Application: kvkk@companyname.com.tr              │
+└──────────────────────────────────────────────────┘
+```
+
+### Detail to Add to the Long-form Notice
+
+```
+The cameras are positioned in common areas, entrances/exits, corridors,
+the parking lot, and main security points. They do not cover toilets,
+changing rooms, prayer rooms, or other private areas. There are [n] cameras
+in total. Only authorised Security personnel access the recordings.
+Recordings are rotated every 30 days unless an incident is recorded.
+```
+
+### Common Errors
+- Relying on the sign alone; no detail on the website
+- Cameras placed in private areas
+- Unjustified retention longer than 30 days
+- Excessive access rights to recordings
+
+---
+
+## Scenario 4 — Call Center Voice Recording Announcement (Full Text)
+
+### Context
+Inbound and outbound call center. All conversations are recorded.
+
+### Legal Analysis
+- **Inbound (under customer contract):** Art. 5(2)/c
+- **Inbound (general support, service quality):** Art. 5(2)/f
+- **Outbound (marketing):** Explicit consent + İYS approval
+- **Use for training purposes:** Additional legitimate-interest assessment required
+
+### Inbound — IVR Announcement (Start of Call)
+
+```
+"Welcome to [Company name].
+
+Your call is being recorded for the purposes of monitoring service quality,
+recording your requests, and performing our contract, on the basis of KVKK
+Art. 5(2)/c and Art. 5(2)/f.
+
+Our detailed information notice is available at
+www.companyname.com.tr/kvkk/cm.
+
+If you do not wish to continue, you may end the call.
+
+For requests press 1, for your account press 2..."
+```
+
+### Outbound — Marketing Call
+
+```
+[Operator]:
+"Good day [Customer name]. This is [Operator name] calling from [Company].
+This call is being recorded.
+
+I would like to share information about [product/campaign]. According to our
+KVKK and İYS records, you have previously given explicit consent to marketing
+communication. Would you like to proceed?"
+
+[If the customer refuses]
+"Understood. I will arrange the withdrawal of your marketing-communication
+consent. A confirmation e-mail will follow. Have a good day."
+
+[Consent state updated in the system, e-mail triggered]
+```
+
+### Evidence
+- IVR announcement system log (display)
+- Voice recording (full call)
+- Consent state in CRM
+- İYS approval record (for outbound)
+
+### Common Errors
+- Announcement limited to "this call is being recorded"; missing data controller, purpose, legal ground, application info
+- Outbound marketing call placed without checking İYS approval
+- Voice recordings retained for unlimited duration
+
+---
+
+## Scenario 5 — Mobile App Permissions (Location, Camera, Microphone, Contacts)
+
+### Context
+A mobile application requests location, camera (product photo), microphone (voice support feature) and contacts (sharing) access.
+
+### Legal Analysis
+OS permission ≠ KVKK consent. **Both are required.**
+
+| Permission | Purpose | Legal Ground |
+|------------|---------|--------------|
+| Location (coarse) | Nearest-store suggestion | Art. 5(2)/f (legitimate interest — informational) |
+| Location (precise, continuous) | Location-based campaign | Explicit consent |
+| Camera | Product-photo upload | Art. 5(2)/c (contract performance — user-generated content) |
+| Microphone | Voice customer service | Art. 5(2)/c (contract performance) |
+| Contacts | Invite-friends feature | Explicit consent + third party's consent expected |
+
+### Flow
+
+```
+[App first launch]
+1. Onboarding screen: INF-MOB-01 (Mobile App Information Notice)
+2. Account creation → e-mail/phone verification
+3. Permission requests (just-in-time):
+   - Location modal:
+     "Location access is needed to show stores nearby.
+      This is processed under KVKK Art. 5(2)/f.
+      If you grant the OS permission, your location stays on your device
+      and is used only to list nearby stores."
+     [Allow]  [Reject]
+
+4. Marketing explicit-consent screen (separate):
+   ☐ Location-based marketing explicit consent
+   ☐ Push-notification marketing explicit consent
+```
+
+### Common Errors
+- Confusing OS permission with KVKK consent
+- Disabling the app when permission is not granted
+- Silently capturing background location
+- Using contacts data without consent of the third parties
+
+---
+
+## Scenario 6 — Cookie Banner (CMP) + IAB TCF Localised for Turkey
+
+### Context
+The website uses analytics and marketing cookies. The IAB TCF (Transparency & Consent Framework) v2 structure is used; local compliance for Turkey is also required.
+
+### Legal Analysis
+- **Strictly necessary cookies:** Art. 5(2)/f (legitimate interest — site functionality)
+- **Performance/analytics:** Explicit consent recommended (per Authority's cookie guide)
+- **Marketing/advertising:** Explicit consent mandatory
+
+### Cookie Banner Design
+
+```
+[Bottom of page — sticky bar]
+
+┌────────────────────────────────────────────────────────┐
+│ Cookie Preferences                                      │
+│                                                          │
+│ Our website uses cookies. Strictly necessary cookies     │
+│ run the site. Other cookies depend on your preferences.  │
+│                                                          │
+│ [Reject All]   [Accept All]   [Manage Preferences]       │
+└────────────────────────────────────────────────────────┘
+```
+
+> "Reject All" must be **as easy** and **visually weighted equally** as "Accept All".
+
+### Manage Preferences (Detailed Modal)
+
+```
+☑ Strictly necessary  (cannot be turned off)
+   Session, security and core functionality.
+   [Detail list]
+
+☐ Performance / Analytics
+   Page performance and usage analysis (Google Analytics, etc.)
+   Duration: 13 months | Third parties: Google Ireland
+
+☐ Marketing / Advertising
+   Targeted advertising and campaign communication (Meta, Google Ads)
+   Duration: 13 months | Third parties: Meta (USA), Google Ads (Ireland)
+
+☐ Social Media
+   Social-media share plugins (Facebook, X)
+   Duration: session + 1 year
+
+[Save Preferences]   [Cancel]
+
+Detailed cookie policy: [link]
+KVKK Information Notice: INF-WEB-01
+```
+
+### IAB TCF Note
+- An IAB TCF v2 string alone does not provide KVKK compliance.
+- A Turkish text + reference to KVKK Art. 5/Art. 6 + the Authority's cookie guide + İYS compliance are additional requirements.
+- TCF Vendor List entries must be listed as third-party recipients in the information notice.
+
+### Common Errors
+- Only an "Accept" button (refusal not balanced)
+- Saved preference defaults to accept
+- Third-party cookies not declared
+- Cookie wall (cannot enter without accepting) — criticised in Board guidance
+
+---
+
+## Scenario 7 — Newsletter / SMS Marketing (Including İYS Compliance)
+
+### Context
+A newsletter subscription is being collected from a visitor who is not yet a customer.
+
+### Legal Analysis
+- **KVKK consent:** Art. 5(1) first sentence — explicit consent
+- **İYS approval:** Law No. 6563 + İYS Regulation — approval mandatory, registered with İYS
+- **Existing-customer exemption:** limited (relevant sectoral rules apply)
+
+### Newsletter Sign-up Form
+
+```
+Subscribe to Newsletter
+
+E-mail: [_______________]
+
+☐ I agree to receive campaign, discount and new-product information by e-mail.
+  KVKK Disclosure: INF-MKT-01
+  İYS Approval: e-mail channel
+
+  I may withdraw at any time via the unsubscribe link or via iys.org.tr.
+
+[Subscribe]
+```
+
+### First Confirmation E-mail (Double Opt-in)
+
+```
+Subject: Confirm your e-mail subscription
+
+Hello [User name],
+
+You requested to subscribe to the [Company name] e-mail list.
+
+Click to confirm your subscription:
+[CONFIRM] (link valid for 7 days)
+
+If you did not request this, you may ignore this e-mail.
+
+KVKK Information Notice: [link]
+İYS information and subscription management: iys.org.tr
+```
+
+> Double opt-in is not legally mandatory; however, it improves the quality of "consent evidence" in Authority audits and prevents erroneous registrations.
+
+### Below Each Marketing E-mail
+
+```
+─────────────────────────────────────────
+This e-mail was sent based on the explicit consent we obtained under
+KVKK Art. 5(1) first sentence.
+
+To unsubscribe: [Unsubscribe link]
+To manage via İYS: iys.org.tr
+KVKK Information Notice: [Link]
+
+[Full Company Title] - [MERSIS] - [Address]
+```
+
+### Common Errors
+- Approval not registered with İYS
+- Hidden / hard-to-find unsubscribe button
+- Single opt-in risk of fake registration
+- Wording extending beyond legislative scope (e.g., "campaigns, surveys, third parties, other activities")
+
+---
+
+## Scenario 8 — Healthcare Patient Registration (KVKK Art. 6 Health Data)
+
+### Context
+Private hospital / polyclinic. Patient registration, examination, treatment processes.
+
+### Legal Analysis
+- **Health data:** KVKK Art. 6 — special category
+- **Art. 6(3) exception:** May be processed without consent by persons under a duty of confidentiality (physician, nurse, pharmacist, etc.) for the protection of public health, preventive medicine, medical diagnosis, treatment and care, planning and management of health services and financing.
+- **Financial transactions (billing, insurance):** additionally Art. 5(2)/c and Art. 5(2)/ç
+- **Purposes other than health (e.g., marketing, research):** explicit consent
+
+### Patient Registration Information Notice (Summary)
+
+```
+PATIENT INFORMATION NOTICE
+[Full Hospital Name]
+
+Data Processed:
+- Identity, contact
+- Health data (special category): diagnosis, treatment, medication, medical
+  imaging, lab results, anamnesis
+- Financial information (for billing)
+
+Purposes:
+- Medical diagnosis, treatment and care
+- Planning and management of health services
+- Reporting to health authorities under legislation
+- Insurance accrual and billing
+- Scientific research (anonymised; otherwise, with explicit consent)
+
+Legal Ground:
+- KVKK Art. 6(3) — processing of health and sexual-life data by persons
+  under a duty of confidentiality
+- KVKK Art. 5(2)/ç — Ministry of Health notifications (Basic Law on Health
+  Services, etc.)
+- KVKK Art. 5(2)/c — performance of the healthcare contract
+- KVKK Art. 5(2)/e — establishment of a right (insurance, litigation)
+
+Transfer:
+- Ministry of Health, relevant ministry units (statutory)
+- SGK and private health insurers
+- Other healthcare institutions for referrals
+- Legal partner (in case of dispute)
+- Cross-border: where a foreign expert opinion is required, transferred
+  with explicit consent
+
+Retention:
+- Patient file: relevant healthcare legislation and TBK limitation periods
+  evaluated together; **20 years** as reference.
+```
+
+### Scenarios Requiring Explicit Consent (Inside the Hospital)
+
+| Processing | Consent |
+|-----------|---------|
+| Health data processing for treatment | Not required (Art. 6(3)) |
+| Sharing health report for insurance | Generally not required; contract + statute |
+| Participation in clinical research | Explicit consent mandatory |
+| Marketing (announcement of new services) | Explicit consent mandatory |
+| Patient-experience survey | Art. 5(2)/f or explicit consent |
+| Photo for social-media share | Explicit consent mandatory |
+
+### Common Errors
+- Generic staff access to health data (limited to those under a duty of confidentiality)
+- Insufficient retention period for patient files
+- No explicit consent for clinical research
+- Use of health data for marketing without consent
+
+---
+
+## Scenario 9 — HR Reference-Check Process
+
+### Context
+At the final stage of recruitment, references provided by the candidate (former employer / managers) are contacted. The reference provider is also a data subject.
+
+### Legal Analysis
+
+Two different data subject groups:
+1. **Candidate** — own data
+2. **Reference provider** — personal data (at least name, organisation, contact)
+
+| Data subject | Legal ground |
+|--------------|--------------|
+| Candidate — processing of reference information | Art. 5(2)/c (pre-contract measures) |
+| Candidate — obtaining the reference's opinion | Art. 5(2)/f (legitimate interest — competency assessment) |
+| Reference provider — contact data | Art. 5(2)/f (legitimate interest); disclosure performed |
+| Opinion taken from the reference (qualified comment) | Art. 5(2)/f, depending on category |
+
+### Operational Flow
+
+1. The candidate shares reference contact details on the application form.
+2. The information notice contains "you are expected to obtain disclosure and, where required, consent from the reference whose contact details you share."
+3. HR calls the reference and starts with a **disclosure to the reference**:
+
+```
+"Hello [Name]. This is [HR specialist name] from [Company]. [Candidate name]
+listed you as a reference. I would like to discuss the candidate's past
+work experience with you.
+
+Our call is being conducted on the basis of legitimate interest under KVKK
+Art. 5(2)/f. The information you provide will be used in [candidate name]'s
+recruitment decision and retained for 1 year. Our detailed information
+notice can be sent to you on request.
+
+May I proceed?"
+```
+
+### Common Errors
+- Failing to make disclosure to the reference (at the start of the call)
+- Using reference data shared by the candidate without consent (e.g., blacklist)
+- Long retention of reference responses
+- Missing call-recording announcement when reference is called
+
+---
+
+## Scenario 10 — Sharing Supplier-Employee Data
+
+### Context
+Company A (data controller) receives name-surname, T.R. ID number, telephone and job title of supplier B's employees in order to provide them with building/system access.
+
+### Legal Analysis
+- **From Company A's perspective (data controller):** Art. 5(2)/c (performance of the contract between A and B); Art. 5(2)/f (legitimate interest in protecting the building)
+- **Supplier B's employee (data subject):** Not the employee's own consent; B's performance obligation
+- **Disclosure:** Company A may disclose to the supplier's employee **directly** or via supplier B.
+
+### Suggested Contract Clause (B → A)
+
+```
+"The Supplier (B) represents and undertakes that, in the course of obtaining
+the personal data of its employees and transferring them to the Company (A),
+it has fulfilled the disclosure obligation under KVKK Art. 10 vis-à-vis its
+own employees. Employees who will work in A's building will additionally be
+served A's INF-OPR-01 (Supplier Employee Building and System Access)
+information notice, and signed copies will be provided to A on its request."
+```
+
+### Information Notice for the Supplier Employee (At Building Entry)
+
+```
+DEAR VISITOR / SUPPLIER EMPLOYEE
+
+[Full Title of Company A] processes the following personal data of yours
+to enable your access to our building and/or systems:
+
+Data: name-surname, T.R. ID number, telephone, photograph (for the badge),
+       title, name of the supplier company you work for
+
+Purpose: Building and system security, performance of the supplier contract,
+OHS records
+
+Legal Ground:
+- KVKK Art. 5(2)/c — Performance of the contract between our company and
+  your supplier
+- KVKK Art. 5(2)/f — Legitimate interest in building security
+- KVKK Art. 5(2)/ç — OHS legislation
+
+Retention: 1 year from completion of the work
+
+Transfer: Authorised law enforcement (with written request and judicial
+process), insurance company (in case of accident)
+
+Cross-border transfer: NONE
+
+KVKK Art. 11 rights and applications: [info]
+Detailed information notice: INF-OPR-01 (available on request at the badge
+issue point)
+```
+
+### Common Errors
+- Treating the supplier employee as not requiring disclosure because they "are an employee of the supplier"
+- Absence of KVKK clauses in the supplier contract
+- Treating supplier-employee data like customer data at Company A
+- Continuing retention beyond 1 year
+
+---
+
+## 11. General Cross-Scenario Reference Table
+
+| Scenario type | Disclosure | Explicit Consent | Suggested Legal Ground |
+|---------------|-----------|------------------|------------------------|
+| Customer contract (registration, order) | Yes | N | Art. 5(2)/c, Art. 5(2)/ç |
+| Marketing (e-mail/SMS/push) | Yes | Y | Art. 5(1) + İYS |
+| Profiling | Yes | Y | Art. 5(1) |
+| Inbound call center voice recording | Yes (announcement) | N | Art. 5(2)/c, Art. 5(2)/f |
+| Outbound call center marketing | Yes | Y | Art. 5(1) + İYS |
+| Employee personnel file | Yes | N | Art. 5(2)/c, Art. 5(2)/ç |
+| Job candidate | Yes | N (Y for talent pool) | Art. 5(2)/c |
+| CCTV building security | Yes | N | Art. 5(2)/f, Art. 5(2)/ç |
+| Visitor management | Yes | N | Art. 5(2)/f, Art. 5(2)/ç |
+| Mobile app — core function | Yes | N | Art. 5(2)/c, Art. 5(2)/f |
+| Mobile app — location/contacts/microphone (non-essential) | Yes | Y | Art. 5(1) |
+| Cookies analytics | Yes | Y (recommended) | Art. 5(1) |
+| Cookies marketing | Yes | Y (mandatory) | Art. 5(1) |
+| Newsletter | Yes | Y | Art. 5(1) + İYS |
+| Health data treatment | Yes | N | Art. 6(3) |
+| Health data marketing/research | Yes | Y | Art. 6(2) |
+| Employee reference | Yes | N | Art. 5(2)/f |
+| Supplier employee building access | Yes | N | Art. 5(2)/c, Art. 5(2)/f, Art. 5(2)/ç |
+
+## 12. Annexes
+
+- Template: [aydinlatma-metni-sablonu.md](./aydinlatma-metni-sablonu.md)
+- Checklist: [aydinlatma-metni-checklist.md](./aydinlatma-metni-checklist.md)
+- Explicit Consent Rules: [acik-riza-kurallari.md](./acik-riza-kurallari.md)
+
+---
+
+## Türkçe
 
 # Senaryo Bazlı Aydınlatma ve Açık Rıza Örnekleri
 

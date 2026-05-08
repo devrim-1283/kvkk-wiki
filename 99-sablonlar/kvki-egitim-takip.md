@@ -1,13 +1,256 @@
 ---
-Doküman: KVKK Eğitim Katılım Kayıt Formu ve Müfredat Kontrolü
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu + İnsan Kaynakları
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.12 (idari tedbirler — eğitim); Veri Güvenliği Rehberi
+Doküman / Document: KVKK Eğitim Katılım Kayıt Formu ve Müfredat Kontrolü / KVKK Training Participation Record and Curriculum Control
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu + İnsan Kaynakları — KVKK Officer + Human Resources
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.12 (idari tedbirler — eğitim); Veri Güvenliği Rehberi — KVKK Art. 12 (administrative measures — training); Personal Data Security Guide
 ---
+
+## English
+
+# KVKK Training Tracking Forms
+
+## 1. Training Programme Structure
+
+| Training Type | Audience | Duration | Frequency |
+|---------------|----------|----------|-----------|
+| Basic KVKK Awareness | All employees | 60-90 min | Onboarding + annual |
+| Extended KVKK | Managers | 4 hours | On appointment + annual |
+| HR KVKK Practice | HR personnel | 4 hours | On appointment + annual |
+| IT/Developer KVKK | Developers, sysadmins, DBAs | 4 hours | On appointment + annual |
+| Call Centre KVKK | Call centre personnel | 2 hours | On appointment + 6-monthly |
+| Marketing KVKK | Marketing, digital, CRM | 3 hours | On appointment + annual |
+| Legal-Incident Response | KVKK team, legal, IT | 6 hours (exercise) | Annual |
+| Supplier Management KVKK | Procurement, sourcing | 2 hours | On appointment + annual |
+| Phishing Simulation | All employees | 5 min | Quarterly |
+
+## 2. Curriculum Checklist
+
+### 2.1 Basic KVKK Awareness (Minimum Content)
+
+- [ ] Purpose, scope, basic concepts of KVKK
+- [ ] Personal data and sensitive data distinction
+- [ ] Controller and processor
+- [ ] Conditions of processing (Arts. 5, 6) — explicit consent vs. other legal bases
+- [ ] Disclosure obligation
+- [ ] Data subject rights (Art. 11)
+- [ ] Data security — basic responsibilities
+- [ ] Breach detection and notification — 24-hour internal report
+- [ ] Sanctions — administrative fines, criminal offences
+- [ ] Company policies — overview
+- [ ] Knowledge test (≥80% pass)
+- [ ] Acknowledgement undertaking
+
+### 2.2 Extended for Managers
+
+- [ ] Basic curriculum +
+- [ ] Manager responsibilities (lead by example)
+- [ ] Decision support — system investment, training
+- [ ] KVKK control in supplier contract approval
+- [ ] Unit-level inventory currency
+- [ ] Incident response — manager role
+- [ ] Monitoring employee awareness
+- [ ] KPI reading and follow-up
+
+### 2.3 HR Applied
+
+- [ ] Applicant CV retention and destruction
+- [ ] Personnel file KVKK compliance
+- [ ] Health data processing — special measures
+- [ ] Performance evaluation — KVKK aspect
+- [ ] CCTV and PDKS — legitimate interest assessment
+- [ ] Post-termination data management
+- [ ] Training, events, photo sharing
+- [ ] Salary information confidentiality
+- [ ] Disciplinary processes and KVKK
+
+### 2.4 IT / Developer Technical
+
+- [ ] Privacy by Design — in development lifecycle
+- [ ] Data minimisation — code application
+- [ ] Encryption standards (rest+transit)
+- [ ] Access management, RBAC, MFA
+- [ ] Logging — logic of logs without personal data
+- [ ] Backup and destruction — erasure from backups
+- [ ] Test environments — anonymisation and masking
+- [ ] Third-party integration — DPA control
+- [ ] Cloud security — shared responsibility
+- [ ] Open source and licensing
+- [ ] Acting on penetration test outcomes
+- [ ] Technical incident response steps
+
+### 2.5 Call Centre
+
+- [ ] Correct privacy notice reading / SMS dispatch
+- [ ] Customer identity verification
+- [ ] Explicit consent collection
+- [ ] Not responding directly to customer requests — redirection
+- [ ] Application logging and routing to KVKK team
+- [ ] Voice recording and confidentiality
+- [ ] Not sharing customer data
+- [ ] Social engineering threats
+
+### 2.6 Marketing
+
+- [ ] Explicit consent vs. legitimate interest distinction
+- [ ] Commercial electronic messaging regime (IYS)
+- [ ] Profiling and automated decision — Art. 11/g
+- [ ] Compliance with Cookie Guide
+- [ ] Third-party tag manager consent gating
+- [ ] Marketing database hygiene
+- [ ] CRM and segmentation
+- [ ] Post-campaign destruction
+
+## 3. Training Participation Record Form
+
+```
+======================================================================
+KVKK TRAINING PARTICIPATION RECORD
+======================================================================
+
+Training Information
+- Training name : ___________________________
+- Date          : ___________________________
+- Time          : ___________________________
+- Duration      : ___________________________
+- Venue / Online: ___________________________
+- Trainer       : ___________________________
+- Programme code: ___________________________
+
+Audience
+[ ] All employees [ ] Manager [ ] HR [ ] IT
+[ ] Call centre   [ ] Marketing [ ] Legal [ ] Procurement
+[ ] Other: ___________________________
+
+Curriculum Coverage
+[ ] Curriculum checklist completed (Annex 1)
+
+Materials
+[ ] Slide deck (version: ___)
+[ ] Knowledge test (version: ___)
+[ ] Certificate (if any)
+[ ] Recording (online)
+
+----------------------------------------------------------------------
+PARTICIPANT LIST
+
+| # | Name-Surname | Unit | Reg No | Email | Test Result | Cert | Sign |
+|---|--------------|------|--------|-------|--------------|------|------|
+| 1 |              |      |        |       | ___% / Pass  |      |      |
+| 2 |              |      |        |       |              |      |      |
+| ...|             |      |        |       |              |      |      |
+
+----------------------------------------------------------------------
+EVALUATION
+
+- Total participants         : _____
+- Completion rate (%)        : _____
+- Test pass rate (%)         : _____ (≥80% target)
+- Feedback average (1-5)     : _____ (≥4.0 target)
+
+Notable feedback:
+___________________________________________________________________
+
+----------------------------------------------------------------------
+TRAINER APPROVAL
+Name: ___________________________
+Date: ___________________________
+Signature: ___________________________
+
+----------------------------------------------------------------------
+KVKK OFFICER APPROVAL
+Name: ___________________________
+Date: ___________________________
+Signature: ___________________________
+======================================================================
+```
+
+## 4. LMS / Online Tracking
+
+If an LMS is used, minimum fields:
+
+| Field | Description |
+|-------|-------------|
+| User ID | Employee registration number or email |
+| Module ID | Curriculum code |
+| Assignment date | When assigned |
+| Completion date | When completed |
+| Time spent | Minimum threshold check |
+| Test score | 80% threshold |
+| Certificate no | Auto-generated |
+| Version | Material version |
+| Manager approval | Where workflow needs |
+
+## 5. Annual Curriculum Review
+
+| Step | Owner | Deadline |
+|------|-------|----------|
+| Reflect regulatory changes in curriculum | KVKK Officer + Legal | December |
+| Add lessons from prior year breaches/complaints | KVKK Officer | December |
+| Design modules for new roles | HR + KVKK Officer | December |
+| Annual training calendar | KVKK Officer + HR | January |
+| Curriculum approval | KVKK Committee | January |
+
+## 6. Phishing Simulation Programme
+
+```
+PHISHING SIMULATION CAMPAIGN RECORD
+
+Campaign info
+- Name           : ___________________________
+- Date           : ___________________________
+- Audience       : ___________________________
+- Theme (email)  : ___________________________
+- Difficulty     : Easy / Medium / Hard
+
+Results
+- Sent           : _____
+- Opened         : _____ (___%)
+- Clicked        : _____ (___%)  ← KPI <5% target
+- Submitted info : _____ (___%)
+- Reported       : _____ (___%)
+- Avg response   : _____
+
+Actions
+- Clickers redirected to micro-learning: [Yes/No]
+- Repeat clickers (3+ campaigns): [List]
+- Manager 1-on-1 triggered: [Count]
+
+Approvals
+- Information Security: __________
+- KVKK Officer        : __________
+- HR                  : __________
+```
+
+## 7. Training KPIs (Monthly)
+
+| KPI | Target | Source |
+|-----|--------|--------|
+| Overall training completion | ≥95% | LMS |
+| Critical role completion | 100% | LMS |
+| Knowledge test pass rate | ≥90% | LMS |
+| Phishing click rate | ≤5% | Phishing platform |
+| Training satisfaction | ≥4.0/5 | Survey |
+
+## 8. Training Record Retention
+
+- LMS records: 5 years following the end of employment
+- Certificates: 10 years in personnel file
+- Training materials (versioned): indefinite archive (for audit readiness)
+- Phishing campaign reports: 5 years
+
+## Related Documents
+
+- [personel-gizlilik-taahhutnamesi.md](personel-gizlilik-taahhutnamesi.md)
+- [../06-idari-tedbirler/](../06-idari-tedbirler/)
+- [../11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
+
+---
+
+## Türkçe
 
 # KVKK Eğitim Takip Formları
 

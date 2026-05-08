@@ -1,14 +1,249 @@
 ---
-Doküman: Teknik Tedbirler — Denetim-Hazır Kontrol Listesi
-Bölüm: 05-teknik-tedbirler
-Sahip: İç Denetim / CISO
-Onaylayan: BT Direktörü + KVKK Komitesi + Denetim Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni mevzuat, yeni kontrol, denetim bulgusu)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Kişisel Veri Güvenliği Rehberi — "Teknik Tedbirler Özet Tablosu"
-İlgili Standart: ISO/IEC 27001:2022 Annex A; ISO/IEC 27002:2022; NIST CSF 2.0; CIS Controls v8
+Doküman / Document: Teknik Tedbirler — Denetim-Hazır Kontrol Listesi / Technical Measures — Audit-Ready Checklist
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: İç Denetim / CISO / Internal Audit / CISO
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi + Denetim Komitesi / IT Director + KVKK Committee + Audit Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni mevzuat, yeni kontrol, denetim bulgusu) / Annual + triggered (new legislation, new control, audit finding)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Personal Data Security Guide — "Technical Measures Summary Table"
+İlgili Standart / Standard: ISO/IEC 27001:2022 Annex A; ISO/IEC 27002:2022; NIST CSF 2.0; CIS Controls v8
 ---
+
+## English
+
+# Technical Measures Checklist
+
+## Use
+
+This list serves as an **audit-ready** reference for internal audit sampling, vendor review, annual self-assessment, and post-incident technical scope check. Each row is evaluated as follows:
+
+- **Status:** Yes / No / Partial / Not Applicable (justification written)
+- **Evidence:** Document, screenshot, log sample, ITSM ticket no, contract clause
+- **Owner:** Operational owner
+- **Last Test:** Date + test type
+- **Next Test:** Target date
+- **Description / Action:** CAPA reference if missing
+
+The completed worksheet is kept in a separate template ([99-sablonlar/](../99-sablonlar/)). This document is the **control catalog**.
+
+Mapping: ISO 27002:2022 (A.x.y) and NIST CSF 2.0 function-category (e.g., PR.AC).
+
+---
+
+## 1. Access Control and Authorization (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 1.1 | Written Access Control Policy exists, with date of annual review | A.5.15 | GV.PO |
+| 1.2 | All accounts managed via central IdP (local account exceptions inventoried) | A.5.16 | PR.AA-1 |
+| 1.3 | RBAC roles defined, with clear owner, last review record quarterly | A.5.18 | PR.AA-5 |
+| 1.4 | "Least privilege" principle applied, direct user privileges 0 | A.8.2 | PR.AA-5 |
+| 1.5 | Joiner-Mover-Leaver SLAs (J -1d, M revoke ≤7d, L 0d) met | A.5.18 | PR.AA-1 |
+| 1.6 | Quarterly access review 100% complete on critical systems | A.5.18 | PR.AA-5 |
+| 1.7 | PAM scope documented, session recording immutable | A.8.2 | PR.AA-2 |
+| 1.8 | Break-glass accounts MFA + audit + annual drill | A.8.2 | PR.AA-2 |
+| 1.9 | Service accounts owned, automatic secret rotation (≤90d) | A.8.5 | PR.AA-3 |
+| 1.10 | DB row-level security (RLS) / view-based access on personal data tables | A.8.3 | PR.AA-5 |
+
+## 2. Authentication (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 2.1 | Authentication Policy NIST 800-63B compliant | A.5.17, A.8.5 | PR.AA-3 |
+| 2.2 | MFA: admins, remote access, personal data applications 100% | A.8.5 | PR.AA-3 |
+| 2.3 | Phishing-resistant MFA (FIDO2 / authenticator + number matching) mandatory for admins | A.8.5 | PR.AA-3 |
+| 2.4 | SMS OTP disabled for admin / critical / remote | A.8.5 | PR.AA-3 |
+| 2.5 | Password hash algorithm Argon2id / bcrypt(≥12) | A.8.24 | PR.DS-1 |
+| 2.6 | Password breach check (HIBP / offline corpus) integrated | A.8.5 | PR.AA-3 |
+| 2.7 | Account lockout + brute-force protection rules active | A.8.5 | PR.AA-3 |
+| 2.8 | SSO coverage 95%+ of application inventory | A.8.5 | PR.AA-1 |
+| 2.9 | Device compliance (compliant/healthy) mandatory on personal data application | A.5.16 | PR.AA-6 |
+| 2.10 | Session timeout 15 min (personal data) / 60 min (general) applied | A.8.5 | PR.AA-3 |
+
+## 3. Encryption and Key Management (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 3.1 | Written Encryption Policy, approved algorithm list updated annually | A.8.24 | PR.DS-1, PR.DS-2 |
+| 3.2 | All laptops/mobile disk encrypted (FDE) enforced via MDM | A.7.10 | PR.DS-1 |
+| 3.3 | Server disk + DB TDE + critical field-level encryption | A.8.24 | PR.DS-1 |
+| 3.4 | TLS 1.2+ (1.3 preferred), weak ciphers off, HSTS active | A.8.24 | PR.DS-2 |
+| 3.5 | mTLS applied on internal personal data traffic | A.8.24 | PR.DS-2 |
+| 3.6 | Keys in HSM/KMS, no secrets in code | A.8.24 | PR.DS-1 |
+| 3.7 | Envelope encryption (KEK/DEK) hierarchy | A.8.24 | PR.DS-1 |
+| 3.8 | Key rotation schedule automatic, last rotation evidenced | A.8.24 | PR.DS-1 |
+| 3.9 | Separation of duties: key generation/use/audit different persons | A.8.24 | PR.AA-5 |
+| 3.10 | PQC roadmap defined, hybrid pilot started | A.8.24 | GV.SC |
+
+## 4. Network Security (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 4.1 | Network segmentation — personal data segment separated | A.8.22 | PR.IR-1 |
+| 4.2 | Default deny + whitelist, microsegmentation (application-identity based) | A.8.22 | PR.IR-1 |
+| 4.3 | NGFW HA, rules owned, annual cleanup | A.8.20 | PR.IR-1 |
+| 4.4 | WAF in "prevent" mode, OWASP CRS applied | A.8.21 | PR.PS-1 |
+| 4.5 | DDoS protection live + annual drill | A.5.30 | PR.IR-3 |
+| 4.6 | IDS/IPS inline at critical segment entry/exit | A.8.16 | DE.CM-1 |
+| 4.7 | NDR / EDR on every server and endpoint | A.8.16 | DE.CM-3 |
+| 4.8 | Remote access MFA + device compliant + ZTNA / strict VPN | A.8.20 | PR.AA-3 |
+| 4.9 | DNS filtering + DoH proxy + DNS log to SIEM | A.8.23 | DE.CM-1 |
+| 4.10 | Annual internal + external penetration test, segmentation validated | A.8.29 | ID.RA-1 |
+
+## 5. Log Management and Monitoring (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 5.1 | Log Management Policy written, scope defined | A.8.15 | DE.AE-3 |
+| 5.2 | All critical sources sending logs to SIEM (coverage ≥95%) | A.8.15 | DE.AE-3 |
+| 5.3 | Log content personal data minimized (PII redaction scan) | A.8.15 | PR.DS-2 |
+| 5.4 | Log integrity WORM + hash chain | A.8.15 | DE.AE-7 |
+| 5.5 | NTP sync, ≤100ms tolerance on all systems | A.8.15 | DE.AE-3 |
+| 5.6 | Log flow interruption alarm ≤5 min | A.8.16 | DE.CM-1 |
+| 5.7 | Retention period KVKK + Law No. 5651 + sectoral compliant, automatic destruction | A.8.15 | GV.OC-3 |
+| 5.8 | SOC 7/24 + escalation chain documented, KVKK Officer in IR team | A.5.24 | RS.MA-1 |
+| 5.9 | Runbooks updated annually, validated by drill | A.5.26 | RS.MA-2 |
+| 5.10 | UEBA + threat intel integrated with SIEM | A.5.7 | DE.AE-2 |
+
+## 6. Backup and Recovery (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 6.1 | Backup Policy written, RPO/RTO approved per BIA | A.8.13 | RC.RP-1 |
+| 6.2 | 3-2-1-1-0 rule applied (immutable / air-gap copy evidenced) | A.8.13 | PR.DS-11 |
+| 6.3 | Backup encrypted, separate KEK / separate IAM domain | A.8.13 | PR.DS-1 |
+| 6.4 | Backup key M-of-N + offline vault | A.8.24 | PR.DS-1 |
+| 6.5 | Quarterly restore drill, evidence archived | A.8.13 | RC.RP-1 |
+| 6.6 | Annual DR site cutover drill | A.5.30 | RC.RP-1 |
+| 6.7 | Annual ransomware recovery drill | A.5.30 | RC.RP-1 |
+| 6.8 | DR site in different region / geography | A.5.30 | RC.RP-1 |
+| 6.9 | 3rd party backup for SaaS data | A.5.23 | PR.DS-11 |
+| 6.10 | KVKK deletion request reflection on backup process documented | A.8.13 | GV.OC-3 |
+
+## 7. Data Masking and Anonymization (8 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 7.1 | No raw production data in test/dev environments (DLP discovery validated) | A.8.11 | PR.DS-2 |
+| 7.2 | Masking pipeline in code / config repo, versioned | A.8.11 | PR.DS-2 |
+| 7.3 | Classification + masking rule CI gate when new field added | A.8.11 | PR.DS-2 |
+| 7.4 | UI default masked, "verify" audited | A.8.11 | PR.DS-2 |
+| 7.5 | Tokenization vault HSM-protected | A.8.24 | PR.DS-1 |
+| 7.6 | Pseudonymization mapping separate, protected, audited | A.8.11 | PR.DS-2 |
+| 7.7 | Formal re-identification risk assessment before anonymous publication | A.8.11 | GV.RM |
+| 7.8 | k-anon / DP parameters and approval chain recorded | A.8.11 | GV.RM |
+
+## 8. DLP (8 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 8.1 | Data classification + sensitivity label use widespread | A.5.12 | ID.AM-7 |
+| 8.2 | Discovery scanning monthly, coverage 95%+ | A.8.12 | ID.AM-7 |
+| 8.3 | Endpoint + Network + Email + CASB DLP integrated single console | A.8.12 | DE.CM-3 |
+| 8.4 | "Block everywhere" policy for PCI / special category | A.8.12 | PR.DS-2 |
+| 8.5 | Employee Privacy Notice listing DLP scope, signed annually | A.5.32 | GV.OC |
+| 8.6 | False positive ≤20%, monthly tuning report | A.8.12 | DE.AE-3 |
+| 8.7 | DLP event 4-eyes review (CISO + HR + Legal) | A.5.34 | RS.AN |
+| 8.8 | Annual red team data exfil drill, detection rate ≥85% | A.8.29 | DE.DP |
+
+## 9. Application Security (12 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 9.1 | S-SDLC policy written, ASVS level in project requirement | A.8.25 | PR.PS-6 |
+| 9.2 | New project starts with DPIA + threat model | A.8.27 | GV.RM |
+| 9.3 | SAST + SCA + secret + container + IaC scan mandatory in CI | A.8.29 | PR.PS-6 |
+| 9.4 | DAST staging nightly run | A.8.29 | DE.CM-9 |
+| 9.5 | Critical / High build fail; patch SLA (critical 7d, high 30d) | A.8.8 | RS.MI |
+| 9.6 | SBOM produced for every release | A.8.30 | PR.PS-1 |
+| 9.7 | Secrets in vault, not in code; pre-commit secret scanning | A.8.24 | PR.AA-3 |
+| 9.8 | API inventory current, shadow API scanning | A.8.26 | ID.AM-1 |
+| 9.9 | BOLA / BOPLA testing done, authz per endpoint | A.8.26 | PR.AA-5 |
+| 9.10 | HTTP security headers full set (CSP, HSTS, etc.) | A.8.26 | PR.PS-1 |
+| 9.11 | Production/Test/Dev separation clear, developer prod access 0 | A.8.31 | PR.AA-5 |
+| 9.12 | LLM Top 10 + DPIA + additional privacy notice for new AI feature | A.5.34 | GV.RM |
+
+## 10. Endpoint, Device and Mobile (8 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 10.1 | MDM enrolling all corporate devices + applying policy | A.8.1 | PR.PS-1 |
+| 10.2 | EDR on every server + endpoint, in SOC monitoring | A.8.7, A.8.16 | DE.CM-3 |
+| 10.3 | Disk encryption (FDE) mandatory, MDM verified | A.7.10 | PR.DS-1 |
+| 10.4 | Patch management: critical 7d, high 30d, reported | A.8.8 | PR.PS-1 |
+| 10.5 | USB / removable control, integrated with DLP | A.7.10, A.8.12 | PR.DS-2 |
+| 10.6 | BYOD policy — work profile isolated on personal device | A.7.9 | GV.PO |
+| 10.7 | Local admin password LAPS / unique-per-host | A.5.17 | PR.AA-3 |
+| 10.8 | Lost/stolen device remote wipe + selective work profile wipe | A.7.10 | RC.RP |
+
+## 11. Cloud and Vendor Technology (6 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 11.1 | Cloud config drift tracked with CSPM, public bucket / port 0 | A.5.23 | DE.CM-1 |
+| 11.2 | KMS customer-managed key (CMK / BYOK) for high sensitivity | A.8.24 | PR.DS-1 |
+| 11.3 | Private endpoint mandatory on personal data PaaS | A.5.23 | PR.IR-1 |
+| 11.4 | Cloud audit log (CloudTrail / Activity Log / Audit Logs) to SIEM | A.8.15 | DE.AE-3 |
+| 11.5 | IAM: human ≠ service, MFA mandatory, MAU review | A.5.18 | PR.AA-5 |
+| 11.6 | Vendor SaaS auditable via API-based CASB | A.5.23 | DE.CM-3 |
+
+## 12. Incident Management (Technical Dimension) (6 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 12.1 | IR runbooks (RB-01..RB-12) current, drilled | A.5.26 | RS.MA-2 |
+| 12.2 | Forensic chain of custody procedure ready | A.5.28 | RS.AN-3 |
+| 12.3 | KVKK Committee 24-hour threshold notification documented | A.5.24 | GV.RM |
+| 12.4 | Atomic Red Team / purple team annual, MITRE ATT&CK coverage | A.8.29 | DE.DP |
+| 12.5 | Critical alarm catalog includes KVKK breach thresholds | A.5.25 | RS.AN-1 |
+| 12.6 | Post-incident lessons learned feeding back to controls | A.5.27 | ID.IM |
+
+---
+
+## Total Items: 88
+
+## Evaluation Score
+
+For each item: Yes=2, Partial=1, No=0, Not Applicable=excluded.
+
+| Maturity | Range |
+|----------|--------|
+| **Low** | < 60% |
+| **Developing** | 60-75% |
+| **Competent** | 75-85% |
+| **Advanced** | 85-95% |
+| **Optimized** | > 95% |
+
+Target: **Competent (≥75%)** in the first year, **Advanced (≥85%)** in the second year.
+
+## Action Plan
+
+For each **No** or **Partial** row:
+
+1. CAPA (Corrective and Preventive Action) opened.
+2. Owner, target date, evidence document assigned.
+3. Status reported quarterly to KVKK Committee.
+4. **30 day** SLA for critical deficiencies (e.g., MFA absence, log interruption, backup failure).
+
+## Annual Self-Assessment Flow
+
+1. CISO office prepares an evidence collection task plan over the list (Q1).
+2. Each owner uploads evidence (end of Q1).
+3. Internal Audit performs sampling, validates (Q2).
+4. Findings processed into CAPA.
+5. Annual summary report to KVKK Committee (Q3).
+6. Annual security posture report to Board of Directors (Q4).
+
+## Relationship with External Audit
+
+- If ISO 27001 certification exists: this list forms the internal audit scope as the KVKK extension of ISO Annex A.
+- If pursuing ISO 27701 (PIMS) certification: mapping with A.7.x and A.8.x additional controls is performed.
+- KVKK Authority audit: this list is the operational evidence set of the requested "applied measures" declaration.
+
+---
+
+## Türkçe
 
 # Teknik Tedbirler Kontrol Listesi
 

@@ -1,13 +1,315 @@
 ---
-Doküman: KVKK Yıllık Uyum Takvimi
-Bölüm: 00-yonetisim
-Sahip: KVKK Sorumlusu / İrtibat Kişisi
-Onaylayan: Yönetim Kurulu / Genel Müdür
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK; VERBİS Yönetmeliği m.10; İmha Yönetmeliği m.11(2); Aydınlatma Tebliği; Veri Güvenliği Rehberi
+Doküman / Document: KVKK Yıllık Uyum Takvimi / KVKK Annual Compliance Calendar
+Bölüm / Section: 00-yonetisim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Yönetim Kurulu / Genel Müdür / Board of Directors / CEO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği) / Annual + triggered (regulatory change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK; VERBİS Yönetmeliği m.10; İmha Yönetmeliği m.11(2); Aydınlatma Tebliği; Veri Güvenliği Rehberi / KVKK; VERBİS Regulation Art. 10; Erasure Regulation Art. 11(2); Privacy Notice Communiqué; Data Security Guide
 ---
+
+## English
+
+# KVKK Annual Compliance Calendar
+
+## 1. Purpose
+
+This document distributes the recurring mandatory and recommended controls required under the KVKK compliance program over a 12-month calendar. All routine activities such as periodic erasure, training, internal audit, drills, reporting and regulatory monitoring are consolidated in a single visibility layer.
+
+## 2. Annual Calendar Philosophy
+
+- **Regularity:** Statutory deadlines (7 days, 30 days, 6 months, 72 hours) shall not be missed under any circumstances.
+- **Distribution:** The annual workload is balanced; clustering all controls in December is prevented.
+- **Auditability:** Each month's output is documented and auditable.
+- **Triggered + Periodic mix:** Ordinary plan + event-triggered additional controls.
+
+## 3. Year-Round Continuity (All Months)
+
+The following controls are performed **every month** and form the constant base of the calendar:
+
+| Control | Frequency | Owner |
+|---------|-----------|-------|
+| KEP inbox monitoring | Daily | Contact Person |
+| Data subject application management | Continuous | KVKK Officer |
+| Tracking of regulations and Kurul decisions | Weekly + monthly summary | KVKK Officer |
+| Breach response line | 24/7 | InfoSec + KVKK Officer |
+| New process DPIA submissions | Triggered | Business Unit → KVKK Officer |
+| VERBİS change notification (7-day rule) | Triggered | Contact Person |
+| Supplier DD (new) | Triggered | Procurement + KVKK |
+| Privacy notice update | Triggered | Legal + KVKK |
+
+## 4. Monthly Calendar (January - December)
+
+### JANUARY — Annual Opening and Planning
+
+**Goal:** Activation of the annual plan; closing report of the previous year.
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Kick-off meeting of annual KVKK compliance plan | KVKK Officer + Committee |
+| 1 | Submission of previous year's KVKK activity report to the Board | KVKK Officer → Board Audit |
+| 2 | Quarterly KPI report (Q4 of previous year) | KVKK Officer |
+| 2 | Publication of annual training plan | HR + KVKK Officer |
+| 3 | Preparation of supplier annual evaluation list | Procurement + KVKK |
+| 3 | List of privacy notices requiring revision in the new year | Legal + KVKK |
+| 4 | KVKK Committee Q1 ordinary meeting | KVKK Officer (secretariat) |
+| 4 | Finalization of annual internal audit plan | Internal Audit + KVKK |
+
+**Outputs:**
+- Previous year KVKK activity report (Board approved)
+- Annual plan v1.0
+- Q1 Committee minutes
+
+### FEBRUARY — Inventory and Policy Preparation
+
+**Goal:** Preparation for March periodic erasure + start of policy review.
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Inventory spot check (2 processes per month) | KVKK Specialist |
+| 2 | Pre-screening of data with expired retention | IT + KVKK |
+| 2 | Draft erasure list | KVKK + IT |
+| 3 | Policy revision workshop (Legal + KVKK + Committee) | KVKK Officer |
+| 3 | Supplier DD renewal (25% of annual plan) | Procurement |
+| 4 | Phishing drill (Q1) | InfoSec |
+
+**Outputs:**
+- Draft erasure list (for March execution)
+- Policy revision proposals
+- Phishing drill report
+
+### MARCH — PERIODIC ERASURE #1 + Training Launch
+
+**Goal:** First periodic erasure of the year per Erasure Regulation Art. 11(2) (at most every 6 months).
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Approval of erasure list (KVKK Officer + IT) | KVKK + IT |
+| 2 | **Periodic erasure execution** (deletion/destruction/anonymization) | IT (R) + KVKK (A) |
+| 2-3 | Preparation of erasure records | IT |
+| 3 | Erasure verification testing (sampling) | Internal Audit |
+| 3 | Launch of mandatory annual KVKK training (all employees) | HR + KVKK |
+| 4 | Submission of erasure report to the Committee | KVKK Officer |
+| 4 | VERBİS annual verification check | Contact Person |
+
+**Outputs:**
+- Erasure record + report
+- Training opening 20%+ completion
+- VERBİS verification report
+
+### APRIL — Q1 Closing and First-Quarter Reporting
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Q1 KPI report preparation | KVKK Officer |
+| 2 | KVKK Committee Q2 ordinary meeting | KVKK Officer |
+| 2 | Q1 report submission to Board Audit Committee | KVKK Officer |
+| 3 | Contract pool spot check (KVKK addendum present?) | Legal + KVKK |
+| 3 | Cross-border transfer records review | KVKK Officer |
+| 4 | Training progress report (50%+ target) | HR |
+
+**Outputs:**
+- Q1 KPI / Activity Report
+- Q2 Committee minutes
+
+### MAY — DPIA Refresh and Risk Map
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Review of DPIAs for high-risk processing | KVKK Officer + Business Unit |
+| 2 | Annual risk map update | KVKK + Risk + InfoSec |
+| 3 | Launch of internal audit fieldwork | Internal Audit |
+| 4 | Position-specific training for managers (HR, Marketing, Call Center) | HR + KVKK |
+
+**Outputs:**
+- Updated DPIA portfolio
+- Risk map v.X
+- Internal audit kickoff meeting
+
+### JUNE — Mid-Year Closing and Drill
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Mid-year KVKK compliance review | KVKK Officer + Committee |
+| 2 | **Breach Response Drill (annual)** | InfoSec + KVKK + Legal |
+| 3 | Drill outcome assessment + improvement plan | KVKK Officer |
+| 3 | Phishing drill (Q2) | InfoSec |
+| 4 | Annual training 75%+ completion check | HR |
+
+**Outputs:**
+- Breach response drill report
+- Q2 phishing drill report
+
+### JULY — Q2 Reporting and Summer Stabilization
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Q2 KPI report | KVKK Officer |
+| 2 | KVKK Committee Q3 ordinary meeting | KVKK Officer |
+| 2 | Mid-year Board Audit Committee report | KVKK Officer |
+| 3 | Internal audit interim report | Internal Audit |
+| 4 | 6-month regulatory summary — identification of changed regulations | KVKK + Legal |
+
+**Outputs:**
+- Mid-year KVKK report
+- Q3 Committee minutes
+
+### AUGUST — Preparation for September Periodic Erasure + Supplier Evaluation
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Periodic erasure #2 preparation — retention period scan | IT + KVKK |
+| 2 | Draft erasure list | KVKK |
+| 3 | Supplier annual evaluation wave 2 (25%-50%) | Procurement |
+| 4 | Tracking of open finding closures | KVKK Officer + Internal Audit |
+
+**Outputs:**
+- Draft erasure list
+- Supplier evaluation report
+
+### SEPTEMBER — PERIODIC ERASURE #2 + Annual Drill (Data Subject)
+
+**Goal:** Second periodic erasure of the year under Erasure Regulation Art. 11(2) + data subject application drill.
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Approval of erasure list | KVKK + IT |
+| 2 | **Periodic erasure execution #2** | IT (R) + KVKK (A) |
+| 2-3 | Erasure record | IT |
+| 3 | **Data Subject Application Drill (annual)** | KVKK Officer |
+| 4 | Phishing drill (Q3) | InfoSec |
+
+**Outputs:**
+- Erasure record #2
+- Data subject drill report
+
+### OCTOBER — Q3 Reporting and Year-End Preparation
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Q3 KPI report | KVKK Officer |
+| 2 | KVKK Committee Q4 ordinary meeting | KVKK Officer |
+| 2 | Q3 Board Audit report | KVKK Officer |
+| 3 | Final reminders for annual training 95%+ completion target | HR |
+| 3 | Internal audit final report | Internal Audit |
+| 4 | Intensive finding closure work | KVKK + Relevant units |
+
+**Outputs:**
+- Q3 report
+- Internal audit report
+
+### NOVEMBER — Contract and Regulatory Monitoring + Next Year Budget
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Year-end supplier contract renewal wave | Procurement + Legal + KVKK |
+| 2 | Next year KVKK budget draft | KVKK Officer |
+| 3 | Next year compliance plan draft | KVKK Officer + Committee |
+| 4 | Phishing drill (Q4) | InfoSec |
+| 4 | Year-end policy revision approval | Committee |
+
+**Outputs:**
+- Budget draft
+- Plan draft
+- Revised policies (draft)
+
+### DECEMBER — Year-End Closing and Activity Report
+
+| Week | Activity | Owner |
+|------|----------|-------|
+| 1 | Q4 KPI report | KVKK Officer |
+| 2 | Annual KVKK Activity Report preparation | KVKK Officer |
+| 3 | Annual presentation to the Board of Directors | KVKK Officer + Committee Chair |
+| 4 | Final approval of next year's plan + budget | Board of Directors |
+| 4 | Document version closure + archiving | KVKK Officer |
+
+**Outputs:**
+- Annual KVKK Activity Report
+- Next year plan v1.0
+- Approved budget
+
+## 5. Statutory Deadlines (Never to Be Missed)
+
+| Deadline | Rule | Trigger |
+|----------|------|---------|
+| **24 hours** | Internal notification of suspected breach | Incident detection |
+| **72 hours** | Notification of breach to the Kurul (KVKK Art. 12/5; Kurul decision 2019/10 — "as soon as practicable and reasonable") | Becoming aware of breach |
+| **5 business days** | Notification of standard contract to the Kurul (cross-border transfer — post Law No. 7499 amendment) | Signing of contract |
+| **7 days** | VERBİS change notification (Reg. Art. 10) | Change in registry-recorded information |
+| **30 days** | Response to data subject application (KVKK Art. 13) | Application reaching the data controller |
+| **6 months** | Maximum period for periodic erasure (Erasure Reg. Art. 11/2) | Execution of previous erasure |
+| **Annual** | Full inventory revision, training, audit, activity report | Calendar year |
+
+## 6. Triggered (Event-Based) Activities
+
+Independently of the calendar, additional activity is initiated **immediately** when the following events occur:
+
+| Event | Triggered Activity | Period |
+|-------|---------------------|--------|
+| Publication of regulation | Impact analysis + policy revision plan | 30 days |
+| Binding Kurul decision | Review of related processes | 60 days |
+| New business process | DPIA + inventory update + privacy notice | Before go-live |
+| New supplier (involving personal data) | DD + contract execution | Before service start |
+| Organizational change | RACI revision + access management review | 30 days |
+| Senior management change | Update of Committee membership | 14 days |
+| Contact person change | VERBİS notification | 7 days |
+| KEP address change | VERBİS notification | 7 days |
+| Breach | Response + notification + drill triggering | Per procedure |
+| M&A / merger | Integrated DPIA + inventory consolidation | Before M&A close |
+
+## 7. Visual Annual Overview
+
+```
+              Q1                  Q2                  Q3                  Q4
+       J  F  M  A  M  J         J  A  S  O  N  D
+       |  |  |  |  |  |         |  |  |  |  |  |
+Committee *           *              *              *
+Report   *  Q4  Q1            Q2           Q3           Annual
+Erasure       *                      *
+Training   20%  50%           75% sum hold   95% remind
+Drills              Breach       Data Subject
+Phishing            *           *           *           *
+Audit              start       interim     final
+DPIA           review
+Budget                                                       Draft  Approval
+```
+
+## 8. Control Ownership Summary
+
+| Activity Type | Primary Owner | Frequency |
+|---------------|---------------|-----------|
+| Periodic erasure | IT (R) + KVKK Officer (A) | March, September |
+| Training — all employees | HR | Annual |
+| Internal audit | Internal Audit | Annual |
+| Drill — breach | InfoSec | June |
+| Drill — data subject | KVKK Officer | September |
+| Drill — phishing | InfoSec | Quarterly (February, June, September, November) |
+| Committee | KVKK Officer (secretariat) | Quarterly (January, April, July, October) |
+| KPI report | KVKK Officer | Quarterly |
+| Board report | KVKK Officer + Committee Chair | Quarterly + annual |
+| Supplier DD renewal | Procurement | Annual (4 waves) |
+
+## 9. Annual Review of the Annual Calendar
+
+This calendar:
+- Is revised in **December** for the following year.
+- May be updated mid-year in case of regulatory change.
+- Internal audit recommendations are reflected in the next year's calendar.
+
+## 10. Related Documents
+
+- `00-yonetisim/kvkk-sorumlusu-rolu.md`
+- `00-yonetisim/komite-yapisi.md`
+- `00-yonetisim/raci-matrisi.md`
+- `04-veri-saklama-ve-imha/periyodik-imha-prosedurü.md`
+- `08-ihlal-yonetimi/ihlal-mudahale-prosedurü.md`
+- `11-denetim-ve-uyum/ic-denetim-plani.md`
+- `99-sablonlar/yillik-faaliyet-raporu.md`
+
+---
+
+## Türkçe
 
 # KVKK Yıllık Uyum Takvimi
 

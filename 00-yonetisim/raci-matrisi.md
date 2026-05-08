@@ -1,13 +1,216 @@
 ---
-Doküman: KVKK Aktiviteleri RACI Matrisi
-Bölüm: 00-yonetisim
-Sahip: KVKK Sorumlusu / İrtibat Kişisi
-Onaylayan: Yönetim Kurulu / Genel Müdür
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (organizasyonel değişiklik, yeni süreç)
-İlgili Mevzuat: KVKK m.12 (idari tedbirler); Veri Güvenliği Rehberi (rol ve sorumlulukların tanımlanması)
+Doküman / Document: KVKK Aktiviteleri RACI Matrisi / RACI Matrix for KVKK Activities
+Bölüm / Section: 00-yonetisim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Yönetim Kurulu / Genel Müdür / Board of Directors / CEO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (organizasyonel değişiklik, yeni süreç) / Annual + triggered (organizational change, new process)
+İlgili Mevzuat / Legal Reference: KVKK m.12 (idari tedbirler); Veri Güvenliği Rehberi (rol ve sorumlulukların tanımlanması) / KVKK Art. 12 (administrative safeguards); Data Security Guide (definition of roles and responsibilities)
 ---
+
+## English
+
+# RACI Matrix for KVKK Activities
+
+## 1. Purpose
+
+This matrix defines the in-house roles and responsibilities for 30+ core activities under the KVKK compliance program using the **RACI** model. The aim is to eliminate accountability gaps, prevent dual-ownership confusion and provide an auditable governance backbone.
+
+## 2. RACI Model Definition
+
+| Code | Meaning | Description |
+|------|---------|-------------|
+| **R** | Responsible | The party who actually performs the activity. There can be more than one. |
+| **A** | Accountable | The party solely accountable for the outcome. **There must be exactly 1 (one) A per activity.** |
+| **C** | Consulted | The party whose opinion is obtained before a decision. Two-way communication. |
+| **I** | Informed | The party who is informed of the decision/outcome. One-way communication. |
+
+## 3. Roles (Columns)
+
+| Abbreviation | Role |
+|--------------|------|
+| **YK** | Board of Directors / Board Audit Committee |
+| **GM** | CEO / Executive Committee |
+| **KOM** | KVKK Committee |
+| **KVKKS** | KVKK Officer |
+| **İK-K** | Contact Person |
+| **HUK** | Legal Department / General Counsel |
+| **BT** | Information Technology (CIO) |
+| **BG** | Information Security (CISO) |
+| **İK** | Human Resources |
+| **SAT** | Procurement |
+| **İŞ** | Business Unit (process owner) |
+| **İD** | Internal Audit |
+| **PAZ** | Marketing / Customer Experience |
+
+## 4. Master RACI Matrix
+
+### 4.1 Governance Activities
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 1 | Approval of KVKK Policy | A | C | R | R | I | C | I | I | I | I | I | I | I |
+| 2 | Appointment of KVKK Officer | A | R | C | I | I | C | I | I | C | I | I | I | I |
+| 3 | Appointment of Contact Person | A | R | C | C | R | C | I | I | C | I | I | I | I |
+| 4 | KVKK Committee charter | A | C | R | R | I | C | I | I | I | I | I | I | I |
+| 5 | Annual KVKK compliance plan | I | A | C | R | I | C | C | C | C | C | I | C | C |
+| 6 | Annual KVKK budget | A | R | C | R | I | C | C | C | C | I | I | I | I |
+
+### 4.2 Inventory and VERBİS
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 7 | Creation of Personal Data Processing Inventory | I | I | C | A | I | C | C | C | R | R | R | I | R |
+| 8 | Inventory update (launch of new process) | I | I | I | A | I | C | C | C | R | R | R | I | R |
+| 9 | Initial VERBİS registration | I | A | C | R | R | C | C | C | C | I | I | I | I |
+| 10 | VERBİS change notification (7 days) | I | I | I | A | R | C | I | I | I | I | I | I | I |
+| 11 | Annual verification of registry information | I | I | I | A | R | C | C | C | C | C | I | C | C |
+
+### 4.3 Privacy Notice and Explicit Consent
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 12 | Drafting privacy notice (new process) | I | I | C | A | I | R | C | I | C | C | R | I | C |
+| 13 | Privacy notice revision | I | I | C | A | I | R | I | I | C | I | C | I | C |
+| 14 | Standardization of explicit consent texts | I | I | C | A | I | R | I | I | C | I | C | I | R |
+| 15 | Marketing consent management (ETK + KVKK) | I | I | I | C | I | C | C | I | I | I | I | I | A/R |
+
+### 4.4 Retention and Erasure
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 16 | Retention and Erasure Policy | A | I | C | R | I | R | C | C | C | C | C | I | C |
+| 17 | Retention period table (categorized) | I | I | C | A | I | R | C | I | C | C | R | I | C |
+| 18 | Periodic erasure (every 6 months) | I | I | I | A | I | I | R | C | C | I | C | I | I |
+| 19 | Erasure upon data subject request | I | I | I | A | I | C | R | C | I | I | C | I | I |
+| 20 | Anonymization methodology | I | I | C | A | I | C | R | R | I | I | C | I | I |
+
+### 4.5 Technical and Administrative Measures
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 21 | Access management policy (IAM) | I | I | C | C | I | C | R | A | C | I | I | C | I |
+| 22 | Encryption standards | I | I | C | C | I | I | R | A | I | I | I | C | I |
+| 23 | Log management and monitoring | I | I | C | C | I | I | R | A | I | I | I | C | I |
+| 24 | Annual review of authorization matrix | I | I | C | C | I | I | R | A | C | I | R | C | I |
+| 25 | KVKK addenda to disciplinary regulations | I | I | C | C | I | R | I | I | A | I | I | I | I |
+| 26 | Employee confidentiality undertaking | I | I | I | C | I | R | I | I | A | I | I | I | I |
+| 27 | Training — all employees | I | I | I | C | I | I | I | C | A | I | I | I | I |
+| 28 | Training — high-risk roles | I | I | I | C | I | I | C | C | A | I | I | I | C |
+| 29 | Phishing drill | I | I | I | C | I | I | I | A | C | I | I | I | I |
+
+### 4.6 Transfer
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 30 | Domestic transfer compliance assessment | I | I | C | A | I | R | I | I | I | C | R | I | C |
+| 31 | Cross-border transfer — adequacy decision check | I | I | C | A | I | R | I | I | I | C | C | I | C |
+| 32 | Standard contract execution | I | C | A | R | I | R | I | I | I | C | I | I | I |
+| 33 | Notification of standard contract to the Kurul (5 business days) | I | I | I | A | R | C | I | I | I | I | I | I | I |
+| 34 | Undertaking / BCR approval process | I | A | R | R | I | R | I | I | I | I | I | I | I |
+| 35 | Records of occasional transfers | I | I | I | A | I | C | I | I | I | I | R | I | I |
+
+### 4.7 Supplier (Data Processor) Management
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 36 | Supplier due diligence (new) | I | I | C | C | I | R | C | R | I | A | C | I | I |
+| 37 | Data processor contract template | I | I | C | A | I | R | C | C | I | C | I | I | I |
+| 38 | Annual supplier evaluation | I | I | I | C | I | C | C | R | I | A | C | C | I |
+| 39 | Supplier breach escalation | I | I | A | R | C | R | C | R | I | C | C | I | I |
+
+### 4.8 Breach Management
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 40 | Breach Response Procedure | I | A | C | R | I | C | C | R | C | I | I | C | I |
+| 41 | Breach detection and classification | I | I | C | C | I | I | R | A | I | I | I | I | I |
+| 42 | Breach root-cause analysis | I | I | C | C | I | C | C | A/R | C | I | C | I | I |
+| 43 | Notification to the Kurul within 72 hours | I | C | C | A | R | R | I | C | I | I | I | I | I |
+| 44 | Notification to data subjects | I | C | C | A | I | R | I | C | C | I | C | I | C |
+| 45 | Post-breach corrective action | I | I | C | C | I | I | R | A | C | C | C | C | I |
+| 46 | Annual breach drill | I | I | C | A | I | C | R | R | C | I | C | C | I |
+
+### 4.9 Data Subject Applications
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 47 | Establishment of application channels | I | I | C | A | C | R | R | C | I | I | I | I | I |
+| 48 | Application intake and classification | I | I | I | A | C | C | I | I | I | I | I | I | I |
+| 49 | Application content gathering (operational) | I | I | I | A | I | C | R | C | R | C | R | I | R |
+| 50 | Application response (within 30 days) | I | I | I | A | C | R | C | I | C | I | C | I | C |
+| 51 | Logging of rejected applications | I | I | I | A | I | R | I | I | I | I | I | I | I |
+| 52 | Response to Kurul complaints | I | C | C | A | R | R | C | C | C | I | C | I | C |
+
+### 4.10 Audit and Compliance
+
+| # | Activity | YK | GM | KOM | KVKKS | İK-K | HUK | BT | BG | İK | SAT | İŞ | İD | PAZ |
+|---|----------|----|----|-----|-------|------|-----|----|----|----|-----|----|----|----|
+| 53 | Annual internal audit plan | A | I | C | C | I | C | C | C | I | I | I | R | I |
+| 54 | Conducting KVKK internal audit | I | I | C | C | I | I | C | C | C | I | C | A/R | I |
+| 55 | Audit finding closure | I | I | C | A | I | C | R | R | C | C | R | C | C |
+| 56 | Quarterly report to the Board of Directors | A | C | R | R | I | I | I | I | I | I | I | C | I |
+| 57 | DPIA — new project | I | I | C | A | I | C | C | C | C | C | R | I | C |
+| 58 | Risk assessment (annual) | I | I | C | A | I | C | C | R | C | C | R | C | C |
+| 59 | Monitoring of regulations and Kurul decisions | I | I | I | A/R | I | C | I | I | I | I | I | I | I |
+| 60 | Annual policy review | I | I | A | R | I | R | C | C | C | C | C | C | C |
+
+## 5. Single "A" Rule
+
+Each activity is assigned exactly **1 (one)** Accountable (A). The following exceptional cases may show two roles together:
+- **A/R** notation: The same role both holds accountability and performs the activity — no separate R is assigned.
+- Double A (A/A) is **forbidden** — it breaks clear accountability.
+
+## 6. Typical Conflict Scenarios and Resolutions
+
+### 6.1 "Whose job is this?" conflict
+When a new activity that is not in the current RACI emerges:
+1. The KVKK Officer takes ownership as the trigger party
+2. A/R/C/I assignments are set in the KVKK Committee
+3. A new row is added to the RACI matrix (version updated)
+
+### 6.2 Business Unit vs KVKK Officer conflict
+The business unit wants to launch a process, but the KVKK Officer sees risk based on the DPIA outcome:
+- Decision authority: KVKK Committee
+- Escalation: CEO → Board of Directors
+
+### 6.3 Legal vs KVKK Officer interpretation difference
+- Binding interpretation: Head of Legal (regulatory interpretation)
+- Operational ownership: KVKK Officer (implementation)
+- If no consensus is reached, a Committee decision is taken.
+
+### 6.4 InfoSec vs IT conflict (technical safeguard)
+- Policy ownership: InfoSec (Accountable)
+- Implementation: IT (Responsible)
+- InfoSec audits IT's implementation.
+
+## 7. Review
+
+The RACI matrix:
+- Is reviewed **annually** by the Committee
+- Triggers a **triggered** revision in the following cases:
+  - Organizational change (new unit, unit merger)
+  - New processing activity
+  - Regulatory change
+  - Internal audit findings
+  - Root-cause analysis after a breach
+
+## 8. Training
+
+For all members, the RACI rows pertaining to their assigned roles are included in the annual mandatory training material. New appointees receive a role-based RACI summary within 30 days.
+
+## 9. Related Documents
+
+- `00-yonetisim/kvkk-sorumlusu-rolu.md`
+- `00-yonetisim/komite-yapisi.md`
+- `00-yonetisim/yillik-takvim.md`
+- `99-sablonlar/raci-yeni-aktivite-formu.md`
+- `11-denetim-ve-uyum/ic-denetim-plani.md`
+
+---
+
+## Türkçe
 
 # KVKK Aktiviteleri RACI Matrisi
 

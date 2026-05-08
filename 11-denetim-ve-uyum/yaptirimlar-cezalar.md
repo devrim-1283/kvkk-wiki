@@ -1,13 +1,241 @@
 ---
-Doküman: KVKK Yaptırımlar, İdari Para Cezaları ve Hukuki Sorumluluk
-Bölüm: 11-denetim-ve-uyum
-Sahip: Hukuk Müşavirliği + KVKK Sorumlusu
-Onaylayan: Genel Müdür + Yönetim Kurulu
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık (yeniden değerleme oranı sonrası ceza miktarı güncellenir) + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.17, m.18; 5237 sayılı TCK m.135-140; 5326 sayılı Kabahatler Kanunu; 6098 sayılı TBK m.49 vd.; 213 sayılı VUK Mük. m.298 (yeniden değerleme oranı)
+Doküman / Document: KVKK Yaptırımlar, İdari Para Cezaları ve Hukuki Sorumluluk / KVKK Sanctions, Administrative Fines and Legal Liability
+Bölüm / Section: 11-denetim-ve-uyum
+Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
+Onaylayan / Approved by: Genel Müdür + Yönetim Kurulu — General Manager + Board of Directors
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık (yeniden değerleme oranı sonrası ceza miktarı güncellenir) + tetiklenmiş — Annual (fine amounts updated after revaluation rate) + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.17, m.18; 5237 sayılı TCK m.135-140; 5326 sayılı Kabahatler Kanunu; 6098 sayılı TBK m.49 vd.; 213 sayılı VUK Mük. m.298 — Law No. 6698 Arts. 17, 18; Turkish Criminal Code (Law 5237) Arts. 135-140; Misdemeanours Law (5326); Code of Obligations (6098) Arts. 49 et seq.; Tax Procedure Law (213) Mük. Art. 298 (revaluation rate)
 ---
+
+## English
+
+# Sanctions, Administrative Fines and Legal Liability
+
+## 1. Purpose
+
+To classify the sanctions to which the controller, employees and managers may be exposed under KVKK; to explain how the fine amounts are determined and updated annually; to specify the legal remedies available in case of dispute.
+
+## 2. Types of Sanction
+
+| Type | Basis | Addressee |
+|------|-------|-----------|
+| Administrative fine | KVKK Art. 18 | Controller (legal entity); for public sector employees, disciplinary action |
+| Disciplinary action | KVKK Art. 18/3 | Public-sector employee |
+| Criminal offence (imprisonment) | TCC Arts. 135-140 (referenced from KVKK Art. 17) | Natural person (offender) |
+| Civil compensation (pecuniary / non-pecuniary) | Code of Obligations Arts. 49 et seq.; KVKK Art. 14/2 | Controller (legal entity) |
+| Administrative measure — suspension | KVKK Art. 15/7 | Controller |
+
+## 3. KVKK Art. 18 Administrative Fines
+
+### 3.1 Legal Framework
+
+> **Art. 18/1 of the Law:**
+> - **(a)** For failure to comply with the disclosure obligation in Art. 10: **TRY 5,000 to TRY 100,000**,
+> - **(b)** For failure to comply with the data security obligations in Art. 12: **TRY 15,000 to TRY 1,000,000**,
+> - **(c)** For failure to perform Authority decisions under Art. 15: **TRY 25,000 to TRY 1,000,000**,
+> - **(ç)** For failure to comply with the Data Controllers Registry registration and notification obligation in Art. 16: **TRY 20,000 to TRY 1,000,000**.
+> (Amounts above are the original Law figures; they are revalued annually using the revaluation rate.)
+
+### 3.2 2026 Current Amounts
+
+> **NOTE:** These amounts are updated each year using the **revaluation rate** announced by the Ministry of Treasury and Finance under Mük. Art. 298 of Tax Procedure Law No. 213. The KVKK Authority publishes the current figures by official communiqué each December. The figures below are **illustrative**; always verify against the latest Official Gazette communiqué.
+
+| Article | Breach | Current Min | Current Max |
+|---------|--------|-------------|-------------|
+| Art. 18/1-a | Disclosure obligation breach | (current-year communiqué) | (current-year communiqué) |
+| Art. 18/1-b | Data security obligation breach | (current-year communiqué) | (current-year communiqué) |
+| Art. 18/1-c | Failure to perform Authority decision | (current-year communiqué) | (current-year communiqué) |
+| Art. 18/1-ç | VERBİS obligation breach | (current-year communiqué) | (current-year communiqué) |
+
+> **Operational Note:** Legal Counsel updates the current figures into this document at the start of each January. Source: Official Gazette + kvkk.gov.tr.
+
+### 3.3 Addressee of the Fine
+
+Per KVKK Art. 18/2:
+- **Legal-entity controller**: the entity itself is the addressee. The fine is paid from corporate funds.
+- **Public institutions**: disciplinary provisions apply; no administrative fine (Art. 18/3).
+- **Natural-person controller**: the fine is imposed on the individual.
+
+### 3.4 Calculation and Proportionality
+
+When determining the fine, the Authority considers, in light of Misdemeanours Law No. 5326 Art. 17/2 and Authority practice:
+
+| Factor | Effect |
+|--------|--------|
+| Economic standing of the controller | Larger entities tend toward the upper bound |
+| Nature and gravity of the breach | Sensitive data / large volume → aggravating |
+| Number of affected data subjects | Higher numbers raise the fine |
+| Duration of the breach | Long-undetected breach → aggravating |
+| Recidivism | Prior breaches → aggravating |
+| Intent or degree of negligence | Intentional breach → aggravating |
+| Degree of cooperation | Cooperation with the Authority → mitigating |
+| Pre-existing measures | Structural controls in place → mitigating |
+| Effective disclosure and notification | Effective fulfilment → mitigating |
+
+## 4. Criminal Offences (TCC Arts. 135-140 and KVKK Art. 17)
+
+KVKK Art. 17/1 provides that TCC Arts. 135-140 apply to offences regarding personal data.
+
+### 4.1 Recording of Personal Data (TCC Art. 135)
+
+A person who unlawfully records personal data is sentenced to **imprisonment from 1 to 3 years**.
+
+**Aggravation (TCC Art. 135/2):**
+- Where the data concern political, philosophical or religious views, race, morals, health, sexual life, or trade-union records → the sentence is **increased by half**.
+
+### 4.2 Unlawful Disclosure / Acquisition (TCC Art. 136)
+
+A person who unlawfully gives, disseminates or acquires personal data is sentenced to **imprisonment from 2 to 4 years**.
+
+**Aggravation (TCC Art. 137):**
+- If committed by a public official abusing the authority of office → **increased by half**.
+- If committed by exploiting the facilities of a profession or trade → **increased by half**.
+
+### 4.3 Failure to Erase (TCC Art. 138)
+
+Failure by those obliged to erase data within the legal periods carries **imprisonment from 1 to 2 years**.
+
+**Aggravation (TCC Art. 138/2 — 2014 amendment):**
+- If the data concerns investigations or prosecutions → sentence **doubled**.
+
+### 4.4 Complaint and Ex Officio Prosecution
+
+- Under TCC Art. 139, prosecution of the offence of recording personal data (Art. 135) is **subject to complaint**.
+- **Unlawful disclosure (Art. 136)** and **failure to erase (Art. 138)** are prosecuted **ex officio**.
+
+### 4.5 Security Measures Against Legal Persons (TCC Art. 140)
+
+Where these offences are committed for the benefit of a legal person, the **security measures in TCC Art. 60** (revocation of operating licences, confiscation) may apply.
+
+### 4.6 Operational Impact
+
+| Topic | Impact |
+|-------|--------|
+| Managers and employees | Bear individual criminal liability; awareness via confidentiality undertakings |
+| Legal + Compliance cooperation | Where criminal suspicion is identified, an obligation to report to the Public Prosecutor is assessed |
+| Insurance coverage | Individual criminal liability is generally excluded from insurance; corporate D&O policies may provide partial cover |
+| Disciplinary management | Conduct constituting a criminal offence may justify dismissal for cause |
+
+## 5. Civil Compensation (KVKK Art. 14/2 + CO Art. 49)
+
+> **Law Art. 14/2:** Claims for compensation of damages caused by unlawful processing of personal data are made under **general provisions**.
+
+| Type | Basis | Forum |
+|------|-------|-------|
+| Pecuniary damages | CO Art. 49 | Civil Court of First Instance |
+| Non-pecuniary damages | CO Art. 58 | Civil Court of First Instance |
+| Consumer arbitration / consumer court (where consumer transaction) | Consumer Protection Law (6502) | Consumer Arbitration / Consumer Court |
+
+### 5.1 Cumulative Liability
+
+A data subject can, for the same breach:
+1. Apply to the controller (Art. 13).
+2. Complain to the Authority if not answered or unsatisfied (Art. 14).
+3. Sue for compensation in the general courts (Art. 14/2).
+
+The administrative fine and civil damages do not preclude each other; both can run.
+
+### 5.2 Group Litigation
+
+Consumer associations can use the standing to sue on behalf of consumers under Consumer Protection Law Art. 73. This is an evolving area subject to case law.
+
+### 5.3 Operational Impact
+
+- Annual breach and complaint records are evaluated using actuarial models.
+- Compensation risk is tracked as a contingent liability under TFRS 37 in internal financial reporting.
+- The cyber insurance policy is reviewed annually.
+
+## 6. Administrative Court Annulment
+
+Against the Authority's administrative fine and other administrative actions:
+
+| Step | Time / Forum |
+|------|--------------|
+| Service of administrative action | T0 |
+| Annulment action in administrative court | T0 + 30 days (Misdemeanours Law Art. 27 and Administrative Procedure Code) |
+| Forum | Administrative Court (Ankara — seat of the Authority) |
+| Conduct of the case | Written proceedings; oral hearing may be requested |
+| Appeal | Regional Administrative Court |
+| Cassation (above monetary threshold) | Council of State |
+| Constitutional Court individual application | Within 30 days after exhaustion of ordinary remedies |
+
+### 6.1 Strategic Decision Matrix
+
+| Scenario | Action |
+|----------|--------|
+| Fine low + breach acceptable | Pay + remediate |
+| Fine high but breach contested | Pay under reservation + annulment action |
+| Fine compliant with the decision but proportionality contested | Annulment action — proportionality argument |
+| Recurring topic with case-law value | Annulment with executive approval |
+| Suspension order + high business impact | Annulment action with stay of execution — urgent |
+
+## 7. Public Sector Disciplinary Provisions (Art. 18/3)
+
+Where a public institution breaches KVKK:
+- No administrative fine applies.
+- Disciplinary provisions apply to the public official/employee responsible (Civil Servants Law No. 657 and special disciplinary regulations).
+- This paragraph does not apply where there are no public-sector employees within the Company; for private-law legal persons providing public services, careful interpretation is required.
+
+## 8. Aggravating / Mitigating Factors — Authority Practice
+
+Pattern observed in Authority decisions:
+
+### 8.1 Aggravating
+
+- Sensitive data involved (in light of Authority Decision 2018/10)
+- Children's data
+- Large volume (thousands/millions of data subjects)
+- Combined with cross-border transfer breach
+- Recidivism (history of prior Authority decisions)
+- Intent
+- Long concealment of the breach
+- Lack of cooperation with the Authority
+- Failure of notification obligation
+
+### 8.2 Mitigating
+
+- Early detection, swift notification (24-48 hours)
+- Existing structural controls (policy, training, audit)
+- Limiting impact (containment, isolation)
+- Effective notification and support to data subjects
+- Root cause analysis and corrective action
+- Transparent cooperation with the Authority
+- No prior breaches
+- Indicators of sectoral best practice
+
+## 9. Corporate Risk Effects
+
+| Effect | Monitoring |
+|--------|------------|
+| Financial | Contingent liability (TFRS 37), cyber insurance premium effect |
+| Reputational | Media monitor, social media listening |
+| Operational | Suspension order → business interruption impact |
+| Strategic | Breach of "compliant operator" condition in public sector contracts |
+| Governance | Pressure on independent member count and effectiveness of audit committee |
+
+## 10. Zero Tolerance Areas
+
+The Company has adopted "zero tolerance" for:
+1. Intentional acquisition or dissemination of personal data
+2. False statements to the Authority
+3. Concealment or non-notification of a breach
+4. Unauthorised access to sensitive data by an employee
+5. Tolerating supplier use of data outside the DPA
+
+When detected, immediate disciplinary process, potentially dismissal for cause, and assessment of reporting to the Public Prosecutor.
+
+## 11. Related Documents
+
+- [kurul-denetim-hazirlik.md](kurul-denetim-hazirlik.md)
+- [ic-denetim-prosedur.md](ic-denetim-prosedur.md)
+- [../12-mevzuat-arsiv/6698-kanun.md](../12-mevzuat-arsiv/6698-kanun.md)
+- [../12-mevzuat-arsiv/kurul-kararlari-ozeti.md](../12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+
+---
+
+## Türkçe
 
 # Yaptırımlar, İdari Para Cezaları ve Hukuki Sorumluluk
 

@@ -1,14 +1,272 @@
 ---
-Doküman: Politikalar ve Prosedürler — Doküman Yönetimi Standardı
-Bölüm: 06-idari-tedbirler
-Sahip: KVKK Sorumlusu / CISO (Bilgi Güvenliği Politikaları için)
-Onaylayan: KVKK Komitesi + İlgili Direktör + Üst Yönetim (üst seviye için Yönetim Kurulu)
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim, ihlal)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; KVKK Veri Güvenliği Rehberi — "Kurumsal Politikalar"
-İlgili Standart: ISO/IEC 27001:2022 Clause 5.2 (Policy), 7.5 (Documented Information), Annex A.5.1, A.5.2; ISO/IEC 27701:2019; NIST CSF 2.0 GV.PO; NIST SP 800-53 PM-1
+Doküman / Document: Politikalar ve Prosedürler — Doküman Yönetimi Standardı / Policies and Procedures — Document Management Standard
+Bölüm / Section: 06-idari-tedbirler
+Sahip / Owner: KVKK Sorumlusu / CISO (Bilgi Güvenliği Politikaları için) / KVKK Officer / CISO (for Information Security Policies)
+Onaylayan / Approved by: KVKK Komitesi + İlgili Direktör + Üst Yönetim (üst seviye için Yönetim Kurulu) / KVKK Committee + Relevant Director + Senior Management (Board of Directors for top-level)
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim, ihlal) / Annual + triggered (regulatory change, organizational change, breach)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; KVKK Personal Data Security Guide — "Corporate Policies"
+İlgili Standart / Standard: ISO/IEC 27001:2022 Clause 5.2 (Policy), 7.5 (Documented Information), Annex A.5.1, A.5.2; ISO/IEC 27701:2019; NIST CSF 2.0 GV.PO; NIST SP 800-53 PM-1
 ---
+
+## English
+
+# Policies and Procedures
+
+## 1. Purpose
+
+Defines the **policy set**, **document lifecycle**, **approval chain**, and **publication/access** rules that the organization must have for KVKK compliance and information security. The operational implementation of the measure required under "Corporate Policies" in the KVKK Personal Data Security Guide.
+
+## 2. Document Types and Hierarchy
+
+| Level | Type | Example | Approver | Period |
+|--------|-----|-------|-----------|------|
+| 1 | Top-Level Policy (Charter / Manifesto) | KVKK Policy, Information Security Policy | Board of Directors | 2 years |
+| 2 | Policy | Access Management, Retention, Vendor | Senior Management + KVKK Committee | 2 years |
+| 3 | Standard | Encryption Standard, Logging Standard | Director + CISO | 1-2 years |
+| 4 | Procedure / Working Instruction | Joiner-Leaver Procedure | Process Owner + KVKK Officer | 1 year |
+| 5 | Template / Form / Checklist | Data Processor Contract Template | Legal + KVKK Officer | 1 year |
+
+**Rule:** Lower-level documents cannot conflict with the upper level. The lower level is revised when conflict is detected.
+
+## 3. Minimum Policy Set (Data Controller — 500+ Employees)
+
+### 3.1. Top-Level
+
+1. **KVKK Policy** — Top-level document setting out the company's approach, principles, responsibilities and data subject rights regarding personal data processing.
+2. **Information Security Policy** — Organizational approach within the CIA triad framework, responsibility, acceptable use, compliance.
+
+### 3.2. KVKK / Privacy Focused
+
+3. **Privacy Notice Standard** — Content, language, publication channel for the obligation under Art. 10.
+4. **Explicit Consent Management Policy** — Consent collection, recording, withdrawal processes.
+5. **Retention and Destruction Policy** — Compliant with KVKK Art. 7 and Destruction Regulation.
+6. **Data Subject Application Management Procedure** — Application channel under Art. 11/13, identity verification, SLA.
+7. **Data Breach Management Procedure** — Detection, containment, notification, recording.
+8. **Data Transfer Policy** — Domestic and cross-border transfer rules, Art. 9.
+9. **VERBİS Management Procedure** — Responsibility for keeping the registry current.
+10. **Cookie Policy** — Website cookies, categories, opt-in/out.
+11. **Marketing Communications Policy** — KVKK + Electronic Commerce Law (IYS) compliant.
+12. **Employee Privacy Policy** — How employee data is processed, monitoring practices.
+13. **CCTV / Camera Policy** — Image recording purpose, duration, sharing.
+14. **Personal Data Impact Assessment (DPIA) Standard** — When and how it's done.
+
+### 3.3. Information Security — Operational
+
+15. **Access Management Standard** — RBAC, JML, PAM (see [05-teknik-tedbirler/erisim-kontrolu.md](../05-teknik-tedbirler/erisim-kontrolu.md)).
+16. **Authentication Standard** — MFA, password, SSO.
+17. **Encryption Standard** — Algorithm, key management.
+18. **Network Security Standard** — Segmentation, perimeter, ZTNA.
+19. **Backup and Business Continuity Standard** — RPO/RTO, restore test.
+20. **Logging and Monitoring Standard** — Logging, SIEM, retention.
+21. **DLP / Data Leakage Prevention Standard**.
+22. **Application Security / S-SDLC Standard**.
+23. **Mobile and Remote Work Policy** — BYOD, MDM.
+24. **Clean Desk — Clean Screen Policy** — Physical privacy.
+25. **Social Engineering and Phishing Policy** — Training, simulation, reporting.
+26. **Incident Management (IR) Procedure** — RB-01..RB-12 runbook set.
+27. **Change Management Policy** — CAB, emergency change.
+28. **Acceptable Use Policy (AUP)** — Employee behavior, internet, social media.
+
+### 3.4. Vendor and Third Party
+
+29. **Vendor Management Policy** — Classification, due diligence, monitoring.
+30. **Data Processor Contract Standard Clauses** — Minimum elements, right of audit.
+31. **Cloud Service Use Policy** — Approved provider list, data location.
+
+### 3.5. HR and Training
+
+32. **Onboarding and Departure Policy (KVKK Linkage)** — Personnel file, confidentiality undertaking, access closure on departure.
+33. **Personnel Training and Awareness Program** — Annual curriculum.
+34. **Discipline Policy — Information Security Violations** — Violation classes and sanctions.
+
+### 3.6. Governance
+
+35. **KVKK Committee Working Procedures** — Members, meeting, decision.
+36. **Risk Management Policy** — Risk appetite, scoring.
+37. **Internal Audit Charter and Annual Plan** — Independence, scope.
+38. **Policy and Document Management Policy** — This document.
+
+## 4. Policy Lifecycle
+
+```
+Trigger (new risk / regulation / gap)
+   → 1. Draft (Owner team)
+   → 2. Stakeholder Review (Legal, IT, HR, KVKK Officer, relevant business unit)
+   → 3. Senior Management / Committee Approval
+   → 4. Publication (intranet, email announcement, training)
+   → 5. Implementation (operational steps)
+   → 6. Monitoring & Measurement (KPI, audit)
+   → 7. Periodic Review (≤2 years)
+   → 8. Revision / Withdrawal
+```
+
+## 5. Standard Policy Template (Sections)
+
+The following sections are present in every policy document:
+
+1. **Title + Meta Information** (version, owner, approver, effective date, review date).
+2. **Purpose** — The problem solved by the policy.
+3. **Scope** — Which persons, systems, locations are included.
+4. **Definitions** — Disputed / technical terms.
+5. **Roles and Responsibilities** — RACI.
+6. **Policy Provisions** — What must and must not be done.
+7. **Exceptions** — Exception request process.
+8. **Measurement / KPI** — Effectiveness indicators.
+9. **Non-Compliance and Sanctions** — Reference to discipline process.
+10. **Related Documents** — Upper/lower policies, legislation.
+11. **Revision History** — Date, change summary, approver.
+
+## 6. Approval Chain
+
+| Document Type | Prepared By | Review (mandatory) | Approver | Publication |
+|--------------|------------|-------------------|------------|-------|
+| Top-Level Policy | KVKK Officer / CISO | Legal + Full Committee + Senior Management | Board of Directors | Intranet + General announcement |
+| Policy (Level 2) | Owner team | Legal + KVKK Officer + CISO + Relevant Director | KVKK Committee + Senior Management | Intranet + email |
+| Standard | Technical team + CISO office | KVKK Officer + Relevant Director | CISO + Relevant Director | Intranet |
+| Procedure | Process Owner | Process stakeholders + KVKK Officer | Relevant Manager | Intranet |
+| Template / Form | Process Owner | Legal + KVKK Officer | KVKK Officer | Intranet |
+
+Approval is documented with e-signature or wet signature; evidence PDF + meta-data in archive.
+
+## 7. Publication and Communication
+
+- **Publication Channel:** Intranet policy library (Confluence / SharePoint, etc.) — single authoritative source.
+- **Version Information:** At the top of each document and in the file name (e.g., `KVKK-Policy-v2.0-2026.pdf`).
+- **New Publication:** Company-wide email + departmental notification. 30-minute briefing for critical policy.
+- **Translation:** Original Turkish + English available (for international subsidiaries).
+- **Accessibility:** Publication format adjusted for accessibility standards (WCAG 2.1 AA).
+
+## 8. Versioning Rule
+
+- **MAJOR.MINOR** (e.g., 2.1).
+- **MAJOR** — Purpose, scope or important provision of the policy changed.
+- **MINOR** — Description, example, minor revision.
+- Annual review may produce a minor version.
+- Each version a separate record; reversible.
+
+## 9. Old Version Management
+
+- The old version is moved to "ARCHIVE" folder, the new version is published.
+- Employees acting on old version is prevented (old version explicitly stamped "invalid").
+- In possible legal investigation / audit cases, the old version is kept for 5 years.
+- Within 30 days following version change, all employees confirm read of the new version (for critical policy).
+
+## 10. Periodic Review
+
+### 10.1. Annual Triggers
+
+- Legal change (KVKK, secondary legislation, sectoral regulation).
+- Organizational change (organization, M&A, new line of business).
+- Technological change (new cloud, new IdP, new AI system).
+- Breach or near-miss incident.
+- Independent audit finding.
+- KVKK Authority decision / sectoral guide refresh.
+
+### 10.2. Review Flow
+
+1. KVKK Officer announces annual schedule (Q1).
+2. Each document owner opens their document for review.
+3. If change required, draft updated, stakeholder review.
+4. Approval chain triggered.
+5. Publication + communication.
+6. Review completion report to Committee.
+
+## 11. Exception Management
+
+- Exceptions can be **written, justified, time-limited, with compensating controls, approved**.
+- Exception form: who, why, which clause, compensating control, duration (≤180 days), risk owner, KVKK Officer opinion.
+- Exception register kept; annual review.
+- Exception accumulation signals need for policy revision.
+
+## 12. Non-Compliance and Sanctions
+
+- Non-compliance is evaluated according to the Discipline Policy.
+- Classification:
+  - **A — Intentional / Severe:** Data disclosure, intentional access violation → up to termination and legal process.
+  - **B — Negligence / Repeated:** Written warning + mandatory training.
+  - **C — Mistake / First time:** Training reminder.
+- For vendor non-compliance, contract clause is triggered.
+- KVKK Officer informs the Committee in case of breach.
+
+## 13. Policy Template (Markdown — short example beginning)
+
+```markdown
+---
+Document: <title>
+Owner: <team / person>
+Approver: <committee>
+Version: 1.0
+Effective: YYYY-MM-DD
+Review: <date>
+Legal Reference: ...
+Standard: ...
+---
+
+# 1. Purpose
+# 2. Scope
+# 3. Definitions
+# 4. Roles and Responsibilities
+# 5. Policy Provisions
+# 6. Exceptions
+# 7. Measurement
+# 8. Non-Compliance and Sanctions
+# 9. Related Documents
+# 10. Revision History
+```
+
+## 14. Document Management System (DMS) Expectations
+
+- Version control, audit trail, access control.
+- Embedded approval workflow.
+- Automatic review reminders (90, 30, 7 days in advance).
+- "Read" record (for critical policies).
+- Search (full-text), tag / category.
+- Old version archive (read-only).
+- Typical candidates: Confluence + Comala Workflow, SharePoint + Power Automate, GitOps approach (Markdown + git PR review + CI publishing).
+
+## 15. KPI
+
+- Policy currency (≤24 months): target 100%.
+- Annual review completion: 100%.
+- "Read" rate (new starter, within orientation week): 100%.
+- "Read" rate within 30 days after critical policy revision: ≥95%.
+- Number of open exceptions: trend tracking (target decrease per year).
+- Number of non-compliance events: monthly trend.
+
+## 16. Checklist
+
+- [ ] Are KVKK Policy and Information Security Policy present, ≤2 years current?
+- [ ] Are the 38 documents listed in §3 present (justified if scope is not appropriate)?
+- [ ] Do all documents conform to the standard template (version, approver, effective date)?
+- [ ] Is the approval chain documented?
+- [ ] Is the DMS audit trail active?
+- [ ] Has the annual review schedule been published?
+- [ ] Are old versions kept in the archive for 5 years?
+- [ ] Is the exception register current, time-bound, with compensating controls?
+- [ ] Are "read" records 100% for new starters?
+- [ ] Is the critical policy revision communicated to employees?
+- [ ] Are the original Turkish + English versions consistent?
+- [ ] Is the policy hierarchy conflict check done annually?
+- [ ] Are the KPIs reported annually, presented to the KVKK Committee?
+- [ ] Does the Discipline Policy include classification of information security violations?
+- [ ] Is there a "vendor compliance with our policies" clause in vendor contracts?
+
+## 17. Common Mistakes
+
+- Policy documents not updated for years, with statements conflicting with legislation.
+- "Written but not implemented" — no KPI measurement.
+- Employee doesn't know which policy is in effect (intranet clutter).
+- No standard template — every policy in different language and structure.
+- "Read" only formal, no comprehension test.
+- Use of exceptions normalized outside policy.
+- Old version mistakenly thought to be in effect and applied.
+- No reference to policies in vendor contract, missing minimum elements.
+
+---
+
+## Türkçe
 
 # Politikalar ve Prosedürler
 

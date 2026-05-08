@@ -1,14 +1,293 @@
 ---
-Doküman: Şifreleme Politikası ve Anahtar Yönetimi Standardı
-Bölüm: 05-teknik-tedbirler
-Sahip: Kripto Mühendisliği / CISO
-Onaylayan: BT Direktörü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (algoritma deprecation, yeni standart, ihlal)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Kişisel Veri Güvenliği Rehberi — "Şifreleme"; Banka kartları için PCI DSS v4.0; Bankacılık için BDDK düzenlemeleri (uygulanabildiği yerlerde)
-İlgili Standart: ISO/IEC 27001:2022 A.8.24 (Use of Cryptography); NIST SP 800-57 (Key Management); NIST SP 800-175B; NIST FIPS 140-3 (Cryptographic Modules); NIST FIPS 197 (AES); NIST FIPS 186-5 (Digital Signatures); NIST FIPS 203/204/205 (Post-Quantum Cryptography — ML-KEM, ML-DSA, SLH-DSA); IETF RFC 8446 (TLS 1.3); IETF RFC 7525 (TLS Recommendations BCP); Mozilla TLS Configuration; eIDAS (uluslararası geçerli imza)
+Doküman / Document: Şifreleme Politikası ve Anahtar Yönetimi Standardı / Encryption Policy and Key Management Standard
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: Kripto Mühendisliği / CISO / Crypto Engineering / CISO
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi / IT Director + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (algoritma deprecation, yeni standart, ihlal) / Annual + triggered (algorithm deprecation, new standard, breach)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Personal Data Security Guide — "Encryption"; PCI DSS v4.0 for payment cards; BDDK regulations for banking (where applicable)
+İlgili Standart / Standard: ISO/IEC 27001:2022 A.8.24 (Use of Cryptography); NIST SP 800-57 (Key Management); NIST SP 800-175B; NIST FIPS 140-3 (Cryptographic Modules); NIST FIPS 197 (AES); NIST FIPS 186-5 (Digital Signatures); NIST FIPS 203/204/205 (Post-Quantum Cryptography — ML-KEM, ML-DSA, SLH-DSA); IETF RFC 8446 (TLS 1.3); IETF RFC 7525 (TLS Recommendations BCP); Mozilla TLS Configuration; eIDAS (internationally recognized signatures)
 ---
+
+## English
+
+# Encryption
+
+## 1. Purpose
+
+Standardizes the protection of personal data with cryptographic controls **at-rest**, **in-transit**, and where applicable **in-use**. The operational implementation of the control highlighted under "Encryption" in the KVKK Personal Data Security Guide.
+
+## 2. Encryption Requirement Based on Data Classification
+
+| Class | Definition | At-Rest | In-Transit | In-Use |
+|-------|-------|---------|------------|--------|
+| Top Secret | Special-category (KVKK Art. 6), cardholder data (PAN), authentication secrets | **Mandatory** (field-level + DB/Disk) | **Mandatory** (TLS 1.3, internal mTLS) | **Mandatory** if possible (CSE, confidential computing) |
+| Confidential | General personal data, trade secrets | **Mandatory** (DB/Disk) | **Mandatory** (TLS 1.2+) | Recommended |
+| Internal | Operational data without personal data | Recommended | **Mandatory** (TLS 1.2+) | Not required |
+| Public | Web content, etc. | Integrity (signature/hash) | TLS recommended | – |
+
+Classification ties to the Data Classification Policy under [00-yonetisim](../00-yonetisim/).
+
+## 3. Approved Algorithms (as of 2026)
+
+### 3.1. Symmetric
+
+| Algorithm | Mode | Key | Use | Status |
+|-----------|-----|---------|----------|-------|
+| AES | GCM | 256 bit | Preferred (AEAD) | Approved |
+| AES | GCM | 128 bit | General | Approved |
+| AES | CBC + HMAC-SHA256 | 256 bit | Legacy compatibility | Approved (GCM preferred for new design) |
+| ChaCha20-Poly1305 | – | 256 bit | Mobile/IoT, AEAD | Approved |
+| 3DES | – | – | – | **Forbidden** |
+| RC4 | – | – | – | **Forbidden** |
+| DES | – | – | – | **Forbidden** |
+| AES | ECB | – | – | **Forbidden** (deterministic, pattern leakage) |
+
+### 3.2. Asymmetric
+
+| Algorithm | Size | Use | Status |
+|-----------|-------|----------|-------|
+| RSA | ≥ 3072 bit | Signature, key wrapping | Approved (ECC preferred for new systems) |
+| ECDSA | P-256 / P-384 | Signature | Approved |
+| Ed25519 | – | Signature | Approved (preferred) |
+| ECDH | P-256 / P-384 / X25519 | Key exchange | Approved |
+| RSA | < 2048 bit | – | **Forbidden** |
+| DSA | – | – | **Forbidden** |
+
+### 3.3. Hash and KDF
+
+| Algorithm | Use | Status |
+|-----------|----------|-------|
+| SHA-256 / SHA-384 / SHA-512 | General hash, HMAC | Approved |
+| SHA-3 family | New systems | Approved |
+| BLAKE2/3 | Fast hash (internal) | Approved |
+| Argon2id | Password hashing | Approved (preferred) |
+| bcrypt (cost ≥ 12) | Password hashing | Approved |
+| scrypt | Password hashing | Approved |
+| PBKDF2-HMAC-SHA256 (≥ 600k iter) | Legacy system migration | Temporarily approved |
+| HKDF | Key derivation | Approved |
+| MD5 | – | **Forbidden** |
+| SHA-1 | – | **Forbidden** (including HMAC in new design) |
+
+### 3.4. Post-Quantum Cryptography (PQC)
+
+NIST standardized FIPS 203 (ML-KEM, formerly Kyber), FIPS 204 (ML-DSA, formerly Dilithium), and FIPS 205 (SLH-DSA, formerly SPHINCS+) in 2024. Our PQC roadmap:
+
+- **2026:** Hybrid (X25519 + ML-KEM-768) key exchange pilot — TLS 1.3, VPN.
+- **2027:** ML-DSA pilot for signing in critical PKI hierarchy.
+- **2028+:** New certificate generation fully hybrid/PQC.
+- **Crypto agility:** No application may hard-code algorithm names/parameters in code (config + abstraction layer).
+
+## 4. At-Rest Encryption
+
+### 4.1. Disk-Level (FDE)
+
+- All laptops and mobile devices mandatorily encrypted with BitLocker (Windows) / FileVault (macOS) / LUKS (Linux), enforced via MDM.
+- Server/virtual machine disks: cloud provider's default disk encryption + customer-managed key (CMK/BYOK) additionally.
+- USB/storage media: hardware encrypted (FIPS 140-3 Level 2+) or software encryption mandatory before transfer.
+
+### 4.2. Database (TDE — Transparent Data Encryption)
+
+- SQL Server / Oracle / PostgreSQL (pgcrypto / TDE add-on) / MySQL InnoDB Tablespace Encryption — all data and log files at the DB level AES-256.
+- Key kept in HSM / KMS, DB only knows the key reference.
+- TDE alone is not enough; **field-level encryption** is additionally applied to critical columns containing personal data.
+
+### 4.3. Field-Level (Column-Level)
+
+Fields like card number, Turkish ID number, IBAN, health data, biometric template are also encrypted at the **application or DB level**.
+
+- Application-side encryption (CSE — Client-Side Encryption): even the DB administrator cannot see plaintext.
+- The authority to decrypt is restricted within the application by RBAC + audit.
+- If required for searching, applied with **deterministic encryption** (AES-SIV) or **searchable encryption** (with re-identification risks evaluated).
+
+### 4.4. Object Storage (S3 / Blob / GCS)
+
+- SSE-KMS / Customer-Managed Key mandatory.
+- BYOK / HYOK optional (high sensitivity).
+- Bucket policy rejects unencrypted upload (`s3:x-amz-server-side-encryption` enforcement).
+- Versioning + Object Lock (WORM) active for critical data.
+
+### 4.5. Backup Encryption
+
+- Backup files **always** generated encrypted.
+- Backup key kept in a **separate** key chain from the production system (ransomware criterion).
+- See [yedekleme.md](yedekleme.md).
+
+### 4.6. Email and File Sharing
+
+- Attachments containing personal data in email body are **labeled** (Sensitivity Label) and **automatically encrypted** when sent (Microsoft Purview / Azure RMS / S/MIME).
+- Password+SMS second channel mandatory for external sharing.
+
+## 5. In-Transit Encryption
+
+### 5.1. TLS Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Minimum version | TLS 1.2 (1.3 preferred, 1.3 mandatory for public endpoints — by year-end) |
+| Forbidden | SSLv2, SSLv3, TLS 1.0, TLS 1.1 |
+| Cipher Suite (TLS 1.3) | TLS_AES_256_GCM_SHA384, TLS_AES_128_GCM_SHA256, TLS_CHACHA20_POLY1305_SHA256 |
+| Cipher Suite (TLS 1.2) | ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-ECDSA-CHACHA20-POLY1305 (only these or equivalent) |
+| Forbidden Cipher | RC4, 3DES, NULL, EXPORT, CBC-only mode (legacy exception), MD5, SHA-1 |
+| HSTS | Mandatory, max-age ≥ 31536000, includeSubDomains, preload recommended |
+| Certificate | RSA 2048+ or ECDSA P-256+; SHA-256+ signature |
+| OCSP Stapling | On |
+| Session Resumption | TLS session ticket; ticket key rotated every 24 hours |
+| Forward Secrecy | Mandatory (ECDHE) |
+
+### 5.2. mTLS (Mutual TLS)
+
+**mTLS mandatory** for internal service-to-service traffic (on all endpoints carrying personal data). Enforced by Service Mesh (Istio, Linkerd, Consul Connect) or cloud-native mTLS.
+
+### 5.3. VPN / ZTNA
+
+- Site-to-site VPN: IPsec IKEv2, AES-256-GCM, ECDH P-256 minimum.
+- Remote-access VPN: WireGuard or OpenVPN with TLS 1.3 + MFA.
+- ZTNA: user + device + MFA + application-based, mTLS in the background.
+
+### 5.4. SSH
+
+- SSH protocol 2.
+- Key-based access (password access forbidden in prod).
+- Key type: ed25519 (preferred) or RSA 3072+.
+- Certificate-based SSH (HashiCorp Vault SSH CA / Smallstep) preferred.
+- Idle timeout 15 min, root login deny.
+
+### 5.5. TLS Even on Connections Not Containing Personal Data
+
+Even on the internal network, **enforced TLS** rather than **opportunistic TLS**. Many breach incidents have occurred on data paths left unencrypted under the assumption that the "internal network is safe."
+
+## 6. Key Management
+
+### 6.1. Key Lifecycle
+
+```
+Generate → Store → Distribute → Use → Backup → Rotate → Revoke → Destroy
+```
+
+### 6.2. Generation
+
+- Only **cryptographically secure RNG** used (within HSM; OS DRBG as fallback; RFC 4086).
+- Generating keys within applications forbidden; KMS/HSM is invoked.
+
+### 6.3. Storage
+
+| Location | Use |
+|-------|----------|
+| HSM (FIPS 140-3 Level 3+) | Root keys, certificate authority (CA) signing keys |
+| Cloud KMS (AWS KMS, Azure Key Vault — HSM SKU, GCP Cloud HSM) | Application data encryption keys (DEK), envelope encryption (with KEK) |
+| Vault (HashiCorp Vault, CyberArk) | Secret, password, API key, short-lived credentials |
+| Application memory | Only at the moment of use, "memory protected" if possible (not LSASS; mlock, secure enclave) |
+| Cleartext on disk | **Forbidden** |
+| Code repository | **Forbidden** (gitleaks/trufflehog blocking in CI) |
+| Environment variable (.env) | Development only; KMS/Vault integration in production |
+
+### 6.4. Hierarchy (Envelope Encryption)
+
+```
+HSM (Master Key)
+   ├── KEK — Key Encryption Key (KMS)
+         ├── DEK — Data Encryption Key (application)
+               └── Data (AES-GCM)
+```
+
+A separate DEK for each data item; can be stored together with the data in encrypted form with the KEK. Key rotation is performed at the KEK level; data re-encryption is not required.
+
+### 6.5. Rotation
+
+| Key Type | Rotation Frequency |
+|--------------|------------------|
+| TLS server certificate | ≤ 90 days (ACME/automation) |
+| Code signing certificate | 1–3 years (HSM-bound) |
+| KEK (KMS) | Annual automatic |
+| DEK | No re-encrypt; KEK rotation sufficient |
+| API key (service) | ≤ 180 days |
+| Service account secret | ≤ 90 days, automatic |
+| SSH key | On personnel departure, on breach |
+| HSM master | 5 years (with ceremony) |
+
+**Emergency rotation** — performed immediately on any leak suspicion; impact analysis reported.
+
+### 6.6. Separation of Duties
+
+- Key generation, key use, key backup performed by **different people**.
+- "M-of-N" (e.g., 3-of-5) ceremony: in physical ceremony for root key generation, recordings are taken, digital + wet signatures, vault.
+- Key administrator and audit log administrator are different persons.
+
+### 6.7. BYOK / HYOK
+
+- **BYOK (Bring Your Own Key):** Key generation/import on our side, use in cloud. Suitable for most enterprise scenarios.
+- **HYOK (Hold Your Own Key):** Key on our side, the cloud provider only accesses with the necessary minimum to perform encrypted operations. Preferred when there are sovereignty / jurisdiction concerns.
+- Key access logs kept on **our side** in both models.
+
+### 6.8. Key Destruction (Crypto-Shredding)
+
+- The destruction of a dataset can only be ensured by **secure destruction** of the DEK belonging to that data (compliant with KVKK Art. 7 / Destruction Regulation, integrated with [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/)).
+- DEK destruction evidence = system log indicating that all key replicas, including backups, have been zeroized + destruction record.
+- Crypto-shredding does **not replace** physical destruction + degausser processes; it is applied in parallel.
+
+## 7. Application-Level Encryption Practices
+
+- **Salted hash is not pseudonymization** — it cannot replace personal data minimization.
+- When **deterministic encryption** is used, take measures against frequency analysis (e.g., danger for low-cardinality fields).
+- **Format-Preserving Encryption (FPE — NIST SP 800-38G — FF1/FF3):** in fields where format must be preserved like card numbers; FF1 is recommended over FF3 (FF3 weakness was identified).
+- **Tokenization:** See [veri-maskeleme-anonimlestirme.md](veri-maskeleme-anonimlestirme.md).
+- **Confidential Computing:** Intel SGX/TDX, AMD SEV-SNP, AWS Nitro Enclaves for sensitive workloads; provider's "in-use" encryption guarantee is useful.
+
+## 8. Sectoral Additional Requirements
+
+### 8.1. Banking and Payments (PCI DSS v4.0 — where applicable)
+
+- PAN storage forbidden (without justification). If stored: hash + salt, partial display (BIN + last 4); for full PAN, field-level encryption + TDE + HSM.
+- CVV/CVC2/CAV2 cannot be stored under any conditions.
+- HSM FIPS 140-3 Level 3+; PIN block ZPK transport.
+- Manual Key Loading → Component / Key Splitting / Dual Control.
+
+### 8.2. Health (Special Category — KVKK Art. 6)
+
+- Field-level encryption mandatory.
+- Decryption access only to "treating health personnel" + "explicit consent / framework exception".
+- If HIPAA requirement exists, BAA + additional controls (for international business).
+
+### 8.3. Children's Data
+
+- For data identified as belonging to a minor, additional "data isolation" + separate key chain recommended.
+
+## 9. Checklist
+
+- [ ] Are all laptops/devices encrypted (FDE) and enforced via MDM?
+- [ ] Is server disk encryption + DB TDE + field-level encryption applied on critical fields?
+- [ ] Is HSM/KMS-based key management centralized (no keys in code)?
+- [ ] Is the envelope encryption (KEK/DEK) hierarchy applied?
+- [ ] Is the key rotation schedule documented and automatic?
+- [ ] Is TLS 1.3 (or 1.2 + strict ciphers) on all external endpoints?
+- [ ] Are HSTS, OCSP stapling, FS active?
+- [ ] Is mTLS applied on internal personal data traffic?
+- [ ] Are backups encrypted and on a separate key chain?
+- [ ] Is the crypto-shredding process integrated with the destruction policy?
+- [ ] Is CMK/BYOK applied in the cloud (for high-sensitivity)?
+- [ ] Is separation of duties (key gen ≠ use ≠ audit) ensured?
+- [ ] Is the PQC roadmap defined and the hybrid pilot started?
+- [ ] Is secret scanning active in CI/CD for detection of leaked keys?
+- [ ] Are key access logs defined as alarm rules in SIEM?
+- [ ] Is algorithm deprecation tracked (annual review)?
+
+## 10. Logging and Monitoring
+
+- Key creation, use, rotation, import/export, destruction — KMS/HSM logs to SIEM.
+- Anomalous key usage (unusual volume, unexpected client) high-priority alarm.
+- Certificate expiry warning: 30, 14, 7, 1 days in advance — TLS expiry of a critical service is a major incident.
+
+## 11. Breach Scenarios
+
+- **Suspected key leak:** Relevant key immediately "disabled" + re-encrypt task plan for all dependent data + breach management (08).
+- **Algorithm break (PQC quantum attack, etc.):** Crypto-agility plan executed, migration to hybrid/PQC algorithm accelerated.
+- **Physical HSM breach:** HSM tamper-evident; on tamper detection, key zeroize, BCP activated, restore with the recovery key set previously stored offline.
+
+---
+
+## Türkçe
 
 # Şifreleme
 

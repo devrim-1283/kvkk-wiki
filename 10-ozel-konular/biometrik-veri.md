@@ -1,13 +1,292 @@
 ---
-Doküman: Biyometrik Veri Yönetimi (PDKS, Erişim, Ödeme, Yüz Tanıma)
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + IT + İK + Bilgi Güvenliği
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Kurul kararları doğrultusunda
-İlgili Mevzuat: 6698 sayılı KVKK m.6 (özel nitelikli); KVKK 31.01.2018 tarih 2018/10 sayılı "Özel Nitelikli Kişisel Verilerin İşlenmesinde Veri Sorumlularınca Alınması Gereken Yeterli Önlemler" Kararı; AYM E.2014/180; ECtHR mağdur içtihadı
+Doküman / Document: Biyometrik Veri Yönetimi (PDKS, Erişim, Ödeme, Yüz Tanıma) / Biometric Data Management (Time/Attendance, Access, Payment, Facial Recognition)
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + IT + İK + Bilgi Güvenliği / KVKK Officer + IT + HR + Information Security
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Kurul kararları doğrultusunda / Annual + per Authority decisions
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 6 (special category); Authority Decision No. 2018/10 dated 31.01.2018 on "Adequate Measures to be Taken by Data Controllers in Processing of Special Category Personal Data"; Constitutional Court E.2014/180; ECtHR victim case law
 ---
+
+## English
+
+# Biometric Data Management
+
+## 1. Definition and Scope
+
+**Biometric data:** Data derived from a person's **physical, physiological, or behavioral characteristics** that allow **unique identification** of that person.
+
+| Type | Example |
+|------|---------|
+| Physical | Fingerprint, palm vein, retina, iris, facial template |
+| Physiological | DNA, voice timbre profile, heart rhythm |
+| Behavioral | Gait, keystroke pattern, signature dynamics |
+
+KVKK Art. 6(1): **Biometric data = special-category personal data.**
+
+## 2. Legal Framework
+
+### 2.1. KVKK Art. 6 Processing Conditions
+
+Special-category data may be processed:
+
+1. With **explicit consent** (Art. 6(2)), OR
+2. Where **expressly provided in laws** (Art. 6(3) - except health/sex life; for biometric data, this may create grounds for processing without explicit consent).
+
+### 2.2. Authority Decision 2018/10
+
+Data controllers processing special-category data must take **adequate measures**:
+
+1. Prepare policies and procedures (KVKK policy set).
+2. Regular training and confidentiality agreements with employees.
+3. Authorization control and access policy.
+4. Defined scope and duration of authorization.
+5. Periodic authorization review.
+6. Revocation of authorization for departing employees.
+7. Security of the environment that accesses the data (anti-virus, firewall, etc.).
+8. **Cryptographic** storage of data in electronic environment.
+9. Key management in a secure environment.
+10. Transfer over **encrypted** channels.
+11. Use of KEP or methods involving cryptography.
+12. Protection of physically stored personal data against unauthorized access.
+
+> **Critical:** If biometric data is **stored unencrypted**, the Authority's case law treats it as a direct violation.
+
+## 3. Biometric Use Scenarios
+
+### 3.1. Personnel Time and Attendance System (PDKS)
+
+| Method | KVKK Risk | Alternative |
+|--------|-----------|-------------|
+| Magnetic card | Low | - |
+| Password / PIN | Low | - |
+| Mobile app (geofence) | Medium | GPS controversial |
+| Fingerprint | **High** (special category) | Above |
+| Palm vein | **High** | Same |
+| Facial recognition | **High** | Same |
+
+**Authority position (decisions from 2019, 2020 and later):** **Alternative methods must be considered** for biometric PDKS. If a card/password is sufficient, biometric use is deemed **disproportionate**.
+
+### 3.2. Physical Access (Doors, Safes, Data Centers)
+
+- Low-risk areas: card is sufficient.
+- High security (R&D, safes, data centers): biometric grounds may be justified.
+- Hybrid: card + fingerprint (two factors).
+
+### 3.3. Payment (Face/Fingerprint)
+
+- Customer payment by face/finger -> explicit consent mandatory.
+- On-device biometrics like Apple Pay / Face ID stay **on the device** -> not processed by us as data controller; care required in integration.
+
+### 3.4. Authorization (BYOD, Mobile Device)
+
+- Device unlock by biometrics is local to the device; we are not the data controller.
+- Logging into our systems with a biometric token = we are data controller; consent + DPIA required.
+
+### 3.5. Call-Center Voice Tone
+
+- Identity verification by voice timbre -> biometric.
+- Explicit consent + an alternative (password, OTP) must be offered.
+- For those who refuse, "additional security questions" method offered.
+
+## 4. DPIA (Data Protection Impact Assessment) Requirement
+
+The Authority's guides recommend DPIA for high-risk processing; combined with Decision 2018/10 and international good practice, DPIA is a **de facto requirement** for biometrics.
+
+### 4.1. DPIA Sections
+
+1. Definition of processing (system, data, person count, flow).
+2. Legal ground and necessity.
+3. Proportionality test (alternative analysis).
+4. Effects on data subject rights.
+5. Risks (leak, fraud, identity theft, discrimination).
+6. Measures (technical + administrative).
+7. Residual risk + acceptance.
+8. KVKK Committee approval.
+
+### 4.2. DPIA Triggers
+
+- New biometric system installation.
+- Scope expansion (e.g., 100 -> 600 employees).
+- New purpose (PDKS -> access control).
+- Provider change.
+- Annual review.
+
+### 4.3. Template
+
+For the DPIA template see `99-sablonlar/dpia-sablonu.md`.
+
+## 5. Designing Explicit Consent
+
+### 5.1. Employee Consent - Constraints
+
+> Consent given by an employee to the employer is evaluated under a **freedom test**. The Authority's and the Constitutional Court's posture: due to employee-employer asymmetry, **consent is easily vitiated**.
+
+For employee biometric use:
+
+- An **alternative method** (card, password) must be offered.
+- Refusing employees must **face no negative consequence** (promotion, performance, warning).
+- Consent is collected via individually signed document; e-signature preferred.
+
+### 5.2. Customer Explicit Consent
+
+- Use of biometrics **cannot be mandatory** for service; alternatives must be offered.
+- Consent process: privacy notice + separate consent box.
+- Easy withdrawal (from app settings).
+
+### 5.3. Minimum Content of Consent Text
+
+```
+Biometric data to be processed:
+[ ] Fingerprint template (mathematical hash)
+[ ] Facial template
+[ ] Iris template
+
+Processing purpose: ____________________
+Processing duration: ____________________
+Storage form: As template (irreversible cryptographic transformation),
+              raw data not stored / deleted.
+
+Alternative method: you may request [card / password / OTP].
+
+I give my explicit consent: [ ] Yes  [ ] No
+```
+
+## 6. Templates vs. Raw Data
+
+### 6.1. Template Storage
+
+- A **mathematical representation** of the biometric (vector, hash, embedding).
+- One-way transformation - ideally raw image cannot be recovered from the template.
+- Modern systems store templates (fingerprint minutiae, 128/512-D facial embedding).
+
+### 6.2. Raw Data Storage
+
+- Fingerprint image, face photo, retina image.
+- **Strongly discouraged** - cannot be undone in a breach (you can change a password, you cannot change your face).
+- Raw data is processed only at first enrollment -> template is generated -> raw data is **deleted**.
+
+### 6.3. Template Encryption
+
+- AES-256 GCM at rest.
+- Key in HSM (Hardware Security Module) or KMS (Key Management Service).
+- Annual key rotation.
+- Computation in encrypted environment if possible (homomorphic encryption - advanced).
+
+## 7. Vendor Selection
+
+### 7.1. Selection Criteria
+
+- ISO/IEC 27001 + ISO/IEC 27701 (Privacy) certifications.
+- ISO/IEC 19794 / 30107 (biometric standards) compliance.
+- FIDO Alliance, BSI, NIST certifications.
+- Türkiye-based data center preferred (reduces cross-border transfer issues).
+- Not closed-source - transparent operation.
+- Penetration test + security audit reports.
+
+### 7.2. DPA (Data Processing Agreement)
+
+- KVKK Art. 12 compliant contract.
+- Processor obligations.
+- Sub-processor approval process.
+- Controller's audit rights.
+- Breach notification within 24 hours.
+- Data destruction + certificate at end of contract.
+
+## 8. Technical Measures
+
+### 8.1. Online Comparison
+
+- Templates on encrypted server.
+- Server-side comparison.
+- TLS 1.3 network.
+- API authentication + rate limit.
+
+### 8.2. On-Device
+
+- Template stored on the device (smart card, mobile secure element).
+- Server only receives "match/no match".
+- Lowest network risk; **preferred** for the data controller.
+
+### 8.3. Anti-Spoofing
+
+- Liveness detection.
+- 3D facial recognition (not based on 2D photos).
+- Fingerprint: moisture/heat/capacitive sensor.
+- Periodic bypass tests.
+
+### 8.4. Backup
+
+- Template backups **encrypted**.
+- Restore audited.
+- 3-2-1 strategy (3 copies, 2 media, 1 off-site).
+
+## 9. Administrative Measures (Decision 2018/10 Articles)
+
+- Policy document (this file).
+- Annual training - all personnel with access to biometric data.
+- Confidentiality agreement (NDA) - IT, HR, external support.
+- Access matrix (RBAC).
+- Authorization review (quarterly).
+- Authorization revocation for departing employees (24 hours).
+- Access log audit.
+
+## 10. Retention Period
+
+| Data | Period |
+|------|--------|
+| Active employee template | For the duration of employment |
+| Active customer template | For the duration of the service |
+| After employee departure | **Immediate deletion** (recommended); at most 30 days |
+| End of customer relationship | Deletion within 30 days |
+| Backups | Backup rotation period |
+
+Deletion record (proof of erasure) is retained.
+
+## 11. Data Subject Rights
+
+- Art. 11(a)-(c): Which template for what purpose -> simple answer.
+- Art. 11(e): Erasure -> equivalent to leaving the service + switching to alternative method.
+- Art. 11(f): If transferred, notification.
+- The template **cannot be returned to the person** (mathematical transformation); however, under Art. 11(b), "template exists, generated on X" information can be provided.
+
+## 12. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| PDKS only via biometric | Alternative (card) mandatory |
+| Storing raw photo | Template transformation + delete raw |
+| No way to withdraw consent | Process design + alternative |
+| Missing/insufficient DPA | KVKK Art. 12 compliant |
+| Departing-employee template lingers | Delete within 24 hours |
+| Unencrypted template | AES-256 + HSM |
+| No anti-spoofing | Liveness mandatory |
+| Default device passwords | Change + MFA |
+| No DPIA | Mandatory before first use |
+| Mandatory biometric for customer | Offer alternative |
+
+## 13. KPIs
+
+| KPI | Target |
+|-----|--------|
+| DPIA completion (each system) | 100% |
+| Template encryption | 100% |
+| Alternative method offered | 100% |
+| Valid explicit consent rate | 100% |
+| Departing-employee deletion SLA | < 24 hours |
+| Anti-spoofing test frequency | Twice yearly |
+| Authorization review | Quarterly |
+
+## 14. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Biyometrik Veri Yönetimi
 

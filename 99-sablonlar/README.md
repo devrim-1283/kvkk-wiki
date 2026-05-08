@@ -1,13 +1,72 @@
 ---
-Doküman: KVKK Şablon Dizini
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Hukuk Müşavirliği
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK; tüm ikincil mevzuat
+Doküman / Document: KVKK Şablon Dizini / KVKK Templates Index
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Hukuk Müşavirliği — KVKK Committee + Legal Counsel
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK; tüm ikincil mevzuat — KVKK; all secondary legislation
 ---
+
+## English
+
+# 99 — KVKK Templates
+
+## Purpose
+
+This section contains the **fillable, legally reviewed, regulation-aligned** templates the Company will use day-to-day in its KVKK compliance processes. Each template references the underlying provisions.
+
+## Template List
+
+| File | Type | Use |
+|------|------|-----|
+| [aydinlatma-metni.md](aydinlatma-metni.md) | Privacy notice | Variants for website, employees, call centre |
+| [acik-riza-metni.md](acik-riza-metni.md) | Explicit consent text | Variants for marketing, cross-border transfer, profiling |
+| [kvki-envanter.csv](kvki-envanter.csv) | Records of Processing Activities (ROPA) | VERBİS-aligned CSV with bilingual headers and sample rows |
+| [saklama-imha-politikasi.md](saklama-imha-politikasi.md) | Policy document | Aligned with Erasure Reg. Art. 6 |
+| [ihlal-bildirim.md](ihlal-bildirim.md) | Breach notification form | Authority 72-hour + internal triage |
+| [ilgili-kisi-cevap.md](ilgili-kisi-cevap.md) | Response letters | Separate template for each Art. 11 right |
+| [tedarikci-veri-isleyen-sozlesmesi.md](tedarikci-veri-isleyen-sozlesmesi.md) | Contract | DPA — Data Processing Agreement |
+| [personel-gizlilik-taahhutnamesi.md](personel-gizlilik-taahhutnamesi.md) | Undertaking | Variants for employees, contractors, interns |
+| [kvki-egitim-takip.md](kvki-egitim-takip.md) | Form | Training participation, curriculum |
+| [dpia-formu.md](dpia-formu.md) | Assessment form | DPIA / PIA |
+| [meşru-menfaat-degerlendirmesi.md](meşru-menfaat-degerlendirmesi.md) | Assessment form | LIA — Legitimate Interest Assessment |
+
+## Template Use Rules
+
+1. **Legal Sign-Off:** Each template is signed off by Legal Counsel before publication. Customisations during use are submitted for legal sign-off.
+2. **Version Discipline:** The template version is preserved in the header. Documents prepared on an old version are kept in archive after delivery to the data subject; no retroactive change.
+3. **Bracketed Fields:** Bracketed fields like `[COMPANY NAME]`, `[DATA CATEGORY]`, `[DATE]` are mandatory; all must be filled in before publication.
+4. **Legal Basis:** Each template explicitly states which KVKK provision it aligns with; if the text is changed, the legal basis is reassessed.
+5. **Multilingual:** Turkish is the principal version; translation requires Legal + qualified-translator approval.
+6. **Evidence Retention:** All documents created using these templates are kept in the evidence file of the relevant process; presentable in periodic audits.
+
+## Template Update Process
+
+| Step | Owner |
+|------|-------|
+| Detection of regulatory / Authority change | Legal Counsel |
+| Impact analysis | KVKK Officer + Legal |
+| Update draft | KVKK Officer |
+| Legal sign-off | Legal Counsel |
+| Committee approval (major change) | KVKK Committee |
+| Publication + announcement | KVKK Officer |
+| Old version archived | KVKK Officer |
+
+## Related Sections
+
+- [00-yonetisim](../00-yonetisim/)
+- [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/)
+- [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/)
+- [07-aktarim](../07-aktarim/)
+- [08-ihlal-yonetimi](../08-ihlal-yonetimi/)
+- [09-ilgili-kisi-basvurulari](../09-ilgili-kisi-basvurulari/)
+- [12-mevzuat-arsiv](../12-mevzuat-arsiv/)
+
+---
+
+## Türkçe
 
 # 99 — KVKK Şablonları
 

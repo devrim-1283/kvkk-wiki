@@ -1,13 +1,243 @@
 ---
-Doküman: Sağlık Verisi Yönetimi (m.6 Özel Nitelikli)
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + İK + İSG Birimi + (varsa) İşyeri Hekimi
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + sektör mevzuatı değişikliklerinde
-İlgili Mevzuat: 6698 sayılı KVKK m.6; 6331 sayılı İş Sağlığı ve Güvenliği Kanunu; 4857 sayılı İş Kanunu; 5510 sayılı SGK Kanunu; 3359 sayılı Sağlık Hizmetleri Temel Kanunu; 663 sayılı KHK; Kişisel Sağlık Verileri Yönetmeliği (21.06.2019 / 30808); Kurul 2018/10 sayılı Kararı
+Doküman / Document: Sağlık Verisi Yönetimi (m.6 Özel Nitelikli) / Health Data Management (Art. 6 Special Category)
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + İK + İSG Birimi + (varsa) İşyeri Hekimi / KVKK Officer + HR + OHS Unit + (if applicable) Workplace Physician
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + sektör mevzuatı değişikliklerinde / Annual + on sectoral legislation changes
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 6; Law No. 6331 (Occupational Health and Safety); Law No. 4857 (Labor Law); Law No. 5510 (SGK); Law No. 3359 (Basic Health Services); Statutory Decree No. 663; Personal Health Data Regulation (Official Gazette 30808 dated 21.06.2019); Authority Decision 2018/10
 ---
+
+## English
+
+# Health Data Management
+
+## 1. Definition and Scope
+
+Health data is **special category** personal data under KVKK Art. 6(1). For our company, health data flows through the following channels:
+
+| Channel | Data Type |
+|---------|-----------|
+| Pre-employment medical | Lab report, vision, hearing, blood test |
+| Periodic medical exam | Mandatory under OHS |
+| Sick leave certificate | Disease type (ICD-10), days off |
+| Work accident | Statement, medical report, disability degree |
+| Occupational disease | Diagnosis, follow-up reports |
+| Vaccination records (e.g., COVID-19) | Vaccine type, date, certificate |
+| Disability | Disability medical report |
+| Pregnancy / breastfeeding | Process information |
+| Insurance claim | Medical diagnosis, invoice |
+| Customer (private sector - non-health) | Generally limited; special-needs requests |
+
+> **Sex-life data:** Regulated together with KVKK Art. 6; very limited in our context (e.g., records of sexual harassment incidents).
+
+## 2. Legal Grounds
+
+### 2.1. KVKK Art. 6(2) - Explicit Consent
+
+The general rule; however, due to employee-employer asymmetry, problematic in practice (freedom test).
+
+### 2.2. KVKK Art. 6(3) - Express Provision in Laws
+
+Health and sex-life data may be processed without explicit consent only for the purposes of **public health protection, preventive medicine, medical diagnosis, treatment and care services, planning and management of health services and their financing**, and **only by persons under a secrecy obligation or authorized institutions/organizations**.
+
+> This covers most workplace health data being processed by the **workplace physician** or an **outsourced OHS firm** - not the company itself.
+
+### 2.3. Other Legal Grounds
+
+- Law No. 6331 (OHS): pre-employment + periodic exams mandatory.
+- Law No. 4857: workplace health conditions.
+- Law No. 5510 (SGK): medical reports, premium calculation.
+- Law No. 657 (public sector): different regime.
+
+## 3. Secrecy Obligation
+
+Healthcare professionals processing health data:
+
+- Physicians (Medical Chamber, secrecy under Turkish Criminal Code Art. 258).
+- Nurses, midwives.
+- Pharmacists, dentists.
+- Workplace physicians (additional under Law 6331).
+- Other healthcare staff.
+
+> **Internal arrangement:** Workplace health data is not accessible to general staff but **only to the workplace physician + OHS specialist + KVKK Officer (limited, for audit)**.
+
+## 4. Data Flow (Typical Workplace)
+
+```
+Employee -> Workplace physician (under secrecy)
+                |
+         Health file (physician archive - encrypted)
+                |
+         HR (only "examined / not" + fitness for work)
+                |
+         Production / Operations (only "not fit" outcome)
+```
+
+HR does **not** receive diagnosis/illness data. Only "fit / unfit / restricted" status.
+
+## 5. Access Control
+
+### 5.1. Access Matrix
+
+| Role | Access |
+|------|--------|
+| Workplace physician | Full access - under secrecy |
+| OHS specialist | Limited (risk assessment) |
+| HR Director | "Fit/Unfit" + indirect (sick-day count) |
+| HR specialist | Sick-leave tracking (with reports) |
+| KVKK Officer | Audit only with approval |
+| Legal | In incidents (accident, lawsuit) |
+| Management | Summary in incident |
+| Other employees | FORBIDDEN |
+
+### 5.2. System Access
+
+- The medical file is in a **separate system** (HER, EHR, workplace physician software).
+- General HR system has **limited** health data (sick days, certificate dates).
+- Encryption mandatory.
+- Audit log on every access.
+
+## 6. Retention Period
+
+| Data | Period | Source |
+|------|--------|--------|
+| Pre-employment medical | **15 years** post-employment | Law 6331 + workplace physician legislation |
+| Periodic medical exam | Same | Same |
+| Work accident record | **15 years** (statute of limitations) | Law 5510 + work accident legislation |
+| Occupational disease | **30 years** | Court of Cassation case law |
+| Sick-leave certificate | Year + **5 years** | HR good practice |
+| Pregnancy / breastfeeding | End of process + **5 years** | HR |
+
+## 7. Transfers
+
+### 7.1. SGK / e-Bildirge
+
+- Transfer to SGK is a statutory obligation (Law 5510).
+- KVKK Art. 6(3) + Art. 5(2)(a).
+- Disclosure + information.
+
+### 7.2. MEDULA, e-Reçete
+
+- Ministry of Health systems.
+- Used by the workplace physician.
+- The data controller is the company; the Ministry is not a processor, but a special regime applies.
+
+### 7.3. Insurance (Private Health)
+
+- Transfers during private insurance claim processes.
+- Explicit consent required (when signing the insurance contract).
+- Need-to-know minimum data.
+
+### 7.4. Cross-Border Transfer
+
+- Very limited (e.g., information sharing across international employer offices).
+- KVKK Art. 9 + Standard Contract + DPIA.
+- Preferred: process within Türkiye.
+
+## 8. Technical Measures (Decision 2018/10)
+
+- AES-256 encryption at rest.
+- TLS 1.3 in transit.
+- HSM/KMS key management.
+- DLP - health-data label.
+- Access log + UEBA anomalies.
+- Encrypted backups.
+- Pseudonymization (separate reference between HR and the medical file).
+- Column-level database encryption (especially the ICD-10 field).
+
+## 9. Administrative Measures
+
+- Health data policy (this document + supplementary procedure).
+- Workplace physician contract - KVKK compliant.
+- Annual secrecy declaration.
+- Training - health data awareness.
+- Annual audit.
+
+## 10. HIMSS / HL7 / FHIR Compliance
+
+If health integration is involved:
+
+### 10.1. HL7 v2 / v3
+- Messaging standard.
+- Patient data fields (PID, ORC, OBR, OBX).
+
+### 10.2. FHIR (Fast Healthcare Interoperability Resources)
+- REST API based.
+- Resource oriented (Patient, Observation, Condition, MedicationRequest).
+- For KVKK compliance:
+   - OAuth 2.0 + SMART on FHIR.
+   - Audit logger (FHIR AuditEvent).
+   - Consent resource for consent management.
+
+### 10.3. HIMSS EMR Maturity Model
+- Levels 0-7.
+- Türkiye-specific layers under KVKK (Authority decisions, sectoral legislation).
+
+## 11. SGK Integrations
+
+### 11.1. e-Bildirge
+- Monthly premium notifications.
+- Additional employee health-data reports (work accidents, occupational diseases).
+
+### 11.2. e-Reçete
+- Used by the workplace physician.
+- Does not flow into the general company system.
+
+### 11.3. MEDULA
+- Between healthcare service providers and SGK.
+- May integrate if there is private insurance for company employees.
+
+## 12. Sensitive Topic - Vaccine / Pandemic Data
+
+From COVID-19 experience:
+
+- Vaccination certificate is special category.
+- "Are you vaccinated?" query with explicit consent.
+- Statutory obligation (public health) limited cases under Art. 6(3).
+- Past applications like the HES code era are gone; current similar cases require a **DPIA**.
+
+## 13. Data Subject Rights
+
+- Art. 11(b): Health-file copy may be requested -> via the **workplace physician**, with KVKK Officer coordination.
+- Art. 11(d): Rectification - medical-report rectification requires clinical action; the company only fixes records.
+- Art. 11(e): Erasure - refused within statutory retention; deleted thereafter.
+- Where there is conflict with the secrecy obligation, Legal + Physician are consulted.
+
+## 14. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Storing diagnosis in general HR system | Only "fit/unfit"; diagnosis in physician system |
+| Sharing health info with other employees | Forbidden - secrecy violation + criminal under TCC |
+| Vaccine list visible to managers | Leadership report only "X / Y" totals |
+| Health + HR in the same database | Pseudonymize, separate schema |
+| Mandating instead of explicit consent | OHS obligation handled via Art. 6(3) |
+| 5-year retention | 15 years + (occupational disease 30 years) |
+| Foreign cloud for health data | Türkiye location preferred |
+| Unencrypted e-mail with the report | KEP + encrypted attachment |
+
+## 15. KPIs
+
+| KPI | Target |
+|-----|--------|
+| Audit log on health-data access | 100% |
+| Encryption coverage | 100% |
+| Annual secrecy declaration | 100% |
+| Diagnosis stored in HR | 0% |
+| Transfer DPA + KVKK compliance | 100% |
+| Health DPIA current | Annual |
+
+## 16. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Sağlık Verisi Yönetimi
 

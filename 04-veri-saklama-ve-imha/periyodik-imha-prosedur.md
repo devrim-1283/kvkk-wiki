@@ -1,13 +1,312 @@
 ---
-Doküman: Periyodik İmha Prosedürü
-Bölüm: 04-veri-saklama-ve-imha
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, sistem değişikliği, ihlal sonrası)
-İlgili Mevzuat: Yön. m.7, m.11, m.12; KVKK m.7, m.13
+Doküman / Document: Periyodik İmha Prosedürü / Periodic Destruction Procedure
+Bölüm / Section: 04-veri-saklama-ve-imha
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (regulatory change, system change, post-breach)
+İlgili Mevzuat / Legal Reference: Reg. Art. 7, 11, 12; KVKK Art. 7, 13
 ---
+
+## English
+
+# Periodic Destruction Procedure
+
+## 1. Purpose
+
+This procedure regulates how the data controller will operationally fulfill its ex officio destruction obligation in the **first periodic destruction** following the date the obligation to erase/destroy/anonymize personal data arose, pursuant to Reg. Art. 11. It also describes the triggered destruction flow that begins with data subject requests under KVKK Art. 13 and Reg. Art. 12.
+
+## 2. Statutory Time Frame
+
+### 2.1. Data Controller With a Policy (Reg. Art. 11/1-2)
+
+- Destruction is performed in the **first periodic destruction** following the date the destruction obligation arose.
+- The periodic destruction interval is determined in the policy; in any case, it cannot exceed **6 months**.
+- In the worst case, destruction is completed within a maximum of 6 months after the obligation arose.
+
+### 2.2. Data Controller Without a Policy (Reg. Art. 11/3)
+
+- Destruction is performed within **3 months** of the date the obligation arose.
+
+### 2.3. Period Shortening by the Board (Reg. Art. 11/4)
+
+- The Board may shorten periods if irreparable or impossible-to-remedy damages would arise and there is clear unlawfulness.
+
+### 2.4. Data Subject Request (Reg. Art. 12)
+
+- If all processing conditions have ceased: Concluded within **30 days**.
+- If data was transferred to a third party: The third party is notified; actions per the Regulation are ensured at the third party.
+- If processing conditions have not entirely ceased: Reasoned rejection under KVKK Art. 13/3; rejection communicated in writing/electronically within 30 days.
+
+## 3. Destruction Calendar
+
+| Periodic Destruction No | Trigger Date | Preparation Start | Execution Window | Reporting |
+|-------------------------|--------------|-------------------|------------------|-----------|
+| May Periodic Destruction | May 1 each year | April 15 | May 1 – May 15 | To Board by May 31 |
+| November Periodic Destruction | Nov 1 each year | Oct 15 | Nov 1 – Nov 15 | To Board by Nov 30 |
+
+## 4. Process Flow (Periodic Destruction)
+
+```
++--------------------------------------------------+
+| STEP 1: Trigger                                  |
+| Periodic destruction calendar reached            |
+| Owner: KVKK Officer                              |
+| Output: Trigger notification                     |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 2: Generate Candidate List                  |
+| Inventory scanned, expired records identified.   |
+| Owner: IT Operations + Relevant Units            |
+| Output: Destruction candidate list (system,      |
+| category, row count, date range)                 |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 3: Legal Filter — Legal Hold Check          |
+| Legal Department reviews the candidate list:     |
+| - Ongoing litigation? Investigation? Inquiry?    |
+| Owner: Legal Director                            |
+| Output: Approved destruction list + Hold list    |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 4: Data Owner Unit Approval                 |
+| List sent to relevant unit manager.              |
+| Manager performs final commercial/operational    |
+| check.                                           |
+| Owner: Unit Manager                              |
+| Output: Unit approval or reasoned objection      |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 5: KVKK Officer Approval                    |
+| Total list approved by KVKK Officer.             |
+| Method (erasure/destruction/anonymization)       |
+| specified per item.                              |
+| Owner: KVKK Officer                              |
+| Output: Final destruction list + method matrix   |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 6: Test Run (Dry Run)                       |
+| Destruction job tested in staging before prod.   |
+| Test sample: 100 records; if validation fails,   |
+| do not promote to production.                    |
+| Owner: IT Operations                             |
+| Output: Dry run report                           |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 7: Destruction Execution                    |
+| Final list executed on systems.                  |
+| - Active databases                                |
+| - Personal data in audit logs                    |
+| - Cloud objects                                  |
+| - Backups (per rotation calendar)                |
+| - Replication environments                       |
+| - Structured/unstructured logs                   |
+| Owner: IT Operations                             |
+| Output: System logs, hash evidence               |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 8: Verification                             |
+| Information Security performs independent        |
+| verification:                                    |
+| - Sample-based verification of destruction       |
+| - Backup/replica verification                    |
+| Owner: Information Security                      |
+| Output: Verification report                      |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 9: Record Preparation                       |
+| Destruction record is prepared.                  |
+| Owner: KVKK Officer + Executor                   |
+| Output: Signed record                            |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 10: Approval Chain                          |
+| Records signed by:                               |
+| - KVKK Officer (preparer)                        |
+| - Information Security Manager (verifier)        |
+| - Legal Director (legal compliance)              |
+| - Relevant Unit Manager (operational compliance) |
+| Owner: KVKK Officer                              |
+| Output: Approved record                          |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 11: Archiving                               |
+| Record and supporting evidence archived.         |
+| Retention: at least 3 years (Reg. Art. 7(3))     |
+| Owner: KVKK Officer                              |
+| Output: Archive entry                            |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 12: Board Reporting                         |
+| Periodic destruction summary submitted to top    |
+| management.                                      |
+| Owner: KVKK Officer                              |
+| Output: Board summary report                     |
++--------------------------------------------------+
+```
+
+## 5. Destruction Triggered by Data Subject Request (Reg. Art. 12)
+
+```
++--------------------------------------------------+
+| STEP 1: Application Receipt                      |
+| Application received via written, KEP, email or  |
+| application form.                                |
+| Counter starts: T+0                              |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 2: Registration and Assignment (T+1)        |
+| Application logged in KVKK application system.   |
+| KVKK Officer assigned as owner.                  |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 3: Identity Verification (T+3)              |
+| Verify the applicant is the data subject.        |
+| Power of attorney check if a representative.     |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 4: Data Identification (T+7)                |
+| Identify in which systems and which categories   |
+| the data resides.                                |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 5: Processing Condition Assessment (T+14)   |
+| Check if KVKK Art. 5/Art. 6 conditions still     |
+| exist.                                           |
+| - All ended? -> STEP 6                           |
+| - Continuing? -> Reasoned rejection              |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 6a: Third-Party Identification (T+18)       |
+| To whom was data transferred? List drawn up.     |
+| Notify third party per Reg. Art. 12/1-b.         |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 7: Destruction Execution (T+25)             |
+| Method selection (Art. 7(5)) made with reasons   |
+| and communicated to data subject.                |
+| Active system + backups + log + replica.         |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 8: Record and Response (T+30)               |
+| Record prepared.                                 |
+| Written/electronic response sent to data         |
+| subject. Response states method and date.        |
++--------------------------------------------------+
+                       |
+                       v
++--------------------------------------------------+
+| STEP 9: Third-Party Confirmation                 |
+| Confirmation received from third party.          |
+| Confirmation archived as supporting document.    |
++--------------------------------------------------+
+```
+
+### 5.1. Calculation of the 30-Day Period
+
+- The period runs from the **first day** the application reaches the data controller.
+- Public holidays / weekends are counted; the period is not extended.
+- If the application requires a fee (per the Communiqué), the period runs from the date the fee is paid.
+- If additional information is requested for identity verification, the remaining period runs from when the additional information arrives (the period pauses, not resets).
+
+## 6. Backup and Replication Destruction Strategy
+
+Erasure on active data **does not reach backups**. The backup destruction strategy is set in the policy:
+
+### 6.1. Strategy A — Wait for Backup Rotation
+
+- A "marker" is placed on the active data on the destruction date.
+- When backups are deleted per the rotation calendar, the data is automatically gone.
+- The maximum backup retention period is explicitly stated in the policy (e.g. 6 months).
+- The response to the data subject states "deleted from active system; will be fully destroyed at the end of backup rotation period."
+
+### 6.2. Strategy B — Backup Key Destruction (Crypto-Shred)
+
+- Backups are encrypted with a separate DEK (Data Encryption Key) each time.
+- DEKs are kept in KMS.
+- When a backup is to be destroyed, only the DEK is destroyed; the backup becomes mathematically unreadable.
+- Fast, traceable and recordable.
+
+### 6.3. Strategy C — Tape / Cold Backup Physical Destruction
+
+- Degauss + shredding for LTO tape or optical cold backups.
+- With vendor certificate.
+
+## 7. Destruction of Personal Data in Log Files
+
+- **Structured logs:** Personal fields of records on the destruction list are nulled/anonymized; the row itself may remain for audit needs.
+- **Unstructured logs:** The file is fully deleted at end of retention.
+- **SIEM:** Index-based lifecycle policy; old indexes deleted automatically.
+- **Audit log:** The audit log itself is not destroyed because it carries evidentiary value; however, personal data within it is cleansed when records expire, observing audit retention periods.
+
+## 8. Controls and Audit
+
+- **Monthly:** Retention job outputs, log cleansing reports, hash counts.
+- **Quarterly:** Policy-vs-inventory comparison; status of hold list.
+- **Annual:** Independent internal audit; sample-based record verification.
+- **KPIs:**
+  - Records eligible / records destroyed (>95%)
+  - Average response time for data subject requests (<25 days)
+  - Open hold files (<10)
+  - Erroneous destruction (wrong record) rate (0)
+
+## 9. Records and Retention
+
+- Reg. Art. 7(3) — at least **3 years**, excluding other legal obligations.
+- The internal standard is **5 years** (considering audit and litigation periods).
+- Records are kept as electronically signed PDFs in a secure archive.
+
+## 10. Common Mistakes and Solutions
+
+| Mistake | Solution |
+|---------|----------|
+| Calendar arrived but no candidate list | Inventory ownership assigned to KVKK Officer; monthly scanning automated |
+| Unit defers destruction citing "we still need data" | Deferral only with concrete legal reason; commercial benefit insufficient |
+| Hold rationale unclear | Hold requires written rationale + Legal signature; hold log maintained |
+| Third-party notification forgotten | "Third-party identification" is a mandatory step; recipient group link in inventory used |
+| Backup not planned | Strategy A/B/C chosen in policy; backup destruction calendar tied to periodic calendar |
+| Record incomplete | Use the record template; missing fields automatically blocked |
+
+---
+
+## Türkçe
 
 # Periyodik İmha Prosedürü
 

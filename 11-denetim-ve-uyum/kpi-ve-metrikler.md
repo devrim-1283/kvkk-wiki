@@ -1,13 +1,379 @@
 ---
-Doküman: KVKK Uyum KPI ve Metrikleri
-Bölüm: 11-denetim-ve-uyum
-Sahip: KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Denetim Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık (KPI tanımları); Aylık (skor)
-İlgili Mevzuat: 6698 sayılı KVKK m.12, m.15, m.16; VERBİS Yön.; Aydınlatma Tebliği; Başvuru Tebliği; İmha Yön. m.11; Veri Güvenliği Rehberi
+Doküman / Document: KVKK Uyum KPI ve Metrikleri / KVKK Compliance KPIs and Metrics
+Bölüm / Section: 11-denetim-ve-uyum
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Denetim Komitesi — KVKK Committee + Audit Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık (KPI tanımları); Aylık (skor) — Annual (definitions); Monthly (scores)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.12, m.15, m.16; VERBİS Yön.; Aydınlatma Tebliği; Başvuru Tebliği; İmha Yön. m.11; Veri Güvenliği Rehberi — Law No. 6698 Arts. 12, 15, 16; VERBİS Reg.; Disclosure Communiqué; Application Communiqué; Erasure Reg. Art. 11; Personal Data Security Guide
 ---
+
+## English
+
+# KVKK Compliance KPIs and Metrics
+
+## 1. Purpose
+
+To make operational compliance performance measurable, traceable and auditable; to detect deviations early and prioritise corrective actions; to provide evidence-based reporting to the Board of Directors and the KVKK Committee.
+
+## 2. KPI Framework
+
+| Category | KPI Count | Frequency |
+|----------|-----------|-----------|
+| Inventory and Registry | 3 | Monthly |
+| Disclosure and Explicit Consent | 4 | Monthly |
+| Retention and Destruction | 3 | Semi-annual + monthly tracking |
+| Data Subject Requests | 4 | Monthly |
+| Breach Management | 5 | Per incident + monthly summary |
+| Training and Awareness | 3 | Quarterly |
+| Supplier and Transfer | 4 | Quarterly |
+| Technical Measures | 4 | Monthly |
+| Audit Findings | 2 | Quarterly |
+
+## 3. KPI Definitions (Detail)
+
+### 3.1 Inventory and Registry
+
+#### KPI-EN-01: Inventory Currency Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Ratio of processes reviewed in the last 90 days to the total |
+| Formula | (Processes updated within last 90 days) / (Total) × 100 |
+| Target | ≥ 95% |
+| Green / Yellow / Red | ≥95% / 85-95% / <85% |
+| Source | GRC tool |
+| Owner | Process owner (1st line) + KVKK Officer |
+
+#### KPI-EN-02: VERBİS Notification Lag
+
+| Field | Value |
+|-------|-------|
+| Definition | Average days between inventory change and VERBİS update |
+| Target | ≤ 7 days (VERBİS Reg. Art. 13) |
+| Green / Yellow / Red | ≤7 / 8-14 / >14 |
+| Source | GRC + VERBİS notification log |
+| Owner | KVKK Officer |
+
+#### KPI-EN-03: VERBİS Record Accuracy
+
+| Field | Value |
+|-------|-------|
+| Definition | Consistency between internal inventory and VERBİS notification (sample-based annual verification) |
+| Target | 100% |
+| Green / Yellow / Red | 100% / 95-99% / <95% |
+| Owner | Internal Audit |
+
+### 3.2 Disclosure and Explicit Consent
+
+#### KPI-AY-01: Disclosure Notice Coverage Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Of processes requiring disclosure, the proportion with the notice displayed in channel |
+| Target | ≥ 98% |
+| Green / Yellow / Red | ≥98% / 90-98% / <90% |
+
+#### KPI-AY-02: Legal Sign-Off on Disclosure Notices
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of live disclosure notices with legal sign-off |
+| Target | 100% |
+
+#### KPI-AR-01: Explicit Consent Withdrawal Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Percentage of active consents withdrawn during the month |
+| Target | Monitoring (no threshold); sudden spikes trigger alert |
+| Alert | Month-over-month > 30% rise → root cause analysis |
+| Source | CMP (Consent Management Platform) |
+
+#### KPI-AR-02: Withdrawal Response Time
+
+| Field | Value |
+|-------|-------|
+| Definition | Time from consent withdrawal to processing stop |
+| Target | ≤ 24 hours (automated systems), ≤ 7 days (operational) |
+
+### 3.3 Retention and Destruction
+
+#### KPI-IM-01: Periodic Destruction Execution Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Adherence to the planned periodic destruction calendar (January and July, Erasure Reg. Art. 11/2) |
+| Formula | (Destruction performed on time) / (Planned) × 100 |
+| Target | 100% |
+| Green / Yellow / Red | 100% / 95-99% / <95% |
+
+#### KPI-IM-02: Destruction Lag Time
+
+| Field | Value |
+|-------|-------|
+| Definition | Days of delay for data whose retention period has expired |
+| Target | ≤ 180 days (Erasure Reg. Art. 11/2) |
+| Green / Yellow / Red | ≤180 / 181-270 / >270 |
+
+#### KPI-IM-03: Destruction Minutes Coverage
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of destruction operations with minutes drawn up and retained for 3 years |
+| Target | 100% (Erasure Reg. Arts. 7/3, 8/3, 9/3) |
+
+### 3.4 Data Subject Requests
+
+#### KPI-BV-01: Request Volume (Trend)
+
+| Field | Value |
+|-------|-------|
+| Definition | Monthly count of DSRs by category (information, correction, erasure, objection, portability, automated decision, damages) |
+| Target | Monitoring; spikes trigger alert |
+
+#### KPI-BV-02: Average Response Time
+
+| Field | Value |
+|-------|-------|
+| Definition | Average days from request to response |
+| Target | ≤ 15 days (Law Art. 13/2: 30 days max) |
+| Green / Yellow / Red | ≤15 / 16-25 / >25 |
+
+#### KPI-BV-03: SLA Met Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of requests resolved within 30 days |
+| Target | ≥ 98% |
+| Red | <95% |
+
+#### KPI-BV-04: Authority Escalation Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of total requests escalated to the Authority after the Company's response |
+| Target | ≤ 2% |
+| Green / Yellow / Red | ≤2% / 2-5% / >5% |
+
+### 3.5 Breach Management
+
+#### KPI-IH-01: Breach Count
+
+| Field | Value |
+|-------|-------|
+| Definition | Quarterly detected breaches by category (external attack, internal error, supplier, physical, loss/theft) |
+| Target | Monitoring; zero target unrealistic; trend and classification critical |
+
+#### KPI-IH-02: MTTD (Mean Time To Detect)
+
+| Field | Value |
+|-------|-------|
+| Definition | Average time from breach occurrence to detection |
+| Target | ≤ 24 hours |
+| Green / Yellow / Red | ≤24h / 24-72h / >72h |
+
+#### KPI-IH-03: MTTN (Mean Time To Notify Authority)
+
+| Field | Value |
+|-------|-------|
+| Definition | Time from detection to Authority notification |
+| Target | ≤ 72 hours (Law Art. 12/5, Authority Decision 2019/10) |
+| Red | >72h — written justification required |
+
+#### KPI-IH-04: MTTR (Mean Time To Resolve)
+
+| Field | Value |
+|-------|-------|
+| Definition | Time from detection to breach closure |
+| Target | ≤ 30 days (critical breach: ≤7 days) |
+
+#### KPI-IH-05: Exercise Frequency and Success
+
+| Field | Value |
+|-------|-------|
+| Definition | Annual count of incident response exercises and adherence to target times |
+| Target | ≥ 2 exercises/year, ≥80% adherence |
+
+### 3.6 Training and Awareness
+
+#### KPI-EG-01: Training Completion Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Completion rate of assigned KVKK training (role-based) |
+| Target | ≥ 95% (general); 100% (critical roles: HR, IT, call centre, legal, sales) |
+
+#### KPI-EG-02: Phishing Simulation Click Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of employees clicking the malicious link in phishing simulations |
+| Target | ≤ 5% |
+| Green / Yellow / Red | ≤5% / 5-10% / >10% |
+
+#### KPI-EG-03: Knowledge Test Pass Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Pass rate of post-training knowledge test (≥80% to pass) |
+| Target | ≥ 90% |
+
+### 3.7 Supplier and Transfer
+
+#### KPI-TD-01: Supplier Due Diligence Coverage
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of suppliers processing/receiving personal data with completed DPIA + security questionnaire |
+| Target | 100% (high risk); ≥95% (medium) |
+
+#### KPI-TD-02: DPA Coverage Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of personal-data-receiving suppliers with signed DPA |
+| Target | 100% |
+
+#### KPI-TD-03: Cross-Border Transfer Count and TIA Rate
+
+| Field | Value |
+|-------|-------|
+| Definition | Count of active cross-border transfers; proportion with completed TIA |
+| Target | TIA completion: 100% |
+
+#### KPI-TD-04: Standard Contract Authority Notification Lag
+
+| Field | Value |
+|-------|-------|
+| Definition | Time from signature to Authority notification |
+| Target | ≤ 5 business days (Art. 9/5, Authority Decision 2024/959) |
+| Red | >5 business days |
+
+### 3.8 Technical Measures
+
+#### KPI-TT-01: Patch Compliance
+
+| Field | Value |
+|-------|-------|
+| Definition | Time from critical patch release to deployment |
+| Target | ≤ 7 days (critical); ≤ 30 days (high) |
+
+#### KPI-TT-02: Privileged Account Coverage
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of privileged accounts under PAM; MFA mandatory |
+| Target | 100% |
+
+#### KPI-TT-03: Encryption Coverage
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of stores containing personal data with rest+transit encryption applied |
+| Target | 100% (mandatory for sensitive data — Authority Decision 2018/10) |
+
+#### KPI-TT-04: Penetration Test Finding Closure
+
+| Field | Value |
+|-------|-------|
+| Definition | Proportion of critical+high penetration test findings closed within 90 days |
+| Target | 100% |
+
+### 3.9 Audit Findings
+
+#### KPI-DN-01: Open Finding Count
+
+| Field | Value |
+|-------|-------|
+| Definition | Open internal + external audit findings, by criticality |
+| Target | Open critical findings = 0 |
+
+#### KPI-DN-02: Finding Closure Time
+
+| Field | Value |
+|-------|-------|
+| Definition | Days from finding to closure |
+| Target | Critical ≤30 days, High ≤90 days, Medium ≤180 days |
+
+## 4. Threshold Colour Coding
+
+| Colour | Meaning | Escalation |
+|--------|---------|------------|
+| Green | On target | Informational; trend monitored |
+| Yellow | Approaching threshold / partial deviation | Corrective action plan within 30 days |
+| Red | Threshold breached / critical deviation | KVKK Committee within 7 days, Board within 30 days |
+
+## 5. Monthly Dashboard Layout
+
+```
++----------------------------------------+
+|   KVKK COMPLIANCE DASHBOARD - [MM/YY]  |
++----------------------------------------+
+| Overall Maturity Score: 3.7 / 5.0 [↑]  |
+| Previous Month: 3.5                    |
++----------------------------------------+
+| HIGHLIGHTED KPIs                       |
+| - Inventory Currency:        96% [G]   |
+| - VERBİS Notification Lag:    5 [G]    |
+| - Periodic Destruction:     100% [G]   |
+| - Request SLA Met:         98.4% [G]   |
+| - MTTD:                      36 h [Y]  |
+| - MTTN:                      48 h [G]  |
+| - Training Completion:        93% [Y]  |
+| - Phishing Click Rate:       7.2% [Y]  |
+| - Open Critical Findings:      1 [R]   |
++----------------------------------------+
+| RED ALERTS                             |
+| - DN-01: TT-PAM coverage 92% (critical)|
+| - Action: complete by end of Q3        |
+| - Owner: CISO                          |
++----------------------------------------+
+| MONTH'S EVENTS                         |
+| - 2 breaches (1 low, 1 medium)         |
+| - 1 Authority notification (medium-48h)|
+| - 142 data subject requests            |
++----------------------------------------+
+```
+
+## 6. Executive Report (Quarterly)
+
+| Section | Content |
+|---------|---------|
+| Executive Summary | 1 page, three highlights, three risks, three wins |
+| Maturity Trend | Quarter-over-quarter change graph by dimension |
+| KPI Scorecard | All KPIs, threshold status, trend arrows |
+| Incident Summary | Breaches, requests, Authority correspondence |
+| Regulatory Impact | Regulatory changes within the quarter and impact analysis |
+| Budget and Resources | Consumption, additional requests |
+| Annex: Evidence List | References supporting the report |
+
+## 7. Data Quality and Verification
+
+- All KPIs are auto-generated from the GRC platform; manual interventions leave an audit trail.
+- Quarterly 2nd line verification (sampling).
+- Annual 3rd line (Internal Audit) independent verification.
+- On anomaly: root cause analysis within 14 days, correction within 30 days.
+
+## 8. Annual KPI Review
+
+KPI definitions are reviewed annually. Triggers:
+- Regulatory change
+- Significant business process change
+- Industry best practice
+- Authority decision / fine on a peer organisation
+
+## 9. Related Documents
+
+- [uyum-olgunluk-modeli.md](uyum-olgunluk-modeli.md)
+- [ic-denetim-prosedur.md](ic-denetim-prosedur.md)
+- [../08-ihlal-yonetimi/](../08-ihlal-yonetimi/)
+- [../09-ilgili-kisi-basvurulari/](../09-ilgili-kisi-basvurulari/)
+
+---
+
+## Türkçe
 
 # KVKK Uyum KPI ve Metrikleri
 

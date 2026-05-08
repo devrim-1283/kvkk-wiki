@@ -1,13 +1,298 @@
 ---
-Doküman: Müşteri ve Pazarlama Verisi Yönetimi (CRM, İYS, Profilleme)
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + Pazarlama Direktörü + CRM Sahibi
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + İYS / Kurul kararlarına göre
-İlgili Mevzuat: 6698 sayılı KVKK m.5, m.11; 6563 sayılı E-Ticaret Kanunu; "Ticari İletişim ve Ticari Elektronik İletiler Hakkında Yönetmelik" (15.07.2015 / 29417); 6502 sayılı Tüketicinin Korunması Kanunu; KVKK Çerez Rehberi
+Doküman / Document: Müşteri ve Pazarlama Verisi Yönetimi (CRM, İYS, Profilleme) / Customer and Marketing Data Management (CRM, İYS, Profiling)
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + Pazarlama Direktörü + CRM Sahibi / KVKK Officer + Marketing Director + CRM Owner
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + İYS / Kurul kararlarına göre / Annual + per İYS / Authority decisions
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 5, 11; Law No. 6563 (Electronic Commerce); "Regulation on Commercial Communications and Commercial Electronic Messages" (Official Gazette 29417 dated 15.07.2015); Law No. 6502 (Consumer Protection); KVKK Cookie Guide
 ---
+
+## English
+
+# Customer and Marketing Data Management
+
+## 1. Purpose and Scope
+
+KVKK + 6563 + İYS-compliant management of CRM, marketing automation, e-mail, SMS, push notifications, targeted ads, segmentation, A/B testing, personalization, profiling, and automated decision processes.
+
+## 2. Legal Ground for Marketing
+
+### 2.1. From the KVKK Perspective
+
+The marketing purpose does not naturally fit any of the grounds in KVKK Art. 5(2):
+
+- It is not performance of contract (selling to a customer does not encompass marketing).
+- No legal obligation.
+- Legitimate interest is **interpreted very narrowly** (Authority position).
+
+> **Conclusion:** The legal ground for marketing is **EXPLICIT CONSENT** (Art. 5(1)).
+
+### 2.2. Law No. 6563 (Commercial Electronic Messages)
+
+For commercial electronic messages by e-mail, SMS, push, voice call:
+
+- Prior approval (Art. 6) is mandatory.
+- Existing-customer exception: no additional approval for the same goods/service, **but** the right to opt out remains.
+- Consent record via KEP / SMS / written channel.
+
+### 2.3. İYS (Message Management System / "İleti Yönetim Sistemi")
+
+The mandatory system activated by the Ministry of Trade on 15 January 2020:
+
+- All commercial electronic message approvals must be filed in İYS.
+- Sending messages to numbers without approval is forbidden.
+- Companies must register with İYS.
+- Companies above the monthly threshold use API integration.
+
+## 3. Marketing Permission Process
+
+### 3.1. Permission Collection
+
+```
+[Customer registration form / Website / E-commerce]
+        |
+[Explicit-consent checkboxes: [ ] Email [ ] SMS [ ] Phone [ ] Calls]
+        |
+[Disclosure: marketing purpose, content type, frequency, cross-border transfer]
+        |
+[Verification: e-mail click / SMS OTP / phone confirmation]
+        |
+[Recording: timestamp, IP, channel, content, version]
+        |
+[İYS notification (within 3 business days)]
+```
+
+### 3.2. Designing Explicit Consent (Marketing)
+
+A single "for all marketing" is NOT acceptable. Granular:
+
+| [ ] E-mail newsletter (weekly) | Content: new products, campaigns |
+| [ ] SMS notifications | Content: discount alerts, last chance |
+| [ ] Telephone calls | Content: special offers, surveys |
+| [ ] Push notifications | Mobile app |
+| [ ] WhatsApp Business | Limited category templates |
+| [ ] Cross-border transfer for marketing | Cloud provider, e-mail service |
+
+### 3.3. Withdrawal
+
+- Mandatory **unsubscribe** link in every e-mail (Regulation requirement).
+- "STOP" reply for SMS.
+- One-click on the website profile page.
+- Request via call center.
+- Withdrawal removed from system within 3 business days + İYS updated.
+
+### 3.4. Existing-Customer Exception
+
+Law 6563 Art. 6(2): For a customer who has been provided goods/services, no additional approval is needed for the **same goods/services**.
+
+> **Practice:** The scope is interpreted narrowly. Be cautious when interpreting "same category". Judicial practice: same category is sufficient - e.g., a store customer can be e-mailed about a new store campaign.
+
+## 4. CRM Data Management
+
+### 4.1. Data Categories
+
+- Identity (name, T.R. ID - only if necessary).
+- Contact.
+- Transaction history (order, payment).
+- Engagement (e-mail open/click, web visit).
+- Preferences (segment, interests).
+- Net Promoter Score (NPS), CSAT.
+- Complaint records.
+
+### 4.2. CRM Access Management
+
+- RBAC (Role-Based Access Control).
+- Marketing operations -> segments + aggregates.
+- Sales reps -> assigned customers.
+- Customer service -> own touchpoints.
+- Management -> aggregate reports.
+- Audit log on every access.
+
+### 4.3. Common CRM Systems
+
+- Salesforce, HubSpot, Microsoft Dynamics 365, Zoho - cross-border data center concerns.
+- Turkish local: Logo CRM, Mikro - domestic advantage.
+- For foreign CRMs, prefer DPA + Standard Contract + Türkiye region (where available).
+
+## 5. Profiling and Automated Decisions
+
+### 5.1. Right to Object under KVKK Art. 11(g)
+
+> "To object to the emergence of a result against the person from analysis of processed data exclusively by automated systems."
+
+When objected:
+
+- Manual review guarantee.
+- Explainable decision.
+- Option to be excluded from the process.
+
+### 5.2. Profiling Scenarios
+
+| Scenario | KVKK Compliance |
+|----------|-----------------|
+| Segmentation (silver/gold/platinum customer) | Disclosure + (where applicable) explicit consent |
+| Lookalike modeling (similar to existing customers) | DPIA + disclosure |
+| Churn prediction | DPIA - customer may be adversely affected |
+| Automated credit limit (payment history) | Legal ground + manual revision |
+| Targeted ads (Meta, Google) | Explicit consent - cross-border transfer |
+| Recommendation engines | Disclosure + (often) explicit consent |
+| A/B testing | Disclosure; if no adverse automated decision, low consent need |
+
+### 5.3. DPIA Triggers
+
+- Automated decisions with effect, no manual revision.
+- Sensitive category (health, financial, ethnic).
+- Wide scale (1M+ users).
+- New technology (AI/ML).
+- Continuous monitoring.
+
+## 6. A/B Testing and Experiments
+
+### 6.1. KVKK Perspective
+
+- Test groups operate on personal data -> processing.
+- Within "improvement" in the privacy notice.
+- Reasonable if no adverse outcome arises.
+
+### 6.2. Ethical Framework
+
+- Opt-out option (excluded from tests) by design.
+- Aggregate / anonymized result sharing.
+- Sensitive content tests (e.g., emotional manipulation) forbidden - Cambridge Analytica example.
+
+## 7. Targeted Advertising (Meta, Google, TikTok)
+
+### 7.1. Custom Audience / Lookalike
+
+- Upload customer list as hashed values to Meta/Google.
+- Explicit consent required before hashing.
+- The contractual data-controller/processor status of the ad network requires Legal review.
+- KVKK transfer rules apply.
+
+### 7.2. Pixels / Tags
+
+- Website pixel -> user data to ad network.
+- Explicit consent (via CMP) mandatory.
+
+### 7.3. Cross-Border Transfer
+
+- Meta, Google, TikTok are US/EU based -> abroad.
+- Standard Contract additional safeguard.
+- Country + purpose stated in the privacy notice.
+
+## 8. Marketing Content Personalization
+
+### 8.1. CRM-Triggered E-mails
+
+- "Happy birthday" -> personal data use.
+- "You forgot your basket" -> e-commerce.
+- Trigger explained in the privacy notice.
+
+### 8.2. Web Site Personalization
+
+- Product recommendation based on prior visits.
+- Cookie based.
+- Explicit consent (CMP).
+
+### 8.3. Push Notifications
+
+- Mobile app permission has two layers:
+   1. OS permission (iOS, Android).
+   2. KVKK explicit consent (in-app).
+- Easy withdrawal.
+
+## 9. Customer Complaints and Feedback
+
+### 9.1. Retention
+
+- Complaints in scope of Law 6502 + KVKK.
+- Retention: consumer dispute statute of limitations (may be 10 years).
+- Personal data minimized.
+
+### 9.2. Social-Media Complaints
+
+- Şikayetvar, Eksisozluk, Twitter, etc. -> publicly available data.
+- Recording the complaint + responding is in KVKK scope.
+- User identification (username, e-mail) sensitive.
+
+## 10. NPS / Surveys / User Research
+
+- Survey participation with explicit consent.
+- Anonymization preferred.
+- Personal results restricted access.
+- Retention proportionate to purpose.
+
+## 11. Cookie Integration
+
+See `cerez-yonetimi.md`. Marketing cookies:
+
+- Explicit consent required.
+- Through the CMP.
+- If refused, marketing cookies do not load.
+
+## 12. CMS (Customer Marketing System) Architecture
+
+```
+[Web/Mobile/Store]
+       |
+[Data collection (CRM, CDP)]
+       |
+[Segmentation (CDP)]
+       |
+[Marketing automation (HubSpot/Marketo/Mailchimp)]
+       |
+[Channel: e-mail, SMS, push, ads]
+       |
+[Engagement tracking]
+       |
+[Feedback - segment update]
+```
+
+At every stage:
+
+- Disclosure + consent check.
+- Access management.
+- Encryption.
+- Audit log.
+
+## 13. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Single "marketing consent" | Granular per channel |
+| No İYS registration | Required (3 business days) |
+| SMS to a non-approved number | Use İYS query API |
+| No unsubscribe link | Mandatory under the Regulation |
+| Pixel without cookie consent | After consent via CMP |
+| No consent for lookalike transfer | Explicit consent + disclosure |
+| No Türkiye region for foreign CRM | Prefer region selection if available |
+| Customer complaint in marketing data segment | Non-marketing data |
+| No manual revision for automated decisions | Honor Art. 11(g) right |
+| Missing DPIA (large profiling) | DPIA mandatory |
+
+## 14. KPIs
+
+| KPI | Target |
+|-----|--------|
+| İYS compliance rate | 100% |
+| Valid explicit consent rate | 100% |
+| Unsubscribe SLA | < 3 business days |
+| Marketing message complaint rate | < 0.1% |
+| CMP consent record rate | 95%+ |
+| DPIA coverage (large profiling) | 100% |
+| CRM access audit log | 100% |
+
+## 15. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Müşteri ve Pazarlama Verisi Yönetimi
 

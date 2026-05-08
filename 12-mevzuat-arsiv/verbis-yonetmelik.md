@@ -1,13 +1,216 @@
 ---
-Doküman: Veri Sorumluları Sicili Hakkında Yönetmelik (VERBİS Yönetmeliği) — Madde Özeti
-Bölüm: 12-mevzuat-arsiv
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Yönetmelik değişikliğinde
-İlgili Mevzuat: Veri Sorumluları Sicili Hakkında Yönetmelik (Resmi Gazete: 30.12.2017 / 30286), Yürürlük: 01.01.2018; 6698 sayılı KVKK m.16
+Doküman / Document: Veri Sorumluları Sicili Hakkında Yönetmelik (VERBİS Yönetmeliği) — Madde Özeti / Regulation on the Data Controllers Registry (VERBİS Regulation) — Article-by-Article Summary
+Bölüm / Section: 12-mevzuat-arsiv
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Yönetmelik değişikliğinde — Annual + on regulatory amendment
+İlgili Mevzuat / Legal Reference: Veri Sorumluları Sicili Hakkında Yönetmelik (Resmi Gazete: 30.12.2017 / 30286), Yürürlük: 01.01.2018; 6698 sayılı KVKK m.16 — Regulation on the Data Controllers Registry (Official Gazette: 30.12.2017 / 30286), in force: 01.01.2018; KVKK Art. 16
 ---
+
+## English
+
+# Regulation on the Data Controllers Registry (VERBİS Regulation)
+
+## General Information
+
+| Field | Value |
+|-------|-------|
+| Title | Regulation on the Data Controllers Registry |
+| Official Gazette | 30.12.2017 / 30286 |
+| In Force | 01.01.2018 |
+| Legal Basis | KVKK Arts. 16/5 and 22/1-(d) and (e) |
+
+## Structure
+
+| Part | Articles | Subject |
+|------|----------|---------|
+| Part One | 1-4 | Purpose, scope, basis, definitions |
+| Part Two | 5-7 | Establishment, administration, public access |
+| Part Three | 8-10 | Registration obligation, application information, registration method |
+| Part Four | 11-14 | Registry record, contact person, change notification, deletion |
+| Part Five | 15-16 | Exemptions |
+| Part Six | 17-20 | Sanctions, authority, entry into force, execution |
+
+---
+
+## Article-by-Article Summary
+
+### ARTICLE 1 — Purpose
+
+| Field | Content |
+|-------|---------|
+| Summary | Sets the procedures and principles for establishing, administering and registering in the publicly accessible Data Controllers Registry maintained by the Presidency under the supervision of the Authority |
+| Operational Impact | Normative basis for VERBİS compliance |
+| Wiki | [02-envanter-ve-sicil](../02-envanter-ve-sicil/) |
+
+### ARTICLE 2 — Scope
+
+| Field | Content |
+|-------|---------|
+| Summary | Covers natural and legal persons that establish and manage data filing systems |
+| Operational Impact | The Company is a legal-person controller and is in scope |
+
+### ARTICLE 3 — Legal Basis
+
+| Field | Content |
+|-------|---------|
+| Summary | KVKK Arts. 16/5 and 22/1-(d) and (e) |
+| Operational Impact | — |
+
+### ARTICLE 4 — Definitions
+
+| Field | Content |
+|-------|---------|
+| Summary | Definitions of Presidency, contact person, registration obligor, Authority, Institution, Registry, VERBİS, data category, data subject group, controller representative |
+| Operational Impact | "Contact person" is NOT the controller representative; responsible for communications around disclosure obligations and complaints |
+| Wiki | [02-envanter-ve-sicil](../02-envanter-ve-sicil/) |
+
+### ARTICLE 5 — Principles for Establishing the Registry
+
+| Field | Content |
+|-------|---------|
+| Summary | Registry shall be accurate, current, public, accessible, secure; for joint controllers, each registers separately; communication via the contact person; operating principles based on Authority decisions |
+| Operational Impact | Inventory and VERBİS must remain in continuous sync; annual accuracy test |
+
+### ARTICLE 6 — Administration of the Registry
+
+| Field | Content |
+|-------|---------|
+| Summary | Establishment, administration, currency, preservation are the Presidency's responsibility; technical and administrative measures are taken |
+| Operational Impact | — |
+
+### ARTICLE 7 — Public Accessibility
+
+| Field | Content |
+|-------|---------|
+| Summary | Current Registry information is made publicly available by methods determined in Authority decisions |
+| Operational Impact | Part of VERBİS records is publicly visible (entity information, contact person, data categories, recipients, retention periods, summary of measures taken) |
+
+### ARTICLE 8 — Registration Obligation
+
+| Field | Content |
+|-------|---------|
+| Summary | Controllers shall register **before processing begins** |
+| Operational Impact | New-process kick-off checklist must include "VERBİS update done?" as a mandatory gate |
+| Wiki | [02-envanter-ve-sicil](../02-envanter-ve-sicil/) |
+
+### ARTICLE 9 — Application Information
+
+| Field | Content |
+|-------|---------|
+| Summary | (a) Identity, address, email of controller, representative (if any) and contact person; (b) processing purposes; (c) data subject groups and data categories; (ç) recipients/recipient groups; (d) data categories transferred abroad and recipients; (e) technical and administrative measures under Art. 12; (f) retention periods |
+| Operational Impact | Inventory fields must map exactly to the VERBİS application; retention periods must be set per data category |
+| Wiki | [02-envanter-ve-sicil](../02-envanter-ve-sicil/), [99-sablonlar/kvki-envanter.csv](../99-sablonlar/kvki-envanter.csv) |
+
+### ARTICLE 10 — Registration Method
+
+| Field | Content |
+|-------|---------|
+| Summary | Registration is conducted electronically through VERBİS; the information in Art. 9 is uploaded into VERBİS |
+| Operational Impact | Access and updates by KVKK Officer / authorised user; user management is disciplined |
+
+### ARTICLE 11 — Registry Record
+
+| Field | Content |
+|-------|---------|
+| Summary | Applications are reviewed and entered into the Registry by the Presidency; completion may be requested for incomplete applications |
+| Operational Impact | Completion windows can be short; due care required |
+
+### ARTICLE 12 — Communication with the Controller
+
+| Field | Content |
+|-------|---------|
+| Summary | Communication with the controller is primarily via the contact person; other channels as needed |
+| Operational Impact | Contact person mobile and email must always be current; updates within 7 days on any change |
+
+### ARTICLE 13 — Change of Information
+
+| Field | Content |
+|-------|---------|
+| Summary | Changes to registered information shall be notified through VERBİS **within 7 days** |
+| Operational Impact | Process changes, new recipients, new purposes → 7-day clock; tracked by KPI |
+| Wiki | [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md) |
+
+### ARTICLE 14 — Deletion of Registry Record
+
+| Field | Content |
+|-------|---------|
+| Summary | The controller applies via VERBİS for deletion; controllers whose legal personality has ended apply with relevant documentation |
+| Operational Impact | Deletion plan in advance of dissolution; record may be preserved if there are pending breaches/complaints/cases |
+
+### ARTICLE 15 — Exemptions
+
+| Field | Content |
+|-------|---------|
+| Summary | Cases listed in Art. 15/1 (data processing not for legally required purposes, anonymisation, national security, etc.) are not subject to registration. The Authority may grant special exemption decisions |
+| Operational Impact | Exemption decisions tracked; e.g. small-business criteria are determined by Authority decision |
+| Wiki | [02-envanter-ve-sicil](../02-envanter-ve-sicil/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
+
+### ARTICLE 16 — Exemption Criteria
+
+| Field | Content |
+|-------|---------|
+| Summary | The Authority considers the nature of data processed, volume, legal obligation, primary activity, transfer to third parties, etc., when granting registration exemptions |
+| Operational Impact | Group-company size/turnover-based exemptions are determined by the Authority; historically thresholds based on employee count + annual turnover have been published |
+
+### ARTICLE 17 — Sanction
+
+| Field | Content |
+|-------|---------|
+| Summary | Breach of VERBİS registration and notification attracts the administrative fine in KVKK Art. 18/1-(ç) |
+| Operational Impact | VERBİS non-compliance carries direct fine risk; priority area in internal audit |
+| Wiki | [11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) |
+
+### ARTICLE 18 — Authority
+
+| Field | Content |
+|-------|---------|
+| Summary | The Authority is empowered to resolve doubts, set principles and standards in application |
+| Operational Impact | — |
+
+### ARTICLE 19 — Entry into Force
+
+| Field | Content |
+|-------|---------|
+| Summary | Entered into force on 01.01.2018 |
+
+### ARTICLE 20 — Execution
+
+| Field | Content |
+|-------|---------|
+| Summary | The President executes the Regulation |
+
+---
+
+## Cross-Reference Table
+
+| Reg. Art. | Related Wiki Document |
+|-----------|----------------------|
+| Arts. 5, 8 | [02-envanter-ve-sicil](../02-envanter-ve-sicil/) |
+| Art. 9 | [02-envanter-ve-sicil](../02-envanter-ve-sicil/), [99-sablonlar/kvki-envanter.csv](../99-sablonlar/kvki-envanter.csv) |
+| Art. 12 | [00-yonetisim](../00-yonetisim/) |
+| Art. 13 | [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md) |
+| Arts. 15, 16 | [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
+| Art. 17 | [11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) |
+
+## Operational Key Concepts
+
+- **Contact Person:** NOT the controller representative. Single point of contact with the Authority (Art. 12). Distinct from but often performed by the same person as the KVKK Officer.
+- **Controller Representative:** Only for non-resident controllers, appointed in Türkiye. This role does not apply to a domestic controller.
+- **7-Day Notification:** Tracked as a KPI on changes.
+
+## Related Documents
+
+- [6698-kanun.md](6698-kanun.md)
+- [../02-envanter-ve-sicil/](../02-envanter-ve-sicil/)
+- [../11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- [../99-sablonlar/kvki-envanter.csv](../99-sablonlar/kvki-envanter.csv)
+
+---
+
+## Türkçe
 
 # Veri Sorumluları Sicili Hakkında Yönetmelik (VERBİS Yönetmeliği)
 

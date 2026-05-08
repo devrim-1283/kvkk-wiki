@@ -1,13 +1,141 @@
 ---
-Doküman: Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ — Madde Özeti
-Bölüm: 12-mevzuat-arsiv
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Tebliğ değişikliğinde
-İlgili Mevzuat: Aydınlatma Tebliği (Resmi Gazete: 10.03.2018 / 30356), 6698 sayılı KVKK m.10 ve m.22/1-(e)-(g)
+Doküman / Document: Aydınlatma Tebliği — Madde Özeti / Disclosure Communiqué — Article-by-Article Summary
+Bölüm / Section: 12-mevzuat-arsiv
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Tebliğ değişikliğinde — Annual + on amendment
+İlgili Mevzuat / Legal Reference: Aydınlatma Tebliği (Resmi Gazete: 10.03.2018 / 30356), 6698 sayılı KVKK m.10 ve m.22/1-(e)-(g) — Disclosure Communiqué (Official Gazette: 10.03.2018 / 30356), KVKK Arts. 10 and 22/1-(e)-(g)
 ---
+
+## English
+
+# Communiqué on the Procedures and Principles of Compliance with the Disclosure Obligation
+
+## General Information
+
+| Field | Value |
+|-------|-------|
+| Title | Communiqué on the Procedures and Principles of Compliance with the Disclosure Obligation |
+| Official Gazette | 10.03.2018 / 30356 |
+| In Force | 10.03.2018 |
+| Legal Basis | KVKK Arts. 10 and 22/1-(e) and (g) |
+
+## Structure
+
+| Part | Articles | Subject |
+|------|----------|---------|
+| General provisions | 1-3 | Purpose, scope, basis, definitions |
+| Principles | 4-6 | Scope of disclosure, procedures, data not obtained from the data subject |
+| Entry into Force | 7-8 | Entry into force, execution |
+
+---
+
+## Article-by-Article Summary
+
+### ARTICLE 1 — Purpose
+
+| Field | Content |
+|-------|---------|
+| Summary | To set the procedures and principles for compliance with the disclosure obligation under KVKK Art. 10 by controllers or those they authorise |
+| Operational Impact | Main reference for the disclosure process |
+| Wiki | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/) |
+
+### ARTICLE 2 — Scope
+
+| Field | Content |
+|-------|---------|
+| Summary | Issued under KVKK Arts. 22/1-(e) and (g); covers all controllers processing personal data |
+
+### ARTICLE 3 — Definitions
+
+| Field | Content |
+|-------|---------|
+| Summary | Definitions of explicit consent, data subject, personal data, controller, etc. (aligned with KVKK) |
+
+### ARTICLE 4 — Scope of the Disclosure Obligation
+
+| Field | Content |
+|-------|---------|
+| Summary | The information given to the data subject at collection under KVKK Art. 10 must contain **as a minimum**: (a) identity of the controller and, if any, the representative; (b) purpose of processing; (c) recipients and purpose of any transfer; (ç) collection method and legal basis; (d) the rights under Art. 11 |
+| Operational Impact | Each privacy notice is checked against the 5 mandatory elements; missing element constitutes a disclosure breach |
+| Wiki | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/), [99-sablonlar/aydinlatma-metni.md](../99-sablonlar/aydinlatma-metni.md) |
+
+### ARTICLE 5 — Performance of the Disclosure Obligation
+
+| Field | Content |
+|-------|---------|
+| Summary | Disclosure can be made orally, in writing, by audio recording, call centre and similar physical or electronic means. **Principles:** (a) not subject to the data subject's consent — unilateral information; (b) burden of proof on the controller; (c) disclosure and consent are **separate**; (ç) limited information for data within the exemptions of Art. 10; (d) provision of Art. 10 information upon request; (e) prior to or simultaneously with collection; (f) performed by the controller or its authorised person; (g) in joint-processing, separate disclosure for each controller; (ğ) special framing for children; (h) plain, intelligible, clear language; (ı) concrete and specific purposes |
+| Operational Impact | Evidence of disclosure must be kept (web click log, timestamped call-centre announcement, signature on application form); consent and disclosure must be SEPARATE documents |
+| Wiki | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/) |
+
+### ARTICLE 6 — Data Not Obtained from the Data Subject
+
+| Field | Content |
+|-------|---------|
+| Summary | Where data are not collected from the subject, disclosure is made: (a) within a reasonable time after collection; (b) at first communication; (c) prior to first transfer; (d) again on process change |
+| Operational Impact | When data are received from third parties (e.g. shared databases, acquisitions), the disclosure obligation must be remembered; time discipline |
+| Wiki | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/) |
+
+### ARTICLE 7 — Entry into Force
+
+| Field | Content |
+|-------|---------|
+| Summary | Entered into force on the date of publication (10.03.2018) |
+
+### ARTICLE 8 — Execution
+
+| Field | Content |
+|-------|---------|
+| Summary | The President of the Personal Data Protection Authority executes the Communiqué |
+
+---
+
+## Cross-Reference Table
+
+| Communiqué Art. | Related Wiki Document |
+|-----------------|------------------------|
+| Art. 4 | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/), [99-sablonlar/aydinlatma-metni.md](../99-sablonlar/aydinlatma-metni.md) |
+| Art. 5 | [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/) |
+| Art. 6 | [07-aktarim](../07-aktarim/) |
+
+## Operational Checklist (Communiqué Compliance)
+
+- [ ] Controller identity clearly stated
+- [ ] Processing purposes concrete and itemised
+- [ ] Recipients and purposes of transfer specified (domestic + foreign separately)
+- [ ] Collection method (web form, contract, public source etc.) specified
+- [ ] Legal basis with KVKK article references
+- [ ] Art. 11 rights expressly listed
+- [ ] Plain, intelligible, clear language
+- [ ] Privacy notice is a SEPARATE document from any consent
+- [ ] Evidence preserved (timestamping, screenshot, etc.)
+- [ ] Special wording for children where applicable
+- [ ] Legal sign-off obtained
+
+## When to Disclose (Summary)
+
+| Channel | When |
+|---------|------|
+| Web form | Before submission, link/popup |
+| Call centre (outbound) | At first contact, before audio recording |
+| Call centre (inbound) | At the start of the call: summary, link/SMS for detail |
+| HR recruitment | At application; again before interview |
+| CCTV | Sign before entering the field of view; reception leaflet as backup |
+| Data received from supplier | Before first use |
+| Shared marketing database | Before first use, at first contact |
+
+## Related Documents
+
+- [6698-kanun.md](6698-kanun.md)
+- [basvuru-tebligi.md](basvuru-tebligi.md)
+- [../03-aydinlatma-ve-acik-riza/](../03-aydinlatma-ve-acik-riza/)
+- [../99-sablonlar/aydinlatma-metni.md](../99-sablonlar/aydinlatma-metni.md)
+
+---
+
+## Türkçe
 
 # Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ
 

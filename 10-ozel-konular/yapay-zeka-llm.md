@@ -1,13 +1,411 @@
 ---
-Doküman: Yapay Zeka ve Büyük Dil Modelleri (LLM) Kullanımı
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + CISO + AI/ML Lideri + Veri Bilim
-Onaylayan: Hukuk Müdürü + KVKK Komitesi + CTO
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yarı yıllık (alan hızlı değişiyor)
-İlgili Mevzuat: 6698 sayılı KVKK m.5, m.6, m.9, m.11/g; AB AI Act (referans, doğrudan uygulanmaz); NIST AI RMF 1.0; OWASP Top 10 for LLM (2025); ISO/IEC 42001:2023; Türkiye Ulusal AI Stratejisi
+Doküman / Document: Yapay Zeka ve Büyük Dil Modelleri (LLM) Kullanımı / Use of Artificial Intelligence and Large Language Models (LLMs)
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + CISO + AI/ML Lideri + Veri Bilim / KVKK Officer + CISO + AI/ML Lead + Data Science
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi + CTO / Head of Legal + KVKK Committee + CTO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yarı yıllık (alan hızlı değişiyor) / Semi-annual (rapidly evolving area)
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 5, 6, 9, 11(g); EU AI Act (reference, not directly applicable); NIST AI RMF 1.0; OWASP Top 10 for LLM (2025); ISO/IEC 42001:2023; Türkiye National AI Strategy
 ---
+
+## English
+
+# Use of Artificial Intelligence and LLMs
+
+## 1. Purpose
+
+KVKK-compliant management of AI use - particularly large language models (LLMs) - within the company. The area requires a cautious approach due to its **rapidly changing** regulatory environment; a Türkiye AI Law similar to the EU AI Act is expected in the near future.
+
+## 2. Use Scenarios
+
+| Scenario | Risk Level | Legal Ground |
+|----------|------------|--------------|
+| Employee personal ChatGPT use (for work) | **High** (leakage) | Customer/other explicit consent; policy restriction |
+| Corporate ChatGPT/Claude/Gemini Enterprise | Medium | DPA + contract |
+| Customer service chatbot | Medium | Explicit consent + disclosure |
+| Automated decisions (credit, recruitment screening) | **High** | DPIA + manual revision |
+| LLM customer-comment summarization | Medium | Disclosure; cross-border transfer caution |
+| AI-assisted coding (Copilot, Cursor) | Low-Medium | Code-leakage controls |
+| LLM content generation (marketing) | Low | Content review |
+| RAG over company documents Q&A | Medium | Access permissions + DLP |
+| Meeting transcript + summary (Otter, Fireflies) | Medium-High | Explicit consent from participants |
+| Personalization (recommendation system) | Medium | Disclosure + (where applicable) explicit consent |
+| Real customer data in AI training | **Very High** | Explicit consent rarely sufficient; anonymize |
+
+## 3. Employee ChatGPT/Claude/Gemini Use Policy
+
+### 3.1. Risk
+
+- Employee pastes customer data into a prompt -> data goes abroad.
+- Trade secrets, code, financial information leaks.
+- Personal account -> hard to audit.
+- Some models may use prompts for training (unless turned off).
+
+### 3.2. Policy Items
+
+```
+1. PROHIBITED to do work in a personal (free/Plus) account.
+2. Only approved corporate accounts may be used:
+   - ChatGPT Enterprise / Team
+   - Claude for Work / Enterprise
+   - Gemini Enterprise
+   - Microsoft Copilot for M365
+3. Pasting rules:
+   - Personal data (T.R. ID, customer name, e-mail, phone) PROHIBITED
+   - Trade secrets (contract, code, financial) PROHIBITED
+   - Pseudonymized / anonymized data permitted
+4. Output review:
+   - LLM outputs must be verified before use in communications
+   - Sensitive decisions cannot rely on LLM alone
+5. Audit:
+   - Use is logged on corporate tools
+   - Anomaly detection (DLP integration)
+6. Training:
+   - 1 hour annual AI awareness training
+   - Onboarding module for new starters
+7. Violations:
+   - 1st violation: warning + training
+   - 2nd violation: discipline
+   - Intentional data leakage: termination + criminal proceedings
+```
+
+### 3.3. Technical Controls
+
+- DLP - filter personal data from prompts.
+- Web filter - approved domains.
+- EDR - application allowlisting.
+- Endpoint usage analytics.
+
+## 4. Corporate LLM Contracts
+
+### 4.1. Checklist
+
+| Item | Our Position |
+|------|--------------|
+| Data not used for training | **Mandatory** (contractual) |
+| DPA / KVKK compliance clause | Mandatory |
+| Standard Contract for cross-border transfer | Mandatory (foreign processor) |
+| Audit log sharing | Mandatory |
+| Retention | 30 days max (zero retention preferred) |
+| Region selection | EU / Türkiye |
+| Encryption (transit + rest) | TLS 1.3 + AES-256 |
+| 24-hour breach notification | Mandatory |
+| End-of-contract data deletion + certificate | Mandatory |
+| Insurance + liability | Legal review |
+
+### 4.2. Recommended Solutions
+
+| Solution | KVKK Compliance Notes |
+|----------|------------------------|
+| OpenAI ChatGPT Enterprise / API | Zero retention option, EU region |
+| Anthropic Claude (API + Enterprise) | EU/US region; not used for training by default |
+| Microsoft Copilot for M365 | EU Data Boundary; tenant isolation |
+| Google Gemini Enterprise | EU region; DLP integration |
+| AWS Bedrock | Region control; data does not leave AWS |
+| Azure OpenAI Service | EU/US; data inside Azure tenant |
+| **On-prem (private)** | Llama 3, Mistral - data inside the company |
+
+### 4.3. Cross-Border Transfer Analysis
+
+An LLM API call = data transferred abroad.
+
+- Standard Contract mandatory.
+- TIA (Transfer Impact Assessment).
+- Notify the Authority within 5 business days.
+
+## 5. Personal Data Leakage in Prompts
+
+### 5.1. Leakage Vectors
+
+- "Write a response to this customer's complaint: [customer name + e-mail + issue]" -> all into the LLM.
+- "Summarize this CV: [full CV]" -> personal data.
+- "What are the risks in this contract: [parties + amounts]" -> trade secrets.
+
+### 5.2. Prevention
+
+- **Pre-prompt sanitization** - DLP integration.
+- **Anonymization** before the prompt.
+- **Pseudo IDs** - "Customer A" instead of a name.
+- **Training** - employee awareness.
+
+### 5.3. DLP Integration
+
+- Scan prompts for personal data on egress.
+- Block if detected + user feedback.
+- Logging + UEBA anomaly detection.
+
+## 6. DPIA Requirement
+
+The Authority's guides recommend DPIA for high-risk processing. AI/LLM use requires a DPIA in:
+
+- Automated decisions (e.g., recruitment, credit, pricing).
+- Profiling (segment, churn).
+- Wide scale (1M+ users).
+- Sensitive categories (health, finance).
+- New technology.
+- Cross-border transfer.
+
+### 6.1. DPIA Sections (AI Specific)
+
+1. System definition (model, provider, data flow).
+2. Processing purpose + necessity.
+3. Legal ground.
+4. Data category + source.
+5. Algorithm explanation (model card).
+6. Risks: bias, discrimination, leakage, hallucination.
+7. Measures: human-in-the-loop, explainability, restriction.
+8. Effect on data subjects + Art. 11(g).
+9. Residual risk + acceptance.
+10. Monitoring + renewal plan.
+
+## 7. Model Card
+
+A **model card** is published for each AI system:
+
+```
+Model Card - [System Name] v[X.Y]
+
+1. General
+   - Model: GPT-4 / Claude / Llama / etc.
+   - Provider:
+   - Region:
+   - Version:
+
+2. Purpose
+   - Primary:
+   - Side-effect possibilities:
+
+3. Training Data (provider info)
+   - Type:
+   - Scope:
+   - Cutoff date:
+
+4. Performance
+   - Test-set results:
+   - Known weaknesses:
+   - Hallucination rate (if measured):
+
+5. Bias Assessment
+   - Demographics tested:
+   - Findings:
+
+6. Limitations
+   - Scenarios where the model should not be used:
+
+7. KVKK Context
+   - Legal ground:
+   - Cross-border transfer:
+   - DPIA reference:
+   - Data subject rights (especially Art. 11(g)):
+
+8. Monitoring
+   - Performance metric tracking:
+   - Re-evaluation date:
+```
+
+## 8. Explainability and Data Subject Rights
+
+### 8.1. KVKK Art. 11(g)
+
+> "To object to the emergence of a result against the person from analysis of processed data exclusively by automated systems."
+
+**Our responsibility:**
+
+- Disclose if there is automated decision-making.
+- Communicate the main parameters.
+- Offer manual revision.
+- On candidate/customer request, provide a human decision.
+
+### 8.2. Explainable AI (XAI) Approaches
+
+- LIME, SHAP - explanation of model output.
+- Decision path - tree-based models.
+- Counterfactual - "what if a different input".
+- LLM reasoning chain - Chain-of-Thought.
+
+### 8.3. Transparency Standard
+
+The explanation provided to the data subject:
+
+- B1-level Turkish.
+- Main inputs to the algorithm.
+- Factors influencing the decision.
+- Path to manual revision.
+- KVKK Art. 11(g) right.
+
+## 9. OWASP LLM Top 10 (2025)
+
+OWASP's 2025 list for LLM application security:
+
+| # | Risk | KVKK Relevance |
+|---|------|----------------|
+| 1 | Prompt Injection | Unauthorized data leakage |
+| 2 | Insecure Output Handling | XSS, command injection |
+| 3 | Training Data Poisoning | Bias, discrimination |
+| 4 | Model Denial of Service | System security |
+| 5 | Supply Chain Vulnerabilities | Third-party risk |
+| 6 | Sensitive Information Disclosure | Direct KVKK breach |
+| 7 | Insecure Plugin Design | Plugin abuse |
+| 8 | Excessive Agency | Uncontrolled automated decisions |
+| 9 | Overreliance | Hallucination |
+| 10 | Model Theft | Intellectual property |
+
+Internal drills + mitigation per risk.
+
+## 10. NIST AI RMF 1.0
+
+NIST AI Risk Management Framework:
+
+### 10.1. Four Functions
+
+- **Govern** - governance, policy, accountability.
+- **Map** - context, risk mapping.
+- **Measure** - measurement, testing.
+- **Manage** - risk management, response.
+
+### 10.2. Company Implementation
+
+- AI governance committee (sub-group within KVKK Committee).
+- AI inventory (systems, use cases).
+- Risk-assessment matrix (per system).
+- Continuous monitoring + reporting.
+
+## 11. EU AI Act Readiness
+
+The EU AI Act (in force 2024, enforcement 2026-2027) does not directly bind Türkiye, **however**:
+
+- Turkish firms supplying products/services to the EU will be covered.
+- The Türkiye AI Law is likely to follow a similar framework.
+
+### 11.1. Risk Tiers (AI Act)
+
+- **Prohibited** (subliminal manipulation, social scoring).
+- **High-risk** (recruitment, credit, education, law) - strict obligations.
+- **Limited** (chatbots, deepfakes) - transparency.
+- **Low** - free.
+
+### 11.2. Company Preparation
+
+- AI inventory classification (prohibited / high / limited / low).
+- Additional documentation for high-risk systems.
+- Preparation for CE-like certification.
+- User notice (chatbot + AI).
+
+## 12. ISO/IEC 42001:2023
+
+AI Management System (AIMS) standard. Framework similar to ISO 27001.
+
+- AI policy.
+- Roles and responsibilities.
+- Risk assessment.
+- Controls (164+).
+- Annual audit.
+
+> 12-24 month certification path depending on company size.
+
+## 13. On-Premise / Private LLM
+
+### 13.1. Advantages
+
+- Data inside the company.
+- No cross-border transfer.
+- Easier regulatory compliance.
+- Fine-tuning with private data possible.
+
+### 13.2. Recommended Models
+
+- Llama 3 (Meta - open weights).
+- Mistral (Mixtral - open).
+- DeepSeek, Qwen (license caution).
+
+### 13.3. Infrastructure Cost
+
+- Significant GPU investment (NVIDIA H100, A100).
+- Continuous updates + security.
+- Talent (MLOps).
+- ROI analysis.
+
+### 13.4. Hybrid Approach
+
+- Sensitive workloads on-prem.
+- General workloads on cloud LLM.
+- Routing layer (LiteLLM, OpenRouter equivalents).
+
+## 14. RAG and Access Control
+
+### 14.1. RAG (Retrieval-Augmented Generation)
+
+- Company documents in a vector DB via embeddings.
+- LLM retrieves documents when answering.
+- Sourced answers.
+
+### 14.2. KVKK Compliance
+
+- **Access filter** per user (only authorized documents).
+- Audit log - who accessed which document.
+- Sensitive content (personnel, health) in a separate index + restricted access.
+
+### 14.3. Vector DB
+
+- Pinecone, Weaviate, Qdrant, ChromaDB.
+- Foreign provider = transfer.
+- On-prem alternatives (Qdrant self-hosted, pgvector).
+
+## 15. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Personal ChatGPT for work | Corporate tool + policy |
+| Customer name in prompt | Pseudonymize |
+| Zero-retention disabled on API call | Contract + setting |
+| No DPIA | Mandatory for high risk |
+| No model card | One per system |
+| No explainability under Art. 11(g) | XAI + manual revision |
+| No explicit consent for meeting transcript | Participants' consent |
+| No RAG access filter | Per user authorization |
+| No Standard Contract for foreign LLM | Authority notification mandatory |
+| No hallucination control | Human approval for critical decisions |
+
+## 16. KPIs
+
+| KPI | Target |
+|-----|--------|
+| Approved corporate AI tool usage rate | 100% |
+| Annual employee AI awareness training completion | 100% |
+| DPIA completion (high-risk AI) | 100% |
+| Model card publication | 100% |
+| Zero retention on corporate AI contracts | 100% |
+| DLP prompt-leakage block | 95%+ |
+| AI inventory currency | < 30 days |
+| Standard Contract notification for foreign LLMs | 100% |
+
+## 17. Annual AI Governance Calendar
+
+| Quarter | Action |
+|---------|--------|
+| Q1 | AI inventory update + risk classification |
+| Q2 | DPIA review; new systems |
+| Q3 | Renew employee awareness training |
+| Q4 | Annual AI governance report (KVKK Committee) |
+| Continuous | Track legislation (Türkiye AI Law, EU AI Act) |
+
+## 18. Linked Sections
+
+- `06-idari-tedbirler/` - AI awareness training.
+- `07-aktarim/` - Cross-border transfer.
+- `10-ozel-konular/musteri-pazarlama-cms.md` - Marketing profiling.
+- `10-ozel-konular/bulut-hizmetleri.md` - Cloud LLM infrastructure.
+
+## 19. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee + CTO |
+
+---
+
+## Türkçe
 
 # Yapay Zeka ve LLM Kullanımı
 

@@ -1,13 +1,241 @@
 ---
-Doküman: KVKK Uyum Olgunluk Modeli
-Bölüm: 11-denetim-ve-uyum
-Sahip: KVKK Sorumlusu / İç Denetim
-Onaylayan: KVKK Komitesi + Denetim Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, ciddi ihlal, organizasyon değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; VERBİS Yön.; Aydınlatma Tebliği; Başvuru Tebliği; İmha Yön.; Veri Güvenliği Rehberi
+Doküman / Document: KVKK Uyum Olgunluk Modeli / KVKK Compliance Maturity Model
+Bölüm / Section: 11-denetim-ve-uyum
+Sahip / Owner: KVKK Sorumlusu / İç Denetim — KVKK Officer / Internal Audit
+Onaylayan / Approved by: KVKK Komitesi + Denetim Komitesi — KVKK Committee + Audit Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği, ciddi ihlal, organizasyon değişikliği) — Annual + triggered (legislative change, severe breach, organisational change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.12; VERBİS Yön.; Aydınlatma Tebliği; Başvuru Tebliği; İmha Yön.; Veri Güvenliği Rehberi — Law No. 6698 Art. 12; Data Controllers Registry Reg.; Disclosure Communiqué; Application Communiqué; Erasure Reg.; Personal Data Security Guide
 ---
+
+## English
+
+# Compliance Maturity Model
+
+## 1. Purpose and Use
+
+This document measures the Company's KVKK compliance capability across **12 dimensions** and **5 maturity levels**. It is used for annual self-assessment, gap analysis, investment prioritisation and reporting to the Board of Directors.
+
+The target maturity level for all dimensions is **Level 4 — Managed**. For high-risk dimensions (processes involving sensitive personal data, cross-border transfers, breach management) the target is **Level 5 — Optimised**.
+
+## 2. Maturity Level Definitions
+
+| Level | Name | Definition |
+|-------|------|------------|
+| 1 | Initial | Process undefined, ad-hoc, person-dependent, undocumented. Compliance is incidental. |
+| 2 | Repeatable | Core process documented; person-dependency persists; no metrics; inconsistent execution. |
+| 3 | Defined | Process is enterprise-standard, written procedures, training delivered, controls operating; measurement limited. |
+| 4 | Managed | Measured by KPIs, deviations are managed, periodic testing and audits in place, continuous improvement loop runs. |
+| 5 | Optimised | Quantitative targets, automation, ML-supported monitoring, benchmarked against industry leaders, proactive risk management. |
+
+## 3. 12 Dimensions × 5 Levels Maturity Matrix
+
+### 3.1 Governance and Accountability
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No KVKK Officer appointed. Not on Board agenda. No policy. |
+| 2 | KVKK Officer appointed but no defined authority. A single, outdated KVKK policy exists. |
+| 3 | KVKK Committee established, charter in writing, meets quarterly. Complete policy set, annual update. |
+| 4 | Managed by KPIs, quarterly Board reporting, dedicated budget, reporting to the Audit Committee. |
+| 5 | Accountability culture embedded; each process owner has KVKK objectives in performance evaluation; high-level executive sponsor (CEO / Vice Chair). |
+
+### 3.2 Personal Data Processing Inventory
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No inventory or one-off Excel list, ownership unclear. |
+| 2 | Inventory exists, partial coverage, not refreshed within the year. |
+| 3 | All processes inventoried, owners assigned, annual refresh procedure exists. |
+| 4 | Inventory in GRC tool, change-trigger procedure operating (new process → recorded within 30 days), 95%+ currency. |
+| 5 | Continuous discovery: data discovery tools, automated data classification, real-time VERBİS deviation alerts. |
+
+### 3.3 Disclosure (Right to Be Informed)
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No privacy notice or single generic text, displayed nowhere. |
+| 2 | One website notice exists; no channel/category split; no separate notices for employees, customers, applicants. |
+| 3 | Separate notices for all data subject groups, displayed in channel (web, application form, HR, call centre); contains the minimum elements required by the Disclosure Communiqué Art. 4. |
+| 4 | Notice coverage tracked by KPI (>98%); every new process kick-off has notice verification; legal sign-off mandatory. |
+| 5 | Multilingual, accessible (WCAG), reader comprehension testing (readability score), layered notice (summary + detail). |
+
+### 3.4 Explicit Consent Management
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No distinction between explicit consent and statutory bases; consents are blanket. |
+| 2 | Consent collected in some processes; revocation channel unclear; no record system. |
+| 3 | Explicit consent collected only when Arts. 5/2 and 6/3 do not apply; records maintained; revocation channel defined. |
+| 4 | Consent Management Platform (CMP) used; revocation takes effect immediately; consent date, channel, text version, IP/device captured; monthly revocation rate monitored. |
+| 5 | Granular (purpose-based) consent, preference centre, timestamped consent records, audit trail provable via signed log/blockchain. |
+
+### 3.5 Retention and Destruction
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | Retention periods undefined, no destruction performed, "keep everything" culture. |
+| 2 | Some periods recorded in policy; periodic destruction not executed or irregular. |
+| 3 | Retention & Destruction Policy published, periodic destruction on the 6-month calendar (January-July), destruction minutes maintained. |
+| 4 | Retention enforced technically in systems (TTL, retention policy), periodic destruction execution rate is a KPI, automated destruction notifications. |
+| 5 | Automated retention enforcement across all systems, anonymisation preferred, destruction certificates digitally signed, destruction proof from suppliers. |
+
+### 3.6 Domestic Transfer
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | Transfers happen but legal basis unclear, no contracts. |
+| 2 | Some transfers covered by contracts; processor / joint controller distinction murky. |
+| 3 | All transfers in inventory; DPAs signed with processors; joint controllers defined. |
+| 4 | DPA renewal calendar, sub-processor approval procedure, contract coverage KPI, annual supplier audit. |
+| 5 | Supplier risk score, automated contract lifecycle management, on-site sample audits. |
+
+### 3.7 Cross-Border Transfer (Art. 9, post 12.03.2024 / Law 7499)
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | Cross-border transfer happens, no legal basis identified, no record. |
+| 2 | Transfer list exists but adequacy decision / standard contract / BCR distinction not made. |
+| 3 | All cross-border transfers assessed under the three-tier hierarchy: adequacy decision → standard contract/BCR/undertaking → derogations. Standard contracts notified to the Authority within 5 business days. |
+| 4 | Transfer Impact Assessment (TIA) completed for every transfer; risk evaluation aligned with Authority Decision 2024/959; TIA coverage tracked by KPI. |
+| 5 | Localisation strategy, only critical cross-border transfers, alternative architectures (anonymisation, pseudonymisation) prioritised. |
+
+### 3.8 Technical Measures
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | Even basic password policy not in force; no logging; no patch routine. |
+| 2 | Antivirus, firewall present; logs in some systems; access management fragmented. |
+| 3 | All baseline controls from the Personal Data Security Guide implemented: identity, encryption (rest+transit), logging, backup, patching, annual penetration test. |
+| 4 | Continuous monitoring (SIEM), DLP, mandatory MFA, privileged access management (PAM), 24/7 SOC, patch lag KPI. |
+| 5 | Zero Trust architecture, behavioural anomaly detection (UEBA), post-quantum crypto readiness, red team exercises, automated control validation. |
+
+### 3.9 Administrative Measures
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No policy, no training, no confidentiality undertakings. |
+| 2 | Basic policies exist, one-off onboarding briefing, confidentiality undertakings signed. |
+| 3 | Complete policy set, annual training, role-based modules, undertakings from every employee/contractor/intern, exit procedure. |
+| 4 | Phishing simulations, function-specific advanced training (developer, call centre, HR), training completion KPI, behaviour-change measurement. |
+| 5 | Microlearning, gamification, culture surveys, "data protection champion" role models, recognition. |
+
+### 3.10 Breach Management
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No breach detection capability, no notification procedure, breach goes unreported in worst case. |
+| 2 | Breach procedure exists but not tested; responsibilities unclear. |
+| 3 | Incident Response Plan (IRP) written, team defined, 72-hour notification process operable, records maintained. |
+| 4 | Annual table-top exercises, MTTD/MTTN/MTTR KPIs, automated notification system, legal-comms-IT coordination, ready-to-send customer notification templates. |
+| 5 | Red-team scenario testing, AI-supported anomaly detection, crisis comms playbooks, insurance + post-breach root cause analysis (RCA) culture. |
+
+### 3.11 Data Subject Requests
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No request channel or single email; no follow-up; ad-hoc responses. |
+| 2 | Web request form available; email/KEP channel exists; tracked in Excel. |
+| 3 | Ticketing system, 30-day SLA, category-based templates (one per Art. 11 right), monthly reporting. |
+| 4 | KPI on SLA-met responses (>98%), automated identity verification, complaints escalated to the Authority tracked, root cause analysis. |
+| 5 | Self-service data subject portal: access, correction, erasure, portability requests via portal. |
+
+### 3.12 Training and Awareness
+
+| Level | Indicator |
+|-------|-----------|
+| 1 | No training. |
+| 2 | One annual training, identical content for all. |
+| 3 | Onboarding + annual refresher, role-based modules. |
+| 4 | Phishing simulation, intra-year micro-modules, 95%+ completion, success rate tracked. |
+| 5 | Personalised learning path, behavioural metrics, culture survey, executive role-modeling. |
+
+## 4. Self-Assessment Method
+
+### 4.1 Annual Calendar
+
+| Step | Time | Owner |
+|------|------|-------|
+| Distribute assessment template | 1 February | KVKK Officer |
+| Process owners self-assess | 1-15 February | 1st line |
+| 2nd line validation (evidence review) | 16-28 February | KVKK Officer, Risk |
+| 3rd line (sample-based independent test) | March-April | Internal Audit |
+| Score consolidation, gap analysis | May | KVKK Committee |
+| Roadmap approval | June | KVKK Committee + Board |
+
+### 4.2 Score Calculation
+
+Each dimension scored on a 0-5 scale. Weights (sum 100%):
+
+| Dimension | Weight |
+|-----------|--------|
+| Governance | 8 |
+| Inventory | 10 |
+| Disclosure | 7 |
+| Explicit consent | 7 |
+| Retention/destruction | 8 |
+| Domestic transfer | 6 |
+| Cross-border transfer | 9 |
+| Technical measures | 13 |
+| Administrative measures | 8 |
+| Breach management | 12 |
+| Data subject requests | 6 |
+| Training | 6 |
+
+Overall maturity score = Σ (dimension score × weight) / 100.
+
+### 4.3 Evidence Types
+
+| Dimension | Evidence Types |
+|-----------|----------------|
+| Governance | Committee minutes, charter, appointment letter |
+| Inventory | GRC tool screenshot, last update date, owner list |
+| Disclosure | Web screenshot, legal sign-off email, coverage matrix |
+| Explicit consent | CMP report, revocation records, consent text version history |
+| Retention/destruction | Destruction minutes, retention configuration, calendar |
+| Transfer | Contract list, DPA samples, TIA files |
+| Technical | SIEM reports, penetration test report, patch compliance report |
+| Administrative | Policy approval records, training platform report, undertakings |
+| Breach | Breach register, exercise report, Authority notifications |
+| DSR | Ticketing statistics, SLA report, response samples |
+| Training | LMS report, phishing results, culture survey |
+
+## 5. Gap Analysis and Roadmap Template
+
+| Dimension | Current Score | Target Score | Gap | Action | Owner | Deadline | Budget | Risk |
+|-----------|---------------|--------------|-----|--------|-------|----------|--------|------|
+| Inventory | 2 | 4 | -2 | GRC tool acquisition, data discovery POC | KVKK Officer + IT | Q3 | TRY 350,000 | High |
+| Cross-border transfer | 2 | 5 | -3 | TIA framework, application of Decision 2024/959, standard contract notifications | Legal + KVKK Officer | Q2 | TRY 80,000 (consultancy) | Critical |
+| Breach management | 3 | 5 | -2 | Annual exercise, AI-assisted SOC integration | CISO + KVKK Officer | Q4 | TRY 200,000 | High |
+
+## 6. Target Level Setting Policy
+
+- **Low-risk dimensions:** Target Level 4.
+- **High-risk dimensions (sensitive data, cross-border transfer, breach management, technical measures):** Target Level 5.
+- **Transition time:** 12-18 months for one level. Skipping levels (e.g. 1→4) is not accepted; intermediate levels must be evidenced.
+
+## 7. Board Reporting
+
+The maturity score is presented annually in June to the Audit Committee of the Board of Directors. Presentation contents:
+
+- Overall score (compared to last year)
+- Heat map by dimension (red/yellow/green)
+- Target-gap-action table
+- Critical findings and remediation plan
+- Budget request
+- Regulatory change effects (next 12 months)
+
+## 8. Related Documents
+
+- [kpi-ve-metrikler.md](kpi-ve-metrikler.md)
+- [ic-denetim-prosedur.md](ic-denetim-prosedur.md)
+- [../00-yonetisim/](../00-yonetisim/)
+- [../12-mevzuat-arsiv/](../12-mevzuat-arsiv/)
+
+---
+
+## Türkçe
 
 # Uyum Olgunluk Modeli
 

@@ -1,13 +1,291 @@
 ---
-Doküman: VERBİS Kayıt Yükümlülüğü İstisna Değerlendirmesi
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (Kurul kararı, mevzuat değişikliği, organizasyonel değişim)
-İlgili Mevzuat: 6698 sayılı KVKK m.16, m.28; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5(f), 15, 16; Kurul'un VERBİS kayıt yükümlülüğü kapsam ve istisnalarına ilişkin kararları
+Doküman / Document: VERBİS Kayıt Yükümlülüğü İstisna Değerlendirmesi / Assessment of Exceptions to the VERBİS Registration Obligation
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (Kurul kararı, mevzuat değişikliği, organizasyonel değişim) / Annual + triggered (Board decision, legislative change, organisational change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.16, m.28 / Law No. 6698 (KVKK) Art. 16, 28; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5(f), 15, 16 / Regulation on the Data Controllers' Registry Art. 5(f), 15, 16; Kurul'un VERBİS kayıt yükümlülüğü kapsam ve istisnalarına ilişkin kararları / Board decisions on the scope of and exceptions to the VERBİS registration obligation
 ---
+
+## English
+
+# Assessment of Exceptions to the VERBİS Registration Obligation
+
+## 1. General Principle
+
+Reg. Art. 5(a): "Data controllers **must register** with the Registry before they start processing personal data." This is the rule.
+
+Exceptions are interpreted narrowly and arise from two sources:
+
+| Source | Nature |
+|--------|--------|
+| **Reg. Art. 15** | Activity-based exception — certain processing types are exempted from the registration obligation |
+| **Reg. Art. 16 + Board Decisions** | Criteria-based exception — the Board may exempt certain data controllers based on objective criteria; threshold decisions are published in this framework |
+
+> **Very important (Reg. Art. 5/f):** Even if an exception applies, **the data controller's other obligations under KVKK do not disappear.** Inventory, disclosure, explicit consent, breach handling, data subject requests, retention-destruction, technical and administrative measures — **all obligations continue.** The exception only removes the VERBİS registration obligation.
+
+## 2. Reg. Art. 15 — Activity-Based Exceptions
+
+The following personal data processing activities are exempt from the registration and notification obligation:
+
+### 2.1 Art. 15(a) — Crime Prevention or Investigation
+
+> "Where the processing is necessary for the prevention or investigation of crime."
+
+Typical scope:
+- Operational data processing by law enforcement
+- Prosecutorial and court files in connection with judicial investigations
+
+> **For our company:** Generally not applicable. Sharing of data with law enforcement upon written request **does not** fall within this exception; that sharing is assessed under KVKK Art. 5(2)/ç (legal obligation) or another clause.
+
+### 2.2 Art. 15(b) — Data Made Public
+
+> "Processing of personal data made public by the data subject themself."
+
+Public disclosure must be by the data subject. Public disclosure by a third party is not sufficient.
+
+> **For our company:** A publicly available LinkedIn profile may be reviewed for recruitment purposes; even so, it is interpreted narrowly. Public disclosure alone requires the processing purpose to remain reasonable in scope. This exception applies to a **specific activity**, not the entire processing operation.
+
+### 2.3 Art. 15(c) — Public Authority Inspection
+
+> "Where the processing is carried out by public bodies and authorities or public-statute professional organisations duly empowered by law for inspection or regulation duties, or for disciplinary investigation or prosecution."
+
+> **For our company:** Generally not applicable (private sector). Inspection activities of public-statute professional bodies (e.g., chambers of accountants, lawyers, doctors) may fall within scope.
+
+### 2.4 Art. 15(ç) — Fiscal and Tax Matters
+
+> "Where the processing is necessary for the protection of the State's economic and financial interests in budgetary, taxation and fiscal matters."
+
+> **For our company:** This exception concerns the State's operations. The company's own tax obligations (e.g., e-invoicing) **do not** fall within this exception; they are processed under KVKK Art. 5(2)/ç.
+
+## 3. Reg. Art. 16 — Board Criteria
+
+Reg. Art. 16(1): The Board may grant exceptions to the registration obligation by reference to the following criteria:
+
+| Criterion | Description |
+|-----------|-------------|
+| a | Nature of the personal data |
+| b | Quantity of the personal data |
+| c | Purpose of the processing |
+| ç | Field of activity in which processing occurs |
+| d | Whether data is transferred to third parties |
+| e | Whether processing arises from law |
+| f | Retention period |
+| g | Data subject group or data category |
+
+Reg. Art. 16(2): The Board has authority to determine the scope and procedures of exceptions in this framework. Decisions are published through appropriate means.
+
+### 3.1 References to Published Board Decisions
+
+The Board has, through published decisions, exempted certain data controllers from the VERBİS obligation. **In broad terms** (refer to the Authority's current announcements for details):
+
+- For natural/legal-person data controllers with **fewer than 50 annual employees** and **annual financial balance sheet below the threshold**, where the **main activity is not the processing of special-category personal data**, certain exceptions are defined.
+- Activity-purpose-based exceptions for certain professions (e.g., lawyers, certified public accountants, notaries) have been considered.
+- For certain associations, foundations and unions — limited to processing solely within their own field of activity — exceptions have been considered.
+- Political-party data processing is assessed under its own legislation.
+
+> **Important:** Threshold values (number of employees, annual balance sheet total or net sales revenue) are updated by the Board from time to time. Because our company has **500+ employees**, it does **not** fall within an exception based on the employee-count threshold. Where group companies vary in size, however, each legal entity must be assessed **separately**.
+
+### 3.2 Tracking the Current Threshold Values
+
+Official sources for current threshold values and exception decisions:
+
+1. https://www.kvkk.gov.tr — Authority's official site, Board Decisions section
+2. Public announcements
+3. Official Gazette — published communiqué and decision texts
+4. KVKK guides (registry guide, guide for companies)
+
+Compliance strategy: **Review Board decisions annually**, perform a formal assessment if any applicable exception arises, and store the output under this document.
+
+## 4. Decision Tree — Are We Subject?
+
+```
+[1] Are you a data controller resident in Turkey?
+       │
+       ├── Yes → Go to [2]
+       │
+       └── No → You are subject through a data controller representative (Reg. Art. 5/b).
+                Appoint a Turkey-resident representative → VERBİS registration mandatory.
+
+[2] Do you process any personal data?
+       │
+       ├── No → You are not subject. (Practically impossible for a 500+ employee company.)
+       │
+       └── Yes → Go to [3]
+
+[3] Are ALL of your processing activities within Reg. Art. 15 exceptions?
+       │
+       ├── Yes → No registration obligation; other KVKK obligations CONTINUE (Reg. Art. 5/f).
+       │
+       └── No (at least one activity outside scope) → Go to [4]
+
+[4] Do you fall within an exception decision published by the Board?
+       Check criteria:
+         • Annual employee count threshold
+         • Annual financial balance sheet/turnover threshold
+         • Main activity does not involve special-category personal data
+         • Field-of-activity / professional group decisions
+       │
+       ├── Yes (you meet all criteria) → Exception applies; other obligations CONTINUE.
+       │     Decision documented with Legal + KVKK Committee approval; reviewed annually.
+       │
+       └── No → Go to [5]
+
+[5] YOU ARE SUBJECT TO VERBİS REGISTRATION.
+       • Registration required before processing begins (Reg. Art. 8/1)
+       • Within 30 days if you became subject afterwards (Reg. Art. 8/2)
+       • Notify changes within 7 days (Reg. Art. 13)
+```
+
+## 5. Assessment for Our Company — 500+ Employee Data Controller
+
+### 5.1 Decision Tree Result
+
+| Question | Answer |
+|----------|--------|
+| Resident in Turkey? | Yes |
+| Processing personal data? | Yes (broad scope) |
+| All activities within Art. 15? | No |
+| Meets Board exception thresholds? | No (employee count 500+) |
+
+**Result:** **Subject to VERBİS registration.** In addition:
+- A Retention and Destruction Policy must be prepared (Erasure-Destruction Reg. Art. 5).
+- The inventory is mandatory (Reg. Art. 5/ç, Art. 4/h).
+- Information notices are prepared on the basis of the inventory (Reg. Art. 5/d).
+
+### 5.2 Possible Partial-Exception Scenarios
+
+In the following cases Reg. Art. 15 exceptions may apply to **specific activities**; this does not remove the general VERBİS obligation but may affect whether that specific row is included:
+
+| Scenario | Possible application | Note |
+|----------|----------------------|------|
+| Publicly available company name/tax number from public registers | Art. 15(b) debatable | Public disclosure must be by the data subject themselves; third-party publication is insufficient. |
+| Data processed under tax legislation | Art. 15(ç) **does not apply** | This exception covers processing for the State's economic interests; private-sector tax obligations run under Art. 5(2)/ç. |
+| Whistleblowing-line data within an internal investigation | Art. 15(a) generally **does not apply** | Internal ethics investigation is not a "criminal investigation"; processed under Art. 5(2)/f (legitimate interest). |
+
+> Practical advice: Reg. Art. 15 exceptions apply to **specific processing activities**, not to the controller's entire activity. The general registration obligation therefore does not lapse for a 500+ employee organisation.
+
+## 6. Exception Assessment Form
+
+If an exception is being considered, the following formal assessment is performed.
+
+```
+EXCEPTION ASSESSMENT FORM
+========================================
+
+Date:                  YYYY-MM-DD
+Prepared by:           [Name-Surname / KVKK Officer]
+Approved by:           [Head of Legal] + [KVKK Committee]
+Document ID:           EXCEPTION-ASSESS-[YYYY]-[NO]
+
+1. COMPANY PROFILE
+   - Resident in Turkey?       : Yes/No
+   - Annual employee count     : [number]
+   - Annual net sales revenue  : [amount]
+   - Annual balance sheet      : [amount]
+   - Main activity             : [NACE code + description]
+
+2. PROCESSING ACTIVITY
+   - Process ID (from inventory): [...]
+   - Processing purpose         : [...]
+   - Data categories            : [...]
+   - Data subject group         : [...]
+   - Transfer involved?         : Yes/No
+   - Cross-border transfer?     : Yes/No
+   - Retention period           : [...]
+
+3. EXCEPTION TYPE
+   [ ] Reg. Art. 15(a) — Crime prevention/investigation
+   [ ] Reg. Art. 15(b) — Data made public
+   [ ] Reg. Art. 15(c) — Public authority inspection
+   [ ] Reg. Art. 15(ç) — Fiscal/tax (State interests)
+   [ ] Reg. Art. 16 + Board Decision [decision no, date]
+
+4. CRITERIA MATCHING (Reg. Art. 16)
+   a) Data nature              : [...]
+   b) Data quantity            : [...]
+   c) Processing purpose       : [...]
+   ç) Field of activity        : [...]
+   d) Transfer to third parties: [...]
+   e) Arising from law?        : Yes/No
+   f) Retention period         : [...]
+   g) Data subject / category  : [...]
+
+5. CONCLUSION
+   [ ] Exception APPLIES — rationale: [...]
+   [ ] Exception DOES NOT APPLY — rationale: [...]
+   Note on continuing obligations (Reg. Art. 5/f):
+   [...]
+
+6. REVIEW
+   Next review date: [YYYY-MM-DD]
+   Triggers: [Legislative change / Employee count threshold / New process, etc.]
+
+7. ANNEXES
+   - Copy of relevant Board decision
+   - NACE / business activity certificate
+   - Balance sheet summary
+
+Signatures:
+   KVKK Officer   :  ___________________
+   Head of Legal  :  ___________________
+   KVKK Committee :  ___________________ (meeting no, date)
+```
+
+## 7. Continuing Obligations After Exception (Important Reminder)
+
+Even if an exception applies, the following obligations continue:
+
+| Obligation | Legal basis |
+|------------|-------------|
+| Disclosure / information notice | KVKK Art. 10; Disclosure Communiqué |
+| Explicit consent (where required) | KVKK Art. 5(1), Art. 6(2) |
+| Data security — technical and administrative measures | KVKK Art. 12 |
+| Data breach notification | KVKK Art. 12(5); Board decisions (72 hours) |
+| Responding to data subject requests | KVKK Art. 13; Application Communiqué |
+| Retention and destruction | KVKK Art. 7; Erasure-Destruction Reg. |
+| Transfer regime | KVKK Art. 8, Art. 9 |
+| Personal Data Processing Inventory | Reg. Art. 4/h, Art. 5/ç (for those subject) |
+
+> Summary: An exception only removes the **VERBİS registration-notification** obligation. Everything else continues unchanged.
+
+## 8. Frequently Asked Questions
+
+**Q1. "We have a 5-person small branch — is VERBİS required for that branch?"**
+A branch is not separate from the legal entity. If the legal entity as a whole is subject, no separate registration is filed for the branch; all branches are reported under one legal entity.
+
+**Q2. "We have 5 different companies under a holding. Will each file VERBİS separately?"**
+Yes. Each legal person is a separate data controller and **its own** VERBİS registration is mandatory. A common KVKK Committee at group level is possible, but registrations are at legal-entity level.
+
+**Q3. "We are below the employee threshold but above the balance-sheet threshold. Are we subject?"**
+The Board's general approach treats thresholds as **multi-criteria**, so falling below a single criterion may not be enough. The current Board decision must be checked together with Legal Department and a formal assessment performed.
+
+**Q4. "What if we don't register with VERBİS?"**
+KVKK Art. 18(1)(ç) and Reg. Art. 17 impose administrative fines. Furthermore, processing without registration may be regarded as **unlawful processing**, exposing the controller to other clauses of Art. 18 and to data subject damage claims.
+
+**Q5. "We registered with VERBİS but our inventory is inadequate. What now?"**
+Reg. Art. 5/ç makes the inventory the **basis** of registry information. An inadequate inventory → risk of misleading registry notification → risk of administrative fines. Strengthen the inventory first, then update the registry within **7 days** under Reg. Art. 13.
+
+## 9. Annual Review Checklist for This Document
+
+- [ ] Updated company employee count, turnover, balance sheet checked
+- [ ] Newly published Board exception decisions screened
+- [ ] Legislative changes (Regulation, Law, Communiqué) reviewed
+- [ ] Structural changes (M&A, new entities, liquidation) considered
+- [ ] Existing exception assessment forms re-validated
+- [ ] Approval renewed by Legal Department and KVKK Committee
+
+## 10. Annexes
+
+- Inventory Guide: [kvki-envanteri-rehberi.md](./kvki-envanteri-rehberi.md)
+- VERBİS Registration: [verbis-kayit-rehberi.md](./verbis-kayit-rehberi.md)
+- Maintenance: [envanter-bakim.md](./envanter-bakim.md)
+
+---
+
+## Türkçe
 
 # VERBİS Kayıt Yükümlülüğü İstisna Değerlendirmesi
 

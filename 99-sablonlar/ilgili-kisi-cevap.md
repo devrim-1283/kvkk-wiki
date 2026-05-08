@@ -1,13 +1,403 @@
 ---
-Doküman: İlgili Kişi Başvurularına Cevap Mektubu Şablonları (KVKK m.11)
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.11, m.13; Başvuru Tebliği m.5, m.6
+Doküman / Document: İlgili Kişi Başvurularına Cevap Mektubu Şablonları (KVKK m.11) / Data Subject Request Response Letter Templates (KVKK Art. 11)
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.11, m.13; Başvuru Tebliği m.5, m.6 — KVKK Arts. 11 and 13; Application Communiqué Arts. 5 and 6
 ---
+
+## English
+
+# Data Subject Request Response Letter Templates
+
+## General Principles
+
+- **Time:** Response within **30 days at the latest** from the application date (Law Art. 13/2). Target: 15 days.
+- **Channel:** Response is given via the channel of application (writing, KEP, e-signature, mobile signature, registered email).
+- **Language:** Plain, accessible, legally precise but readable.
+- **Reasoning:** All refusals state reasons.
+- **Third Parties:** Third-party data are not disclosed in the response.
+- **Fee:** First 10 pages free; TRY 1/page above (Application Communiqué Art. 7).
+
+The Turkish text below is the binding form. The English equivalents are for parallel international deployment.
+
+---
+
+## TEMPLATE 1 — ACCEPTANCE: INFORMATION REQUEST (Art. 11/1-a, b, c) (English equivalent)
+
+```
+[COMPANY LETTERHEAD]
+
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+Re: [APPLICATION DATE AND METHOD]
+
+We have reviewed your application received by our Company on
+[APPLICATION DATE]. Your requests under Art. 11/1-(a), (b), (c)
+and (ç) of KVKK No. 6698 are answered below.
+
+1. WHETHER YOUR PERSONAL DATA ARE PROCESSED
+   According to our records, as of [DATE] your personal data
+   are / are not processed by our Company.
+
+2. CATEGORIES OF PERSONAL DATA PROCESSED
+   The categories processed by our Company in relation to you:
+   - Identity: [...]
+   - Contact: [...]
+   - [Relevant categories]
+
+3. PURPOSE OF PROCESSING
+   Your data are processed for the following purposes:
+   [PURPOSES — aligned with inventory]
+
+4. THIRD PARTIES TO WHOM DATA ARE TRANSFERRED
+   Domestic:
+   - [RECIPIENT 1] — purpose: [...]
+   - [RECIPIENT 2] — purpose: [...]
+   Cross-border:
+   - [IF ANY: RECIPIENT - COUNTRY - LEGAL BASIS]
+
+5. LEGAL BASIS
+   Your data are processed under KVKK Art. [5/2-c performance of
+   contract, 5/2-ç legal obligation, 5/1 explicit consent etc.].
+
+6. RETENTION PERIOD
+   Your data will be retained for [PERIOD] under our "Personal Data
+   Retention and Destruction Policy".
+
+7. OTHER ART. 11 RIGHTS
+   In addition to the information request, if you wish to exercise
+   your rights of correction, erasure, objection under Art. 11, you
+   can apply via the same channel.
+
+This response is delivered to you on day [DAYS] of your application
+under Art. 13/2 of KVKK.
+
+If you are dissatisfied with the response, under Art. 14 of KVKK
+you may lodge a complaint with the Personal Data Protection
+Authority within 30 days of learning, and in any case within 60
+days of application.
+
+Regards,
+
+[COMPANY]
+KVKK Officer
+[NAME]
+[SIGNATURE]
+```
+
+---
+
+## TEMPLATE 2 — ACCEPTANCE: CORRECTION REQUEST (Art. 11/1-d) (English equivalent)
+
+```
+[COMPANY LETTERHEAD]
+
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+Re: [APPLICATION DATE AND METHOD]
+
+We have reviewed your request received on [APPLICATION DATE]
+to correct the [DATA FIELD] category of your personal data.
+
+ACTION TAKEN
+- Previous record: [OLD VALUE]
+- Corrected record: [NEW VALUE]
+- Date of correction: [DATE]
+- Affected systems: [LIST]
+
+NOTIFICATION TO THIRD PARTIES (Art. 11/1-f)
+The corrected information has been communicated to the following
+third parties to whom data were previously transferred:
+- [LIST]
+- Notification date: [DATE]
+
+(If notification not yet complete: "Planned to be completed by
+[DATE]; you will be informed when complete.")
+
+RECORDING
+The correction is recorded in our system; request and correction
+records will be retained for the periods set under KVKK and the
+Erasure Regulation.
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 3 — ACCEPTANCE: ERASURE / DESTRUCTION REQUEST (Art. 11/1-e) (English equivalent)
+
+```
+[COMPANY LETTERHEAD]
+
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+We have reviewed your application of [APPLICATION DATE] for the
+erasure / destruction of your personal data.
+
+ASSESSMENT
+On assessment of the processing conditions in KVKK Arts. 5 and 6,
+we have determined that your request can be granted.
+
+ACTION TAKEN
+- Erased / destroyed data category:
+  [LIST]
+- Systems:
+  [LIST]
+- Method:
+  [Erasure / Destruction — technical method detail]
+- Date of destruction:
+  [DATE]
+- Destruction minutes no:
+  [NO]
+
+NOTIFICATION TO THIRD PARTIES (Art. 11/1-f)
+The erasure request has been communicated to the following third
+parties to whom data were previously transferred:
+- [LIST]
+
+DATA RETAINED ON LEGAL EXCEPTION
+The following data could not be erased as the processing conditions
+under the Law continue:
+- [DATA CATEGORY] — Legal basis: [E.g. invoice retention 10 years
+  under VUK Art. 253; CO general limitation; potential contract
+  dispute risk]
+- These data will be erased / destroyed after [PERIOD].
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 4 — REFUSAL: ERASURE — PROCESSING CONDITIONS PERSIST (English equivalent)
+
+```
+[COMPANY LETTERHEAD]
+
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+We have carefully reviewed your application of [APPLICATION DATE]
+for the erasure of your personal data.
+
+ASSESSMENT AND REASONED REFUSAL
+On assessment under KVKK Art. 13 and Erasure Regulation Art. 12,
+we are unable to grant your request at this stage for the
+following reasons:
+
+[REASON 1: Legal obligation]
+The [DATA CATEGORY] data must be retained under [APPLICABLE LAW —
+e.g. Tax Procedure Law Art. 253] for [PERIOD]. End of retention:
+[DATE].
+
+[REASON 2: Performance of contract]
+Processing of [DATA CATEGORY] is required under KVKK Art. 5/2-c
+for the performance of the [CONTRACT] in force between you and
+the Company.
+
+[REASON 3: Protection of rights]
+[Where there is an ongoing dispute / proceedings]
+
+ACTION TO BE TAKEN
+On expiry of the retention period, your data will be destroyed
+ex officio under our Retention and Destruction Policy.
+
+RIGHT OF COMPLAINT
+Under KVKK Art. 14 you may lodge a complaint with the Personal
+Data Protection Authority within 30 days of learning, and in any
+case within 60 days of application.
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 5 — ACCEPTANCE: NOTIFICATION TO THIRD PARTIES REQUEST (Art. 11/1-f) (English equivalent)
+
+```
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+In response to your request that the [correction/erasure]
+operation under Art. 11/1-(d) and (e) be communicated to the
+third parties to whom data were transferred:
+
+NOTIFICATION TO THIRD PARTIES
+Notification has been made to:
+- [PARTY 1] — Notification date: [DATE]
+- [PARTY 2] — Notification date: [DATE]
+
+The message asked the relevant parties to perform the necessary
+correction/erasure in their own systems.
+
+[If cross-border transfer occurred: "The erasure request was also
+communicated to [RECIPIENT - COUNTRY] outside Türkiye, and
+provider's confirmation was received on [DATE]."]
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 6 — AUTOMATED DECISION OBJECTION RESPONSE (Art. 11/1-g) (English equivalent)
+
+```
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+We have reviewed your objection of [APPLICATION DATE] to the
+[DECISION/RESULT] made against you solely by automated processing
+of your personal data.
+
+REVIEW
+Following your objection, the automated decision has been
+manually reviewed by an expert.
+
+The review considered:
+- Data used in the automated decision
+- Decision logic and threshold values
+- Additional information specific to your situation
+- Any further documents you submitted
+
+OUTCOME
+[Option A — DECISION CHANGED]
+On review, the automated decision has been changed to [NEW DECISION].
+
+[Option B — DECISION UNCHANGED]
+On review, the automated decision was found to be correct and
+remains in effect. Reasons:
+- [Reason 1]
+- [Reason 2]
+
+If you disagree, you may lodge a complaint with the Authority
+under KVKK Art. 14 or pursue judicial remedies under general
+provisions.
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 7 — DAMAGE COMPENSATION RESPONSE (Art. 11/1-ğ) (English equivalent)
+
+```
+Dear [NAME],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+We have reviewed your application of [APPLICATION DATE] for
+compensation of damage.
+
+ASSESSMENT
+On assessment of the alleged [TYPE OF DAMAGE]:
+
+[Option A — ACCEPTED]
+The alleged damage arose from unlawful processing of personal
+data by our Company. Under KVKK Art. 14/2 and general provisions,
+[AMOUNT/ACTION] payment/action is offered. On agreement, the
+operation will be completed via [BANK ACCOUNT / ACTION] on [DATE].
+
+[Option B — REFUSED]
+We have concluded that the alleged damage cannot be attributed to
+processing of personal data by our Company. Reasons:
+- [Reason]
+- [Reason]
+
+Under KVKK Art. 14/2 you can pursue compensation claims through
+proceedings before the general courts.
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## TEMPLATE 8 — INSUFFICIENT IDENTITY VERIFICATION (English equivalent)
+
+```
+Dear [APPLICANT],
+
+Date: [RESPONSE DATE]
+Application No: [APPLICATION NO]
+
+In relation to your application of [APPLICATION DATE], for us to
+verify that the data subject is the same person as you, the
+following additional information/document is required:
+
+REQUIRED INFORMATION/DOCUMENT
+- [E.g. ID number, verification via a phone number registered in
+  our system, KEP application with signature, application with
+  mobile/secure e-signature]
+
+REASON
+Identity verification is necessary to prevent unauthorised
+disclosure of your personal data and to protect them.
+
+PROCESS
+Once the additional information/document reaches us, your
+application will be concluded within 30 days under KVKK Art. 13/2.
+
+Regards,
+[COMPANY / KVKK Officer]
+```
+
+---
+
+## General Response Letter Checklist
+
+- [ ] Application date and method clearly stated
+- [ ] Response within 30 days of application
+- [ ] Clause referenced (Art. 11/1-a, b, c, ç, d, e, f, g, ğ)
+- [ ] Acceptance / refusal clear
+- [ ] If refused, reasons clear with legal basis
+- [ ] No disclosure of third-party data
+- [ ] Third-party notification step included where applicable
+- [ ] Reminder of right to complain (Art. 14)
+- [ ] KVKK Officer signature/approval
+- [ ] Response channel matches application channel
+- [ ] Fee calculated where applicable (above 10 pages)
+- [ ] Stored in evidence archive
+
+## SLA Tracking
+
+All applications in the ticket system:
+- T0: application date
+- T0+15 days: target response (green)
+- T0+25 days: warning (yellow)
+- T0+30 days: SLA upper limit (red)
+- T0+60 days: risk of complaint to the Authority under Art. 14
+
+## Related Documents
+
+- [../12-mevzuat-arsiv/basvuru-tebligi.md](../12-mevzuat-arsiv/basvuru-tebligi.md)
+- [../09-ilgili-kisi-basvurulari/](../09-ilgili-kisi-basvurulari/)
+- [../11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
+
+---
+
+## Türkçe
 
 # İlgili Kişi Başvurularına Cevap Mektubu Şablonları
 

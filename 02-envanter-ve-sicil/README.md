@@ -1,13 +1,98 @@
 ---
-Doküman: 02 - Envanter ve Sicil (Bölüm Girişi)
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.16; Veri Sorumluları Sicili Hakkında Yönetmelik (RG: 30.12.2017/30286), özellikle MADDE 4(h), 5(ç), 8-15; Aydınlatma Tebliği (RG: 10.03.2018/30356); Kurul'un VERBİS kayıt yükümlülüğü kapsam ve istisnalarına ilişkin kararları
+Doküman / Document: 02 - Envanter ve Sicil (Bölüm Girişi) / 02 - Inventory and Registry (Section Entry)
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.16 / Law No. 6698 on the Protection of Personal Data Art. 16; Veri Sorumluları Sicili Hakkında Yönetmelik (RG: 30.12.2017/30286) / Regulation on the Data Controllers' Registry (Official Gazette 30.12.2017/30286), MADDE 4(h), 5(ç), 8-15 / Art. 4(h), 5(ç), 8-15; Aydınlatma Tebliği (RG: 10.03.2018/30356) / Disclosure/Information Notice Communiqué (Official Gazette 10.03.2018/30356); Kurul'un VERBİS kayıt yükümlülüğü kapsam ve istisnalarına ilişkin kararları / Board decisions on the scope of and exceptions to the VERBİS (Data Controllers' Registry Information System) registration obligation
 ---
+
+## English
+
+# 02 - Inventory and Registry
+
+## 1. Purpose of This Section
+
+This section contains the document set required to operationally manage, in our capacity as data controller, the preparation of the **Personal Data Processing Inventory (KVKİ — Kişisel Veri İşleme Envanteri)** and registration with the **Data Controllers' Registry (VERBİS — Veri Sorumluları Sicili Bilgi Sistemi)**. The KVKİ inventory and VERBİS obligations follow directly from KVKK Art. 16 and from the Regulation on the Data Controllers' Registry (the "Regulation"), in particular Art. 4(h), 5(ç) and Art. 8-14.
+
+Article 5(ç) of the Regulation provides that "the information disclosed to the Registry in registry applications is prepared **on the basis of the Personal Data Processing Inventory**", which makes the **inventory a mandatory precondition of VERBİS registration**. Under Art. 5(d), the inventory is the **primary reference document** for satisfying the disclosure (information notice) obligation, responding to data subject requests, and determining the scope of explicit consent.
+
+For these reasons the inventory is not merely a compliance artifact — it is the operational core of the KVKK compliance architecture.
+
+## 2. Scope of This Section
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 1 | [README.md](./README.md) | Section entry (this document) |
+| 2 | [kvki-envanteri-rehberi.md](./kvki-envanteri-rehberi.md) | KVKİ preparation methodology, content, ownership |
+| 3 | [envanter-sablonu.md](./envanter-sablonu.md) | 27-column fillable inventory template, sample rows, CSV headers |
+| 4 | [verbis-kayit-rehberi.md](./verbis-kayit-rehberi.md) | VERBİS registration obligation, screen-by-screen steps, change notifications |
+| 5 | [verbis-istisna-degerlendirmesi.md](./verbis-istisna-degerlendirmesi.md) | Exceptions under Art. 15-16 of the Regulation, threshold decisions, decision tree |
+| 6 | [envanter-bakim.md](./envanter-bakim.md) | Periodic review, change triggers, compliance checklist |
+
+## 3. Roles and Responsibilities
+
+| Role | Responsibility |
+|------|----------------|
+| KVKK Officer | Keeps the inventory continuously up to date; single point of contact for VERBİS notifications; prepares exception assessments |
+| Contact Person (Reg. Art. 4/ç, Art. 11/4) | Maintains communication with the Authority; communication-facilitator role for data subject requests; **is not a representative** |
+| Process Owner (each business unit) | Prepares and validates inventory rows for its own processes; reports changes to the KVKK Officer within 5 business days |
+| Legal Department | Approves the determination of legal grounds; aligns retention periods with legislation; legally reviews exception assessments |
+| Information Security | Completes the technical measures section; verifies data storage media and transfer channels |
+| KVKK Committee | Reviews the inventory and VERBİS records on a quarterly basis; approves exception and risk-level decisions |
+
+## 4. Key Obligations (Quick Reference)
+
+- **Inventory obligation:** Reg. Art. 5(ç), Art. 4(h) — every data controller subject to VERBİS must maintain an inventory.
+- **Start of registration:** Reg. Art. 8(1) — registration with the Registry **before** processing begins.
+- **Becoming subject afterwards:** Reg. Art. 8(2) — registration within **30 days** of becoming subject to the obligation.
+- **Request for additional time:** Reg. Art. 8(3) — in cases of factual, technical or legal impossibility, written application to the Authority within **7 business days** from the date the impossibility arose; up to **30 additional days** may be granted on a one-off basis.
+- **Change notification:** Reg. Art. 13 — any change in the information registered in the Registry must be notified via VERBİS within **7 days**.
+- **Removal from the Registry:** Reg. Art. 14 — application for removal when the activity ceases; obligations relating to the registered period continue.
+- **Administrative sanction:** Reg. Art. 17, KVKK Art. 18(1)(ç) — administrative fines apply in case of breach of registration and notification obligations.
+
+## 5. Links to Other Sections
+
+| Linked Section | Relationship |
+|----------------|--------------|
+| 03 - Disclosure and Explicit Consent | Information notices are produced from inventory rows (Reg. Art. 5/d) |
+| 04 - Data Retention and Destruction | Retention periods are defined in the inventory; the destruction policy is built upon the inventory (Reg. Art. 9/5) |
+| 05 - Technical Measures | Reflected in the "measures taken" column of the inventory |
+| 06 - Administrative Measures | The inventory itself is an administrative measure |
+| 07 - Transfer | The "recipient/recipient group" and "cross-border transfer" columns of the inventory form the basis of the transfer regime |
+| 09 - Data Subject Requests | Responses to KVKK Art. 11 rights are prepared from the inventory |
+
+## 6. Document Hierarchy
+
+```
+KVKK Policy (top-level document)
+   └── KVKİ Inventory (operational core)
+         ├── VERBİS Notification (publicly disclosed summary)
+         ├── Information Notices (per process)
+         ├── Explicit Consent Texts (where required)
+         ├── Retention and Destruction Policy
+         └── Transfer Agreements / Undertakings
+```
+
+## 7. Recommended Use
+
+1. Before designing a new process, read **kvki-envanteri-rehberi.md**.
+2. Copy **envanter-sablonu.md** and fill it in for the relevant process.
+3. The KVKK Officer validates the row; obtain Legal Department opinion where required.
+4. Register / update via VERBİS using **verbis-kayit-rehberi.md**.
+5. Run quarterly review against the **envanter-bakim.md** checklist.
+
+## 8. Change History
+
+| Version | Date | Change | Prepared by |
+|---------|------|--------|-------------|
+| 1.0 | 2026-05-08 | Initial publication | KVKK Officer |
+
+---
+
+## Türkçe
 
 # 02 - Envanter ve Sicil
 

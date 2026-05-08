@@ -1,14 +1,334 @@
 ---
-Doküman: Log Yönetimi, SIEM ve Olay İzleme Politikası
-Bölüm: 05-teknik-tedbirler
-Sahip: SOC Lideri / CISO
-Onaylayan: BT Direktörü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni log kaynağı, mevzuat, tespit gap)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Kişisel Veri Güvenliği Rehberi — "Kişisel Veri Güvenliği Takibi", "Bilgi Güvenliği Olay Yönetimi"; 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun ve ilgili Yönetmelik (yer/iç sağlayıcı log saklama yükümlülüğü)
-İlgili Standart: ISO/IEC 27001:2022 A.8.15 (Logging), A.8.16 (Monitoring Activities), A.5.7 (Threat Intelligence); NIST CSF 2.0 DETECT (DE.AE, DE.CM, DE.DP); NIST SP 800-92 (Guide to Computer Security Log Management); MITRE ATT&CK; SANS SOC playbook framework; ENISA SIEM guidelines
+Doküman / Document: Log Yönetimi, SIEM ve Olay İzleme Politikası / Log Management, SIEM and Event Monitoring Policy
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: SOC Lideri / CISO / SOC Lead / CISO
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi / IT Director + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni log kaynağı, mevzuat, tespit gap) / Annual + triggered (new log source, regulation, detection gap)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Personal Data Security Guide — "Personal Data Security Monitoring", "Information Security Incident Management"; Law No. 5651 (Internet legislation) on the Regulation of Publications on the Internet and Combating Crimes Committed Through These Publications and the related Regulation (hosting/internal content provider log retention obligation)
+İlgili Standart / Standard: ISO/IEC 27001:2022 A.8.15 (Logging), A.8.16 (Monitoring Activities), A.5.7 (Threat Intelligence); NIST CSF 2.0 DETECT (DE.AE, DE.CM, DE.DP); NIST SP 800-92 (Guide to Computer Security Log Management); MITRE ATT&CK; SANS SOC playbook framework; ENISA SIEM guidelines
 ---
+
+## English
+
+# Log Management, SIEM and Monitoring
+
+## 1. Purpose
+
+Defines an integrated framework of log + SIEM + detection + response for the collection, protection, analysis, detection of, and response to **every security-relevant event that has occurred, attempted to occur, or is suspicious** in personal data processing environments. The technical foundation of KVKK Art. 12's "preservation" and "detection in case of breach" obligations.
+
+## 2. Definitions
+
+| Term | Definition |
+|-------|-------|
+| Log | Event record of a system or application. |
+| Telemetry | Broadly, event + metric + trace data. |
+| SIEM | Security Information and Event Management — collection, normalization, correlation, alarm. |
+| SOAR | Security Orchestration, Automation, Response — playbook automation. |
+| UEBA | User and Entity Behavior Analytics — behavioral anomaly detection. |
+| WORM | Write Once Read Many — immutable storage. |
+| Threat Intel | Threat intelligence, IOC, TTP. |
+
+## 3. Events to Log
+
+### 3.1. Identity / Authentication
+
+- Successful/failed login (user, IP, user agent, location, MFA status).
+- Password change, reset, recovery flow.
+- MFA challenge, failed MFA, push fatigue.
+- Federation assertion (SAML/OIDC).
+- Token generation, refresh, revocation.
+
+### 3.2. Authorization
+
+- Privilege elevation (sudo, runas, AssumeRole, PIM eligible → active).
+- Changes in role/group membership.
+- IAM policy add/remove.
+- Access denial (DENY).
+- Out-of-policy access attempt.
+
+### 3.3. Personal Data Access Events
+
+- SELECT from tables containing personal data (user, query summary, row count; query text — values masked).
+- Personal data export / download (user, target, file, row count).
+- Personal data printing.
+- Sending email containing personal data (large attachment, bulk send).
+- DDL on personal data table (CREATE/ALTER/DROP/TRUNCATE).
+- Bulk delete/update.
+- Bulk read via API.
+
+### 3.4. System Administrator Activities
+
+- Service start/stop.
+- Configuration change.
+- New account creation.
+- Log clearing/stopping — **critical alarm**.
+- Time change — **critical alarm**.
+- Backup/restore operation.
+- Key use (KMS/HSM).
+
+### 3.5. Network and Perimeter
+
+- Firewall: permitted/denied traffic.
+- WAF: rule trigger.
+- IDS/IPS: all alerts.
+- VPN/ZTNA: connection.
+- DNS query response.
+- Proxy URL access.
+
+### 3.6. Application Events
+
+- Error messages (sanitized so as not to contain personal data).
+- Payment, registration, account creation, account deletion, data subject request.
+- Explicit consent record changes.
+- Configuration changes.
+
+### 3.7. Other
+
+- Antivirus / EDR event.
+- Backup success/failure.
+- Approaching certificate expiry.
+- DLP event.
+
+## 4. Log Content — Personal Data Minimization
+
+Logging is not "take everything". Logs themselves are an **environment of personal data**.
+
+### 4.1. Forbidden / Restricted Content
+
+- Password, OTP, secret, API key, certificate private key — **never**.
+- Full card number (PAN) — **never**; at most BIN + last 4.
+- CVV/CVC — **never**.
+- Turkish ID number, health data plaintext — **masked** or hashed.
+- Email body, message content — **none unless required**.
+- Call recordings — only purpose-fit + KVKK notice + retention period.
+
+### 4.2. Recommended Content
+
+- Event time (UTC + timezone).
+- Event type (taxonomy).
+- Actor (user/service/system) — username + user ID.
+- Target (resource/system/record reference).
+- Result (success/failure + reason code).
+- Context (IP, user agent, session ID, correlation ID).
+- For sensitive data, **reference** (record ID), not value.
+
+### 4.3. Sanitization
+
+- Application logs, automatic PII redaction at SDK level.
+- Regex-based scanner sanitizes during ingestion (Turkish ID, IBAN, card).
+- Log alarm + remediation in "couldn't catch it" cases.
+
+## 5. Log Integrity
+
+Logs are an asset where an attacker may modify them and cover their tracks. Integrity is mandatory.
+
+### 5.1. Controls
+
+- **Centralized collection** — the host generating the log differs from where it is stored.
+- **WORM storage** — written log cannot be modified/deleted during retention period (S3 Object Lock — Compliance Mode, Azure Immutable Blob, Glacier Vault Lock).
+- **Hashing & Signing** — each particle hashed during ingest, periodically signed (Merkle tree recommended).
+- **Separate authority** — log administrator and system administrator are different persons (segregation of duties).
+- **Time synchronization** — all systems NTP synced, at least 100ms tolerance.
+- **Full transmission** — only transit buffer on the host; alarm when send fails.
+
+### 5.2. Breach Detection
+
+- Log flow interruption → alarm within 5 minutes.
+- Break in hash chain → critical alarm + IR.
+- Attempt to delete logs by unauthorized person → critical alarm + IR.
+
+## 6. SIEM Architecture
+
+### 6.1. Components
+
+```
+Sources → Collector (Beats/Fluentd/Vector/syslog) → Pipeline (parse/enrich/sanitize) →
+   → Hot tier (search, dashboard, alarm — 90 days) →
+   → Warm tier (long search, cheaper — 1 year) →
+   → Cold/Archive (WORM, end of retention — 2-7 years)
+```
+
+### 6.2. Normalization
+
+- Use ECS (Elastic Common Schema) or OCSF (Open Cybersecurity Schema Framework).
+- All sources translated to the same fields.
+
+### 6.3. Enrichment
+
+- User context (department, location, sensitivity level).
+- IP → geolocation, ASN, threat intel.
+- Device → compliance status.
+- Asset → CMDB (does it contain personal data, which system).
+
+### 6.4. Correlation
+
+- Rule-based (Sigma, vendor format).
+- Behavioral (UEBA — user/entity baseline).
+- Threat-intel matching.
+- Multi-stage attack detection (e.g., failed brute force → successful login → privilege elevation → data read).
+
+### 6.5. Detection Content — Canonical Use Cases (KVKK-focused)
+
+| Use Case | Trigger | Severity |
+|----------|-------|----------|
+| Unauthorized personal data access | User SELECT on out-of-RBAC table | Critical |
+| Bulk personal data exfiltration | Outbound > 100 MB / short time / less-known domain | Critical |
+| Log deletion/stop | Audit service stopped, log file rm | Critical |
+| Privileged session out-of-hours | Admin → personal data DB outside business hours | High |
+| Push fatigue | 10+ MFA push within 5 min | High |
+| Atypical travel | Same user in two countries within 1 hour | High |
+| Card data in log | Regex trigger PAN plaintext log | Critical |
+| Backup failure | Backup job fail + 24 hours no retry | High |
+| Certificate expiry | < 7 days | High |
+| New IAM role with personal data privilege | Provisioning event | Medium |
+| Anomalous API call volume | Endpoint baseline +5σ | Medium |
+| Successful login from malicious IP | Threat intel hit | Critical |
+| Cleartext HTTP → personal data application | Prod TLS bypass | High |
+| New service account + critical privilege | Provisioning + privilege | High |
+| Bulk DELETE/UPDATE on dataset | DML threshold | High |
+
+### 6.6. UEBA
+
+- User baseline: typical login time, location, device, accessed datasets.
+- Deviation → "anomalous score" → SOC trigger.
+- Foundational building block for insider threat detection.
+
+## 7. Retention Period
+
+| Log Type | Hot | Warm | Cold/Archive | Total |
+|----------|-----|------|--------------|--------|
+| Identity / authorization | 90 days | 1 year | 4 years | **5 years** |
+| Personal data access | 90 days | 1 year | 4 years | **5 years** |
+| System administrator | 90 days | 1 year | 1 year | **2 years** (5 years for critical) |
+| Network / firewall | 90 days | 9 months | – | **1 year** |
+| WAF | 90 days | 9 months | – | **1 year** |
+| Application | 90 days | 9 months | – | **1 year** |
+| Backup | 90 days | 1 year | 4 years | **5 years** |
+| Law No. 5651 (if hosting provider) | – | – | – | Per law **2 years** to 10 years per relevant regulation |
+| PCI scope (if applicable) | 90 days online | – | 1 year archive | 1 year (PCI minimum) |
+
+> End of retention period **automatic destruction** — manual extension only for active investigation / legal hold and with justification.
+
+## 8. Law No. 5651 Framework
+
+If our activity is "hosting provider" or "internal content provider":
+
+- Access and traffic information are kept for the period defined by law.
+- Integrity is preserved within retention period, can be transmitted electronically upon authority request.
+- Ensuring the **accuracy, integrity, and confidentiality** of stored information is the obligation of the hosting provider.
+- Logs in this scope are managed with **separate access** from KVKK personal data logs; owner is Legal + CISO.
+
+## 9. SOC Operations
+
+### 9.1. Shift Structure
+
+- 7/24 monitoring (depending on organization size).
+- 3 shifts (08-16, 16-00, 00-08), Tier-1 / Tier-2 / Tier-3 + Threat Hunting.
+- Shift handover form, open tickets, ongoing incidents, escalation chain.
+
+### 9.2. Escalation Chain
+
+```
+Tier-1 (triage, false positive elimination) → Tier-2 (analysis, IOC, containment) →
+   → Tier-3 (deep forensic, lateral movement, comprehensive IR)
+   → CISO + KVKK Officer (possibility of personal data breach) → KVKK Committee → Management
+```
+
+### 9.3. Ticket Lifecycle
+
+- New → Triage → Confirmed True / False → Containment → Eradication → Recovery → Closed → Lessons Learned.
+- MTTD, MTTR measured for each ticket.
+
+## 10. Runbooks (Example Titles)
+
+Standard format for each runbook: trigger, fast diagnosis, contain, eradicate, recover, evidence collection, KVKK Committee notification threshold.
+
+- **RB-01 Suspected Unauthorized Personal Data Access**
+- **RB-02 Data Exfiltration**
+- **RB-03 Ransomware**
+- **RB-04 Phishing — User Provided Credentials**
+- **RB-05 Web Defacement**
+- **RB-06 Privilege Escalation + Lateral Movement**
+- **RB-07 Backup Failure + Failed Restore Test**
+- **RB-08 PAM Break-Glass Use**
+- **RB-09 SaaS Account Takeover (BEC)**
+- **RB-10 DDoS**
+- **RB-11 Suspicious SaaS DLP Event**
+- **RB-12 Lost/Stolen Device**
+
+## 11. Evidence and Forensics
+
+- When an incident is detected, "evidence preservation" kicks in:
+  - RAM dump of the affected system (if possible).
+  - Disk image (dd, F-Response, EnCase).
+  - Log snapshot — immutable copy.
+  - Network capture (PCAP) — relevant window.
+- Chain of custody document signed, evidence storage locked/encrypted.
+- Reference to NIST IR 8444 / ISO 27037 for usability in legal process.
+
+## 12. KVKK Committee Notification Threshold
+
+Coordinated with breach management (08):
+
+- **Within 24 hours from detection of suspected personal data breach**, the KVKK Committee is informed.
+- Following confirmed breach, preparation for notification to the Authority within **72 hours** (KVKK Art. 12(5)).
+- KVKK Officer, Legal, CISO are permanent members of the response team.
+
+## 13. Threat Intelligence
+
+- IOC feed (commercial + open — AlienVault OTX, MISP, abuse.ch, vendor).
+- Sectoral sharing — CERT, sector ISAC.
+- In-house IOC generation — extract IOCs from closed incidents, inject into searches.
+- TIP (Threat Intelligence Platform) integration with SIEM/EDR/FW.
+
+## 14. SOAR Automation
+
+- Playbook automation in common scenarios:
+  - Phishing URL report → sandbox → extract IOC → block FW/Proxy/Email.
+  - Suspicious login → log out user session + force password change + MFA reset request.
+  - EDR detection → isolate host + ticket + assign analyst.
+- Automatic actions with approval chain (auto isolate yes, auto data deletion no).
+
+## 15. Test and Validation
+
+- **Atomic Red Team / Caldera** measures detectability of MITRE ATT&CK techniques annually (purple team).
+- **Tabletop** exercises quarterly (CISO + HR + Legal + KVKK + Communications attend).
+- **Trigger test** — positive test scenario for every new alarm rule.
+
+## 16. KPIs
+
+- MTTD (Mean Time To Detect) — target ≤ 1 hour (critical).
+- MTTR (Mean Time To Respond) — target ≤ 4 hours (critical).
+- False positive rate — ≤ 20%.
+- Coverage: percentage of critical assets logged — 100%.
+- Log latency — average ≤ 5 min.
+- Resolved high incident count / total — monthly trend.
+- Drill detection rate — 85%+.
+
+## 17. Checklist
+
+- [ ] Are all critical sources sending logs to SIEM? (Coverage ≥ 95%)
+- [ ] Does log content apply personal data minimization (PII redaction)?
+- [ ] Is log integrity protected with WORM + hash chain?
+- [ ] Is time synchronization (NTP) on all systems?
+- [ ] Is the log flow interruption alarm triggered within 5 min?
+- [ ] Is the retention policy compliant with KVKK + Law No. 5651 + sectoral legislation?
+- [ ] Is end-of-retention automatic destruction working?
+- [ ] Is SOC 7/24 + escalation chain defined, KVKK Officer in IR team?
+- [ ] Are runbooks updated annually + validated by drill?
+- [ ] Is the KVKK Officer in the IR team, is the 24-hour threshold documented?
+- [ ] Is UEBA + threat intel integrated with SIEM?
+- [ ] Was Atomic Red Team / purple team performed annually?
+- [ ] Is the forensic chain of custody procedure ready?
+- [ ] If PCI/health/finance, are sectoral retention rules additionally applied?
+- [ ] Are privileged log administrator + system administrator different persons?
+- [ ] Is there no forbidden data such as card numbers, OTPs in logs (regex scan validation)?
+
+---
+
+## Türkçe
 
 # Log Yönetimi, SIEM ve İzleme
 

@@ -1,13 +1,516 @@
 ---
-Doküman: İmha Kayıt Tutanağı Şablonları
-Bölüm: 04-veri-saklama-ve-imha
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: Yön. m.7(3), m.7(4); KVKK m.12
+Doküman / Document: İmha Kayıt Tutanağı Şablonları / Destruction Record Templates
+Bölüm / Section: 04-veri-saklama-ve-imha
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: Reg. Art. 7(3), 7(4); KVKK Art. 12
 ---
+
+## English
+
+# Destruction Record Templates
+
+## 1. Record Obligation
+
+Reg. Art. 7(3): "All operations relating to the erasure, destruction or anonymization of personal data shall be recorded, and these records, excluding other legal obligations, shall be retained for **at least three years**."
+
+The record is the formal document showing the destruction method, scope, responsible parties and evidence. Destruction performed without a record **is deemed not performed** for the purposes of the burden of proof.
+
+Reg. Art. 7(4): "The data controller is obliged to explain the methods applied for erasure, destruction and anonymization in the relevant policy and procedures."
+
+## 2. Minimum Content
+
+The following fields must be present in every record:
+
+| Field | Description |
+|-------|-------------|
+| Record No | Internal unique identifier (year/sequence e.g. 2026/IMHA-0142) |
+| Record Type | Periodic / Data Subject Request / Triggered / Vendor |
+| Date of Operation | Date and time of destruction |
+| Place of Operation | Physical location or system name |
+| Data Category | Which personal data category (inventory reference) |
+| Legal Reason | Under which KVKK Art. 5/6 condition was data processed; which condition's cessation triggered destruction |
+| Scope (Count/Medium) | Records affected, medium (DB/file/server/medium) |
+| Method | Erasure / Destruction / Anonymization — sub-method (DELETE, physical shredding, k-anonymity, etc.) |
+| Standard Reference | Applied technical standard (NIST 800-88, DIN 66399, etc.) if any |
+| Evidence Type | Hash, log, photo, certificate |
+| Third-Party Transfer | Was data transferred? Was notification made? |
+| Vendor | Vendor name + certificate no if external destruction service |
+| Preparer (Executor) | Person executing destruction (name, title, signature) |
+| Verifier | Information Security independent verification (name, title, signature) |
+| Approver | KVKK Officer (name, title, signature) |
+| Legal Approval | Legal Director (name, title, signature) |
+| Retention Period | Minimum retention of the record (at least 3 years) |
+| Annexes | System log, photo, certificate, hash list |
+
+## 3. Record Numbering Scheme
+
+```
+[YEAR]/[METHOD]/[SEQUENCE]
+example: 2026/IMHA-0142
+         2026/PER-0007 (Periodic Destruction)
+         2026/TLP-0023 (Data Subject Request)
+```
+
+## 4. Record Retention
+
+- Retention: Reg. Art. 7(3) — at least 3 years. Internal standard: 5 years.
+- Format: Electronically signed PDF + system audit log.
+- Location: Secure archive under KVKK Officer control (limited access, logged).
+- Metadata: Record no, date, category, owner — searchable index.
+
+---
+
+## 5. General Record Template
+
+```
+══════════════════════════════════════════════════════
+PERSONAL DATA DESTRUCTION RECORD
+══════════════════════════════════════════════════════
+
+Record No          : ____________________________
+Record Type        : [ ] Periodic     [ ] Data Subject Request
+                     [ ] Triggered    [ ] Vendor Destruction
+                     [ ] Other: __________________________
+
+Date/Time          : ____/____/______ — ___:___
+Place              : ______________________________
+                     (Physical address or system name)
+
+──────────────────────────────────────────────────────
+1. SCOPE INFORMATION
+──────────────────────────────────────────────────────
+Data Category      : __________________________________
+                     (Inventory Item No: __________)
+Data Subject Group : __________________________________
+                     (Employee / Customer / Candidate /
+                      Supplier / Visitor / Other)
+Legal Reason —
+Processing Cond.   : KVKK Art. ____ / ____
+                     Reason for cessation of condition:
+                     _________________________________
+Record Count       : _________ records
+Date Range         : ____/____/____ — ____/____/____
+Medium             : [ ] Active database
+                     [ ] Backup (rotation / cold)
+                     [ ] Paper document
+                     [ ] Magnetic medium (HDD/Tape)
+                     [ ] SSD/Flash medium
+                     [ ] Optical medium
+                     [ ] Cloud object storage
+                     [ ] Log/SIEM
+                     [ ] Other: __________________
+
+──────────────────────────────────────────────────────
+2. APPLIED DESTRUCTION METHOD
+──────────────────────────────────────────────────────
+Main Method        : [ ] Erasure (Reg. Art. 8)
+                     [ ] Destruction (Reg. Art. 9)
+                     [ ] Anonymization (Reg. Art. 10)
+
+Sub-Method         : ____________________________________
+                     (DELETE/UPDATE, degauss, shredding,
+                      incineration, sanitize, crypto-shred,
+                      k-anonymity, generalization, etc.)
+
+Applied Standard   : ____________________________________
+                     (NIST 800-88 Purge/Destroy,
+                      DIN 66399 P-4/P-5/P-7,
+                      DoD 5220.22-M, ISO 27040, etc.)
+
+Method Selection
+Rationale          : ____________________________________
+
+──────────────────────────────────────────────────────
+3. EVIDENCE AND VERIFICATION
+──────────────────────────────────────────────────────
+Hash Evidence      : Annex-1 (separate file)
+                     SHA-256 hash count: __________
+System Log         : Annex-2 (separate file)
+                     Log System: ____________________
+                     Job ID: _________________________
+                     Start: __:__:__  End: __:__:__
+Visual Evidence    : [ ] Yes (Annex-3) — photo/video
+                     [ ] No
+Vendor Certif.     : [ ] None
+                     [ ] Yes: ____________________ no
+                     Vendor: ____________________
+
+──────────────────────────────────────────────────────
+4. THIRD-PARTY TRANSFER
+──────────────────────────────────────────────────────
+Transferred Third
+Parties            : [ ] None
+                     [ ] Yes: __________________________
+
+Notification to
+Third Party        : [ ] Done (Date: __/__/____)
+                     [ ] Pending
+                     [ ] Not applicable
+Third-Party
+Confirmation       : [ ] Received (Date: __/__/____)
+                     [ ] Pending
+
+──────────────────────────────────────────────────────
+5. RESPONSIBLE PARTIES AND SIGNATURES
+──────────────────────────────────────────────────────
+Preparer (Executor)
+  Name             : ____________________________
+  Title / Unit     : ____________________________
+  Date             : ____/____/______
+  Signature        : ____________________________
+
+Verifier (Information Security — independent)
+  Name             : ____________________________
+  Title / Unit     : ____________________________
+  Date             : ____/____/______
+  Signature        : ____________________________
+
+KVKK Officer Approval
+  Name             : ____________________________
+  Title            : KVKK Officer
+  Date             : ____/____/______
+  Signature        : ____________________________
+
+Legal Approval (Legal Director)
+  Name             : ____________________________
+  Title            : Legal Director
+  Date             : ____/____/______
+  Signature        : ____________________________
+
+──────────────────────────────────────────────────────
+6. RETENTION AND ARCHIVING
+──────────────────────────────────────────────────────
+Record Retention
+Period             : At least 3 years (Reg. Art. 7(3))
+                     Internal standard: 5 years
+Archive Location   : __________________________________
+Archive Number     : __________________________________
+
+══════════════════════════════════════════════════════
+ANNEXES
+══════════════════════════════════════════════════════
+[ ] Annex-1: Hash list (SHA-256)
+[ ] Annex-2: System log output
+[ ] Annex-3: Photo/video evidence
+[ ] Annex-4: Vendor destruction certificate
+[ ] Annex-5: Third-party notification/confirmation letter
+[ ] Annex-6: Data subject application and response (if any)
+[ ] Annex-7: Method technical instruction/runbook output
+══════════════════════════════════════════════════════
+```
+
+---
+
+## 6. Sample Record 1 — Paper Document Destruction by Shredder
+
+```
+══════════════════════════════════════════════════════
+PERSONAL DATA DESTRUCTION RECORD
+══════════════════════════════════════════════════════
+
+Record No          : 2026/PER-0007
+Record Type        : [X] Periodic
+Date/Time          : 12/05/2026 — 10:30
+Place              : Headquarters — HR Archive (B-Block B1)
+
+──────────────────────────────────────────────────────
+1. SCOPE INFORMATION
+──────────────────────────────────────────────────────
+Data Category      : CVs of candidates rejected during hiring
+                     (Inventory Item No: HR-04)
+Data Subject Group : Job candidate
+Legal Reason —
+Processing Cond.   : KVKK Art. 5/2-(f) Legitimate interest
+                     Cessation reason:
+                     2-year maximum retention period expired
+Record Count       : 1,142 files
+Date Range         : 01/01/2024 — 30/04/2024
+Medium             : [X] Paper document
+
+──────────────────────────────────────────────────────
+2. APPLIED DESTRUCTION METHOD
+──────────────────────────────────────────────────────
+Main Method        : [X] Destruction (Reg. Art. 9)
+Sub-Method         : Cross-cut shredder (micro-cut)
+Applied Standard   : DIN 66399 P-5
+Method Selection
+Rationale          : Application files containing personal
+                     data on paper; destruction without
+                     recovery risk required.
+
+──────────────────────────────────────────────────────
+3. EVIDENCE AND VERIFICATION
+──────────────────────────────────────────────────────
+Hash Evidence      : N/A (paper medium)
+System Log         : N/A
+Visual Evidence    : [X] Yes — Annex-3 (3 photos:
+                     before-during-after)
+Vendor Certif.     : [X] None (in-house shredder)
+
+──────────────────────────────────────────────────────
+4. THIRD-PARTY TRANSFER
+──────────────────────────────────────────────────────
+Transferred Third
+Parties            : [X] None
+
+──────────────────────────────────────────────────────
+5. RESPONSIBLE PARTIES AND SIGNATURES
+──────────────────────────────────────────────────────
+Preparer           : Ayşe DEMİR — HR Specialist
+Verifier           : Mehmet KAYA — Information Security Specialist
+KVKK Officer       : Selin YILDIZ — KVKK Officer
+Legal Approval     : Att. Ahmet ÖZ — Legal Director
+
+──────────────────────────────────────────────────────
+6. RETENTION AND ARCHIVING
+──────────────────────────────────────────────────────
+Retention Period   : 5 years
+Archive Location   : KVKK Archive — Cabinet 03 / Folder 14
+Archive Number     : KVKK-ARS-2026-0007
+
+══════════════════════════════════════════════════════
+ANNEXES
+══════════════════════════════════════════════════════
+[X] Annex-3: 3 photos (before/during/after)
+[X] Annex-7: HR-PROC-005 Candidate File Destruction Instruction v2.1
+══════════════════════════════════════════════════════
+```
+
+---
+
+## 7. Sample Record 2 — HDD Degausser + Physical Shredding
+
+```
+══════════════════════════════════════════════════════
+PERSONAL DATA DESTRUCTION RECORD
+══════════════════════════════════════════════════════
+
+Record No          : 2026/IMHA-0142
+Record Type        : [X] Triggered (Hardware decommissioning)
+Date/Time          : 18/05/2026 — 14:00
+Place              : Data Center — Disk Destruction Room
+
+──────────────────────────────────────────────────────
+1. SCOPE INFORMATION
+──────────────────────────────────────────────────────
+Data Category      : HDDs removed from old ERP server disk
+                     array (mixed: employee, customer,
+                     financial)
+                     (Inventory Item No: IT-12, IT-13)
+Data Subject Group : Employee + Customer + Supplier
+Legal Reason —
+Processing Cond.   : Multiple — KVKK Art. 5/2-(c) contract
+                     performance + (e) right establishment
+                     + (f) legitimate interest
+                     Cessation reason: Decommissioning of
+                     legacy hardware after migration
+Record Count       : ~TB per disk; total approx. 2.3 TB
+Medium             : [X] Magnetic medium (HDD)
+
+  Disk List:
+  Serial No              Vendor    Capacity
+  WD-WMC4M0H17832        WD        2 TB
+  WD-WMC4M0H17855        WD        2 TB
+  ST3000DM001-Z3T2HK1    Seagate   3 TB
+  ST3000DM001-Z3T2HM2    Seagate   3 TB
+  ... (8 disks total)
+
+──────────────────────────────────────────────────────
+2. APPLIED DESTRUCTION METHOD
+──────────────────────────────────────────────────────
+Main Method        : [X] Destruction (Reg. Art. 9)
+Sub-Method         : 1) Magnetic erasure with degausser
+                     2) Mechanical shredding (drive shredder)
+Applied Standard   : NIST 800-88 Rev.1 Purge → Destroy
+Method Selection
+Rationale          : Hardware will not be reused; contains
+                     sensitive data; multi-method ensures
+                     irreversible destruction.
+
+──────────────────────────────────────────────────────
+3. EVIDENCE AND VERIFICATION
+──────────────────────────────────────────────────────
+Hash Evidence      : Hashes from pre-destruction disk
+                     image — Annex-1 (control)
+System Log         : Degausser device log — Annex-2
+                     Device: Garner HD-3WXL
+                     Calibration: 2026-04-01 (valid)
+Visual Evidence    : [X] Yes — Annex-3:
+                     - Before (serial visible)
+                     - Degausser process
+                     - After shredding (fragments)
+Vendor Certif.     : [X] None (in-house device)
+
+──────────────────────────────────────────────────────
+4. THIRD-PARTY TRANSFER
+──────────────────────────────────────────────────────
+Transferred Third
+Parties            : [X] Yes: ABC Logistics A.Ş. (legacy
+                     delivery records were shared)
+Notification       : [X] Done (20/05/2026 / KEP)
+Confirmation       : [ ] Pending (commitment within 30 days)
+
+──────────────────────────────────────────────────────
+5. RESPONSIBLE PARTIES AND SIGNATURES
+──────────────────────────────────────────────────────
+Preparer           : Burak ÇELİK — Systems Administrator
+Verifier           : Mehmet KAYA — Information Security Specialist
+KVKK Officer       : Selin YILDIZ — KVKK Officer
+Legal Approval     : Att. Ahmet ÖZ — Legal Director
+
+──────────────────────────────────────────────────────
+6. RETENTION AND ARCHIVING
+──────────────────────────────────────────────────────
+Retention Period   : 5 years
+Archive Location   : KVKK Digital Archive (e-signed PDF)
+Archive Number     : KVKK-ARS-2026-0142
+
+══════════════════════════════════════════════════════
+ANNEXES
+══════════════════════════════════════════════════════
+[X] Annex-1: Disk hash list (SHA-256)
+[X] Annex-2: Degausser device log (CSV output)
+[X] Annex-3: Photo/video evidence (3 timestamped items)
+[X] Annex-5: Third-party (ABC Logistics) KEP notification
+[X] Annex-7: IT-PROC-018 Disk Destruction Runbook v3.0
+══════════════════════════════════════════════════════
+```
+
+---
+
+## 8. Sample Record 3 — Cloud Database Erasure + Crypto-Shredding
+
+```
+══════════════════════════════════════════════════════
+PERSONAL DATA DESTRUCTION RECORD
+══════════════════════════════════════════════════════
+
+Record No          : 2026/TLP-0023
+Record Type        : [X] Data Subject Request
+Date/Time          : 03/06/2026 — 16:45
+Place              : AWS eu-central-1 — Production
+                     database + S3 backup
+
+──────────────────────────────────────────────────────
+1. SCOPE INFORMATION
+──────────────────────────────────────────────────────
+Data Category      : E-commerce member account records
+                     (Inventory Item No: ECOM-01)
+Data Subject Group : One customer (Request No:
+                     KVKK-BSV-2026-0214)
+Legal Reason —
+Processing Cond.   : Explicit consent withdrawn (KVKK Art. 5/1);
+                     Contractual relationship ended;
+                     Tax/commercial retention period exceeded.
+                     Cessation reason: All processing
+                     conditions ceased (Reg. Art. 12/1-a)
+Record Count       : 1 customer profile + 47 order records
+                     + 312 session/access logs
+Medium             : [X] Cloud object storage (S3)
+                     [X] Active database (RDS PostgreSQL)
+                     [X] Log/SIEM (CloudWatch + ES)
+                     [X] Backup (RDS automated snapshot)
+
+──────────────────────────────────────────────────────
+2. APPLIED DESTRUCTION METHOD
+──────────────────────────────────────────────────────
+Main Method        : [X] Erasure (Reg. Art. 8) — active
+                     [X] Destruction (Reg. Art. 9) — backup
+Sub-Method         : 1) DB: hard-delete (DELETE)
+                        + audit record
+                     2) S3: object delete + version delete
+                        + lifecycle expiry
+                     3) Log: PII fields nulled + index-based
+                        retention
+                     4) Backup: BYOK DEK (Data Encryption
+                        Key) destruction — crypto-shredding
+Applied Standard   : Cloud provider DPA (AWS) destruction
+                     commitment; NIST 800-88 Purge (crypto)
+Method Selection
+Rationale          : Hardware destruction not possible in
+                     cloud; practical destruction via key
+                     destruction. Method and rationale
+                     communicated to data subject.
+
+──────────────────────────────────────────────────────
+3. EVIDENCE AND VERIFICATION
+──────────────────────────────────────────────────────
+Hash Evidence      : Customer ID hash (SHA-256) —
+                     Annex-1 (data itself not retained)
+System Log         : - RDS general log (Annex-2)
+                     - CloudTrail KMS API log (Annex-2)
+                     - S3 access log (Annex-2)
+                     Job ID: KVKK-PURGE-2026-0023
+                     Start: 16:30:12 — End: 16:43:28
+Visual Evidence    : [X] Yes — Annex-3 (KMS console
+                     screenshot "Pending deletion" → "Deleted")
+Vendor Certif.     : N/A (within AWS DPA)
+
+──────────────────────────────────────────────────────
+4. THIRD-PARTY TRANSFER
+──────────────────────────────────────────────────────
+Transferred Third
+Parties            : [X] Yes:
+                     - Logistics provider (delivery address)
+                     - Payment service (payment tokens)
+                     - Marketing automation SaaS provider
+Notification       : [X] Done (03/06/2026 / KEP)
+Confirmation       : [X] Logistics — received 05/06/2026
+                     [X] Payment — received 04/06/2026
+                     [ ] Marketing — pending (15 days)
+
+──────────────────────────────────────────────────────
+5. RESPONSIBLE PARTIES AND SIGNATURES
+──────────────────────────────────────────────────────
+Preparer           : Burak ÇELİK — Systems Administrator
+Verifier           : Mehmet KAYA — Information Security Specialist
+KVKK Officer       : Selin YILDIZ — KVKK Officer
+Legal Approval     : Att. Ahmet ÖZ — Legal Director
+
+──────────────────────────────────────────────────────
+6. RETENTION AND ARCHIVING
+──────────────────────────────────────────────────────
+Retention Period   : 5 years
+Archive Location   : KVKK Digital Archive (e-signed PDF)
+Archive Number     : KVKK-ARS-2026-0023
+
+══════════════════════════════════════════════════════
+ANNEXES
+══════════════════════════════════════════════════════
+[X] Annex-1: Customer ID hash list (SHA-256)
+[X] Annex-2: AWS system logs (RDS, CloudTrail, S3)
+[X] Annex-3: KMS Pending Deletion → Deleted screenshot
+[X] Annex-5: KEPs to 3 third parties + confirmations
+[X] Annex-6: Data subject application (No: KVKK-BSV-2026-0214)
+            and the controller's response letter
+[X] Annex-7: IT-PROC-024 Cloud PII Purge Runbook v2.0
+══════════════════════════════════════════════════════
+```
+
+## 9. Record Verification Checklist
+
+Before signature, the KVKK Officer performs the following checks:
+
+- [ ] Record number consistent with internal sequence
+- [ ] Processing condition and cessation reason explicitly stated
+- [ ] Data category one-to-one with inventory
+- [ ] Record count and hash count consistent
+- [ ] Method appropriate for medium type
+- [ ] Applied standard referenced
+- [ ] Evidence type (hash/log/photo/certificate) noted
+- [ ] Third-party transfer checked; notification sent
+- [ ] All 4 signatures present (Preparer, Verifier, KVKK Officer, Legal Director)
+- [ ] Annexes complete
+- [ ] Retention period and archive number assigned
+- [ ] Electronic signature affixed
+
+---
+
+## Türkçe
 
 # İmha Kayıt Tutanağı Şablonları
 

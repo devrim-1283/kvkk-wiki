@@ -1,13 +1,360 @@
 ---
-Doküman: Kişisel Veri İşleme Envanteri (KVKİ) Hazırlama Rehberi
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni süreç, yeni sistem, M&A, mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.5, m.6, m.7, m.10, m.12, m.16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4(h), 5(ç), 5(d), 9; Aydınlatma Tebliği MADDE 4-5; Saklama ve İmha Yönetmeliği MADDE 5
+Doküman / Document: Kişisel Veri İşleme Envanteri (KVKİ) Hazırlama Rehberi / Personal Data Processing Inventory (KVKİ) Preparation Guide
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni süreç, yeni sistem, M&A, mevzuat değişikliği) / Annual + triggered (new process, new system, M&A, legislative change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.5, m.6, m.7, m.10, m.12, m.16 / Law No. 6698 (KVKK) Art. 5, 6, 7, 10, 12, 16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4(h), 5(ç), 5(d), 9 / Regulation on the Data Controllers' Registry Art. 4(h), 5(ç), 5(d), 9; Aydınlatma Tebliği MADDE 4-5 / Disclosure/Information Notice Communiqué Art. 4-5; Saklama ve İmha Yönetmeliği MADDE 5 / Regulation on the Erasure, Destruction and Anonymisation of Personal Data Art. 5
 ---
+
+## English
+
+# Personal Data Processing Inventory (KVKİ) Guide
+
+## 1. Definition and Legal Basis
+
+### 1.1 Definition
+
+Article 4(1)(h) of the Regulation on the Data Controllers' Registry defines the Personal Data Processing Inventory (KVKİ — Kişisel Veri İşleme Envanteri) as follows:
+
+> "The inventory in which data controllers detail the personal data processing activities they carry out in connection with their business processes, by associating those activities with the purposes of processing, the data category, the recipient group to which the data is transferred and the data subject group, and by setting out the maximum period required for the purposes for which the personal data is processed, the personal data envisaged to be transferred to foreign countries, and the measures taken regarding data security."
+
+This definition produces, word by word, the mandatory columns of the inventory rows:
+
+| Element of the definition | Corresponding inventory column |
+|---------------------------|--------------------------------|
+| business processes | Process name, business unit |
+| purposes of processing | Processing purpose |
+| data category | Data category (identity, contact, finance, etc.) |
+| data subject group | Data subject group (employee, customer, visitor, etc.) |
+| recipient group of transfer | Recipient/recipient group (domestic + cross-border) |
+| maximum period | Retention period |
+| transfer to foreign countries | Cross-border transfer column |
+| security measures | Technical and administrative measures |
+
+### 1.2 Legal Basis and Context
+
+| Legal provision | Meaning |
+|-----------------|---------|
+| Reg. Art. 5(ç) | "Information disclosed to the Registry in registration applications is prepared **on the basis of** the Personal Data Processing Inventory." |
+| Reg. Art. 5(d) | The Registry information based on the inventory is the basis for the disclosure obligation, data subject requests, and determining the scope of explicit consent. |
+| Reg. Art. 9(2) | Information on purpose, category, person group, recipient and cross-border transfer disclosed to the Registry is communicated using VERBİS headings, on the basis of the inventory. |
+| Reg. Art. 9(5) | The retention-and-destruction policy used to determine and track the maximum period is prepared **on the basis of** the inventory. |
+| Erasure-Destruction Reg. Art. 5 | The retention-and-destruction policy is prepared **in accordance with the personal data processing inventory**. |
+
+**Conclusion:** KVKİ is the operational core of the KVKK compliance framework. Disclosure (information notice), explicit consent, retention-destruction, transfer, and data subject responses are all fed by the inventory.
+
+## 2. Inventory Content — Mandatory Fields
+
+An inventory row represents one **process × one data subject group** combination. If the same process involves more than one person group (e.g., "candidate" + "reference provider" in recruitment), each combination becomes a separate row.
+
+### 2.1 Minimum Column Set
+
+| # | Column | Description |
+|---|--------|-------------|
+| 1 | Process ID | Unique identifier (e.g., HR-001, CUS-002) |
+| 2 | Process name | Operational name (e.g., "Candidate Recruitment") |
+| 3 | Business unit | Owning unit (e.g., "Human Resources") |
+| 4 | Process owner | Name, title, e-mail |
+| 5 | Data subject group | Employee, candidate, customer, prospect, supplier employee, visitor, child, etc. |
+| 6 | Data category | Identity, Contact, Finance, Special-category (health, criminal record, etc.), Customer Transaction, Transaction Security, Location, Visual/Audio, Professional Experience, Legal Proceeding, Marketing, Risk Management |
+| 7 | Personal data items | Detailed list: name-surname, T.R. ID number, date of birth, IBAN, IP address, medical report, etc. |
+| 8 | Special category (Y/N) | Does it fall within KVKK Art. 6? |
+| 9 | Processing purpose | Specific, explicit, legitimate purpose (KVKK Art. 4(2)/c). Multiple purposes are split or written together with care. |
+| 10 | Legal ground | KVKK Art. 5(2)(a-f), Art. 6(2)-(3), or **Explicit Consent** (Art. 5(1) / Art. 6(2) first sentence) |
+| 11 | Collection method | Automated / non-automated / mixed; channel: web form, paper application, mobile app, call center, partner, camera, etc. |
+| 12 | Storage medium | Electronic (database, file server, e-mail, cloud), Physical (cabinet, archive), Mixed |
+| 13 | Internal recipients | Which units it is shared with |
+| 14 | Domestic recipient / recipient group | Authorised public bodies, business partners, suppliers, law firms, auditors, etc. |
+| 15 | Cross-border transfer (Y/N) | Is there transfer? |
+| 16 | Foreign recipient | Company name, country (e.g., Microsoft Azure, Ireland) |
+| 17 | Legal basis for cross-border transfer | KVKK Art. 9: adequacy decision / standard contract / binding corporate rules / undertaking + Board permit / occasional cases / explicit consent |
+| 18 | Retention period | Numerical (e.g., "10 years from the end of the employment relationship") |
+| 19 | Retention rationale | Legislative reference (Turkish Code of Obligations (TBK), Turkish Commercial Code (TTK), Tax Procedure Law (VUK), Social Security Institution (SGK) Law, etc.) or business need + statute-of-limitations analysis |
+| 20 | Destruction method | Erasure / Destruction / Anonymisation |
+| 21 | Destruction period | Periodic destruction schedule (max. 6 months) |
+| 22 | Technical measures | Encryption, access logs, MFA, network segmentation, penetration testing, etc. |
+| 23 | Administrative measures | Training, confidentiality undertaking, access authorisation, contractual provisions, etc. |
+| 24 | Risk level | Low / Medium / High / Critical (special category + large volume → high/critical) |
+| 25 | Related information notice | Reference or link |
+| 26 | Explicit consent required? | Y/N + rationale |
+| 27 | Last update date + updater | Version tracking |
+
+> Note: Per Reg. Art. 9(4), if a retention period is prescribed by law it is taken; otherwise the **longest** of the various periods is used.
+
+### 2.2 Legal Ground Catalogue (KVKK Art. 5/Art. 6)
+
+When writing an inventory row, **a single, explicit legal ground must be set per purpose**. Explicit consent is treated as a last resort; if any other legal ground exists, explicit consent is not taken.
+
+**General personal data (KVKK Art. 5(2)):**
+- (a) Expressly provided for in laws
+- (b) Protection of a person who is unable to express consent due to actual impossibility
+- (c) Directly related to the conclusion or performance of a contract
+- (ç) Fulfilment of a legal obligation
+- (d) Made public by the data subject themself
+- (e) Establishment, exercise or protection of a right
+- (f) Legitimate interest, provided that fundamental rights and freedoms are not harmed
+
+**Special-category personal data (KVKK Art. 6(3)):**
+- Health and sexual life → public health protection, preventive medicine, medical diagnosis, treatment and care, planning and management of health services and financing (by persons under a duty of confidentiality)
+- Other special-category data → in cases provided for by law
+
+## 3. Inventory Build Methodology
+
+### 3.1 Five-Stage Approach
+
+```
+1. Process Discovery → 2. Data Flow Mapping → 3. Legal Analysis → 4. Validation → 5. Versioning
+```
+
+#### Stage 1 — Process Discovery
+
+**Three parallel information channels:**
+
+| Channel | Method | Output |
+|---------|--------|--------|
+| Interview | 60-90 min structured interview with unit managers | Process map draft |
+| System scan | CMDB, AD, AWS/Azure inventory, SaaS console list | List of systems holding data |
+| Survey | Structured form for process owners (Google Forms, MS Forms) | Standard answers per process |
+
+**Sample interview questions:**
+1. Which person groups' data do you process in your function?
+2. Which systems are used (in-house, SaaS, outsourced)?
+3. How is data collected (form, API, paper, voice recording, CCTV)?
+4. With which other unit, public body, or supplier do you share data?
+5. Do you have cross-border transfers? (If your SaaS servers are abroad, yes.)
+6. How long do you retain the data, and why?
+7. Have you previously experienced a data breach, loss, or unauthorised access?
+
+#### Stage 2 — Data Flow Mapping
+
+Produce a **data-flow diagram** per process:
+
+```
+[Collection Source] → [Active System(s)] → [Backup/Archive] → [Transfer Recipients] → [Destruction]
+```
+
+For each arrow: which data is moving, who has access, with which security measure.
+
+#### Stage 3 — Legal Analysis
+
+Together with the Legal Department for each process:
+- Confirmation that purposes are specific, explicit, legitimate (KVKK Art. 4)
+- Determination of the legal ground (Art. 5/Art. 6)
+- Alignment of retention periods with legislation
+- Determination of transfer regime (Art. 8/Art. 9)
+- Assessment of explicit consent requirement
+
+#### Stage 4 — Validation Workshop
+
+Process owner + KVKK Officer + Information Security + Legal review draft inventory rows together. Typical workshop time: 30-45 min per process.
+
+#### Stage 5 — Versioning
+
+The inventory is kept in a version-controlled system (Git, OneDrive history, OneTrust audit trail). Last update date and updater are mandatory per row.
+
+### 3.2 Workshop Output Template
+
+```
+Workshop:        [Process Name]
+Date:            YYYY-MM-DD
+Participants:    [Name, Role]
+Decision:        [Approved / Revision required]
+Open items:
+  - [Legal ground confirmation needed]
+  - [Awaiting Legal opinion on retention period]
+Action list: ...
+```
+
+## 4. Typical Process List for Our Company
+
+For a 500+ employee data controller, a minimum scope:
+
+### 4.1 Human Resources
+
+| ID | Process |
+|----|---------|
+| HR-001 | Candidate recruitment and CV management |
+| HR-002 | Onboarding and personnel file creation |
+| HR-003 | Payroll and salary payments |
+| HR-004 | Performance evaluation |
+| HR-005 | Training and development |
+| HR-006 | Leave and attendance tracking |
+| HR-007 | Occupational health and safety (medical reports, accidents) — special category |
+| HR-008 | Discipline and ethics investigation |
+| HR-009 | Exit and personnel archive |
+| HR-010 | Employee references provided |
+
+### 4.2 Customer and Sales
+
+| ID | Process |
+|----|---------|
+| CUS-001 | Customer registration and account opening |
+| CUS-002 | E-commerce order management |
+| CUS-003 | Invoicing and collection |
+| CUS-004 | Customer complaints and feedback |
+| CUS-005 | Call center (voice recording) |
+| CUS-006 | Marketing, campaign and newsletter (compliance with İYS — Message Management System) |
+| CUS-007 | CRM and 360° customer profile |
+| CUS-008 | Loyalty and rewards programme |
+
+### 4.3 Operations and Logistics
+
+| ID | Process |
+|----|---------|
+| OPR-001 | Supplier management (supplier employee data) |
+| OPR-002 | Delivery and logistics (courier, recipient data) |
+| OPR-003 | Procurement and contract management |
+
+### 4.4 Information Technology and Security
+
+| ID | Process |
+|----|---------|
+| IT-001 | Identity and access management (IAM/AD) |
+| IT-002 | Logging and SIEM |
+| IT-003 | Backup and disaster recovery |
+| IT-004 | Cloud service providers (cross-border transfer) |
+| IT-005 | Call center software integration |
+| IT-006 | Cookies and digital tracking |
+
+### 4.5 Physical Security and Administration
+
+| ID | Process |
+|----|---------|
+| PHY-001 | CCTV (closed-circuit camera system) |
+| PHY-002 | Visitor management (entry log, badge) |
+| PHY-003 | Physical archive management |
+| PHY-004 | Internal audit and compliance |
+
+### 4.6 Legal and Compliance
+
+| ID | Process |
+|----|---------|
+| LEG-001 | Legal disputes and litigation management |
+| LEG-002 | Ethics hotline (whistleblowing) |
+| LEG-003 | KVKK data subject request management |
+| LEG-004 | Data breach management |
+
+### 4.7 Finance
+
+| ID | Process |
+|----|---------|
+| FIN-001 | Accounting and current accounts |
+| FIN-002 | Tax declarations |
+| FIN-003 | Banking and payment systems |
+
+### 4.8 Marketing and Communication
+
+| ID | Process |
+|----|---------|
+| MKT-001 | Website analytics and cookies |
+| MKT-002 | Social media and campaign management |
+| MKT-003 | İYS (Message Management System) — commercial electronic messages |
+
+> A typical inventory for a 500+ employee organisation contains **80-150 rows**. A count below 50 indicates incomplete discovery.
+
+## 5. Versioning, Ownership and Change Management
+
+### 5.1 Version Numbering
+
+Semantic versioning: `MAJOR.MINOR.PATCH`
+- MAJOR: Architectural change (new column, new process family)
+- MINOR: Addition of a new process row, meaningful revision of an existing row
+- PATCH: Typo fixes, small updates
+
+### 5.2 Dual Ownership Model
+
+Two owners per row:
+- **Process owner (business unit):** responsible for content accuracy
+- **KVKK Officer:** responsible for legal compliance and VERBİS reflection
+
+### 5.3 Change Triggers
+
+| Trigger | Action |
+|---------|--------|
+| Launch of a new process | Inventory row before processing begins + VERBİS update |
+| Onboarding of a new system/SaaS | Data flow, transfer, cross-border check; inventory update |
+| New supplier (data processor) | Update transfer column + sign DPA |
+| Legislative change | Re-evaluate legal ground and retention period for affected rows |
+| Organisational change (merger, transfer, M&A) | Full inventory review |
+| Data breach | Update measures column for the affected process |
+
+> Reg. Art. 13: notification within **7 days** of any change in registered VERBİS information. Inventory updates are therefore not "end-of-month" work; they happen as soon as the process changes.
+
+## 6. Tooling Recommendations
+
+### 6.1 Excel/CSV (Entry level)
+
+- **Pros:** Low cost, fast start, broad access.
+- **Cons:** Weak version control, multi-user collisions, no automatic reminders.
+- **Recommendation:** Single master copy on OneDrive/SharePoint, read-only sharing, pull-request style for changes.
+
+### 6.2 KVKK / Privacy Software
+
+| Tool | Suitability |
+|------|-------------|
+| OneTrust Data Mapping | Large enterprise, certification need |
+| BigID | Sensitive data discovery + inventory |
+| Local Turkish vendors (Lostar, KVKK Manager, etc.) | Local support, KVKK-aligned templates |
+| Confluence + JIRA | Internal wiki + ticket integration (mid-scale) |
+
+### 6.3 CMDB Integration
+
+If IT keeps a CMDB system list, map the "storage medium" column of inventory rows to system IDs and set alerting when the system side changes.
+
+## 7. Common Mistakes and Controls
+
+| Mistake | Correction |
+|---------|-----------|
+| Legal ground written as "consent" although another ground exists | Explicit consent is last resort; pick the appropriate clause |
+| Retention period written as "as needed" | Specific, numerical period + rationale required |
+| Cross-border transfer column blank although SaaS is abroad | Verify SaaS server locations, clarify yes/no |
+| "All employees access" | Role-based access on a need-to-know basis |
+| Information notice misaligned with inventory | Quarterly alignment check is mandatory (see envanter-bakim.md) |
+| Multiple purposes squeezed into one row | Recommended to split when legal grounds differ per purpose |
+| Risk level not stated | Risk assessment required for all rows |
+
+## 8. Inventory Maturity Model
+
+| Level | Definition | Typical indicator |
+|-------|------------|-------------------|
+| 1 - Initial | Listed in Excel | 30+ rows but columns incomplete |
+| 2 - Structured | All mandatory columns filled | VERBİS notification submitted |
+| 3 - Operational | Quarterly review active | Process-owner-signed |
+| 4 - Integrated | Disclosure + consent + retention text generated from inventory | Single source of truth |
+| 5 - Optimised | Auto-link with CMDB/SaaS, real-time monitoring | Live data-flow map |
+
+Target maturity: **Level 4 (Integrated)** within 18 months. Level 5 is optional.
+
+## 9. Checklist (New Process)
+
+- [ ] Process ID assigned (per internal naming convention)
+- [ ] Process owner identified and accepted
+- [ ] All 27 columns completed
+- [ ] Legal ground selected from KVKK Art. 5/Art. 6 clauses
+- [ ] Retention period justified by legislation or limitation analysis
+- [ ] Domestic and cross-border recipients listed
+- [ ] If cross-border, legal basis determined (Art. 9)
+- [ ] Information notice prepared or linked to existing one
+- [ ] If consent required, text and collection channel ready
+- [ ] Technical and administrative measures filled in, confirmed by InfoSec
+- [ ] Risk level set (special category + large volume → minimum high)
+- [ ] VERBİS update planned (7 days)
+- [ ] Aligned with retention-destruction policy
+- [ ] Version number and updater logged
+
+## 10. Annexes
+
+- Template: [envanter-sablonu.md](./envanter-sablonu.md)
+- VERBİS Registration: [verbis-kayit-rehberi.md](./verbis-kayit-rehberi.md)
+- Exception Assessment: [verbis-istisna-degerlendirmesi.md](./verbis-istisna-degerlendirmesi.md)
+- Maintenance: [envanter-bakim.md](./envanter-bakim.md)
+
+---
+
+## Türkçe
 
 # Kişisel Veri İşleme Envanteri (KVKİ) Rehberi
 

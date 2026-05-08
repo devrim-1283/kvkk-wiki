@@ -1,13 +1,431 @@
 ---
-Doküman: İhlal Müdahale Prosedürü (Incident Response Procedure)
-Bölüm: 08-ihlal-yonetimi
-Sahip: Bilgi Güvenliği Müdürü (CISO) + KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi + Yönetim Kurulu
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + her ihlal sonrası
-İlgili Mevzuat: 6698 sayılı KVKK m.12, KVKKK 24.01.2019/2019-10 sayılı ihlal bildirim Kararı, KVKK Veri Güvenliği Rehberi (2018), 5651 sayılı Kanun, NIST SP 800-61 Rev.2, ISO/IEC 27035-1:2023, ISO/IEC 27001:2022 A.5.24-A.5.28
+Doküman / Document: İhlal Müdahale Prosedürü / Personal Data Breach Incident Response Procedure
+Bölüm / Section: 08-ihlal-yonetimi
+Sahip / Owner: Bilgi Güvenliği Müdürü (CISO) + KVKK Sorumlusu / CISO + KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi + Yönetim Kurulu / Head of Legal + KVKK Committee + Board of Directors
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + her ihlal sonrası / Annual + after every incident
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 12; Authority Decision No. 2019/10 dated 24.01.2019; KVKK Data Security Guide (2018); Law No. 5651; NIST SP 800-61 Rev.2; ISO/IEC 27035-1:2023; ISO/IEC 27001:2022 A.5.24-A.5.28
 ---
+
+## English
+
+# Personal Data Breach Incident Response Procedure
+
+## 1. Purpose and Scope
+
+This procedure governs the management of the incident lifecycle from the moment a personal data breach is suspected or confirmed. It is aligned with NIST SP 800-61 Rev.2 and ISO/IEC 27035-1:2023, and operationalizes the requirements of Article 12 of KVKK and the Authority's Decision No. 2019/10 of 24.01.2019.
+
+Scope: All personal data assets within the company, company data held by data processors, employee endpoints, customer portals, websites, and mobile applications.
+
+## 2. Incident Management Lifecycle
+
+```
+[Preparation] -> [Detection & Analysis] -> [Containment]
+                                                |
+[Lessons Learned] <- [Recovery] <- [Eradication]
+```
+
+Each phase is logged; phase transitions are made by Incident Commander (IC) decision.
+
+### 2.1. Preparation
+
+Before any process begins, the following must be in place:
+
+- 24/7 reachable CSIRT contact list (mobile, registered electronic mail (KEP), back-up channel - Signal/WhatsApp).
+- Out-of-band communication (alternative if the mail server is breached).
+- Forensic toolkit (write-blocker, imager, EnCase/FTK license).
+- Framework agreement with third-party forensic firms (response retainer).
+- Legal counsel and crisis communication agency contacts.
+- Incident classification matrix (§3).
+- Runbooks (§7).
+- Tabletop schedule (`soak-test-tatbikat.md`).
+
+### 2.2. Detection & Analysis
+
+**Detection sources:**
+
+- SIEM correlation rules (Splunk/Sentinel/Wazuh).
+- EDR/XDR alerts (CrowdStrike/SentinelOne/Defender).
+- DLP events (unauthorized exfiltration).
+- IDS/IPS (Suricata, Snort).
+- Honeypot/canary token triggers.
+- Employee reports (ethics line, IT helpdesk).
+- Third-party notifications (CERT, customer, researcher, press).
+- Processor notification.
+- Dark web monitoring (HaveIBeenPwned, threat intel).
+
+**Initial analysis outputs (within T+1 hour):**
+
+- Detection time (UTC + Türkiye Time).
+- First observed system/asset.
+- Suspected event type (ransomware, BEC, data exfil, insider, lost device, scraping).
+- Likely affected data category (general, special category, financial).
+- Lateral movement risk indicators.
+
+### 2.3. Containment
+
+Two-tiered approach:
+
+- **Short-term containment (T+2 - T+4 hours):** Isolate the affected system from the network (NAC/firewall), disable the user account, stop sharing. Do **not power off** - to preserve memory image.
+- **Long-term containment (T+8 - T+72 hours):** Stand up temporary systems, reset passwords, harden role-based segmentation, enforce MFA broadly.
+
+**Decision matrix:**
+
+| Criterion | Quick power-off | Forensics first |
+|-----------|-----------------|-----------------|
+| Active data exfil | Yes | No |
+| Lateral movement observed | Yes | No |
+| Service is critical (production) | Isolate | Isolate + parallel forensics |
+| Attacker still inside | Yes - urgent isolation | No |
+| Attack ended | No | Yes |
+
+### 2.4. Eradication
+
+- Remove malware (image redeploy preferred).
+- Clean backdoors and persistence (scheduled tasks, services, registry, cron).
+- IOC-based scan across the entire fleet.
+- Revoke threat-actor accounts.
+- Rotate stolen credentials (passwords, API keys, SSH keys, OAuth tokens, certificates).
+
+### 2.5. Recovery
+
+- Clean restore from backup (verify the backup itself is unaffected).
+- Phased return to production (canary deploy, increased monitoring).
+- Gradual reopening of user access.
+- 30-90 days of enhanced monitoring.
+
+### 2.6. Lessons Learned
+
+- Post-Incident Report (PIR) within **T+30 days**.
+- Root cause analysis (`kok-neden-analizi.md`).
+- CAPA (Corrective and Preventive Actions) tracking list.
+- Updates to policies, procedures, training.
+- Add to tabletop scenario library.
+
+## 3. Incident Classification Matrix (Triage)
+
+The breach decision is scored on **four axes**:
+
+### 3.1. Number of Data Subjects Affected (E)
+
+| Range | Score |
+|-------|-------|
+| 1 - 100 | 1 |
+| 101 - 1,000 | 2 |
+| 1,001 - 10,000 | 3 |
+| 10,001 - 100,000 | 4 |
+| > 100,000 | 5 |
+
+### 3.2. Data Sensitivity (H)
+
+| Category | Score |
+|----------|-------|
+| Marketing preference | 1 |
+| Identity + contact | 2 |
+| Financial (IBAN, masked card) | 3 |
+| Card number / ID copy / location | 4 |
+| Special category (health, biometric, religion, criminal) | 5 |
+
+### 3.3. Spread Risk (Y)
+
+| Status | Score |
+|--------|-------|
+| System isolated, externally closed | 1 |
+| Lateral movement potential within internal network | 3 |
+| Internet-facing, data already external | 5 |
+
+### 3.4. Reversibility (G)
+
+| Status | Score |
+|--------|-------|
+| Only integrity affected, restorable from backup | 1 |
+| Data may have been copied but not published | 3 |
+| Data already published / on dark web | 5 |
+
+**Total Risk Score = E + H + Y + G** (range 4-20)
+
+| Score | Class | Action |
+|-------|-------|--------|
+| 4-7 | Low | Incident report, breach assessment performed; notification mostly **not required** |
+| 8-12 | Medium | Breach assessment mandatory; Authority notification very likely |
+| 13-16 | High | Authority notification mandatory + data subject notification |
+| 17-20 | Critical | Authority + data subjects + press statement + executive escalation |
+
+> **Caution:** A low score does not mean automatic exemption. When special category data is involved, notification is preferred regardless of score.
+
+## 4. CSIRT Structure (Computer Security Incident Response Team)
+
+### 4.1. Core Team
+
+| Position | Role | Primary Responsibility |
+|----------|------|------------------------|
+| Incident Commander (IC) | Decision authority | Overall coordination, escalation |
+| Technical Lead | Forensics & analysis | Imaging, logs, IOCs, attribution |
+| KVKK Officer | Regulatory | Authority notification, data subject communication |
+| Legal Lead | Legal risk | Contractual, criminal, regulatory |
+| Corporate Communications | External communications | Press, social media, customers |
+| HR Lead | Insider threat | Discipline, employee communications |
+| IT Operations | System administration | Isolation, recovery |
+
+### 4.2. Extended Team
+
+Support roles called in by Core CSIRT: Finance (ransom, insurance), Sales (customer impact), Supply Chain (third party), Product/CTO (architectural decisions), External Forensics Firm, External Counsel, Insurer (cyber policy), CEO/CFO escalation.
+
+### 4.3. CSIRT Activation
+
+Activation thresholds:
+
+- **Level 1 (Information):** Risk score 4-7. Email thread for KVKK + CISO + Legal only.
+- **Level 2 (Virtual meeting):** Risk score 8-12. Core team joins within 1 hour.
+- **Level 3 (Full activation):** Risk score 13+. Core team in physical/virtual war room within 30 minutes. Extended team alerted.
+- **Level 4 (Crisis):** Risk score 17+. Board informed; press coordination.
+
+## 5. Communication Tree
+
+```
+Detecting employee
+        |
+IT Helpdesk (24/7 on-call - ethics line)
+        |
+SOC L1 -> SOC L2 (15-minute SLA)
+        |
+Information Security Shift Lead (30-minute SLA)
+        |
+CISO + KVKK Officer (60-minute SLA - dual notification)
+        |
+Incident Commander assigned
+        |
+CSIRT activation (level-based)
+        |
+Executive escalation (Level 3+: CEO; Level 4: Board)
+        |
+External stakeholder communication (Authority, data subjects, press, insurer)
+```
+
+**Communication channels:**
+
+- Primary: Corporate e-mail + telephone.
+- Secondary (if e-mail system affected): Corporate Signal group.
+- Tertiary: Personal mobile + WhatsApp.
+- Out-of-band: Conference bridge (third-party - Webex/Teams alternative).
+
+**Silence rule (Need-to-Know):** Incident details are shared only within CSIRT. Internal announcements require dual approval from CISO + Corporate Communications. Social media posting is forbidden (binding under employee code of conduct).
+
+## 6. Incident Log
+
+Every incident is numbered **OLAY-YYYY-NNNN** (Turkish "olay" = incident). The following fields are recorded with minute-level precision:
+
+| Field | Description |
+|-------|-------------|
+| Incident ID | Auto-generated |
+| Detection date/time | UTC + Türkiye Time, minute-level |
+| Awareness moment | When the "reasonable suspicion" threshold was crossed (72-hour clock) |
+| Detection source | SIEM, EDR, tip-off, etc. |
+| Category | Ransomware, BEC, exfil, lost device, insider, third party |
+| Affected system | Hostname, IP, application, database |
+| Affected data | Category + estimated record count |
+| Risk score | E+H+Y+G |
+| Class | Low/Medium/High/Critical |
+| Activation level | 1-4 |
+| Incident Commander | Name |
+| Phase | Preparation/Detection/Containment/Eradication/Recovery/Closure |
+| Main actions chronological | Hourly entry |
+| Authority notification | Date/time/reference no. |
+| Data subject notification | Method/count/date |
+| Insurer notification | Date |
+| Criminal notification (if any) | Date/prosecutor |
+| Closure date | When RCA is complete |
+
+The log must be **immutable** (write-once, tamper-evident - Splunk Enterprise SIEM, Wazuh + S3 Object Lock, etc.).
+
+## 7. Scenario-Based Runbooks
+
+Detailed runbooks have been produced and tested in tabletops for the seven scenarios below. Summary decision paths are given here; full runbooks live under `99-sablonlar/runbooks/`.
+
+### 7.1. Runbook A - Ransomware
+
+```
+T+0       Encrypted files/screen detected
+T+15 min  Isolate affected machine from network; do NOT power off
+T+30 min  EDR scan - lateral movement check
+T+1 hour  Verify backup integrity (offline backup)
+T+2 hour  Isolate attacker communication channel
+T+4 hour  Forensic imaging starts
+T+8 hour  Affected personal data scope (DLP report, folder content analysis)
+T+24 hour Authority preliminary notification
+T+48 hour Restore from backup + canary
+T+72 hour Authority final notification
+```
+
+**Critical decisions:**
+
+- Ransom is not paid (Board decision + OFAC/sanctions compliance).
+- Decryption tool databases are checked (No More Ransom).
+- Insurance policy is activated (T+12 hours).
+
+### 7.2. Runbook B - Insider Data Exfiltration
+
+```
+T+0       DLP/UEBA alert - abnormal download/USB/upload
+T+15 min  IT - silently observe user session (live evidence)
+T+30 min  HR and Legal coordination
+T+1 hour  Permission freeze decision (without alerting user)
+T+2 hour  Endpoint review - what was taken, where it went
+T+4 hour  Conversation with user (HR + Legal + HR Director)
+T+8 hour  Forensic imaging of device
+T+24 hour Data recall (cease and desist if third parties involved)
+T+48 hour Criminal process assessment (Turkish Criminal Code Art. 136)
+T+72 hour Authority notification
+```
+
+### 7.3. Runbook C - Lost / Stolen Device
+
+```
+T+0       Employee reports lost/stolen device
+T+15 min  Remote lock via MDM
+T+30 min  Verify device is encrypted (BitLocker/FileVault status)
+T+1 hour  If unencrypted, treat as HIGH risk
+T+2 hour  Reset account passwords, revoke MFA tokens
+T+4 hour  Analyze e-mail cache, OneDrive sync, recent activity
+T+8 hour  Determine content scope
+T+12 hour Police lost-device report (mandatory)
+T+24 hour Remote wipe command (if not returned)
+T+72 hour Authority notification (if device was unencrypted)
+```
+
+### 7.4. Runbook D - Third-Party Breach (Vendor/Processor)
+
+```
+T+0       Processor notifies a breach
+T+15 min  Contract check - within notification SLA?
+T+30 min  Scope: which company data is affected?
+T+1 hour  Temporary suspension decision
+T+2 hour  Independent verification request
+T+4 hour  Internal impact mapping
+T+24 hour Authority notification (WE notify, as data controller)
+T+48 hour Contractual sanction; alternative provider plan
+```
+
+> **Important:** Late notification by the processor is no excuse - vis-a-vis the Authority, the controller is responsible. The contract must include a **24-hour notification clause** plus a delay penalty (`07-aktarim` section).
+
+### 7.5. Runbook E - BEC / Account Takeover (Business Email Compromise)
+
+```
+T+0       Abnormal e-mail send/forward detected
+T+15 min  Kill account session, password reset, MFA reset
+T+30 min  Inbox rule/forwarder cleanup
+T+1 hour  Audit log - sent emails, opened shares
+T+2 hour  Sensitive content detection (KVKK + finance)
+T+4 hour  Counter-party notification (fraud prevention)
+T+8 hour  Rotate API keys for SaaS the account accessed
+T+24 hour Authority notification (if mail traffic with personal data was affected)
+```
+
+### 7.6. Runbook F - Website / API Data Leak (Scraping / Public Leak)
+
+```
+T+0       Company data discovered on GitHub/Pastebin/forum
+T+15 min  Source verification - is it really ours?
+T+30 min  DMCA / takedown request
+T+1 hour  Leak vector (which endpoint, which parameter)
+T+2 hour  Endpoint shutdown / WAF rule
+T+4 hour  Access log analysis - scope
+T+24 hour Authority notification
+T+48 hour Data subject notification (e-mail, SMS, web)
+```
+
+### 7.7. Runbook G - Physical Breach (Archive/Document Loss)
+
+```
+T+0       Physical archive loss/fire/flood
+T+30 min  Controlled access to scene
+T+1 hour  Identify missing categories/file types
+T+2 hour  CCTV review (intentional or accidental?)
+T+8 hour  Determine scope - which data subjects?
+T+24 hour Authority notification if required
+```
+
+## 8. Hourly Decision Matrix
+
+| Hour | Action | Owner | Output |
+|------|--------|-------|--------|
+| T+0 | Open incident, assign ID | SOC | OLAY-YYYY-NNNN |
+| T+15 min | Urgent containment decision | Shift Lead | Isolation or observation |
+| T+30 min | Core CSIRT informed | CISO | Activation level |
+| T+1 hour | Initial triage report | IC | Risk score, class |
+| T+2 hour | War room meeting | IC | Phase plan, assignments |
+| T+4 hour | Containment approval | IC + CISO | Isolation confirmed |
+| T+8 hour | Preliminary scope report | Technical Lead | Data category + estimated count |
+| T+12 hour | Insurer notification | Legal + Finance | Policy activation |
+| T+24 hour | Authority preliminary notification (incomplete OK) | KVKK Officer | Form submitted |
+| T+48 hour | Data subject notification draft | KVKK + Communications | Pending approval text |
+| T+72 hour | Authority final notification (definitive data) | KVKK Officer | Form supplemented |
+| T+5 days | Data subject notification begins | KVKK + Communications | E-mail/SMS dispatch |
+| T+15 days | Phased recovery complete | Operations | Production normalized |
+| T+30 days | Post-Incident Report (PIR) | IC | Report + CAPA list |
+| T+90 days | CAPA completion audit | KVKK Officer | Closure report |
+| T+1 year | Add to tabletop scenarios | Exercise Lead | New scenario |
+
+## 9. Forensic Evidence Management
+
+- Chain-of-custody form for every device/log set.
+- Hash (SHA-256) verification for integrity.
+- Evidence stored in **insured safe** (physical) and **immutable storage** (digital).
+- Evidence retention: **5 years** (statute of limitations + administrative sanction objection windows).
+- Third-party forensic firms sign NDA + KVKK data processor agreement.
+
+## 10. Processor Notification Obligation (We Are the Data Controller)
+
+Data processors (cloud provider, outsourcer, HR SaaS, courier, call center):
+
+- Must notify us **within 24 hours** by contract.
+- Notification arrives via KEP or contractually defined channel.
+- Insufficient notification triggers contractual penalty and unilateral termination right.
+- A processor's late notification is **not added** to our 72-hour clock - the clock starts at **our awareness moment**; however, the Authority may also hold the controller responsible (citing inadequate contractual control).
+
+## 11. Correspondence Standards with the Authority
+
+- Notifications are sent via KEP to **kvkk@hs01.kep.tr**.
+- Missing information may be supplemented later, but the first notification is filed at the **highest fillable completeness**.
+- If the Authority requests further information, the response window is **15 days** from notification (specified in the Authority's letter).
+- All correspondence is archived and recorded in the **Authority Correspondence Log**.
+
+## 12. Criminal Notification and Other Regulators
+
+Other obligations to consider alongside KVKK notification:
+
+- **Turkish Criminal Code Art. 136-138:** Unlawfully obtaining/disclosing data - prosecutorial referral (especially for insider threats).
+- **Law No. 5651:** Access/host provider record obligations.
+- **BRSA / CMB / EMRA:** Sectoral breach notification regimes (banking, capital markets, energy).
+- **GDPR (if foreign data subjects are affected):** 72-hour notification to the relevant DPA via the EU representative if any.
+- **EMRA / ICTA:** Additional notification obligations in the telecom sector.
+
+## 13. Training and Awareness
+
+- All employees: 1 hour annual incident reporting training.
+- IT/SOC: 4 hours quarterly technical response drill.
+- CSIRT core team: 16 hours annual tabletop + 8 hours physical drill.
+- Board: 1 hour annual crisis management briefing.
+
+## 14. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee + Board |
+
+## 15. Annexes
+
+- Annex 1: CSIRT Contact List (controlled access).
+- Annex 2: Incident Classification Decision Tree (single-page A3).
+- Annex 3: Forensic Bag Contents List.
+- Annex 4: Insurer Notification Template.
+- Annex 5: Authority KEP Correspondence Template.
+
+---
+
+## Türkçe
 
 # İhlal Müdahale Prosedürü
 

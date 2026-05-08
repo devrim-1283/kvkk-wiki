@@ -1,13 +1,345 @@
 ---
-Doküman: Veri İhlali Bildirim Şablonları (Kurul ve İç Triyaj)
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.12/5; KVKK Kurulu 24.01.2019 tarihli ve 2019/10 sayılı Karar
+Doküman / Document: Veri İhlali Bildirim Şablonları (Kurul ve İç Triyaj) / Data Breach Notification Templates (Authority + Internal Triage)
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.12/5; KVKK Kurulu 24.01.2019 tarihli ve 2019/10 sayılı Karar — KVKK Art. 12/5; Authority Decision No. 2019/10 dated 24.01.2019
 ---
+
+## English
+
+# Data Breach Notification Templates
+
+## 1. Time Discipline
+
+| Step | Time |
+|------|------|
+| Suspected breach detected | T0 |
+| Internal triage complete | T0 + 6 hours |
+| KVKK Committee (crisis) informed | T0 + 12 hours |
+| Authority notification draft ready | T0 + 36 hours |
+| Final sign-off by Legal + KVKK Officer | T0 + 60 hours |
+| Authority notification sent | T0 + 72 hours (latest) |
+| Notification to data subjects (as soon as possible) | T0 + 7 days (target) |
+
+> Notification to the Authority later than 72 hours requires **written reasons for delay** (Authority Decision 2019/10).
+
+The Turkish text below is the binding form. The English versions are parallel deployment material.
+
+---
+
+## 2. TEMPLATE A — INTERNAL TRIAGE FORM (English equivalent)
+
+```
+==========================================================
+DATA BREACH INTERNAL TRIAGE FORM
+==========================================================
+
+Breach Reference No: IH-[YEAR]-[SEQ]
+Drafting Date/Time: [DATE TIME]
+Drafted by: [NAME - ROLE]
+
+A. SOURCE OF SUSPECTED BREACH
+[ ] SOC / SIEM alert
+[ ] Employee report
+[ ] Supplier report
+[ ] Data subject complaint
+[ ] Media / third party
+[ ] Internal audit
+[ ] Other: ___________________
+
+B. INITIAL DETECTION
+- Detection date/time (T0):
+- Estimated breach occurrence date:
+- Lag between occurrence and detection (MTTD):
+- Detected by:
+
+C. NATURE OF THE BREACH (KVKK Art. 12/5 and Authority 2019/10)
+[ ] Confidentiality breach (unauthorised disclosure, leak)
+[ ] Integrity breach (unauthorised alteration, corruption)
+[ ] Availability breach (loss, deletion, ransom, service outage)
+[ ] Multiple
+
+D. AFFECTED SYSTEM/PROCESS
+- System: ___________________
+- Process (from inventory): ___________________
+- Process owner unit: ___________________
+
+E. BREACH TYPE
+[ ] External (cyber) attack
+[ ] Internal error / mistake
+[ ] Internal misuse
+[ ] Supplier / third-party
+[ ] Physical (loss, theft, paper)
+[ ] Device loss / theft (laptop, USB, phone)
+[ ] Wrong recipient (email, courier)
+[ ] Social engineering / phishing
+[ ] Other: ___________________
+
+F. AFFECTED DATA
+- Data categories: ___________________
+- Sensitive data involved: [Yes/No] — Detail: ___________________
+- Children's data: [Yes/No]
+- Estimated number of affected persons: ___________________
+- Data subject group: [Employee/Customer/Applicant/Supplier/Other]
+
+G. INITIAL SCALE ASSESSMENT
+[ ] LOW — limited records, low sensitivity, fast containment
+[ ] MEDIUM — medium volume, limited sensitivity
+[ ] HIGH — large volume OR sensitive data OR cross-border impact
+[ ] CRITICAL — high volume + sensitive + media/reputation OR
+   large-scale consumer harm
+
+H. INITIAL RESPONSE (within T0 + 4 hours)
+- Containment: [Yes/No] — Detail:
+- Unauthorised access blocked:
+- Affected systems isolated:
+- Forensic preservation:
+
+I. PRELIMINARY ROOT CAUSE
+[ ] Authorisation error
+[ ] Patch missing / vulnerability
+[ ] Configuration error
+[ ] Social engineering
+[ ] Training gap
+[ ] Supplier process failure
+[ ] Policy violation
+[ ] Unknown (not yet established)
+
+J. CONCURRENT NOTIFICATIONS
+[ ] CISO / IT Manager
+[ ] KVKK Officer
+[ ] Legal Counsel
+[ ] General Manager
+[ ] Communications Director
+[ ] Internal Audit
+[ ] Audit Committee of the Board (in critical cases)
+
+K. AUTHORITY NOTIFICATION ASSESSMENT
+- 72-hour Authority notification: [Yes/No/Under review]
+- If no, justification: ___________________
+- Notification to data subjects: [Yes/No] — Method: ___________________
+
+L. TEAM ASSIGNMENT
+- Incident Response Lead: ___________________
+- Legal counterpart: ___________________
+- Technical response lead: ___________________
+- Communications lead: ___________________
+- KVKK Officer (Authority counterpart): ___________________
+
+M. NEXT STEPS
+- T0 + 12 h: KVKK Committee extraordinary meeting
+- T0 + 24 h: Detailed root cause analysis begins
+- T0 + 36 h: Authority notification draft complete
+- T0 + 72 h: Authority notification sent
+- T0 + 7 days: Data subject notifications complete
+- T0 + 30 days: Closure report
+
+==========================================================
+Approval
+- Drafter: ___________________ (signature, date)
+- KVKK Officer: ___________________
+- Legal Counsel: ___________________
+==========================================================
+```
+
+---
+
+## 3. TEMPLATE B — DATA BREACH NOTIFICATION TO THE KVKK AUTHORITY (English equivalent)
+
+> Generated from the Authority's published standard form (Decision 2019/10 dated 24.01.2019). Filed via the Authority's VERBİS portal or kvkk.gov.tr/Notification.
+
+```
+==========================================================
+PERSONAL DATA BREACH NOTIFICATION FORM
+KVKK Article 12/5 and Authority Decision 2019/10
+==========================================================
+
+A. CONTROLLER INFORMATION
+- Controller Full Legal Name: [COMPANY]
+- Mersis No: [MERSIS]
+- VERBİS Registration No (if any): [VERBIS]
+- Address: [ADDRESS]
+- KEP Address: [KEP]
+- Phone: [PHONE]
+- Website: [WEB]
+
+B. CONTACT PERSON / CONTROLLER REPRESENTATIVE
+- Name-Surname: [NAME]
+- Role: [ROLE — e.g. KVKK Officer]
+- Phone: [PHONE]
+- Email: [EMAIL]
+
+C. BREACH SCOPE
+1. Date the breach occurred (or estimated range):
+   [DATE OR RANGE]
+
+2. Date the breach was detected:
+   [DATE AND TIME]
+
+3. Detection method:
+   [E.g. automatic anomaly detection by SOC; employee report;
+   supplier report; data subject complaint]
+
+4. Date this form is sent to the Authority:
+   [DATE AND TIME]
+
+5. If notification exceeds 72 hours, reasons for delay:
+   [Leave blank if within window; otherwise, detailed explanation]
+
+D. NATURE OF THE BREACH
+[ ] Confidentiality breach (unauthorised disclosure)
+[ ] Integrity breach (unauthorised alteration)
+[ ] Availability breach (loss, deletion, service outage)
+
+Description: [BREACH SCENARIO 100-300 WORDS]
+
+E. AFFECTED PERSONAL DATA
+1. Data categories:
+   [E.g. identity (name, ID number), contact (email, phone),
+   customer transaction (order, invoice), marketing preferences]
+
+2. Sensitive data involved:
+   [Yes/No] — If yes: [Health, biometric, etc.]
+
+3. Data subject groups:
+   [E.g. customers, employees, applicants, supplier representatives]
+
+4. Estimated number of affected persons:
+   [NUMBER OR RANGE]; basis of estimate:
+
+5. Number of records affected:
+   [NUMBER OR RANGE]
+
+6. Affected systems:
+   [System name, description]
+
+F. LIKELY CONSEQUENCES
+1. Likely risks for affected data subjects:
+   [E.g. fraud, identity theft, moral harm, commercial loss]
+
+2. Impact level: [Low / Medium / High / Very High]
+
+3. Impact rationale:
+   [DATA VOLUME × SENSITIVITY × REUSE RISK]
+
+G. MEASURES TAKEN OR PLANNED
+1. Immediate measures (within T0 + 72 hours):
+   [E.g. isolation of affected systems, password reset, blocking
+   unauthorised access, log preservation]
+
+2. Mid-term measures (within T0 + 30 days):
+   [E.g. closing the vulnerability, additional MFA, access review,
+   training module update]
+
+3. Long-term structural measures:
+   [E.g. process change, architectural improvement, control gate]
+
+H. NOTIFICATION TO DATA SUBJECTS
+1. Will data subjects be notified:
+   [Yes/No] — If no, reasons:
+
+2. Notification method:
+   [Email / SMS / website announcement / letter / combined]
+
+3. Notification draft:
+   [TEXT — clear language for the data subject covering breach
+   nature, affected data, measures taken, what the data subject
+   can do, contact information]
+
+4. Target notification date:
+   [DATE]
+
+I. ROOT CAUSE ANALYSIS
+1. Cause of the incident:
+   [E.g. vulnerability, human error, social engineering, supplier
+   error]
+
+2. Structural changes to prevent recurrence:
+   [Defined]
+
+J. ANNEXES
+[ ] Data subject notification text
+[ ] Incident timeline
+[ ] Affected data list (anonymised)
+[ ] Forensic analysis report (if any)
+[ ] Prior relevant Authority decisions (if any precedent)
+
+K. APPROVALS
+- Drafted by: [KVKK Officer] — [DATE]
+- Legal: [Legal Counsel] — [DATE]
+- Authorised signatory: [General Manager / KVKK Committee Chair] — [DATE]
+
+==========================================================
+```
+
+---
+
+## 4. TEMPLATE C — DATA SUBJECT NOTIFICATION (Email/SMS/Web) (English equivalent)
+
+```
+Dear [NAME],
+
+[COMPANY] would like to inform you under Law No. 6698 on the
+Protection of Personal Data of a data security event identified
+on [DATE].
+
+WHAT HAPPENED?
+[2-3 sentences in clear language. No blame; professional regret.
+E.g. "Following an unauthorised access to a supplier's systems,
+the name-surname and email address of a limited number of our
+customers may have been accessed by unauthorised third parties."]
+
+WHICH INFORMATION WAS AFFECTED?
+[Clear list — e.g. name-surname, email. State explicitly what was
+not affected: "Your passwords, payment details and ID numbers
+were not affected."]
+
+WHAT DID WE DO?
+[Measures taken — e.g. unauthorised access stopped immediately,
+affected system isolated, passwords forcibly reset, KVKK Authority
+notified, security audit launched.]
+
+WHAT YOU CAN DO?
+[Practical recommendations — e.g. change your password, do not
+open suspicious emails, monitor your account activity, enable 2FA.]
+
+CONTACT
+For questions: [EMAIL] / [PHONE]
+For KVKK Art. 11 rights: [APPLICATION LINK]
+
+The KVKK Authority has also been informed; you can apply to the
+Authority via [KVKK APPLICATION ROUTE].
+
+Regards,
+[COMPANY NAME]
+```
+
+---
+
+## 5. Notification Decision Matrix
+
+| Impact | Authority Notification | Data Subject Notification |
+|--------|-------------------------|----------------------------|
+| Low (limited records, low sensitivity, fast containment) | Generally required (Art. 12/5) | Risk-dependent |
+| Medium | Required | Recommended |
+| High | Required | Required |
+| Critical | Required + extraordinary speed | Required + media communication |
+
+> Per Authority Decision 2019/10, **where there is a risk to data subjects' rights**, notification to data subjects is made. Where no risk and impact is limited, notification to the Authority alone may suffice; this assessment is documented.
+
+## 6. Related Documents
+
+- [../12-mevzuat-arsiv/kurul-kararlari-ozeti.md](../12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+- [../08-ihlal-yonetimi/](../08-ihlal-yonetimi/)
+- [../11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
+
+---
+
+## Türkçe
 
 # Veri İhlali Bildirim Şablonları
 

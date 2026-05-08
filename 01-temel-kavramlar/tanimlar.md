@@ -1,13 +1,242 @@
 ---
-Doküman: KVKK Tanımlar Sözlüğü
-Bölüm: 01-temel-kavramlar
-Sahip: KVKK Sorumlusu / İrtibat Kişisi
-Onaylayan: Yönetim Kurulu / Genel Müdür
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.3; VERBİS Yönetmeliği m.4; İmha Yönetmeliği m.4; Aydınlatma Tebliği m.3; Başvuru Tebliği m.3
+Doküman / Document: KVKK Tanımlar Sözlüğü / KVKK Glossary of Definitions
+Bölüm / Section: 01-temel-kavramlar
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Yönetim Kurulu / Genel Müdür / Board of Directors / CEO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği) / Annual + triggered (regulatory change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.3; VERBİS Yönetmeliği m.4; İmha Yönetmeliği m.4; Aydınlatma Tebliği m.3; Başvuru Tebliği m.3 / KVKK Art. 3; VERBİS Regulation Art. 4; Erasure Regulation Art. 4; Privacy Notice Communiqué Art. 3; Application Communiqué Art. 3
 ---
+
+## English
+
+# KVKK Glossary of Definitions
+
+## 1. Purpose
+
+This document is a glossary prepared to ensure that the fundamental concepts defined in KVKK and its secondary legislation are used identically in corporate practice. This glossary serves as the minimum reference in all KVKK documents; in case of conflict, the legal definition prevails.
+
+## 2. Glossary (Alphabetical)
+
+### Adequacy Decision (Yeterlilik Kararı)
+**Definition:** A decision of the Kurul (the Personal Data Protection Authority) determining that the data protection regulations of a country/international organization provide an adequate level of protection (KVKK Art. 9 — first step in the post-Law 7499 regime).
+**Important:** Where an adequacy decision exists, no additional safeguard is required for transfer. Absence of such a decision triggers the appropriate-safeguards step.
+
+### Anonymization (Anonim Hale Getirme)
+**Definition:** Rendering personal data such that it can no longer be associated with an identified or identifiable natural person, even if combined with other data (KVKK Art. 7/3; Erasure Reg. Art. 4(b)).
+**Important:** An irreversibility test is required. Pseudonymization is **not** anonymization.
+**Example:** For customer segmentation, reducing age to a category + reducing address to province only + deleting unique identifiers.
+
+### Binding Corporate Rules (BCR — Bağlayıcı Şirket Kuralları)
+**Definition:** A set of binding internal data protection rules adopted by a multinational group of companies, with the approval of the Kurul, for intra-group cross-border transfers (KVKK Art. 9/4 — one of the appropriate safeguards).
+**Example:** Transfers of employee/customer data among the group entities of a global technology company.
+
+### Biometric Data (Biyometrik Veri)
+**Definition:** Personal data subject to technical processing relating to a natural person's physical, physiological or behavioral characteristics (sensitive — KVKK Art. 6/1).
+**Example:** Fingerprint, retina scan, facial recognition template, voice pattern.
+
+### Data Controller (Veri Sorumlusu)
+**Definition:** The natural or legal person who determines the purposes and means of processing personal data and who is responsible for the establishment and management of the data filing system (KVKK Art. 3/1(ı)).
+**Test:** The party answering the questions "why" and "how."
+
+### Data Controller Representative (Veri Sorumlusu Temsilcisi)
+**Definition:** For data controllers NOT resident in Türkiye, a legal entity resident in Türkiye or a Turkish citizen natural person empowered with minimum representation rights (KVKK Art. 3 + VERBİS Regulation Art. 4(ğ), Art. 11/2).
+**Important:** Different from the contact person; **has powers of representation**.
+
+### Data Filing System (Veri Kayıt Sistemi)
+**Definition:** A filing system in which personal data are processed, structured according to specific criteria (KVKK Art. 3/1(h)).
+**Example:** CRM, ERP, HR management system, electronic file system, classified paper archive.
+
+### Data Lifecycle (Veri Yaşam Döngüsü)
+**Definition:** The stages personal data passes through, from collection to destruction.
+**Stages:** Collection → Recording → Storage → Use → Transfer → Erasure (deletion/destruction/anonymization).
+
+### Data Processor (Veri İşleyen)
+**Definition:** A natural or legal person, outside the data controller's organization, who processes personal data on its behalf based on the authority granted by the data controller (KVKK Art. 3/1(ğ)).
+**Example:** External payroll service provider, cloud provider (where contractually positioned as such), call center outsourcer.
+**Mandatory contract:** A written contract is required under KVKK Art. 12 and the data security obligation.
+
+### Data Subject (İlgili Kişi)
+**Definition:** The natural person whose personal data is processed (KVKK Art. 3/1(ç)).
+**Important:** Legal entities (companies) are NOT data subjects; only natural persons are. Data of natural persons who are owners/officers of a company are within scope.
+
+### DLP (Data Loss Prevention)
+**Definition:** A set of technical controls preventing the unauthorized exfiltration of sensitive personal or corporate data through unsanctioned channels.
+**KVKK Context:** Recommended technical measure under "prevention of data leakage" in the Data Security Guide.
+
+### Erasure (Silme)
+**Definition:** Rendering personal data inaccessible and unusable for the relevant users in any way (Erasure Reg. Art. 8).
+**Method examples:** Logical delete + access blocking on the database record; redaction; nulling the field (preserving the reference but blocking access).
+
+### Explicit Consent (Açık Rıza)
+**Definition:** Consent given freely with informed will, regarding a specific matter (KVKK Art. 3/1(a)).
+**Three elements:** (i) Relating to a specific matter; (ii) Based on information; (iii) Given freely.
+**Example:** Consent to commercial electronic communication; consent for biometric access.
+**Mistake:** General/blanket consents are invalid; consent tied to the employment contract or service is not free.
+
+### Genetic Data (Genetik Veri)
+**Definition:** Personal data obtained from analysis of a biological sample concerning a person's genetic characteristics (sensitive).
+**Example:** DNA test results, genetic ancestry analysis report.
+
+### Glossary Note: Privacy Notice Obligation (Aydınlatma Yükümlülüğü)
+**Definition:** The data controller's obligation to provide the data subject with the information specified in Art. 10 of the Law at the time of collecting personal data.
+**KVKK Reference:** Art. 10; Privacy Notice Communiqué.
+**Content:** (i) Identity of the data controller, (ii) processing purpose, (iii) transfer purpose/recipients, (iv) collection method and lawful basis, (v) Art. 11 rights.
+**Important:** Independent of explicit consent; it is **always** performed (not contingent on a request).
+
+### Incidental Transfer (Arızi Aktarım)
+**Definition:** Under KVKK Art. 9 post-Law 7499, the cross-border transfer category that may be carried out exceptionally without an adequacy decision or appropriate safeguard.
+**Conditions:** Explicit consent (after disclosure), performance of a contract, vital interest, public interest, etc. (Art. 9/6).
+**Important:** Incidental transfer is an **exception**, not the rule; it is not appropriate for transfers requiring continuity.
+
+### KEP (Registered Electronic Mail / Kayıtlı Elektronik Posta)
+**Definition:** An e-mail system in which the identity of the sender/recipient and the time of sending/receipt can be evidenced under legal regulation.
+**KVKK Context:** Channel for data subject applications (Application Communiqué Art. 5); VERBİS contact notification.
+
+### Kurul
+**Definition:** Personal Data Protection Board — the collegial body authorized to enforce the Law, issue opinions, impose administrative fines and issue corrective directives.
+**Membership:** 7 members (5 elected by the Grand National Assembly + 2 appointed by the President).
+
+### Kurum
+**Definition:** Personal Data Protection Authority — administrative body attached to the Presidency; runs the secretariat of the Kurul.
+
+### Masking (Maskeleme)
+**Definition:** Concealing certain parts of personal data (e.g., the last 4 digits of the National ID, the middle digits of a card number).
+**Important:** Masking is **not** anonymization; the original data is retained in the background.
+
+### Mobile Signature (Mobil İmza)
+**Definition:** A certificate-based electronic signature method provided by mobile operators.
+**KVKK Context:** Channel for data subject applications (Application Communiqué Art. 5/1).
+
+### Periodic Erasure (Periyodik İmha)
+**Definition:** The deletion/destruction/anonymization of personal data for which all lawful bases requiring retention have ended, performed periodically as set out in the Retention and Erasure Policy.
+**Period:** As stated in the policy; under Regulation Art. 11(2) it must be performed **at most every 6 months**.
+
+### Personal Data (Kişisel Veri)
+**Definition:** Any information relating to an identified or identifiable natural person (KVKK Art. 3/1(d)).
+**Example:** Name and surname, National ID, phone, e-mail, IP address, cookie identifier, location data, photograph, voice recording, in-game behavior traces, customer number, etc.
+**Limit:** Anonymous data is not personal data; data not associable with an identifiable person is out of scope.
+
+### Personal Data Processing Inventory (Kişisel Veri İşleme Envanteri)
+**Definition:** The internal record in which the data controller details its personal data processing activities by data category, data subject group, purpose, lawful basis, retention period, and recipient group (Erasure Reg. Art. 4(d)).
+**Important:** Different from the VERBİS notification; the inventory is more detailed and is an internal document. The VERBİS notification is derived from the inventory.
+
+### Personal Data Retention and Erasure Policy
+**Definition:** The internal policy that governs the retention and erasure processes of personal data (Erasure Reg. Art. 5-6).
+**Mandatory:** Required for data controllers subject to VERBİS registration.
+
+### Pseudonymization (Takma Adlama)
+**Definition:** Processing personal data in such a way that it can no longer be attributed to a specific natural person without additional information; can be reversed if the additional information is kept separately.
+**Important:** This is NOT anonymization. Pseudonymized data is **still personal data**.
+**Example:** Keeping the customer ID in a separate mapping table from the real identity.
+
+### Recipient / Recipient Group (Alıcı / Alıcı Grubu)
+**Definition:** The natural or legal person, or a category thereof, to whom the data controller transfers personal data (Privacy Notice Communiqué Art. 3/1(a)).
+**Example recipient groups:** Affiliates, service providers (cloud, courier, call center), banks, authorized public institutions and organizations.
+
+### Recording Environment (Kayıt Ortamı)
+**Definition:** Any environment in which personal data, processed wholly or partially by automated means, or by non-automated means provided that they form part of any data filing system, is held (Privacy Notice Communiqué Art. 3/1(f); Erasure Reg. Art. 4(ç)).
+**Example:** Databases, file servers, e-mail systems, paper archives (filed), CCTV recordings, backup media.
+
+### Registry (VERBİS / Sicil)
+**Definition:** The Data Controllers' Registry maintained by the Authority — a publicly accessible information system.
+**Legislation:** VERBİS Regulation.
+
+### Sensitive (Special Category) Personal Data (Özel Nitelikli Kişisel Veri)
+**Definition:** The data categories exhaustively enumerated in KVKK Art. 6/1.
+**List:** Race, ethnic origin, political opinion, philosophical belief, religion, denomination/other belief, dress and appearance, association/foundation/union membership, health, sexual life, criminal conviction, security measures, biometric, genetic.
+**Important:** The list is exhaustive and cannot be expanded by analogy.
+
+### Standard Contract (Standart Sözleşme)
+**Definition:** A contract text published by the Kurul, available as one of the appropriate safeguards in cross-border transfers (KVKK Art. 9/4 — post-Law 7499).
+**Notification:** Notified to the Kurul within 5 business days from signature (Art. 9/5).
+
+### Transfer (Aktarım)
+**Definition:** The disclosure of personal data by the data controller to third parties (domestic or cross-border recipient/recipient group).
+**KVKK Reference:** Art. 8 (domestic), Art. 9 (cross-border — post-Law 7499 regime).
+
+### Undertaking (Taahhütname)
+**Definition:** Method of providing appropriate safeguard for cross-border data transfer through approval by the Kurul (KVKK Art. 9/4 — post-Law 7499).
+**Important:** Different from the standard contract; requires individual Kurul approval.
+
+### VERBİS
+**Definition:** The Data Controllers' Registry Information System (kvkk.gov.tr/verbis).
+**Function:** Registration application, notification update, contact person notification, data controller representative notification.
+
+### Contact Person (İrtibat Kişisi)
+**Definition:** A natural person notified to the Registry on behalf of a Türkiye-resident legal entity data controller for communication with the Authority (VERBİS Reg. Art. 4(ç)).
+**Important:** Has no power of representation; merely a point of contact. See `00-yonetisim/irtibat-kisisi.md`.
+
+### Cross-Border Transfer (Yurt Dışı Aktarım)
+**Definition:** Transfer of personal data to a natural or legal person outside Türkiye.
+**Regime (post 12.03.2024 / Law 7499):** (1) Adequacy decision, (2) Appropriate safeguard (undertaking/BCR/standard contract/international agreement), (3) Exceptional/incidental cases.
+
+### Domestic Transfer (Yurt İçi Aktarım)
+**Definition:** Transfer of personal data to a natural or legal person resident in Türkiye.
+**KVKK Reference:** Art. 8 — performed subject to processing conditions (Art. 5/Art. 6).
+
+### Destruction (Yok Etme)
+**Definition:** Rendering personal data inaccessible, irretrievable and unusable by anyone in any way (Erasure Reg. Art. 9).
+**Method examples:** Physical destruction (shredder for paper), de-magnetization, software-based crypto-shredding (destruction of the key), physical disk destruction.
+
+## 3. Concept Pairs and Frequently Confused Definitions
+
+### 3.1 Anonymization vs Pseudonymization
+| Topic | Anonymization | Pseudonymization |
+|-------|---------------|------------------|
+| Reversibility | Never reversible | Reversible with additional information |
+| Is it personal data? | No (out of scope) | Yes (still subject to KVKK) |
+| Typical use | Data publishing, statistics | Test environment, analytics |
+
+### 3.2 Erasure vs Destruction vs Anonymization
+| Topic | Erasure | Destruction | Anonymization |
+|-------|---------|-------------|---------------|
+| Data state | Inaccessible to relevant user | Inaccessible to anyone | Transformed into a non-identifying form |
+| Database scenario | Logical delete of record | Full deletion + log purge | Reduction of identity fields to non-identifying form |
+| Recovery risk | Yes (from backups) | None | None |
+
+### 3.3 Data Controller vs Data Processor
+- Decision-making authority → data controller
+- Processing under instructions → data processor
+- The same organization can hold both capacities concurrently.
+
+### 3.4 Contact Person vs Data Controller Representative
+- Contact person → communication only, no power of representation
+- Representative → for data controllers not resident in Türkiye, with minimum representation power
+
+### 3.5 Explicit Consent vs Privacy Notice
+- Explicit consent → a lawful basis
+- Privacy notice → an obligation to inform that must be performed in every case
+- Where there is explicit consent, the privacy notice is also required (separate operations).
+
+## 4. Sectoral Concepts (Related to KVKK)
+
+| Concept | Definition / KVKK Context |
+|---------|---------------------------|
+| **Cookie** | An identifier stored on the browser/device; many qualify as personal data (when they make the person identifiable). |
+| **IP Address** | May be personal data under certain conditions (static IP, where users are matchable). |
+| **Location Data** | Location data obtained from mobile devices — is personal data. |
+| **Behavioral Data** | Usage, click and navigation patterns — become personal data when they can be matched to an individual. |
+| **Profiling** | A component of automated decision-making — assessed under the rights in Art. 11/g. |
+
+## 5. Glossary Maintenance
+
+- The glossary is updated upon new legislation or binding Kurul decisions adding new concept definitions.
+- The change date and revision note are recorded for each glossary update.
+- This glossary is the basis of KVKK training material.
+
+## 6. Related Documents
+
+- `01-temel-kavramlar/kisisel-veri-vs-ozel-nitelikli.md`
+- `01-temel-kavramlar/veri-sorumlusu-vs-isleyen.md`
+- `01-temel-kavramlar/ilgili-kisi-haklari.md`
+- `01-temel-kavramlar/isleme-sartlari.md`
+- `12-mevzuat-arsiv/`
+
+---
+
+## Türkçe
 
 # KVKK Tanımlar Sözlüğü
 

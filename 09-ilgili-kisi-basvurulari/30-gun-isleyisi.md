@@ -1,13 +1,291 @@
 ---
-Doküman: 30 Gün İşleyişi (SLA, Otomasyon, Eskalasyon)
-Bölüm: 09-ilgili-kisi-basvurulari
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık
-İlgili Mevzuat: 6698 sayılı KVKK m.13/2; Veri Sorumlusuna Başvuru Tebliği MADDE 6/5, MADDE 7
+Doküman / Document: 30 Gün İşleyişi (SLA, Otomasyon, Eskalasyon) / 30-Day Operation (SLA, Automation, Escalation)
+Bölüm / Section: 09-ilgili-kisi-basvurulari
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü / Head of Legal
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık / Annual
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 13(2); Application Communiqué Articles 6(5) and 7
 ---
+
+## English
+
+# 30-Day Operation - SLA, Automation, Escalation
+
+## 1. Legal Framework
+
+KVKK Art. 13(2) + Communiqué Art. 6(5): The data controller concludes the application **at the earliest opportunity according to the nature of the request, and at the latest within 30 days**, free of charge. If the operation entails additional cost, the fee in Communiqué Art. 7 may be charged.
+
+> **Critical:** The "additional 60-day extension" of GDPR Art. 12 does **not** exist in KVKK. 30 days is a **strict** period; every day of overrun is grounds for sanction.
+
+## 2. Calculation of T+0 (Application Date)
+
+| Channel | T+0 |
+|---------|-----|
+| Written (post / hand-delivered) | Date of service of the document (Communiqué Art. 5(4)) |
+| KEP | Date received in the company KEP account (Art. 5(5)) |
+| Secure/mobile e-signature e-mail | Date received in the company e-mail system |
+| Pre-registered e-mail | Date received in the company e-mail system |
+| Online application software | Date the system records the application |
+
+> Weekend/public holiday: 30 days are counted as **calendar days**. There is no "extension" for holidays - the system runs 24/7.
+
+## 3. Daily SLA Roadmap
+
+### 3.1. Day 0 - Application Received
+
+| Hour | Action | Owner |
+|------|--------|-------|
+| 0-1 hour | Automatic acknowledgment + reference number | System |
+| 1-4 hours | Manual pre-check | KVKK specialist |
+| 4-24 hours | Triage (right/category/unit) | KVKK Officer |
+| 24 hours | Assignment made | KVKK Officer |
+
+### 3.2. Days 1-3 - Identity Verification
+
+- If identity proof is missing, send a follow-up e-mail.
+- For high-risk requests, secondary verification (OTP, video, hint).
+- If identity is verified, mark as "verified".
+
+### 3.3. Days 3-7 - Data Search
+
+- Query the relevant sources from the data map.
+- Parallel searches across IT, CRM, HR, Marketing, Call Center.
+- For data with third parties, request from processors (contractual SLA).
+- Backup data status - backup rotation plan output.
+
+### 3.4. Days 7-15 - Decision Work
+
+- The relevant unit submits a draft response to the KVKK Officer.
+- Legal evaluation (accept/refuse/partial).
+- For automated decision objections, Data Science is involved.
+- Prepare the list for third-party notification if needed.
+
+### 3.5. Days 15-25 - Response Preparation
+
+- The response letter is templated (Communiqué Art. 6 mandatory items).
+- Final Legal sign-off.
+- Final read-through by the KVKK Officer.
+- Fee calculation (page count, storage media).
+
+### 3.6. Days 25-30 - Delivering the Response
+
+- Dispatch on the chosen channel (KEP / e-mail / postal).
+- Notification to third parties (if needed).
+- The substance of the request is actually fulfilled (deletion, rectification).
+- Closure record.
+
+> **Target:** Average response time **under 15 days**. The 30-day cap is a limit, not a rule.
+
+## 4. Automated Tracking System Requirements
+
+### 4.1. Ticket System Features
+
+- Unique BSV-YYYY-NNNN ID per application.
+- KVKK custom fields (channel, right, required unit, deadline).
+- Automatic user notifications (acknowledgment, status updates, response).
+- Audit log (immutable - Splunk integration).
+- KEP integration (incoming KEP -> automatic ticket).
+- E-mail integration (kvkk@sirket.com.tr -> ticket).
+- Web form integration (https://...kvkk/basvuru -> ticket).
+
+### 4.2. SLA Alerts
+
+| Stage | Alert |
+|-------|-------|
+| Day 0 | Ticket opened - KVKK specialist Slack/Teams notification |
+| Day 3 | Triage complete? - reminder to KVKK Officer |
+| Day 7 | Data search progress? - reminder to unit owner |
+| Day 14 | Halfway - summary report by KVKK Officer |
+| Day 21 | Final week - reminder to Legal |
+| Day 25 | Critical - alert KVKK Committee |
+| Day 28 | Red alert - notify CISO + CEO |
+| Day 30 | SLA exceeded - automatic incident opened (`olay-yonetimi`) |
+
+### 4.3. Data Search Automation
+
+- Centralized search (Elasticsearch/Splunk) - one interface across all sources.
+- Federated search by T.R. ID number.
+- Source map: CRM (Salesforce/Hubspot), ERP (SAP/Oracle), HR (Workday/SAP SuccessFactors), marketing (HubSpot/Marketo/Mailchimp), call center (Genesys/Avaya), e-mail archive (Mimecast), web logs (CloudFlare/Akamai), CCTV (video management system).
+- Results auto-generated as PDF report.
+
+### 4.4. Template Engine
+
+- Response letters use **Word/PDF templates** + variable fields.
+- Mandatory Art. 6 fields are auto-populated.
+- After Legal sign-off, digital signature + KEP dispatch.
+
+## 5. Identity Verification Methods
+
+### 5.1. Risk-Level Mapping
+
+| Risk level | Request type | Verification method |
+|-----------|--------------|---------------------|
+| Low | "Is my data being processed?" (Art. 11(a)) | T.R. ID + registered e-mail |
+| Medium | Information (Art. 11(b)), rectification (Art. 11(d)) | T.R. ID + two-clue match (e.g., customer no + last order date) |
+| High | Data copy, erasure (Art. 11(e)), transfer list (Art. 11(ç)) | OTP + two clues + (if needed) video call |
+| Critical | Application by proxy, former employee/customer, special category | Notarized PoA + ID copy + extra verification |
+
+### 5.2. Errors in Verification
+
+- 3 failed OTPs -> lock + human review.
+- Wrong clue answer -> additional question.
+- Suspicious activity -> notify Incident Management (`08-ihlal-yonetimi/`).
+
+### 5.3. Unverifiable Applications
+
+- 2nd completion request within 14 days.
+- 3rd and final completion request within 21 days.
+- Day 28 - prepare refusal text on grounds "identity not verified".
+- Day 30 - reasoned refusal response.
+
+## 6. Complex Requests
+
+### 6.1. KVKK Has No Extension - "Complex" Is Not an Excuse
+
+Some organizations cite the GDPR analogy and ask for 30+30+30 days. **KVKK does not allow this.** The 30-day cap applies even to complex requests. Process design must accommodate this:
+
+- Automated data search (avoids manual hours).
+- Standardized response templates (shortens drafting).
+- Legal on-call (same-day evaluations).
+- Third-party SLAs kept tight at **7-15 days**.
+
+### 6.2. Multi-Right Requests
+
+If 5 rights are claimed in one application, **30 days applies to all of them**. Single response letter, separate sections per right.
+
+### 6.3. Historical Wide-Scope Requests
+
+E.g., "all data over the last 10 years". For records already deleted because retention has lapsed, the response:
+
+- Summarizes the retention policy.
+- States the deletion date.
+- Provides a copy of available data.
+
+## 7. Fee Calculation Examples
+
+### 7.1. Written Response (Communiqué Art. 7(1))
+
+| Pages | Fee |
+|-------|-----|
+| 1-10 pages | **Free** |
+| Page 11 | 1 TRY |
+| 50-page response | (50-10) x 1 TRY = **40 TRY** |
+| 200-page response | (200-10) x 1 TRY = **190 TRY** |
+
+### 7.2. Storage Media (Communiqué Art. 7(2))
+
+| Medium | Cost (approx.) |
+|--------|----------------|
+| CD (700 MB) | 5-10 TRY |
+| DVD (4.7 GB) | 8-15 TRY |
+| USB stick (8 GB) | 50-150 TRY |
+| USB stick (32 GB) | 150-300 TRY |
+
+> The fee may not exceed the **unit cost** of the storage medium. No markup.
+
+### 7.3. Resulting from Our Error
+
+If the application results from the data controller's (our) error, the **fee is refunded within 7 days** (bank transfer). The invoice is canceled.
+
+### 7.4. VAT
+
+The Communiqué's fee schedule does not explicitly mention VAT. **General practice:** the fee is interpreted as VAT-inclusive; no extra VAT is charged to the applicant. The company invoices VAT-inclusive.
+
+## 8. Escalation Thresholds
+
+### 8.1. SLA Breach Escalation
+
+| Delay | Escalation |
+|-------|-----------|
+| 0-7 days | Relevant unit manager |
+| 7-14 days | Unit director + KVKK Officer |
+| 14-21 days | KVKK Committee |
+| 21-30 days | CEO + Board notification |
+| 30+ days | Incident opened, RCA, prep for explanation to Authority |
+
+### 8.2. Legal Risk Escalation
+
+- Request involves special category data -> Legal + KVKK Committee.
+- Request conflicts with a court ruling -> Legal + criminal process.
+- Suspected attacker / malicious application -> 08-Incident Management.
+- Suspicious power of attorney -> notarial verification.
+
+### 8.3. Communication Risk
+
+- Request reflected in media -> Corporate Communications activates.
+- Complaint on social media -> joint Legal + Communications response.
+- Authority letter received -> action plan within 5 business days.
+
+## 9. Process Monitoring Dashboards
+
+### 9.1. Operational Dashboard (Daily)
+
+- Number of open applications.
+- Today's incoming applications.
+- Applications approaching the 7-day mark.
+- Applications past 25+ days (red).
+- Unassigned applications.
+- Awaiting identity verification.
+- Awaiting Legal sign-off.
+
+### 9.2. Management Dashboard (Weekly)
+
+- Weekly inflow trends.
+- Average response time.
+- 30-day compliance rate.
+- Distribution by right.
+- Distribution by channel.
+- Refused vs accepted ratios.
+- Authority correspondence open?
+
+### 9.3. Annual Report (KVKK Committee)
+
+- Total applications.
+- Annual trend.
+- Authority overturn rate of refusals.
+- Process improvement recommendations.
+- Budget and resource needs.
+
+## 10. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Asking for "extension" on complex requests | Shorten with automation and templates; no extension. |
+| Assuming the clock stops on holidays | Clock does not stop; expand on-call coverage. |
+| Continuously delaying identity verification | Should be settled in the first 3 days; not at day 28. |
+| Squeezing the response into the last day | Should be ready on day 25; 5-day buffer. |
+| Sending the response before fee is paid | Up to practice: fee first then response (with Legal sign-off). |
+| Omitting the right to complain in the response | Always included - per the spirit of Art. 6. |
+| Stopping the clock while waiting for third parties | Clock does not stop; tight third-party SLAs. |
+
+## 11. Process Improvement
+
+### 11.1. Monthly Retrospective
+
+KVKK team monthly review:
+- Which step takes the most time?
+- Which right is hardest?
+- Is automation sufficient?
+- Is Legal sign-off time reasonable?
+
+### 11.2. Annual Improvement Cycle
+
+- Benchmarking (sector peers).
+- Revisions in light of new Authority decisions.
+- Training updates.
+- Automation investments.
+
+## 12. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # 30 Gün İşleyişi — SLA, Otomasyon, Eskalasyon
 

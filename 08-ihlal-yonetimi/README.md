@@ -1,13 +1,133 @@
 ---
-Doküman: 08 - İhlal Yönetimi (Bölüm Girişi)
-Bölüm: 08-ihlal-yonetimi
-Sahip: KVKK Sorumlusu / Bilgi Güvenliği Müdürü
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (her ihlal sonrası)
-İlgili Mevzuat: 6698 sayılı KVKK m.12, KVKKK 24.01.2019 tarih 2019/10 sayılı Kararı, KVKK Veri Güvenliği Rehberi (2018), 5651 sayılı Kanun, NIST SP 800-61 Rev.2, ISO/IEC 27035-1:2023
+Doküman / Document: 08 - İhlal Yönetimi (Bölüm Girişi) / 08 - Personal Data Breach Management (Section Introduction)
+Bölüm / Section: 08-ihlal-yonetimi
+Sahip / Owner: KVKK Sorumlusu + Bilgi Güvenliği Müdürü / KVKK Officer + Chief Information Security Officer (CISO)
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (her ihlal sonrası) / Annual + triggered (after every breach)
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 12; Personal Data Protection Authority Decision No. 2019/10 dated 24.01.2019; KVKK Data Security Guide (2018); Law No. 5651; NIST SP 800-61 Rev.2; ISO/IEC 27035-1:2023
 ---
+
+## English
+
+# 08 - Personal Data Breach Management
+
+## 1. Purpose of the Section
+
+In its capacity as data controller, our company processes personal data that may be subject to unauthorized access, unlawful disclosure, loss, or alteration. This section operationalizes the obligations to:
+
+- Notify the Personal Data Protection Authority of Türkiye (the "Authority") **without undue delay and at the latest within 72 hours**, pursuant to Article 12(5) of Law No. 6698 (KVKK).
+- Notify **affected data subjects** through appropriate channels, pursuant to the second sentence of Art. 12(5).
+- Operationally manage **containment, investigation, root cause analysis, and recurrence prevention**.
+
+## 2. Scope
+
+This section covers:
+
+- All digital assets (databases, file servers, e-mail, SaaS applications, mobile devices, IoT/OT systems).
+- Physical environments (archives, HR files, printed documents, CCTV recordings).
+- Data processed on the company's behalf by data processors (cloud providers, outsourced call centers, HR SaaS, courier services).
+- Insider threats (current/former employee, contractor, supplier).
+- All geographical locations (domestic and foreign branches/offices).
+
+## 3. File Index
+
+| # | File | Topic |
+|---|------|-------|
+| 1 | `README.md` | Section introduction (this file) |
+| 2 | `ihlal-mudahale-prosedur.md` | Incident lifecycle aligned with NIST 800-61 / ISO 27035; CSIRT; runbooks |
+| 3 | `72-saat-bildirim.md` | 72-hour Authority notification; data subject notification; Art. 12(5) details |
+| 4 | `ihlal-bildirim-formu.md` | Fillable Authority breach notification form + worked example |
+| 5 | `soak-test-tatbikat.md` | Annual tabletop exercises; 5 scenarios; KPIs |
+| 6 | `kok-neden-analizi.md` | 5 Whys, Fishbone, Apollo RCA; CAPA tracking |
+
+## 4. Core Concepts
+
+### 4.1. Incident vs. Personal Data Breach
+
+| Concept | Definition | KVKK Notification Required? |
+|---------|------------|-----------------------------|
+| Security **incident** | Any attempted or actual event affecting confidentiality, integrity, or availability of an information system (e.g., failed password attempt, antivirus alert). | No - if analysis confirms no personal data was accessed. |
+| Personal data **breach** | Unlawful obtaining, unauthorized access, loss, disclosure, alteration, or destruction of personal data (KVKK Art. 12(5) + Authority Decision 2019/10). | **Yes - to the Authority + data subjects.** |
+
+**Key rule:** Not every security incident is a breach; however, **every breach starts as an incident.** The notification threshold is reached the moment "unauthorized access to or impact on personal data **occurred or is reasonably likely to have occurred**."
+
+### 4.2. Triple Impact Model
+
+The Authority requires breach assessment along three axes:
+
+1. **Confidentiality breach** - unauthorized disclosure (data leak, scraping, BEC).
+2. **Integrity breach** - unauthorized alteration (tampering; manipulation pre/post ransomware encryption).
+3. **Availability breach** - unauthorized deletion/blocked access (ransomware, sabotage, hardware failure combined with insufficient backups).
+
+Any one of these alone may trigger notification.
+
+### 4.3. Definition of "Awareness Moment"
+
+The 72-hour clock starts when **the data controller becomes reasonably aware of the breach**. Not initial suspicion - rather **the moment likelihood of impact on personal data reaches an acceptable degree of certainty**. The company records this date and time **with minute-level precision** in the incident log (see `ihlal-mudahale-prosedur.md` §6).
+
+## 5. Governance and Roles
+
+| Role | Responsibility |
+|------|----------------|
+| **KVKK Officer** | Owner of the section; coordinator of the notification process; primary point of contact with the Authority. |
+| **CISO** | Technical detection, containment, forensics. |
+| **Incident Commander** | Operational decision authority (CISO or delegate). |
+| **Legal Counsel** | Notification text, contractual liability, regulatory risk. |
+| **Corporate Communications** | Press, customer communication, social media. |
+| **HR Director** | Employee breach, insider threat, discipline. |
+| **Executive (CEO/CFO)** | Escalation, budget (forensics, ransom prohibition), final approval. |
+| **Processor DPO** | Contractual notification obligation; informing the controller within the agreed [SLA]. |
+
+## 6. First 24 Hours - Summary Flow
+
+```
+[T+0 Detection] -> [T+1h Initial triage]
+   |
+[T+2h CSIRT meeting]
+   |
+[T+4h Containment decision]
+   |
+[T+8h Scoping - record count, categories]
+   |
+[T+24h Authority preliminary notification - partial information allowed]
+   |
+[T+72h Authority final notification]
+   |
+[T+72h - 30 days Data subject notification]
+   |
+[T+30 days - 6 months Root cause + CAPA + tabletop update]
+```
+
+## 7. Linked Sections
+
+- **05 - Technical Measures** -> SIEM, EDR, log management (detection infrastructure).
+- **06 - Administrative Measures** -> Incident awareness training, confidentiality agreements.
+- **07 - Transfers** -> Notification clause in processor contracts.
+- **11 - Audit and Compliance** -> Breach records as input to internal audit.
+
+## 8. Annual Performance Indicators
+
+The effectiveness of this section is measured with the following metrics (Q1 reporting to the KVKK Committee):
+
+| KPI | Target | Source |
+|-----|--------|--------|
+| Mean Time To Detect (MTTD) | < 24 hours | SIEM event log |
+| Mean Time To Notify the Authority (MTTN) | < 72 hours (mandatory) | Notification archive |
+| Mean Time To Respond (MTTR - containment) | < 4 hours | Incident system |
+| Tabletop completion rate | 100% (4 scenarios annually) | Exercise reports |
+| Recurring breach rate | 0% (CAPA effectiveness) | RCA archive |
+
+## 9. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # 08 - Kişisel Veri İhlali Yönetimi
 

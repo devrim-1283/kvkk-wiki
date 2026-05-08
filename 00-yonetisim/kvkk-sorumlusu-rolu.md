@@ -1,13 +1,305 @@
 ---
-Doküman: KVKK Sorumlusu Rolü ve Görev Tanımı
-Bölüm: 00-yonetisim
-Sahip: KVKK Sorumlusu / İrtibat Kişisi
-Onaylayan: Yönetim Kurulu / Genel Müdür
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişiklik, ihlal)
-İlgili Mevzuat: 6698 sayılı KVKK m.12, m.16; VERBİS Yönetmeliği m.4(ç), m.11; Veri Güvenliği Rehberi (Yönetimsel Tedbirler)
+Doküman / Document: KVKK Sorumlusu Rolü ve Görev Tanımı / KVKK Officer Role and Job Description
+Bölüm / Section: 00-yonetisim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Yönetim Kurulu / Genel Müdür / Board of Directors / CEO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişiklik, ihlal) / Annual + triggered (regulatory change, organizational change, breach)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.12, m.16; VERBİS Yönetmeliği m.4(ç), m.11; Veri Güvenliği Rehberi (Yönetimsel Tedbirler) / KVKK Art. 12, Art. 16; VERBİS Regulation Art. 4(ç), Art. 11; Data Security Guide (Administrative Measures)
 ---
+
+## English
+
+# KVKK Officer Role and Job Description
+
+## 1. Purpose
+
+This document defines the job description, scope of authority, reporting line, principles of independence, and competence profile of the **KVKK Officer**, who assumes operational ownership of the KVKK compliance program within the legal entity acting as data controller. Although KVKK and its secondary legislation do not formally define a "Data Protection Officer" (DPO), the explicit definition and authorization of this role within the internal organization is mandatory as the concrete counterpart of the administrative safeguards obligation (KVKK Art. 12).
+
+## 2. KVKK Officer vs Contact Person: Clear Distinction
+
+Two distinct roles are commonly confused in the KVKK compliance structure:
+
+| Topic | Contact Person (İrtibat Kişisi) | KVKK Officer |
+|-------|----------------------------------|--------------|
+| Legal basis | VERBİS Regulation Art. 11 | KVKK Art. 12 (discretionary in legal terms but de facto mandatory under administrative safeguards) |
+| Mandatory appointment | Mandatory for data controllers subject to VERBİS registration | Not explicitly mandatory in legislation; however, designation of an internal officer is expected as part of administrative safeguards |
+| Power of representation | None. NOT a representative of the data controller. | None. Does not represent the legal entity. |
+| Primary function | Communication with the Kurul (the Personal Data Protection Authority) and data subjects | Actual execution, coordination and monitoring of the KVKK compliance program |
+| Appointing body | Board of Directors resolution | Board of Directors resolution |
+| Residency in Türkiye | Mandatory | Not mandatory but recommended |
+| May the same person hold both roles? | Yes; the roles can be combined in small/mid-sized organizations; separation is recommended for organizations with 500+ employees |
+
+**Critical:** The KVKK Officer is the concrete counterpart of the administrative safeguard under KVKK Art. 12. A data controller cannot be deemed to have fulfilled its administrative safeguards obligation without designating an internal focal point that owns KVKK compliance at organizational level.
+
+## 3. Reporting Line
+
+The KVKK Officer reports **directly to the Board of Directors** or, where authority is delegated, to the **CEO / Chair of the Executive Committee**. An intermediate hierarchical layer (Legal Director, IT Director, HR Director) weakens independence and is not recommended.
+
+```
+Board of Directors
+      |
+      |--- Direct reporting line ---
+      |
+KVKK Officer
+      |
+      |--- Operational coordination ---
+      |
+Legal - IT - Information Security - HR - Business Units
+```
+
+**Dual-line reporting (recommended):**
+- Administrative reporting: CEO / Corporate Secretariat
+- Functional reporting: Board Audit Committee (at least quarterly)
+
+## 4. Principles of Independence
+
+The KVKK Officer carries out the role independently and impartially. The data controller provides the following guarantees so that the role can be performed without being influenced by the appointing body or direct manager:
+
+- **No instruction:** Does not take instructions from business units, procurement or marketing on KVKK compliance decisions; informs these units and presents risk assessments.
+- **Conflict of interest:** The same person may not concurrently hold a position that determines the purposes and means of personal data processing (e.g., CRM Manager, Digital Marketing Director).
+- **Restriction on dismissal:** The employment contract may not be terminated due to performance of KVKK compliance duties; performance evaluation may not be based on KVKK compliance outputs.
+- **Access to information:** Unrestricted right of access to all business units' personal data processing operations, systems, contracts and records.
+- **Budget independence:** The annual KVKK budget is allocated by direct Board of Directors approval.
+
+## 5. Core Duties and Responsibilities
+
+### 5.1 Policy and Document Management
+- Preparation and annual update of the Personal Data Processing and Protection Policy
+- Retention and Erasure Policy (within the scope of the Erasure Regulation Art. 5-6)
+- Management of the privacy notice library (Privacy Notice Communiqué Art. 5)
+- Standardization of explicit consent texts
+- Breach Response Procedure
+- Data Subject Application Procedure (Application Communiqué Art. 5-7)
+- Cross-Border Transfer Procedure and standard contract management
+- Supplier (data processor) Management Procedure
+
+### 5.2 Inventory and Registry
+- Creation and continuous update of the Personal Data Processing Inventory
+- Performance of VERBİS notification and change management (VERBİS Regulation Art. 10 — within 7 days)
+- Tracking of contact person appointments
+- Auditing alignment between information registered in VERBİS and privacy notices
+
+### 5.3 Risk and Compliance
+- Management of Data Protection Impact Assessment (DPIA) processes
+- KVKK risk assessment for new projects, products, system changes (privacy by design)
+- Approvals of Legitimate Interest Assessments (LIA)
+- Annual internal audit plan and execution
+- Monitoring of Kurul decisions and regulatory changes
+
+### 5.4 Breach and Incident Management
+- Operation of the 24/7 breach notification line
+- Notification of breach to the Kurul within 72 hours (KVKK Art. 12/5; Kurul decision 2019/10)
+- Notification to data subjects
+- Root-cause analysis and corrective/preventive actions
+- Annual drill planning and execution
+
+### 5.5 Data Subject Applications
+- Establishing application channels (written, KEP, mobile signature, e-signature, e-mail address declared in the registry)
+- Responding within 30 days (KVKK Art. 13)
+- Maintenance and analysis of application logs
+- Kurul complaint process for rejected applications
+
+### 5.6 Training and Awareness
+- Mandatory annual KVKK training (all employees)
+- Position-specific training (HR, Marketing, Call Center, IT, Procurement)
+- KVKK module in onboarding
+- Monthly internal newsletter / awareness communications
+- Phishing/social engineering drills
+
+### 5.7 Supplier and Transfer Management
+- Management of the data processor contract template
+- Supplier due diligence (DD) process
+- Application of the regime applicable after Law No. 7499 amendment (12.03.2024) for cross-border transfers:
+  - Adequacy decision check
+  - Management of appropriate safeguards (undertaking, BCR, standard contract)
+  - Records of occasional transfers
+  - Notification of standard contract to the Kurul within 5 business days
+
+### 5.8 Governance and Reporting
+- Secretariat of the KVKK Committee
+- Quarterly status report to the Board of Directors
+- KPI tracking (see §10)
+- Annual activity report
+
+## 6. Scope of Authority
+
+The KVKK Officer has **decision authority** in the following areas:
+- Content of KVKK compliance policies and procedures (to be submitted for management approval)
+- Approval/rejection of new processing activities (based on DPIA outputs)
+- Management of low/medium-risk breaches
+- Modifications to the supplier contract template
+
+The KVKK Officer is required to **escalate** in the following areas:
+- High-risk breaches (those requiring notification to the Kurul)
+- High-volume cross-border transfer decisions
+- New technology integrations (AI/LLM, biometric, automated decision-making)
+- Investigations/complaints opened by the Kurul
+- Annual KVKK budget
+- Changes to the KVKK Committee charter
+
+## 7. Competence Profile
+
+### 7.1 Minimum Education and Experience
+- Bachelor's degree: Law, Information Systems, Industrial Engineering, Business Administration or equivalent
+- Minimum 5 years' compliance/legal/information security experience
+- At least 2 years' experience in KVKK / GDPR compliance projects
+
+### 7.2 Knowledge Areas (T-Shaped Competence)
+
+| Dimension | Content |
+|-----------|---------|
+| Legal | KVKK, GDPR, sector-specific regulation (BDDK, EPDK, Ministry of Health, MASAK, ETK), Turkish Code of Obligations, Turkish Penal Code Art. 135-140, Constitution Art. 20 |
+| Technical | Information security fundamentals, network architecture, cryptography fundamentals, log management, IAM, DLP, SIEM, cloud architecture, database fundamentals |
+| Process | Business process analysis, risk management (ISO 31000), internal control, BCM, procurement, HR processes |
+| Soft | Communication, negotiation, reporting, training, crisis management, cross-functional leadership |
+
+### 7.3 Recommended Certifications
+- **CIPP/E** (IAPP): European data protection certification — comparative knowledge with GDPR
+- **CIPM** (IAPP): Privacy management — operational competence
+- **CIPT** (IAPP): Technical privacy
+- **ISO/IEC 27701 Lead Implementer / Auditor**: Privacy information management
+- **ISO/IEC 27001 Lead Auditor**: Information security audit
+- **CISA / CISM** (ISACA): Information systems audit/management
+- KVKK Akademi certifications (Türkiye-focused)
+
+### 7.4 Annual Professional Development
+- Minimum 40 hours of continuing education (CPE) in KVKK/privacy
+- Tracking and summarizing Kurul decisions (at least monthly)
+- At least one industry conference per year (KVKK Akademi, IAPP Europe Congress)
+
+## 8. Conflict of Interest and Confidentiality
+
+### 8.1 Prohibited Concurrent Positions
+- CRM Manager
+- Digital Marketing Director
+- Data Science / Analytics Director
+- Call Center Operations Director
+- HR Operations Manager (HR policy role is acceptable)
+
+### 8.2 Confidentiality Undertaking
+The KVKK Officer is bound by an indefinite duty of confidentiality with respect to personal data learned in the role, even after leaving the position (KVKK Art. 12/4). A written undertaking is signed at the time of appointment (see 99-sablonlar/gizlilik-taahhutnamesi.md).
+
+### 8.3 Conflict of Interest Declaration
+On an annual basis and upon any change, the affiliated companies, partnerships, board memberships and consultancies are declared in writing to the Board of Directors.
+
+## 9. Annual Work Plan Template
+
+The following table contains the activities that must, at minimum, be included in the annual work plan of the KVKK Officer.
+
+| Activity | Frequency | Output | Approval |
+|----------|-----------|--------|----------|
+| Inventory spot check | Monthly (2 processes per month) | Spot check report | KVKK Officer |
+| Full inventory revision | Annual | Updated inventory v.X | Committee |
+| VERBİS compliance check | Quarterly | Compliance report | KVKK Officer |
+| Periodic erasure | Every 6 months (March, September) | Erasure record | KVKK Officer + IT |
+| Privacy notice revision | Annual + triggered | New text versions | Legal |
+| Supplier DD | New supplier + annual renewal | DD report | Procurement + KVKK |
+| Training — all employees | Annual | 95%+ completion rate | HR |
+| Training — high-risk roles | Every 6 months | Completion rate | HR |
+| Phishing drill | Quarterly | Click rate | InfoSec |
+| Breach response drill | Annual | Drill report | Committee |
+| Internal audit | Annual | Audit report | Internal Audit |
+| KPI report | Quarterly | Scorecard | Board of Directors |
+| Annual activity report | Annual (December) | Report | Board of Directors |
+| Regulatory and Kurul decision monitoring | Continuous | Monthly summary | KVKK Officer |
+| Risk map update | Every 6 months | Risk matrix | Committee |
+| DPIA — new projects | Triggered | DPIA report | KVKK Officer + Committee |
+
+## 10. KPIs / Performance Indicators
+
+| KPI | Target | Measurement |
+|-----|--------|-------------|
+| Average response time for data subject applications | ≤ 15 calendar days (statutory cap 30) | Application log analysis |
+| On-time response rate for applications | 100% | Log |
+| Annual training completion rate | ≥ 95% | LMS |
+| Phishing click rate | < 5% | InfoSec report |
+| Breach notification time to Kurul | ≤ 72 hours (from awareness) | Incident logs |
+| VERBİS currency | Change notified within 7 days | Registry check |
+| Periodic erasure execution rate | 100% (data exceeding statutory period = 0) | Erasure report |
+| DPIA completion rate (for new projects) | 100% | Project records |
+| Supplier contract compliance | 100% (KVKK addendum attached) | Procurement inventory |
+| Internal audit finding closure time | ≤ 90 days (critical), ≤ 180 days (high) | Audit follow-up |
+
+## 11. Budget and Resource Requirements
+
+### 11.1 Minimum Headcount (organization with 500+ employees)
+- 1 KVKK Officer (full-time, senior)
+- 1 KVKK Specialist (operations, application management, inventory)
+- 0.5 FTE Information Security liaison (matrix reporting)
+- 0.5 FTE Legal liaison (contract review)
+
+### 11.2 Annual Budget Items (Indicative)
+- Personnel cost (the structure above)
+- Training platform / content (LMS license, content production)
+- Certification and continuing education
+- External legal counsel
+- Technical tools:
+  - Inventory / OneTrust-style compliance platform (optional)
+  - DLP license (may be in InfoSec budget)
+  - SIEM/log management (may be in InfoSec budget)
+  - DPIA automation tools
+- Internal audit (external support)
+- Drills (red team, tabletop exercise)
+- Memberships (IAPP, KVKK Akademi)
+
+### 11.3 Budget Approval Process
+The annual budget is reviewed by the KVKK Committee, then finalized through CEO approval and Board of Directors resolution. A "contingency line" (15% of total budget) is reserved for unplanned critical expenditures during the year (e.g., breach response, external forensics).
+
+## 12. Appointment Resolution Template
+
+```
+T.C.
+[Company Name] A.Ş.
+Board of Directors Resolution
+
+Resolution No: [YYYY/NN]
+Resolution Date: [DD/MM/YYYY]
+
+In order to ensure the coordinated and effective performance of our
+Company's obligations under Law No. 6698 on the Protection of Personal
+Data and the related secondary legislation;
+
+1) [Full Name / National ID Number / Position] is appointed as KVKK
+   Officer,
+2) The job description of the appointee is determined within the
+   framework of the attached "KVKK Officer Job Description" document,
+3) The KVKK Officer shall provide quarterly reports to the Board Audit
+   Committee and shall report administratively to the CEO,
+4) The independence, access to information and budget authority
+   required by the role have been granted,
+
+resolved unanimously.
+
+[Signatures]
+```
+
+## 13. Handover and Business Continuity
+
+In the event of departure, leave, illness or business travel of the KVKK Officer:
+- **Deputy:** A pre-appointed KVKK Specialist conducts daily operations except critical decisions.
+- **Handover:** A 30-day parallel working period applies upon role change.
+- **Knowledge management:** All procedures, checklists and open items are kept current in the wiki.
+- **VERBİS update:** Contact person change is notified to the Registry within 7 days (VERBİS Regulation Art. 10).
+
+## 14. Performance Evaluation
+
+The performance of the KVKK Officer is evaluated by the **KVKK Committee's assessment** with CEO approval, not by the direct manager. Evaluation criteria may consist solely of KVKK compliance outputs; sales/operational targets cannot be used.
+
+## 15. Related Documents
+
+- `00-yonetisim/irtibat-kisisi.md`
+- `00-yonetisim/komite-yapisi.md`
+- `00-yonetisim/raci-matrisi.md`
+- `00-yonetisim/yillik-takvim.md`
+- `99-sablonlar/gorev-tanimi-kvkk-sorumlusu.md`
+- `99-sablonlar/gizlilik-taahhutnamesi.md`
+- `11-denetim-ve-uyum/ic-denetim-plani.md`
+
+---
+
+## Türkçe
 
 # KVKK Sorumlusu Rolü ve Görev Tanımı
 

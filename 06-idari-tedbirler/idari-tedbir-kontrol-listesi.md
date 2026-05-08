@@ -1,14 +1,269 @@
 ---
-Doküman: İdari Tedbirler — Denetim-Hazır Kontrol Listesi
-Bölüm: 06-idari-tedbirler
-Sahip: İç Denetim / KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Denetim Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.12; KVKK Veri Güvenliği Rehberi — "İdari Tedbirler Özet Tablosu"
-İlgili Standart: ISO/IEC 27001:2022 Annex A (özellikle A.5, A.6); ISO/IEC 27701:2019; NIST CSF 2.0 GOVERN; CIS Controls v8; OECD Privacy Principles
+Doküman / Document: İdari Tedbirler — Denetim-Hazır Kontrol Listesi / Organizational Measures — Audit-Ready Checklist
+Bölüm / Section: 06-idari-tedbirler
+Sahip / Owner: İç Denetim / KVKK Sorumlusu / Internal Audit / KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Denetim Komitesi / KVKK Committee + Audit Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; KVKK Personal Data Security Guide — "Organizational Measures Summary Table"
+İlgili Standart / Standard: ISO/IEC 27001:2022 Annex A (especially A.5, A.6); ISO/IEC 27701:2019; NIST CSF 2.0 GOVERN; CIS Controls v8; OECD Privacy Principles
 ---
+
+## English
+
+# Organizational Measures Checklist
+
+## Use
+
+This list serves as an **audit-ready** reference for internal audit sampling, annual self-assessment, KVKK Committee quarterly review, and external audit preparation. Each row is evaluated as follows:
+
+- **Status:** Yes / No / Partial / Not Applicable (justification written)
+- **Evidence:** Document, screenshot, log, ticket no, contract, signature
+- **Owner:** Operational owner
+- **Last Test:** Date + test type
+- **Next Test:** Target date
+- **Description / Action:** CAPA reference if missing
+
+ISO 27002:2022 A.x.y references are mapped to each row.
+
+---
+
+## 1. Governance and Policy Framework (10 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 1.1 | Top-level KVKK Policy present, Board of Directors approved, ≤24 months current | A.5.1 | GV.PO |
+| 1.2 | Information Security Policy Board of Directors approved, ≤24 months current | A.5.1 | GV.PO |
+| 1.3 | KVKK Committee established, members defined, monthly meeting held | A.5.2 | GV.OV |
+| 1.4 | KVKK Officer / DPO appointed, independence preserved | A.5.2, A.5.4 | GV.RR |
+| 1.5 | Policy hierarchy (top-bottom level) consistent, no conflicts | A.5.1 | GV.PO |
+| 1.6 | Document Management System (DMS) versioned, audit trail active | A.5.33 | GV.OC-3 |
+| 1.7 | Policy approval chain documented (e-signature / wet) | A.5.1 | GV.PO |
+| 1.8 | Old version archive kept for 5 years | A.5.33 | GV.OC-3 |
+| 1.9 | Exception register kept, time-bound + with compensating controls | A.5.1 | GV.PO |
+| 1.10 | Annual policy review schedule published, 100% completion | A.5.1 | GV.PO |
+
+## 2. Personnel Training and Awareness (8 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 2.1 | Annual training program documented, KVKK Committee approved | A.6.3 | PR.AT |
+| 2.2 | General + role-based modules current (≤12 months) | A.6.3 | PR.AT |
+| 2.3 | LMS completion rate ≥95% annual | A.6.3 | PR.AT |
+| 2.4 | New starter onboarding training is access activation condition | A.6.3 | PR.AT |
+| 2.5 | Knowledge test pass threshold ≥80%, measured | A.6.3 | PR.AT |
+| 2.6 | Phishing simulation quarterly, KPI reported | A.6.3 | PR.AT |
+| 2.7 | Vishing / AI-clone social engineering simulation annual | A.6.3 | PR.AT |
+| 2.8 | Vendor/consultant/intern training mandatory, recorded | A.6.3 | PR.AT |
+
+## 3. Confidentiality Undertakings (6 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 3.1 | Employee KVKK and Confidentiality Undertaking template Legal + KVKK Officer approved | A.6.6 | PR.AA |
+| 3.2 | All new starters sign within orientation week | A.6.2 | PR.AA |
+| 3.3 | Manager / special-category access additional undertakings signed | A.6.6 | PR.AA |
+| 3.4 | Intern + consultant + vendor personnel separate variants signed | A.6.6 | PR.AA |
+| 3.5 | Signature records personnel file + archive (employment + 10 years) | A.6.5 | GV.OC-3 |
+| 3.6 | Re-signing process within 90 days on version change | A.6.6 | PR.AA |
+
+## 4. Vendor (Third Party) Management (12 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 4.1 | Vendor Policy ≤24 months current | A.5.19 | GV.SC |
+| 4.2 | All vendors classified (A/B/C/D), inventoried | A.5.19 | ID.SC |
+| 4.3 | For Class A/B, Data Processor Contract signed, KVKK Art. 12 minimum elements | A.5.20 | GV.SC |
+| 4.4 | Contract template Legal + KVKK Officer approved, ≤12 months current | A.5.20 | GV.SC |
+| 4.5 | Sub-processor transparency + change notification flow | A.5.20, A.5.21 | GV.SC |
+| 4.6 | Cross-border transfer mechanism specific for each vendor (Art. 9 basis) | A.5.20 | GV.SC |
+| 4.7 | Data flow diagram current, consistent with inventory | A.5.21 | ID.AM-7 |
+| 4.8 | Annual SOC 2 / ISO 27001 reports collected, reviewed | A.5.22 | GV.SC |
+| 4.9 | Penetration test report received annually (Class A) | A.5.22 | GV.SC |
+| 4.10 | Quarterly (A) / annual (B/C) review performed, recorded | A.5.22 | GV.SC |
+| 4.11 | Approved cloud provider list, BYOK/CMK policy | A.5.23 | GV.SC |
+| 4.12 | Standard data return/destruction record used in exit process | A.5.22 | GV.SC |
+
+## 5. Risk Management and DPIA (8 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 5.1 | DPIA Standard documented, ≤24 months current | A.5.34 | GV.RM |
+| 5.2 | Risk screening (threshold) integrated into new project process | A.5.34 | GV.RM |
+| 5.3 | DPIA trigger list current, compliant with KVKK guides | A.5.34 | GV.RM |
+| 5.4 | Risk score matrix calibrated, risk appetite management approved | A.5.34 | GV.RM |
+| 5.5 | KVKK Officer writing independent DPIA opinion | A.5.34 | GV.RR |
+| 5.6 | KVKK Committee DPIA approval records archived | A.5.34 | GV.OV |
+| 5.7 | DPIA-required project / DPIA completion ratio 100% | A.5.34 | GV.RM |
+| 5.8 | Annual DPIA review schedule present, 100% completion | A.5.34 | GV.RM |
+
+## 6. Data Subject Rights and Privacy Notice (6 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 6.1 | Privacy Notice Standard documented, contains Art. 10 elements | A.5.34 | GV.OC |
+| 6.2 | Web site + mobile + form + call center privacy notice accessible | A.5.34 | GV.OC |
+| 6.3 | Explicit consent records timestamped, withdrawal as easy | A.5.34 | GV.OC |
+| 6.4 | Data subject application channel (email + form + KEP) published | A.5.34 | GV.OC |
+| 6.5 | Application SLA (30 days) achieved 100% | A.5.34 | RS.MA |
+| 6.6 | Rejected application reason legal, Art. 13 elements in response | A.5.34 | GV.OC |
+
+## 7. Data Breach Management (5 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 7.1 | Data Breach Management Procedure ≤24 months current | A.5.24 | RS.MA |
+| 7.2 | Detection → Committee → 72-hour Authority notification chain documented | A.5.24 | GV.RM |
+| 7.3 | Breach record system (chronological, comprehensive) maintained | A.5.27 | RS.AN |
+| 7.4 | Annual breach drill performed (tabletop) | A.5.26 | RS.MA |
+| 7.5 | Post-breach lessons learned feed back to policy | A.5.27 | ID.IM |
+
+## 8. Retention, Destruction and Data Lifecycle (5 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 8.1 | Retention and Destruction Policy ≤24 months current | A.5.33 | GV.OC-3 |
+| 8.2 | Periodic destruction (quarterly) recorded, multi-signature | A.8.10 | GV.OC-3 |
+| 8.3 | Destruction flow from backups documented, auditable | A.8.13 | PR.DS-3 |
+| 8.4 | Retention period defined for each data category, automatic trigger in system | A.5.33 | GV.OC-3 |
+| 8.5 | Key zeroize record in crypto-shred use | A.8.24 | PR.DS-3 |
+
+## 9. VERBİS and Inventory (4 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 9.1 | VERBİS record current, last update ≤6 months | A.5.34 | GV.OC |
+| 9.2 | Data inventory live document, quarterly review | A.5.9 | ID.AM-7 |
+| 9.3 | Inventory ↔ VERBİS ↔ DPIA consistency audited annually | A.5.9 | ID.AM-7 |
+| 9.4 | Inventory update mandatory when new process added (CI gate) | A.5.9 | ID.AM-7 |
+
+## 10. Internal Audit and Continuous Improvement (6 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 10.1 | Internal Audit Charter ≤24 months current, Board of Directors approved | – (Clause 9.2) | GV.OV |
+| 10.2 | Annual audit plan risk-based, Audit Committee approved | – (Clause 9.2) | GV.OV |
+| 10.3 | KVKK audit topics (§3.2 list) included in annual plan | – (Clause 9.2) | GV.OV |
+| 10.4 | Findings in CAPA tool, 90-day past due critical open 0 | – (Clause 10.1) | ID.IM |
+| 10.5 | Annual management report submitted to KVKK Committee + Board of Directors | – (Clause 9.3) | GV.OV |
+| 10.6 | External audit (ISO, SOC, KVKK) integration and follow-up mechanism | A.5.36 | GV.SC |
+
+## 11. Employee Monitoring, Privacy, Acceptable Use (5 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 11.1 | Employee Privacy Notice current, monitored channels listed, signed annually | A.5.32 | GV.OC |
+| 11.2 | DLP / monitoring scope passes KVKK Art. 4 proportionality test | A.5.32, A.8.12 | GV.OC |
+| 11.3 | BYOD policy provides work profile / personal data separation | A.7.9 | GV.PO |
+| 11.4 | Acceptable Use Policy (AUP) signed | A.5.10 | GV.PO |
+| 11.5 | Monitoring data 4-eyes review (CISO + HR + Legal) | A.5.32 | GV.OV |
+
+## 12. Discipline and Sanctions (3 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 12.1 | Discipline Regulation includes information security violation classification | A.6.4 | GV.PO |
+| 12.2 | Right of defense + appeal documented in disciplinary process | A.6.4 | GV.PO |
+| 12.3 | Breach evidence chain (chain of custody) procedure ready | A.5.28 | RS.AN |
+
+## 13. Communication and Third-Party Notification (4 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 13.1 | Crisis communication plan, spokesperson appointed, media response templates ready | A.5.5, A.5.24 | RS.CO |
+| 13.2 | Data subject breach notification template Turkish + English ready | A.5.34 | RS.CO |
+| 13.3 | Vendor breach notification flow working in contract and operations | A.5.20 | RS.CO |
+| 13.4 | Sectoral regulator (BDDK / CMB / Ministry of Health) notification calendar present | A.5.5 | RS.CO |
+
+## 14. Sectoral and Special Cases (3 items)
+
+| # | Control | ISO 27002 | NIST CSF |
+|---|---------|-----------|----------|
+| 14.1 | If children's data, additional protections (parental consent process) | A.5.34 | GV.OC |
+| 14.2 | Marketing consents IYS compliant, opt-out processes automated | A.5.34 | GV.OC |
+| 14.3 | CCTV / camera recording purpose + duration + sharing policy applied | A.7.4 | GV.PO |
+
+---
+
+## Total Items: 85
+
+## Evaluation Score
+
+For each item: Yes=2, Partial=1, No=0, Not Applicable=excluded.
+
+| Maturity | Range | Comment |
+|----------|--------|-------|
+| **Low** | < 60% | Severe non-compliance risk in KVKK audit |
+| **Developing** | 60-75% | Basic compliance present, systematic gaps |
+| **Competent** | 75-85% | Acceptable compliance, active improvement |
+| **Advanced** | 85-95% | Mature program, above sector average |
+| **Optimized** | > 95% | Excellent compliance, leader level |
+
+Target: **Competent (≥75%)** in the first year, **Advanced (≥85%)** in the second year.
+
+## Annual Self-Assessment Flow
+
+```
+Q1
+   - KVKK Officer prepares evidence collection task plan for the list
+   - Owners upload evidence
+
+Q2
+   - Internal Audit verifies with sampling
+   - Findings processed into CAPA
+
+Q3
+   - Results in summary report to KVKK Committee
+   - Annual management report prepared
+
+Q4
+   - Annual security+privacy posture report to Board of Directors
+   - Next year's plan (new target KPI, new control)
+```
+
+## CAPA Prioritization
+
+For each **No** or **Partial** row:
+
+| Control Impact | SLA |
+|-----------------|-----|
+| May be a finding in KVKK Authority audit | 30 days |
+| Creates legislative violation risk | 30 days |
+| Mandatory under KVKK Art. 12 organizational measure heading | 60 days |
+| Missing at the level of good practice | 90 days |
+| Opportunity for maturity increase | 180 days |
+
+## Relationship with External Audit
+
+- **If ISO 27001 certification exists:** This list forms the internal audit scope as the KVKK extension of ISO Annex A. Completing self-assessment before ISO LA audit is strong preparation.
+- **If pursuing ISO 27701 (PIMS) certification:** Mapping with A.7.x and A.8.x additional controls + this list provides preparation foundation.
+- **KVKK Authority audit:** This list is the evidence set of the requested "applied organizational measures" declaration.
+
+## Combined (Technical + Organizational) Score
+
+Evaluated together with [teknik-tedbir-kontrol-listesi.md](../05-teknik-tedbirler/teknik-tedbir-kontrol-listesi.md):
+
+```
+Total Items: 88 (Technical) + 85 (Organizational) = 173
+```
+
+In the annual report, the KVKK Committee determines overall organizational maturity using the **weighted score of both lists together**. A single list is an inadequate picture — KVKK Art. 12 requires both technical and organizational measures.
+
+## Common Mistakes (Frequent in this List)
+
+- "Policy exists" but "≤24 months not current" — no annual review schedule.
+- "Contract signed" but "minimum elements missing" — template not current.
+- "Training given" but "completion report missing / exam pass missing" — weak evidence.
+- "DPIA performed" but "KVKK Officer opinion missing" — independence questioned.
+- "VERBİS current" but "conflicts with inventory" — quick finding in audit.
+- "Breach record system exists" but "near-miss events not recorded" — culture issue.
+- "Privacy notice exists" but "hidden in mobile view" — Art. 10 violation.
+- "Vendor approval done" but "sub-processor change not monitored" — weak transparency.
+
+---
+
+## Türkçe
 
 # İdari Tedbirler Kontrol Listesi
 

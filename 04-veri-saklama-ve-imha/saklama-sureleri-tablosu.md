@@ -1,13 +1,187 @@
 ---
-Doküman: Kişisel Veri Saklama Süreleri Tablosu
-Bölüm: 04-veri-saklama-ve-imha
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, yeni iş süreci, dava süresi tetiklemesi)
-İlgili Mevzuat: KVKK m.4(2)(d), m.7; Yön. m.6/1-g; 4857 İş K. m.75; 213 VUK m.253; 6102 TTK m.82; 6098 TBK m.146-147; 5510 SGK Kanunu; 5651 Kanun; 6502 Tüketici K.; 6493 Ödeme Hizmetleri K.; 5549 MASAK K.
+Doküman / Document: Kişisel Veri Saklama Süreleri Tablosu / Personal Data Retention Periods Table
+Bölüm / Section: 04-veri-saklama-ve-imha
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (regulatory change, new business process, litigation period trigger)
+İlgili Mevzuat / Legal Reference: KVKK Art. 4(2)(d), Art. 7; Reg. Art. 6/1-g; Labor Law No. 4857 Art. 75; Tax Procedure Law No. 213 Art. 253; Turkish Commercial Code No. 6102 Art. 82; Turkish Code of Obligations No. 6098 Art. 146-147; Social Security Law No. 5510; Law No. 5651; Consumer Protection Law No. 6502; Payment Services Law No. 6493; AML Law No. 5549 (MASAK)
 ---
+
+## English
+
+# Personal Data Retention Periods Table
+
+## 1. Use of the Table
+
+- **Minimum period:** The period during which retention is mandatory under explicit legislation or due to right/litigation statute of limitations.
+- **Maximum period:** At the end of this period, data falls within the scope of periodic destruction; further retention is possible only on a concrete legal ground.
+- The period runs from **the date the processing purpose for which the data category was derived ends**. E.g., the personnel file period starts when employment ends.
+- Period extension is possible only with a concrete **legal hold** (ongoing litigation, audit, investigation) and a joint decision of the KVKK Officer + Legal Director.
+- If multiple overlapping laws apply, **the longest period** applies.
+
+## 2. Period Decision Algorithm
+
+```
++------------------------------------------+
+| Data category determined                 |
++------------------------------------------+
+              |
+              v
++------------------------------------------+
+| Is there an explicit period in law?      |
++------------------------------------------+
+       |                       |
+    yes|                     no|
+       v                       v
++--------------+    +--------------------------+
+| Apply        |    | Is right/litigation      |
+| statutory    |    | statute of limitation    |
+| period       |    | applicable?              |
++--------------+    +--------------------------+
+       |                 |              |
+       |              yes|            no|
+       |                 v              v
+       |    +--------------+   +-------------------+
+       |    | Apply        |   | Period required   |
+       |    | limitation   |   | by processing     |
+       |    | period       |   | purpose           |
+       |    +--------------+   +-------------------+
+       |                 |              |
+       v                 v              v
++------------------------------------------+
+| Is there a legal hold?                   |
++------------------------------------------+
+              |
+       yes (extend during legal hold)
+              |
+              v
++------------------------------------------+
+| Destruction calendar at end of period    |
++------------------------------------------+
+```
+
+## 3. Period Table (By Data Category)
+
+> Periods are common practice in Turkey for organizations with 500+ employees. Subject to sectoral legislation (BDDK, SPK, EPDK, Ministry of Health, etc.), each organization should adapt to its own situation.
+
+### 3.1. Human Resources
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 1 | Employee personnel file (ID, residence, diploma, contract) | Performance of contract + legal obligation | Labor Law No. 4857 Art. 75 (10 yrs), Code of Obligations No. 6098 Art. 146 (10 yrs) | 10 years from end of employment | 10 years | Paper: shredder + record; Electronic: hard-delete + log cleansing | HR |
+| 2 | Payroll, wage calculation, deduction documents | Legal obligation | Tax Procedure Law Art. 253 (5 yrs), Labor Law Art. 75; Social Security 10 yrs | 10 years from relevant period | 10 years | Paper: shredder; Electronic: hard-delete | HR + Finance |
+| 3 | Social Security entry/exit notifications, service records | Legal obligation | Social Security Law No. 5510 Art. 86 | 10 years from end of employment | 10 years | Paper: shredder; Electronic: hard-delete | HR |
+| 4 | Occupational accident and disease records | Legal obligation + likelihood of litigation | OSH Law No. 6331 Art. 14, Code of Obligations Art. 146 | 15 years from notification (long limitation) | 15 years | Paper: shredder; Electronic: hard-delete | HR + OSH |
+| 5 | Performance, training, disciplinary records | Performance of contract + legitimate interest | Labor Law No. 4857 general | 10 years from end of employment | 10 years | Electronic: hard-delete | HR |
+| 6 | Rejected candidate applications (CV, interview notes) | Explicit consent + legitimate interest (future role assessment) | KVKK Art. 5/2 | 6 months after position closure; with explicit consent up to **2 years** | 2 years | Electronic: hard-delete; Paper: shredder | HR |
+| 7 | Reference info accompanying job applications | Pre-contractual measures + legitimate interest | KVKK Art. 5/2 | 6 months prior to start when hired; with rejection at the same time | 2 years | Electronic: hard-delete | HR |
+| 8 | Employee health reports (special category) | OSH obligation | OSH Law, Health Personnel Law | 15 years from end of employment | 15 years | Sealed envelope archive → record-based destruction | Workplace Physician + HR |
+| 9 | Employee biometric records (fingerprint, face) | Explicit consent (special category) | KVKK Art. 6/2 | **Immediate** destruction at end of employment; long retention prohibited | End of employment | Electronic: crypto-erase + log | HR + Information Security |
+
+### 3.2. Customer and Contract
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 10 | Customer contracts and annexes (natural person/officer) | Performance of contract + legal obligation + limitation | Code of Obligations Art. 146 (10 yrs), Commercial Code Art. 82 (10 yrs commercial retention) | 10 years from contract end | 10 years | Paper: shredder; Electronic: hard-delete + backup destruction | Legal + Relevant Unit |
+| 11 | Current account, invoice, dispatch note | Legal obligation | Tax Procedure Law Art. 253 (5 yrs), Commercial Code Art. 82 (10 yrs) | 10 years from relevant period | 10 years | Paper: shredder; Electronic: hard-delete | Finance |
+| 12 | Customer contact info (CRM records) | Performance of contract + legitimate interest | KVKK Art. 5/2-c, f | 10 years from contract end; commercial e-message consent managed separately | 10 years | Electronic: hard-delete | Marketing + Sales |
+| 13 | Consumer complaints and replies | Legal obligation | Consumer Protection Law Art. 68 (limitation) | 5 years from complaint closure | 5 years | Electronic: hard-delete; Paper: shredder | Customer Service |
+
+### 3.3. Financial and Tax
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 14 | Invoices, books, declarations | Legal obligation | Tax Procedure Law Art. 253 (5 yrs); Commercial Code Art. 82 (10 yrs) | 10 years from relevant period | 10 years | Paper: shredder + incineration; Electronic: hard-delete | Finance |
+| 15 | E-invoice, e-ledger, e-archive records | Legal obligation | Tax Procedure Law Communiqués | 10 years from relevant period | 10 years | Electronic: hard-delete + backup destruction | Finance + IT |
+| 16 | Bank account movements, receipts | Legal obligation + commercial retention | Commercial Code Art. 82 | 10 years from transaction date | 10 years | Paper: shredder; Electronic: hard-delete | Finance |
+| 17 | Card payment info (PAN, expiry) | Performance of contract | BKM Rules, PCI-DSS | **Immediate** deletion after authorization; PAN retention prohibited; if retained masking + tokenization | End of transaction | Tokenization + crypto-erase | Payments/IT |
+| 18 | Refund, chargeback records | Legal obligation + limitation | Consumer Protection Law | 5 years from transaction date | 5 years | Electronic: hard-delete | Finance |
+| 19 | AML/CFT identity verification (for obliged institutions) | Legal obligation | AML Law No. 5549 Art. 6 | 8 years from end of relationship | 8 years | Electronic: hard-delete; Paper: shredder | Compliance |
+
+### 3.4. E-Commerce and Marketing
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 20 | E-commerce order record (buyer, product, price, address) | Performance of contract + legal obligation | Consumer Protection Law, E-Commerce Law No. 6563 | 10 years from order completion (Commercial Code retention) | 10 years | Electronic: hard-delete | E-commerce + Finance |
+| 21 | Membership/account info (name, email, phone, password hash) | Explicit consent / performance of contract | KVKK Art. 5/2 | 10 years from account deletion/termination (limitation) | 10 years | Electronic: hard-delete | E-commerce |
+| 22 | Marketing consent (E-Commerce Law IYS record) | Explicit consent | E-Commerce Law Art. 6 | Until withdrawal; **3 years** for proof after withdrawal | 3 years (post-rejection) | Electronic: hard-delete | Marketing |
+| 23 | Cookie data — strictly necessary | Legitimate interest | KVKK Art. 5/2-f | During session | End of session | Browser-side + server-side delete | Web/Marketing |
+| 24 | Cookie data — analytics | Explicit consent | KVKK Art. 5/1 | Period stated in cookie policy (typically 13 months) | 13 months | Automatic expiry | Web/Marketing |
+| 25 | Cookie data — marketing/3rd party | Explicit consent | KVKK Art. 5/1 | Per cookie policy; immediate at consent withdrawal | 13 months | Automatic expiry + end of consent | Web/Marketing |
+
+### 3.5. Security and Monitoring
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 26 | CCTV footage (entrance, common areas) | Legitimate interest | KVKK Art. 5/2-f, Art. 10 disclosure requirement | 15-30 days if no incident; until end of incident if incident | 30 days (routine) | Auto-overwrite; controlled deletion after incident | Information Security + Physical Security |
+| 27 | Call center voice recordings | Performance of contract + legitimate interest (quality, dispute) | KVKK Art. 5/2-c, f | 1-3 years from call (evidence); longer if sectoral mandate | 3 years (subject to sectoral exception) | Electronic: hard-delete + backup destruction | Call Center + IT |
+| 28 | Web server access logs (IP, URL, timestamp) | Legal obligation | Law No. 5651 Art. 5, Hosting Provider Regulation | 6 months – 2 years from transaction (per content/host/access provider) | 2 years | Electronic: hard-delete + log rotation | IT |
+| 29 | System access logs, privileged operation logs | Legitimate interest (security, audit) | KVKK Art. 12, ISO 27001 | At least 1 year; 2-5 years for critical systems | 5 years | Electronic: hard-delete + SIEM rotation | Information Security |
+| 30 | Firewall, IPS, EDR event logs | Legitimate interest | KVKK Art. 12 | At least 1 year | 2 years | Electronic: hard-delete | Information Security |
+| 31 | DLP event logs | Legitimate interest + breach management | KVKK Art. 12 | 1 year if no breach suspicion; until end of forensic period if breach | 5 years | Electronic: hard-delete | Information Security |
+| 32 | Visitor log (paper or electronic) | Legitimate interest | KVKK Art. 5/2-f | 2 years from visit date | 2 years | Paper: shredder; Electronic: hard-delete | Physical Security |
+
+### 3.6. Governance and Compliance
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 33 | KVKK data subject application and response records | Legal obligation | KVKK Art. 13, Application Communiqué | 10 years from response date (limitation) | 10 years | Electronic: hard-delete | KVKK Officer |
+| 34 | Breach record system (KVKK Art. 12 breach records) | Legal obligation | KVKK Art. 12, Board decisions | At least 5 years from breach closure | 10 years | Electronic: hard-delete | KVKK Officer + Information Security |
+| 35 | Destruction records (Reg. Art. 7(3)) | Legal obligation | Reg. Art. 7(3) | **At least 3 years** after operation | 5 years (recommended) | Paper: archive → shredder; Electronic: hard-delete | KVKK Officer |
+| 36 | Explicit consent proof records | Legal obligation (burden of proof) | KVKK Art. 3, Art. 5/1 | Relationship period + 10 years (limitation) | 10 years | Electronic: hard-delete | KVKK Officer + Relevant Unit |
+| 37 | Disclosure notice version archive | Legal obligation (proof) | KVKK Art. 10, Disclosure Communiqué | 10 years from end of applicability of relevant version | 10 years | Versioned archive | KVKK Officer |
+| 38 | DPIA / VBİA reports | Legitimate interest + audit | KVKK Art. 12, Data Security Guide | 5 years from end of assessed process | 5 years | Electronic: hard-delete | KVKK Officer |
+
+### 3.7. Suppliers and Contracted Third Parties
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 39 | Supplier contract and annexes (officer info) | Performance of contract + legal obligation | Code of Obligations Art. 146, Commercial Code Art. 82 | 10 years from contract end | 10 years | Paper: shredder; Electronic: hard-delete | Procurement + Legal |
+| 40 | Supplier authorized contact info | Performance of contract | KVKK Art. 5/2-c | 10 years from contract end | 10 years | Electronic: hard-delete | Procurement |
+| 41 | Data processor audit reports | Legitimate interest + audit | KVKK Art. 12 | 5 years from contract end | 5 years | Electronic: hard-delete | KVKK Officer + Procurement |
+
+### 3.8. Legal and Corporate
+
+| # | Data Category | Legal Reason | Legal Basis | Min. Period | Max. Period | Destruction Method | Owner |
+|---|---------------|--------------|-------------|-------------|-------------|--------------------|-------|
+| 42 | Power of attorney (natural person) | Legal obligation | Code of Obligations, related law | 10 years from end of attorneyship | 10 years | Paper: shredder | Legal |
+| 43 | Personal data of company shareholders/officers | Legal obligation | Commercial Code | Shareholding/term + 10 years | 10 years | Electronic: hard-delete | Legal + HR |
+| 44 | Litigation files (containing personal data) | Legal obligation | Code of Obligations Art. 146 | 10 years from finalization | 10 years | Paper: shredder; Electronic: hard-delete | Legal |
+| 45 | General Assembly, Board minutes (natural person info) | Legal obligation | Commercial Code | 10 years | 10 years | Corporate archive | Legal + Board Secretariat |
+
+## 4. Period Exceptions
+
+### 4.1. Legal Hold
+
+In the following cases, the retention period is paused and destruction is deferred:
+
+- Ongoing or likely litigation (party or evidence),
+- A retention order issued by a competent authority (court, prosecutor, BDDK, SPK, Competition Authority, Tax Inspectorate, etc.),
+- An investigation initiated by the KVKK Board,
+- Breach forensic investigation.
+
+For data under legal hold:
+- The Legal Director and KVKK Officer issue a joint written decision,
+- The relevant data is flagged "hold," retention jobs are disabled,
+- Within 30 days after the hold reason ends, it goes back to the standard destruction calendar,
+- The hold duration and reason are recorded.
+
+### 4.2. Withdrawal of Explicit Consent
+
+Withdrawal of explicit consent is prospective; processing stops as soon as the withdrawal reaches the data controller. If no other legal basis exists, the data is destroyed.
+
+## 5. Table Maintenance Discipline
+
+- Annual scan: Regulatory change scan with the Legal Department.
+- New process trigger: A row is added to the table before a new process starts; inventory and VERBİS are updated.
+- Period shortening: If the Board decides otherwise (Reg. Art. 11/4 — irreparable harm or clear unlawfulness), the period is shortened.
+- Period extension: Only with a concrete legal reason + Legal Department approval.
+
+---
+
+## Türkçe
 
 # Kişisel Veri Saklama Süreleri Tablosu
 

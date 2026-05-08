@@ -1,14 +1,353 @@
 ---
-Doküman: Kişisel Veri Etki Değerlendirmesi (DPIA / PIA) ve Risk Yönetimi Standardı
-Bölüm: 06-idari-tedbirler
-Sahip: KVKK Sorumlusu + Risk Yönetimi
-Onaylayan: KVKK Komitesi + Üst Yönetim
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni proje, yeni teknoloji, mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.4 (genel ilkeler — ölçülülük), m.6 (özel nitelikli), m.12 (veri güvenliği); KVKK Kurum Rehberleri; GDPR Art. 35 (DPIA — kıyaslamalı çerçeve)
-İlgili Standart: ISO/IEC 29134:2017 (Privacy Impact Assessment); ISO/IEC 27005:2022 (Information Security Risk Management); ISO 31000:2018 (Risk Management); NIST Privacy Framework; NIST CSF 2.0 GV.RM, ID.RA; ENISA "Recommendations on Shaping Technology Risks"; CNIL PIA Methodology
+Doküman / Document: Kişisel Veri Etki Değerlendirmesi (DPIA / PIA) ve Risk Yönetimi Standardı / Personal Data Impact Assessment (DPIA / PIA) and Risk Management Standard
+Bölüm / Section: 06-idari-tedbirler
+Sahip / Owner: KVKK Sorumlusu + Risk Yönetimi / KVKK Officer + Risk Management
+Onaylayan / Approved by: KVKK Komitesi + Üst Yönetim / KVKK Committee + Senior Management
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni proje, yeni teknoloji, mevzuat değişikliği) / Annual + triggered (new project, new technology, regulatory change)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 4 (general principles — proportionality), Art. 6 (special category), Art. 12 (data security); KVKK Authority Guides; GDPR Art. 35 (DPIA — comparative framework)
+İlgili Standart / Standard: ISO/IEC 29134:2017 (Privacy Impact Assessment); ISO/IEC 27005:2022 (Information Security Risk Management); ISO 31000:2018 (Risk Management); NIST Privacy Framework; NIST CSF 2.0 GV.RM, ID.RA; ENISA "Recommendations on Shaping Technology Risks"; CNIL PIA Methodology
 ---
+
+## English
+
+# Personal Data Impact Assessment (DPIA / PIA) and Risk Assessment
+
+## 1. Purpose
+
+To enable systematic assessment of high-risk personal data processing activities **before they begin**, subjecting them to a proportionality test, identifying risks and mitigating them with measures, and submitting them for KVKK Committee approval. The operational arm of the proportionality principle of KVKK Art. 4; the natural result of the KVKK Authority's **risk-based compliance** approach.
+
+> While the KVKK text does not explicitly regulate DPIA like GDPR Art. 35, the general principles of KVKK Art. 4 and the obligation of Art. 12 effectively render **high-risk processing without risk assessment** non-compliance before the Authority. Therefore, DPIA is an inseparable part of **good governance and compliance evidence**.
+
+## 2. Definitions
+
+| Term | Definition |
+|-------|-------|
+| **DPIA / KVED** | Data Protection Impact Assessment. |
+| **PIA** | Privacy Impact Assessment (broad privacy assessment). |
+| **Risk** | Combination of the likelihood of a particular threat occurring and the impact arising. |
+| **Residual Risk** | Risk remaining after measures are taken. |
+| **Risk Appetite** | The level of risk management is willing to accept. |
+| **Threat** | An event that may cause harm. |
+| **Vulnerability** | A weakness that the threat may exploit. |
+| **Measure** | A control aimed at reducing risk. |
+
+## 3. When is DPIA Mandatory?
+
+DPIA is mandatory if one of the following **triggers** exists:
+
+### 3.1. High-Risk Scenarios (KVKK Authority Guides and GDPR WP29 recommendations)
+
+1. **Systematic and large-scale profiling / evaluation** — credit scoring, insurance risk score, employee performance algorithm.
+2. **Automated decision-making** — KVKK Art. 5/2(f) "provided that it does not harm the fundamental rights and freedoms of the data subject" — but DPIA if there may be impact on rights and freedoms.
+3. **Special-category data processing (KVKK Art. 6)** — health, biometric, genetic, criminal conviction, union, religion, etc.
+4. **Children's data** — under 18.
+5. **Employee monitoring (continuous, broad scope)** — broad DLP, camera, GPS, keyboard/screen capture.
+6. **Large-scale public area monitoring** — CCTV network, public face recognition.
+7. **New technology adoption** — AI/ML, biometrics, IoT, blockchain, AR/VR.
+8. **Combination of multiple datasets** (data combination) — sector market, profile enrichment.
+9. **Automated decision regarding contracting / service provision to a person.**
+10. **Cross-border transfer** — especially to countries without adequacy decision.
+11. **Health, finance, education sector** — high-sensitivity sectoral.
+12. **Processing of customers / employees for monitoring purposes.**
+
+### 3.2. Trigger Table
+
+| Trigger | DPIA |
+|-------|------|
+| New project, includes personal data | Risk screening; DPIA if high-risk |
+| Existing process new technology | DPIA |
+| New vendor (Class A) | Due diligence with DPIA component |
+| Cross-border transfer new country | DPIA |
+| New employee monitoring tool | DPIA |
+| AI/ML model going to production | DPIA |
+| Regulatory change impact | Existing DPIA review |
+| After significant breach | DPIA review of affected process |
+
+## 4. DPIA Process
+
+```
+1. Trigger (New project / change)
+2. Risk Screening (Threshold Assessment) — DPIA needed?
+3. Team Formation (process owner + KVKK Officer + CISO + Legal + IT)
+4. Data Flow Mapping
+5. Necessity and Proportionality Test
+6. Threat & Risk Identification
+7. Measure Design
+8. Residual Risk Assessment
+9. KVKK Officer Opinion
+10. KVKK Committee Decision (Approval / Improvement / Rejection)
+11. Implementation and Monitoring
+12. Periodic Review
+```
+
+## 5. DPIA Template (Sections)
+
+### 5.1. Executive Summary
+
+- Project / process name.
+- Process owner.
+- Preparers.
+- Preparation date.
+- Result (approval status, conditions, residual risk level).
+
+### 5.2. Process Description
+
+- Process purpose (business goal).
+- Beneficiaries (data subject groups).
+- Service / process flow (high-level).
+- Related systems and technologies.
+- Data controller / data processor roles.
+
+### 5.3. Data Flow
+
+- Data categories (general + special-category).
+- Data source (from data subject, from third party?).
+- Processing steps (collection → use → storage → transfer → destruction).
+- Data flow diagram (visual).
+- Transfer destinations (domestic / cross-border).
+- Retention periods.
+- Destruction methods.
+
+### 5.4. Legal Basis
+
+- Which condition under KVKK Art. 5 (general) / Art. 6 (special category)?
+- If taking explicit consent: showing that consent is free / informed / specific.
+- Legal grounds such as establishment of contract, legal obligation, public interest documented.
+- Cross-border transfer legal mechanism (Art. 9).
+
+### 5.5. Necessity and Proportionality Test
+
+KVKK Art. 4 proportionality test:
+
+- **Is it suitable for the purpose?** Is the data necessary for the purpose collected?
+- **Is it limited?** Can the same purpose be achieved with less data?
+- **Is it proportional?** Is the data collection method, scope proportional?
+- **Is it specific?** Is the purpose clear and understandable?
+- **Is the retention period reasonable?**
+- **Have alternatives been considered?** (Anonymous, synthetic, less sensitive).
+
+### 5.6. Data Subject Rights
+
+- Has the privacy notice been prepared?
+- How is the explicit consent process?
+- How are access, rectification, erasure, objection, portability, automated-decision-objection rights implemented?
+- Is the application channel recorded?
+
+### 5.7. Threat and Risk Identification
+
+In LINDDUN (privacy) + STRIDE (security) frameworks:
+
+| # | Threat | Impact | Likelihood | Risk Score | Measure | Residual Risk |
+|---|--------|------|----------|------------|--------|------------|
+| R1 | Unauthorized access to DB | Very High | Medium | **High** | MFA + RLS + audit | Low |
+| R2 | Data controller out-of-instruction use (insider) | High | Low | Medium | DLP + UEBA + training | Low |
+| R3 | Unauthorized access in cross-border transfer | Very High | Low | Medium | Standard contract + encryption + audit | Low |
+| R4 | Algorithm misclassification | High | Medium | **High** | Human review + DPIA review + right of objection | Medium |
+| ... | ... | ... | ... | ... | ... | ... |
+
+### 5.8. Possible Impact on the Data Subject
+
+- Material harm (loss, fraud).
+- Non-material harm (embarrassment, discrimination, reputation loss).
+- Service access blocking (automated decision).
+- Privacy breach.
+- Category / stigma resulting from profiling.
+- Additional sensitivity for children.
+- Additional sensitivity for special-category data.
+
+### 5.9. Measures
+
+| Category | Measure |
+|----------|--------|
+| Technical | Encryption, MFA, RLS, audit log, DLP, key management |
+| Organizational | Training, undertaking, policy, audit, contract |
+| Legal | Privacy notice, consent, contract terms, regulatory tracking |
+| Procedural | Control points, 4-eyes, periodic review |
+| Data Architecture | Minimization, anonymous/pseudonym, data quality, automatic retention |
+
+### 5.10. Residual Risk and Approval
+
+- Risk score remaining after measures.
+- Comparison with risk appetite — is it acceptable?
+- If unacceptable: additional measures / project redesign / cancellation.
+- KVKK Officer opinion letter (in annex).
+- KVKK Committee decision record (in annex).
+
+### 5.11. Monitoring and Review
+
+- Frequency of review (annual, quarterly).
+- Events triggering review.
+- KPIs.
+
+## 6. Risk Score Matrix
+
+### 6.1. Impact
+
+| Level | Definition | Example |
+|--------|-------|-------|
+| 5 — Very High | Irreversible harm to data subject; large-scale disclosure | Health data leaked to public |
+| 4 — High | Significant harm; correction difficult | Turkish ID + card 100K records leaked |
+| 3 — Medium | Correctable harm; temporary service interruption | Limited personal data (name-surname) leaked |
+| 2 — Low | Minimal harm; quick correction | Logging deficiency noticed |
+| 1 — Very Low | Negligible | Policy update delayed |
+
+### 6.2. Likelihood
+
+| Level | Definition |
+|--------|-------|
+| 5 — Very High | Actively occurring or imminent |
+| 4 — High | Likely to occur within the year |
+| 3 — Medium | Likely within 1-3 years |
+| 2 — Low | Likely within 3-5 years |
+| 1 — Very Low | Practically not likely |
+
+### 6.3. Risk Score
+
+```
+Risk = Impact × Likelihood
+```
+
+| Score | Class | Action |
+|------|-------|---------|
+| 20-25 | Critical | IMMEDIATELY — project halted, senior management decision |
+| 12-19 | High | Measure mandatory — within 30 days |
+| 6-11 | Medium | Measure recommended — within 90 days |
+| 1-5 | Low | Monitored — annual review |
+
+### 6.4. Risk Appetite
+
+Organization general risk appetite: KVKK breach-creating risk tolerated at **Low level**. High-Critical risk is not acceptable without explicit justification + senior management approval + compensating controls.
+
+## 7. Management Roles
+
+| Role | Responsibility |
+|-----|-------------|
+| Process Owner (Business Unit) | DPIA preparation request, content information provision, measure implementation |
+| KVKK Officer | DPIA methodology, opinion letter, follow-up |
+| CISO Office | Technical measure design, threat modeling |
+| Legal | Legal basis, contract |
+| IT / Architecture | Data flow, system integration |
+| Risk Management | Score, consistency, corporate risk integration |
+| KVKK Committee | Approval / rejection / conditional approval decision |
+| Internal Audit | DPIA practice sample audit |
+
+## 8. Risk Management Connections
+
+DPIA is integrated into the organization's **holistic risk management** framework:
+
+```
+Strategic Risk (Senior Management)
+   ↓
+Operational Risk (Risk Management)
+   ├── Information Security Risk Register (CISO)
+   ├── Privacy/KVKK Risk Register (KVKK Officer) ← DPIA outputs go here
+   ├── IT Risk Register
+   ├── Vendor Risk Register
+   └── Business Continuity Risk
+```
+
+Risk registers are reviewed quarterly. KVKK risks are added to corporate risk registers.
+
+## 9. Quick Screening (Threshold) Template
+
+Short form for the decision to start a DPIA (10 questions, 5 min):
+
+```
+1. Does the process include personal data? (Y/N)
+2. Is there special-category data (Art. 6)? (Y/N)
+3. Is there children's data? (Y/N)
+4. Is the data subject count 10K+? (Y/N)
+5. Is new technology (AI, biometric, IoT) used? (Y/N)
+6. Is there automated decision / profiling? (Y/N)
+7. Is employee / user monitoring being done? (Y/N)
+8. Is there cross-border transfer? (Y/N)
+9. Are multiple datasets being combined? (Y/N)
+10. Is public area / public opinion monitoring done? (Y/N)
+
+Number of YES:
+   0-1: DPIA not required (simple risk screening sufficient)
+   2-3: Light DPIA (short form)
+   4+: Full DPIA
+```
+
+## 10. Typical DPIA Scenarios (Template Headings)
+
+1. **New e-commerce platform** — customer registration, payment, profiling.
+2. **Employee performance management system** — KPI tracking, automated suggestions.
+3. **AI-based customer support chatbot** — chat logs, personal data disclosure.
+4. **CCTV network upgrade** — new camera locations, face recognition feature.
+5. **HR SaaS migration** — old system / new system transition, cross-border transfer.
+6. **New biometric entry system** — fingerprint, iris.
+7. **Marketing automation platform** — segmentation, behavior tracking.
+8. **Health check-up program** — special-category data.
+9. **Keyboard/screen monitoring tool** — high monitoring intensity.
+10. **Education platform for children** — parental consent process.
+
+## 11. Output Retention
+
+- Completed DPIA document is **versioned** and in KVKK Officer portfolio.
+- Retention: as long as the process is active + 5 years after.
+- Access: KVKK Officer, CISO, relevant Director, Legal, Internal Audit.
+- Ready in form presentable in KVKK Authority audit.
+
+## 12. KPI
+
+- DPIA-required project / DPIA completed: target 100%.
+- Average DPIA completion time: target ≤30 days.
+- DPIA review completion rate (annual): 100%.
+- Open DPIA actions (over 90 days): 0.
+- Number of projects rejected as a result of DPIA: trend tracking.
+- Post-DPIA breach rate: trend tracking (quality indicator).
+
+## 13. Checklist
+
+- [ ] Is the DPIA Standard documented, ≤24 months current?
+- [ ] Is risk screening (threshold) integrated into the new project process?
+- [ ] Is the trigger list current, compliant with KVKK Authority guides?
+- [ ] Is the DPIA template standard, complete?
+- [ ] Is the risk score matrix documented, calibrated?
+- [ ] Is the risk appetite management approved?
+- [ ] Is the team role assigned for each DPIA?
+- [ ] Is the KVKK Officer writing independent opinion?
+- [ ] Are KVKK Committee approval records archived?
+- [ ] Is the implementation of measures tracked?
+- [ ] Is there an annual DPIA review schedule?
+- [ ] Are DPIA outputs being processed into the corporate risk register?
+- [ ] Are there projects requiring DPIA that haven't been done (gap analysis)?
+- [ ] Does the annual internal audit perform DPIA sampling?
+- [ ] Is there a business unit representative in the DPIA team (so they're not ignored)?
+- [ ] Are additional rights of objection designed for automated decision processes?
+- [ ] Is LLM Top 10 additional assessment performed in AI/ML projects?
+
+## 14. ISO 29134 Alignment
+
+ISO 29134 PIA headings map to our template as follows:
+
+| ISO 29134 | Our DPIA Template |
+|-----------|----------------------|
+| Necessity Justification | Necessity and Proportionality (§5.5) |
+| Proportionality Assessment | Necessity and Proportionality + Measure design |
+| Risk Assessment | Threat & Risk Identification (§5.7) |
+| Mitigation Plan | Measures (§5.9) |
+| Stakeholder Consultation | KVKK Committee + stakeholder review |
+
+## 15. Common Mistakes
+
+- Going live with high-risk project without DPIA.
+- DPIA handled like "form filling", real threat modeling not done.
+- Risk score lacking justification — indefensible in audit.
+- Technical side of measure design uncontrolled, organizational/legal side weak.
+- Residual risk not documented with management acceptance record.
+- Skipping annual review, DPIA not updated despite process change.
+- KVKK Officer opinion being cosmetic (no real independence).
+- DPIA for AI/ML satisfying with classic template (LLM-specific threats missed).
+- Vendor DPIA not included — pre-contract assessment incomplete.
+
+---
+
+## Türkçe
 
 # Kişisel Veri Etki Değerlendirmesi (DPIA / PIA) ve Risk Değerlendirmesi
 
@@ -339,6 +678,6 @@ ISO 29134 PIA başlıkları bizim şablonla şu şekilde eşleşir:
 - Tedbir tasarımının teknik tarafının kontrolsüz, idari/hukuki tarafının zayıf kalması.
 - Artık riskin yönetim kabul tutanağıyla belgelenmemesi.
 - Yıllık review'ın atlanması, sürecin değişmesine rağmen DPIA'nın güncellenmemesi.
-- KVKK Sorumlusu görüşünün cosmetik olması (gerçek bağımsızlık olmaması).
+- KVKK Sorumlusu görüşünün cosmetic olması (gerçek bağımsızlık olmaması).
 - AI/ML için DPIA'nın klasik şablonla yetinmesi (LLM-spesifik tehditler kaçırılır).
 - Tedarikçi DPIA dahil edilmiyor — sözleşme öncesi değerlendirme eksik.

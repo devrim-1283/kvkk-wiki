@@ -1,13 +1,330 @@
 ---
-Doküman: İlgili Kişi Hakları (KVKK m.11)
-Bölüm: 01-temel-kavramlar
-Sahip: KVKK Sorumlusu / İrtibat Kişisi
-Onaylayan: Yönetim Kurulu / Genel Müdür
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (Kurul kararı, mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.11, m.13, m.14; Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ (10.03.2018, RG 30356)
+Doküman / Document: İlgili Kişi Hakları (KVKK m.11) / Data Subject Rights (KVKK Art. 11)
+Bölüm / Section: 01-temel-kavramlar
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Yönetim Kurulu / Genel Müdür / Board of Directors / CEO
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (Kurul kararı, mevzuat değişikliği) / Annual + triggered (Kurul decision, regulatory change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.11, m.13, m.14; Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ (10.03.2018, RG 30356) / KVKK Art. 11, 13, 14; Communiqué on Procedures and Principles for Application to the Data Controller (10.03.2018, OG 30356)
 ---
+
+## English
+
+# Data Subject Rights (KVKK Art. 11)
+
+## 1. Purpose
+
+This document defines in detail the seven (7) rights that data subjects have under KVKK Art. 11; for each right it explains the scope, limits, format of the request, the data controller's action obligation, the deadline, the fee regime and the grounds for rejection at operational level.
+
+## 2. Legal Framework
+
+### 2.1 KVKK Art. 11 — Seven Rights
+A data subject may apply to the data controller and request, with respect to themselves:
+- (a) To learn whether their personal data is being processed,
+- (b) To request information regarding processing if their personal data has been processed,
+- (c) To learn the purpose of the processing of their personal data and whether it is used in accordance with such purpose,
+- (ç) To know the third parties to whom personal data is transferred, domestically or abroad,
+- (d) To request the correction of personal data if processed incompletely or incorrectly,
+- (e) To request the erasure or destruction of personal data within the framework of the conditions set out in Article 7,
+- (f) To request that the actions taken pursuant to (d) and (e) be notified to third parties to whom the personal data has been transferred,
+- (g) To object to the occurrence of an outcome unfavorable to themselves through the analysis of processed data exclusively by automated means,
+- (ğ) To request compensation for damages incurred due to processing of personal data in violation of the law.
+
+### 2.2 KVKK Art. 13 — Application and Response
+- The data subject applies to the data controller in writing or by other methods to be determined by the Kurul.
+- The data controller finalizes the request free of charge within at most **30 days**.
+- Where the operation entails additional cost, the fee in the tariff determined by the Kurul may be charged.
+- If the request is rejected or the response is insufficient, the data subject may file a complaint with the Kurul within 30 days (and at the latest within 60 days from the date of application).
+
+### 2.3 Application Communiqué (10.03.2018, OG 30356)
+- Minimum content of the application: name and surname, signature (in writing), National ID/passport, address for service, e-mail/phone, subject of the request
+- Application methods:
+  - In writing (wet-signed), delivered by hand or via notary
+  - KEP address
+  - Mobile signature
+  - Secure electronic signature
+  - E-mail address declared in the registry (if the data subject has an e-mail registered in the system)
+
+## 3. Seven Rights — Detailed Analysis
+
+### 3.1 Art. 11/(a): To Learn Whether Personal Data Is Processed
+
+**Scope:**
+- Whether the data controller processes any data relating to the data subject
+- An informed response that begins with yes/no and continues if positive
+
+**Action:**
+- Identity-based search across all systems (National ID, e-mail, phone, customer number)
+- Scan of CRM, ERP, HR, call center, web logs, e-mail archive
+- On positive findings → proceed to Art. 11/(b) response
+
+**Limit:** It must be verified that the applicant is the data subject (identity verification).
+
+**Practical example (Bank):** "Do you have any account, loan application, insurance policy of mine?" → all account, application, call center records, KKB credit score query records are scanned.
+
+### 3.2 Art. 11/(b): To Request Information If Data Has Been Processed
+
+**Scope:**
+- Categories of data processed (generally summarized by category, with detail upon request)
+- Data sources (from the data subject, from a third party?)
+
+**Action:**
+- A response document listing data categories is prepared
+- Data that could disclose third-party information is provided in masked form (e.g., e-mail correspondence containing third-party data)
+
+**Limit:**
+- Cannot violate the rights of third parties (e.g., third-party data in an e-mail thread is provided masked)
+- Algorithm output constituting a trade secret is not mandatory (it is sufficient to explain the logic)
+
+**Practical example (E-commerce):** Customer requests "my orders, return records, summaries of call center conversations, records of my comments on social media." Order history + return records + (written summary instead of voice recording) + recorded brand-side comments are provided.
+
+### 3.3 Art. 11/(c): To Learn Processing Purpose and Whether Used in Line with Purpose
+
+**Scope:**
+- For what purpose it is processed (consistent with purposes in the inventory)
+- Whether the use deviates from this purpose
+
+**Action:**
+- A list of purposes from the privacy notice is shared
+- If the purpose has changed, the change date and the new purpose are stated
+- If there is an allegation of off-purpose use, an internal review is initiated
+
+**Limit:** Where processing purposes constitute a trade secret (e.g., the purpose of a specific analytic model), a meaningful generic statement may be used.
+
+**Practical example (Telecom):** "Why am I being advertised a service I have never used?" → It is reported that the data is processed for marketing campaign purposes and that segmentation has been performed based on subscription history. Depending on the response, the right under Art. 11/(g) is invoked.
+
+### 3.4 Art. 11/(ç): To Know the Third Parties to Whom Data Has Been Transferred
+
+**Scope:**
+- Third parties to whom domestic or cross-border transfer has been made
+- Notification at the recipient group level is sufficient (not every supplier name is required; provided where possible)
+
+**Action:**
+- Recipient groups stated in the privacy notice are listed
+- Where a specific request exists, recipients are listed from the data inventory
+- For cross-border transfers, the legal basis (adequacy decision / appropriate safeguard / incidental) is reported
+
+**Limit:** Trade secrecy of third parties and contractual restrictions are balanced.
+
+**Practical example (Health):** "Did you share with the insurance company?" → If transferred, which insurance company, for what purpose, on which lawful basis is reported.
+
+### 3.5 Art. 11/(d): To Request Correction of Incomplete or Incorrect Data
+
+**Scope:**
+- Name error, date of birth error, address update, e-mail correction, etc.
+- Data that does not reflect reality
+
+**Action:**
+- Supporting documents may be requested for the correction request (identity photocopy, invoice, court decision, etc.)
+- Once verified within reasonable bounds, the data is corrected **without delay**
+- Notifications are sent to the systems where correction was performed and to third parties where data was transferred (Art. 11/(f))
+
+**Limit:**
+- "Correction" refers to correction in cases contrary to actual fact (e.g., a previously paid debt being mistakenly recorded as outstanding)
+- Historical audit trail does not change entirely; the correction is performed and the previous record is preserved (for auditability)
+
+**Practical example (Bank):** "My address changed 5 years ago, mail still arrives at the old address." → KKB and internal records are corrected, products/communications sent to the old address are checked.
+
+### 3.6 Art. 11/(e): To Request Erasure or Destruction of Data (KVKK Art. 7)
+
+**Scope:**
+- Erasure/destruction/anonymization within the framework of KVKK Art. 7 and the Erasure Regulation
+- Where processing conditions (Art. 5/Art. 6) have ended, the obligation to erase arises
+
+**Action:**
+- Processing conditions are analyzed:
+  - Is there still a valid lawful basis? (e.g., not erased if the legal retention period has not expired)
+  - If processed under explicit consent, can the consent be withdrawn? If withdrawn, it is erased
+- If mandatory retention periods exist (TCC 10 years, tax 5 years, Labor Law 10 years, BDDK regime), erasure is rejected; however, if no other purpose remains, it is moved to passive archive
+- Application of the erasure/destruction method (see `04-veri-saklama-ve-imha/`)
+
+**Limit:**
+- If the retention period prescribed by laws is still ongoing, erasure is not mandatory
+- If there is risk of legal dispute (statute of limitations not yet expired), continued retention may be a legitimate interest
+- The "right to be forgotten" is not explicitly stated in KVKK; in practice, it is exercised through rights (e) and (g)
+
+**Practical example (E-commerce):** Customer has not made a purchase in 5 years and wants to delete their account. Past order records are retained until the legal period (5 years) under tax/ETK expires; profile and behavioral data are immediately removed from marketing use.
+
+### 3.7 Art. 11/(f): Notification of Correction/Erasure to Transferred Third Parties
+
+**Scope:**
+- Notification of operations under (d) and (e) to the third parties to whom data has been transferred
+
+**Action:**
+- A list of recipients to whom the relevant data categories have been transferred is obtained from the data inventory
+- Written notification (e-mail, KEP) to each recipient
+- Reporting of notification outcome to the applicant
+
+**Limit:**
+- "Where this is impossible or requires disproportionate effort" — there is no explicit clause in KVKK as in GDPR, but balanced reasonably under Kurul interpretation.
+
+**Practical example (Insurance):** Corrected address is notified to agency network, service providers and the partner assistance company.
+
+### 3.8 Art. 11/(g): Objection to Adverse Outcome from Automated Processing
+
+**Scope:**
+- Analysis/decisions made **exclusively** by automated systems
+- Decisions that produce adverse outcomes for the individual
+
+**Action:**
+- Reassessment of the rationale for the automated decision
+- Evaluation of the possibility of human-mediated revision of the decision
+- Objective evaluation of "adverse" outcome
+
+**Limit:**
+- Not all automated decisions; only those that are **exclusively** automated
+- Automated analyses without adverse outcomes are out of scope (e.g., product recommendations that improve user experience)
+
+**Practical example (Bank):**
+- Loan application rejected by automated scoring → Art. 11/(g) is triggered; human review of the decision is provided
+- Insurance premium determined based on automated risk model → human assessment is engaged upon objection
+
+### 3.9 Art. 11/(ğ): Compensation for Damages Caused by Unlawful Processing
+
+**Scope:**
+- Material damage (e.g., financial loss caused by unauthorized transfer)
+- Moral damage (violation of personality rights)
+
+**Action:**
+- Escalation to the KVKK Committee
+- Legal Department assessment
+- If unlawfulness is established, evaluation of damages by expert/settlement methods
+- Notice that judicial recourse is available (the Kurul's authority to impose administrative fines does not impair the data subject's right to claim material/moral damages)
+
+**Limit:** This right is not a punitive measure before the data controller; it requires documentation of damages and judicial/settlement processes.
+
+## 4. Grounds for Rejection (KVKK Art. 28)
+
+Pursuant to the exceptions in KVKK Art. 28, the data controller is **not** required to fulfill these rights in certain cases. Notably:
+
+- (1) Processing by means that are wholly or partially non-automated and are not part of any data filing system
+- (a) Processing of personal data made public by the person themselves
+- (b) Where it is mandatory for the establishment/performance of a contract lawfully concluded between parties
+- (c) Performance of judicial duties of the Presidency, the Grand National Assembly, the courts, etc.
+- (ç) Authority undertaking the duty of preventing crime/conducting an investigation
+- (d) Processing of personal data by institutions/organizations vested by law with national defense, national security, public safety, public order or economic security duties
+
+## 5. Deadline Management (30-Day Rule)
+
+### 5.1 Time Calculation
+- **The day of receipt** of the application by the data controller is the start
+- The response is given by the end of **the 30th calendar day** at the latest
+- The response is given **in writing** or in electronic form
+- A late response → risk of complaint to the Kurul + the Kurul may open an ex officio investigation
+
+### 5.2 Types of Response Within the Period
+1. **Full response:** Request granted, content shared
+2. **Partial response:** Partly granted, partly rejected (with grounds)
+3. **Rejection:** Wholly rejected (with grounds)
+4. **Time extension:** **The 30-day rule cannot be extended**; "internal work continues" responses to complex requests do not provide legal protection
+
+### 5.3 Communication Channel
+- Response via the address for service / e-mail stated in the application
+- For applications received via the e-mail address registered in the registry, the same channel may be used
+
+## 6. Fee Tariff
+
+### 6.1 Rule
+- **Requests are finalized free of charge.**
+- Where additional cost is incurred, the Kurul tariff applies.
+
+### 6.2 Tariff (Application to Data Controller Communiqué)
+- Up to 10 pages: **Free**
+- 10 pages and above: **TRY 1** per page (per the current applicable rate of the Communiqué)
+- If the response is provided on a CD, flash drive, etc., the cost of the medium may be charged
+- Fees beyond the tariff (above the cap) cannot be charged
+
+### 6.3 Time and Fee Relationship
+- Fee information is communicated to the applicant within the period
+- The response is given after payment is received
+- Unreasonable fees may be the subject of objection before the Kurul
+
+## 7. Identity Verification
+
+The data controller is required to verify the identity of the applicant by reasonable methods:
+- National ID verification
+- Application via registered e-mail → cross-verification
+- In suspicious cases, an identity photocopy (with religion/blood type masked) may be requested
+- Additional verification may not be required for applications via KEP/mobile signature/e-signature
+
+**Important:** Additional documents requested for identity verification are also processed under KVKK; their retention period must be limited (e.g., destruction 2 years after closure of the application).
+
+## 8. Application Management Operation
+
+### 8.1 Application Flow
+
+```
+[Application received: written / KEP / e-mail / mobile signature / e-signature / e-mail registered in the registry]
+                  |
+                  v
+         [Initial review: KVKK Officer team — within 24 hours]
+                  |
+                  v
+         [Identity verification]
+                  |
+                  v
+         [Right classification: which right(s) under Art. 11/(a)-(ğ)?]
+                  |
+                  v
+         [Data search/collection: from relevant system owners]
+                  |
+                  v
+         [Legal review: is there a ground for rejection?]
+                  |
+                  v
+         [Draft response]
+                  |
+                  v
+         [KVKK Officer approval + (if needed) Committee approval]
+                  |
+                  v
+         [Sending the response — within 30 days]
+                  |
+                  v
+         [Archiving + log + KPI]
+```
+
+### 8.2 Application Log Template
+
+| Field | Content |
+|-------|---------|
+| Application No | YYYY-NNNN |
+| Application Date | |
+| Channel | Written / KEP / E-signature / Mobile signature / Registry e-mail |
+| Applicant (anonymized) | |
+| Right(s) requested | Art. 11/(a)..(ğ) |
+| Responsible unit(s) | |
+| Decision | Fully granted / Partially / Rejected |
+| Decision reasoning (if rejected) | |
+| Response date | |
+| Time compliance | Yes / No |
+| Is there a Kurul complaint? | |
+| Closure | |
+
+## 9. KPIs
+
+| KPI | Target |
+|-----|--------|
+| Average response time for applications | ≤ 15 days |
+| Response rate within 30 days | 100% |
+| Rejection rate | < 10% (for unsubstantiated claims/out of Art. 28 scope) |
+| Number of complaints to the Kurul | < 5% |
+| Distribution of applications by right category | Monitored |
+
+## 10. Related Documents
+
+- `09-ilgili-kisi-basvurulari/basvuru-prosedurü.md`
+- `09-ilgili-kisi-basvurulari/yanit-sablonlari.md`
+- `09-ilgili-kisi-basvurulari/kurul-sikayet-yonetimi.md`
+- `04-veri-saklama-ve-imha/imha-prosedurleri.md`
+- `99-sablonlar/basvuru-formu.md`
+- `99-sablonlar/yanit-sablonu-kabul.md`
+- `99-sablonlar/yanit-sablonu-red.md`
+
+---
+
+## Türkçe
 
 # İlgili Kişi Hakları (KVKK m.11)
 

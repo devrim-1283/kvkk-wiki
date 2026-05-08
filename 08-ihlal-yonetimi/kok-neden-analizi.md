@@ -1,13 +1,359 @@
 ---
-Doküman: Kök Neden Analizi (Root Cause Analysis) ve CAPA
-Bölüm: 08-ihlal-yonetimi
-Sahip: KVKK Sorumlusu + Bilgi Güvenliği Müdürü
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + her ihlal sonrası
-İlgili Mevzuat: 6698 sayılı KVKK m.12, KVKK Veri Güvenliği Rehberi (2018) §5, ISO/IEC 27035-2:2023, ISO 9001:2015 §10.2, NIST SP 800-61 Rev.2 §3.4
+Doküman / Document: Kök Neden Analizi (RCA) ve CAPA / Root Cause Analysis (RCA) and CAPA
+Bölüm / Section: 08-ihlal-yonetimi
+Sahip / Owner: KVKK Sorumlusu + Bilgi Güvenliği Müdürü / KVKK Officer + CISO
+Onaylayan / Approved by: KVKK Komitesi / KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + her ihlal sonrası / Annual + after every breach
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 12; KVKK Data Security Guide (2018) §5; ISO/IEC 27035-2:2023; ISO 9001:2015 §10.2; NIST SP 800-61 Rev.2 §3.4
 ---
+
+## English
+
+# Root Cause Analysis (RCA) and Corrective / Preventive Actions (CAPA)
+
+## 1. Purpose
+
+After every personal data breach, the goal is to identify and address the **true root cause**, avoiding symptomatic fixes and preventing recurrence of the same type of breach. RCA is the practical correlate of the "corrective measures" obligation in the KVKK Data Security Guide.
+
+## 2. When RCA Is Mandatory
+
+| Trigger | Timing |
+|---------|--------|
+| Every breach reported to the Authority | Final RCA within T+30 days |
+| Below-threshold incidents not reported | Summary RCA within T+15 days |
+| Recurring incidents (same category second time) | Urgent RCA within T+10 days |
+| Critical miss in tabletop | Tabletop RCA within T+15 days |
+| Internal audit finding | As per audit report timeline |
+
+## 3. RCA Methodologies
+
+The company chooses among three methodologies depending on the type of incident:
+
+### 3.1. 5 Whys (Fast, linear)
+
+For simple chains of causality.
+
+**Example:**
+> Breach: Customer data was exfiltrated.
+> Why 1: The employee had bulk export privilege. -> Because every CRM user is fully privileged by default.
+> Why 2: Why default full privilege? -> Access policy was not updated for years.
+> Why 3: Why not updated? -> Policy owner was unclear.
+> Why 4: Why was the owner unclear? -> Role mapping was not done after KVKK rollout.
+> Why 5: Why not done? -> The KVKK Committee prioritized privacy notices and de-prioritized access classes.
+
+**Output:** Root cause = "Access rights were not authorized in the KVKK compliance roadmap."
+
+### 3.2. Fishbone (Ishikawa) - Multiple Causes by Category
+
+Categories (5M+E): Man, Machine, Method, Material, Measurement, Environment.
+
+```
+                 Man           Machine
+                  |              |
+                  +------+-------+
+                         |
+Breach <-----------------+
+                         |
+                  +------+-------+
+                  |      |       |
+                Method  Measure  Environment
+```
+
+**Use:** Complex breaches (ransomware, BEC) - multiple layers contribute.
+
+**Template:**
+
+| Category | Possible cause 1 | Possible cause 2 | Possible cause 3 |
+|----------|------------------|------------------|------------------|
+| Man (Human) | Training gap | Password hygiene | Social engineering |
+| Machine (System) | Patch gap | No EDR | Old OS |
+| Method (Process) | Access policy | No monitoring | No tabletop |
+| Material (Software/hardware) | Unlicensed | Insufficient logging | Backup failure |
+| Measurement | No KPI | Alert miss | Audit gap |
+| Environment | Physical security | Vendor | Regulatory pressure |
+
+### 3.3. Apollo RCA (Cause-and-Effect Charting)
+
+For serious / complex breaches. At least two causal trees per incident (action cause + condition cause).
+
+```
+                   [Breach]
+                      |
+        +-------------+-------------+
+        |                           |
+   [Action cause]              [Condition cause]
+   (what attacker did)         (what was permitted)
+        |                           |
+   +----+----+                +-----+-----+
+[sub-action] [tool]         [vuln]      [inadequacy]
+```
+
+Each node requires **evidence** (log, video, statement). Hypotheses without evidence are pruned.
+
+**Advantage:** Avoids the single-root-cause fallacy and surfaces the **real causal network**.
+
+## 4. RCA Layers (Company Standard Approach)
+
+Every RCA is conducted across at least **four layers**:
+
+### 4.1. Technical Layer
+
+- Which vulnerability? (CVE, configuration, architecture)
+- Which system? (Version, patch status)
+- Which monitoring was bypassed? (SIEM, EDR, DLP gaps)
+- Which control was missing? (Encryption, segmentation, MFA)
+
+### 4.2. Process Layer
+
+- Which procedure was missing / outdated?
+- Did the approval chain function?
+- Were SLAs realistic?
+- Did the tabletop cover this scenario?
+
+### 4.3. Human Layer
+
+- Who decided / failed to decide what?
+- Was the level of training adequate?
+- Were workload or fatigue factors at play?
+- Was there ethical / intentional negligence?
+
+> **Important:** The human layer is **not individual blame**. "Just culture" principle: honest mistakes are not punished; deliberate violations are disciplined.
+
+### 4.4. Governance Layer
+
+- Was the policy current?
+- Was the budget sufficient?
+- Was management support there?
+- Was the risk appetite well-defined?
+
+## 5. RCA Process (Step by Step)
+
+```
+1. RCA triggered (incident closure)
+        |
+2. RCA Lead assigned (CISO or KVKK Officer)
+        |
+3. RCA team formed (5-7 people, cross-functional)
+        |
+4. Evidence collection (logs, interviews, documents)
+        |
+5. Timeline reconstruction
+        |
+6. Methodology selection (5 Whys / Fishbone / Apollo)
+        |
+7. Hypotheses + evidence matching
+        |
+8. Root cause confirmation (RCA Lead + KVKK Officer)
+        |
+9. CAPA design
+        |
+10. KVKK Committee approval
+        |
+11. CAPA execution
+        |
+12. Effectiveness verification (8 weeks later)
+        |
+13. Closure
+```
+
+## 6. RCA Team
+
+| Role | Responsibility |
+|------|----------------|
+| RCA Lead | Process management, reporting |
+| Incident Commander | Incident chronology, response decisions |
+| Technical Lead | Forensic evidence interpretation |
+| KVKK Officer | Regulatory perspective |
+| Human Factors Specialist | HR + Training - "just culture" framing |
+| Process Owner | Affected business process expertise |
+| Independent Reviewer | Senior from another function (bias check) |
+
+## 7. Evidence Collection Discipline
+
+- **Hourly log priority:** SIEM, EDR, DLP, network flow, identity systems.
+- **Interview protocol:** Structured, recorded, two interviewers, with legal oversight.
+- **Documents:** Policy versions, training records, change tickets.
+- **Retention:** All RCA files in insured archive for **5 years**.
+- **Anonymization:** Personalized for internal distribution; anonymized for any external sharing.
+
+## 8. CAPA (Corrective and Preventive Actions)
+
+### 8.1. Corrective Action
+
+- Prevents recurrence of the incident.
+- Specific, measurable, with target date.
+- Directly addresses the root cause.
+
+### 8.2. Preventive Action
+
+- Stops similar but not-yet-occurred incidents.
+- Applied across other systems/processes.
+- Counters "we got lucky this time" situations.
+
+### 8.3. CAPA Design Standard
+
+Every CAPA must be **SMART**:
+- **S**pecific - clear definition.
+- **M**easurable - measurable KPI.
+- **A**chievable - realistic.
+- **R**elevant - tied to root cause.
+- **T**ime-bound - deadline.
+
+### 8.4. CAPA Template
+
+| Field | Content |
+|-------|---------|
+| CAPA No | CAPA-YYYY-NNNN |
+| Linked incident | OLAY-YYYY-NNNN |
+| Type | Corrective / Preventive |
+| Root cause reference | RCA section |
+| Description | (SMART) |
+| Owner (Unit) | |
+| Owner (Person) | |
+| Target date | |
+| KPI | |
+| Approval | KVKK Committee |
+| Status | Open / In progress / Done / Cancelled |
+| Effectiveness verification date | T+8 weeks after |
+| Verification method | Test / Audit / Tabletop |
+| Verification result | Pass / Fail |
+
+### 8.5. Typical CAPA Examples
+
+| Root cause | Corrective | Preventive |
+|------------|------------|------------|
+| Lack of MFA | MFA mandatory on all remote access | MFA default on new account onboarding |
+| Patch gap | Patch the affected system + fleet-wide CVE scan | Monthly automated patch cycle, defined SLA |
+| Access violation | Permission removed from user | Quarterly least-privilege review |
+| Training gap | Targeted refresher (affected unit) | Annual general + 6-monthly module training |
+| Third party | Tightened contractual clause | Renew all vendor contracts |
+| Backup failure | Set up immutable backup | Monthly restore drill |
+| DLP gap | Updated DLP rule set | Quarterly DLP false-positive review |
+| Outdated policy | Policy updated | Annual policy cycle |
+
+## 9. CAPA Tracking
+
+### 9.1. System
+- Separate CAPA project on JIRA / Asana / ServiceNow.
+- Each action ticketed.
+- Owner, date, status, evidence link.
+- Weekly automated escalation for overdue actions.
+
+### 9.2. Governance
+- Monthly CAPA review by KVKK Committee.
+- Overdue actions added to Board agenda.
+- Random CAPA sampling in annual audit.
+
+### 9.3. Effectiveness Verification
+
+Saying an action is "closed" is not enough. Its **effect** must be verified:
+
+| Action | Verification method |
+|--------|---------------------|
+| MFA enforced | AD log - 0 logins without MFA |
+| Patch cycle | Patch compliance report 95%+ |
+| Training | Quiz pass rate 85%+ |
+| Contract clause | Inspection of every new/renewed contract |
+| Immutable backup | Successful restore drill |
+| DLP rule | False positives < 5% + true positives 90%+ |
+
+Actions whose effectiveness cannot be verified within 8 weeks are **reopened**.
+
+## 10. Recurrence-Prevention Metrics
+
+| Metric | Target | Source |
+|--------|--------|--------|
+| Recurring breach rate | 0% | RCA archive |
+| CAPA on-time closure | >= 90% | CAPA system |
+| CAPA effectiveness verification | 100% | CAPA system |
+| RCA quality score (auditor) | >= 8/10 | Internal audit |
+| Root cause found (first 30 days) | >= 95% | RCA archive |
+
+## 11. RCA Report Template
+
+```markdown
+# RCA Report - OLAY-YYYY-NNNN
+
+## 1. Summary
+- Incident date:
+- Incident type:
+- Affected data:
+- Notification status:
+
+## 2. Detailed Incident Timeline
+| Time | Event | Evidence |
+|------|-------|----------|
+|  |  |  |
+
+## 3. Evidence
+3.1. Technical:
+3.2. Documentary:
+3.3. Interviews:
+
+## 4. Methodology
+[5 Whys / Fishbone / Apollo selected - rationale]
+
+## 5. Causal Analysis
+5.1. Technical layer:
+5.2. Process layer:
+5.3. Human layer:
+5.4. Governance layer:
+
+## 6. Root Cause(s)
+[Clear sentence, evidence-based]
+
+## 7. CAPA List
+[See table]
+
+## 8. Risk Assessment
+- Recurrence likelihood:
+- Impact magnitude:
+- Residual risk (post-CAPA):
+
+## 9. Policy / Training Update Recommendations
+
+## 10. RCA Team
+- Lead:
+- Members:
+- Independent reviewer:
+
+## 11. Approval
+- KVKK Officer:
+- CISO:
+- Legal:
+- KVKK Committee:
+- Date:
+```
+
+## 12. RCA Maturity
+
+| Level | Definition |
+|-------|------------|
+| 1 - Reactive | Only major incidents |
+| 2 - Systematic | All reported breaches |
+| 3 - Extended | Below-threshold incidents too |
+| 4 - Predictive | Near misses too |
+| 5 - Learning | Internalized in the organization; training data |
+
+Company target level: **4** (end of 2027).
+
+## 13. Linked Sections
+
+- `06-idari-tedbirler/egitim.md` - Training updates from RCA outputs.
+- `11-denetim-ve-uyum/aksiyon-takibi.md` - CAPA list integration.
+- `08-ihlal-yonetimi/soak-test-tatbikat.md` - Inclusion in tabletop scenarios.
+
+## 14. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Kök Neden Analizi (RCA) ve Düzeltici/Önleyici Aksiyon (CAPA)
 

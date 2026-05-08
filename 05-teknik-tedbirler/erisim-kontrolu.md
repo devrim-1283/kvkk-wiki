@@ -1,14 +1,308 @@
 ---
-Doküman: Erişim Kontrolü Politikası ve Prosedürü
-Bölüm: 05-teknik-tedbirler
-Sahip: Bilgi Güvenliği Yöneticisi (CISO)
-Onaylayan: BT Direktörü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Kişisel Veri Güvenliği Rehberi — "Kullanıcı Hesap Yönetimi ve Yetki Matrisi"
-İlgili Standart: ISO/IEC 27001:2022 A.5.15 (Access Control), A.5.16 (Identity Management), A.5.17 (Authentication Information), A.5.18 (Access Rights), A.8.2 (Privileged Access Rights), A.8.3 (Information Access Restriction), A.8.5 (Secure Authentication); NIST CSF 2.0 PR.AA-1..PR.AA-6; NIST SP 800-53 AC-2, AC-3, AC-5, AC-6; CIS Controls v8 #5, #6
+Doküman / Document: Erişim Kontrolü Politikası ve Prosedürü / Access Control Policy and Procedure
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: Bilgi Güvenliği Yöneticisi (CISO) / Information Security Manager (CISO)
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi / IT Director + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Personal Data Security Guide — "User Account Management and Authority Matrix"
+İlgili Standart / Standard: ISO/IEC 27001:2022 A.5.15 (Access Control), A.5.16 (Identity Management), A.5.17 (Authentication Information), A.5.18 (Access Rights), A.8.2 (Privileged Access Rights), A.8.3 (Information Access Restriction), A.8.5 (Secure Authentication); NIST CSF 2.0 PR.AA-1..PR.AA-6; NIST SP 800-53 AC-2, AC-3, AC-5, AC-6; CIS Controls v8 #5, #6
 ---
+
+## English
+
+# Access Control
+
+## 1. Purpose
+
+To ensure that access to personal data is limited to authorized persons, only within the scope they are authorized for, and only for the time they are authorized. This document is the operational arm of the obligation under KVKK Art. 12(1) to "prevent unlawful access."
+
+## 2. Core Principles
+
+### 2.1. Least Privilege
+
+Every user, service account and application is run with the **minimum privileges** required to perform its task. Privileges are determined by answering "should it?" rather than "could it?". Elevated privileges are granted on request, with justification, for a fixed time.
+
+### 2.2. Need-to-Know
+
+Access rights are limited to personal data **actually needed** to perform tasks within the user's job description. "Being authorized" is different from "accessing"; rather than bulk authorization, restrictions at the dataset/record level are preferred.
+
+### 2.3. Segregation of Duties (SoD)
+
+For sensitive operations, controls are established such that no single person can complete the end-to-end process. Examples:
+
+- An application developer cannot write directly to the production database.
+- The person who prepares payroll cannot approve it.
+- The person opening an access request cannot approve their own request.
+- The DB administrator cannot have authority to delete audit logs (logs are kept on a different system, with a different authority).
+
+### 2.4. Default Deny
+
+The result of all access requests not explicitly permitted is set to **deny** (firewall, ACL, IAM policy, RLS).
+
+### 2.5. Periodic Re-Validation
+
+Each granted permission is **not considered permanent**. It is re-validated through quarterly (critical) and annual (general) reviews.
+
+## 3. Access Control Models
+
+### 3.1. RBAC (Role-Based Access Control)
+
+This is the standard model. Permissions are assigned to **roles**, users are assigned to roles. Granting authority directly to users is prohibited (except in break-glass emergencies).
+
+**Role matrix example (personal data perspective):**
+
+| Role | Customer Data | Employee Personnel | Health Data | Financial Data | Log/Audit |
+|-----|---------------|---------------|---------------|-----------|-----------|
+| Call Center Representative | Read (own assigned customer) | – | – | – | – |
+| Call Center Manager | Read (team), masked | – | – | – | Read (team) |
+| HR Specialist | – | Read/Write (own personnel group) | – | – | – |
+| HR Director | – | Read/Write (all) | – | – | Read |
+| Occupational Physician | – | Read (limited) | Read/Write | – | – |
+| Accounting Specialist | – | – | – | Read/Write | – |
+| System Administrator | – | – | – | – | Read/Write |
+| Auditor (internal) | Read (sampling) | Read | Read (justified) | Read | Read |
+| Developer (Prod) | FORBIDDEN | FORBIDDEN | FORBIDDEN | FORBIDDEN | – |
+| Developer (Test/Mask) | Masked | Masked | Synthetic | Masked | – |
+
+### 3.2. ABAC (Attribute-Based Access Control)
+
+Complements RBAC under complex conditions. The decision is the combination of user attributes (department, location, seniority), resource attributes (classification, owning team), environment (device posture, network location, time, MFA status) and action type as a **policy expression**.
+
+**Example ABAC rule:**
+
+```
+PERMIT
+  WHEN
+    user.department == "Finance"
+    AND resource.classification IN ("Financial")
+    AND resource.region == user.region
+    AND device.posture == "compliant"
+    AND mfa.recent < 8h
+    AND time.local BETWEEN 08:00 AND 20:00
+```
+
+ABAC is particularly powerful for cross-border transfer restrictions and multi-jurisdictional (e.g., EU data subject vs. Turkish data subject) distinctions.
+
+### 3.3. PBAC and ReBAC
+
+ReBAC is preferred where relational authorization is required (e.g., "I can only see my customer's data within my assigned case"). For complex business rules, PBAC (policy engine — OPA, Cedar) is positioned as a central decision point.
+
+## 4. User Lifecycle (JML — Joiner / Mover / Leaver)
+
+### 4.1. Joiner (Onboarding)
+
+Trigger: Employment contract signed in HR, start date confirmed.
+
+| Step | Owner | SLA |
+|------|-------|-----|
+| Role template selection by position | HR + Manager | -3 business days before start |
+| Account creation (IdP, email, directory) | IAM | -1 business day before start |
+| Device assignment and device policy | IT Operations | -1 business day before start |
+| Standard role assignments (RBAC package) | IAM | -1 business day before start |
+| MFA enrollment requirement | User | First day, first session |
+| Confidentiality undertaking (see 06-idari-tedbirler) | HR | Orientation day |
+| KVKK + information security training | HR + LMS | First 5 business days |
+| Non-standard access requests | Manager → IAM | When needed |
+
+### 4.2. Mover (Department/Position Change)
+
+**Critical rule:** Adding rights for the new role is **not enough**. The privileges of the old role **must be revoked**. Failure of the mover process creates "privilege creep" over time and is itself a finding under KVKK audit.
+
+| Step | Owner | SLA |
+|------|-------|-----|
+| Inventory of all old role rights | IAM | Change approval + 1 business day |
+| New role template applied | IAM | Change date |
+| Revocation of old privileges | IAM | Change date + 7 days (retention during transition is forbidden unless rationale documented) |
+| Manager validation of new role | New Manager | Change date + 14 days |
+
+### 4.3. Leaver (Departure)
+
+| Step | Owner | SLA |
+|------|-------|-----|
+| Access closure (planned departure) | IAM | Last working day at 18:00 |
+| Access closure (termination/bad leaver) | IAM | **Within minutes of decision** — by HR call |
+| Device handover, disk handover/encryption verification | IT Operations | Last working day |
+| Email forwarding (if appropriate) and auto-reply | IT Operations | Last working day |
+| Log/data retention period before account is deleted | IAM + Legal | As per policy (typically 90–365 days) |
+| Final account destruction | IAM | End of retention period |
+| Vendor/consultant departure notification chain | Contract Owner | -7 days from contract end |
+
+## 5. Quarterly Access Recertification
+
+Each quarter, owners by **personal data category** complete the following review for their systems:
+
+1. The IAM platform (Entra/Okta/Keycloak etc.) generates a review list: role → user, list of direct privileges, last login date, last MFA date.
+2. **Owner manager** decides for each row: keep / remove / modify.
+3. The decision is delivered to IAM within 14 business days. Otherwise, **rights are automatically suspended** (auto-revoke on no-response).
+4. Review record is digitally signed and kept for 5 years (audit evidence).
+5. Annotated findings are reported to the CISO; 100% completion is a KPI.
+
+**Critical systems (personnel + health + financial + customer DB):** review **quarterly**.
+**General systems:** review **annually**.
+
+## 6. Privileged Access Management (PAM)
+
+### 6.1. Scope
+
+The following accounts are considered "privileged" and are taken under PAM:
+
+- Domain Admin, Cloud Tenant Admin (Global Admin), root, sa, postgres, oracle DBA.
+- Hypervisor / cluster administrator (vCenter, Kubernetes cluster-admin).
+- Vault/secret manager administrator.
+- SIEM/SOC analyst privilege (especially capabilities to delete/modify logs).
+- Backup administrator.
+- Network equipment (firewall, switch, load balancer) administrator.
+- Any account with direct SQL access to a production DB holding personal data.
+
+### 6.2. Design Rules
+
+- **Vault-based exit:** Privileged credentials are pulled from a vault (CyberArk, HashiCorp Vault, Delinea, Azure PIM, AWS IAM Identity Center + Session Manager); not statically distributed.
+- **JIT (Just-in-Time) elevation:** Roles are not permanently assigned; opened with request + approval + time window (e.g., 1–4 hours). Automatically revoked at the end of the period.
+- **JEA (Just-Enough-Admin):** Even when elevated, only the cmdlet/command/scope needed for that specific job is opened.
+- **Session recording:** PAM session (RDP, SSH, web console) is recorded as **full screen video + command stream**. The recording is kept immutable in a separate storage that the actual operator cannot access.
+- **MFA mandatory:** PAM login requires MFA + device compliance check every time.
+- **Request + approval chain:** Two-sided approval (4-eyes). Break-glass in emergencies.
+- **Time window:** Privileged sessions outside normal business hours automatically tag the SOC with **enhanced monitoring**.
+
+### 6.3. Break-Glass Accounts
+
+- For each critical platform, **two** break-glass accounts exist.
+- Their passwords are kept enveloped (split knowledge) in the vault, use generates an alarm, and a justified report is mandatory within 24 hours.
+- MFA exception is **not allowed**; FIDO2 physical key is mandatory (including a backup key).
+- Annual drill is mandatory; evidence of successful use is added to the audit record.
+
+## 7. Access Request and Approval Flow
+
+```
+User (request) → Manager (1st approval) → Resource Owner (2nd approval)
+                                       → KVKK Officer (justification assessment if personal data)
+                                       → IAM (implementation)
+                                       → Time-bound assignment (default 90 days, critical 30 days)
+                                       → Automatic removal at end of period + re-request requirement
+```
+
+**Mandatory fields on the request form:**
+- User, requested role/resource, justification (job description), duration, personal data category, data minimization note.
+- If the KVKK Officer cannot perform the "need-to-know" test, a **rejection with justification** returns to the IAM record.
+
+## 8. Layer-Based Implementation
+
+### 8.1. Operating System (Linux)
+
+```
+# /etc/sudoers.d/finance-readers — limited sudo
+%finance-readers ALL=(postgres) NOPASSWD: /usr/bin/psql -U readonly -d finance_db
+Defaults:%finance-readers logfile=/var/log/sudo_finance.log, log_input, log_output
+
+# File ACL example — personnel
+setfacl -m g:hr-uzman:r-x /var/data/hr/sicil
+setfacl -m g:hr-yonetici:rwx /var/data/hr/sicil
+chmod o-rwx /var/data/hr/sicil
+```
+
+### 8.2. Operating System (Windows / AD)
+
+- AD Tier Model (Tier 0 / 1 / 2): Tier 0 accounts only log on to Tier 0 machines; PAW (Privileged Access Workstation) is mandatory.
+- Local admin passwords are different on each machine and rotate automatically with LAPS (Local Administrator Password Solution).
+- "Domain Admin" membership count is single-digit; individual admin account + separate user account.
+
+### 8.3. Database
+
+```sql
+-- PostgreSQL — Row Level Security
+ALTER TABLE customer_pii ENABLE ROW LEVEL SECURITY;
+CREATE POLICY pii_region_policy ON customer_pii
+  USING (region = current_setting('app.current_region'));
+
+-- Masked view (for developer)
+CREATE VIEW customer_dev AS
+  SELECT id, hash(email) AS email_hash, mask_phone(phone) AS phone, ...
+  FROM customer_pii;
+REVOKE ALL ON customer_pii FROM dev_role;
+GRANT SELECT ON customer_dev TO dev_role;
+```
+
+### 8.4. Application / API
+
+- An **authorization decision** is mandatory for every endpoint (URL filtering is not enough).
+- "Insecure Direct Object Reference (IDOR)" testing runs on every CI (OWASP ASVS V4.1).
+- API keys from the vault, short-lived tokens (OAuth2 / OIDC), scope-limited.
+- Rate limiting based on user + IP + endpoint.
+
+### 8.5. File Sharing / SaaS
+
+- Cloud storage: "Anyone with the link" disabled by default; external sharing requires approval (DLP integrated).
+- SharePoint/Drive: sensitivity label → automatic encryption + access restriction.
+- Email external sharing: TLS enforcement + external recipient warning + DLP policy.
+
+### 8.6. Storage (S3 / Blob / GCS)
+
+- Public access **default block**.
+- Bucket policy + IAM policy conflicts are scanned (CSPM).
+- "Block public ACL" enforced at the tenant level.
+- Mandatory encryption with KMS (BYOK optional).
+
+## 9. Service Accounts and Machine Identity
+
+- Human and service accounts are **separated**. Service accounts are not assigned in a person's name; team ownership is mandatory.
+- Where possible, **managed identity** (Azure MI, AWS IAM Role for Service, GCP Workload Identity).
+- If static secrets are required, in the vault, with automatic rotation.
+- Service accounts are included in annual review; mandatory transfer if owner leaves.
+
+## 10. Monitoring and Detection
+
+The following events are high priority in SIEM:
+
+- Outside-business-hours session on a critical system.
+- Access to a personal data table after privilege elevation (sudo, runas, AssumeRole).
+- Multiple failed MFA + then successful (sign of push fatigue).
+- Creation of a new service account, new role, new IAM policy attach.
+- Use of break-glass account.
+- Concurrent sessions of the same user from two distant geographic locations.
+- Following a "DENY", an attempt by the same user to access via a different path within a short time.
+
+## 11. Exception Management
+
+Exceptions can only be in writing, justified, and time-limited. Form: who, why, which policy clause, compensating controls, duration (≤180 days, extension requires re-approval), risk owner, KVKK Officer opinion. The exception register is audited annually.
+
+## 12. Checklist (Quick Audit)
+
+- [ ] Are all accounts managed via SSO/IdP?
+- [ ] Are RBAC roles documented, with a clear owner and last review record?
+- [ ] Are there permissions assigned directly to users? (Target: 0)
+- [ ] Are Joiner-Mover-Leaver SLAs met? (Mover revoke 7 days, Leaver 0 days.)
+- [ ] Is quarterly access review 100% for critical systems?
+- [ ] Is PAM scope clear, session recording immutable?
+- [ ] Have break-glass accounts been validated by drill?
+- [ ] Are service accounts owned, with automatic password rotation?
+- [ ] Are tables containing personal data restricted by RLS / view-based limitation?
+- [ ] Is developer prod access zero?
+- [ ] Is cloud storage public access block active across the tenant?
+- [ ] Does the access request form include the KVKK Officer's opinion?
+- [ ] Is the exception record time-bound and with compensating controls?
+- [ ] Has an annual access simulation (Red Team privilege escalation drill) been performed?
+- [ ] Do all privileged actions go to SIEM? (Sub-5-minute lag)
+- [ ] Is the access review completion rate reported?
+
+## 13. Evidence and Retention
+
+- IAM logs: at least 2 years, 5 years for systems containing personal data.
+- Access review signature/decision records: 5 years.
+- PAM session recordings: 1 year (up to 5 years with justification).
+- Break-glass usage report: 5 years.
+- Exception decisions: 5 years following the end of the term.
+
+## 14. Breach Scenarios and Response
+
+- **Privileged account compromised:** Account immediately disabled, sessions terminated, all secrets rotated from the vault, audit + IoC scanning on affected systems, KVKK Committee informed within 4 hours.
+- **Old privileges not removed at Mover and access occurred with old privileges:** Incident classification "high", post-mortem mandatory, if the data subject is affected, the 08-ihlal-yonetimi procedure is triggered.
+- **Access review left blank:** Automatic suspension applied; if continues without justification for 7 days, account is closed.
+
+---
+
+## Türkçe
 
 # Erişim Kontrolü
 

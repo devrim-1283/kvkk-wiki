@@ -1,13 +1,530 @@
 ---
-Doküman: Aydınlatma Metni Şablonu — Zorunlu İçerikler ve Kanal Bazlı Şablonlar
-Bölüm: 03-aydinlatma-ve-acik-riza
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni süreç, mevzuat değişikliği)
-İlgili Mevzuat: 6698 sayılı KVKK m.10, m.11; Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ (RG: 10.03.2018/30356) MADDE 4-5; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5(d)
+Doküman / Document: Aydınlatma Metni Şablonu — Zorunlu İçerikler ve Kanal Bazlı Şablonlar / Information Notice Template — Mandatory Content and Channel-Specific Templates
+Bölüm / Section: 03-aydinlatma-ve-acik-riza
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni süreç, mevzuat değişikliği) / Annual + triggered (new process, legislative change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.10, m.11 / Law No. 6698 (KVKK) Art. 10, 11; Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ (RG: 10.03.2018/30356) MADDE 4-5 / Disclosure/Information Notice Communiqué Art. 4-5; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 5(d) / Regulation on the Data Controllers' Registry Art. 5(d)
 ---
+
+## English
+
+# Information Notice Template
+
+## 1. Disclosure Communiqué Article 4 — Minimum Content
+
+Under KVKK Art. 10, data controllers (or their authorised persons) must inform data subjects when their personal data is collected. Article 4 of the Disclosure Communiqué sets out the minimum content of this obligation as follows:
+
+| # | Mandatory Element | Description |
+|---|-------------------|-------------|
+| 1 | Identity of the data controller and, if any, its representative | Full title, address, identity of representative if applicable |
+| 2 | Purposes of processing | Specific, explicit, legitimate purposes (Communiqué Art. 5/g) |
+| 3 | To whom and for what purpose personal data may be transferred | Recipients/recipient groups + transfer purpose (Communiqué Art. 5/ı) |
+| 4 | Method and legal ground of personal data collection | Automated/non-automated + KVKK Art. 5/Art. 6 clauses (Communiqué Art. 5/h, i) |
+| 5 | Other rights listed in Article 11 | KVKK Art. 11 rights set out in a list |
+
+> Under Communiqué Art. 5/h, the **legal ground** must not be expressed as a generic heading such as "law, contract, legitimate interest"; the specific clause **of KVKK Art. 5(2) or Art. 6(3)** that is relied on must be expressly stated.
+
+## 2. Communiqué Article 5 — Procedures and Principles
+
+| Principle | Description |
+|-----------|-------------|
+| Art. 5/a | Disclosure may be made orally, in writing, by audio recording, in a call center or in any physical or electronic environment. |
+| Art. 5/b | Made at the moment the data is collected. |
+| Art. 5/c | A **separate text per unit and process** is prepared. |
+| Art. 5/ç | Must align with VERBİS information for those subject to registration. |
+| Art. 5/d | Disclosure is **not** dependent on a request from the data subject. |
+| Art. 5/e | The burden of proof lies with the **data controller**. |
+| Art. 5/f | Disclosure may be made by an authorised person on behalf of the data controller; responsibility remains with the data controller. |
+| Art. 5/g | The purpose must be **specific, explicit and legitimate**; **vague expressions are forbidden**; expressions implying further processing for purposes that may arise later are not used. |
+| Art. 5/ğ | The language must be **clear, plain and simple**. |
+| Art. 5/h | The legal ground — which clause of KVKK Art. 5/Art. 6 is relied on — must be stated **expressly**. |
+| Art. 5/ı | Transfer purpose and recipient groups must be stated. |
+| Art. 5/i | Method of obtaining data (automated/non-automated) must be stated expressly. |
+| Art. 5/j | No incomplete, misleading or false information may appear. |
+
+## 3. General Information Notice Template (Structure)
+
+The structure below forms the skeleton of all information notices. It is adapted to the specific channel.
+
+```
+[FULL COMPANY TITLE]
+[ADDRESS]
+[CONTACT: Telephone, KEP, Web]
+
+INFORMATION NOTICE ON THE PROCESSING OF PERSONAL DATA
+[Process Name / Unit Name]
+
+Version: [X.Y]
+Effective: [YYYY-MM-DD]
+Document ID: [INF-XXX-XX]
+
+1. DATA CONTROLLER
+   In our capacity as data controller under Law No. 6698 on the Protection of
+   Personal Data ("KVKK") and related legislation, [Full company title]
+   ("Company" or "data controller") wishes to inform you about the personal
+   data we process in the context of [process].
+
+   Data Controller: [Full company title]
+   Address: [Full address]
+   MERSIS / Tax ID: [...]
+   KEP: [...]
+   Contact Person: [Name-Surname / contact]
+
+2. PERSONAL DATA PROCESSED
+   The following data categories and example data items are processed:
+   - Identity: name-surname, T.R. ID number, date of birth
+   - Contact: telephone, e-mail, address
+   - [Other categories relevant to the process]
+
+3. PURPOSES OF PROCESSING
+   Your data is processed for the following specific, explicit and legitimate
+   purposes:
+   - [Purpose 1 — explicit statement]
+   - [Purpose 2 — explicit statement]
+
+4. LEGAL GROUND
+   Your data is processed on the basis of the following legal grounds:
+   - KVKK Art. 5(2)/[clause]: [clause description]
+   - [Where applicable, Art. 6(3)/...]
+   - [Where applicable: Explicit consent — only for purposes processed on consent]
+
+5. TRANSFER OF PERSONAL DATA
+   Your data may be transferred to the following recipients/recipient groups:
+   - Domestic recipients:
+     • [Recipient group — purpose of transfer]
+   - Foreign recipients:
+     • [Recipient + country — purpose of transfer — KVKK Art. 9 legal basis]
+
+6. METHOD OF COLLECTING PERSONAL DATA
+   Your data is collected by [automated / non-automated / both] means:
+   - [Channel 1: website form]
+   - [Channel 2: call center]
+   - [Channel 3: paper application form]
+
+7. RETENTION PERIOD
+   Your data is retained for the maximum period necessary for the processing
+   purposes, taking into account periods prescribed by relevant legislation
+   [period]. At the end of the period it is erased, destroyed or anonymised in
+   accordance with the Company's retention and destruction policy.
+
+8. YOUR RIGHTS UNDER KVKK ARTICLE 11
+   By applying to the data controller under KVKK Art. 11, you have the right to;
+   a) Learn whether your personal data is being processed,
+   b) Request information if it has been processed,
+   c) Learn the purpose of processing and whether it is being used in line with that purpose,
+   ç) Know the third parties to whom personal data has been transferred domestically or abroad,
+   d) Request rectification if it is incomplete or incorrect,
+   e) Request erasure or destruction within the framework of conditions provided in KVKK and related legislation,
+   f) Request notification to third parties of operations performed under (d) and (e),
+   g) Object to a result that disadvantages you arising from analysis exclusively by automated systems,
+   ğ) Request compensation for damage suffered as a result of unlawful processing.
+
+9. APPLICATION CHANNELS
+   To exercise the above rights, in accordance with the Communiqué on the
+   Procedures and Principles for Application to the Data Controller:
+   - In writing: [Full address]
+   - Via KEP: [KEP address]
+   - Via the e-mail previously notified and registered in our system: [e-mail]
+   - Signed with secure electronic signature/mobile signature.
+
+   Applications are answered within at most 30 days under KVKK Art. 13.
+```
+
+## 4. Channel-Specific Templates
+
+### 4.1 Website (Written / Modal)
+
+Shown before the submit button on a web form. A two-layer approach is recommended:
+- **Short layer:** First exposure — who, why, recipients, summary of legal ground
+- **Detail layer:** Full extended text (PDF or modal)
+
+```
+[Above the form, single paragraph]
+Your personal data is processed by [Full company title] for the purpose of
+[explicit purpose], on the basis of KVKK Art. 5(2)/[clause], by automated
+means, at the moment of your input. The full information notice is available
+at [link]. You may exercise your KVKK Art. 11 rights via [KEP / e-mail / writing].
+
+[Modal or separate page: full text — structure in section 3]
+```
+
+### 4.2 Call Center (Spoken / IVR Announcement)
+
+Recording or operator-read text at the start of the call:
+
+```
+"Welcome to [Full company title]. This call is being recorded for the
+purposes of monitoring service quality, recording your requests, and
+performing the contract, on the basis of KVKK Art. 5(2)(c). Our
+information notice is available on our website. You may exercise your
+KVKK Art. 11 rights via [KEP/e-mail]. If you do not wish to continue,
+you may end the call."
+```
+
+> If requested, the full information notice is read out by the operator or sent to the data subject in writing.
+
+### 4.3 Mobile Application (Onboarding)
+
+Shown before initial registration or sensitive permission (location, camera, contacts):
+
+```
+[Full-screen modal]
+The following personal data will be processed:
+   • [List]
+
+Processing purpose: [Explicit purpose]
+Legal ground: KVKK Art. 5(2)/[clause]
+Transfer: [Yes/No — recipient group]
+
+Full information notice → [Link]
+
+[Continue]   [Cancel]
+```
+
+> "Continue" alone is not explicit consent. Where consent is required, it must be obtained via a separate checkbox.
+
+### 4.4 Paper Form / Signature Page
+
+```
+By means of this form, the personal data we collect will be processed for
+[explicit purpose]. Please read the information notice on the reverse side.
+An electronic copy is available at [web address].
+
+[Reverse side: full text in the structure of section 3]
+
+Signature:                       Date:
+```
+
+> Under Communiqué Art. 5/e, the signed copy is retained by the **data controller** (evidence).
+
+### 4.5 Oral (Face-to-Face)
+
+A registry clerk or field employee delivers a **summary** orally; a detailed written text is then handed over or a web link is shared.
+
+```
+"The information I am collecting will be used by our company for [purpose],
+may be shared with [recipient], and will be retained for [period]. The
+detailed information notice is at: [...]. You may exercise your rights
+via [...]."
+```
+
+> Oral disclosure is **hard to prove**. A written/electronic supplementary copy is therefore provided and a delivery log kept.
+
+### 4.6 CCTV (Sign + Detail)
+
+Sign upon entering the camera field of view, with access to detailed text:
+
+```
+[SIGN — small text]
+This area is monitored by closed-circuit camera (CCTV).
+Data controller: [Company]. Purpose: building and perimeter security.
+Legal ground: KVKK Art. 5(2)/f (legitimate interest).
+Detailed information notice: [web address / QR code].
+
+[Detailed text — structure in section 3, full example in "ornekler.md"]
+```
+
+## 5. Full Example Information Notices
+
+### 5.1 Customer Registration and Contract (Full Text)
+
+```
+[FULL COMPANY TITLE INC.]
+ABC Mahallesi, XYZ Caddesi No: 1, 34000 Istanbul
+MERSIS: 0000000000000000 | Tax ID: 0000000000
+KEP: companyname@hs01.kep.tr | Web: www.companyname.com.tr
+
+INFORMATION NOTICE ON THE PROCESSING OF PERSONAL DATA
+Customer Registration and Contract Process
+
+Document ID: INF-CUS-01 | Version: 1.0 | Effective: 2026-05-08
+
+1. DATA CONTROLLER
+
+[FULL COMPANY TITLE INC.] ("Company") acts as data controller under Law
+No. 6698 on the Protection of Personal Data ("KVKK"). You may reach our
+contact-person details via our KEP address.
+
+2. PERSONAL DATA PROCESSED
+
+In the course of being a customer, the following data categories are processed:
+
+- Identity: name-surname, T.R. ID number (for e-invoice), date of birth
+- Contact: telephone, e-mail, billing and delivery address
+- Customer Transaction: order history, contract details, payment information
+  (bank-card data is tokenised by our PCI-DSS-compliant provider; the card
+  number is not held by us)
+- Transaction Security: IP address, session and device data
+- Marketing: only if you have given explicit consent — preferences, interactions
+
+3. PURPOSES OF PROCESSING
+
+a) For the conclusion and performance of the contract: customer registration,
+   order taking, payment collection, delivery planning, invoicing
+b) For fulfilment of legal obligations: keeping books and documents under VUK
+   and TTK, e-invoicing
+c) Establishment, exercise or protection of a right: evidence in case of dispute
+d) Within our legitimate interest: improvement of service quality, fraud
+   control, customer-satisfaction measurement
+e) Subject to your explicit consent: marketing, campaign communication,
+   preference analysis
+
+4. LEGAL GROUND
+
+For purposes (a), (b), (c), (d):
+- KVKK Art. 5(2)/c — Necessity for the conclusion or performance of a contract
+- KVKK Art. 5(2)/ç — Fulfilment of a legal obligation
+- KVKK Art. 5(2)/e — Establishment, exercise or protection of a right
+- KVKK Art. 5(2)/f — Legitimate interest, provided that fundamental rights and
+  freedoms of the data subject are not harmed
+
+For purpose (e):
+- KVKK Art. 5(1), first sentence — Explicit consent
+
+5. TRANSFER
+
+Domestic recipients:
+- Banks and payment service providers (for payment collection — contract performance)
+- Courier companies (for delivery — contract performance)
+- E-invoice integrator (legal obligation)
+- Tax Office and competent public authorities (statutory)
+- Legal partners (in case of dispute, protection of rights)
+- Independent auditors (commercial legislation)
+
+Foreign recipients:
+- Our cloud infrastructure provider (e.g., AWS, Ireland) — necessary for
+  system infrastructure — KVKK Art. 9 standard contract signed
+- Our transactional-e-mail provider (e.g., Sendgrid, USA) — KVKK Art. 9
+  standard contract signed
+
+6. COLLECTION METHOD AND LEGAL GROUND
+
+Your personal data is collected by automated means (website form, mobile
+application, call-center systems) and by non-automated means (in-store
+contract form), based on the legal grounds set out above.
+
+7. RETENTION PERIOD
+
+- Customer account data: 10 years from the end of the relationship (TBK Art.
+  146 limitation period; TTK Art. 82 commercial-book retention)
+- Financial records: 10 years (VUK Art. 253; TTK Art. 82)
+- Marketing preferences (consent-based): until consent is withdrawn or 3 years
+  if preferences are not updated
+- Call-center voice recordings: 1 year
+
+At the end of the period, data is erased, destroyed or anonymised under our
+retention and destruction policy.
+
+8. YOUR RIGHTS UNDER KVKK ARTICLE 11
+
+[Standard list from section 3]
+
+9. APPLICATION CHANNELS
+
+In writing: [Full address]
+KEP: [KEP address]
+E-mail registered in our system: kvkk@companyname.com.tr
+Document signed with secure electronic / mobile signature
+
+Your application is answered within at most 30 days.
+```
+
+### 5.2 Job Candidate (Recruitment) — Full Text
+
+```
+[FULL COMPANY TITLE INC.]
+
+INFORMATION NOTICE ON THE PROCESSING OF PERSONAL DATA
+Job Candidate / Recruitment Process
+
+Document ID: INF-HR-01 | Version: 1.0 | Effective: 2026-05-08
+
+1. DATA CONTROLLER
+[Company information above]
+
+2. PERSONAL DATA PROCESSED
+
+In the course of your application and the evaluation process:
+- Identity: name-surname, date of birth, T.R. ID number (where required)
+- Contact: telephone, e-mail, address
+- Professional Experience: CV, work experience, role descriptions
+- Education: graduation, certifications
+- Visual/Audio: photograph in your CV, audio/video of interview (with prior notice to you)
+- Reference Information: contact details of references you provide
+  (you are expected to obtain consent from each reference for sharing their data)
+- Test and Evaluation: competency-test results, interview notes
+
+3. PROCESSING PURPOSES
+
+- Evaluation of candidates for open positions
+- Interview and meeting scheduling
+- Competency measurement and final decision
+- If hired, transfer to personnel file (a separate notice applies)
+- Subject to your explicit consent: retention in talent pool and re-evaluation
+  for future suitable positions
+
+4. LEGAL GROUND
+
+- KVKK Art. 5(2)/c — Pre-contract measures connected with a request to
+  conclude a contract (your application stage)
+- KVKK Art. 5(2)/f — Legitimate interest (competency assessment, application
+  process management)
+- KVKK Art. 5(1) first sentence — Explicit consent (taken separately for
+  retention in the talent pool)
+
+5. TRANSFER
+
+Domestic recipients:
+- Hiring-department managers (for evaluation purposes)
+- Our candidate-evaluation providers (talent test, assessment)
+- Legal partner (in case of dispute)
+
+Foreign recipients:
+- Our ATS (Applicant Tracking System) provider (e.g., Greenhouse — USA/EU)
+  — KVKK Art. 9 standard contract signed
+- LinkedIn Talent (USA) — within the scope of the LinkedIn URL you provide
+  in your application — KVKK Art. 9 standard contract signed
+
+6. COLLECTION METHOD
+
+- Automated: our career site, LinkedIn and other career portals, e-mail
+- Non-automated: paper application form, career events
+
+7. RETENTION PERIOD
+
+- Hired candidates: transferred to personnel file (separate notice)
+- Non-hired candidates: 1 year
+- Talent-pool retention (consent-based): 2 years
+
+8. YOUR RIGHTS
+[Standard KVKK Art. 11 list]
+
+9. APPLICATION CHANNELS
+[Standard application channels]
+```
+
+### 5.3 Visitor (Building Entry + CCTV) — Full Text
+
+```
+[FULL COMPANY TITLE INC.]
+
+INFORMATION NOTICE ON THE PROCESSING OF PERSONAL DATA
+Visitor Management and CCTV
+
+Document ID: INF-PHY-01 | Version: 1.0 | Effective: 2026-05-08
+
+1. DATA CONTROLLER
+[Company information above]
+
+2. PERSONAL DATA PROCESSED
+
+During your entry into and presence in the building:
+- Identity: name-surname, T.R. ID number (for visitor-badge record)
+- Contact: telephone (where required)
+- Visual/Audio: CCTV imagery (common areas, entrances/exits;
+  privacy areas such as toilets, changing rooms are out of scope)
+- Visit Information: unit/person visited, time of arrival/departure
+
+3. PROCESSING PURPOSES
+
+- Building and perimeter security
+- Maintenance of entry/exit records under occupational health and safety
+- Crime prevention and evidence in case of incident
+- Visit-appointment management
+
+4. LEGAL GROUND
+
+- KVKK Art. 5(2)/f — Legitimate interest (security within limited scope and
+  duration)
+- KVKK Art. 5(2)/ç — Legal obligation (entry record under OHS legislation)
+
+5. TRANSFER
+
+- Authorised law enforcement (in case of written request and judicial process)
+- Insurance company (to the extent necessary in case of accident)
+- Legal partner (in case of dispute)
+
+NO cross-border transfer.
+
+6. COLLECTION METHOD
+
+- Automated: CCTV cameras, badge readers
+- Non-automated: visitor log/form
+
+7. RETENTION PERIOD
+
+- CCTV recordings: 30 days (overwritten in rotation; until incident closure
+  in case of incident)
+- Visitor records: 1 year
+
+8. YOUR RIGHTS
+[Standard KVKK Art. 11 list]
+
+9. APPLICATION CHANNELS
+[Standard application channels]
+
+10. ADDITIONAL INFORMATION (CCTV)
+
+There are [n] cameras in this building. Camera locations:
+- Main entrance, parking lot, fire stairs, corridors, reception
+There are no cameras in toilets, showers, changing rooms, prayer rooms or
+other private areas. Anyone entering the field of view is deemed to have
+been informed by this notice; signage at the points of view repeats the
+notice.
+```
+
+## 6. Versioning and Evidence
+
+### 6.1 Versioning
+
+Each information notice has:
+- Document ID (e.g., INF-CUS-01)
+- Version number (semantic: 1.0, 1.1, 2.0)
+- Effective date
+- Archive of previous versions
+
+Without these, the "evidence chain" weakens. In practice, the Authority asks: "This person registered in 2024; what was the information notice in force in 2024?" Answering it requires a dated version archive.
+
+### 6.2 Evidence Mechanism (Communiqué Art. 5/e)
+
+Web/electronic:
+- For each display: user identity (where applicable), session/IP, displayed text version, time of display
+- Log retention: as long as the account is active + statute-of-limitations period
+
+Paper:
+- Signed copy — company archive
+
+Oral:
+- Delivery log of a written supplementary document; signature of recipient
+
+Call center:
+- Voice recording + IVR-announcement system log
+
+## 7. Typical Errors
+
+| Error | Solution |
+|-------|----------|
+| Vague legal ground such as "because the law says so" | State it as "KVKK Art. 5(2)/ç" — by **clause** |
+| Generic "business partners" for transfer | Recipient group + purpose explained |
+| Foreign SaaS not declared | Check system inventory |
+| Retention period not specified | Add numerical period + rationale |
+| KVKK Art. 11 rights enumerated incompletely | All clauses (a) through (ğ) added |
+| Disclosure + consent mixed in the same text | Explicit consent in a separate document/checkbox |
+| All processes covered by a single notice | Split per process (Communiqué Art. 5/c) |
+| No version or date | Document ID + version mandatory |
+
+## 8. Annexes
+
+- Checklist: [aydinlatma-metni-checklist.md](./aydinlatma-metni-checklist.md)
+- Explicit Consent Rules: [acik-riza-kurallari.md](./acik-riza-kurallari.md)
+- Scenario Examples: [ornekler.md](./ornekler.md)
+
+---
+
+## Türkçe
 
 # Aydınlatma Metni Şablonu
 

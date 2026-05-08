@@ -1,13 +1,324 @@
 ---
-Doküman: KVKK Wiki — Tam Doküman Dizini
-Bölüm: Kök
-Sahip: KVKK Sorumlusu
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Aylık (link doğrulama) + Yıllık (kapsam)
-İlgili Mevzuat: 6698 sayılı KVKK ve tüm ikincil mevzuat
+Doküman / Document: KVKK Wiki — Tam Doküman Dizini / KVKK Wiki — Master Document Index
+Bölüm / Section: Kök / Root
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi / KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Aylık (link doğrulama) + Yıllık (kapsam) — Monthly (link verification) + Annual (scope)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK ve tüm ikincil mevzuat — Law No. 6698 and all secondary legislation
 ---
+
+## English
+
+# KVKK Wiki — Master Document Index (INDEX)
+
+This index is the central reference listing all wiki documents, their owners, versions and applicable legislation. When a document is added or updated, this index is updated as well.
+
+## Quick Navigation
+
+- **"Tell me what to do quickly"** → [Search: Keyword Index](#keyword-index)
+- **Need legislative text** → [12-mevzuat-arsiv](12-mevzuat-arsiv/)
+- **Fillable form/template** → [99-sablonlar](99-sablonlar/)
+- **Authority on-site inspection — immediate readiness** → [11-denetim-ve-uyum/kurul-denetim-hazirlik.md](11-denetim-ve-uyum/kurul-denetim-hazirlik.md)
+- **You detected a breach** → [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md) + [08-ihlal-yonetimi](08-ihlal-yonetimi/)
+
+---
+
+## 00 — Governance
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Governance Section Index | [00-yonetisim/](00-yonetisim/) | KVKK Officer | — | — | KVKK Art. 16; VERBİS Reg. Art. 12 |
+
+> Definition of KVKK Officer, contact person, KVKK Committee structure, RACI matrix, annual calendar, organisational accountability.
+
+## 01 — Foundational Concepts
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Foundational Concepts Section Index | [01-temel-kavramlar/](01-temel-kavramlar/) | KVKK Officer + Legal | — | — | KVKK Arts. 3, 4, 5, 6, 11 |
+
+> Definitions, KVKK general principles (Art. 4), conditions of processing (Arts. 5, 6), data subject rights (Art. 11).
+
+## 02 — Inventory and Registry
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Inventory and Registry Section Index | [02-envanter-ve-sicil/](02-envanter-ve-sicil/) | KVKK Officer | — | — | KVKK Art. 16; VERBİS Reg. (all) |
+
+> Personal Data Processing Inventory structure, VERBİS registration, exemptions, 7-day notification discipline.
+
+## 03 — Disclosure and Explicit Consent
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Disclosure and Explicit Consent Section Index | [03-aydinlatma-ve-acik-riza/](03-aydinlatma-ve-acik-riza/) | KVKK Officer + Legal | — | — | KVKK Arts. 3, 5, 10; Disclosure Communiqué |
+
+> Privacy notice preparation, explicit consent management, minimum elements per Communiqué Art. 4, channel-based variants.
+
+## 04 — Retention and Destruction
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Retention and Destruction Section Index | [04-veri-saklama-ve-imha/](04-veri-saklama-ve-imha/) | KVKK Officer | — | — | KVKK Arts. 4, 7; Erasure Reg. (all) |
+
+> Setting retention periods, periodic destruction (January/July), destruction methods (erasure/destruction/anonymisation), minute management.
+
+## 05 — Technical Measures
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Technical Measures Section Index | [05-teknik-tedbirler/](05-teknik-tedbirler/) | CISO + KVKK Officer | — | — | KVKK Art. 12; Personal Data Security Guide |
+
+> Access control, MFA, encryption, logging, backup, DLP, network security, application security, penetration testing.
+
+## 06 — Administrative Measures
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Administrative Measures Section Index | [06-idari-tedbirler/](06-idari-tedbirler/) | KVKK Officer + HR | — | — | KVKK Art. 12; Personal Data Security Guide |
+
+> Policy set, training, confidentiality undertakings, supplier management, risk management, internal audit.
+
+## 07 — Transfer
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Transfer Section Index | [07-aktarim/](07-aktarim/) | Legal + KVKK Officer | — | — | KVKK Arts. 8, 9; 12.03.2024/Law 7499; Authority Decision 2024/959 |
+
+> Domestic transfer (DPA), cross-border transfer (three-tier system: adequacy / standard contract-BCR-undertaking / derogations), TIA.
+
+## 08 — Breach Management
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Breach Management Section Index | [08-ihlal-yonetimi/](08-ihlal-yonetimi/) | KVKK Officer + CISO | — | — | KVKK Art. 12/5; Authority Decision 2019/10 |
+
+> Detection, triage, containment, 72-hour Authority notification, data subject notification, root cause analysis, exercises.
+
+## 09 — Data Subject Requests
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Data Subject Requests Section Index | [09-ilgili-kisi-basvurulari/](09-ilgili-kisi-basvurulari/) | KVKK Officer | — | — | KVKK Arts. 11, 13, 14; Application Communiqué |
+
+> Application channels, identity verification, 30-day SLA, response templates, fee tariff, complaint to the Authority.
+
+## 10 — Special Topics
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Special Topics Section Index | [10-ozel-konular/](10-ozel-konular/) | KVKK Officer | — | — | KVKK Arts. 4, 6, 11; Cookie Guide; Authority 2018/10 |
+
+> Cookie management, CCTV, biometric data, health data, children's data, HR and employee data, customer-marketing, cloud, AI/LLM, IoT.
+
+## 11 — Audit and Compliance
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Audit and Compliance Section Index | [11-denetim-ve-uyum/README.md](11-denetim-ve-uyum/README.md) | KVKK Officer + Internal Audit | 1.0 | 2026-05-08 | KVKK Arts. 12, 15, 18; VERBİS Reg. Arts. 5, 17 |
+| Compliance Maturity Model | [11-denetim-ve-uyum/uyum-olgunluk-modeli.md](11-denetim-ve-uyum/uyum-olgunluk-modeli.md) | KVKK Officer + Internal Audit | 1.0 | 2026-05-08 | KVKK Art. 12; all secondary legislation |
+| KPIs and Metrics | [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md) | KVKK Officer | 1.0 | 2026-05-08 | KVKK Arts. 12, 15, 16 |
+| Internal Audit Procedure | [11-denetim-ve-uyum/ic-denetim-prosedur.md](11-denetim-ve-uyum/ic-denetim-prosedur.md) | Internal Audit | 1.0 | 2026-05-08 | KVKK Arts. 12, 15; IIA Standards |
+| Authority Inspection Readiness Guide | [11-denetim-ve-uyum/kurul-denetim-hazirlik.md](11-denetim-ve-uyum/kurul-denetim-hazirlik.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | KVKK Arts. 15, 18; Authority Working Reg. |
+| Sanctions and Fines | [11-denetim-ve-uyum/yaptirimlar-cezalar.md](11-denetim-ve-uyum/yaptirimlar-cezalar.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | KVKK Arts. 17, 18; TCC Arts. 135-140; Misdemeanours Law; CO Arts. 49 et seq. |
+
+## 12 — Legislative Archive
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Legislative Archive Section Index | [12-mevzuat-arsiv/README.md](12-mevzuat-arsiv/README.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | All KVKK legislation |
+| Law No. 6698 — Article Summary | [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | KVKK 32 articles + Law 7499 amendment |
+| VERBİS Regulation — Article Summary | [12-mevzuat-arsiv/verbis-yonetmelik.md](12-mevzuat-arsiv/verbis-yonetmelik.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | VERBİS Reg. 30.12.2017/30286 |
+| Disclosure Communiqué — Article Summary | [12-mevzuat-arsiv/aydinlatma-tebligi.md](12-mevzuat-arsiv/aydinlatma-tebligi.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | Disclosure Communiqué 10.03.2018/30356 |
+| Application Communiqué — Article Summary | [12-mevzuat-arsiv/basvuru-tebligi.md](12-mevzuat-arsiv/basvuru-tebligi.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | Application Communiqué 10.03.2018/30356 |
+| Erasure Regulation — Article Summary | [12-mevzuat-arsiv/imha-yonetmeligi.md](12-mevzuat-arsiv/imha-yonetmeligi.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | Erasure Reg. 28.10.2017/30224 |
+| Authority Decisions Summary | [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | Authority decisions (2018/10, 2019/10, 2024/959 etc.) |
+| Regulatory Change Tracking Procedure | [12-mevzuat-arsiv/mevzuat-degisiklik-takip.md](12-mevzuat-arsiv/mevzuat-degisiklik-takip.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | KVKK and secondary legislation |
+
+## 99 — Templates
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| Template Index | [99-sablonlar/README.md](99-sablonlar/README.md) | KVKK Officer | 1.0 | 2026-05-08 | All KVKK legislation |
+| Privacy Notice Templates | [99-sablonlar/aydinlatma-metni.md](99-sablonlar/aydinlatma-metni.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | KVKK Art. 10; Disclosure Communiqué Arts. 4, 5 |
+| Explicit Consent Templates | [99-sablonlar/acik-riza-metni.md](99-sablonlar/acik-riza-metni.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | KVKK Arts. 3, 5/1, 6, 9 |
+| Personal Data Processing Inventory (ROPA) | [99-sablonlar/kvki-envanter.csv](99-sablonlar/kvki-envanter.csv) | KVKK Officer | 1.0 | 2026-05-08 | KVKK Art. 16; VERBİS Reg. Art. 9 |
+| Retention and Destruction Policy Template | [99-sablonlar/saklama-imha-politikasi.md](99-sablonlar/saklama-imha-politikasi.md) | KVKK Officer | 1.0 | 2026-05-08 | KVKK Art. 7; Erasure Reg. Arts. 5, 6 |
+| Breach Notification Templates | [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | KVKK Art. 12/5; Authority Decision 2019/10 |
+| Data Subject Response Letters | [99-sablonlar/ilgili-kisi-cevap.md](99-sablonlar/ilgili-kisi-cevap.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | KVKK Arts. 11, 13; Application Communiqué Arts. 5, 6 |
+| Supplier Data Processing Agreement (DPA) | [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | KVKK Arts. 3, 8, 9, 12; Authority Decision 2024/959 |
+| Personnel Confidentiality Undertaking | [99-sablonlar/personel-gizlilik-taahhutnamesi.md](99-sablonlar/personel-gizlilik-taahhutnamesi.md) | KVKK Officer + Legal + HR | 1.0 | 2026-05-08 | KVKK Art. 12/4; Labour Law Art. 25; TCC Arts. 135-140; CO Art. 396 |
+| KVKK Training Tracking | [99-sablonlar/kvki-egitim-takip.md](99-sablonlar/kvki-egitim-takip.md) | KVKK Officer + HR | 1.0 | 2026-05-08 | KVKK Art. 12; Personal Data Security Guide |
+| DPIA / PIA Form | [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md) | KVKK Officer + Process Owner | 1.0 | 2026-05-08 | KVKK Arts. 4, 6, 12; Authority Decision 2018/10 |
+| Legitimate Interest Assessment (LIA) | [99-sablonlar/meşru-menfaat-degerlendirmesi.md](99-sablonlar/meşru-menfaat-degerlendirmesi.md) | KVKK Officer + Process Owner + Legal | 1.0 | 2026-05-08 | KVKK Art. 5/2-(f); Art. 4 |
+
+---
+
+## Cross-Reference — Legislation ↔ Wiki Section
+
+| Legislation / Article | Related Wiki Section |
+|-----------------------|----------------------|
+| KVKK Art. 4 (general principles) | 01, 10 |
+| KVKK Art. 5 (conditions of processing) | 03, 99/aydinlatma, 99/acik-riza, 99/lia |
+| KVKK Art. 6 (sensitive data — post Law 7499) | 10, 99/dpia |
+| KVKK Art. 7 (erasure) | 04, 12/imha, 99/saklama-imha |
+| KVKK Art. 8 (domestic transfer) | 07, 99/dpa |
+| KVKK Art. 9 (cross-border — post Law 7499) | 07, 12/kurul-kararlari (2024/959) |
+| KVKK Art. 10 (disclosure) | 03, 12/aydinlatma-tebligi, 99/aydinlatma |
+| KVKK Art. 11 (data subject rights) | 09, 99/ilgili-kisi-cevap |
+| KVKK Art. 12 (data security) | 05, 06, 08 |
+| KVKK Art. 12/5 (breach notification) | 08, 99/ihlal-bildirim |
+| KVKK Art. 13 (application) | 09, 12/basvuru-tebligi, 99/ilgili-kisi-cevap |
+| KVKK Art. 14 (complaint) | 09, 11/yaptirimlar |
+| KVKK Art. 15 (inspection) | 11/kurul-denetim-hazirlik |
+| KVKK Art. 16 (Registry) | 02, 12/verbis-yonetmelik |
+| KVKK Art. 17 (offences — TCC 135-140) | 11/yaptirimlar |
+| KVKK Art. 18 (administrative fines) | 11/yaptirimlar |
+| VERBİS Reg. | 02, 12/verbis |
+| Disclosure Communiqué | 03, 12/aydinlatma, 99/aydinlatma |
+| Application Communiqué | 09, 12/basvuru, 99/cevap |
+| Erasure Reg. | 04, 12/imha, 99/saklama-imha |
+| Authority Decision 2018/10 (sensitive data) | 10, 99/dpia |
+| Authority Decision 2019/10 (breach notification) | 08, 99/ihlal-bildirim |
+| Authority Decision 2024/959 (standard contracts) | 07, 12/kurul-kararlari |
+| Cookie Guide (June 2022) | 10/cerez |
+
+---
+
+## Keyword Index
+
+> Scroll down or use Ctrl+F.
+
+### Transfer
+
+- **Domestic transfer** → [07-aktarim](07-aktarim/), [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md), [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md) (Art. 8)
+- **Cross-border transfer** → [07-aktarim](07-aktarim/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md), [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md) (Art. 9 — post Law 7499)
+- **Standard contract** → [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) (Decision 2024/959), [07-aktarim](07-aktarim/)
+- **BCR (Binding Corporate Rules)** → [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md), [07-aktarim](07-aktarim/)
+- **TIA (Transfer Impact Assessment)** → [11-denetim-ve-uyum/uyum-olgunluk-modeli.md](11-denetim-ve-uyum/uyum-olgunluk-modeli.md), [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md)
+
+### Disclosure and Explicit Consent
+
+- **Privacy notice** → [03-aydinlatma-ve-acik-riza](03-aydinlatma-ve-acik-riza/), [99-sablonlar/aydinlatma-metni.md](99-sablonlar/aydinlatma-metni.md), [12-mevzuat-arsiv/aydinlatma-tebligi.md](12-mevzuat-arsiv/aydinlatma-tebligi.md)
+- **Explicit consent** → [03-aydinlatma-ve-acik-riza](03-aydinlatma-ve-acik-riza/), [99-sablonlar/acik-riza-metni.md](99-sablonlar/acik-riza-metni.md)
+- **Cookie** → [10-ozel-konular](10-ozel-konular/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) (Cookie Guide)
+
+### Cloud and Technology
+
+- **Cloud services** → [10-ozel-konular](10-ozel-konular/), [05-teknik-tedbirler](05-teknik-tedbirler/), [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md)
+- **AI / Artificial Intelligence / LLM** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md)
+- **IoT** → [10-ozel-konular](10-ozel-konular/)
+
+### Employee / HR
+
+- **HR personal data** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/aydinlatma-metni.md](99-sablonlar/aydinlatma-metni.md) (Template 2)
+- **Employee training** → [99-sablonlar/kvki-egitim-takip.md](99-sablonlar/kvki-egitim-takip.md), [06-idari-tedbirler](06-idari-tedbirler/)
+- **Confidentiality undertaking** → [99-sablonlar/personel-gizlilik-taahhutnamesi.md](99-sablonlar/personel-gizlilik-taahhutnamesi.md)
+- **Intern** → [99-sablonlar/personel-gizlilik-taahhutnamesi.md](99-sablonlar/personel-gizlilik-taahhutnamesi.md) (Template 3)
+
+### CCTV / Biometric / Health
+
+- **CCTV** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/saklama-imha-politikasi.md](99-sablonlar/saklama-imha-politikasi.md)
+- **Biometric** → [10-ozel-konular](10-ozel-konular/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) (Decision 2018/10), [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md)
+- **Health data** → [10-ozel-konular](10-ozel-konular/), [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md) (Art. 6 — post Law 7499)
+- **Children's data** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md)
+
+### Audit and Compliance
+
+- **Maturity model** → [11-denetim-ve-uyum/uyum-olgunluk-modeli.md](11-denetim-ve-uyum/uyum-olgunluk-modeli.md)
+- **KPIs** → [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- **Internal audit** → [11-denetim-ve-uyum/ic-denetim-prosedur.md](11-denetim-ve-uyum/ic-denetim-prosedur.md)
+- **Authority inspection (on-site)** → [11-denetim-ve-uyum/kurul-denetim-hazirlik.md](11-denetim-ve-uyum/kurul-denetim-hazirlik.md)
+- **Administrative fines** → [11-denetim-ve-uyum/yaptirimlar-cezalar.md](11-denetim-ve-uyum/yaptirimlar-cezalar.md)
+- **TCC offences** → [11-denetim-ve-uyum/yaptirimlar-cezalar.md](11-denetim-ve-uyum/yaptirimlar-cezalar.md)
+
+### Inventory and Registry
+
+- **VERBİS** → [02-envanter-ve-sicil](02-envanter-ve-sicil/), [12-mevzuat-arsiv/verbis-yonetmelik.md](12-mevzuat-arsiv/verbis-yonetmelik.md), [99-sablonlar/kvki-envanter.csv](99-sablonlar/kvki-envanter.csv)
+- **Inventory / ROPA** → [02-envanter-ve-sicil](02-envanter-ve-sicil/), [99-sablonlar/kvki-envanter.csv](99-sablonlar/kvki-envanter.csv)
+- **Contact person** → [00-yonetisim](00-yonetisim/), [12-mevzuat-arsiv/verbis-yonetmelik.md](12-mevzuat-arsiv/verbis-yonetmelik.md)
+
+### Breach
+
+- **Breach notification** → [08-ihlal-yonetimi](08-ihlal-yonetimi/), [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) (Decision 2019/10)
+- **72 hours** → [08-ihlal-yonetimi](08-ihlal-yonetimi/), [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md)
+- **MTTD/MTTN/MTTR** → [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+
+### Data Subject Rights
+
+- **Application** → [09-ilgili-kisi-basvurulari](09-ilgili-kisi-basvurulari/), [12-mevzuat-arsiv/basvuru-tebligi.md](12-mevzuat-arsiv/basvuru-tebligi.md), [99-sablonlar/ilgili-kisi-cevap.md](99-sablonlar/ilgili-kisi-cevap.md)
+- **Art. 11 rights** → [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md), [99-sablonlar/ilgili-kisi-cevap.md](99-sablonlar/ilgili-kisi-cevap.md)
+- **30-day SLA** → [09-ilgili-kisi-basvurulari](09-ilgili-kisi-basvurulari/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- **Automated decision — objection** → [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md) (Art. 11/g), [99-sablonlar/acik-riza-metni.md](99-sablonlar/acik-riza-metni.md)
+
+### Destruction and Retention
+
+- **Retention period** → [04-veri-saklama-ve-imha](04-veri-saklama-ve-imha/), [99-sablonlar/saklama-imha-politikasi.md](99-sablonlar/saklama-imha-politikasi.md)
+- **Periodic destruction** → [04-veri-saklama-ve-imha](04-veri-saklama-ve-imha/), [99-sablonlar/saklama-imha-politikasi.md](99-sablonlar/saklama-imha-politikasi.md), [12-mevzuat-arsiv/imha-yonetmeligi.md](12-mevzuat-arsiv/imha-yonetmeligi.md)
+- **Anonymisation** → [04-veri-saklama-ve-imha](04-veri-saklama-ve-imha/), [10-ozel-konular](10-ozel-konular/)
+
+### Legislation
+
+- **Law No. 6698** → [12-mevzuat-arsiv/6698-kanun.md](12-mevzuat-arsiv/6698-kanun.md)
+- **VERBİS Regulation** → [12-mevzuat-arsiv/verbis-yonetmelik.md](12-mevzuat-arsiv/verbis-yonetmelik.md)
+- **Disclosure Communiqué** → [12-mevzuat-arsiv/aydinlatma-tebligi.md](12-mevzuat-arsiv/aydinlatma-tebligi.md)
+- **Application Communiqué** → [12-mevzuat-arsiv/basvuru-tebligi.md](12-mevzuat-arsiv/basvuru-tebligi.md)
+- **Erasure Regulation** → [12-mevzuat-arsiv/imha-yonetmeligi.md](12-mevzuat-arsiv/imha-yonetmeligi.md)
+- **Authority Decisions** → [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+- **Regulatory change tracking** → [12-mevzuat-arsiv/mevzuat-degisiklik-takip.md](12-mevzuat-arsiv/mevzuat-degisiklik-takip.md)
+
+### Customer / Marketing
+
+- **Customer marketing** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/acik-riza-metni.md](99-sablonlar/acik-riza-metni.md) (Template 1)
+- **Profiling** → [10-ozel-konular](10-ozel-konular/), [99-sablonlar/acik-riza-metni.md](99-sablonlar/acik-riza-metni.md) (Template 3)
+- **Cookie** → [10-ozel-konular](10-ozel-konular/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+
+### Supplier
+
+- **Supplier management** → [06-idari-tedbirler](06-idari-tedbirler/), [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md)
+- **DPA** → [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md)
+- **Processor** → [01-temel-kavramlar](01-temel-kavramlar/), [99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md](99-sablonlar/tedarikci-veri-isleyen-sozlesmesi.md)
+
+### Technical Measures
+
+- **Encryption** → [05-teknik-tedbirler](05-teknik-tedbirler/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- **MFA / PAM** → [05-teknik-tedbirler](05-teknik-tedbirler/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- **Logging** → [05-teknik-tedbirler](05-teknik-tedbirler/)
+- **Penetration test** → [05-teknik-tedbirler](05-teknik-tedbirler/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](11-denetim-ve-uyum/kpi-ve-metrikler.md)
+- **DLP** → [05-teknik-tedbirler](05-teknik-tedbirler/)
+
+### Assessment Forms
+
+- **DPIA** → [99-sablonlar/dpia-formu.md](99-sablonlar/dpia-formu.md)
+- **LIA / Legitimate interest** → [99-sablonlar/meşru-menfaat-degerlendirmesi.md](99-sablonlar/meşru-menfaat-degerlendirmesi.md)
+
+---
+
+## Usage Guide
+
+1. **Adding a new document:** Add a row to this INDEX with Owner, Version, Last Update, Legislation.
+2. **Updating versions:** Update the Version and Last Update of the relevant row; keep version history in the document itself.
+3. **Regulatory change impact:** Follow [12-mevzuat-arsiv/mevzuat-degisiklik-takip.md](12-mevzuat-arsiv/mevzuat-degisiklik-takip.md); update affected documents in this list.
+
+## Annual Verification
+
+| Step | Owner | Deadline |
+|------|-------|----------|
+| Verify links | KVKK Officer | Monthly |
+| Verify version numbers | Document owner | Continuous |
+| Identify newly added documents not in INDEX | KVKK Officer | Monthly |
+| Verify regulatory references | Legal | Annual (November) |
+| Holistic index review | KVKK Committee | Annual (December) |
+
+---
+
+> This wiki is a compliance framework, not a legal opinion. For specific cases, consult the Legal Counsel and the KVKK Officer.
+
+---
+
+## Türkçe
 
 # KVKK Wiki — Tam Doküman Dizini (INDEX)
 

@@ -1,13 +1,308 @@
 ---
-Doküman: Yurt Dışı Kişisel Veri Aktarım Rejimi
-Bölüm: 07-aktarim
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (Kurul yeterlilik kararı, mevzuat değişikliği, yeni alıcı ülke)
-İlgili Mevzuat: KVKK m.9 (12.03.2024 tarihli ve 7499 sayılı Kanun ile değişik, yürürlük 01.06.2024); Kurul'un 04.06.2024 tarihli ve 2024/959 sayılı kararı; Anayasa m.20/3
+Doküman / Document: Yurt Dışı Kişisel Veri Aktarım Rejimi / Cross-Border Personal Data Transfer Regime
+Bölüm / Section: 07-aktarim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (Board adequacy decision, regulatory change, new recipient country)
+İlgili Mevzuat / Legal Reference: KVKK Art. 9 (as amended by Law No. 7499 dated 12.03.2024, effective 01.06.2024); Board Decision No. 2024/959 dated 04.06.2024; Constitution Art. 20/3
 ---
+
+## English
+
+# Cross-Border Personal Data Transfer Regime
+
+## 1. Framework of the New Regime
+
+By Article 34 of **Law No. 7499 on the Amendment of the Code of Criminal Procedure and Other Laws**, published in Official Gazette No. 32487 dated 12.03.2024, KVKK Art. 9 was amended; the new regime entered into force on **01.06.2024**.
+
+The new regime envisages a **tiered** architecture for cross-border transfer of personal data:
+
+```
++----------------------------------------------------+
+| TIER 1 — ADEQUACY DECISION (Art. 9/1)              |
+| Existence of an adequacy decision by the Board     |
+| for the destination country / sector / international|
+| organization.                                      |
++----------------------------------------------------+
+                       |
+              If absent, descend
+                       v
++----------------------------------------------------+
+| TIER 2 — APPROPRIATE SAFEGUARDS (Art. 9/4)         |
+| Where adequacy is absent, providing one of the     |
+| appropriate safeguards:                            |
+|   (a) Inter-public-authority agreement + Board     |
+|       authorization                                |
+|   (b) Board-approved Binding Corporate Rules (BCR) |
+|   (c) Standard contract + notification to Authority|
+|   (ç) Written undertaking + Board authorization    |
++----------------------------------------------------+
+                       |
+              If absent, descend
+                       v
++----------------------------------------------------+
+| TIER 3 — OCCASIONAL CASES (Art. 9/6)               |
+| Closed list of 6 exceptional cases:                |
+|   (a) Informed explicit consent                    |
+|   (b) Performance of contract / pre-contractual    |
+|       measure                                      |
+|   (c) Contract for benefit of data subject with    |
+|       a third party                                |
+|   (ç) Overriding public interest                   |
+|   (d) Establishment/exercise/protection of a right |
+|   (e) Protection of life/bodily integrity (where   |
+|       data subject cannot consent)                 |
+|   (f) Transfer from a publicly available register  |
++----------------------------------------------------+
+```
+
+> **Art. 5/Art. 6 Condition Always Required:** Whichever tier is used, **a processing condition** (Art. 5 or Art. 6) must be satisfied **before** transfer. The transfer route does not replace the processing condition; it is required in addition.
+
+## 2. TIER 1 — Adequacy Decision (Art. 9/1)
+
+### 2.1. Definition
+
+The Board may issue an "adequate protection" decision for an entire country, for a specific sector within that country, or for an international organization. Where such a decision exists, no further safeguard is required for the transfer; only the Art. 5/Art. 6 processing condition and disclosure are needed.
+
+A novelty introduced by the new regulation: An adequacy decision may be issued not only for an entire country, but **also for a specific sector or international organization**. For example, even though the United States as a whole is not deemed to provide adequate protection, an adequacy decision could be issued for organizations under a specific certification program.
+
+### 2.2. Board's Assessment Criteria (Art. 9/3)
+
+In issuing an adequacy decision, the Board primarily considers (non-exhaustive):
+
+- The level of personal data protection legislation and its implementation in the destination country,
+- The existence of an independent supervisory authority,
+- Possibility of data subjects to exercise their rights,
+- The destination country's status as a party to international agreements,
+- The scope of public authority access (especially law enforcement and intelligence),
+- Judicial remedies.
+
+### 2.3. Validity Period and Review (Art. 9/2)
+
+- Adequacy decisions are reviewed by the Board **every four years**.
+- If no review is performed, the existing decision remains in force.
+- The Board may also review before the four-year mark.
+- Following its assessment, the Board may **modify, suspend or revoke** the decision (with prospective effect).
+
+### 2.4. Current List
+
+The **List of Countries with Adequate Protection** issued by the Board is kept current on the Authority's website. Before deciding on a transfer, the list must be verified **at the moment** of decision. The list date and version are recorded in the TIA document.
+
+## 3. TIER 2 — Appropriate Safeguards (Art. 9/4)
+
+If no adequacy decision exists, subject to the Art. 5/Art. 6 condition and **provided that the data subject has the means to exercise his/her rights and access to effective legal remedies in the destination country**, one of the following appropriate safeguards must be provided.
+
+### 3.1. (a) Public Authority Agreement + Board Authorization
+
+The existence of an agreement that does **not have the nature of an international treaty**, between foreign public institutions/organizations or international organizations and Turkish public institutions/organizations (or public-law professional bodies), + Board authorization for the transfer.
+
+**Typical use:** A Turkish public institution transferring data within a cooperation protocol with a foreign public institution.
+
+**Practical:** Not directly available to private-sector controllers.
+
+### 3.2. (b) Binding Corporate Rules (BCR) Approved by the Board
+
+If **prior-approved** Binding Corporate Rules covering the protection of personal data exist between companies within the **same group of undertakings**, transfers within the group can be made **without further Board authorization** for each transfer, provided the Art. 5/Art. 6 condition is also satisfied.
+
+**Typical use:** Transfer from a multinational group's Turkish company to its overseas affiliate within the same group.
+
+**Important:** BCR requires a one-time prior Board approval; once approved, no per-transfer authorization is required for intra-group transfers. For details: [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md)
+
+### 3.3. (c) Standard Contract + Notification to Authority
+
+Signing a **standard contract** declared by the Board — covering data categories, purposes of transfer, recipient and recipient groups, technical+administrative measures to be taken by the recipient, and supplementary measures for special category data — and notifying the Authority.
+
+**Typical use:** Foreign SaaS provider, cloud hosting provider, transfer to a non-group partner.
+
+**Notification deadline:** Notified to the Authority within **5 business days** of signing. Notification does not require additional authorization; the notification obligation is part of compliance.
+
+For details: [standart-sozlesme-rehberi.md](standart-sozlesme-rehberi.md)
+
+### 3.4. (ç) Written Undertaking + Board Authorization
+
+In situations where transfer cannot be made with a standard contract due to sectoral or regional requirements, an **undertaking** containing personal data protection commitments between the parties is **submitted to the Board for approval**. Transfer can be made after Board authorization.
+
+**Typical use:** Special situations not covered by the standard contract template (sector-specific confidentiality, distributed recipient structures, etc.).
+
+**Practical:** Not preferred for daily commercial transfers due to lengthy authorization process.
+
+### 3.5. Tier 2 Comparison
+
+| Method | Use Area | Approval Process | Time | Sustainability |
+|--------|----------|-------------------|------|-----------------|
+| (a) Agreement + Authorization | Public institutions | Board authorization required | Long | Limited |
+| (b) BCR | Same group companies | Prior Board approval (one-off) | Very long (months-years) | Very high |
+| (c) Standard Contract | General commercial transfer | Notification to Authority (5 business days) | Fast | High |
+| (ç) Undertaking | Special cases | Board authorization | Long | Medium |
+
+## 4. TIER 3 — Occasional Cases (Art. 9/6)
+
+### 4.1. Definition
+
+If no adequacy decision exists and no appropriate safeguard can be provided, transfer may be made **provided it is occasional/incidental**, in one of the 6 exhaustively listed cases under Art. 9/6.
+
+> **In light of Constitution Art. 20/3,** occasional cases are **narrowly construed** and apply to **occasional, irregular, rarely-occurring** transfers, not continuous ones.
+
+### 4.2. The Six Cases
+
+| # | Case | Description |
+|---|------|-------------|
+| (a) | Informed explicit consent | The data subject gives explicit consent to the transfer after being informed of the possible risks |
+| (b) | Performance of contract / pre-contractual measure | The transfer is necessary for performance of a contract between the data subject and the controller, or for pre-contractual measures upon the data subject's request |
+| (c) | Contract for the benefit of the data subject | A contract concluded between the controller and another natural/legal person for the benefit of the data subject |
+| (ç) | Overriding public interest | The transfer is required for an overriding public interest |
+| (d) | Establishment/exercise/protection of a right | The transfer is required for establishment, exercise or protection of a right |
+| (e) | Life/bodily integrity | Necessary for protection of life or bodily integrity of the data subject (or another) where the data subject is unable to consent |
+| (f) | Publicly available register | Transfer from a register open to the public or to those with a legitimate interest, provided that the conditions for accessing the register are satisfied and there is a request from a person with a legitimate interest |
+
+For detailed analysis: [arizi-aktarim.md](arizi-aktarim.md)
+
+## 5. Decision Tree: Which Path?
+
+```
+                +-----------------------------------+
+                | Cross-border transfer decision    |
+                +-----------------------------------+
+                                 |
+                                 v
+                +-----------------------------------+
+                | Is there a processing condition   |
+                | under Art. 5 or Art. 6?           |
+                +-----------------------------------+
+                       |                |
+                     no|             yes|
+                       v                v
+              +---------------+   +-------------------------+
+              | NO TRANSFER   |   | Is there an adequacy    |
+              | (find process |   | decision for country/   |
+              | basis first)  |   | sector/international    |
+              +---------------+   | organization?           |
+                                  +-------------------------+
+                                       |              |
+                                    yes|            no|
+                                       v              v
+                          +-----------------+  +------------------+
+                          | Transfer under  |  | Can an appropriate|
+                          | Art. 9/1 (only  |  | safeguard be     |
+                          | Art. 5/6 +      |  | provided?        |
+                          | disclosure)     |  +------------------+
+                          +-----------------+         |
+                                                      v
+                                  +-----+-----+-----+-----+
+                                  |     |     |     |     |
+                                  |     |     |     |     |
+                                 (a)   (b)   (c)   (ç)
+                              Agreement BCR  Std.K  Underta.
+                                  +Brd  +App. +Notif. +Auth.
+                                       |
+                                       v
+                          +-------------------------+
+                          | None applicable.        |
+                          | Is the transfer of      |
+                          | occasional nature?      |
+                          | (Art. 9/6 — 6 cases)    |
+                          +-------------------------+
+                                  |              |
+                              yes|            no|
+                                  v              v
+                         +----------------+  +----------------+
+                         | Transfer via   |  | NO TRANSFER    |
+                         | occasional path|  | (transfer      |
+                         | + record + nar-|  | cannot be made)|
+                         | row interp.    |  |                |
+                         +----------------+  +----------------+
+```
+
+## 6. Tier Selection Rules (Practical)
+
+| Scenario | Recommended Path |
+|----------|------------------|
+| EU provider (if on adequacy list) | Adequacy decision (Art. 9/1) |
+| EU provider (not on list) | Standard contract (Art. 9/4-c) |
+| US SaaS (cloud, marketing automation) | Standard contract (Art. 9/4-c) + supplementary measures |
+| Intra-group transfer of multinational | BCR (Art. 9/4-b) if approved; otherwise standard contract |
+| One-off litigation evidence sharing | Occasional (Art. 9/6-d) — establishment of a right |
+| One-off urgent health data | Occasional (Art. 9/6-e) |
+| Irregular, very specific technical support case | Occasional (Art. 9/6-a) — informed explicit consent |
+| Public interest project (limited/special) | Occasional (Art. 9/6-ç) |
+| Regular, recurring commercial transfer | **Never occasional** — appropriate safeguard is required |
+
+## 7. Standard Contract Types (Board Decision No. 2024/959 of 04.06.2024)
+
+The Board has published four standard contract texts:
+
+| # | Type | Scenario |
+|---|------|----------|
+| 1 | C → C | From Turkish controller to overseas controller |
+| 2 | C → P | From Turkish controller to overseas processor |
+| 3 | P → P | From Turkish processor to overseas processor |
+| 4 | P → C | From Turkish processor to overseas controller |
+
+Selecting the correct type is critical; the wrong type renders the contract invalid.
+
+## 8. Notification to the Authority (For Standard Contract)
+
+- **Deadline:** **5 business days** from contract signing.
+- **Method:** Electronic channel set by the Authority (Registry or system referenced in announcements).
+- **Content:** Parties to the contract, type, transfer categories, recipient country, signature date.
+- **Legal Nature:** Notification is **not authorization**; it is part of compliance. If notification is not made, despite the contract being signed, the transfer is **deemed made without an appropriate safeguard**.
+
+## 9. Transfer Impact Assessment (TIA)
+
+For each use of an appropriate safeguard, the following TIA is performed:
+
+1. **Recipient country's law and practice:** Data protection legislation, supervisory authority, judicial protection.
+2. **Public authority access:** Powers of recipient country authorities to access data (intelligence, law enforcement).
+3. **Nature of the transfer:** Data category, sensitivity, data subject groups, frequency.
+4. **Supplementary measures:** Encryption, key management, pseudonymization, contractual annexes, organizational measures.
+5. **Residual risk:** Acceptability of the risk after mitigation.
+
+For TIA examples and template: [aktarim-degerlendirme-formu.md](aktarim-degerlendirme-formu.md)
+
+## 10. Common Mistakes
+
+| Mistake | Result | Mitigation |
+|---------|--------|------------|
+| Transferring without verifying current adequacy list | Transfer non-compliant if list changed | Check the list at every TIA; record version/date |
+| Departure from standard contract (additions/changes) | Contract invalid | The standard text is not modified; supplementary clauses added separately |
+| Notification beyond 5 business days | Deemed without appropriate safeguard | Automatic notification as part of contract flow |
+| Wrong contract type (C-P used as C-C) | Contract invalid | Decision tree + Legal Department approval |
+| Using occasional case for regular transfer | Board may revoke; administrative fine | Regular transfer = appropriate safeguard |
+| Treating an EU provider as automatically adequate | EU country is not automatically adequate; Board list required | List check |
+| Permanent transfer based on explicit consent | Consent revocable; business interruption | Where possible, prefer appropriate safeguard (standard contract) |
+| Assuming "Ireland" region in cloud equals EU safety | An Irish provider may grant US access | Provider's management structure + sub-processor chain analyzed |
+
+## 11. Transfer Process Checklist
+
+- [ ] Transfer purpose, categories and recipient identified
+- [ ] Art. 5/Art. 6 processing condition satisfied
+- [ ] Adequacy list checked at the moment
+- [ ] If not adequate — appropriate safeguard path selected
+- [ ] Correct contract type (C-C, C-P, P-P, P-C)
+- [ ] Standard contract text not modified
+- [ ] Contract signed
+- [ ] Notification to Authority within 5 business days
+- [ ] TIA (Transfer Impact Assessment) completed
+- [ ] Supplementary measures (encryption, pseudonymization) applied
+- [ ] Disclosure notice updated
+- [ ] VERBİS cross-border transfer field updated
+- [ ] Data subject application channel updated to cover cross-border transfer
+
+## 12. Legal References
+
+- KVKK Art. 9 (as amended by Law No. 7499 dated 12.03.2024)
+- Article 34 of Law No. 7499 — Official Gazette No. 32487 dated 12.03.2024
+- Effective date: 01.06.2024
+- Personal Data Protection Board Decision No. 2024/959 of 04.06.2024 — Standard Contract Texts and BCR
+- Authority's "Public Announcement on Documents Regarding Standard Contracts and Binding Corporate Rules"
+- Authority's "List of Countries with Adequate Protection"
+- Constitution Art. 20/3
+
+---
+
+## Türkçe
 
 # Yurt Dışı Kişisel Veri Aktarım Rejimi
 

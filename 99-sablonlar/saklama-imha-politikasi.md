@@ -1,13 +1,301 @@
 ---
-Doküman: Kişisel Veri Saklama ve İmha Politikası — Şablon
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Yönetim Kurulu
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.7; İmha Yönetmeliği m.5 ve m.6
+Doküman / Document: Kişisel Veri Saklama ve İmha Politikası — Şablon / Personal Data Retention and Destruction Policy — Template
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Yönetim Kurulu — KVKK Committee + Board of Directors
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.7; İmha Yönetmeliği m.5 ve m.6 — KVKK Art. 7; Erasure Regulation Arts. 5 and 6
 ---
+
+## English
+
+# [COMPANY FULL LEGAL NAME] — PERSONAL DATA RETENTION AND DESTRUCTION POLICY (English equivalent)
+
+The Turkish version below is the legally binding text. The English equivalent is provided for international groups; for legal force in Türkiye, the Turkish text governs.
+
+## 1. PURPOSE
+
+This Policy sets out the procedures and principles for erasure, destruction or anonymisation of personal data processed by [COMPANY FULL LEGAL NAME] (the "Company") as data controller, in compliance with Law No. 6698 on the Protection of Personal Data ("KVKK"), the Regulation on the Erasure, Destruction or Anonymisation of Personal Data ("Erasure Regulation") and related legislation.
+
+## 2. SCOPE
+
+This Policy applies to all personal data processed in all units of the Company, in all physical and electronic media, and to all employees, contractors, interns, suppliers and other business partners processing such data.
+
+## 3. LEGAL BASIS
+
+| Legislation | Article |
+|-------------|---------|
+| KVKK | Art. 4/d (retention period principle); Art. 7 (erasure/destruction/anonymisation); Art. 16 (Registry and policy obligation) |
+| Erasure Regulation | Arts. 5, 6 (minimum elements); Arts. 7-10 (methods); Art. 11 (periodic destruction); Art. 12 (on-request destruction) |
+| Disclosure Communiqué | Art. 4 (statement of retention period in privacy notice) |
+| VERBİS Regulation | Art. 9/f (retention period in VERBİS notification) |
+
+## 4. DEFINITIONS
+
+| Term | Definition |
+|------|------------|
+| Personal Data | Any information relating to an identified or identifiable natural person |
+| Sensitive Personal Data | Data listed in KVKK Art. 6/1 |
+| Retention Period | Period for which personal data must be retained for the processing purpose |
+| Destruction | Erasure, destruction or anonymisation |
+| Erasure | Rendering inaccessible and unusable in any way for relevant users |
+| Destruction | Rendering inaccessible, irretrievable and unusable by anyone, in any way |
+| Anonymisation | Rendering data such that they cannot be associated with an identified or identifiable natural person even when matched with other data |
+| Periodic Destruction | Recurring, ex officio destruction of data when statutory conditions for processing have ceased |
+| Relevant User | Department/personnel responsible for storage, processing or technical maintenance |
+
+## 5. RECORDING MEDIA (Erasure Reg. Art. 6/b)
+
+### 5.1 Electronic Media
+
+| Medium | Description |
+|--------|-------------|
+| Servers (DNS, web, email, file, application servers, etc.) | Company central data centre and DR centre |
+| Software (SAP/ERP, CRM, HR, finance, payroll, call centre, e-commerce platforms) | Enterprise software for business processes |
+| Information security devices (firewall, IDS, antivirus, log server) | Security and monitoring |
+| Personal computers (desktop, laptop, tablet) | User endpoints |
+| Mobile devices (phone) | Corporate devices (under MDM) |
+| Optical (CD, DVD), magnetic (HDD, external HDD), USB | Backup and transfer media |
+| Printer, scanner, photocopier | Disk-bearing peripherals |
+| Cloud systems (authorised vendors) | Under DPA |
+
+### 5.2 Physical Media
+
+| Medium | Description |
+|--------|-------------|
+| Paper | Employment contract, personnel file, invoice, petition |
+| Manual filing systems | Survey forms, application forms |
+| Written, printed, visual media | Training materials, internal publications |
+
+## 6. REASONS REQUIRING RETENTION AND DESTRUCTION (Erasure Reg. Art. 6/c)
+
+### 6.1 Reasons for Retention
+
+- KVKK and related legislation
+- Other applicable laws (Labour Law, SSI, OHSS, Tax Procedure Law, Code of Obligations, Commercial Code, Consumer Law, Banking Law, Financial Leasing Law, etc.)
+- Contractual obligations
+- Establishment, exercise or protection of rights
+- Necessity for legitimate interests (likely dispute, fraud prevention, service quality)
+- Express obligations stipulated in laws
+
+### 6.2 Reasons for Destruction
+
+- Cessation of all conditions in KVKK Arts. 5 and 6
+- Expiry of retention period
+- Determination, on a data subject's application, that processing conditions are absent
+- Withdrawal of explicit consent (only for data based solely on explicit consent)
+
+## 7. TECHNICAL AND ADMINISTRATIVE MEASURES (Erasure Reg. Art. 6/ç)
+
+### 7.1 Technical Measures
+
+- Network and application security
+- Encryption (rest + transit)
+- Penetration tests (annual)
+- Information security incident management (SIEM)
+- Authorisation matrix and limited access
+- Authorisation control (PAM, MFA)
+- Logging
+- Data masking (where required)
+- Anti-virus, anti-malware, DLP
+- Backup and disaster recovery
+- Patch management
+- Firewall
+
+### 7.2 Administrative Measures
+
+- Personal data inventory
+- Policies and procedures
+- Employee training (annual + role-based)
+- Confidentiality undertakings
+- KVKK compliance committee
+- KVKK clauses in supplier contracts (DPA)
+- Incident Response Plan
+- Regular audit
+- Internal periodic checks
+
+## 8. DESTRUCTION METHODS (Erasure Reg. Art. 6/d)
+
+### 8.1 Erasure
+
+| Medium | Method |
+|--------|--------|
+| Servers / software | Record-deletion command, software's erase function, removal of relevant user's access |
+| Cloud solutions | Compliance with provider's erase request |
+| Paper | Blacking-out, cutting, making unreadable (only if erasure-only) |
+| Portable media | Software erase command (consider backups/originals) |
+
+### 8.2 Destruction
+
+| Medium | Method |
+|--------|--------|
+| Magnetic disk (HDD etc.) | Demagnetisation (degausser); physical shredding |
+| SSD / flash memory | Hardware secure-erase (TRIM/secure erase); physical shredding |
+| Optical media (CD, DVD) | Physical shredding |
+| Paper | Certified paper shredder (cross-cut, P-4 or higher); incineration |
+| Cloud systems | Crypto-shredding (key destruction); destruction certificate from provider |
+| Backups | End of backup rotation + crypto-shredding |
+
+### 8.3 Anonymisation
+
+Where the purpose of retention persists but identification is no longer required:
+
+| Method | Description |
+|--------|-------------|
+| Masking | Identifier fields masked (e.g. name → "Customer-1234") |
+| Aggregation | Individual data converted into summary statistics |
+| Data derivation | Identifier replaced with derived general data (age range instead of age) |
+| K-anonymity | Each record matches at least k-1 others |
+| L-diversity | K-anonymity + l different values in sensitive field |
+| T-closeness | Sensitive field distribution close to general population |
+| Noise addition | Small random deviations added to numeric fields |
+
+> A "re-identifiability test" is performed after anonymisation; if risk persists, anonymisation is incomplete. Risk re-evaluated annually.
+
+## 9. RETENTION AND DESTRUCTION PERIODS TABLE (Erasure Reg. Art. 6/e)
+
+| # | Process / Data Category | Retention Period | Legal Basis | Destruction Method |
+|---|--------------------------|------------------|-------------|---------------------|
+| 1 | Employee personnel file | 10 years after end of employment | Labour Law Art. 75; SSI Art. 86; CO Art. 146 | Erasure + physical destruction |
+| 2 | OHSS records (health, accidents) | 15 years | OHSS Law Art. 27 | Erasure + physical destruction |
+| 3 | Payroll / wage slips | 10 years | CO Art. 146; SSI | Erasure |
+| 4 | Unsuccessful applicant CVs | 6 months (general) / 1 year (talent pool — with explicit consent) | KVKK Art. 4/d; Authority case law | Erasure |
+| 5 | Customer contract and invoice | Contract end + 10 years | CO Art. 146; Tax Procedure Law Art. 253 | Erasure |
+| 6 | Customer contact data (non-contract) | Until legal basis ceases + 2 years | KVKK Art. 4/d; legitimate interest | Erasure |
+| 7 | Customer marketing (with explicit consent) | Until withdrawal / 2 years passive | Explicit consent | Erasure |
+| 8 | Call centre voice recordings | 2 years (general); 10 years for financial transactions | Consumer Law; Banking legislation | Destruction |
+| 9 | CCTV footage | 30-60 days (area- and risk-based) | Legitimate interest; Authority case law | Automatic overwrite |
+| 10 | PDKS (entry-exit) | 5 years | Labour Law; legitimate interest | Erasure |
+| 11 | Cookie data | Per cookie lifetime (session / 2 years cap) | Explicit consent / legitimate interest | Automatic erasure |
+| 12 | Breach records | At least 5 years | KVKK Art. 12; Erasure Reg. Art. 7/3 (3 years) | Erasure |
+| 13 | DSR records | 5 years | KVKK Art. 13; dispute limitation | Erasure |
+| 14 | Supplier contracts and contacts | Contract end + 10 years | CO Art. 146 | Erasure + physical destruction |
+| 15 | Social media / campaign participation | 1 year post-campaign | Explicit consent / legitimate interest | Erasure |
+| 16 | Web server logs | 6 months - 2 years | Internet Law (5651) | Erasure |
+
+> The table is kept in sync with the process inventory. New processes or regulatory changes trigger an update within 7 days.
+
+## 10. PERIODIC DESTRUCTION PERIOD (Erasure Reg. Art. 6/f, Art. 11)
+
+Periodic destruction is performed **at intervals not exceeding 6 months**. Company calendar:
+
+| Period | Date | Owner | Output |
+|--------|------|-------|--------|
+| Q1 | 15-31 January each year | Process owners + KVKK Officer | Destruction minutes |
+| Q3 | 15-31 July each year | Process owners + KVKK Officer | Destruction minutes |
+
+### 10.1 Periodic Destruction Process
+
+1. The process owner identifies data with expired retention.
+2. Reviewed jointly with the KVKK Officer; exception cases (ongoing dispute, statutory retention) are reported.
+3. Destruction performed (with appropriate method).
+4. Minutes drafted: date, medium, category, volume, method, responsible, signatures.
+5. Minutes retained at least 3 years (5 years recommended for audit readiness).
+6. Reflected in the KVKK Officer's quarterly report.
+
+### 10.2 On-Request Destruction (Art. 12)
+
+When the data subject applies:
+- Resolved within **30 days** at the latest.
+- Refused with reasons if KVKK Arts. 5-6 conditions persist.
+- Where destruction occurs, third parties to whom the data were transferred are notified.
+- The result is communicated to the data subject in writing or electronically.
+
+## 11. POLICY UPDATES (Erasure Reg. Art. 6/g)
+
+| Trigger | Time |
+|---------|------|
+| Regulatory change | 30 days |
+| Company organisational change | 60 days |
+| New process / new data category | 30 days |
+| Annual full revision | November each year |
+
+Update process:
+1. KVKK Officer drafts the update.
+2. Legal Counsel reviews.
+3. KVKK Committee approves.
+4. The Audit Committee of the Board is informed.
+5. Stakeholders notified.
+6. Version increments; old version archived.
+
+## 12. RESPONSIBILITIES
+
+| Role | Responsibility |
+|------|----------------|
+| KVKK Officer | Policy management, periodic destruction coordination, reporting |
+| Process Owners | Apply retention periods in their processes, perform periodic destruction |
+| Legal Counsel | Verify legal basis of retention periods |
+| IT | Apply technical destruction methods, log preservation |
+| Internal Audit | Independent audit of policy compliance |
+
+## 13. ANNEXES
+
+- Annex 1: Detailed Retention Periods Table (mapped to inventory)
+- Annex 2: Destruction Minutes Template
+- Annex 3: Destruction Methods Technical Instruction
+
+## 14. ENTRY INTO FORCE
+
+This Policy entered into force by Board of Directors decision dated [DATE] No. [NO].
+
+| Approval | Name | Date | Signature |
+|----------|------|------|-----------|
+| Drafter | KVKK Officer | | |
+| Legal sign-off | Legal Counsel | | |
+| Approver | KVKK Committee | | |
+| Approver | Board of Directors | | |
+
+Version: [VERSION] | Effective: [DATE]
+
+---
+
+## ANNEX-2: DESTRUCTION MINUTES TEMPLATE
+
+```
+DESTRUCTION MINUTES
+
+Minute No: [YEAR]-[QUARTER]-[SEQ]
+Date: [DATE]
+Time: [TIME]
+Location: [LOCATION]
+
+Type: [Periodic / On-Request / Other]
+Scope:
+- Process: [PROCESS]
+- Data category: [CATEGORY]
+- Data subject group: [GROUP]
+- Volume (records / files): [VOLUME]
+- Medium destroyed: [MEDIUM]
+
+Method: [Erasure / Destruction / Anonymisation]
+Method detail: [TECHNICAL — e.g. crypto-shredding, physical shredding]
+Third-party service: [IF ANY — certificate attached]
+
+Legal Basis (retention expired):
+[POLICY TABLE ROW REFERENCE]
+
+Responsible Personnel:
+- Process Owner: [NAME] ____________________ (signature)
+- KVKK Officer: [NAME] _________________ (signature)
+- IT Responsible (if any): [NAME] ______________ (signature)
+
+Approval:
+- Manager: [NAME] ___________________ (signature)
+
+Retention: 5 years (audit readiness)
+```
+
+## Related Documents
+
+- [../12-mevzuat-arsiv/imha-yonetmeligi.md](../12-mevzuat-arsiv/imha-yonetmeligi.md)
+- [../04-veri-saklama-ve-imha/](../04-veri-saklama-ve-imha/)
+- [kvki-envanter.csv](kvki-envanter.csv)
+
+---
+
+## Türkçe
 
 # [ŞİRKET TAM TİCARİ UNVANI] — KİŞİSEL VERİ SAKLAMA VE İMHA POLİTİKASI
 

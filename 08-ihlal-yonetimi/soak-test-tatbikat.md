@@ -1,13 +1,328 @@
 ---
-Doküman: İhlal Müdahale Tatbikatı (Tabletop / Soak Test) Programı
-Bölüm: 08-ihlal-yonetimi
-Sahip: Bilgi Güvenliği Müdürü (CISO) + KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Yönetim
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık
-İlgili Mevzuat: 6698 sayılı KVKK m.12, KVKK Veri Güvenliği Rehberi (2018) §5.4, NIST SP 800-84, ISO/IEC 27035-3:2020
+Doküman / Document: İhlal Müdahale Tatbikatı (Tabletop / Soak Test) Programı / Personal Data Breach Response Tabletop / Soak Test Programme
+Bölüm / Section: 08-ihlal-yonetimi
+Sahip / Owner: Bilgi Güvenliği Müdürü (CISO) + KVKK Sorumlusu / CISO + KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Yönetim / KVKK Committee + Management
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık / Annual
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 12; KVKK Data Security Guide (2018) §5.4; NIST SP 800-84; ISO/IEC 27035-3:2020
 ---
+
+## English
+
+# Personal Data Breach Response Tabletop & Soak Test
+
+## 1. Purpose
+
+In line with the KVKK Data Security Guide and international good practice (NIST 800-84, ISO 27035-3), the goal is to verify annually that the breach response procedure works **in practice and not just on paper**. Exercises are run on three planes:
+
+1. **Tabletop:** Read the scenario; discuss the decisions. Speed and process assessment.
+2. **Functional drill:** Real tools (SIEM, EDR, KEP) are used; production systems are not touched.
+3. **Red team / Purple team (live):** An ethical attacker team simulates a real attack; the blue team responds.
+
+## 2. Annual Exercise Calendar
+
+| Quarter | Type | Target Scenario | Participants |
+|---------|------|-----------------|--------------|
+| Q1 | Tabletop | Ransomware (Scenario A) | Core CSIRT + Board observer |
+| Q2 | Functional | Insider data exfiltration (Scenario B) | CSIRT + HR + DLP team |
+| Q3 | Tabletop | Third-party breach (Scenario C) | CSIRT + Procurement + Legal |
+| Q4 | Red/Purple | Web application exploit (Scenario D) | SOC + AppSec + Red Team |
+| Annual special | Tabletop | Lost device + insider combined (Scenario E) | Whole CSIRT + Management |
+
+## 3. Exercise Governance
+
+### 3.1. Roles
+
+| Role | Responsibility |
+|------|----------------|
+| Exercise Director | Scenario flow, timing of "injects", recording |
+| White Team (Adjudicator) | Evaluates decisions; scoring |
+| Blue Team (Defenders) | The CSIRT in tabletop mode |
+| Red Team (Attackers) | Only in red/purple exercises |
+| Purple Team | Attack and defense work together |
+| Observers | Board member, Legal, KVKK Committee |
+
+### 3.2. Exercise Budget
+
+- Tabletop: 4 hours x participants + 16 hours preparation.
+- Functional: 8 hours x participants + 24 hours preparation.
+- Red/Purple: 5 business days external firm + 80 internal hours.
+
+### 3.3. Confidentiality
+
+- The scenario is not disclosed to participants in advance (surprise element).
+- Outputs are shared only with KVKK Committee + senior management.
+- No external sharing (attacker intelligence).
+
+## 4. KPIs
+
+Measured at the end of each exercise:
+
+| KPI | Description | Target |
+|-----|-------------|--------|
+| MTTD (Mean Time To Detect) | First event -> detection | < 30 minutes |
+| MTTI (Mean Time To Identify) | Detection -> breach decision | < 4 hours |
+| MTTC (Mean Time To Contain) | Detection -> containment | < 2 hours |
+| MTTN (Mean Time To Notify) | T+0 -> Authority preliminary notification | < 24 hours |
+| MTTR (Mean Time To Recover) | Detection -> normal production | < 72 hours |
+| Notification text quality score | 1-10 (Legal evaluation) | >= 8 |
+| Decision-chain completeness | Was every critical decision documented? | 100% |
+| Communication-tree compliance | Right person informed at the right time | 95% |
+
+## 5. SCENARIO A - Ransomware (Tabletop)
+
+### 5.1. Brief
+> "06:30 - A SOC analyst working on the SCADA server at the Bursa factory notices files have taken the `.lockbit` extension. A ransom note appears on the screen: '5 BTC within 7 days, otherwise we will leak HR and R&D data.' The helpdesk receives a ticket at 06:45."
+
+### 5.2. Injects (sequenced by White Team)
+
+| T+ | Inject | Expected response |
+|----|--------|-------------------|
+| T+0 min | Helpdesk e-mail | Escalate to SOC L2; isolation decision |
+| T+30 min | Second server is also affected (lateral movement) | Activate Level 3; network segmentation |
+| T+1 hour | Board asks "should we pay the ransom" | Reiterate policy - no payment, insurance |
+| T+2 hours | Attacker publishes a sample of HR data | Begin data subject notification preparation |
+| T+4 hours | Press agency calls | Corporate Communications steps in - not "no comment" but pre-approved text |
+| T+6 hours | Fleet-wide EDR scan - 12 more servers show IOCs | Extended isolation |
+| T+12 hours | Backups are also reported affected | Crisis! Was there a separate offline backup? |
+| T+24 hours | Authority preliminary notification deadline | Form ready, KEP sent? |
+| T+48 hours | Attacker second payment warning | Reiterate policy |
+| T+72 hours | Authority final notification deadline | Form complete? |
+
+### 5.3. Decision Points (assessed by Adjudicator)
+
+- Was the affected system **powered off or isolated**? (Correct: isolation - to preserve memory evidence.)
+- Was the insurer notified at **T+12 hours**?
+- Were the **data categories** clearly stated in the data subject notification text?
+- Was the fact that backups were also affected explained to the media in a **controlled** way?
+- Was the ransom decision escalated to the Board **per policy**?
+
+### 5.4. Common Mistakes
+
+- Powering off the affected server (RAM evidence is lost).
+- Choosing not to notify the insurer (if SLA is missed, coverage may be void).
+- Delaying notification because "data category is unclear".
+- Premature social media announcement (attacker is gratified; ransom pressure increases).
+
+## 6. SCENARIO B - Insider Data Exfiltration (Functional Drill)
+
+### 6.1. Brief
+> "Monday 10:30 - The DLP system reports that marketing specialist 'Ahmet K.' uploaded 8,500 customer records to a Gmail address outside the company over the last 3 days. The employee will start at a competitor in 2 weeks."
+
+### 6.2. Injects
+
+| T+ | Inject | Expected response |
+|----|--------|-------------------|
+| T+0 | DLP alert | Triple coordination: SOC + HR + Legal |
+| T+30 min | Employee has an active session | Silent monitoring - live evidence |
+| T+1 hour | Additional external addresses identified | Full scope mapping |
+| T+2 hours | Permission freeze (silently, with HR approval) | HR sign-off |
+| T+4 hours | In-person meeting plan | Legal + HR + witness |
+| T+6 hours | Forensic imaging of device | Chain of custody |
+| T+12 hours | Prosecutorial assessment | Turkish Criminal Code Art. 136 |
+| T+24 hours | Data recall - cease & desist to recipient firm | Legal |
+| T+48 hours | Affected customer notification preparation | KVKK + Communications |
+| T+72 hours | Authority notification | KVKK Officer |
+
+### 6.3. Functional Drill Actions
+
+- The **DLP console** is opened; real logs are reviewed (with test data).
+- **Account freeze** is applied in HRMS (test sandbox).
+- Account is disabled in **AD/Entra**.
+- **KEP send** simulation (test KEP).
+- **Authority portal** (test environment if available) - draft form completion.
+
+### 6.4. Decision Points
+
+- Was the duration of evidence collection without alerting the employee sufficient?
+- Was Legal-HR synchronization established?
+- Can criminal proceedings be started **simultaneously** with administrative process?
+- On what evidence was cease-and-desist sent to the competitor?
+
+## 7. SCENARIO C - Third-Party Breach (Tabletop)
+
+### 7.1. Brief
+> "Tuesday 14:00 - KEP from 'PayrollX SaaS', our payroll service provider: 'A data breach affecting 18% of our customers has been detected. Up to 612 of your employees may have payroll and IBAN information affected. Our first detection was 5 days ago; we are now reaching out.'"
+
+### 7.2. Injects
+
+| T+ | Inject | Expected response |
+|----|--------|-------------------|
+| T+0 | KEP arrives | Check contractual notification clause - 24-hour clause violated |
+| T+30 min | Vendor not sharing information | Contractual sanction; temporary suspension |
+| T+1 hour | Vendor backup plan | HR + Finance evaluate alternative provider |
+| T+4 hours | Independent forensic request | Legal + CISO |
+| T+12 hours | Insurer notification | CFO + Legal |
+| T+24 hours | Authority preliminary notification | KVKK Officer |
+| T+48 hours | Employee communication | HR + KVKK |
+| T+72 hours | Authority final | KVKK Officer |
+
+### 7.3. Decision Points
+
+- Did the 5-day delay **count against our 72 hours**? (Answer: no, our T+0 is today; but we must explain it to the Authority.)
+- Does the contract include **unilateral termination** rights?
+- What is the contractual **penalty clause**?
+- Was the transition time to a new provider (vendor lock-in?) calculated in the exercise?
+
+### 7.4. Exercise Output
+
+- Map of vendor contractual clauses (who is 24 hours, who 72, who lacks).
+- Updated alternative-vendor list.
+- Data portability drill (export-import time measurement).
+
+## 8. SCENARIO D - Web Application Exploit (Red/Purple)
+
+### 8.1. Brief
+> "An external red team firm tests the customer portal under OWASP Top 10, finds an SQL Injection vulnerability, and exfiltrates 1.2M customer records (test environment or production canary)."
+
+### 8.2. Attack Phases (Red)
+
+1. Reconnaissance - Wayback, Shodan, Censys.
+2. Vulnerability scanning - Burp Suite, sqlmap.
+3. Initial access - SQLi.
+4. Privilege escalation - DB user to system.
+5. Lateral movement - to other servers.
+6. Data collection - customer table.
+7. Exfiltration - DNS tunneling.
+
+### 8.3. Defense Phases (Blue)
+
+1. WAF anomaly score increases.
+2. SIEM correlation - DB query spike.
+3. EDR - abnormal process.
+4. DLP - DNS data egress.
+5. SOC L1 alarm -> L2 verification.
+6. CSIRT activation.
+7. Containment + notification.
+
+### 8.4. Purple Synergy Points
+
+- Red performs every phase **silently**; how much does Blue catch?
+- For phases not caught, generate **detection engineering** outputs.
+- How did WAF rule sets actually perform under real attack?
+
+### 8.5. Output
+
+- Detection coverage matrix (MITRE ATT&CK).
+- New SIEM rule recommendations (at least 5).
+- Patch recommendations (CVSS prioritized).
+- Notification flow timing.
+
+## 9. SCENARIO E - Combined: Lost Laptop + Insider Threat
+
+### 9.1. Brief
+> "Sunday night - a regional manager reports 'my laptop was stolen from the trunk'. The next day, IT logs show abnormal file-download activity on the laptop over the past 6 months. The regional manager planned to leave the company within 1 month."
+
+### 9.2. Multiple Vectors
+
+| Dimension | Action |
+|-----------|--------|
+| Lost device | MDM remote lock; BitLocker verification |
+| Insider | Discipline + Legal + criminal review |
+| Data scope | Last 6 months activity analysis |
+| KVKK | Notification required? Encryption may exempt |
+| Crisis | Regional sales, customer reputation |
+
+### 9.3. Purpose of This Scenario
+
+Cross-category decision-making: is it **loss**, **insider**, or **both**? Which one does the notification text emphasize? In which direction does the criminal process go? Tests the team's performance under **information uncertainty**.
+
+## 10. Post-Exercise Report Template
+
+Within 7 business days of each exercise, the following report is prepared:
+
+```markdown
+# Post-Exercise Report
+
+## 1. Exercise Information
+- Exercise name:
+- Date:
+- Scenario:
+- Duration:
+- Participants:
+- Exercise Director:
+
+## 2. Scenario Summary
+
+## 3. KPI Measurements
+| KPI | Target | Achieved | Status |
+|-----|--------|----------|--------|
+| MTTD | < 30 min |  | [ ] Pass [ ] Fail |
+| MTTI | < 4 hours |  |  |
+| MTTC | < 2 hours |  |  |
+| MTTN | < 24 hours |  |  |
+| MTTR | < 72 hours |  |  |
+| Notification quality | >= 8/10 |  |  |
+
+## 4. What Went Right
+1.
+2.
+
+## 5. Gaps / Missed Points
+1.
+2.
+
+## 6. Scenario-Specific Findings
+
+## 7. Action List (CAPA)
+| # | Action | Owner | Date | Status |
+|---|--------|-------|------|--------|
+| 1 |  |  |  |  |
+
+## 8. Procedure / Training Update Recommendations
+
+## 9. Next Exercise Recommendations
+
+## 10. Management Sign-off
+- Exercise Director:
+- CISO:
+- KVKK Officer:
+- KVKK Committee:
+```
+
+## 11. Action Tracking
+
+Exercise actions are integrated with **`11-denetim-ve-uyum/aksiyon-takibi.md`**. Stages:
+
+1. Action opened in JIRA/asana/written list.
+2. Owner and date assigned.
+3. Quarterly review by KVKK Committee.
+4. Open actions enter the **next exercise scenario**.
+5. Annual audit reviews exercise actions.
+
+## 12. Exercise Maturity Model
+
+The company's exercise maturity:
+
+| Level | Definition |
+|-------|------------|
+| 1 - Ad-hoc | One annual exercise, undocumented |
+| 2 - Continuous | Quarterly exercises, reporting in place |
+| 3 - Measured | KPIs tracked; trend reporting |
+| 4 - Managed | Red team included; escalation tested |
+| 5 - Optimized | Automation; threat-informed defense; continuous improvement |
+
+Company target level: **4 - Managed** (end of 2026).
+
+## 13. Exercise Ethics
+
+- Employees may not run **actually harmful** tools during the exercise.
+- Production systems must not be impacted (sandbox/test).
+- Social engineering exercises must not be used to **publicly shame** employees - training-oriented.
+- Exercise outcomes are not used for individual punishment; process improvement.
+- Attack simulations operate **within legal scope** (signed authorization).
+
+## 14. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # İhlal Müdahale Tatbikatı (Tabletop & Soak Test)
 

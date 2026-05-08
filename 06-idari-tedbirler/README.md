@@ -1,14 +1,178 @@
 ---
-Doküman: İdari Tedbirler — Bölüm Girişi
-Bölüm: 06-idari-tedbirler
-Sahip: KVKK Sorumlusu / İK Direktörü / Hukuk Müşaviri
-Onaylayan: KVKK Komitesi + Üst Yönetim
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim, ihlal, denetim bulgusu)
-İlgili Mevzuat: 6698 sayılı KVKK m.12; Veri Sorumluları Sicili Hakkında Yönetmelik m.9(1)(e); Kişisel Veri Güvenliği Rehberi (Teknik ve İdari Tedbirler); 6698 sayılı KVKK m.4 (Genel İlkeler); İş Kanunu, Türk Borçlar Kanunu (rekabet etmeme, gizlilik), Türk Ceza Kanunu m.135-140 (kişisel verilere ilişkin suçlar)
-İlgili Standart: ISO/IEC 27001:2022 Clause 5-10 + Annex A (özellikle A.5 Organizational Controls, A.6 People Controls); ISO/IEC 27701:2019 (Privacy Information Management System); NIST CSF 2.0 GOVERN (GV.OC, GV.RM, GV.SC, GV.PO, GV.OV); NIST Privacy Framework; ENISA Personal Data Protection by Design; OECD Privacy Principles
+Doküman / Document: İdari Tedbirler — Bölüm Girişi / Organizational Measures — Section Introduction
+Bölüm / Section: 06-idari-tedbirler
+Sahip / Owner: KVKK Sorumlusu / İK Direktörü / Hukuk Müşaviri / KVKK Officer / HR Director / Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi + Üst Yönetim / KVKK Committee + Senior Management
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim, ihlal, denetim bulgusu) / Annual + triggered (regulatory change, organizational change, breach, audit finding)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 12; Regulation on the Data Controllers Registry Art. 9(1)(e); Personal Data Security Guide (Technical and Organizational Measures); Law No. 6698 KVKK Art. 4 (General Principles); Labor Law, Turkish Code of Obligations (non-compete, confidentiality), Turkish Criminal Code Art. 135-140 (offences relating to personal data)
+İlgili Standart / Standard: ISO/IEC 27001:2022 Clause 5-10 + Annex A (especially A.5 Organizational Controls, A.6 People Controls); ISO/IEC 27701:2019 (Privacy Information Management System); NIST CSF 2.0 GOVERN (GV.OC, GV.RM, GV.SC, GV.PO, GV.OV); NIST Privacy Framework; ENISA Personal Data Protection by Design; OECD Privacy Principles
 ---
+
+## English
+
+# 06 — Organizational Measures
+
+## 1. Purpose and Scope
+
+Organizational measures cover controls at the human, organizational, process, and contractual layer that ensure the **effective implementation and sustainability** of technical controls. The **human and process arm** of the obligation of "appropriate level of security" under KVKK Art. 12. Even when technical measures are taken, if employee awareness is low, the supplier contract is weak, training is missing, or written policy does not exist, a data breach is inevitable.
+
+The organizational measure topics listed in the KVKK Personal Data Security Guide are mapped to the following documents:
+
+| KVKK Guide Organizational Measure | Equivalent in This Section |
+|---------------------------|----------------------|
+| Preparation of Personal Data Processing Inventory | [02-envanter-ve-sicil/](../02-envanter-ve-sicil/) |
+| Corporate Policies (Access, Information Security, Use, Retention etc.) | [politikalar-prosedurler.md](politikalar-prosedurler.md) |
+| Contracts (Between Data Controller and Data Processor) | [tedarikci-yonetimi.md](tedarikci-yonetimi.md) |
+| Confidentiality Undertakings | [gizlilik-taahhutnamesi.md](gizlilik-taahhutnamesi.md) |
+| Periodic and/or Random Internal Audits | [ic-denetim.md](ic-denetim.md) |
+| Risk Analyses | [risk-degerlendirmesi.md](risk-degerlendirmesi.md) |
+| Employment Contracts, Contracts Containing Personal Data Annex Protocol | [gizlilik-taahhutnamesi.md](gizlilik-taahhutnamesi.md), [tedarikci-yonetimi.md](tedarikci-yonetimi.md) |
+| Internal Communication | [politikalar-prosedurler.md](politikalar-prosedurler.md) |
+| Training and Awareness Activities | [personel-egitimi.md](personel-egitimi.md) |
+| Data Controllers Registry Information System (VERBİS) Notification | [02-envanter-ve-sicil/](../02-envanter-ve-sicil/) |
+
+## 2. Documents in This Section
+
+| # | Document | Content | Owner |
+|---|---------|--------|--------|
+| 1 | [politikalar-prosedurler.md](politikalar-prosedurler.md) | Policy set map, lifecycle, approval chain | KVKK Officer + CISO |
+| 2 | [personel-egitimi.md](personel-egitimi.md) | Training curriculum, measurement, phishing simulation | HR + KVKK Officer |
+| 3 | [gizlilik-taahhutnamesi.md](gizlilik-taahhutnamesi.md) | Employee/consultant/intern undertaking templates | HR + Legal |
+| 4 | [tedarikci-yonetimi.md](tedarikci-yonetimi.md) | Classification, due diligence, DPA, audit | Procurement + KVKK Officer |
+| 5 | [risk-degerlendirmesi.md](risk-degerlendirmesi.md) | DPIA / PIA, risk score, integration | KVKK Officer + Risk |
+| 6 | [ic-denetim.md](ic-denetim.md) | Annual audit plan, test procedure, reporting | Internal Audit |
+| 7 | [idari-tedbir-kontrol-listesi.md](idari-tedbir-kontrol-listesi.md) | 60+ item audit checklist | Internal Audit |
+
+## 3. Governance Structure
+
+### 3.1. KVKK Committee
+
+**Members (minimum):**
+- Senior Management Representative (Sponsor) — General Manager / Executive Committee Member
+- KVKK Officer (Committee Chair / Secretariat)
+- Information Security Manager (CISO)
+- IT Director
+- Legal Counsel / General Secretary
+- HR Director
+- Communications / Marketing Director
+- Risk / Internal Audit Manager (observer)
+
+**Meeting frequency:** Monthly regular + extraordinary.
+
+**Authority:** Policy approval, breach management, application decisions, DPIA approval, vendor approval, acceptance of training and audit results.
+
+### 3.2. KVKK Officer
+
+The "contact person" defined in the KVKK Regulation; in practice corresponds to the **Data Protection Officer / DPO** role in internal organization. This role's:
+
+- Independence is preserved (reports to senior management, not the CISO).
+- Sufficient resources (people + budget + access) provided.
+- Authority to express independent opinion (in DPIA, vendor, breach assessments).
+- Receives ongoing training, attends sectoral sharing events.
+
+### 3.3. RACI Matrix (Organizational Measure Activities)
+
+| Activity | R | A | C | I |
+|----------|---|---|----|---|
+| Policy drafting | Policy owner team | Relevant Director | KVKK Officer, Legal, CISO | Committee |
+| Policy approval | Committee | Senior Management | – | All employees |
+| Training design | HR + KVKK Officer | HR Director | CISO, Legal | Committee |
+| Training participation | Employee | Line Manager | HR | Committee |
+| Vendor due diligence | Procurement + KVKK Officer | Procurement Director | CISO, Legal | Committee |
+| Contract signature | Procurement + Legal | General Secretary | KVKK Officer | Committee |
+| DPIA | Process owner | KVKK Officer | CISO, Legal, IT | Committee |
+| Internal audit | Internal Audit | Audit Committee | KVKK Officer, CISO | Board of Directors |
+
+## 4. Policy Hierarchy (Top Down)
+
+```
+1. KVKK Policy (Top Level — Board of Directors Approved)
+   ├── 2. Information Security Policy (CISO — Board of Directors Approved)
+   ├── 2. Employee Privacy and Notice Policy (KVKK + HR)
+   ├── 2. Customer Privacy Notice & Data Protection Policy (KVKK + Marketing)
+   ├── 2. Retention and Destruction Policy (KVKK)
+   └── 2. Vendor Policy (Procurement + KVKK)
+        └── 3. Functional Standards (Access, Encryption, Backup, Incident, etc.)
+              └── 4. Procedures / Working Instructions
+                    └── 5. Templates / Forms / Checklists
+```
+
+No lower-level document may conflict with the upper level. The KVKK Committee decides upon detection of conflict.
+
+## 5. KVKK Organizational Measures and Relevant Court / Decision Framework
+
+**Common finding patterns** related to organizational measure deficiencies in KVKK Authority decisions:
+
+- Absence or non-currency of written policy.
+- Absence of a signed data processor contract with the supplier or one not containing the minimum elements required by the KVKK Regulation.
+- Periodic training not provided to employees.
+- Failure to notify the Authority within 72 hours in case of breach.
+- Mismatch between duration / scope information in the privacy notice and actual processing activity.
+- Forced explicit consent (presented as a packaged condition — violating KVKK Art. 5).
+- VERBİS records not kept current.
+
+Annual training and internal audit address these findings **preventively**.
+
+## 6. Alignment with ISO 27001 / 27701
+
+| ISO 27001/27701 Clause | Equivalent in This Section |
+|-------------------------|------------------------|
+| Clause 5 (Leadership) | KVKK Committee, Policy approval |
+| Clause 6 (Planning, Risk) | risk-degerlendirmesi.md |
+| Clause 7 (Support — Resources, Awareness) | personel-egitimi.md |
+| Clause 8 (Operation) | All procedures |
+| Clause 9 (Performance Evaluation, Internal Audit) | ic-denetim.md |
+| Clause 10 (Improvement, CAPA) | ic-denetim.md, breach management |
+| A.5 Organizational Controls | politikalar-prosedurler.md, tedarikci-yonetimi.md |
+| A.6 People Controls | personel-egitimi.md, gizlilik-taahhutnamesi.md |
+| 27701 A.7 (PII Controllers) | KVKK Policy, privacy notice, data protection |
+| 27701 A.8 (PII Processors) | tedarikci-yonetimi.md, DPA template |
+
+## 7. Measurement and KPI
+
+- Employee training completion rate (annual refresh): target 100%.
+- Phishing simulation click rate: target ≤10% (year-end).
+- Vendor due diligence completion rate (new vendor, within 90 days): 100%.
+- Risk-based vendor annual review completion rate: 100%.
+- DPIA completion rate (in projects where required): 100%.
+- Internal audit action closure rate (90 days): ≥80%.
+- Policy currency (≤24 months): 100%.
+- Confidentiality undertaking signature rate (new starter): 100% within orientation week.
+- KVKK breach notification SLA (72 hours to Authority): 100%.
+- Data subject application SLA (30 days): 100%.
+
+## 8. Annual Cycle
+
+```
+Q1: Policy review + update + Senior Management approval
+Q2: Annual training campaign + phishing simulation + vendor review
+Q3: Internal audit + DPIA portfolio review
+Q4: Annual report (Committee + Board of Directors) + next year's plan
+```
+
+## 9. Relationship of This Section to Other Sections
+
+- **00-yonetisim/** — Top-level governance and policy framework.
+- **02-envanter-ve-sicil/** — VERBİS, personal data inventory (basic input of organizational measure).
+- **03-aydinlatma-ve-acik-riza/** — Privacy notices, explicit consent management.
+- **04-veri-saklama-ve-imha/** — Retention and destruction policy.
+- **05-teknik-tedbirler/** — Policy expressions are operationalized here.
+- **08-ihlal-yonetimi/** — Committee decision and process start here.
+- **09-ilgili-kisi-basvurulari/** — Application process training and tracking.
+- **11-denetim-ve-uyum/** — Internal audit, external audit, certification.
+
+## 10. Document Versioning and Access
+
+- All organizational measure documents are **versioned**, with last approval date and approver written.
+- Access to documents: read access for all employees via intranet; editing only in owner team.
+- New starters sign the document set in orientation (read-and-understood record).
+- Old versions are kept under [12-mevzuat-arsiv/](../12-mevzuat-arsiv/) (5-year retention for events of which they are evidence).
+
+---
+
+## Türkçe
 
 # 06 — İdari Tedbirler
 

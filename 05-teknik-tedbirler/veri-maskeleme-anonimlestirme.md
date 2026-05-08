@@ -1,14 +1,295 @@
 ---
-Doküman: Veri Maskeleme, Tokenization, Anonimleştirme ve Pseudonymization Standardı
-Bölüm: 05-teknik-tedbirler
-Sahip: Veri Mühendisliği Lideri / KVKK Sorumlusu (anonimlik değerlendirme)
-Onaylayan: BT Direktörü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni veri kümesi, yeni teknik, re-identification kanıtı)
-İlgili Mevzuat: 6698 sayılı KVKK m.7 (Silme/Yok Etme/Anonim Hale Getirme), m.28 (Anonim hale getirilen veri); Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik; Kişisel Veri Güvenliği Rehberi — "Veri Maskeleme"
-İlgili Standart: ISO/IEC 27001:2022 A.8.11 (Data Masking); ISO/IEC 20889 (Privacy Enhancing Data De-identification Terminology and Classification of Techniques); ISO/IEC 27559 (Privacy-enhancing data de-identification framework); NIST SP 800-188 (De-Identifying Government Datasets); NIST IR 8053; ENISA "Pseudonymisation Techniques and Best Practices"; GDPR Recital 26 (anonimlik test çerçevesi)
+Doküman / Document: Veri Maskeleme, Tokenization, Anonimleştirme ve Pseudonymization Standardı / Data Masking, Tokenization, Anonymization and Pseudonymization Standard
+Bölüm / Section: 05-teknik-tedbirler
+Sahip / Owner: Veri Mühendisliği Lideri / KVKK Sorumlusu (anonimlik değerlendirme) / Data Engineering Lead / KVKK Officer (anonymization assessment)
+Onaylayan / Approved by: BT Direktörü + KVKK Komitesi / IT Director + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (yeni veri kümesi, yeni teknik, re-identification kanıtı) / Annual + triggered (new dataset, new technique, re-identification evidence)
+İlgili Mevzuat / Legal Reference: Law No. 6698 KVKK Art. 7 (Erasure/Destruction/Anonymization), Art. 28 (anonymized data); Regulation on Erasure, Destruction or Anonymization of Personal Data; Personal Data Security Guide — "Data Masking"
+İlgili Standart / Standard: ISO/IEC 27001:2022 A.8.11 (Data Masking); ISO/IEC 20889 (Privacy Enhancing Data De-identification Terminology and Classification of Techniques); ISO/IEC 27559 (Privacy-enhancing data de-identification framework); NIST SP 800-188 (De-Identifying Government Datasets); NIST IR 8053; ENISA "Pseudonymisation Techniques and Best Practices"; GDPR Recital 26 (anonymity test framework)
 ---
+
+## English
+
+# Data Masking, Tokenization, Anonymization and Pseudonymization
+
+## 1. Purpose
+
+Standardizes technical methods that respond to operational needs but provide a **privacy guarantee** in contexts where **the actual value** of personal data is not disclosed (test, development, training, analytics, log, BI, demo). Forms the technical foundation of the KVKK Art. 7 anonymization requirement and the framework for the masking obligation in test/dev environments.
+
+## 2. Conceptual Distinction — Critical
+
+| Concept | KVKK Status | Reversible? | For Whom |
+|--------|--------------|--------------------------|----------|
+| **Masking** | Still personal data (display layer) | Yes (original retained) | For limited view |
+| **Tokenization** | Still personal data (token + map = re-identifiable) | Yes via vault | Payment/card, internal systems |
+| **Pseudonymization** | Still personal data (KVKK scope **continues**) | Yes via key | Analytics, secondary use |
+| **Anonymization** | KVKK **out of scope** (Art. 28) | **No** — irreversible | Public sharing, statistics |
+
+**Critical warning:** Per GDPR Recital 26 and the KVKK Regulation, for data to be considered "anonymous" it must not be **re-linkable to the data subject by any reasonable means**. Removing only direct identifiers (de-identification) is **not anonymization** — re-identification risk still exists. Therefore, true anonymization is a high bar and requires formal risk assessment.
+
+## 3. Data Masking
+
+### 3.1. Types
+
+| Type | Definition | Use |
+|-----|-------|----------|
+| **Static Data Masking (SDM)** | Permanent, masked once during production cloning, real value not returned in subsequent accesses | Test/dev/training environment |
+| **Dynamic Data Masking (DDM)** | Data unchanged in production DB; query response returns masked/clear based on user privilege | Internal support/QA, unauthorized view |
+| **On-the-Fly Masking** | Stream-based masking during transfer from production to test environment | DataOps pipeline |
+
+### 3.2. Masking Techniques
+
+| Technique | Example | Notes |
+|--------|-------|--------|
+| Character substitution | `0532-***-**67` | Visual format preserved; sufficient for UI |
+| Hash | `SHA-256(email + salt)` | Irreversible but linkable |
+| Tokenization | `42342342` → `tok_x9k2…` | Reversible on vault side |
+| Shuffle | Column values shuffled across rows | Statistics preserved, row mapping broken |
+| Substitution | Real name → fake name list | Format preserved |
+| Nulling / Redaction | "REDACTED" | High info loss; insufficient for some tests |
+| Date variance | ±N days random | Order preserved |
+| Numeric variance | ±X% | Sum/average approximately preserved |
+| Encryption (AES) | Encrypted column | For masked display in DB |
+| FPE (Format-Preserving Encryption — FF1) | Card number cipher again 16 digits | Type-compatible applications |
+
+### 3.3. Mandatory Rules for Test/Dev Environment
+
+- **Production data cannot be written raw to test/dev.** It is a direct KVKK finding upon breach.
+- At cloning time, **the output of the masking pipeline** is written to the test environment.
+- Masking rules are versioned **per field with technique** (in code / config repo).
+- When a new field is added, classification → masking rule is mandated via **CI gate**.
+- Every data field appearing as "test data" is periodically checked for **does it have actual production value?** scan (DLP discovery).
+
+### 3.4. Referential Integrity
+
+- If a field like Turkish ID number is used in multiple tables, masking must be **deterministic** (same input produces the same masked output every time) — for JOINs to work.
+- Format-preserving deterministic encryption (FF1) preferred.
+
+### 3.5. Visual Masking (UI)
+
+- On a call center representative's screen, card number `**** **** **** 1234`, telephone `0532 *** ** 67`.
+- Authorized user views in single use, justified, audited via "verify" button.
+
+## 4. Tokenization
+
+### 4.1. Working Principle
+
+```
+Production system ────► Tokenization Service ────► Token (e.g., tok_AbC123)
+       ▲                    │
+       │                    ▼
+   Only token        Token Vault (PAN ↔ Token map, HSM-protected)
+       │                    ▲
+       └─── Vault call ─────┘ (authorized system, audit)
+```
+
+- Production systems work with **tokens**; real value only in tokenization vault.
+- Vault HSM-protected, access very narrowly authorized (reduces PCI scope).
+- Token type:
+  - **Format-preserving:** original format (card number length).
+  - **Format-non-preserving:** completely random.
+- All systems without access to the vault may be out of PCI scope (DSS scope reduction).
+
+### 4.2. FPE vs Tokenization
+
+| Criterion | FPE | Tokenization |
+|--------|-----|--------------|
+| Reversal | With key | With vault map |
+| Format | Preserved | Can be preserved or not |
+| Key distribution | Wider | None (vault single point) |
+| Dependency | Key | Vault HA |
+| Typical use | Encryption within DB + format requirement | Payment, scope reduction |
+
+## 5. Pseudonymization
+
+### 5.1. Definition
+
+Direct identifier (name, ID, email) is replaced with a **pseudonym** (e.g., random ID or hash); mapping is kept in a separate, protected location. **Data is still within KVKK scope**, since it can be re-identified with the mapping.
+
+### 5.2. Methods
+
+- **Counter-based:** sequential database ID. Risk: ordering leaks information (record count, sequence).
+- **Random ID:** UUID v4 / v7. Preferred.
+- **Cryptographic hash:** SHA-256(value + salt). Salt leak = pseudonymization leak.
+- **Keyed hash (HMAC-SHA256):** with a key; more secure.
+- **Encryption:** With AES-GCM. Those without key access cannot re-identify.
+
+### 5.3. Use Cases
+
+- Analytical data warehouse / lakehouse: mapping access strictly limited, with KVKK Officer approval.
+- Research, reporting.
+- Cross-dataset joining (with the same pseudonym).
+- Especially preferred in analytics working with special-category data.
+
+### 5.4. Strengthening
+
+- Mapping in HSM/vault.
+- Pseudonymized value in log, never the real value.
+- Pseudonym annual or per-record rotation (rotating pseudonym) possible.
+- If quasi-identifiers (age, postal code, gender) are not additionally generalized / suppressed, pseudonymization alone may be insufficient (re-identification risk).
+
+## 6. Anonymization
+
+### 6.1. Anonymity Threshold
+
+The KVKK Regulation states: "Anonymization; making personal data such that it cannot in any way be associated with an identified or identifiable natural person, even if matched with other data." **Practical test:** "An attacker cannot re-identify with reasonable resources, in reasonable time and cost."
+
+### 6.2. Classical Techniques
+
+#### 6.2.1. Suppression
+Removing certain fields/records. Low-frequency records deleted.
+
+#### 6.2.2. Generalization
+Converting a specific value to a coarser category:
+- Age 34 → "30-39"
+- Postal code 06800 → "068**"
+- Date 12.05.2026 → "2026-Q2"
+
+#### 6.2.3. Aggregation
+Group summaries instead of individual records.
+
+#### 6.2.4. Perturbation / Noise Injection
+Adding small random noise to numeric values.
+
+#### 6.2.5. Microaggregation
+Replacing each of a group of similar k records with the group average.
+
+### 6.3. k-Anonymity
+
+Each record must look the same as at least **k-1** other records on the quasi-identifier set. k=5 is a common threshold; k=10–20 recommended for sensitive data.
+
+**Limitation:** If the **sensitive attribute** within the group lacks diversity (e.g., everyone has the same disease), k-anonymity is not enough.
+
+### 6.4. l-Diversity
+
+In each quasi-identifier class, the sensitive attribute must take at least **l** different values. Requires meaningful diversity.
+
+### 6.5. t-Closeness
+
+The intra-class distribution of the sensitive attribute must be close (≤ t Earth Mover's Distance) to the overall population distribution.
+
+### 6.6. Differential Privacy
+
+Modern gold standard. The impact of a person's presence/absence in a record on the output is mathematically bounded (ε — privacy budget). Used by Apple, Google, US Census.
+
+- **Global noise** or **local noise** (LDP).
+- Usable in aggregation queries and ML training.
+- The smaller ε → higher privacy, lower utility.
+- ε budget tracked; queries on a single dataset accumulate.
+
+### 6.7. Synthetic Data
+
+Generating new, synthetic records from a generative model (GAN, VAE, copula) that learns the **statistical properties** of the real dataset. If done correctly, it is anonymous, but:
+
+- High-capacity models risk memorization (memorizing original records).
+- For synthetic data **to be considered anonymous**, a privacy guarantee (e.g., DP-trained generator) is mandatory.
+
+## 7. Re-identification Risk Assessment
+
+A mandatory report **before** anonymized data is published / shared:
+
+### 7.1. Risk Models (ISO/IEC 20889 / ISO/IEC 27559)
+
+- **Prosecutor:** the attacker's pursuit of a specific known individual.
+- **Journalist:** aims to identify a random individual.
+- **Marketer:** large scale, what percentage are re-identified?
+
+### 7.2. Questions to Ask
+
+- What quasi-identifiers exist?
+- What external data may the attacker have? (Voter list, social media, leaked DB, commercial marketing list.)
+- What is the smallest equivalence class size? (k)
+- How are sensitive attributes distributed? (l, t)
+- Is the ML/aggregation output resistant to membership inference attack?
+- Publication scale? (closed analytics, joint partner, public?)
+
+### 7.3. Table: Acceptable Risk Threshold
+
+| Publication Mode | Target k | DP ε (if any) | Approval |
+|------------|---------|----------------|------|
+| Internal analytics (strict access) | 5 | – | Data Owner |
+| Controlled partner | 10 | ≤ 4 | KVKK Officer |
+| Public | 20+ | ≤ 1 | KVKK Committee + external expert opinion |
+
+### 7.4. Documentation
+
+- Original dataset name before anonymization, owner, fields.
+- Applied techniques and parameters.
+- Risk assessment result, approval chain.
+- Monitoring plan after publication (re-identification suspicion feedback).
+- Retention: version considered anonymous out of KVKK Art. 28 scope; mapping/original record subject to Destruction Regulation.
+
+## 8. Practical Scenarios
+
+### 8.1. Scenario: Developer Test Dataset
+
+- Production DB → DataOps masking pipeline → Test DB.
+- Masking rules: Turkish ID FPE (deterministic), email substitution, date ±30 days, name/surname from fake-name list, sensitive data (health) fully synthetic.
+- CI gate: "fail if no classification + masking rule for any new field".
+
+### 8.2. Scenario: BI Analytics
+
+- Pseudonymized customer ID + generalized age, postal code (5-digit), aggregate metrics.
+- Mapping (pseudonym → real customer) in separate vault, accessible only with KVKK Officer approval.
+- BI dashboards never display direct identifiers.
+
+### 8.3. Scenario: ML Training Data
+
+- If the model memorizes, can produce evidence of re-identification.
+- Differential Privacy training (DP-SGD), federated learning, secure aggregation.
+- Training data with minimum required fields.
+- Annual model "memorization audit" (membership inference test).
+
+### 8.4. Scenario: Academic / Open Data Publication
+
+- Strictest controls. External expert opinion, k≥20, DP, high suppression.
+- Post-publication re-identification incident monitoring.
+
+## 9. Logging and Audit
+
+- Masking jobs (input source, rule set version, output, record count).
+- Vault access (tokenization, pseudonymization mapping).
+- Anonymization process (before/after summary, parameters, risk report).
+- Scans of data written to test environment (critical alarm if real PII found).
+
+## 10. Checklist
+
+- [ ] Are test/dev/training environments free of raw production data (verified with scanning)?
+- [ ] Is the masking pipeline in code/config repo, versioned?
+- [ ] When a new field is added, is classification + masking rule mandated via CI gate?
+- [ ] Does deterministic masking preserve referential integrity?
+- [ ] Is default UI display masked, with "verify" click audited?
+- [ ] Is the tokenization vault HSM-protected, with strict access?
+- [ ] Is pseudonymization mapping separate, protected, audited?
+- [ ] Is it documented that pseudonymized data is also within KVKK scope?
+- [ ] Is formal re-identification risk assessment performed before anonymous publication?
+- [ ] Are k-anon, l-diversity, t-closeness, or DP parameters recorded?
+- [ ] Is the DP ε budget tracked?
+- [ ] Is synthetic data generated with privacy guarantees (memorization audited)?
+- [ ] Is the anonymization approval chain (KVKK Officer / Committee) documented?
+- [ ] Is DLP performing PII scanning in the test environment?
+- [ ] Are anonymous version + original version + mapping lifecycles managed separately?
+
+## 11. Common Mistakes
+
+- "MD5 hash" for pseudonymization → broken with dictionary + brute force (especially for limited fields like Turkish ID).
+- "I removed the name, it became anonymous" → re-identified by quasi-identifiers.
+- "Let's pull a few records from production for fast debug" in test environment → KVKK violation.
+- Masking only at the UI (real value in DB / logs) → leaks via log scraping.
+- Standard access on tokenization vault → no scope reduction gain.
+- Failing to evaluate that an additional information source could re-identify after the anonymous version is published.
+
+## 12. Continuous Improvement
+
+- Once a year, re-identification attempt with **internal red team / external expert** (on published anonymous datasets).
+- Tracking new technical literature (especially privacy-preserving ML).
+- When a re-identification incident/suspicion arises, immediately investigate + withdraw the publication.
+
+---
+
+## Türkçe
 
 # Veri Maskeleme, Tokenization, Anonimleştirme ve Pseudonymization
 

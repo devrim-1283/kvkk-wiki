@@ -1,13 +1,281 @@
 ---
-Doküman: VERBİS Kayıt Rehberi
-Bölüm: 02-envanter-ve-sicil
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim)
-İlgili Mevzuat: 6698 sayılı KVKK m.16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 17
+Doküman / Document: VERBİS Kayıt Rehberi / VERBİS (Data Controllers' Registry Information System) Registration Guide
+Bölüm / Section: 02-envanter-ve-sicil
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş (mevzuat değişikliği, organizasyonel değişim) / Annual + triggered (legislative change, organisational change)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.16 / Law No. 6698 (KVKK) Art. 16; Veri Sorumluları Sicili Hakkında Yönetmelik MADDE 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 17 / Regulation on the Data Controllers' Registry Art. 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 17
 ---
+
+## English
+
+# VERBİS Registration Guide
+
+VERBİS (Veri Sorumluları Sicil Bilgi Sistemi — Data Controllers' Registry Information System) is the internet-based system created and operated by the Personal Data Protection Authority for use in registry applications and other registry transactions (Reg. Art. 4/o).
+
+VERBİS address: **https://verbis.kvkk.gov.tr**
+
+## 1. When the Registration Obligation Begins (Reg. Art. 8)
+
+| Situation | Period |
+|-----------|--------|
+| Rule — Reg. Art. 8(1) | Data controllers must complete their registration obligations **before they start processing personal data**. |
+| Becoming subject afterwards — Reg. Art. 8(2) | Data controllers not previously subject to the registration obligation must register within **thirty days** of becoming subject. |
+| Request for additional time — Reg. Art. 8(3) | In cases of factual, technical or legal impossibility, written application to the Authority within **7 business days** of the impossibility arising. The Authority may grant additional time, on a one-off basis and not exceeding **thirty days**. |
+| Change notification — Reg. Art. 13 | Any change in registered information must be notified via VERBİS within **7 days**. |
+| Removal of registration — Reg. Art. 14 | If the activity that triggers registration ceases, the registration is removed. **Obligations relating to the registered period continue.** |
+
+## 2. Coverage Check (Are We Subject to VERBİS?)
+
+For an organisation with 500+ employees, coverage is virtually certain. For detailed threshold analysis, see [verbis-istisna-degerlendirmesi.md](./verbis-istisna-degerlendirmesi.md).
+
+**Quick check:**
+- Annual employee count above 50? **Yes → Subject.**
+- Annual financial balance sheet above the threshold? **Yes → Subject.**
+- Main activity is the processing of special-category personal data (e.g., a healthcare institution)? **Yes → Subject (regardless of threshold).**
+- Established outside Turkey? **Yes → Subject through a data controller representative (Reg. Art. 5/b).**
+
+## 3. Content of the Notification (Reg. Art. 9)
+
+A registration application contains the following information (Reg. Art. 9/1):
+
+| # | Item | Explanation |
+|---|------|-------------|
+| a | Identity and address information of the data controller, any data controller representative, and the contact person | Application form (as set by the Board) |
+| b | Purposes for which personal data will be processed | From the inventory — using VERBİS headings |
+| c | Data subject groups and categories of their data | From the inventory — using VERBİS headings |
+| ç | Recipients or recipient groups to whom personal data may be transferred | From the inventory — using VERBİS headings |
+| d | Personal data envisaged to be transferred to foreign countries | From the inventory — using VERBİS headings |
+| e | Measures taken according to the criteria determined by the Board under KVKK Art. 12 | From the inventory — VERBİS headings + "Other" |
+| f | The **maximum retention period** prescribed by legislation or required for the processing purpose | Mapped to data categories |
+
+**Important (Reg. Art. 9/4):** If a period is prescribed by law it is taken; otherwise the **longest** of the various periods is used. When determining the period, sectoral practice, duration of the legal relationship, duration of legitimate interest, risk-cost, suitability for keeping up-to-date, statutory obligations, and statute of limitations are considered.
+
+**The "Other" heading (Reg. Art. 9/6):** If VERBİS standard headings do not fully cover the data controller's activities, the "Other" field is used to complete the notification.
+
+## 4. VERBİS Registration — Step-by-Step Operational Flow
+
+### 4.1 Preparation Phase (Before Starting Registration)
+
+| Step | Owner | Time |
+|------|-------|------|
+| 1. Prepare a VERBİS-mapped summary of the KVKİ inventory | KVKK Officer | 1-2 weeks |
+| 2. Identify the contact person and obtain authorisation decision (Reg. Art. 11) | Board of Directors | 1 day |
+| 3. Have a KEP (Registered Electronic Mail) address ready (obtain if missing) — Reg. Art. 4/g, Art. 12 | IT | 1-2 weeks |
+| 4. Provide corporate e-Government access (authorised natural person) | IT | 1 day |
+| 5. Have an approved Retention and Destruction Policy (Erasure-Destruction Reg. Art. 5) | Legal + KVKK Committee | beforehand |
+
+### 4.2 System Steps
+
+> **Warning:** The screen names below are updated from time to time by the Authority. While following the steps, consult the VERBİS help documentation and FAQ pages.
+
+#### Step 1 — User Registration
+
+1. Go to https://verbis.kvkk.gov.tr.
+2. Click "Sicile Kayıt" → "Veri Sorumlusu Yönetici Girişi" (Registry Sign-up → Data Controller Manager Login).
+3. The authorised person logs in via e-Government (T.R. ID + e-Government password / mobile signature / e-signature).
+4. On first login the system creates a **Data Controller Manager** profile using identity information from e-Government.
+
+#### Step 2 — Data Controller Information
+
+For a legal entity:
+- Tax identification number, MERSİS (Central Registry System) number
+- Full title (as registered in the Trade Registry)
+- Registered (head office) address
+- KEP address
+- Contact phone number, corporate e-mail
+
+#### Step 3 — Designating the Contact Person (Reg. Art. 11/4)
+
+The contact person:
+- Is a natural person resident in Turkey.
+- Their T.R. ID number, name-surname, corporate e-mail, corporate phone, and title are entered.
+- **Important:** The contact person is **not** authorised to represent the data controller. Their role is solely to facilitate communication with the Authority and in connection with data subject requests.
+
+#### Step 4 — Sector / Business Field Information
+
+- The company's field of activity is selected (NACE-code based).
+- An incorrect sector selection can cause errors in correspondence with the Authority.
+
+#### Step 5 — Notification of Processing Activities
+
+This step is fed by the inventory. VERBİS provides **standard headings**; the inventory is mapped to them.
+
+**Sections to complete:**
+
+| Section | Content |
+|---------|---------|
+| Processing Purposes | Standard list + "Other" |
+| Data Subject Groups | Standard list (Employee, Customer, Supplier, Visitor, etc.) + "Other" |
+| Data Categories | Standard list (Identity, Contact, Finance, etc.) — special category flagged separately |
+| Recipients / Recipient Groups | Standard list (Authorised public bodies, business partners, suppliers, etc.) + "Other" |
+| Cross-Border Transfers | Yes/No; if yes, data category + country |
+| Data Security Measures | KVKK Art. 12 standard list + "Other" |
+| Retention Periods | Numerical period per data category |
+
+> In each section, the "Other" option is used to explain information that does not fit the standard headings (Reg. Art. 9/6).
+
+#### Step 6 — Notification Approval and Publication
+
+- After all fields are completed, a "Notification Preview" screen appears.
+- Approval of the KVKK Officer and Legal Department is obtained.
+- Click "Submit Notification".
+- The system generates a reference number and a PDF summary. Archive this PDF.
+
+#### Step 7 — Information Disclosed Publicly (Reg. Art. 7)
+
+The following information is publicly disclosed from the Registry:
+
+- Name, address and KEP of the data controller, any representative and the contact person
+- Processing purposes
+- Person groups + data categories
+- Recipients + recipient groups
+- Cross-border transfers
+- Date of registration and date of removal
+- Data security measures
+- Maximum retention period
+
+> This information is visible on the company's website and on the publicly accessible Registry search of the Authority. Misleading or incomplete information is subject to administrative fines (Reg. Art. 17, KVKK Art. 18).
+
+## 5. Change Notification (Reg. Art. 13)
+
+Any change in registered information must be notified to the Authority via VERBİS within **7 days**.
+
+### 5.1 Events that Trigger a Change
+
+| Event | Affected Section |
+|-------|------------------|
+| Change of company title | Data controller information |
+| Address change | Data controller information |
+| KEP address update | Contact information |
+| Change of contact person | Contact person information |
+| New process launched (new purpose, new person group) | Processing activities |
+| New recipient group (new supplier type) | Recipients/recipient groups |
+| Cross-border transfer commenced | Cross-border transfers |
+| Update of retention period | Retention periods |
+| New technical measure added / removed | Data security measures |
+| Discontinuation of a process | Processing activities |
+
+### 5.2 Change Notification Process
+
+```
+1. Process owner files change request → KVKK Officer
+2. Inventory update (same day)
+3. Verification by Legal + KVKK Officer
+4. Update relevant fields in VERBİS
+5. Re-archive PDF summary
+6. Notify process owner
+```
+
+> The 7-day period runs as **calendar days**. Missing the deadline triggers risk of administrative fines under Reg. Art. 17 / KVKK Art. 18(1)(ç).
+
+## 6. Removal from the Registry (Reg. Art. 14)
+
+If the activity that triggers the registration obligation ceases or no longer exists, the data controller files for removal via VERBİS (Reg. Art. 14/1).
+
+**Key points:**
+- Removal is not automatic; the Authority reviews the application.
+- Removed records remain accessible but **cannot be modified** (Reg. Art. 14/2).
+- Removal does not extinguish obligations relating to the registered period (Reg. Art. 14/3). Inventory, retention-destruction policy, breach handling, etc. continue for the registered period.
+
+## 7. Communication Channels (Reg. Art. 12)
+
+All communications by the Authority with the data controller are made through the contact information provided to the Registry:
+
+| Data controller type | Communication channel |
+|----------------------|------------------------|
+| Legal person resident in Turkey | Identity, address and KEP of the legal person registered with the Registry (Reg. Art. 12/a) |
+| Natural person resident in Turkey | Identity, address and KEP of the natural person registered with the Registry (Reg. Art. 12/b) |
+| Data controller not resident in Turkey | Through the data controller representative registered with the Registry (Reg. Art. 12/c) |
+
+> A **KEP (Registered Electronic Mail) address** under Reg. Art. 4/g is the qualified form of e-mail providing legal evidence of the dispatch and delivery of electronic messages. A significant portion of the Authority's notifications occurs via KEP; the KEP address must be monitored continuously.
+
+## 8. Contact Person vs. Data Controller Representative vs. KVKK Officer
+
+These three concepts are commonly conflated:
+
+| Role | Legal definition | Authority |
+|------|------------------|-----------|
+| **Data Controller** | The legal person itself (Reg. Art. 11/1) | The legal person bears the obligation |
+| **Data Controller Representative** | The Turkey-resident representative of a data controller not resident in Turkey (Reg. Art. 4/p, Art. 11/2) | Authorities listed in Reg. Art. 11/3 (receiving notices, forwarding requests, registry transactions) |
+| **Contact Person** | The Turkey-resident natural person designated for legal entities resident in Turkey and for foreign representatives, for communication with the Authority (Reg. Art. 4/ç, Art. 11/4) | Communication only; **no** representation authority |
+| **KVKK Officer** | Internal corporate role — not a registered position; operational responsibility | Defined by internal policy |
+
+> Designating the same individual as both contact person and KVKK Officer is operationally advantageous, although not legally required.
+
+## 9. Common Errors and Corrections
+
+| Error | Consequence | Correction |
+|-------|-------------|-----------|
+| Doing VERBİS registration without an inventory | Breach of Reg. Art. 5/ç; misleading registry information possible | Inventory first, then VERBİS |
+| Marking cross-border transfer as "No" while SaaS is abroad | Misleading registry information; potential breach of Art. 9 | Verify SaaS locations, file correct notification |
+| Writing "as needed" as the retention period | Indeterminate period — breach of Reg. Art. 9/4 | Specific numerical period + rationale |
+| Missing the 7-day change notification | Breach of Reg. Art. 13; administrative fine | Quarterly audit calendar |
+| KEP address not monitored | Authority notice missed | At least two persons monitor the KEP |
+| Presenting the contact person as a representative | Legal confusion, slower request handling | Define the role correctly in internal policy |
+| Not using "Other" for purposes outside standard headings | Incomplete notification | Reg. Art. 9/6 — fill the "Other" field |
+| Mismatch between publicly available information and the website information notice | Breach of Reg. Art. 5/d, picked up in Authority audits | Quarterly alignment check |
+
+## 10. Operational Routine After Registration
+
+### 10.1 Quarterly Controls
+
+| Control | Frequency |
+|---------|-----------|
+| KEP address monitoring protocol | Daily |
+| VERBİS record summary — alignment with inventory | Quarterly |
+| Alignment between publicly disclosed information and the website | Quarterly |
+| Currency of contact person information | Quarterly |
+| Retention periods and legislative changes | Annual |
+| Cross-border transfer — contracts and legal basis confirmation | Annual |
+
+### 10.2 Internal Document Layout
+
+```
+/02-envanter-ve-sicil/
+   /verbis-bildirim-pdfs/
+      /2026/
+         2026-Q2-bildirim-v1.0.pdf
+         2026-Q3-degisiklik-v1.1.pdf
+   /irtibat-kisisi-yetki/
+      yetkilendirme-kararı-2026.pdf
+   /kayit-iletisim-loglari/
+      KEP-takip-listesi.xlsx
+```
+
+## 11. Administrative Sanctions (Reg. Art. 17, KVKK Art. 18)
+
+Breach of registration and notification obligations attracts administrative fines under KVKK Art. 18(1)(ç). Fine amounts are revalued annually; the current figure must be checked against the Authority's annual announcement.
+
+> **Practical advice:** The fine is set within statutory minimum-maximum range at the Board's discretion. Incomplete/misleading notifications attract amounts close to the maximum, while simple delays may attract amounts closer to the minimum. Inventory accuracy and discipline in change notifications therefore directly drive financial impact.
+
+## 12. Quick Reference Card
+
+```
+[ ] Inventory ready and approved
+[ ] Contact person assigned, authorisation decision issued
+[ ] KEP address active and monitored
+[ ] Authorised person identified for e-Government login
+[ ] VERBİS notification submitted, PDF archived
+[ ] "Registry Information" section added to the website
+[ ] Information notices aligned with the Registry
+[ ] Quarterly audit calendar in place
+[ ] Change triggers defined
+[ ] 7-day change notification discipline trained
+```
+
+## 13. Annexes
+
+- Inventory Guide: [kvki-envanteri-rehberi.md](./kvki-envanteri-rehberi.md)
+- Template: [envanter-sablonu.md](./envanter-sablonu.md)
+- Exception Assessment: [verbis-istisna-degerlendirmesi.md](./verbis-istisna-degerlendirmesi.md)
+- Maintenance: [envanter-bakim.md](./envanter-bakim.md)
+
+---
+
+## Türkçe
 
 # VERBİS Kayıt Rehberi
 

@@ -1,13 +1,316 @@
 ---
-Doküman: Aydınlatma Metni Şablonları (Web, Çalışan, Çağrı Merkezi)
-Bölüm: 99-sablonlar
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.10; Aydınlatma Tebliği m.4 ve m.5
+Doküman / Document: Aydınlatma Metni Şablonları (Web, Çalışan, Çağrı Merkezi) / Privacy Notice Templates (Web, Employee, Call Centre)
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.10; Aydınlatma Tebliği m.4 ve m.5 — KVKK Art. 10; Disclosure Communiqué Arts. 4 and 5
 ---
+
+## English
+
+# Privacy Notice Templates
+
+> **INSTRUCTIONS FOR USE:** All bracketed fields (`[...]`) must be filled in before publication. Cannot be published without Legal Counsel sign-off. Version and date are updated on every revision. The Turkish text below is the legally binding form; the English text is provided for international reference and should be deployed only on properly translated, sign-off-completed material.
+
+The same three templates (Website Visitor / Employee / Call Centre) are kept in the Türkçe section below — the live operational text. The English equivalent below is structurally identical and is intended for parallel use on English-language surfaces.
+
+---
+
+## TEMPLATE 1 — WEBSITE VISITOR PRIVACY NOTICE (English equivalent)
+
+```
+This Privacy Notice is issued by [COMPANY FULL LEGAL NAME] (the "Company")
+as data controller, in fulfilment of its disclosure obligation under the
+Turkish Personal Data Protection Law No. 6698 ("KVKK"), regarding the
+processing of personal data of website visitors.
+
+1. CONTROLLER IDENTITY
+   Full Legal Name : [COMPANY FULL LEGAL NAME]
+   Mersis No       : [MERSIS]
+   Address         : [FULL ADDRESS]
+   KEP Address     : [KEP]
+   Email           : [KVKK CONTACT EMAIL]
+   Phone           : [PHONE]
+   Contact Person  : [CONTACT — ALIGNED WITH VERBİS NOTIFICATION]
+
+2. CATEGORIES OF PERSONAL DATA PROCESSED
+   - Identity: name-surname, ID number (only on registration)
+   - Contact: email, phone, address
+   - Transaction security: IP address, browser, device, cookies
+   - Marketing: preferences, survey answers (with your consent)
+   - Customer transactions: cart, order, invoice (on purchase)
+
+3. PURPOSES OF PROCESSING
+   - Operating and securing the website
+   - Handling user requests and complaints
+   - Membership registration and customer relations
+   - Order, payment and delivery processing
+   - Compliance with legal obligations (tax, e-invoice, e-commerce)
+   - Statistics and performance analysis (with anonymised data)
+   - With your explicit consent: marketing, commercial electronic
+     messaging, profiling
+
+4. RECIPIENTS AND PURPOSE OF TRANSFER
+   Personal data may be transferred to:
+   - Authorised public authorities (legal obligation)
+   - Service suppliers we use: hosting, payment, shipping, call
+     centre service providers (contract performance and processor
+     status)
+   - Independent auditors (legal obligation)
+   - Cross-border transfer: [IF ANY, COUNTRIES AND LEGAL BASIS;
+     E.G. "Through our cloud hosting provider [VENDOR] data are
+     processed via [COUNTRY]; under KVKK Art. 9 the legal basis is
+     [adequacy decision / standard contract]."]
+
+5. METHOD OF COLLECTION AND LEGAL BASIS
+   Personal data are collected via the website by automated or
+   partly-automated means. Legal bases:
+   - Performance of contract (KVKK Art. 5/2-c) — registration, order
+   - Legal obligation (KVKK Art. 5/2-ç) — tax, e-invoice, retention
+   - Legitimate interest (KVKK Art. 5/2-f) — site security,
+     fraud prevention, service quality (without harm to your
+     fundamental rights and freedoms)
+   - Explicit consent (KVKK Art. 5/1) — marketing, electronic
+     messaging, profiling
+
+6. RIGHTS UNDER KVKK ART. 11
+   Under KVKK Art. 11 you have the right to apply to the controller and:
+   a) learn whether your personal data are processed,
+   b) request information if processed,
+   c) learn the purpose of processing and whether data are used in
+      line with the purpose,
+   ç) know the third parties to whom data are transferred domestically
+      or abroad,
+   d) request rectification if data are incomplete or inaccurate,
+   e) request erasure or destruction of data,
+   f) request that operations under (d) and (e) be communicated to
+      third parties to whom data were transferred,
+   g) object to a result against you produced solely by automated
+      processing,
+   ğ) request compensation for damage caused by unlawful processing.
+
+   You may submit your application, in line with the Communiqué on
+   Procedures of Application to the Controller, by using the
+   application form at [APPLICATION FORM LINK] and sending it by post
+   with wet-ink signature to [FULL ADDRESS], by KEP to [KEP], with
+   secure/mobile electronic signature, or from your email already
+   registered in our system to [KVKK CONTACT EMAIL].
+
+   Your application will be concluded within 30 days at the latest
+   from receipt by the Company.
+
+Version: [VERSION]
+Effective: [DATE]
+Legal sign-off: [DATE]
+```
+
+---
+
+## TEMPLATE 2 — EMPLOYEE PRIVACY NOTICE (English equivalent)
+
+```
+[COMPANY FULL LEGAL NAME] fulfils its disclosure obligation under
+KVKK regarding processing of employees' and applicants' personal
+data.
+
+1. CONTROLLER
+   [COMPANY DETAILS — SAME AS TEMPLATE 1]
+
+2. CATEGORIES OF PERSONAL DATA
+   The following categories are processed in employee/applicant
+   processes:
+   - Identity: name-surname, ID number, date/place of birth, photo,
+     signature
+   - Contact: address, phone, email
+   - Personnel: SSI entry/exit records, tax no, bank account, salary
+   - Education/Professional: diploma, certificate, CV, reference,
+     experience
+   - Family: spouse and children (for tax/SSI/AGI)
+   - Performance: appraisal, target achievement
+   - Health (sensitive — KVKK Art. 6): occupational physician
+     examinations, periodic health checks, accident records,
+     pregnancy notice, leave
+   - Criminal conviction (sensitive — KVKK Art. 6): only for
+     positions that require it (e.g. roles entailing financial
+     responsibility) and on lawful basis
+   - Audio/visual: workplace CCTV, internal event photos
+   - Location: company vehicle GPS, access card records (PDKS)
+   - Biometric (sensitive — if used): fingerprint/face PDKS
+
+3. PURPOSES OF PROCESSING
+   - Compliance with Labour Law, SSI Law, Occupational Health and
+     Safety Law and other obligations
+   - Establishment and performance of the employment contract
+     (personnel, payroll, benefits)
+   - Payroll, tax, SSI notifications, AGI
+   - Performance management, career planning, training
+   - Occupational health and safety
+   - Workplace and personnel safety (CCTV, PDKS)
+   - Vehicle tracking, fuel, expense management
+   - Legal defence in disputes
+   - Internal communication, organisation, events
+   - For applicants: recruitment processes, reasonable retention of
+     unsuccessful CVs (in line with Authority case law)
+
+4. TRANSFERS
+   - Authorised public authorities (SSI, tax office, courts,
+     auditors) — legal obligation
+   - Bank — payroll (contract performance)
+   - Benefits providers (private health insurance, meal cards,
+     individual pension) — contract performance
+   - Occupational physician and OHSS — Occupational Health and
+     Safety obligation
+   - Independent auditor, consultant, legal counsel — legal/contract
+   - Payroll/HR providers — as processors under DPA
+   - Cross-border: [IF ANY — e.g. group HR system, cloud LMS — with
+     legal basis]
+
+5. METHOD AND LEGAL BASIS
+   Data are collected through application form, employment contract,
+   personnel file, HR system, PDKS, CCTV and similar by automated or
+   partly-automated means.
+   Legal bases:
+   - Provided by law (Art. 5/2-a) — Labour Law, SSI, OHSS, Tax Law
+   - Performance of contract (Art. 5/2-c) — employment contract
+   - Legal obligation (Art. 5/2-ç)
+   - Establishment/exercise/protection of right (Art. 5/2-e)
+   - Legitimate interest (Art. 5/2-f) — workplace safety,
+     performance management
+   - For sensitive data, the relevant sub-paragraph of post-Law
+     7499 Art. 6 (health data via the occupational physician under
+     a duty of confidentiality, biometric data with explicit consent
+     or legal provision)
+   - Explicit consent (Arts. 5/1, 6/2) — for matters without
+     statutory basis (e.g. publishing employee photos in the
+     internal newsletter)
+
+6. RETENTION PERIODS
+   Retention periods are set in the Retention and Destruction Policy.
+   Typical periods:
+   - Personnel file: 10 years following the end of employment
+   - SSI records: 10 years
+   - OHSS records: 15 years (OHSS Law)
+   - CCTV: [POLICY PERIOD — typically 30-60 days]
+   - PDKS: reasonable period
+   - Unsuccessful applicant CVs: [POLICY PERIOD — typically 6-12 months]
+
+7. RIGHTS UNDER KVKK ART. 11
+   [SAME AS TEMPLATE 1]
+
+   Employee applications may also be sent directly to ik@[company].com.tr.
+
+Version: [VERSION] | Effective: [DATE]
+Read by employee:
+Name: ___________________
+Date: ___________________
+Signature: ___________________
+```
+
+---
+
+## TEMPLATE 3 — CALL CENTRE VOICE RECORDING PRIVACY NOTICE (English equivalent)
+
+### A. Oral Disclosure (Call Opening — Max 60 Seconds)
+
+```
+"Hello, welcome to [COMPANY] customer services.
+
+For service quality, service provision and our legal obligations,
+your voice recordings are processed by [COMPANY FULL LEGAL NAME] as
+data controller under KVKK No. 6698.
+
+For the full privacy notice, please use the SMS link sent at the
+end of the call, visit [WEB ADDRESS] / Privacy or, if you say
+'privacy notice' at the end of the call, the agent will read it
+to you.
+
+Would you like to continue with the call?"
+```
+
+### B. Written Disclosure (SMS / Email / Website)
+
+```
+CALL CENTRE PRIVACY NOTICE
+
+[COMPANY FULL LEGAL NAME] hereby informs you of personal data
+processed via our call centre services under KVKK No. 6698.
+
+1. CONTROLLER IDENTITY
+   [COMPANY DETAILS — SAME AS TEMPLATE 1]
+
+2. CATEGORIES OF PERSONAL DATA
+   - Identity: name-surname, customer no, ID number (where needed
+     for verification)
+   - Contact: phone, email
+   - Call: voice recording, date/time, duration, IVR selections,
+     reason, resolution
+   - Customer transaction: account, order, product, invoice
+   - Demographic: where required (e.g. age verification)
+
+3. PURPOSES
+   - Handling customer requests, complaints
+   - Service quality, call centre performance
+   - Training and audit (anonymous / restricted)
+   - Use as evidence in disputes
+   - Compliance with applicable legislation (e.g. consumer
+     protection, financial services)
+   - With your explicit consent, marketing and profiling
+
+4. TRANSFERS
+   - Authorised public authorities (legal obligation)
+   - Call centre service provider (processor under DPA)
+   - Lawyer, court in disputes
+   - [IF CROSS-BORDER — STATE LEGAL BASIS]
+
+5. LEGAL BASIS AND METHOD
+   Voice recordings and call data are recorded automatically during
+   the call. Legal bases:
+   - Performance of contract (Art. 5/2-c)
+   - Legal obligation (Art. 5/2-ç) — e.g. consumer or financial law
+   - Legitimate interest (Art. 5/2-f) — service quality, evidence
+   - Explicit consent (Art. 5/1) — only for marketing-purpose
+     processing
+
+6. RETENTION
+   Call recordings are retained for [PERIOD — e.g. 2 years],
+   considering applicable legislation and dispute periods. After
+   the period, they are destroyed under our Retention and
+   Destruction Policy.
+
+7. RIGHTS UNDER KVKK ART. 11
+   [SAME AS TEMPLATE 1]
+
+Version: [VERSION] | Effective: [DATE]
+```
+
+---
+
+## Common Checklist (All Templates)
+
+- [ ] Company full legal name, Mersis no, KEP, contact person aligned with VERBİS
+- [ ] Data categories aligned with inventory
+- [ ] Purposes specific, proportionate, itemised (catalogue)
+- [ ] Transfers split: domestic + cross-border (cross-border with Art. 9 basis)
+- [ ] Collection method clear (automated / partly automated / manual)
+- [ ] Legal basis with KVKK article reference
+- [ ] All Art. 11 rights listed (a-ğ) — application channels stated
+- [ ] Plain, intelligible, clear language
+- [ ] Version and effective date clear
+- [ ] Legal sign-off recorded
+- [ ] Evidence (user view/consent log) collected
+
+## Related Documents
+
+- [../12-mevzuat-arsiv/aydinlatma-tebligi.md](../12-mevzuat-arsiv/aydinlatma-tebligi.md)
+- [acik-riza-metni.md](acik-riza-metni.md)
+- [../03-aydinlatma-ve-acik-riza/](../03-aydinlatma-ve-acik-riza/)
+
+---
+
+## Türkçe
 
 # Aydınlatma Metni Şablonları
 

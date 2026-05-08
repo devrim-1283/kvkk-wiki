@@ -1,13 +1,428 @@
 ---
-Doküman: Kurul'a Kişisel Veri İhlal Bildirim Formu (Doldurulabilir)
-Bölüm: 08-ihlal-yonetimi
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Kurul form değişikliklerinde
-İlgili Mevzuat: 6698 sayılı KVKK m.12/5, KVKKK 24.01.2019/2019-10 sayılı Kararı, KVKK Veri Güvenliği Rehberi
+Doküman / Document: Kurul'a Kişisel Veri İhlal Bildirim Formu (Doldurulabilir) / Personal Data Breach Notification Form for the Authority (Fillable)
+Bölüm / Section: 08-ihlal-yonetimi
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Kurul form değişikliklerinde / Annual + when Authority form changes
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 12(5); Authority Decision No. 2019/10 dated 24.01.2019; KVKK Data Security Guide
 ---
+
+## English
+
+# Personal Data Breach Notification Form
+
+> **Use:** This form is content-aligned with the Authority's official "Personal Data Breach Notification Form" template. The KVKK Officer fills out this form during a breach and submits it via the Authority's web portal (ihlalbildirim.kvkk.gov.tr) or via KEP. See §3 for a worked example.
+
+## 1. Form Structure
+
+```
++-----------------------------------------------------+
+| SECTION A - Data Controller Identification          |
+| SECTION B - Breach Summary and Timeline             |
+| SECTION C - Affected Personal Data                  |
+| SECTION D - Attack Vector and Detection             |
+| SECTION E - Measures Taken                          |
+| SECTION F - Data Subject Notification Plan          |
+| SECTION G - Root Cause Analysis (Phased)            |
+| SECTION H - Corrective/Preventive Action (CAPA)     |
+| SECTION I - Lessons Learned                         |
+| SECTION J - Annexes                                 |
++-----------------------------------------------------+
+```
+
+## 2. Form Template (Fillable)
+
+---
+
+### SECTION A - DATA CONTROLLER IDENTIFICATION
+
+| Field | Content |
+|-------|---------|
+| Data controller trade name | |
+| Tax / Mersis number | |
+| Field of activity (NACE code) | |
+| Number of employees (at time of breach) | |
+| Annual financial balance (TRY) | |
+| VERBİS registration number | |
+| Address | |
+| KEP address | |
+| Telephone | |
+| Contact person (KVKK Officer) | |
+| Contact e-mail | |
+| Contact telephone (mobile) | |
+| Foreign-resident data controller? | Yes / No |
+| (If yes) Data controller representative | |
+
+---
+
+### SECTION B - BREACH SUMMARY AND TIMELINE
+
+| Field | Content |
+|-------|---------|
+| Internal incident number | OLAY-YYYY-NNNN |
+| Estimated breach date | YYYY-MM-DD HH:MM (Türkiye Time) |
+| Date controller became aware (T+0) | YYYY-MM-DD HH:MM |
+| Notification date | YYYY-MM-DD HH:MM |
+| Elapsed time (hours) | |
+| Was 72 hours exceeded? | Yes / No |
+| If yes, justification | |
+
+**Timeline (chronological):**
+
+| Time | Event |
+|------|-------|
+| YYYY-MM-DD HH:MM | (e.g., SIEM alert, user complaint, etc.) |
+| YYYY-MM-DD HH:MM | (e.g., Core CSIRT meeting) |
+| YYYY-MM-DD HH:MM | (e.g., Containment applied) |
+| YYYY-MM-DD HH:MM | (e.g., Scope determined) |
+| YYYY-MM-DD HH:MM | (e.g., Notification prepared) |
+
+**Incident Summary (3-5 sentences, written for the Authority):**
+
+> [Our company detected a [type] attack/event on [system] on [date]. The investigation determined that personal data in category [A] across [B] records belonging to data subjects was affected. The incident is currently [active/contained/closed].]
+
+---
+
+### SECTION C - AFFECTED PERSONAL DATA
+
+#### C.1. Breach Nature (multi-select)
+- [ ] Confidentiality breach (unauthorized disclosure)
+- [ ] Integrity breach (unauthorized alteration)
+- [ ] Availability breach (unauthorized deletion/blocking)
+
+#### C.2. Number of Data Subjects Affected
+| | Estimated | Final |
+|---|-----------|-------|
+| Customer | | |
+| Employee | | |
+| Supplier representative | | |
+| Candidate | | |
+| Website visitor | | |
+| Other (specify) | | |
+| **Total** | | |
+
+#### C.3. Number of Records Affected
+> Records may differ from individual count. E.g., 1 person with 10 invoices = 1 person, 10 records.
+
+| Database / System | Record count |
+|-------------------|--------------|
+| | |
+
+#### C.4. Affected Data Categories
+
+**General Categories:**
+- [ ] Identity (name, T.R. ID, date of birth)
+- [ ] Contact (telephone, e-mail, address)
+- [ ] Customer transactions (orders, invoices, payment - card masked)
+- [ ] Financial (IBAN, credit limit)
+- [ ] Marketing (preference, segmentation)
+- [ ] Location (GPS, IP)
+- [ ] Process security (password - hashed/clear)
+- [ ] Visual/audio (photo, voice, video)
+- [ ] Professional (CV, education, work history)
+- [ ] Other (specify):
+
+**Special Categories (KVKK Art. 6):**
+- [ ] Health data
+- [ ] Sex life
+- [ ] Race / ethnicity
+- [ ] Political opinion
+- [ ] Philosophical belief / religion / sect / other belief
+- [ ] Dress and attire
+- [ ] Association / foundation / union membership
+- [ ] Criminal conviction / security measures
+- [ ] Biometric / genetic
+
+#### C.5. Was Data Published?
+- [ ] No (only unauthorized access; no exfiltration outside)
+- [ ] Unknown / under investigation
+- [ ] Yes - evidence available (URL, screenshot)
+   - Publication site: ____________________
+   - Takedown requested? Yes / No
+
+#### C.6. Was the Data Encrypted / Pseudonymized?
+- [ ] Fully encrypted (AES-256, key not affected)
+- [ ] Pseudonymized (identity reference separate)
+- [ ] Clear-text
+- [ ] Mixed - explain
+
+---
+
+### SECTION D - ATTACK VECTOR AND DETECTION
+
+#### D.1. Breach Category
+- [ ] Cyberattack
+   - [ ] Ransomware
+   - [ ] BEC / phishing / account takeover
+   - [ ] Web application exploit (SQLi, IDOR, RCE)
+   - [ ] Data exfiltration after DDoS
+   - [ ] Software vulnerability (CVE: ____________)
+   - [ ] Supply chain attack
+- [ ] Insider
+   - [ ] Intentional (former/current employee, contractor)
+   - [ ] Accidental (wrong e-mail, mishandled sharing)
+- [ ] Physical
+   - [ ] Stolen/lost laptop/USB/phone
+   - [ ] Archive theft
+   - [ ] Natural disaster / fire / flood
+- [ ] Third party (processor)
+- [ ] Web scraping / unauthorized data harvesting
+- [ ] Misconfiguration (public S3 bucket, etc.)
+- [ ] Other:
+
+#### D.2. Attack Vector Detail (Technical)
+- Initial access:
+- Lateral movement:
+- Privilege escalation:
+- Data collection method:
+- Exfiltration method:
+- IOCs (IP, hash, domain):
+
+#### D.3. Detection Method
+- [ ] SIEM correlation rule (rule name: ____________)
+- [ ] EDR/XDR alert
+- [ ] DLP event
+- [ ] IDS/IPS
+- [ ] Honeypot/canary
+- [ ] Employee report
+- [ ] Customer/user complaint
+- [ ] Third-party report (CERT, researcher, press)
+- [ ] Processor notification
+- [ ] Dark web monitoring
+- [ ] Coincidental (audit, other incident research)
+- [ ] Other:
+
+---
+
+### SECTION E - MEASURES TAKEN
+
+#### E.1. Urgent Containment (T+0 - T+24 hours)
+| Measure | Time (Türkiye Time) | Owner | Result |
+|---------|---------------------|-------|--------|
+| | | | |
+
+#### E.2. Technical Measures
+- [ ] Affected system isolated from network
+- [ ] Affected user accounts disabled
+- [ ] Password reset (scope: ____________)
+- [ ] MFA token revocation/reset
+- [ ] API key / certificate rotation
+- [ ] Vulnerability patched (CVE: ____________)
+- [ ] Clean restore from backup
+- [ ] Fleet-wide IOC scan with EDR
+- [ ] WAF / firewall rule added
+- [ ] Forensic image captured
+- [ ] Other:
+
+#### E.3. Administrative Measures
+- [ ] CSIRT activation (level: ____)
+- [ ] Executive escalation
+- [ ] Legal / Insurance notification
+- [ ] Insider breach - disciplinary / employment termination process
+- [ ] Contractual sanction against processor
+- [ ] Internal reminder to all employees
+- [ ] Other:
+
+#### E.4. Continuing / Recommended Measures
+> Short- and long-term durable measures planned.
+
+---
+
+### SECTION F - DATA SUBJECT NOTIFICATION PLAN
+
+| Field | Content |
+|-------|---------|
+| Will notification be made? | Yes / No (if no, justification) |
+| Notification method | E-mail / SMS / KEP / Postal / Web banner / Press |
+| Dual-channel use | Yes / No |
+| Estimated first notification date | YYYY-MM-DD |
+| Estimated completion date | YYYY-MM-DD |
+| Notification text ready? | Yes (attached) / In preparation |
+| Data subject support line set up? | Yes / No |
+| Free protection service offered? | Yes (e.g., credit monitoring) / No |
+
+---
+
+### SECTION G - ROOT CAUSE ANALYSIS (PHASED - MAY BE INCOMPLETE AT FIRST NOTIFICATION)
+
+| Stage | Content |
+|-------|---------|
+| Direct cause | |
+| Facilitating factor (human) | |
+| Facilitating factor (process) | |
+| Facilitating factor (technical) | |
+| Systemic root cause | |
+
+> See `kok-neden-analizi.md` for the full RCA report attached.
+
+---
+
+### SECTION H - CORRECTIVE / PREVENTIVE ACTION (CAPA)
+
+| Action | Type (C/P) | Owner | Target Date | Status |
+|--------|-----------|-------|-------------|--------|
+| | | | | |
+
+---
+
+### SECTION I - LESSONS LEARNED
+
+> 5-10 items at a clarity level fit for inclusion in the next tabletop scenario and training update.
+
+1.
+2.
+3.
+
+---
+
+### SECTION J - ANNEXES
+
+- [ ] Forensic summary report (PDF)
+- [ ] Data subject notification draft (e-mail + SMS + web)
+- [ ] Insurer notification confirmation
+- [ ] Police lost-device report (if any)
+- [ ] Processor contractual sanction letter
+- [ ] Screenshots / IOC list
+- [ ] Data category-count detail table
+- [ ] Other:
+
+**Form Completion:**
+
+| Field | Content |
+|-------|---------|
+| Form completed by | (Name, title) |
+| Date | YYYY-MM-DD |
+| KVKK Officer approval | (Signature / KEP) |
+| Head of Legal approval | (Signature / KEP) |
+
+---
+
+## 3. Worked Example: Ransomware with Employee HR Data Leak
+
+### SECTION A
+| Field | Content |
+|-------|---------|
+| Data controller trade name | ABC Sanayi ve Ticaret A.Ş. |
+| Tax number | 1234567890 |
+| Field of activity | Automotive supplier industry (NACE 29.32) |
+| Number of employees | 612 |
+| VERBİS registration | 12345-1 |
+| Address | OSB 3. Cadde No:5, Bursa |
+| KEP address | abcsanayi@hs01.kep.tr |
+| Telephone | +90 224 XXX XX XX |
+| Contact person | Ayşe Yılmaz, KVKK Officer |
+| Contact e-mail | kvkk@abcsanayi.com.tr |
+| Contact telephone | +90 532 XXX XX XX |
+| Foreign-resident data controller | No |
+
+### SECTION B
+| Field | Content |
+|-------|---------|
+| Incident number | OLAY-2026-0042 |
+| Estimated breach date | 2026-05-04 22:30 (Türkiye Time) |
+| Awareness date (T+0) | 2026-05-05 08:15 |
+| Notification date | 2026-05-07 14:00 |
+| Elapsed | 53 hours 45 minutes |
+| 72 hours exceeded? | No |
+
+**Timeline:**
+| Time | Event |
+|------|-------|
+| 2026-05-04 22:30 | First suspicious RDP login (audit log) |
+| 2026-05-04 23:15 | Lateral movement - domain admin account use |
+| 2026-05-05 03:00 | Bulk read on HR file server |
+| 2026-05-05 06:00 | Encryption begins (LockBit variant) |
+| 2026-05-05 08:00 | First employee reports inability to access files (helpdesk) |
+| 2026-05-05 08:15 | SOC L2 confirms breach suspicion -> **T+0** |
+| 2026-05-05 08:45 | CISO + KVKK Officer + Legal informed |
+| 2026-05-05 09:00 | CSIRT Level 3 activation |
+| 2026-05-05 09:30 | Affected servers isolated from network |
+| 2026-05-05 12:00 | Forensic imaging completed |
+| 2026-05-05 18:00 | Affected data scope preliminary report: 612 employee HR files |
+| 2026-05-06 10:00 | Restore from backup begins |
+| 2026-05-06 16:00 | Insurer notification (cyber policy activation) |
+| 2026-05-07 09:00 | Data subject notification text ready |
+| 2026-05-07 14:00 | **Authority notification submitted** |
+
+**Incident Summary:**
+> "ABC Sanayi A.Ş. detected a LockBit-variant ransomware attack on its HR file server during the night of 4-5 May 2026. The attacker compromised the RDP account of an outsourced IT contractor through password leakage and accessed the personnel files of 612 employees. Forensic evidence indicates the files were copied before encryption. Affected data: ID copies, IBAN, salary information, health reports (special category). The system was isolated on the morning of 5 May and restored from clean backup. Direct notification is being prepared for affected employees."
+
+### SECTION C
+| C.1 Breach Nature | [x] Confidentiality [x] Availability |
+| C.2 Affected | 612 employees (final) + 35 former employees (total 647) |
+| C.3 Records | 5,847 documents |
+| C.4 Categories | General: Identity, Contact, Financial (IBAN), Professional<br>Special category: **Health reports (pre-employment medicals, absence reports)** |
+| C.5 Published? | Unknown - the attacker has placed a 7-day countdown on the dark-web leak page; with no payment, publication risk is high. |
+| C.6 Encrypted? | Clear-text (PDFs, no BitLocker on file system) |
+
+### SECTION D
+| D.1 Category | [x] Cyberattack -> Ransomware (LockBit) |
+| D.2 Vector | Initial access: outsourced IT contractor RDP account (password leak, MFA absent).<br>Lateral movement: Mimikatz credential dump.<br>Exfiltration: rclone upload to MEGA (12 GB). |
+| D.3 Detection | EDR alert (LockBit signature) + employee helpdesk complaint |
+
+### SECTION E
+| E.2 Technical | [x] Isolation [x] Account disable [x] Password reset (all admins) [x] MFA enforced (incl. RDP) [x] Clean restore from backup [x] Forensic imaging [x] Fleet-wide EDR scan [x] WAF rules |
+| E.3 Administrative | [x] CSIRT Level 3 [x] Board briefing [x] Legal + insurance [x] Contractor contract suspended |
+
+### SECTION F
+- Notification method: KEP (registered employee e-mail) + SMS + HR meeting
+- First notification: 2026-05-09
+- Completion: 2026-05-12
+- Support line: Call center 0850-XXX (KVKK specialist)
+- Free service: 12 months credit monitoring for affected employees
+
+### SECTION G (Phased - at first notification)
+- Direct cause: Lack of MFA on contractor account + shared password.
+- Human: Contractor password hygiene gaps; employee awareness.
+- Process: Third-party access policy left MFA optional.
+- Technical: RDP external access not behind VPN; weak network segmentation.
+- Systemic: Vendor security audits should be quarterly, not annual.
+
+### SECTION H (CAPA - summary)
+| Action | Type | Owner | Target |
+|--------|------|-------|--------|
+| MFA mandatory on all remote access | Corrective | CISO | 2026-05-15 |
+| RDP only behind VPN | Corrective | Network | 2026-05-20 |
+| Vendor security questionnaire annual -> quarterly | Preventive | Procurement | 2026-06-01 |
+| EDR on all servers (100% coverage) | Corrective | CISO | 2026-05-30 |
+| Employee + contractor awareness training | Preventive | HR + KVKK | 2026-06-15 |
+| Backups become immutable (S3 Object Lock) | Preventive | Infrastructure | 2026-07-01 |
+| Leak monitoring service (dark web) | Preventive | CISO | 2026-05-30 |
+
+### SECTION I (Lessons - summary)
+1. Third-party access is our highest-risk vector; zero-trust model is mandatory.
+2. MFA cannot be optional - all external access without exception.
+3. Without immutable backups, ransomware finds room for ransom negotiation.
+4. Detection could have been 9 hours earlier with tighter EDR rules.
+5. HR files should be encrypted at rest (file-level encryption), not stored in clear text.
+6. Crisis communication text was ready in 24 hours - the pre-approved template worked.
+
+### SECTION J Annexes
+- [x] Forensic summary report (Mandiant, 12 pages)
+- [x] Data subject e-mail + SMS text
+- [x] Insurer notification confirmation
+- [x] IOC list (IP, hash, domain)
+- [x] Data category-count table
+
+---
+
+## 4. Form Retention
+
+- The completed form is recorded in the **Authority Correspondence Log**.
+- The original KEP evidence chain is retained in the insured archive for **10 years**.
+- Internal versions (drafts, redactions) **are not deleted** - retained for the audit trail.
+
+## 5. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Kişisel Veri İhlal Bildirim Formu
 

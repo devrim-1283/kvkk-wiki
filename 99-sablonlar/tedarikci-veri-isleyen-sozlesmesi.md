@@ -1,13 +1,343 @@
 ---
-Doküman: Veri İşleyen Sözleşmesi (DPA — Data Processing Agreement)
-Bölüm: 99-sablonlar
-Sahip: Hukuk Müşavirliği + KVKK Sorumlusu
-Onaylayan: KVKK Komitesi + Yönetim Kurulu
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş
-İlgili Mevzuat: 6698 sayılı KVKK m.3 (veri işleyen tanımı), m.8, m.9, m.12; Kurul kararı 2024/959 (yurt dışı standart sözleşmeler)
+Doküman / Document: Veri İşleyen Sözleşmesi (DPA — Data Processing Agreement) / Data Processing Agreement (DPA)
+Bölüm / Section: 99-sablonlar
+Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
+Onaylayan / Approved by: KVKK Komitesi + Yönetim Kurulu — KVKK Committee + Board of Directors
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş — Annual + triggered
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.3, m.8, m.9, m.12; Kurul kararı 2024/959 — KVKK Arts. 3, 8, 9 and 12; Authority Decision 2024/959
 ---
+
+## English
+
+# DATA PROCESSING AGREEMENT (DPA)
+
+> **USE:** This is a KVKK-compliant Data Processing Agreement to be signed by the controller with a supplier acting as processor. Where cross-border transfer is involved, the standard contract texts published by Authority Decision 2024/959 prevail; this document may be used for domestic transfers or as supplementary terms.
+
+> **STRUCTURAL DISTINCTION:** Controller (instructing party) — Processor (acting on instructions) split is preserved throughout. "Joint controllership" is a distinct contract type and is not covered here.
+
+The Turkish text below is the binding form to be executed under Turkish law. The English equivalent is provided for international parallel use after legal review.
+
+---
+
+```
+======================================================================
+DATA PROCESSING AGREEMENT
+======================================================================
+
+This Data Processing Agreement ("Agreement") is signed on [DATE]
+between the parties identified below as an integral part of the
+Master Service Agreement ("Master Agreement") No./Date [...].
+
+----------------------------------------------------------------------
+PARTY 1 — CONTROLLER
+- Full Legal Name: [COMPANY]
+- Mersis No       : [...]
+- Address         : [...]
+- KEP             : [...]
+- Authorised      : [NAME, ROLE]
+
+PARTY 2 — PROCESSOR
+- Full Legal Name: [SUPPLIER]
+- Mersis No       : [...]
+- Address         : [...]
+- KEP             : [...]
+- Authorised      : [NAME, ROLE]
+----------------------------------------------------------------------
+
+ARTICLE 1 — DEFINITIONS
+
+Terms in this Agreement are interpreted as defined in Law No. 6698
+on the Protection of Personal Data ("Law") and its secondary
+legislation. The Law, the VERBİS Regulation, the Disclosure
+Communiqué, the Application Communiqué and the Erasure Regulation
+apply jointly to the interpretation of this Agreement.
+
+ARTICLE 2 — SUBJECT
+
+This Agreement sets out the rights and obligations of the parties
+regarding personal data processing activities carried out by the
+Processor on behalf of the Controller and on its instructions
+under the Master Agreement.
+
+ARTICLE 3 — SCOPE AND DETAILS OF PROCESSING
+
+3.1 Service:
+    [DESCRIPTION — e.g. Cloud-based CRM software]
+
+3.2 Purpose of Processing:
+    [Customer relations management, customer communication,
+    sales process operations]
+
+3.3 Categories of Personal Data:
+    - Identity (name, ID number — only where necessary)
+    - Contact (email, phone, address)
+    - Customer transactions (order, invoice, product)
+    - [Other process-relevant categories]
+
+3.4 Data Subject Groups:
+    - [Customers / Employees / Applicants / Supplier representatives]
+
+3.5 Place and Method of Processing:
+    - Place: [Türkiye / Cross-border — COUNTRY]
+    - Method: [Automated / partly automated]
+    - System(s): [...]
+
+3.6 Duration:
+    Limited to the term of the Master Agreement and the periods
+    set under applicable legislation.
+
+ARTICLE 4 — PROCESSOR OBLIGATIONS
+
+4.1 PROCESSING ON INSTRUCTIONS
+    The Processor processes personal data only on the Controller's
+    written instructions. If it considers an instruction to be
+    contrary to the Law, it informs the Controller in writing
+    immediately.
+
+4.2 CONFIDENTIALITY
+    The Processor ensures that its authorised personnel,
+    sub-processors and other persons are bound by written
+    confidentiality. Confidentiality survives the engagement
+    indefinitely.
+
+4.3 SECURITY MEASURES
+    The Processor takes the technical and administrative measures
+    set out in Law Art. 12 and the Personal Data Security Guide.
+    At minimum:
+    a) Access authorisation, MFA, privileged access management
+    b) Encryption (rest + transit; AES-256 or equivalent)
+    c) Logging and log preservation (at least 1 year)
+    d) Backup, disaster recovery
+    e) Patch management
+    f) Annual penetration test
+    g) Vulnerability scanning
+    h) Data Loss Prevention (DLP) controls
+    i) Employee training and confidentiality undertakings
+    j) Certified information security management (ISO 27001 or
+       equivalent — preferred; mandatory if specified)
+
+4.4 SENSITIVE DATA
+    Where sensitive data are processed, the Processor implements
+    the adequate measures of Authority Decision No. 2018/10 dated
+    31.01.2018.
+
+4.5 SUB-PROCESSOR USE
+    a) The Processor obtains the Controller's written consent to
+       use a sub-processor.
+    b) Where general consent is given, sub-processor changes are
+       notified at least 30 days in advance; the Controller may
+       object on reasonable grounds.
+    c) The contract with the sub-processor mirrors the obligations
+       in this Agreement.
+    d) The Processor remains liable for the sub-processor's acts
+       contrary to this Agreement.
+
+    Current sub-processor list: [ANNEX 1]
+
+4.6 DATA TRANSFER AND CROSS-BORDER
+    a) The Processor does not transfer personal data without the
+       Controller's written instruction.
+    b) Cross-border transfers comply with Law Art. 9:
+       - Authority decision on adequacy
+       - Authority-approved standard contract
+       - Authority-approved BCR
+       - Authority-approved undertaking
+       - Derogations under Art. 9/6
+    c) Where a standard contract is signed, notification to the
+       Authority within 5 business days is made by the Controller;
+       the Processor provides every necessary support for that
+       notification.
+
+4.7 ASSISTANCE WITH DATA SUBJECT RIGHTS
+    For Art. 11 requests reaching the Controller, the Processor:
+    a) Notifies the Controller within 5 business days
+    b) Supports execution per the Controller's instructions
+       (information provision, correction, erasure, transfer
+       information, etc.)
+    c) Assists in time so the Controller can resolve the request
+       within the 30-day window
+    d) Does not respond to applications received directly;
+       redirects them to the Controller
+
+4.8 BREACH NOTIFICATION
+    a) The Processor notifies the Controller in writing within
+       **24 hours** of becoming aware of a personal data breach.
+    b) The notification contains, as a minimum: nature of the
+       breach, affected data categories and number of subjects,
+       likely consequences, measures taken/planned, contact person.
+    c) Provides all information necessary, completely and quickly,
+       to allow the Controller to notify the Authority within 72
+       hours.
+    d) Performs forensic preservation; preserves logs and evidence.
+
+4.9 AUDIT
+    a) The Controller is entitled to audit, or have audited, the
+       Processor's compliance with this Agreement annually or on
+       reasonable suspicion.
+    b) The Processor provides information and documents required
+       for audit; allows reasonable on-site inspection.
+    c) Non-conformities found are remediated within 30 days.
+    d) Independent third-party certifications (ISO 27001 audit
+       report, SOC 2 Type II) may, with the Controller's consent,
+       substitute the annual audit.
+
+4.10 RECORD KEEPING
+    The Processor records all processing activities under this
+    Agreement; provides them to the Controller on request.
+
+4.11 RETURN / DESTRUCTION ON TERMINATION
+    On termination of this Agreement or at the Controller's
+    request, the Processor:
+    a) Returns or destroys personal data at the Controller's
+       election
+    b) Erases / destroys all copies including backups (save where
+       legislation requires the Processor to retain; in that case,
+       the legal basis is documented in writing)
+    c) Provides a return/destruction confirmation to the Controller
+    d) Completes the operation within [PERIOD — e.g. 30 days]
+
+4.12 PERSONNEL TRAINING
+    The Processor provides KVKK training at least annually to all
+    personnel accessing personal data; retains training records.
+
+ARTICLE 5 — CONTROLLER OBLIGATIONS
+
+5.1 Issues instructions in writing (including email); does not
+    issue instructions outside the scope of the Agreement.
+
+5.2 Fulfils the disclosure obligation to data subjects.
+
+5.3 Provides the legal basis for the processing.
+
+5.4 Notifies changes that may affect the Processor (scope, process,
+    system) with reasonable advance notice.
+
+ARTICLE 6 — LIABILITY
+
+6.1 Each party is liable for the damage caused to the other party
+    by breach of its obligations.
+
+6.2 If the Processor processes data outside instructions or
+    contrary to the Law, it is treated as a controller for that
+    processing and bears liability accordingly.
+
+6.3 Recourse for compensation, administrative fines and legal
+    expenses paid to data subjects or third parties is reserved.
+
+6.4 Maximum liability cap: [AMOUNT / Reference to Master Agreement]
+    (Cap does not apply in cases of intent or gross negligence.)
+
+ARTICLE 7 — TERMINATION
+
+7.1 The Controller may terminate the Agreement unilaterally and
+    immediately if the Processor fails to remedy a breach within a
+    reasonable time of notice.
+
+7.2 The Controller may unilaterally and immediately terminate the
+    Agreement if the Authority orders processing suspension against
+    the Processor.
+
+7.3 On termination, Article 4.11 applies.
+
+ARTICLE 8 — DISPUTES AND GOVERNING LAW
+
+8.1 The Agreement is governed by Turkish law.
+
+8.2 Disputes are resolved by the courts and execution offices of
+    [ISTANBUL / ANKARA].
+
+8.3 [If arbitration preferred: arbitration clause under ITOTAM/ICC
+    rules.]
+
+ARTICLE 9 — MISCELLANEOUS
+
+9.1 Invalidity of any provision does not affect the validity of
+    others.
+
+9.2 This Agreement is an integral part of the Master Agreement;
+    in conflict, the KVKK-related provisions of this Agreement
+    prevail.
+
+9.3 Amendments require mutual written signature.
+
+ARTICLE 10 — ENTRY INTO FORCE
+
+This Agreement enters into force on [DATE] and remains effective
+until termination of the Master Agreement; provisions of Articles
+4.2, 4.11 and 6 survive termination.
+
+----------------------------------------------------------------------
+ANNEXES
+- Annex 1: Sub-processor list (updated)
+- Annex 2: Detail of technical and administrative measures
+- Annex 3: Service description (may reference Master Agreement)
+- Annex 4: Cross-border transfer details (if any) — reference to
+        standard contract or BCR
+- Annex 5: Breach notification form template
+- Annex 6: Audit framework
+
+----------------------------------------------------------------------
+SIGNATURES
+
+CONTROLLER                                PROCESSOR
+[COMPANY]                                 [SUPPLIER]
+
+Authorised Name: ___________            Authorised Name: ___________
+Role:           ___________            Role:           ___________
+Date:           ___________            Date:           ___________
+Signature:      ___________            Signature:      ___________
+
+(Company seal)                          (Company seal)
+======================================================================
+```
+
+---
+
+## ANNEX 1 — SUB-PROCESSOR LIST
+
+| Sub-Processor | Service | Place (country) | Cross-border legal basis (if any) | Approval Date |
+|---------------|---------|-----------------|------------------------------------|----------------|
+| [Provider 1] | Cloud hosting | [Country] | Standard contract / Adequacy decision | [Date] |
+| [Provider 2] | Email service | [Country] | [Basis] | [Date] |
+
+## ANNEX 2 — TECHNICAL AND ADMINISTRATIVE MEASURES DETAIL
+
+| Measure | Detail | Certificate / Document |
+|---------|--------|------------------------|
+| Encryption — rest | AES-256 disk encryption | [...] |
+| Encryption — transit | TLS 1.3 mandatory | [...] |
+| Access | RBAC + MFA + PAM | [...] |
+| Logging | Central SIEM, 1-year retention | [...] |
+| Backup | 3-2-1 strategy, encrypted | [...] |
+| Patch management | Critical ≤7 days, high ≤30 days | [...] |
+| Penetration test | Annual, independent | [...] |
+| InfoSec management | ISO 27001 | [Cert no] |
+| Training | Annual + onboarding | [...] |
+| Confidentiality undertaking | All personnel | [...] |
+
+## ANNEX 5 — BREACH NOTIFICATION FORM
+
+Use TEMPLATE A from [../99-sablonlar/ihlal-bildirim.md](../99-sablonlar/ihlal-bildirim.md); the Processor completes and delivers it to the Controller within 24 hours.
+
+## DPA Negotiation Notes (Internal Use)
+
+- Liability cap (excluding intent/gross negligence) is typically 1-2x annual fee; calibrated against KVKK fine and data subject compensation risk.
+- Sub-processor approval: prior approval vs. general approval + right to object (both acceptable; chosen on proportionality).
+- Audit right is non-waivable; substitution by independent certification can be reasonable.
+- Cross-border transfer requires Authority Decision 2024/959 standard contract as additional, non-conflicting document.
+
+## Related Documents
+
+- [../12-mevzuat-arsiv/6698-kanun.md](../12-mevzuat-arsiv/6698-kanun.md)
+- [../12-mevzuat-arsiv/kurul-kararlari-ozeti.md](../12-mevzuat-arsiv/kurul-kararlari-ozeti.md)
+- [../07-aktarim/](../07-aktarim/)
+- [ihlal-bildirim.md](ihlal-bildirim.md)
+
+---
+
+## Türkçe
 
 # VERİ İŞLEYEN SÖZLEŞMESİ (DPA)
 

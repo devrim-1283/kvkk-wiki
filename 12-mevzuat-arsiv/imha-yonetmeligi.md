@@ -1,13 +1,182 @@
 ---
-Doküman: Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik — Madde Özeti
-Bölüm: 12-mevzuat-arsiv
-Sahip: KVKK Sorumlusu + Hukuk Müşavirliği
-Onaylayan: KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Yönetmelik değişikliğinde
-İlgili Mevzuat: İmha Yönetmeliği (Resmi Gazete: 28.10.2017 / 30224), 6698 sayılı KVKK m.7 ve m.22
+Doküman / Document: Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik — Madde Özeti / Regulation on Erasure, Destruction or Anonymisation of Personal Data — Article-by-Article Summary
+Bölüm / Section: 12-mevzuat-arsiv
+Sahip / Owner: KVKK Sorumlusu + Hukuk Müşavirliği — KVKK Officer + Legal Counsel
+Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Yönetmelik değişikliğinde — Annual + on amendment
+İlgili Mevzuat / Legal Reference: İmha Yönetmeliği (Resmi Gazete: 28.10.2017 / 30224), 6698 sayılı KVKK m.7 ve m.22 — Erasure Regulation (Official Gazette: 28.10.2017 / 30224); KVKK Arts. 7 and 22
 ---
+
+## English
+
+# Regulation on the Erasure, Destruction or Anonymisation of Personal Data
+
+## General Information
+
+| Field | Value |
+|-------|-------|
+| Title | Regulation on the Erasure, Destruction or Anonymisation of Personal Data |
+| Official Gazette | 28.10.2017 / 30224 |
+| In Force | 01.01.2018 |
+| Legal Basis | KVKK Arts. 7/3 and 22/1-(e) |
+
+## Structure
+
+| Part | Articles | Subject |
+|------|----------|---------|
+| General provisions | 1-4 | Purpose, scope, basis, definitions |
+| Policy | 5-6 | Retention and Destruction Policy |
+| Destruction methods | 7-10 | General provisions, deletion, destruction, anonymisation |
+| Destruction periods | 11-12 | Periodic and on-request destruction |
+| Miscellaneous | 13-15 | Authority, entry into force, execution |
+
+---
+
+## Article-by-Article Summary
+
+### ARTICLE 1 — Purpose
+
+| Field | Content |
+|-------|---------|
+| Summary | Sets the procedures and principles for erasure, destruction or anonymisation of personal data processed wholly or partly automatically or, if part of a data filing system, non-automatically |
+| Operational Impact | Normative framework for retention and destruction |
+| Wiki | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/) |
+
+### ARTICLE 2 — Scope
+
+| Field | Content |
+|-------|---------|
+| Summary | Applies to controllers under KVKK Art. 7 |
+
+### ARTICLE 3 — Legal Basis
+
+| Field | Content |
+|-------|---------|
+| Summary | KVKK Arts. 7/3 and 22/1-(e) |
+
+### ARTICLE 4 — Definitions
+
+| Field | Content |
+|-------|---------|
+| Summary | Definitions of recipient group, relevant user, destruction (deletion/destruction/anonymisation), recording medium, personal data retention and destruction policy, periodic destruction, Registry |
+| Operational Impact | "Relevant user" identifies the department/individual responsible for storage, processing or technical maintenance |
+
+### ARTICLE 5 — Personal Data Retention and Destruction Policy
+
+| Field | Content |
+|-------|---------|
+| Summary | Controllers required to register in VERBİS under KVKK Art. 16 must prepare a Retention and Destruction Policy **consistent with the personal data processing inventory**. The destruction obligation is not waived for those who fail to prepare one |
+| Operational Impact | The policy is mandatory; consistency between inventory and policy is required; absence of a policy still requires destruction but creates documentation gaps in audit |
+| Wiki | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/), [99-sablonlar/saklama-imha-politikasi.md](../99-sablonlar/saklama-imha-politikasi.md) |
+
+### ARTICLE 6 — Minimum Elements of the Policy
+
+| Field | Content |
+|-------|---------|
+| Summary | The policy contains, **at minimum**: (a) preparation purpose; (b) recording media; (c) legal/technical reasons requiring retention and destruction; (ç) technical/administrative measures for secure storage and prevention of unlawful processing; (d) explanations of destruction methods; (e) retention and destruction periods table (by category); (f) periodic destruction periods; (g) policy update process for changes |
+| Operational Impact | Policy template aligned exactly with the Regulation; retention table = process × data category × period × legal basis |
+| Wiki | [99-sablonlar/saklama-imha-politikasi.md](../99-sablonlar/saklama-imha-politikasi.md) |
+
+### ARTICLE 7 — General Provisions for Destruction
+
+| Field | Content |
+|-------|---------|
+| Summary | (1) Where all conditions of Arts. 5-6 of KVKK have ceased, data are erased, destroyed or anonymised **ex officio** or **upon request**. (2) The controller takes appropriate technical/administrative measures. (3) The controller **records all destruction operations** and retains them for **at least 3 years** |
+| Operational Impact | Destruction minute mandatory; 3-year retention; destruction records are among the first evidence requested in audit |
+| Wiki | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/) |
+
+### ARTICLE 8 — Erasure of Personal Data
+
+| Field | Content |
+|-------|---------|
+| Summary | (1) Erasure = rendering data **inaccessible and unusable in any way for relevant users**. (2) Erasure methods adapted to the medium (software record deletion, complying with provider deletion requests, blacking-out paper). (3) Records retained for 3 years |
+| Operational Impact | Erasure alone does not guarantee irrecoverable destruction; database backups require additional treatment |
+| Wiki | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/), [05-teknik-tedbirler](../05-teknik-tedbirler/) |
+
+### ARTICLE 9 — Destruction of Personal Data
+
+| Field | Content |
+|-------|---------|
+| Summary | (1) Destruction = rendering data **inaccessible, irretrievable and unusable by anyone, in any way**. (2) Method examples: physical destruction (shredding, burning, melting), demagnetisation, overwriting, DOD-standard wiping. (3) Records retained for 3 years |
+| Operational Impact | Certified destruction prior to hardware disposal/sale; crypto-shredding preferred for cloud providers |
+| Wiki | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/), [05-teknik-tedbirler](../05-teknik-tedbirler/) |
+
+### ARTICLE 10 — Anonymisation
+
+| Field | Content |
+|-------|---------|
+| Summary | (1) Anonymisation = rendering data such that they **cannot be associated with an identified or identifiable natural person even when matched with other data**. (2) Methods: masking, aggregation, k-anonymity, l-diversity, t-closeness, noise addition, data derivation. (3) "Re-identifiability test" must be performed; if risk persists, anonymisation is incomplete |
+| Operational Impact | Anonymisation preferred for analytics and ML; re-identification risk re-assessed annually |
+| Wiki | [10-ozel-konular](../10-ozel-konular/) |
+
+### ARTICLE 11 — Periodic Destruction
+
+| Field | Content |
+|-------|---------|
+| Summary | (1) A controller with a Retention and Destruction Policy destroys data **in the first periodic destruction operation following the date the obligation arose**. (2) Periodic destruction is conducted **at intervals not exceeding 6 months**. (3) Controllers without a policy complete destruction within **3 months** of the obligation arising |
+| Operational Impact | Periodic destruction calendar: January and July; KPI tracks execution rate; the 3-month grace rule for controllers without a policy is critical (e.g. new entities) |
+| Wiki | [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md), [99-sablonlar/saklama-imha-politikasi.md](../99-sablonlar/saklama-imha-politikasi.md) |
+
+### ARTICLE 12 — On-Request Destruction
+
+| Field | Content |
+|-------|---------|
+| Process | (1) Where the data subject applies: (a) if all KVKK Arts. 5-6 conditions have ceased, data are destroyed; the request is concluded **within 30 days** and the result notified; (b) if processing conditions persist, the request can be **rejected with reasons** under KVKK Art. 13/3; (c) obligation to notify recipients to whom data were transferred |
+| Operational Impact | Erasure-request response template aligned with Communiqué Art. 6 and Erasure Reg. Art. 12; failure to notify third parties means destruction is incomplete |
+| Wiki | [09-ilgili-kisi-basvurulari](../09-ilgili-kisi-basvurulari/) |
+
+### ARTICLE 13 — Authority
+
+| Field | Content |
+|-------|---------|
+| Summary | The Authority is empowered to resolve doubts in application |
+
+### ARTICLE 14 — Entry into Force
+
+| Field | Content |
+|-------|---------|
+| Summary | Entered into force on 01.01.2018 |
+
+### ARTICLE 15 — Execution
+
+| Field | Content |
+|-------|---------|
+| Summary | The President executes the Regulation |
+
+---
+
+## Cross-Reference Table
+
+| Reg. Art. | Related Wiki Document |
+|-----------|------------------------|
+| Arts. 5, 6 | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/), [99-sablonlar/saklama-imha-politikasi.md](../99-sablonlar/saklama-imha-politikasi.md) |
+| Arts. 7-9 | [04-veri-saklama-ve-imha](../04-veri-saklama-ve-imha/), [05-teknik-tedbirler](../05-teknik-tedbirler/) |
+| Art. 10 | [10-ozel-konular](../10-ozel-konular/) |
+| Art. 11 | [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md) |
+| Art. 12 | [09-ilgili-kisi-basvurulari](../09-ilgili-kisi-basvurulari/) |
+
+## Operational Key Points
+
+- **6-month periodic destruction:** January (Q1) and July (Q3) — calendar discipline.
+- **3-year minute retention:** Destruction minutes for at least 3 years; 5 years recommended for audit readiness.
+- **30-day on-request destruction:** Same as the application SLA.
+- **3-month grace:** For controllers without a policy. The first 3 months are critical for a new entity.
+- **Notification to third parties:** Mandatory for all parties to whom the erased data were previously transferred.
+- **Destruction in backups:** Technically harder; the controller must align the policy with backup rotation; backup-erasure period is set in the policy table.
+- **Anonymisation re-evaluation:** Re-identification risk is tested annually; technological progress may increase risk.
+
+## Related Documents
+
+- [6698-kanun.md](6698-kanun.md)
+- [../04-veri-saklama-ve-imha/](../04-veri-saklama-ve-imha/)
+- [../99-sablonlar/saklama-imha-politikasi.md](../99-sablonlar/saklama-imha-politikasi.md)
+- [../11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
+
+---
+
+## Türkçe
 
 # Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi Hakkında Yönetmelik
 

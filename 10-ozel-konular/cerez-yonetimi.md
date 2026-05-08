@@ -1,13 +1,287 @@
 ---
-Doküman: Çerez ve Benzeri İzleme Teknolojileri Yönetimi
-Bölüm: 10-ozel-konular
-Sahip: KVKK Sorumlusu + Pazarlama + Web/Dijital
-Onaylayan: Hukuk Müdürü + KVKK Komitesi
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + Kurul Çerez Rehberi güncellemelerinde
-İlgili Mevzuat: 6698 sayılı KVKK m.5; 5651 sayılı Kanun; KVKK "Çerez Uygulamaları Hakkında Rehber" (Haziran 2022); IAB TCF v2.2; ePrivacy Yönergesi (karşılaştırma)
+Doküman / Document: Çerez ve Benzeri İzleme Teknolojileri Yönetimi / Cookie and Similar Tracking Technologies Management
+Bölüm / Section: 10-ozel-konular
+Sahip / Owner: KVKK Sorumlusu + Pazarlama + Web/Dijital / KVKK Officer + Marketing + Web/Digital
+Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + Kurul Çerez Rehberi güncellemelerinde / Annual + on Authority Cookie Guide updates
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 5; Law No. 5651; KVKK "Cookie Practices Guide" (June 2022); IAB TCF v2.2; ePrivacy Directive (comparative)
 ---
+
+## English
+
+# Cookie and Similar Tracking Technologies Management
+
+## 1. Purpose and Scope
+
+This document defines the management - in line with KVKK and the Authority's Cookie Practices Guide (June 2022) - of cookies (HTTP cookies), local storage, session storage, IndexedDB, fingerprinting, SDK trackers, and pixel technologies used on our websites, mobile apps, and digital properties.
+
+## 2. Legal Framework
+
+### 2.1. KVKK and Authority Guide
+
+- **KVKK Art. 5:** General reference to processing conditions - cookies are tools of personal data processing.
+- **KVKK Cookie Guide (June 2022):** Cookie types, legal grounds, CMP requirements, privacy notice standard.
+- **Law No. 5651:** Hosting/content provider obligations (traffic logs - some cookies are traffic data).
+
+### 2.2. General Principle
+
+> If personal data is processed via cookies, **all KVKK principles apply** - disclosure, legal ground, proportionality, explicit consent (if required), cross-border transfer rules.
+
+## 3. Cookie Categories
+
+### 3.1. Strictly Necessary Cookies
+
+**Definition:** **Absolutely required** for the basic operation of the site. Service cannot be provided if disabled.
+
+**Examples:**
+
+- Session cookie.
+- Cart/shopping persistence.
+- Form-input transient storage.
+- CSRF token.
+- Load balancing.
+- Persistence of cookie preference (paradox: the cookie that records the preference is itself necessary).
+
+**Legal ground:** KVKK Art. 5(2)(c) (formation/performance of contract) or Art. 5(2)(f) (legitimate interest).
+
+**Explicit consent?** **Not required.** But disclosure is mandatory.
+
+### 3.2. Performance / Analytics Cookies
+
+**Definition:** Measurement of site usage - visitor count, bounce rate, page durations.
+
+**Examples:**
+
+- Google Analytics (GA4).
+- Yandex Metrica.
+- Matomo, Plausible (privacy-friendly options).
+- Hotjar (heatmaps, session replay - risky).
+
+**Legal ground:** Generally requires **explicit consent**. If anonymous measurement (IP masking, no user-identity tracking) is used, legitimate interest may be considered; the Authority's posture, however, leans toward consent.
+
+**Explicit consent?** **Generally yes.**
+
+### 3.3. Functional Cookies
+
+**Definition:** Preferences - language, region, theme, font size, UI personalization.
+
+**Legal ground:** Explicit consent or legitimate interest (usability). The Authority's guide leans toward **consent**.
+
+**Explicit consent?** **Yes (recommended).**
+
+### 3.4. Targeting / Advertising Cookies
+
+**Definition:** Behavior tracking, profiling, personalized advertising, retargeting.
+
+**Examples:**
+
+- Google Ads, DoubleClick.
+- Meta Pixel (Facebook/Instagram).
+- TikTok Pixel.
+- LinkedIn Insight Tag.
+- Twitter/X Pixel.
+- Criteo, RTB House.
+
+**Legal ground:** **Explicit consent mandatory.**
+
+**Explicit consent?** **Yes, definite.**
+
+### 3.5. Social Media Cookies
+
+**Definition:** Embedded video (YouTube), share buttons (Facebook, X), embedded posts.
+
+**Legal ground:** Explicit consent (typically loads third-party cookies).
+
+**Explicit consent?** **Yes.**
+
+## 4. CMP (Consent Management Platform) Requirements
+
+### 4.1. Authority Guide Expectations
+
+A CMP - cookie consent management platform - must provide:
+
+| Feature | Description |
+|---------|-------------|
+| Prior consent | Cookies must not start before consent. Only strictly necessary cookies on by default. |
+| Granular choice | Per-category accept/reject. "Accept all" + "Reject all" + "Manage preferences". |
+| "Reject" with equal ease | If "Accept All" is present, an equally prominent "Reject All" is required. Dark patterns forbidden. |
+| Easy withdrawal | An always-accessible "My Cookie Preferences" link (footer). |
+| Recording | Each consent recorded with timestamp, IP, user choices. |
+| Retention | Consent record retained at least 3 years (proof). |
+| Versioning | Renew consent if the CMP version changes. |
+
+### 4.2. Recommended CMP Solutions
+
+| Solution | Notes |
+|----------|-------|
+| OneTrust | Enterprise - KVKK + GDPR + IAB TCF |
+| Cookiebot | Automatic scanning + inventory |
+| Usercentrics | Cross-domain consent |
+| Iubenda | Mid-size friendly |
+| Self-hosted (custom) | Full control - requires team capacity |
+
+### 4.3. Banned Dark Patterns
+
+- "Accept" only button; "Reject" buried/below the fold.
+- Long extra menu when "Reject" is clicked.
+- Default acceptance on click into pop-up.
+- Treating closure of pop-up as acceptance.
+- "Accept to continue" forcing.
+- Psychological pressure via color/visual difference.
+
+> **Authority's tendency to sanction:** These patterns are violations of both KVKK and consumer law.
+
+## 5. Cookie Privacy Notice
+
+### 5.1. Minimum Content
+
+The cookie privacy notice must include the following per KVKK Art. 10 + Cookie Guide:
+
+1. **Data controller identity** - trade name, address, contact.
+2. **What is a cookie** - brief definition.
+3. **Categories used** - the 5 classes above.
+4. **Purpose of each cookie** - why used.
+5. **Third-party cookies** - who, what purpose, cross-border transfer or not.
+6. **Retention period** - per cookie.
+7. **Legal ground** - which paragraph of Art. 5(2) or explicit consent.
+8. **Data subject rights** - reference to Art. 11.
+9. **Cookie preference management** - link.
+10. **Withdrawal method via the CMP.**
+
+### 5.2. Placement and Visibility
+
+- "Cookie Policy" link in website footer.
+- CMP banner on first visit - clearly visible.
+- "My Cookie Preferences" link accessible on every page.
+- In mobile apps, in app settings menu.
+
+### 5.3. Cookie Inventory Table
+
+The privacy notice presents a **cookie inventory table**:
+
+| Cookie Name | Owner | Type | Purpose | Duration | Legal Ground |
+|-------------|-------|------|---------|----------|--------------|
+| `_session_id` | Our company | Strictly necessary | Session management | Session | Performance of contract |
+| `_ga` | Google | Performance | Analytics | 2 years | Explicit consent |
+| `_fbp` | Meta | Targeting | Pixel tracking | 90 days | Explicit consent |
+| `theme_pref` | Our company | Functional | Theme preference | 1 year | Explicit consent |
+
+> The table is updated **monthly** by automatic scan (Cookiebot/OneTrust).
+
+## 6. Third-Party Cookies and Cross-Border Transfer
+
+### 6.1. Risk
+
+Third-party cookies (Google, Meta, TikTok) transfer data to **foreign servers**. KVKK Art. 9 (cross-border transfer) applies.
+
+### 6.2. Legal Ground for Cross-Border Transfer
+
+- If an adequacy decision exists for the country, transfer is straightforward.
+- If not: Standard Contract (SCC), binding corporate rules, explicit consent.
+- In practice: **Explicit consent** is collected via the cookie banner + cross-border transfer information in the notice.
+
+### 6.3. Transfer Transparency
+
+For each third party, the cookie policy lists:
+
+- Company name + country of establishment.
+- Categories of data transferred.
+- Purpose of transfer.
+- Link to the third party's privacy policy.
+- Known data retention policy.
+
+## 7. Mobile Application Equivalent
+
+In mobile apps, instead of cookies:
+
+- SDK trackers (Firebase Analytics, Adjust, AppsFlyer, Branch).
+- Advertising IDs (IDFA, GAID).
+- Push tokens.
+- Local storage / Keychain / Shared Preferences.
+
+The same CMP principles apply:
+
+- First-launch consent screen.
+- Per-category selection.
+- Withdrawal from settings.
+- Apple ATT (iOS) and Google Privacy Sandbox compatibility in parallel.
+
+## 8. IAB TCF (Transparency and Consent Framework)
+
+### 8.1. What Is It?
+
+IAB Europe's standard consent framework. v2.2 is current. Provides interoperability with the ad ecosystem.
+
+### 8.2. KVKK Compliance Note
+
+- TCF v2.2 is GDPR-oriented; it does not **fully overlap** with KVKK (e.g., the "legitimate interest balancing" interpretation differs).
+- When TCF is used, KVKK requirements apply as an **additional layer**:
+   - Privacy notice in Turkish, with KVKK terminology.
+   - Explicit-consent definition aligned with KVKK.
+   - Cross-border transfer explained in Turkish.
+
+### 8.3. Türkiye Adaptation
+
+- Türkiye-specific banner inside the TCF interface (KVKK reference).
+- Equality of "object to legitimate interest" + "withdraw consent" as TCF refusal.
+- Records stored KVKK-compliant.
+
+## 9. Implementation Steps (12-week plan)
+
+| Week | Action | Owner |
+|------|--------|-------|
+| 1-2 | Existing cookie inventory (automated scan) | Web team |
+| 2-3 | Third-party cookie scope | Marketing + IT |
+| 3-4 | Cookie category classification | KVKK + Legal |
+| 4-6 | CMP selection + integration | IT + Marketing |
+| 6-7 | Cookie privacy notice revision | Legal + KVKK |
+| 7-8 | Banner UX + dark pattern check | Design + KVKK |
+| 8-9 | Mobile SDK audit | Mobile team |
+| 9-10 | Test environment release + internal audit | KVKK |
+| 10-11 | Production go-live | IT |
+| 11-12 | Monitoring + tuning | KVKK |
+
+## 10. Common Mistakes
+
+| Mistake | Correct approach |
+|---------|------------------|
+| Banner with one "Accept" button | Equally visible "Reject" required |
+| Loading cookies before banner shown | Non-essential cookies after consent only |
+| GA4 default-on | Explicit consent + IP anonymize |
+| 3rd-party pixel "on" by default | Trigger after consent |
+| 10-year cookie lifespan | Reasonable duration (max 1-2 years) |
+| No "Cookie Policy" page | Standalone page mandatory |
+| Out-of-date cookie inventory | Automated monthly scan |
+| No CMP in mobile app | Separate mobile permission flow |
+
+## 11. KPIs
+
+| KPI | Target |
+|-----|--------|
+| Banner display rate | 100% (first visit) |
+| Consent record rate | 95%+ |
+| "Reject all" rate | (observed - not policy) |
+| Cookie inventory currency | < 30 days |
+| Consent renewal on CMP version change | 100% |
+| Cookie notice readability (Flesch) | B1+ Turkish |
+
+## 12. Linked Sections
+
+- `03-aydinlatma-ve-acik-riza/` - Privacy notice standard structure.
+- `07-aktarim/` - Cross-border transfer scope.
+- `02-envanter-ve-sicil/` - VERBİS reporting of cookie inventory.
+
+## 13. Version History
+
+| Version | Date | Change | Approval |
+|---------|------|--------|----------|
+| 1.0 | 2026-05-08 | First publication | KVKK Committee |
+
+---
+
+## Türkçe
 
 # Çerez ve Benzeri İzleme Teknolojileri Yönetimi
 

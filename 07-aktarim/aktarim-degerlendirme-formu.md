@@ -1,13 +1,624 @@
 ---
-Doküman: Aktarım Etki Değerlendirmesi (TIA) ve Aktarım Onay Formu
-Bölüm: 07-aktarim
-Sahip: KVKK Sorumlusu
-Onaylayan: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi (KVKK Komitesi onayı)
-Versiyon: 1.0
-Yürürlük: 2026-05-08
-Gözden Geçirme: Yıllık + tetiklenmiş (yeni aktarım, mevzuat değişikliği, alıcı ülke hukuk değişikliği)
-İlgili Mevzuat: KVKK m.5, m.6, m.8, m.9; Kurul'un 04.06.2024 tarihli ve 2024/959 sayılı kararı
+Doküman / Document: Aktarım Etki Değerlendirmesi (TIA) ve Aktarım Onay Formu / Transfer Impact Assessment (TIA) and Transfer Approval Form
+Bölüm / Section: 07-aktarim
+Sahip / Owner: KVKK Sorumlusu / KVKK Officer
+Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi (KVKK Komitesi onayı) / Legal Director + Information Security Manager (KVKK Committee approval)
+Versiyon / Version: 1.0
+Yürürlük / Effective: 2026-05-08
+Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (new transfer, regulatory change, recipient country law change)
+İlgili Mevzuat / Legal Reference: KVKK Art. 5, 6, 8, 9; Personal Data Protection Board Decision No. 2024/959 dated 04.06.2024
 ---
+
+## English
+
+# Transfer Impact Assessment (TIA) and Approval Form
+
+## 1. Purpose of the Form
+
+This form is designed to be completed **before** every **personal data transfer** (domestic and cross-border) the Company will perform. The form ensures:
+
+- Clear identification of the legal basis for the transfer (Art. 5/Art. 6 + Art. 8/Art. 9),
+- Recording which path (adequacy / appropriate safeguard / occasional) is used in cross-border transfers,
+- Assessment of recipient country law and practice (for cross-border),
+- Definition and implementation of supplementary measures,
+- Maintaining the KVKK Committee approval chain.
+
+## 2. Form Types
+
+| Form | Use |
+|------|-----|
+| Form A | Domestic Transfer Approval Form |
+| Form B | Cross-Border Transfer — Adequacy Path |
+| Form C | Cross-Border Transfer — Appropriate Safeguard Path (Standard Contract / BCR / Undertaking / Agreement) |
+| Form D | Cross-Border Transfer — Occasional Case Path |
+
+A **unified form** is presented below; the relevant sections are filled in per transfer type.
+
+---
+
+## 3. Transfer Approval Form — Unified
+
+```
+═══════════════════════════════════════════════════════════════
+PERSONAL DATA TRANSFER ASSESSMENT AND APPROVAL FORM
+═══════════════════════════════════════════════════════════════
+
+Form No                : ____________________________________
+Form Date              : ____/____/______
+Form Owner (Unit)      : ____________________________________
+Transfer Type          : [ ] Domestic   [ ] Cross-border
+
+──────────────────────────────────────────────────────────────
+1. GENERAL TRANSFER DEFINITION
+──────────────────────────────────────────────────────────────
+Purpose of Transfer    : ______________________________________
+                         ______________________________________
+Business Process Owner : ______________________________________
+Data Controller        : [COMPANY NAME A.Ş.]
+Recipient (Title)      : ______________________________________
+Recipient Address      : ______________________________________
+Recipient Country      : ______________________________________
+Recipient Status       : [ ] Controller (C)
+                         [ ] Processor (P)
+                         [ ] Joint Controller
+Transfer Frequency     : [ ] One-off
+                         [ ] Periodic (day/week/month/year)
+                         [ ] Continuous (real-time / API)
+Transfer Duration      : __________________________
+Transfer Method        : [ ] API
+                         [ ] File transfer (SFTP/FTPS)
+                         [ ] Email / KEP
+                         [ ] Cloud hosting (provider: ____)
+                         [ ] Remote access (with auth.)
+                         [ ] Physical media
+                         [ ] Other: ____________________
+
+──────────────────────────────────────────────────────────────
+2. DATA SCOPE
+──────────────────────────────────────────────────────────────
+Data Categories        : ______________________________________
+                         ______________________________________
+                         (Inventory Item No: ____________)
+Data Subject Groups    : [ ] Employee [ ] Candidate [ ] Customer
+                         [ ] Supplier officer
+                         [ ] Visitor
+                         [ ] Other: ____________________
+Data Sensitivity       : [ ] General
+                         [ ] Special category (Art. 6)
+                         [ ] Children's data
+Approx. Record Count   : ____________________________________
+Data Volume            : ____________________________________
+
+──────────────────────────────────────────────────────────────
+3. LEGAL BASIS — Art. 5/Art. 6 PROCESSING CONDITION
+──────────────────────────────────────────────────────────────
+Processing Condition   : KVKK Art. ____/____  ____________________
+                         (Condition: explicit consent/contract
+                          performance/legal obligation/legitimate
+                          interest/...)
+Sustainability of
+condition              : Valid throughout transfer? Yes/No
+Disclosure             : [ ] Done (version: __________)
+                         [ ] To be updated
+                         [ ] N/A (rationale: __________)
+
+──────────────────────────────────────────────────────────────
+4. DOMESTIC TRANSFER (Form A — only if domestic)
+──────────────────────────────────────────────────────────────
+Art. 8 Transfer Cond.  : KVKK Art. ____/____
+Contract Type          : [ ] Data Processor Agreement (DPA)
+                         [ ] Transfer Agreement (C-C)
+                         [ ] Joint Controller Arrangement
+                         [ ] Mandated by law — no contract
+Contract No / Date     : ____________________________________
+DPA Min. Elements      : [ ] Complete (checklist: yurtici-aktarim.md §7)
+Sub-processor present  : [ ] No [ ] Yes (list annex: __________)
+
+──────────────────────────────────────────────────────────────
+5. CROSS-BORDER TRANSFER PATH (only if cross-border)
+──────────────────────────────────────────────────────────────
+[ ] (Tier 1) Adequacy Decision (Art. 9/1)
+    List date/version   : ____________________________________
+    List link/reference : ____________________________________
+    Scope of decision (country/sector/international
+    organization): ___________________________________________
+
+[ ] (Tier 2) Appropriate Safeguard (Art. 9/4)
+    [ ] (a) Agreement + Board authorization
+        Authorization date/no: __________________________________
+    [ ] (b) Binding Corporate Rules
+        Approval date/no : ___________________________________
+    [ ] (c) Standard Contract
+        Type             : Type __ (C-C / C-P / P-P / P-C)
+        Signature date   : ____/____/______
+        Notification date
+        (within 5 b.d.)  : ____/____/______
+    [ ] (ç) Written undertaking + Board authorization
+        Authorization date/no: __________________________________
+
+[ ] (Tier 3) Occasional Case (Art. 9/6)
+    Case applied         : (a)/(b)/(c)/(ç)/(d)/(e)/(f)
+    Rationale for
+    occasional nature    : _________________________________
+                           _________________________________
+    Information given (for a): [ ] Yes [ ] N/A
+
+──────────────────────────────────────────────────────────────
+6. RECIPIENT COUNTRY ASSESSMENT (for cross-border)
+──────────────────────────────────────────────────────────────
+Recipient Country      : ____________________________________
+
+Data Protection Law    : [ ] Comprehensive
+                         [ ] Limited
+                         [ ] None / Minimal
+Independent Authority  : [ ] Yes [ ] No
+Data Subject Rights    : [ ] Effective [ ] Limited [ ] None
+Judicial Protection    : [ ] Yes [ ] Limited [ ] None
+International Treaty   : [ ] EU GDPR-compatible
+                         [ ] Council of Europe Convention 108
+                         [ ] APEC CBPR
+                         [ ] Other: ____________________
+
+PUBLIC AUTHORITY ACCESS RISK
+Intelligence Access    : [ ] Low [ ] Medium [ ] High
+Law Enforcement Access : [ ] Low [ ] Medium [ ] High
+Disproportionate Risk  : [ ] Low [ ] Medium [ ] High
+Description            : _________________________________
+
+──────────────────────────────────────────────────────────────
+7. SUPPLEMENTARY MEASURES
+──────────────────────────────────────────────────────────────
+TECHNICAL
+[ ] End-to-end encryption
+[ ] At-rest encryption (AES-256)
+[ ] Transit encryption (TLS 1.2+)
+[ ] Key management (KMS/HSM, BYOK)
+[ ] Pseudonymization
+[ ] Data minimization (only required fields)
+[ ] IP filtering / VPN
+[ ] DLP
+[ ] Other: ____________________________________________
+
+CONTRACTUAL
+[ ] Standard contract (Tier 2-c)
+[ ] Annex protocol (no deviation from contract)
+[ ] Notification of access requests (where local law permits)
+[ ] Audit right
+[ ] 24-hour breach notification clause
+[ ] Sub-processor approval requirement
+[ ] Other: ____________________________________________
+
+ORGANIZATIONAL
+[ ] Need-to-know access
+[ ] Training (at recipient)
+[ ] Logging + audit
+[ ] Destruction commitment on contract termination
+[ ] Other: ____________________________________________
+
+──────────────────────────────────────────────────────────────
+8. SUB-PROCESSOR CHAIN
+──────────────────────────────────────────────────────────────
+Recipient using
+sub-processors?        : [ ] No [ ] Yes
+Sub-processor list     : Annex (if any)
+Sub-processor approval
+structure              : [ ] None [ ] General approval
+                         [ ] Specific approval (prior notice)
+Sub-processors
+abroad?                : [ ] No [ ] Yes (country list: __)
+
+──────────────────────────────────────────────────────────────
+9. RESIDUAL RISK AND DECISION
+──────────────────────────────────────────────────────────────
+Risk Assessment        :
+  Affected count       : __________________________
+  Data sensitivity     : Low / Medium / High
+  Transfer frequency   : Low / Medium / High
+  Recipient country risk: Low / Medium / High
+  Effectiveness of
+  supplementary measures: Low / Medium / High
+
+Residual Risk Level    : [ ] Low [ ] Medium [ ] High
+
+DECISION               : [ ] Transfer approved
+                         [ ] Transfer not approved
+                         [ ] Additional measures required —
+                             reassess.
+
+──────────────────────────────────────────────────────────────
+10. VERBİS UPDATE
+──────────────────────────────────────────────────────────────
+[ ] VERBİS updated
+    Update date        : ____/____/______
+    Recipient group    : ____________________________________
+
+──────────────────────────────────────────────────────────────
+11. APPROVALS
+──────────────────────────────────────────────────────────────
+Preparer (Business Unit Owner)
+  Name                 : ____________________________________
+  Title / Unit         : ____________________________________
+  Date                 : ____/____/______
+  Signature            : ____________________________________
+
+Information Security Approval
+  Name                 : ____________________________________
+  Date                 : ____/____/______
+  Signature            : ____________________________________
+
+Legal Approval
+  Name                 : Att. ______________________________
+  Date                 : ____/____/______
+  Signature            : ____________________________________
+
+KVKK Officer Approval
+  Name                 : ____________________________________
+  Date                 : ____/____/______
+  Signature            : ____________________________________
+
+KVKK Committee Approval (mandatory for high-risk transfer)
+  Date                 : ____/____/______
+  Decision No          : ____________________________________
+
+──────────────────────────────────────────────────────────────
+12. ANNEXES
+──────────────────────────────────────────────────────────────
+[ ] Contract PDF
+[ ] DPA PDF (domestic C-P)
+[ ] Standard contract + annexes (cross-border)
+[ ] Sub-processor list
+[ ] Disclosure notice (versioned)
+[ ] Explicit consent proof output (if any)
+[ ] Authority notification confirmation (if any)
+[ ] Previous TIA (if renewal)
+═══════════════════════════════════════════════════════════════
+```
+
+---
+
+## 4. Sample 1 — EU SaaS Provider (Marketing Automation)
+
+```
+═══════════════════════════════════════════════════════════════
+PERSONAL DATA TRANSFER ASSESSMENT AND APPROVAL FORM
+═══════════════════════════════════════════════════════════════
+
+Form No                : TIA-2026-0042
+Form Date              : 12/04/2026
+Form Owner (Unit)      : Digital Marketing Department
+Transfer Type          : [X] Cross-border
+
+──────────────────────────────────────────────────────────────
+1. GENERAL TRANSFER DEFINITION
+──────────────────────────────────────────────────────────────
+Purpose of Transfer    : Marketing automation (email, push,
+                         SMS) and segmentation analytics for
+                         e-commerce customers.
+Business Process Owner : Marketing Director
+Data Controller        : [COMPANY NAME A.Ş.]
+Recipient (Title)      : Acme Marketing Cloud Ltd.
+Recipient Address      : Dublin, Ireland
+Recipient Country      : Ireland (EU Member)
+Recipient Status       : [X] Processor (P)
+Transfer Frequency     : [X] Continuous (real-time API)
+Transfer Duration      : Contract term (3 years + renewal)
+Transfer Method        : [X] API + cloud hosting
+                         Provider: Acme cloud, EU region
+
+──────────────────────────────────────────────────────────────
+2. DATA SCOPE
+──────────────────────────────────────────────────────────────
+Data Categories        : Name, email, phone, order history,
+                         behavior data, segment
+                         (Inventory Item No: ECOM-08, MKT-03)
+Data Subject Groups    : [X] Customer
+Data Sensitivity       : [X] General
+Approx. Record Count   : 1.2 million active customers
+Data Volume            : ~50 GB / month growth
+
+──────────────────────────────────────────────────────────────
+3. LEGAL BASIS — Art. 5/Art. 6 PROCESSING CONDITION
+──────────────────────────────────────────────────────────────
+Processing Condition   : KVKK Art. 5/1 — Explicit Consent
+                         (For marketing purpose)
+Sustainability of
+condition              : Consent revocable; if withdrawn,
+                         deletion at provider also ensured
+Disclosure             : [X] Done (Version: 2026-Q1 v3.2)
+
+──────────────────────────────────────────────────────────────
+5. CROSS-BORDER TRANSFER PATH
+──────────────────────────────────────────────────────────────
+[X] (Tier 2) Appropriate Safeguard (Art. 9/4)
+    [X] (c) Standard Contract
+        Type             : Type 2 (C → P)
+        Signature date   : 10/04/2026
+        Notification date: 14/04/2026 (3 business days)
+
+──────────────────────────────────────────────────────────────
+6. RECIPIENT COUNTRY ASSESSMENT
+──────────────────────────────────────────────────────────────
+Recipient Country      : Ireland
+
+Data Protection Law    : [X] Comprehensive (GDPR + Data
+                         Protection Act 2018)
+Independent Authority  : [X] Yes (DPC — Data Protection
+                         Commission)
+Data Subject Rights    : [X] Effective
+Judicial Protection    : [X] Yes (including CJEU)
+International Treaty   : [X] EU GDPR
+                         [X] Convention 108
+
+PUBLIC AUTHORITY ACCESS RISK
+Intelligence Access    : [X] Low
+Law Enforcement Access : [X] Low (strong judicial oversight)
+Disproportionate Risk  : [X] Low
+Description            : Provider has US parent. Data in EU
+                         region; US parent's access restricted
+                         in contract.
+
+──────────────────────────────────────────────────────────────
+7. SUPPLEMENTARY MEASURES
+──────────────────────────────────────────────────────────────
+TECHNICAL
+[X] At-rest encryption (AES-256)
+[X] Transit encryption (TLS 1.3)
+[X] BYOK — key at Company
+[X] Data minimization (only required fields)
+[X] Pseudonymization (user ID hashed)
+
+CONTRACTUAL
+[X] Standard contract (Type 2)
+[X] Annex protocol — US parent access limit
+[X] Notification of access requests
+[X] Audit right (annual)
+[X] 24-hour breach notification clause
+
+ORGANIZATIONAL
+[X] Need-to-know
+[X] Destruction of all data within 30 days of contract end
+
+──────────────────────────────────────────────────────────────
+8. SUB-PROCESSOR CHAIN
+──────────────────────────────────────────────────────────────
+Sub-processor list     : 4 entries (3 EU + 1 US CDN)
+Sub-processor approval : Specific approval (prior notice)
+                         + 14-day objection right
+US CDN Risk Note       : Static content only; no PII
+
+──────────────────────────────────────────────────────────────
+9. RESIDUAL RISK AND DECISION
+──────────────────────────────────────────────────────────────
+Risk Assessment:
+  Affected count       : 1.2 million
+  Data sensitivity     : Medium
+  Transfer frequency   : High (continuous)
+  Recipient country risk: Low
+  Effectiveness        : High
+
+Residual Risk Level    : [X] Low
+
+DECISION               : [X] Transfer approved
+
+──────────────────────────────────────────────────────────────
+10. VERBİS UPDATE
+──────────────────────────────────────────────────────────────
+[X] VERBİS updated 15/04/2026
+    Recipient group    : Foreign marketing service provider
+
+──────────────────────────────────────────────────────────────
+11. APPROVALS
+──────────────────────────────────────────────────────────────
+Preparer               : Elif YAVUZ — Marketing Director
+Information Security   : Mehmet KAYA — Inf. Sec. Manager
+Legal Approval         : Att. Ahmet ÖZ — Legal Director
+KVKK Officer           : Selin YILDIZ — KVKK Officer
+KVKK Committee         : 14/04/2026, Decision No: 2026/12
+═══════════════════════════════════════════════════════════════
+```
+
+---
+
+## 5. Sample 2 — US CRM Provider (High Risk + Supplementary Measures)
+
+```
+═══════════════════════════════════════════════════════════════
+PERSONAL DATA TRANSFER ASSESSMENT AND APPROVAL FORM
+═══════════════════════════════════════════════════════════════
+
+Form No                : TIA-2026-0058
+Form Date              : 22/04/2026
+Form Owner (Unit)      : Sales Operations Department
+Transfer Type          : [X] Cross-border
+
+──────────────────────────────────────────────────────────────
+1. GENERAL TRANSFER DEFINITION
+──────────────────────────────────────────────────────────────
+Purpose of Transfer    : B2B customer relationship management
+                         (CRM) — sales pipeline, opportunity
+                         management, customer officer contact
+                         records
+Business Process Owner : Sales Operations Director
+Recipient (Title)      : Globex Cloud CRM Inc.
+Recipient Address      : San Francisco, CA, USA
+Recipient Country      : USA
+Recipient Status       : [X] Processor (P)
+Transfer Frequency     : [X] Continuous
+Transfer Duration      : 5 years (renewable)
+Transfer Method        : [X] API + cloud hosting
+                         Provider region: us-east-1
+
+──────────────────────────────────────────────────────────────
+2. DATA SCOPE
+──────────────────────────────────────────────────────────────
+Data Categories        : Customer officer name, title, business
+                         email, business phone, sales call notes
+                         (Inventory Item No: SLS-01)
+Data Subject Groups    : [X] Customer (B2B officer — as
+                         natural person)
+Data Sensitivity       : [X] General
+Approx. Record Count   : 38,000 individuals (B2B officers)
+Data Volume            : ~5 GB / year
+
+──────────────────────────────────────────────────────────────
+3. LEGAL BASIS — Art. 5/Art. 6 PROCESSING CONDITION
+──────────────────────────────────────────────────────────────
+Processing Condition   : KVKK Art. 5/2-(f) — Legitimate Interest
+                         (carrying out B2B sales process)
+                         + KVKK Art. 5/2-(c) — Contract performance
+                         (for existing contracted customers)
+Disclosure             : [X] Customer officer disclosure
+                         updated (Version: 2026-Q2)
+
+──────────────────────────────────────────────────────────────
+5. CROSS-BORDER TRANSFER PATH
+──────────────────────────────────────────────────────────────
+[X] (Tier 2) Appropriate Safeguard (Art. 9/4)
+    [X] (c) Standard Contract
+        Type             : Type 2 (C → P)
+        Signature date   : 20/04/2026
+        Notification date: 23/04/2026 (3 business days)
+
+──────────────────────────────────────────────────────────────
+6. RECIPIENT COUNTRY ASSESSMENT
+──────────────────────────────────────────────────────────────
+Recipient Country      : USA
+
+Data Protection Law    : [X] Limited
+                         (sectoral at federal level; CCPA/CPRA
+                         at state level, Virginia VCDPA;
+                         no general federal law)
+Independent Authority  : [X] Limited (FTC sectoral)
+Data Subject Rights    : [X] Limited
+Judicial Protection    : [X] Limited (for foreigners)
+International Treaty   : [ ] EU GDPR — N/A
+                         [ ] Convention 108 — N/A
+                         (EU-US Data Privacy Framework valid for
+                          EU, not in scope of KVKK)
+
+PUBLIC AUTHORITY ACCESS RISK
+Intelligence Access    : [X] High (FISA 702, EO 12333)
+Law Enforcement Access : [X] Medium (CLOUD Act effect)
+Disproportionate Risk  : [X] High
+Description            : US intelligence services have broad
+                         power to access foreign data. Contractual
+                         provisions may be insufficient; supplementary
+                         technical measures critical.
+
+──────────────────────────────────────────────────────────────
+7. SUPPLEMENTARY MEASURES
+──────────────────────────────────────────────────────────────
+TECHNICAL
+[X] At-rest encryption (AES-256)
+[X] Transit encryption (TLS 1.3)
+[X] BYOK — key in Company KMS in Turkey
+    (provider has no access to its own key)
+[X] Field-level encryption — sensitive fields (notes)
+[X] Data minimization — only B2B business data (no
+    private life, social media, photos)
+
+CONTRACTUAL
+[X] Standard contract (Type 2)
+[X] Annex protocol:
+    - Immediate notification to Company on US public
+      authority access request (where local law permits)
+    - Contractual obligation to object to access requests
+    - Audit right (annual 3rd-party audit)
+    - 24-hour breach notification
+[X] Notification of access requests
+
+ORGANIZATIONAL
+[X] Need-to-know
+[X] Access logs + Company SIEM integration
+[X] Destruction within 30 days of contract end
+
+──────────────────────────────────────────────────────────────
+8. SUB-PROCESSOR CHAIN
+──────────────────────────────────────────────────────────────
+Sub-processor list     : 6 entries (5 US + 1 Ireland)
+Sub-processor approval : General approval; 30-day notice +
+                         objection right on each change
+High-Risk Note         : There was an India support team;
+                         contract requires prohibition of
+                         India access for support.
+
+──────────────────────────────────────────────────────────────
+9. RESIDUAL RISK AND DECISION
+──────────────────────────────────────────────────────────────
+Risk Assessment:
+  Affected count       : 38,000
+  Data sensitivity     : Medium-High (B2B notes may
+                         contain sensitive business info)
+  Transfer frequency   : High (continuous)
+  Recipient country risk: High
+  Effectiveness        : High (BYOK + field encryption +
+                         data minimization)
+
+Residual Risk Level    : [X] Medium
+
+DECISION               : [X] Transfer approved
+                         Condition: annual TIA renewal +
+                         3rd-party audit report submitted to
+                         KVKK Committee.
+
+──────────────────────────────────────────────────────────────
+10. VERBİS UPDATE
+──────────────────────────────────────────────────────────────
+[X] VERBİS updated 24/04/2026
+    Recipient group    : Foreign CRM service provider
+
+──────────────────────────────────────────────────────────────
+11. APPROVALS
+──────────────────────────────────────────────────────────────
+Preparer               : Murat ARSLAN — Sales Op. Director
+Information Security   : Mehmet KAYA — Inf. Sec. Manager
+Legal Approval         : Att. Ahmet ÖZ — Legal Director
+KVKK Officer           : Selin YILDIZ — KVKK Officer
+KVKK Committee         : 23/04/2026, Decision No: 2026/15
+                         (high-risk transfer — committee approval required)
+
+──────────────────────────────────────────────────────────────
+12. ANNEXES
+──────────────────────────────────────────────────────────────
+[X] Standard Contract Type 2 + annex protocol PDF
+[X] Sub-processor list v1.4
+[X] Disclosure notice 2026-Q2
+[X] Globex SOC 2 Type II report
+[X] Globex DPA + Subprocessor list
+[X] BYOK architecture diagram
+═══════════════════════════════════════════════════════════════
+```
+
+---
+
+## 6. Form Management Discipline
+
+| Topic | Rule |
+|-------|------|
+| Form No | TIA-[YEAR]-[SEQUENCE] format |
+| Trigger to prepare | New transfer, contract renewal, regulatory change, recipient change |
+| Approval chain | Preparer → Information Security → Legal → KVKK Officer → (high risk) KVKK Committee |
+| Retention | 10 years |
+| Renewal | Annual or triggered |
+| Storage | Electronically signed PDF under KVKK Officer control |
+| Searchable index | Form no, date, recipient, country, status |
+| Versioning | Renewal supersedes previous version, new version takes effect |
+
+## 7. High-Risk Triggers
+
+KVKK Committee approval is mandatory in the following cases (KVKK Officer single signature insufficient):
+
+- Special category personal data transfer,
+- Children's data transfer,
+- Transfer affecting 100,000+ data subjects,
+- Transfer to a high-risk country (disproportionate access by public authorities),
+- Transfer to a new and untested provider,
+- Large-scale marketing transfer based on legitimate interest instead of explicit consent,
+- BCR approval process.
+
+---
+
+## Türkçe
 
 # Aktarım Etki Değerlendirmesi (TIA) ve Onay Formu
 
