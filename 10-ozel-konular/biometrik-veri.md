@@ -3,10 +3,10 @@ Doküman / Document: Biyometrik Veri Yönetimi (PDKS, Erişim, Ödeme, Yüz Tan�
 Bölüm / Section: 10-ozel-konular
 Sahip / Owner: KVKK Sorumlusu + IT + İK + Bilgi Güvenliği / KVKK Officer + IT + HR + Information Security
 Onaylayan / Approved by: Hukuk Müdürü + KVKK Komitesi / Head of Legal + KVKK Committee
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
+Versiyon / Version: 2.0
+Yürürlük / Effective: 2026-11-20
 Gözden Geçirme / Review: Yıllık + Kurul kararları doğrultusunda / Annual + per Authority decisions
-İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 6 (special category); Authority Decision No. 2018/10 dated 31.01.2018 on "Adequate Measures to be Taken by Data Controllers in Processing of Special Category Personal Data"; Constitutional Court E.2014/180; ECtHR victim case law
+İlgili Mevzuat / Legal Reference: Law No. 6698 (KVKK) Art. 6 (special category; Art. 6(3) as amended by Law No. 7499, in force 01.06.2024); Authority Principle Decision No. 2026/921 dated 29.04.2026 on biometric data for working-time tracking (Official Gazette 02.06.2026, No. 33268); Authority Decision No. 2018/10 dated 31.01.2018 on "Adequate Measures to be Taken by Data Controllers in Processing of Special Category Personal Data"; Constitutional Court E.2014/180; ECtHR victim case law
 ---
 
 ## English
@@ -29,10 +29,20 @@ KVKK Art. 6(1): **Biometric data = special-category personal data.**
 
 ### 2.1. KVKK Art. 6 Processing Conditions
 
-Special-category data may be processed:
+Since 01.06.2024 (Law No. 7499, Art. 33), processing of special-category data is prohibited unless one of the conditions in **Art. 6(3)** applies (the former Art. 6(2) was repealed):
 
-1. With **explicit consent** (Art. 6(2)), OR
-2. Where **expressly provided in laws** (Art. 6(3) - except health/sex life; for biometric data, this may create grounds for processing without explicit consent).
+| Art. 6(3) | Condition |
+|-----------|-----------|
+| (a) | Explicit consent of the data subject |
+| (b) | Expressly provided for in laws |
+| (c) | Necessary to protect the life or bodily integrity of a person unable to consent |
+| (ç) | Data made public by the data subject, in line with that intention |
+| (d) | Necessary for the establishment, exercise or protection of a right |
+| (e) | Necessary for public health, preventive medicine, diagnosis, treatment, care, and health-service planning/financing, by persons under a duty of confidentiality or authorised institutions |
+| (f) | Necessary to fulfil legal obligations in employment, occupational health and safety, social security, social services and social assistance |
+| (g) | Foundations, associations and other non-profit bodies with political, philosophical, religious or trade-union aims, for current/former members and regular contacts, within their legislation and purpose and without disclosure to third parties |
+
+Art. 6(4): the adequate measures determined by the Board (Decision 2018/10) must also be taken. Having a condition does not replace the general principles of Art. 4 (proportionality, purpose limitation, data minimisation).
 
 ### 2.2. Authority Decision 2018/10
 
@@ -66,7 +76,13 @@ Data controllers processing special-category data must take **adequate measures*
 | Palm vein | **High** | Same |
 | Facial recognition | **High** | Same |
 
-**Authority position (decisions from 2019, 2020 and later):** **Alternative methods must be considered** for biometric PDKS. If a card/password is sufficient, biometric use is deemed **disproportionate**.
+**Principle Decision 2026/921 (29.04.2026; Official Gazette 02.06.2026, No. 33268):** Processing biometric data **solely for working-time / attendance tracking** does not rest on any Art. 6 condition: no law expressly requires biometric tracking (so Art. 6(3)(b) is not available), the other conditions do not apply, and explicit consent alone is not an adequate basis given the employer–employee power imbalance and the revocability of consent. Even with valid explicit consent, the processing fails the **proportionality** test of Art. 4 because less intrusive methods exist. Attendance must therefore be tracked with alternatives such as password/PIN cards, signature or paper registers, RFID/NFC ID cards or supervised manual entry. Non-compliance is treated as a failure of Art. 12(1) measures and is sanctioned under Art. 18.
+
+**Clarification (Authority announcement, 27.08.2026):** The principle decision covers only biometric processing **for attendance tracking**. Biometric use in facilities with a concrete security need (e.g. access control to critical areas) is outside the decision and must be assessed case by case: limited to the critical areas and persons concerned, alternatives demonstrably insufficient, proportionate to the concrete security need. Templates converted into a mathematical code remain biometric data.
+
+**Earlier precedent:** Board Decision 2024/197 (08.02.2024): a university was instructed to stop fingerprint-based class attendance, switch to non-biometric alternatives and destroy the fingerprint data.
+
+Sources: https://www.kvkk.gov.tr/Icerik/8762/ · https://www.kvkk.gov.tr/Icerik/8912/ · https://www.resmigazete.gov.tr/eskiler/2026/06/20260602-3.pdf
 
 ### 3.2. Physical Access (Doors, Safes, Data Centers)
 
@@ -255,7 +271,7 @@ Deletion record (proof of erasure) is retained.
 
 | Mistake | Correct approach |
 |---------|------------------|
-| PDKS only via biometric | Alternative (card) mandatory |
+| Biometric attendance tracking (PDKS) | Not permitted for attendance purposes (Principle Decision 2026/921); use card/PIN/RFID/manual alternatives |
 | Storing raw photo | Template transformation + delete raw |
 | No way to withdraw consent | Process design + alternative |
 | Missing/insufficient DPA | KVKK Art. 12 compliant |
@@ -283,6 +299,7 @@ Deletion record (proof of erasure) is retained.
 | Version | Date | Change | Approval |
 |---------|------|--------|----------|
 | 1.0 | 2026-05-08 | First publication | KVKK Committee |
+| 2.0 | 2026-11-20 | Art. 6(3) conditions after Law 7499; Principle Decision 2026/921 on biometric attendance tracking and 27.08.2026 clarification | KVKK Committee |
 
 ---
 
@@ -306,10 +323,20 @@ KVKK m.6/1: **Biyometrik veri = özel nitelikli kişisel veri.**
 
 ### 2.1. KVKK m.6 İşleme Şartları
 
-Özel nitelikli verilerin işlenmesi:
+01.06.2024'ten itibaren (7499 sayılı Kanun m.33) özel nitelikli kişisel verilerin işlenmesi yasaktır; ancak **m.6/3**'teki şartlardan birinin varlığı halinde işlenebilir (eski m.6/2 yürürlükten kaldırıldı):
 
-1. **Açık rıza** ile (m.6/2), VEYA
-2. **Kanunlarda öngörülmesi** halinde (m.6/3 ile sağlık/cinsel hayat dışı; biyometrik için bu şart açık rızasız işlemeye ortam yaratabilir).
+| m.6/3 | Şart |
+|-------|------|
+| (a) | İlgili kişinin açık rızası |
+| (b) | Kanunlarda açıkça öngörülmesi |
+| (c) | Rızasını açıklayamayacak durumdaki kişinin hayatı veya beden bütünlüğünün korunması için zorunlu olması |
+| (ç) | İlgili kişinin alenileştirdiği ve alenileştirme iradesine uygun veriler |
+| (d) | Bir hakkın tesisi, kullanılması veya korunması için zorunlu olması |
+| (e) | Sır saklama yükümlülüğü altındaki kişiler veya yetkili kurumlarca kamu sağlığı, koruyucu hekimlik, tıbbi teşhis, tedavi, bakım ve sağlık hizmetlerinin planlanması, yönetimi ve finansmanı amacıyla gerekli olması |
+| (f) | İstihdam, iş sağlığı ve güvenliği, sosyal güvenlik, sosyal hizmetler ve sosyal yardım alanlarındaki hukuki yükümlülüklerin yerine getirilmesi için zorunlu olması |
+| (g) | Siyasi, felsefi, dini veya sendikal amaçlı vakıf, dernek ve diğer kâr amacı gütmeyen kuruluşların, mevzuatlarına ve amaçlarına uygun, faaliyet alanlarıyla sınırlı ve üçüncü kişilere açıklanmamak kaydıyla mevcut/eski üyeleri ve düzenli temas kişilerine yönelik işlemesi |
+
+m.6/4: Kurul'un belirlediği yeterli önlemlerin (2018/10 sayılı Karar) ayrıca alınması şarttır. Bir şartın varlığı, m.4'teki genel ilkelerin (ölçülülük, amaçla sınırlılık, veri minimizasyonu) yerini tutmaz.
 
 ### 2.2. Kurul 2018/10 Kararı
 
@@ -342,7 +369,13 @@ KVKK m.6/1: **Biyometrik veri = özel nitelikli kişisel veri.**
 | Avuç içi venöz | **Yüksek** | Aynı |
 | Yüz tanıma | **Yüksek** | Aynı |
 
-**Kurul tutumu (2019, 2020 ve sonrası kararlar):** Biyometrik PDKS için **alternatif değerlendirilmesi** zorunlu. Eğer kart/şifre yeterliyse biyometrik kullanımı **orantısız** sayılır.
+**2026/921 sayılı İlke Kararı (29.04.2026; RG 02.06.2026, Sayı 33268):** Biyometrik verinin **yalnızca mesai (devam) takibi amacıyla** işlenmesi m.6'daki şartlardan hiçbirine dayanmaz: biyometrik takibi öngören açık bir kanun hükmü yoktur (m.6/3-b uygulanamaz), diğer şartlar uygulama alanı bulmaz; işçi-işveren arasındaki güç dengesizliği ve rızanın geri alınabilirliği nedeniyle açık rıza tek başına yeterli hukuki zemin değildir. Geçerli açık rıza bulunsa dahi, daha az müdahaleci yöntemler mevcut olduğundan işleme m.4'teki **ölçülülük** ilkesini karşılamaz. Mesai takibi şifreli kart veya PIN tabanlı sistemler, imza veya kâğıt devam çizelgeleri, RFID/NFC kimlik kartları ya da denetçi gözetiminde elle giriş gibi alternatiflerle yapılmalıdır. Aykırılık m.12/1 kapsamındaki tedbirlerin alınmaması sayılır ve m.18 uyarınca yaptırıma bağlanır.
+
+**Açıklama (Kurum duyurusu, 27.08.2026):** İlke Kararı yalnızca **mesai takibi amacıyla** yapılan biyometrik işlemeyi kapsar. Somut güvenlik ihtiyacı bulunan tesislerde (örn. kritik alanlara erişim kontrolü) biyometrik kullanım karar kapsamı dışındadır ve somut olay bazında değerlendirilir: yalnızca gerekli kritik alan ve kişilerle sınırlı, alternatiflerin yetersizliği gösterilmiş ve somut güvenlik ihtiyacıyla ölçülü olmalıdır. Matematiksel koda çevrilen şablonlar da biyometrik veri niteliğini korur.
+
+**Önceki emsal:** 2024/197 sayılı Kurul Kararı (08.02.2024): bir üniversitenin parmak izi ile ders yoklamasını durdurması, biyometrik olmayan alternatife geçmesi ve parmak izi verilerini imha etmesi talimatlandırılmıştır.
+
+Kaynaklar: https://www.kvkk.gov.tr/Icerik/8762/ · https://www.kvkk.gov.tr/Icerik/8912/ · https://www.resmigazete.gov.tr/eskiler/2026/06/20260602-3.pdf
 
 ### 3.2. Fiziksel Erişim (Kapı, Kasa, Veri Merkezi)
 
@@ -530,7 +563,7 @@ Açık rızamı vermek istiyorum: ☐ Evet ☐ Hayır
 
 | Hata | Doğru Yaklaşım |
 |------|----------------|
-| PDKS biyometrik tek seçenek | Alternatif (kart) zorunlu |
+| Biyometrik mesai takibi (PDKS) | Mesai takibi amacıyla kullanılamaz (2026/921 sayılı İlke Kararı); kart/PIN/RFID/elle giriş alternatifleri |
 | Ham fotoğraf saklama | Şablon dönüşüm + ham silme |
 | Açık rıza geri alma yok | Süreç tasarımı + alternatif |
 | DPA yok / yetersiz | KVKK m.12 uyumlu sözleşme |
@@ -558,3 +591,4 @@ Açık rızamı vermek istiyorum: ☐ Evet ☐ Hayır
 | Versiyon | Tarih | Değişiklik | Onay |
 |----------|-------|-----------|------|
 | 1.0 | 2026-05-08 | İlk yayım | KVKK Komitesi |
+| 2.0 | 2026-11-20 | 7499 sonrası m.6/3 şartları; mesai takibinde biyometrik veriye ilişkin 2026/921 sayılı İlke Kararı ve 27.08.2026 açıklaması | KVKK Komitesi |
