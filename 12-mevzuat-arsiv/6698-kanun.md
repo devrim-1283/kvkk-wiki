@@ -3,9 +3,9 @@ Doküman / Document: 6698 sayılı Kişisel Verilerin Korunması Kanunu — Madd
 Bölüm / Section: 12-mevzuat-arsiv
 Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
 Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
-Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 7499 sayılı Kanun ile m.9 değişikliği); aksi halde yıllık — Immediate on legislative amendment (most recently 12.03.2024 / Law 7499 amending Arts. 6 and 9); otherwise annual
+Versiyon / Version: 1.1
+Yürürlük / Effective: 2026-11-20
+Gözden Geçirme / Review: Kanun değişikliği anında (en son 7499 sayılı Kanun ile m.6, m.9, m.18 ve geçici m.3; RG 12.03.2024, yürürlük 01.06.2024 — 2026-11-20 itibarıyla mevzuat.gov.tr güncel metninde sonraki bir değişiklik yok); aksi halde yıllık — Immediate on legislative amendment (most recently Law 7499 amending Arts. 6, 9, 18 and adding Provisional Art. 3; Official Gazette 12.03.2024, in force 01.06.2024 — no later amendment in the consolidated text on mevzuat.gov.tr as of 2026-11-20); otherwise annual
 İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK (Kabul: 24.03.2016, Yürürlük: 07.04.2016) — Law No. 6698 (Adopted: 24.03.2016; In force: 07.04.2016)
 ---
 
@@ -21,7 +21,7 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 | Title | Law on the Protection of Personal Data |
 | Adoption Date | 24.03.2016 |
 | In Force | 07.04.2016 (Official Gazette: 29677) |
-| Last Major Amendment | 12.03.2024 / Law 7499 substantively amending Arts. 6 and 9 |
+| Last Major Amendment | Law 7499 (Official Gazette 12.03.2024, No. 32487; in force 01.06.2024): Arts. 6, 9, 18 amended, Provisional Art. 3 added. Consolidated text: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf |
 
 ## Structure
 
@@ -84,8 +84,8 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Field | Content |
 |-------|---------|
-| Summary | Sensitive data: race, ethnic origin, political opinion, philosophical belief, religion, sect, dress, association/foundation/union membership, health, sexual life, criminal conviction, biometric, genetic. Following Law 7499, multiple legal bases aligned with Art. 5/2 were introduced (formerly explicit consent and a limited list of exceptions). Health and sexual life data still subject to processing by persons under a duty of confidentiality / authorised institution |
-| Operational Impact | Adequate measures under Authority Decision 2018/10 mandatory; employee health data, biometric time-attendance, customer ID scans fall in scope |
+| Summary | Sensitive data: race, ethnic origin, political opinion, philosophical belief, religion, sect, dress, association/foundation/union membership, health, sexual life, criminal conviction, biometric, genetic. Since 01.06.2024 (Law 7499): processing is prohibited unless one of the Art. 6/3 conditions applies; (a) explicit consent; (b) expressly provided by law; (c) vital interests of a person unable to consent; (ç) data made public by the data subject; (d) establishment/exercise/protection of a right; (e) health purposes by persons under confidentiality or authorised institutions; (f) legal obligations in employment, OHS, social security, social services and assistance; (g) members/contacts of political, philosophical, religious or trade-union non-profits. The former separate rule for health and sexual-life data (old Art. 6/3) was replaced. Art. 6/4: Board-determined adequate measures (Decision 2018/10) remain mandatory |
+| Operational Impact | Adequate measures under Authority Decision 2018/10 mandatory; employee health data and customer ID scans fall in scope; biometric data for attendance tracking is not permitted (Principle Decision 2026/921); see the Authority's guide on special-category data (26.02.2025) |
 | Wiki | [10-ozel-konular](../10-ozel-konular/), [05-teknik-tedbirler](../05-teknik-tedbirler/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
 
 ### ARTICLE 7 — Erasure, Destruction or Anonymisation
@@ -108,8 +108,8 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Field | Content |
 |-------|---------|
-| Summary | Three-tier system: (1) transfer to countries with adequate protection — designated by the Authority; (2) absent adequacy, transfer based on **standard contracts**, **binding corporate rules (BCR)** or **undertaking** — Authority approval or notification required; (3) **derogations**: explicit consent, performance of contract, public interest, vital interests, etc. (Art. 9/6). Standard contracts must be notified to the Authority within 5 business days of signature |
-| Operational Impact | TIA mandatory for every cross-border transfer; standard contract texts published under Authority Decision 2024/959; documentation critical at each tier |
+| Summary | Three-tier system: (1) transfer under a Board **adequacy decision** (country, sector or international organisation; published in the Official Gazette; none located as of 2026-11-20); (2) absent adequacy, transfer based on **standard contracts**, **binding corporate rules (BCR)** or **undertaking**: Authority approval or notification required; (3) **derogations**: explicit consent, performance of contract, public interest, vital interests, etc. (Art. 9/6). Standard contracts must be notified to the Authority within 5 business days of signature |
+| Operational Impact | TIA mandatory for every cross-border transfer; procedures in the Regulation of 10.07.2024 (Official Gazette No. 32598); standard contract texts published under Authority Decision 2024/959 and used without modification; consent-based transfers under the old Art. 9/1 allowed only until 01.09.2024 (Provisional Art. 3/1) |
 | Wiki | [07-aktarim](../07-aktarim/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
 
 ### ARTICLE 10 — Disclosure Obligation
@@ -180,8 +180,8 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Field | Content |
 |-------|---------|
-| Summary | (a) Disclosure — TRY 5,000-100,000; (b) Data security — TRY 15,000-1,000,000; (c) Authority decision — TRY 25,000-1,000,000; (ç) VERBİS — TRY 20,000-1,000,000. Updated annually by the revaluation rate. (3) For public institutions, disciplinary provisions apply |
-| Operational Impact | Current amounts updated annually; affects financial risk model and cyber insurance |
+| Summary | Base amounts: (a) Disclosure; TRY 5,000-100,000; (b) Data security; TRY 15,000-1,000,000; (c) Authority decision; TRY 25,000-1,000,000; (ç) VERBİS; TRY 20,000-1,000,000; (d) *(Law 7499)* failure to notify a standard contract; TRY 50,000-1,000,000. Revalued annually (Misdemeanours Law Art. 17/7). (2) (a)–(ç) apply to the controller, (d) to the controller or processor; (3) *(Law 7499)* fines are challenged before administrative courts (formerly criminal judgeships of peace); (4) for public institutions, disciplinary provisions apply |
+| Operational Impact | Current amounts updated annually (2026 table on the sanctions page); affects financial risk model and cyber insurance |
 | Wiki | [11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) |
 
 ### ARTICLE 19 — The Personal Data Protection Authority
@@ -290,22 +290,24 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Field | Content |
 |-------|---------|
-| Summary | The Law entered into force on the date of publication (except Arts. 8, 9, 11, 13-15, 17, 18 which entered into force 6 months later). Provisions are executed by the President |
+| Summary | The Law entered into force on the date of publication (except Arts. 8, 9, 11, 13, 14, 15, 16, 17, 18 which entered into force 6 months later). Provisions are executed by the President |
 | Operational Impact | Transitional provisions are historical; current application: full Law in force |
 
 ---
 
 ## Transitional Provisions (Summary)
 
-- **Transitional Art. 1:** Issuance of secondary legislation within 1 year.
-- **Transitional Art. 2:** Appointment of Board members.
-- **Transitional Art. 3:** 2-year transitional period for compliance of pre-existing data.
+- **Transitional Art. 1:** Board set up within 6 months; registration in the Registry within the period announced by the Board; data processed before publication brought into compliance within 2 years (prior lawful consents deemed valid unless withdrawn within 1 year); regulations within 1 year; other set-up rules.
+- **Transitional Art. 2** *(added by Law 7061, 2017)*: one-off appointment of KVKK experts.
+- **Transitional Art. 3** *(added by Law 7499, in force 01.06.2024)*: (1) the former Art. 9/1 continued to apply alongside the new Art. 9 until 01.09.2024; (2) objections pending before criminal judgeships of peace on 01.06.2024 continue there.
+
+*(Correction: the previous version described Transitional Art. 3 as the 2-year compliance period, which is Transitional Art. 1/3.)*
 
 ## Significant Amendments
 
 | Date | Amendment | Impact |
 |------|-----------|--------|
-| 12.03.2024 / Law 7499 | Substantive amendment of Arts. 6 and 9 | Multiple legal bases aligned with Art. 5/2 for sensitive data; three-tier system (adequacy decision — standard contract/BCR/undertaking — derogations) for cross-border transfer |
+| 12.03.2024 / Law 7499 (in force 01.06.2024) | Arts. 6, 9, 18 amended; Provisional Art. 3 added | Closed list of conditions for sensitive data (Art. 6/3); three-tier system (adequacy decision; standard contract/BCR/undertaking; occasional derogations) for cross-border transfer; new fine Art. 18/1-d for not notifying standard contracts; fines challenged before administrative courts (Art. 18/3) |
 
 ## Cross-Reference Table
 
@@ -347,7 +349,7 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 | Adı | Kişisel Verilerin Korunması Kanunu |
 | Kabul Tarihi | 24.03.2016 |
 | Yürürlük | 07.04.2016 (Resmi Gazete: 29677) |
-| Son Önemli Değişiklik | 12.03.2024 / 7499 sayılı Kanun ile m.6 ve m.9 köklü değişiklik |
+| Son Önemli Değişiklik | 7499 sayılı Kanun (RG 12.03.2024, Sayı 32487; yürürlük 01.06.2024): m.6, m.9, m.18 değişti, geçici m.3 eklendi. Güncel metin: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf |
 
 ## Yapı
 
@@ -410,8 +412,8 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Alan | İçerik |
 |------|--------|
-| Özet | Özel nitelikli veriler: ırk, etnik köken, siyasi düşünce, felsefi inanç, din, mezhep, kılık-kıyafet, dernek-vakıf-sendika üyeliği, sağlık, cinsel hayat, ceza mahkumiyeti, biyometrik, genetik veri. 7499 sayılı Kanun değişikliği ile m.5/2 ile uyumlu çoklu hukuki sebep listesi getirildi (önceden açık rıza ve sınırlı sayıda istisna). Sağlık ve cinsel hayat verileri için sır saklama yükümlülüğü altındaki kişi/yetkili kurum şartları korundu |
-| Operasyonel Etki | Özel nitelikli veri işlemede Kurul kararı 2018/10 kapsamındaki yeterli önlemler zorunlu; çalışan sağlık verisi, biyometrik PDKS, müşteri ID belgesi taraması bu kapsama girer |
+| Özet | Özel nitelikli veriler: ırk, etnik köken, siyasi düşünce, felsefi inanç, din, mezhep, kılık-kıyafet, dernek-vakıf-sendika üyeliği, sağlık, cinsel hayat, ceza mahkumiyeti, biyometrik, genetik veri. 01.06.2024'ten itibaren (7499 sayılı Kanun): işleme yasaktır, ancak m.6/3'teki şartlardan biri varsa mümkündür; (a) açık rıza; (b) kanunlarda açıkça öngörülme; (c) rızasını açıklayamayacak kişinin hayatı/beden bütünlüğü; (ç) ilgili kişinin alenileştirmesi; (d) hakkın tesisi/kullanılması/korunması; (e) sır saklama yükümlülüğü altındaki kişiler veya yetkili kurumlarca sağlık amaçları; (f) istihdam, İSG, sosyal güvenlik, sosyal hizmet ve yardım alanındaki hukuki yükümlülükler; (g) siyasi, felsefi, dini veya sendikal amaçlı kâr amacı gütmeyen kuruluşların üye/temas kişileri. Sağlık ve cinsel hayata ilişkin eski ayrı kural (eski m.6/3) yerini bu listeye bıraktı. m.6/4: Kurul'un belirlediği yeterli önlemler (2018/10 sayılı Karar) zorunlu |
+| Operasyonel Etki | Özel nitelikli veri işlemede Kurul kararı 2018/10 kapsamındaki yeterli önlemler zorunlu; çalışan sağlık verisi ve müşteri kimlik belgesi taraması bu kapsama girer; mesai takibi amacıyla biyometrik veri işlenemez (2026/921 sayılı İlke Kararı); bkz. Kurum'un Özel Nitelikli Kişisel Verilerin İşlenmesine İlişkin Rehberi (26.02.2025) |
 | Wiki | [10-ozel-konular](../10-ozel-konular/), [05-teknik-tedbirler](../05-teknik-tedbirler/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
 
 ### MADDE 7 — Kişisel Verilerin Silinmesi, Yok Edilmesi veya Anonim Hale Getirilmesi
@@ -434,8 +436,8 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Alan | İçerik |
 |------|--------|
-| Özet | Üç katmanlı sistem: (1) Yeterli korumanın bulunduğu ülkelere aktarım — Kurul tarafından belirlenir; (2) Yeterli koruma yoksa veri sorumluları tarafından **standart sözleşmeler**, taraflar arası **bağlayıcı şirket kurallarına (BCR)** veya **taahhütname**ye dayanılarak aktarım — Kurul izni veya bildirimi gerekir; (3) **İstisnai durumlar**: açık rıza, sözleşmenin ifası, kamu yararı, hayati zorunluluk vb. (m.9/6). Standart sözleşme imzalandığında Kurul'a 5 iş günü içinde bildirim |
-| Operasyonel Etki | Tüm yurt dışı aktarımlar için TIA (Transfer Impact Assessment) zorunlu; Kurul kararı 2024/959 ile standart sözleşme metinleri yayımlandı; her kademede dokümantasyon kritik |
+| Özet | Üç katmanlı sistem: (1) Kurul **yeterlilik kararı** ile aktarım (ülke, sektör veya uluslararası kuruluş; Resmî Gazete'de yayımlanır; 2026-11-20 itibarıyla bulunamadı); (2) Yeterli koruma yoksa veri sorumluları tarafından **standart sözleşmeler**, taraflar arası **bağlayıcı şirket kurallarına (BCR)** veya **taahhütname**ye dayanılarak aktarım; Kurul izni veya bildirimi gerekir; (3) **İstisnai durumlar**: açık rıza, sözleşmenin ifası, kamu yararı, hayati zorunluluk vb. (m.9/6). Standart sözleşme imzalandığında Kurul'a 5 iş günü içinde bildirim |
+| Operasyonel Etki | Tüm yurt dışı aktarımlar için TIA (Transfer Impact Assessment) zorunlu; usul ve esaslar 10.07.2024 tarihli Yönetmelik'te (RG Sayı 32598); Kurul kararı 2024/959 ile yayımlanan standart sözleşme metinleri değiştirilmeden kullanılır; eski m.9/1 uyarınca açık rızaya dayalı aktarım yalnızca 01.09.2024'e kadar mümkündü (geçici m.3/1) |
 | Wiki | [07-aktarim](../07-aktarim/), [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](kurul-kararlari-ozeti.md) |
 
 ### MADDE 10 — Veri Sorumlusunun Aydınlatma Yükümlülüğü
@@ -506,7 +508,7 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Alan | İçerik |
 |------|--------|
-| Özet | (a) Aydınlatma — 5.000-100.000 TL; (b) Veri güvenliği — 15.000-1.000.000 TL; (c) Kurul kararı — 25.000-1.000.000 TL; (ç) VERBİS — 20.000-1.000.000 TL. Yıllık yeniden değerleme oranı ile güncellenir. (3) Kamu kurumlarında disiplin hükümleri uygulanır |
+| Özet | Taban tutarlar: (a) Aydınlatma; 5.000-100.000 TL; (b) Veri güvenliği; 15.000-1.000.000 TL; (c) Kurul kararı; 25.000-1.000.000 TL; (ç) VERBİS; 20.000-1.000.000 TL; (d) *(7499)* standart sözleşmeyi bildirmeme; 50.000-1.000.000 TL. Her yıl yeniden değerlenir (Kabahatler Kanunu m.17/7). (2) (a)–(ç) veri sorumlusuna, (d) veri sorumlusu veya veri işleyene uygulanır; (3) *(7499)* cezalara karşı idare mahkemesinde dava açılır (önceden sulh ceza hâkimliği); (4) kamu kurumlarında disiplin hükümleri uygulanır |
 | Operasyonel Etki | Cari miktarlar yıllık güncellenir; finansal risk modeli ve siber sigorta poliçesi etkilenir |
 | Wiki | [11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) |
 
@@ -616,22 +618,24 @@ Gözden Geçirme / Review: Kanun değişikliği anında (en son 12.03.2024 / 749
 
 | Alan | İçerik |
 |------|--------|
-| Özet | Kanun yayımı tarihinde yürürlüğe girer (m.8, 9, 11, 13-15, 17, 18 hariç; bu maddeler 6 ay sonra yürürlüğe girmiştir). Hükümleri Cumhurbaşkanı yürütür |
+| Özet | Kanun yayımı tarihinde yürürlüğe girer (m.8, 9, 11, 13, 14, 15, 16, 17 ve 18 hariç; bu maddeler 6 ay sonra yürürlüğe girmiştir). Hükümleri Cumhurbaşkanı yürütür |
 | Operasyonel Etki | Geçiş hükümleri tarihsel; cari uygulamada tüm Kanun yürürlüktedir |
 
 ---
 
 ## Geçici Maddeler (Özet)
 
-- **Geçici m.1:** İkincil mevzuatın 1 yıl içinde çıkarılması.
-- **Geçici m.2:** Kurul üyelerinin atanması.
-- **Geçici m.3:** Yürürlük öncesinde işlenen verilerin Kanun'a uyumlu hale getirilmesi için 2 yıllık geçiş.
+- **Geçici m.1:** Kurul'un 6 ay içinde oluşturulması; Sicile Kurul'un ilan ettiği süre içinde kayıt; yayım öncesinde işlenen verilerin 2 yıl içinde Kanun'a uyumlu hale getirilmesi (önceden hukuka uygun alınmış rızalar, 1 yıl içinde aksi beyan edilmezse geçerli); yönetmeliklerin 1 yıl içinde çıkarılması; diğer kuruluş hükümleri.
+- **Geçici m.2** *(7061 sayılı Kanun ile eklendi, 2017)*: KVKK uzmanlarının bir defaya mahsus ataması.
+- **Geçici m.3** *(7499 sayılı Kanun ile eklendi, yürürlük 01.06.2024)*: (1) eski m.9/1, yeni m.9 ile birlikte 01.09.2024'e kadar uygulanmıştır; (2) 01.06.2024 itibarıyla sulh ceza hâkimliklerinde görülmekte olan başvurular orada görülmeye devam eder.
+
+*(Düzeltme: önceki sürümde geçici m.3, aslında geçici m.1/3'te yer alan 2 yıllık uyum süresi olarak tanımlanmıştı.)*
 
 ## Önemli Değişiklikler Tarihçesi
 
 | Tarih | Değişiklik | Etki |
 |-------|------------|------|
-| 12.03.2024 / 7499 sayılı K. | m.6 ve m.9 köklü değişiklik | Özel nitelikli verilerde m.5/2 ile uyumlu çoklu hukuki sebep; yurt dışı aktarımda üç katmanlı sistem (yeterli koruma — standart sözleşme/BCR/taahhütname — istisnalar) |
+| 12.03.2024 / 7499 sayılı K. (yürürlük 01.06.2024) | m.6, m.9, m.18 değişti; geçici m.3 eklendi | Özel nitelikli verilerde sınırlı sayıda şart (m.6/3); yurt dışı aktarımda üç katmanlı sistem (yeterlilik kararı; standart sözleşme/BCR/taahhütname; arızi istisnalar); standart sözleşmeyi bildirmemeye m.18/1-d cezası; cezalara karşı idari yargı yolu (m.18/3) |
 
 ## Çapraz Referans Tablosu
 
