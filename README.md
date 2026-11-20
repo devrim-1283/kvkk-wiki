@@ -99,6 +99,15 @@ Her doküman **bilingual**'dır: önce `## English`, sonra `## Türkçe` bölüm
 4. SaaS/bulut alımı: `06-idari-tedbirler/tedarikci-yonetimi.md` + `07-aktarim` + `10-ozel-konular/bulut-hizmetleri.md` (KVKK), `gdpr/06-organizational-measures/vendor-management.md` + `gdpr/07-international-transfers/scc-guide.md` + `gdpr/10-special-topics/cloud-services.md` (GDPR).
 5. İhlal anında: `08-ihlal-yonetimi/ihlal-mudahale-prosedur.md` ve/veya `gdpr/08-breach-management/incident-response.md`.
 
+### Claude Code ile danışma (isteğe bağlı)
+
+Repo, wiki'yi bilgi kaynağı olarak kullanan iki tanım içerir. İkisi de kendiliğinden çalışmaz, kurmazsan hiçbir yerde etkin değildir.
+
+- `skills/kvkk-danisman/` : "bu KVKK'ya uygun mu" sorusunu wiki ve birincil kaynakla değerlendirip Uygun / Şartlı uygun / Riskli / Aykırı hükmü verir.
+- `agents/kvkk-uyum-denetcisi.md` : kod değişikliğini ya da tasarımı salt okunur inceleyip bulguları madde ve wiki sayfasıyla raporlar.
+
+Kurmak için ikisini ilgili projenin `.claude/skills/` ve `.claude/agents/` klasörüne kopyala ya da bağla, `KVKK_WIKI_DIR` ortam değişkenini bu reponun yoluna ayarla. Yanıtlar hukuki görüş değildir.
+
 ### Ön koşul
 
 - Repo bir **şablondur**, hukuki mütalaa yerine geçmez.
@@ -173,6 +182,15 @@ See the Turkish section above — same tree.
 3. New process: start with the inventory (`02-…` or `gdpr/02-ropa`), then notice & consent (`03-…` or `gdpr/03-transparency-consent`).
 4. SaaS/cloud purchase: combine vendor management + transfer + cloud services in the relevant jurisdiction.
 5. Incident: go straight to `08-ihlal-yonetimi/ihlal-mudahale-prosedur.md` and/or `gdpr/08-breach-management/incident-response.md`.
+
+### Consulting with Claude Code (optional)
+
+The repo ships two definitions that use the wiki as their knowledge source. Neither runs on its own; nothing is active unless you install it.
+
+- `skills/kvkk-danisman/` : assesses "is this KVKK-compliant?" against the wiki and primary sources and returns Compliant / Conditionally compliant / Risky / Non-compliant.
+- `agents/kvkk-uyum-denetcisi.md` : a read-only reviewer for code changes or designs that reports findings with article numbers and wiki pages.
+
+To install, copy or symlink them into a project's `.claude/skills/` and `.claude/agents/` folders and set `KVKK_WIKI_DIR` to this repo's path. Answers are not legal advice.
 
 ### Disclaimer
 
