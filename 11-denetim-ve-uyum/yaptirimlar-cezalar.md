@@ -3,10 +3,10 @@ Doküman / Document: KVKK Yaptırımlar, İdari Para Cezaları ve Hukuki Sorumlu
 Bölüm / Section: 11-denetim-ve-uyum
 Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
 Onaylayan / Approved by: Genel Müdür + Yönetim Kurulu — General Manager + Board of Directors
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
+Versiyon / Version: 2.0
+Yürürlük / Effective: 2026-11-20
 Gözden Geçirme / Review: Yıllık (yeniden değerleme oranı sonrası ceza miktarı güncellenir) + tetiklenmiş — Annual (fine amounts updated after revaluation rate) + triggered
-İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.17, m.18; 5237 sayılı TCK m.135-140; 5326 sayılı Kabahatler Kanunu; 6098 sayılı TBK m.49 vd.; 213 sayılı VUK Mük. m.298 — Law No. 6698 Arts. 17, 18; Turkish Criminal Code (Law 5237) Arts. 135-140; Misdemeanours Law (5326); Code of Obligations (6098) Arts. 49 et seq.; Tax Procedure Law (213) Mük. Art. 298 (revaluation rate)
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.17, m.18 (7499 sayılı Kanun ile değişik, yürürlük 01.06.2024); 7545 sayılı Siber Güvenlik Kanunu m.16 (KVKK temas noktaları); 5237 sayılı TCK m.135-140; 5326 sayılı Kabahatler Kanunu; 6098 sayılı TBK m.49 vd.; 213 sayılı VUK Mük. m.298 — Law No. 6698 Arts. 17, 18; Turkish Criminal Code (Law 5237) Arts. 135-140; Misdemeanours Law (5326); Code of Obligations (6098) Arts. 49 et seq.; Tax Procedure Law (213) Mük. Art. 298 (revaluation rate)
 ---
 
 ## English
@@ -22,7 +22,7 @@ To classify the sanctions to which the controller, employees and managers may be
 | Type | Basis | Addressee |
 |------|-------|-----------|
 | Administrative fine | KVKK Art. 18 | Controller (legal entity); for public sector employees, disciplinary action |
-| Disciplinary action | KVKK Art. 18/3 | Public-sector employee |
+| Disciplinary action | KVKK Art. 18/4 (Art. 18/3 before 01.06.2024) | Public-sector employee |
 | Criminal offence (imprisonment) | TCC Arts. 135-140 (referenced from KVKK Art. 17) | Natural person (offender) |
 | Civil compensation (pecuniary / non-pecuniary) | Code of Obligations Arts. 49 et seq.; KVKK Art. 14/2 | Controller (legal entity) |
 | Administrative measure — suspension | KVKK Art. 15/7 | Controller |
@@ -31,31 +31,46 @@ To classify the sanctions to which the controller, employees and managers may be
 
 ### 3.1 Legal Framework
 
-> **Art. 18/1 of the Law:**
+> **Art. 18/1 of the Law (as amended by Law No. 7499, Art. 35, in force 01.06.2024):**
 > - **(a)** For failure to comply with the disclosure obligation in Art. 10: **TRY 5,000 to TRY 100,000**,
 > - **(b)** For failure to comply with the data security obligations in Art. 12: **TRY 15,000 to TRY 1,000,000**,
 > - **(c)** For failure to perform Authority decisions under Art. 15: **TRY 25,000 to TRY 1,000,000**,
-> - **(ç)** For failure to comply with the Data Controllers Registry registration and notification obligation in Art. 16: **TRY 20,000 to TRY 1,000,000**.
-> (Amounts above are the original Law figures; they are revalued annually using the revaluation rate.)
+> - **(ç)** For failure to comply with the Data Controllers Registry registration and notification obligation in Art. 16: **TRY 20,000 to TRY 1,000,000**,
+> - **(d)** *(added by Law 7499)* For failure to notify a cross-border transfer standard contract to the Authority within five business days under Art. 9/5: **TRY 50,000 to TRY 1,000,000**.
+> (Amounts above are the statutory base figures; they are revalued every year under Misdemeanours Law No. 5326 Art. 17/7 using the revaluation rate of Tax Procedure Law No. 213 Mük. Art. 298.)
+>
+> **Art. 18/2 (as amended by Law 7499):** The fines in (a), (b), (c) and (ç) apply to the data controller; the fine in (d) applies to the data controller **or the data processor**, being natural persons or private-law legal persons.
+>
+> **Art. 18/3 (added by Law 7499):** Administrative fines imposed by the Board may be challenged before the **administrative courts**.
+>
+> **Art. 18/4 (former Art. 18/3):** Where the acts are committed within public institutions or public professional bodies, disciplinary proceedings apply on the Board's notification.
 
-### 3.2 2026 Current Amounts
+Source: consolidated text of Law 6698 on mevzuat.gov.tr (https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf); Law 7499, Official Gazette 12.03.2024 No. 32487 (https://www.resmigazete.gov.tr/eskiler/2024/03/20240312-1.htm).
 
-> **NOTE:** These amounts are updated each year using the **revaluation rate** announced by the Ministry of Treasury and Finance under Mük. Art. 298 of Tax Procedure Law No. 213. The KVKK Authority publishes the current figures by official communiqué each December. The figures below are **illustrative**; always verify against the latest Official Gazette communiqué.
+### 3.2 Revalued Amounts 2024–2026
 
-| Article | Breach | Current Min | Current Max |
-|---------|--------|-------------|-------------|
-| Art. 18/1-a | Disclosure obligation breach | (current-year communiqué) | (current-year communiqué) |
-| Art. 18/1-b | Data security obligation breach | (current-year communiqué) | (current-year communiqué) |
-| Art. 18/1-c | Failure to perform Authority decision | (current-year communiqué) | (current-year communiqué) |
-| Art. 18/1-ç | VERBİS obligation breach | (current-year communiqué) | (current-year communiqué) |
+> **NOTE:** Under Misdemeanours Law No. 5326 Art. 17/7, fines are increased at the start of every calendar year by the revaluation rate determined under Tax Procedure Law No. 213 Mük. Art. 298 (fractions of a lira are disregarded). The revaluation rate is announced by the Revenue Administration (Gelir İdaresi Başkanlığı); the KVKK Authority then publishes a consolidated table on kvkk.gov.tr (it is not a separate Official Gazette communiqué of the Authority). The figures below are taken from the Authority's table published on 31.12.2025: https://www.kvkk.gov.tr/Icerik/8145/ (PDF: https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/MTY5NTUyNTRkNDkxNGY.pdf).
 
-> **Operational Note:** Legal Counsel updates the current figures into this document at the start of each January. Source: Official Gazette + kvkk.gov.tr.
+| Article | Breach | 2024 (rate 58.46%) | 2025 (rate 43.93%) | 2026 (rate 25.49%) |
+|---------|--------|--------------------|--------------------|--------------------|
+| Art. 18/1-a | Disclosure obligation breach | TRY 47,303 – 946,308 | TRY 68,083 – 1,362,021 | TRY 85,437 – 1,709,200 |
+| Art. 18/1-b | Data security obligation breach | TRY 141,934 – 9,463,213 | TRY 204,285 – 13,620,402 | TRY 256,357 – 17,092,242 |
+| Art. 18/1-c | Failure to perform Authority decision | TRY 236,557 – 9,463,213 | TRY 340,476 – 13,620,402 | TRY 427,263 – 17,092,242 |
+| Art. 18/1-ç | VERBİS registration/notification breach | TRY 189,245 – 9,463,213 | TRY 272,380 – 13,620,402 | TRY 341,809 – 17,092,242 |
+| Art. 18/1-d | Standard contract not notified within 5 business days | TRY 50,000 – 1,000,000 (new, not revalued) | TRY 71,965 – 1,439,300 | TRY 90,308 – 1,806,177 |
+
+> **Operational Note:** Legal Counsel updates this table each January from the Authority's published table. The rate applied in a given year is the one announced in the preceding autumn; for 2027 the table must be re-checked in January 2027.
+
+### 3.2a Service of Fines (since June 2025)
+
+The Authority announced on 10.06.2025 that, following a protocol with the Ministry of Treasury and Finance, administrative fines are served through the Revenue Administration's **e-Tebligat** (electronic notification) infrastructure under Misdemeanours Law Art. 26/4; service is deemed made at the end of the fifth day after delivery to the electronic address. Controllers without a tax e-Tebligat record continue to be served under Notification Law No. 7201. Source: https://www.kvkk.gov.tr/Icerik/8330/; **Action:** monitor the company's e-Tebligat inbox; the litigation deadline runs from deemed service.
 
 ### 3.3 Addressee of the Fine
 
-Per KVKK Art. 18/2:
-- **Legal-entity controller**: the entity itself is the addressee. The fine is paid from corporate funds.
-- **Public institutions**: disciplinary provisions apply; no administrative fine (Art. 18/3).
+Per KVKK Art. 18/2 (as amended by Law 7499):
+- **Legal-entity controller**: the entity itself is the addressee for (a)–(ç). The fine is paid from corporate funds.
+- **Data processor**: may itself be fined under (d) where it is the party that failed to notify a standard contract (the parties may designate the notifying party in the contract; if not, the data exporter notifies; Transfer Regulation Art. 14/5).
+- **Public institutions**: disciplinary provisions apply; no administrative fine (Art. 18/4).
 - **Natural-person controller**: the fine is imposed on the individual.
 
 ### 3.4 Calculation and Proportionality
@@ -87,9 +102,9 @@ A person who unlawfully records personal data is sentenced to **imprisonment fro
 
 ### 4.2 Unlawful Disclosure / Acquisition (TCC Art. 136)
 
-A person who unlawfully gives, disseminates or acquires personal data is sentenced to **imprisonment from 2 to 4 years**.
+A person who unlawfully gives, disseminates or acquires personal data is sentenced to **imprisonment from 2 to 4 years**. Under Art. 136/2 (added 2019), the penalty is **doubled** where the data are statements and images recorded under Code of Criminal Procedure Art. 236/5-6.
 
-**Aggravation (TCC Art. 137):**
+**Aggravation (TCC Art. 137; applies to Arts. 135 and 136):**
 - If committed by a public official abusing the authority of office → **increased by half**.
 - If committed by exploiting the facilities of a profession or trade → **increased by half**.
 
@@ -98,12 +113,13 @@ A person who unlawfully gives, disseminates or acquires personal data is sentenc
 Failure by those obliged to erase data within the legal periods carries **imprisonment from 1 to 2 years**.
 
 **Aggravation (TCC Art. 138/2 — 2014 amendment):**
-- If the data concerns investigations or prosecutions → sentence **doubled**.
+- If the data must be removed or destroyed under the Code of Criminal Procedure → sentence **doubled**.
 
 ### 4.4 Complaint and Ex Officio Prosecution
 
-- Under TCC Art. 139, prosecution of the offence of recording personal data (Art. 135) is **subject to complaint**.
-- **Unlawful disclosure (Art. 136)** and **failure to erase (Art. 138)** are prosecuted **ex officio**.
+- TCC Art. 139 makes the offences in this chapter complaint-based **except** recording personal data (Art. 135), unlawfully giving or acquiring data (Art. 136) and failure to destroy data (Art. 138). **Arts. 135, 136 and 138 are therefore prosecuted ex officio** (no complaint needed, withdrawal of a complaint does not end the case). *(Correction: the previous version wrongly stated that Art. 135 is complaint-based.)*
+- The Constitutional Court rejected a challenge to the ex officio nature of the Art. 136 offence (E.2026/34, K.2026/81, 16.04.2026; Official Gazette 14.07.2026, No. 33310): https://www.resmigazete.gov.tr/eskiler/2026/07/20260714-9.pdf
+- Source for the TCC text: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5237.pdf
 
 ### 4.5 Security Measures Against Legal Persons (TCC Art. 140)
 
@@ -153,8 +169,8 @@ Against the Authority's administrative fine and other administrative actions:
 
 | Step | Time / Forum |
 |------|--------------|
-| Service of administrative action | T0 |
-| Annulment action in administrative court | T0 + 30 days (Misdemeanours Law Art. 27 and Administrative Procedure Code) |
+| Service of administrative action (e-Tebligat: end of 5th day after delivery) | T0 |
+| Annulment action in administrative court | KVKK Art. 18/3 (since 01.06.2024). Law 6698 sets no special period, so the general period of Administrative Procedure Law No. 2577 Art. 7 (60 days) is assumed; **confirm with counsel for each case**. The former route (objection to the criminal judgeship of peace within 15 days, Misdemeanours Law Art. 27) no longer applies; files pending before criminal judgeships of peace on 01.06.2024 continue there (KVKK Provisional Art. 3/2). |
 | Forum | Administrative Court (Ankara — seat of the Authority) |
 | Conduct of the case | Written proceedings; oral hearing may be requested |
 | Appeal | Regional Administrative Court |
@@ -171,7 +187,7 @@ Against the Authority's administrative fine and other administrative actions:
 | Recurring topic with case-law value | Annulment with executive approval |
 | Suspension order + high business impact | Annulment action with stay of execution — urgent |
 
-## 7. Public Sector Disciplinary Provisions (Art. 18/3)
+## 7. Public Sector Disciplinary Provisions (Art. 18/4)
 
 Where a public institution breaches KVKK:
 - No administrative fine applies.
@@ -215,6 +231,21 @@ Pattern observed in Authority decisions:
 | Strategic | Breach of "compliant operator" condition in public sector contracts |
 | Governance | Pressure on independent member count and effectiveness of audit committee |
 
+## 9a. Cyber Security Law No. 7545: KVKK Touchpoints
+
+Law No. 7545 (Official Gazette 19.03.2025, No. 32846) is covered in its own wiki page; the points that interact with KVKK sanctions are:
+
+| 7545 provision | Interaction with KVKK |
+|----------------|-----------------------|
+| Art. 7/1-b: those in scope must report detected vulnerabilities and cyber incidents to the Cyber Security Presidency "without delay" | Separate from, and in addition to, the 72-hour breach notification to the KVKK Board (KVKK Art. 12/5; Decision 2019/10). One incident may trigger both. |
+| Art. 6/2: personal data processed under 7545 must follow principles equivalent to KVKK Art. 4 and be erased/anonymised when no longer needed | Same principles; Authority retention/erasure rules still apply to the controller's own processing. |
+| Art. 16/4: making available, sharing or selling personal data previously leaked in cyberspace without permission; 3 to 5 years' imprisonment | Adds a criminal offence alongside TCC Art. 136. |
+| Art. 16/5: creating or spreading false content claiming a data leak to cause public fear or target persons/institutions; 2 to 5 years' imprisonment | Relevant for breach communications and public statements. |
+| Art. 16/9: causing a data breach by acting contrary to duties in protecting critical infrastructure; 1 to 3 years' imprisonment | Individual criminal exposure for critical-infrastructure staff. |
+| Art. 16/10: administrative fines TRY 1–10 million (Art. 7/1-a,b,c) and TRY 10–100 million (Art. 18) | Cumulative with KVKK Art. 18 fines where both regimes apply. |
+
+Source: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.7545.pdf (consolidated; Law 7545 was amended by Law 7590, Official Gazette 31.07.2026 No. 33326; see the 7545 page).
+
 ## 10. Zero Tolerance Areas
 
 The Company has adopted "zero tolerance" for:
@@ -248,7 +279,7 @@ KVKK kapsamında veri sorumlusu, çalışan ve yöneticilerin maruz kalabileceğ
 | Tür | Dayanak | Muhatap |
 |-----|---------|---------|
 | İdari para cezası | KVKK m.18 | Veri sorumlusu (tüzel kişi); kamu kurumu çalışanı için disiplin |
-| Disiplin işlemi | KVKK m.18/3 | Kamu kurum/kuruluşu çalışanı |
+| Disiplin işlemi | KVKK m.18/4 (01.06.2024 öncesi m.18/3) | Kamu kurum/kuruluşu çalışanı |
 | Suç (hapis cezası) | TCK m.135-140 (ve KVKK m.17 atfı) | Gerçek kişi (fail) |
 | Tazminat (maddi/manevi) | TBK m.49 vd.; KVKK m.14/2 | Veri sorumlusu (tüzel kişi) |
 | İdari yaptırım — durdurma | KVKK m.15/7 | Veri sorumlusu |
@@ -262,26 +293,41 @@ KVKK kapsamında veri sorumlusu, çalışan ve yöneticilerin maruz kalabileceğ
 > - **(b)** 12 nci maddesinde öngörülen veri güvenliğine ilişkin yükümlülükleri yerine getirmeyenler hakkında **15.000 TL'den 1.000.000 TL'ye kadar**,
 > - **(c)** 15 inci maddesi uyarınca Kurul tarafından verilen kararları yerine getirmeyenler hakkında **25.000 TL'den 1.000.000 TL'ye kadar**,
 > - **(ç)** 16 ncı maddesinde öngörülen Veri Sorumluları Siciline kayıt ve bildirim yükümlülüğüne aykırı hareket edenler hakkında **20.000 TL'den 1.000.000 TL'ye kadar**,
-> idari para cezası verilir. (Miktarlar Kanun'un orijinal metnindeki rakamlardır; her yıl yeniden değerleme oranı ile güncellenir.)
+> - **(d)** *(7499 sayılı Kanun ile eklendi)* 9 uncu maddenin beşinci fıkrasında öngörülen bildirim yükümlülüğünü yerine getirmeyenler hakkında **50.000 TL'den 1.000.000 TL'ye kadar**,
+> idari para cezası verilir. (Miktarlar Kanun'daki taban rakamlardır; 5326 sayılı Kabahatler Kanunu m.17/7 uyarınca her yıl 213 sayılı VUK mükerrer m.298'e göre belirlenen yeniden değerleme oranıyla artırılır.)
+>
+> **m.18/2 (7499 ile değişik):** Birinci fıkranın (a), (b), (c) ve (ç) bentlerindeki cezalar veri sorumlusu, (d) bendindeki ceza veri sorumlusu **veya veri işleyen** gerçek kişiler ile özel hukuk tüzel kişileri hakkında uygulanır.
+>
+> **m.18/3 (7499 ile eklendi):** Kurulca verilen idari para cezalarına karşı **idare mahkemelerinde** dava açılabilir.
+>
+> **m.18/4 (eski m.18/3):** Eylemlerin kamu kurum ve kuruluşları ile kamu kurumu niteliğindeki meslek kuruluşları bünyesinde işlenmesi hâlinde, Kurul'un bildirimi üzerine disiplin hükümlerine göre işlem yapılır.
 
-### 3.2 2026 Cari Miktarlar
+Kaynak: 6698 sayılı Kanun güncel metni (https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf); 7499 sayılı Kanun, RG 12.03.2024, Sayı 32487 (https://www.resmigazete.gov.tr/eskiler/2024/03/20240312-1.htm).
 
-> **NOT:** Bu rakamlar 213 sayılı VUK Mükerrer m.298 uyarınca her yıl Hazine ve Maliye Bakanlığı tarafından açıklanan **yeniden değerleme oranı** ile güncellenir. KVKK Kurumu her yıl Aralık ayında resmi tebliğ ile cari miktarları yayımlar. Aşağıdaki rakamlar **temsilî gösterim** içindir; doğrulama için her zaman güncel Resmi Gazete tebliğine bakınız.
+### 3.2 2024–2026 Yeniden Değerlenmiş Tutarlar
 
-| Madde | İhlal | Asgari (Cari) | Azami (Cari) |
-|-------|-------|---------------|--------------|
-| m.18/1-a | Aydınlatma yükümlülüğü ihlali | (cari yıl tebliği) | (cari yıl tebliği) |
-| m.18/1-b | Veri güvenliği yükümlülüğü ihlali | (cari yıl tebliği) | (cari yıl tebliği) |
-| m.18/1-c | Kurul kararını yerine getirmeme | (cari yıl tebliği) | (cari yıl tebliği) |
-| m.18/1-ç | VERBİS yükümlülüğü ihlali | (cari yıl tebliği) | (cari yıl tebliği) |
+> **NOT:** 5326 sayılı Kabahatler Kanunu m.17/7 uyarınca idari para cezaları her takvim yılı başından geçerli olmak üzere 213 sayılı VUK mükerrer m.298 uyarınca belirlenen yeniden değerleme oranında artırılır (liranın küsuru dikkate alınmaz). Oranı Gelir İdaresi Başkanlığı ilan eder; KVKK Kurumu güncel tabloyu kvkk.gov.tr'de yayımlar (Kurum'un ayrıca bir Resmî Gazete tebliği yoktur). Aşağıdaki rakamlar Kurum'un 31.12.2025 tarihinde yayımladığı tablodan alınmıştır: https://www.kvkk.gov.tr/Icerik/8145/ (PDF: https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/MTY5NTUyNTRkNDkxNGY.pdf).
 
-> **Operasyonel Not:** Hukuk Müşavirliği her Ocak ayı başında güncel rakamları bu doküma işler. Kaynak: Resmi Gazete + kvkk.gov.tr.
+| Madde | İhlal | 2024 (oran %58,46) | 2025 (oran %43,93) | 2026 (oran %25,49) |
+|-------|-------|--------------------|--------------------|--------------------|
+| m.18/1-a | Aydınlatma yükümlülüğü ihlali | 47.303 – 946.308 TL | 68.083 – 1.362.021 TL | 85.437 – 1.709.200 TL |
+| m.18/1-b | Veri güvenliği yükümlülüğü ihlali | 141.934 – 9.463.213 TL | 204.285 – 13.620.402 TL | 256.357 – 17.092.242 TL |
+| m.18/1-c | Kurul kararını yerine getirmeme | 236.557 – 9.463.213 TL | 340.476 – 13.620.402 TL | 427.263 – 17.092.242 TL |
+| m.18/1-ç | VERBİS kayıt/bildirim yükümlülüğü ihlali | 189.245 – 9.463.213 TL | 272.380 – 13.620.402 TL | 341.809 – 17.092.242 TL |
+| m.18/1-d | Standart sözleşmenin 5 iş günü içinde bildirilmemesi | 50.000 – 1.000.000 TL (yeni, değerlenmedi) | 71.965 – 1.439.300 TL | 90.308 – 1.806.177 TL |
+
+> **Operasyonel Not:** Hukuk Müşavirliği her Ocak ayında tabloyu Kurum'un yayımladığı tablodan günceller. Bir yılda uygulanan oran, önceki sonbaharda ilan edilen orandır; 2027 tutarları Ocak 2027'de yeniden kontrol edilmelidir.
+
+### 3.2a Cezaların Tebliği (Haziran 2025'ten itibaren)
+
+Kurum 10.06.2025 tarihli duyurusunda, Hazine ve Maliye Bakanlığı ile yapılan protokol çerçevesinde idari para cezalarının Kabahatler Kanunu m.26/4 uyarınca Gelir İdaresi Başkanlığı **E-Tebligat** altyapısı üzerinden tebliğ edileceğini bildirmiştir; tebligat, elektronik adrese ulaştığı tarihi izleyen beşinci günün sonunda yapılmış sayılır. E-Tebligat kaydı bulunmayan veri sorumlularına 7201 sayılı Tebligat Kanunu'na göre tebligat yapılmaya devam edilir. Kaynak: https://www.kvkk.gov.tr/Icerik/8330/; **Aksiyon:** Şirket E-Tebligat kutusu düzenli izlenir; dava süresi tebliğ sayılan tarihten işler.
 
 ### 3.3 Cezanın Muhatabı
 
-KVKK m.18/2 uyarınca:
-- **Tüzel kişi veri sorumlusu**: kuruluşun kendisi muhataptır. Şirket cüzdanından ödenir.
-- **Kamu kurum/kuruluşları**: Disiplin hükümleri uygulanır; idari para cezası uygulanmaz (m.18/3).
+KVKK m.18/2 (7499 ile değişik) uyarınca:
+- **Tüzel kişi veri sorumlusu**: (a)–(ç) bentleri bakımından kuruluşun kendisi muhataptır. Şirket cüzdanından ödenir.
+- **Veri işleyen**: Standart sözleşmeyi bildirmeyen taraf ise (d) bendi uyarınca doğrudan muhatap olabilir (bildirimi yapacak taraf sözleşmede belirlenebilir; belirlenmemişse bildirimi veri aktaran yapar; Yurt Dışı Aktarım Yönetmeliği m.14/5).
+- **Kamu kurum/kuruluşları**: Disiplin hükümleri uygulanır; idari para cezası uygulanmaz (m.18/4).
 - **Gerçek kişi veri sorumlusu**: idari para cezası bizzat kendisine uygulanır.
 
 ### 3.4 Hesaplama ve Ölçülülük
@@ -313,9 +359,9 @@ Hukuka aykırı olarak kişisel verileri kaydeden kimseye **1 yıldan 3 yıla ka
 
 ### 4.2 Verileri Hukuka Aykırı Olarak Verme veya Ele Geçirme (TCK m.136)
 
-Kişisel verileri hukuka aykırı olarak başkasına veren, yayan veya ele geçiren kişi **2 yıldan 4 yıla kadar hapis cezası** ile cezalandırılır.
+Kişisel verileri hukuka aykırı olarak başkasına veren, yayan veya ele geçiren kişi **2 yıldan 4 yıla kadar hapis cezası** ile cezalandırılır. m.136/2 (2019'da eklendi) uyarınca suçun konusu CMK m.236/5-6 uyarınca kayda alınan beyan ve görüntüler ise ceza **bir kat artırılır**.
 
-**Ağırlaştırıcı (TCK m.137):**
+**Ağırlaştırıcı (TCK m.137; m.135 ve m.136 için):**
 - Suç, kamu görevlisi tarafından ve görevin verdiği yetki kötüye kullanılarak işlenirse → ceza **yarı oranında artırılır**.
 - Belli bir meslek ve sanatın sağladığı kolaylıktan yararlanarak işlenirse → ceza **yarı oranında artırılır**.
 
@@ -324,12 +370,13 @@ Kişisel verileri hukuka aykırı olarak başkasına veren, yayan veya ele geçi
 Kanunların belirlediği sürelerin geçmiş olmasına karşın verileri sistem içinde yok etmekle yükümlü olanların görevlerini yerine getirmemesi halinde **1 yıldan 2 yıla kadar hapis cezası** verilir.
 
 **Ağırlaştırıcı (TCK m.138/2 — 2014 değişikliği):**
-- Suç, soruşturma veya kovuşturmaya bağlı verilerle ilgili olduğunda → ceza **bir kat artırılır**.
+- Suçun konusu CMK hükümlerine göre ortadan kaldırılması veya yok edilmesi gereken veri ise → ceza **bir kat artırılır**.
 
 ### 4.4 Şikâyet ve Resen Soruşturma
 
-- TCK m.139 uyarınca, kişisel verilerin kaydedilmesi (m.135) suçunun soruşturulması ve kovuşturulması **şikâyete bağlıdır**.
-- **Verileri hukuka aykırı verme/yayma (m.136)** ve **yok etmeme (m.138)** ise **resen takip edilir**.
+- TCK m.139, bu bölümdeki suçları **kişisel verilerin kaydedilmesi (m.135), verileri hukuka aykırı olarak verme veya ele geçirme (m.136) ve verileri yok etmeme (m.138) hariç** şikâyete bağlı kılar. **Dolayısıyla m.135, m.136 ve m.138 resen soruşturulur** (şikâyet aranmaz, şikâyetten vazgeçme davayı düşürmez). *(Düzeltme: önceki sürümde m.135'in şikâyete bağlı olduğu yanlış yazılmıştı.)*
+- Anayasa Mahkemesi, m.136 suçunun resen takibine ilişkin itirazı reddetmiştir (E.2026/34, K.2026/81, 16.04.2026; RG 14.07.2026, Sayı 33310): https://www.resmigazete.gov.tr/eskiler/2026/07/20260714-9.pdf
+- TCK metni kaynağı: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5237.pdf
 
 ### 4.5 Tüzel Kişiler Hakkında Güvenlik Tedbirleri (TCK m.140)
 
@@ -379,8 +426,8 @@ Kurul'un idari para cezasına ve diğer idari işlemlerine karşı:
 
 | Adım | Süre / Mecra |
 |------|--------------|
-| Kurul idari işlemi tebliği | T0 |
-| İdare mahkemesinde iptal davası | T0 + 30 gün (Kabahatler Kanunu m.27 ve İYUK) |
+| Kurul idari işlemi tebliği (E-Tebligat: ulaştığı tarihi izleyen 5. günün sonu) | T0 |
+| İdare mahkemesinde iptal davası | KVKK m.18/3 (01.06.2024'ten itibaren). 6698 sayılı Kanun özel süre öngörmediğinden 2577 sayılı İYUK m.7'deki genel süre (60 gün) esas alınır; **her dosyada hukuk müşaviriyle teyit edilir**. Eski yol (Kabahatler Kanunu m.27 uyarınca 15 gün içinde sulh ceza hâkimliğine başvuru) artık uygulanmaz; 01.06.2024 itibarıyla sulh ceza hâkimliklerinde görülmekte olan başvurular orada görülmeye devam eder (KVKK geçici m.3/2). |
 | Yargı mercii | İdare Mahkemesi (Ankara — Kurum merkezi) |
 | Davanın görülmesi | Yazılı yargılama; duruşma talep edilebilir |
 | İstinaf | Bölge İdare Mahkemesi |
@@ -397,7 +444,7 @@ Kurul'un idari para cezasına ve diğer idari işlemlerine karşı:
 | Tekrar eden konu, içtihat oluşturma fırsatı | Üst yönetim onayıyla iptal davası |
 | Veri işleme durdurma kararı + iş etkisi yüksek | Yürütmeyi durdurma talepli iptal davası — ivedi |
 
-## 7. Kamu Kurumu Disiplin Hükümleri (m.18/3)
+## 7. Kamu Kurumu Disiplin Hükümleri (m.18/4)
 
 Kamu kurum/kuruluşu KVKK ihlal etse:
 - İdari para cezası uygulanmaz.
@@ -440,6 +487,21 @@ Kurul kararlarında pratik olarak görülen yaklaşım:
 | Operasyonel | Veri işleme durdurma → iş kesintisi etkisi |
 | Stratejik | Kamu sözleşmelerinde "uyumlu olma" şartının ihlali |
 | Yönetişim | Bağımsız üye sayısı, denetim komitesinin etkinliği üzerinde baskı |
+
+## 9a. 7545 sayılı Siber Güvenlik Kanunu: KVKK Temas Noktaları
+
+7545 sayılı Kanun (RG 19.03.2025, Sayı 32846) ayrı bir wiki sayfasında ele alınır; KVKK yaptırımlarıyla kesişen noktalar:
+
+| 7545 hükmü | KVKK ile etkileşim |
+|------------|--------------------|
+| m.7/1-b: kapsamdakiler tespit ettikleri zafiyet ve siber olayları Siber Güvenlik Başkanlığına "gecikmeksizin" bildirir | KVKK Kurulu'na 72 saatlik ihlal bildiriminden (KVKK m.12/5; 2019/10 sayılı Karar) ayrı ve ona ek bir yükümlülüktür. Aynı olay iki bildirimi birden tetikleyebilir. |
+| m.6/2: 7545 kapsamında işlenen kişisel veriler KVKK m.4'tekine denk ilkelere uygun işlenir, gerek kalmayınca silinir/anonimleştirilir | Aynı ilkeler; veri sorumlusunun kendi işlemesinde KVKK saklama/imha kuralları ayrıca geçerlidir. |
+| m.16/4: siber uzayda daha önce sızdırılmış kişisel verileri izinsiz erişime açan, paylaşan veya satışa çıkaranlara 3–5 yıl hapis | TCK m.136'nın yanında ek bir suç tipidir. |
+| m.16/5: halk arasında endişe yaratmak veya hedef göstermek amacıyla gerçeğe aykırı veri sızıntısı içeriği oluşturan/yayanlara 2–5 yıl hapis | İhlal iletişimi ve kamuya açıklamalar bakımından önemlidir. |
+| m.16/9: kritik altyapıların korunmasında görevine aykırı hareketle veri ihlaline sebebiyet verenlere 1–3 yıl hapis | Kritik altyapı personeli için bireysel cezai risk. |
+| m.16/10: 1–10 milyon TL (m.7/1-a,b,c) ve 10–100 milyon TL (m.18) idari para cezası | Her iki rejimin uygulandığı durumlarda KVKK m.18 cezalarıyla birlikte uygulanabilir. |
+
+Kaynak: https://www.mevzuat.gov.tr/MevzuatMetin/1.5.7545.pdf (güncel metin; 7545 sayılı Kanun, RG 31.07.2026, Sayı 33326 ile yayımlanan 7590 sayılı Kanunla değiştirildi; bkz. 7545 sayfası).
 
 ## 10. Sıfır Tolerans Alanları
 
