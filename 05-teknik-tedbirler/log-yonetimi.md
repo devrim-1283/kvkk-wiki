@@ -206,7 +206,7 @@ Sources → Collector (Beats/Fluentd/Vector/syslog) → Pipeline (parse/enrich/s
 | WAF | 90 days | 9 months | – | **1 year** |
 | Application | 90 days | 9 months | – | **1 year** |
 | Backup | 90 days | 1 year | 4 years | **5 years** |
-| Law No. 5651 (if hosting provider) | – | – | – | Per law **2 years** to 10 years per relevant regulation |
+| Law No. 5651 (if hosting provider) | – | – | – | Hosting provider: at least **1 year**, at most **2 years** (Law 5651 Art. 5/3); mass-use provider: **2 years** |
 | PCI scope (if applicable) | 90 days online | – | 1 year archive | 1 year (PCI minimum) |
 
 > End of retention period **automatic destruction** — manual extension only for active investigation / legal hold and with justification.
@@ -219,6 +219,7 @@ If our activity is "hosting provider" or "internal content provider":
 - Integrity is preserved within retention period, can be transmitted electronically upon authority request.
 - Ensuring the **accuracy, integrity, and confidentiality** of stored information is the obligation of the hosting provider.
 - Logs in this scope are managed with **separate access** from KVKK personal data logs; owner is Legal + CISO.
+- Details, log sets and BTK / Cyber Security Presidency procedures: [13-btk-5651](../13-btk-5651/README.md).
 
 ## 9. SOC Operations
 
@@ -524,7 +525,7 @@ Kaynaklar → Toplayıcı (Beats/Fluentd/Vector/syslog) → Pipeline (parse/enri
 | WAF | 90 gün | 9 ay | – | **1 yıl** |
 | Uygulama | 90 gün | 9 ay | – | **1 yıl** |
 | Yedek | 90 gün | 1 yıl | 4 yıl | **5 yıl** |
-| 5651 (yer sağlayıcıysak) | – | – | – | Kanun gereği **2 yıl** ila 10 yıl arası ilgili düzenlemeye göre |
+| 5651 (yer sağlayıcıysak) | – | – | – | Yer sağlayıcı: en az **1 yıl**, en çok **2 yıl** (5651 m.5/3); toplu kullanım sağlayıcı: **2 yıl** |
 | PCI scope (uygulanırsa) | 90 gün online | – | 1 yıl arşiv | 1 yıl (PCI minimum) |
 
 > Saklama süresi sonu **otomatik imha** — manuel uzatma yalnızca aktif soruşturma / hukuki tutma (legal hold) için ve gerekçeli.
@@ -537,6 +538,7 @@ Eğer faaliyet kapsamımız "yer sağlayıcı" veya "iç içerik sağlayıcı" n
 - Saklama süresi içinde bütünlük korunur, yetkili merciin talebine elektronik ortamda iletilebilir.
 - Saklanan bilgilerin **doğruluğunu, bütünlüğünü ve gizliliğini** sağlamak yer sağlayıcının yükümlülüğüdür.
 - Bu kapsamdaki loglar, KVKK kapsamındaki kişisel veri logundan **ayrı erişim** ile yönetilir; sahibi Hukuk + CISO.
+- Ayrıntılar, log setleri ve BTK / Siber Güvenlik Başkanlığı işlemleri: [13-btk-5651](../13-btk-5651/README.md).
 
 ## 9. SOC Operasyonları
 
