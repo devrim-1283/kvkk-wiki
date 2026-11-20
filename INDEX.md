@@ -19,6 +19,8 @@ This index is the central reference listing all wiki documents, their owners, ve
 
 - **"Tell me what to do quickly"** → [Search: Keyword Index](#keyword-index)
 - **Need legislative text** → [12-mevzuat-arsiv](12-mevzuat-arsiv/)
+- **Internet law, hosting and Wi-Fi logs (5651)** → [13-btk-5651](13-btk-5651/)
+- **Cyber security law, incident reporting, pentests** → [14-siber-guvenlik](14-siber-guvenlik/)
 - **Fillable form/template** → [99-sablonlar](99-sablonlar/)
 - **Authority on-site inspection — immediate readiness** → [11-denetim-ve-uyum/kurul-denetim-hazirlik.md](11-denetim-ve-uyum/kurul-denetim-hazirlik.md)
 - **You detected a breach** → [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md) + [08-ihlal-yonetimi](08-ihlal-yonetimi/)
@@ -136,6 +138,28 @@ This index is the central reference listing all wiki documents, their owners, ve
 | Erasure Regulation — Article Summary | [12-mevzuat-arsiv/imha-yonetmeligi.md](12-mevzuat-arsiv/imha-yonetmeligi.md) | KVKK Officer + Legal | 1.0 | 2026-05-08 | Erasure Reg. 28.10.2017/30224 |
 | Authority Decisions Summary | [12-mevzuat-arsiv/kurul-kararlari-ozeti.md](12-mevzuat-arsiv/kurul-kararlari-ozeti.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | Authority decisions (2018/10, 2019/10, 2024/959 etc.) |
 | Regulatory Change Tracking Procedure | [12-mevzuat-arsiv/mevzuat-degisiklik-takip.md](12-mevzuat-arsiv/mevzuat-degisiklik-takip.md) | Legal + KVKK Officer | 1.0 | 2026-05-08 | KVKK and secondary legislation |
+
+## 13 — BTK / Law 5651
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| BTK / Law 5651 Obligations: Section Introduction | [13-btk-5651/README.md](13-btk-5651/README.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+| BTK / Cybersecurity Presidency Practical Documentation Guide | [13-btk-5651/btk-dokumantasyon.md](13-btk-5651/btk-dokumantasyon.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+| Access Provider and Social Network Provider: Summary for Companies | [13-btk-5651/erisim-saglayici.md](13-btk-5651/erisim-saglayici.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+| Law 5651 Log Checklist (Mapped to KVKK) | [13-btk-5651/log-kontrol-listesi.md](13-btk-5651/log-kontrol-listesi.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+| Mass-Use Provider Obligations | [13-btk-5651/toplu-kullanim-saglayici.md](13-btk-5651/toplu-kullanim-saglayici.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+| Hosting Provider Obligations | [13-btk-5651/yer-saglayici.md](13-btk-5651/yer-saglayici.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 5651, 5809, 7545, 7590 |
+
+## 14 — Cyber Security
+
+| Document | Path | Owner | Version | Last Update | Legislation |
+|----------|------|-------|---------|-------------|-------------|
+| 14 - Cyber Security (Section Introduction) | [14-siber-guvenlik/README.md](14-siber-guvenlik/README.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
+| Cyber Incident Notification Matrix | [14-siber-guvenlik/olay-bildirim-matrisi.md](14-siber-guvenlik/olay-bildirim-matrisi.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
+| Cyber Security Presidency (SGB) | [14-siber-guvenlik/siber-guvenlik-baskanligi.md](14-siber-guvenlik/siber-guvenlik-baskanligi.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
+| Cyber Security Law No. 7545 | [14-siber-guvenlik/siber-guvenlik-kanunu-7545.md](14-siber-guvenlik/siber-guvenlik-kanunu-7545.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
+| Rules for Cyber-Security Companies and Ordinary Companies | [14-siber-guvenlik/siber-sirket-yonetmelikleri.md](14-siber-guvenlik/siber-sirket-yonetmelikleri.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
+| Penetration Testing Requirements in Türkiye | [14-siber-guvenlik/sizma-testleri.md](14-siber-guvenlik/sizma-testleri.md) | Legal + CISO | 1.0 | 2026-11-20 | Law 7545, 7590; TS 13638 |
 
 ## 99 — Templates
 
@@ -328,6 +352,8 @@ Bu dizin, wiki kapsamındaki tüm dokümanları, sahiplerini, versiyonlarını v
 
 - **"Bana hızlıca ne yapacağımı söyle"** → [Aramak için: Anahtar Kelime Endeksi](#anahtar-kelime-endeksi)
 - **Mevzuat metni gerekiyor** → [12-mevzuat-arsiv](12-mevzuat-arsiv/)
+- **İnternet hukuku, yer sağlayıcı ve Wi-Fi logları (5651)** → [13-btk-5651](13-btk-5651/)
+- **Siber güvenlik kanunu, olay bildirimi, sızma testi** → [14-siber-guvenlik](14-siber-guvenlik/)
 - **Doldurulabilir form/şablon** → [99-sablonlar](99-sablonlar/)
 - **Kurul Yerinde İnceleme Anlık Hazırlık** → [11-denetim-ve-uyum/kurul-denetim-hazirlik.md](11-denetim-ve-uyum/kurul-denetim-hazirlik.md)
 - **İhlal Tespit Ettiniz** → [99-sablonlar/ihlal-bildirim.md](99-sablonlar/ihlal-bildirim.md) + [08-ihlal-yonetimi](08-ihlal-yonetimi/)
@@ -471,6 +497,28 @@ Bu dizin, wiki kapsamındaki tüm dokümanları, sahiplerini, versiyonlarını v
 | Mevzuat Değişiklik Takip Prosedürü | [12-mevzuat-arsiv/mevzuat-degisiklik-takip.md](12-mevzuat-arsiv/mevzuat-degisiklik-takip.md) | Hukuk + KVKK Sor. | 1.0 | 2026-05-08 | KVKK ve ikincil mevzuat |
 
 ---
+
+## 13 — BTK / 5651 Sayılı Kanun
+
+| Doküman | Yol | Sahip | Versiyon | Son Güncelleme | Mevzuat |
+|---------|-----|-------|----------|----------------|---------|
+| BTK / 5651 Yükümlülükleri: Bölüm Girişi | [13-btk-5651/README.md](13-btk-5651/README.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+| BTK / Siber Güvenlik Başkanlığı Pratik Dokümantasyon Rehberi | [13-btk-5651/btk-dokumantasyon.md](13-btk-5651/btk-dokumantasyon.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+| Erişim Sağlayıcı ve Sosyal Ağ Sağlayıcı: Şirketler İçin Özet | [13-btk-5651/erisim-saglayici.md](13-btk-5651/erisim-saglayici.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+| 5651 Log Kontrol Listesi (KVKK Eşlemeli) | [13-btk-5651/log-kontrol-listesi.md](13-btk-5651/log-kontrol-listesi.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+| Toplu Kullanım Sağlayıcı Yükümlülükleri | [13-btk-5651/toplu-kullanim-saglayici.md](13-btk-5651/toplu-kullanim-saglayici.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+| Yer Sağlayıcı Yükümlülükleri | [13-btk-5651/yer-saglayici.md](13-btk-5651/yer-saglayici.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 5651, 5809, 7545, 7590 sayılı Kanunlar |
+
+## 14 — Siber Güvenlik
+
+| Doküman | Yol | Sahip | Versiyon | Son Güncelleme | Mevzuat |
+|---------|-----|-------|----------|----------------|---------|
+| 14 - Siber Güvenlik (Bölüm Girişi) | [14-siber-guvenlik/README.md](14-siber-guvenlik/README.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
+| Siber Olay Bildirim Matrisi | [14-siber-guvenlik/olay-bildirim-matrisi.md](14-siber-guvenlik/olay-bildirim-matrisi.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
+| Siber Güvenlik Başkanlığı (SGB) | [14-siber-guvenlik/siber-guvenlik-baskanligi.md](14-siber-guvenlik/siber-guvenlik-baskanligi.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
+| 7545 sayılı Siber Güvenlik Kanunu | [14-siber-guvenlik/siber-guvenlik-kanunu-7545.md](14-siber-guvenlik/siber-guvenlik-kanunu-7545.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
+| Siber Güvenlik Şirketleri ve Sıradan Şirketler İçin Kurallar | [14-siber-guvenlik/siber-sirket-yonetmelikleri.md](14-siber-guvenlik/siber-sirket-yonetmelikleri.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
+| Türkiye'de Sızma Testi Gereklilikleri | [14-siber-guvenlik/sizma-testleri.md](14-siber-guvenlik/sizma-testleri.md) | Hukuk + CISO | 1.0 | 2026-11-20 | 7545, 7590 sayılı Kanunlar; TS 13638 |
 
 ## 99 — Şablonlar
 
