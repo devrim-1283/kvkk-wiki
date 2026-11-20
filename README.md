@@ -25,6 +25,8 @@ Her doküman **bilingual**'dır: önce `## English`, sonra `## Türkçe` bölüm
 - 🧭 KVKK sorumlusu, irtibat kişisi, komite, RACI, yıllık takvim.
 - ⚙️ KVKİ envanteri, VERBİS, saklama-imha, açık rıza, başvuru, ihlal müdahale.
 - 🔐 Erişim, şifreleme, log, yedek, DLP, maskeleme, bulut, AI.
+- 🌐 5651 sayılı Kanun: yer sağlayıcı ve toplu kullanım sağlayıcı yükümlülükleri, log seti ve saklama süreleri, BTK ve Siber Güvenlik Başkanlığı işlemleri.
+- 🛡️ 7545 sayılı Siber Güvenlik Kanunu: Siber Güvenlik Başkanlığı, olay bildirimi, sızma testi kuralları (TS 13638, sektörel düzenlemeler), siber güvenlik şirketlerine ilişkin düzenlemeler.
 
 #### GDPR (EU/EEA)
 - 🏛️ GDPR Art. 1–99, EDPB Guidelines, ECJ jurisprudence (Schrems I/II, Costeja, Bara, Planet49, Fashion ID, Wirtschaftsakademie, SCHUFA, Meta), national derogations (DE/FR/IT/ES/NL/IE/PL).
@@ -50,6 +52,8 @@ Her doküman **bilingual**'dır: önce `## English`, sonra `## Türkçe` bölüm
 ├── 10-ozel-konular/             # KVKK — Çerez, CCTV, biyometrik, sağlık, İK, AI
 ├── 11-denetim-ve-uyum/          # KVKK — Denetim + uyum
 ├── 12-mevzuat-arsiv/            # KVKK — Mevzuat arşivi
+├── 13-btk-5651/                 # 5651 — Yer / toplu kullanım sağlayıcı, BTK işlemleri, log
+├── 14-siber-guvenlik/           # 7545 — Siber Güvenlik Kanunu, sızma testi, olay bildirimi
 ├── 99-sablonlar/                # KVKK — Tüm şablonlar
 ├── INDEX.md                     # KVKK — Master index
 │
@@ -136,6 +140,8 @@ Every document is **bilingual** — `## English` first, then `## Türkçe`, with
 - 🏛️ KVKK Art. 1–32, VERBIS Regulation, Disclosure Communiqué, Application Communiqué, Erasure Regulation, cross-border transfer regime (Law No. 7499 of 12.03.2024, Authority Decision 2024/959), Authority decisions (2018/10, 2019/10, 2024/959).
 - 🧭 KVKK Officer, contact person, committee, RACI, annual calendar.
 - ⚙️ ROPA-equivalent, VERBIS registration, retention–destruction, explicit consent, data subject requests, breach response.
+- 🌐 Law No. 5651: hosting and mass-use provider duties, log sets and retention, BTK and Cyber Security Presidency procedures.
+- 🛡️ Cyber Security Law No. 7545: the Presidency, incident reporting, penetration-testing rules (TS 13638, sector regulators), rules for cyber-security companies.
 
 #### GDPR (EU/EEA)
 - 🏛️ GDPR Articles 1–99, EDPB Guidelines, ECJ jurisprudence (Schrems I/II, Costeja, Bara, Planet49, Fashion ID, Wirtschaftsakademie, SCHUFA, Meta), national derogations (DE/FR/IT/ES/NL/IE/PL).
