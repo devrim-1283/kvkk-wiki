@@ -3,8 +3,8 @@ Doküman / Document: Mevzuat Değişikliği Takip Prosedürü ve Etki Analizi / 
 Bölüm / Section: 12-mevzuat-arsiv
 Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
 Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
+Versiyon / Version: 1.1
+Yürürlük / Effective: 2026-11-20
 Gözden Geçirme / Review: Yıllık — Annual
 İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK; ikincil mevzuat; 1 sayılı CBK; Kabahatler Kanunu — KVKK; secondary legislation; Presidential Decree No. 1; Misdemeanours Law
 ---
@@ -24,7 +24,7 @@ To systematically monitor changes to KVKK and related legislation; to perform im
 | Source | URL / Access | Method | Frequency |
 |--------|--------------|--------|-----------|
 | Official Gazette | resmigazete.gov.tr | RSS + email subscription (filter on "KVKK") | Daily |
-| KVKK Authority | kvkk.gov.tr | RSS + bulletin subscription; Decision Summaries page | Weekly |
+| KVKK Authority | kvkk.gov.tr | RSS + bulletin subscription; Announcements (Duyurular), Principle Decisions (İlke Kararları), Decision Summaries and Guides (Rehberler) pages | Weekly |
 | Legislation Information System | mevzuat.gov.tr | Version comparison | Monthly |
 | Parliament (TBMM) | tbmm.gov.tr / Committee Reports | Watch list: Justice, Digital Media Committees | Monthly |
 | Presidency | cbiko.gov.tr | Presidential Decrees | Monthly |
@@ -65,7 +65,8 @@ Immediate action without waiting for the monthly cycle for:
 - Regulation amendment
 - Communiqué amendment
 - Principle decision (Authority precedent-setting decision)
-- Revaluation rate communiqué (annual fine update — December)
+- Revaluation rate (Revenue Administration, autumn) and the Authority's updated fine table on kvkk.gov.tr (published at year end, e.g. 31.12.2025 for 2026)
+- VERBİS deadline or threshold decisions (e.g. 30-day registration windows after the corporate tax return)
 
 Immediate response timing:
 - Legal + KVKK Officer pre-analysis: 24 hours
@@ -222,9 +223,32 @@ Centralised register in the GRC platform:
 
 | # | Date | Legislation | Subject | Impact | Action Owner | Deadline | Status |
 |---|------|-------------|---------|--------|--------------|----------|--------|
-| 1 | 12.03.2024 | Law 7499 — KVKK Arts. 6 and 9 | Sensitive data and cross-border transfer regime | Critical | Legal + KVKK Officer | 2024-09-12 | Closed |
-| 2 | 04.06.2024 | Authority Decision 2024/959 | Standard contracts and BCR | High | KVKK Officer | 2024-12-04 | Closed |
-| 3 | (new) | ... | ... | ... | ... | ... | Open |
+| 1 | 12.03.2024 | Law 7499: KVKK Arts. 6, 9, 18 and Provisional Art. 3 (Official Gazette No. 32487; in force 01.06.2024) | Sensitive data conditions; cross-border transfer regime; new fine 18/1-d; fines challenged before administrative courts; old Art. 9/1 until 01.09.2024 | Critical | Legal + KVKK Officer | 2024-09-01 | Closed |
+| 2 | 04.06.2024 | Board Decision 2024/959 (announced 10.07.2024) | Standard contracts (4 modules, used without modification) and BCR documents | High | KVKK Officer | 2024-09-01 | Closed |
+| 3 | 10.07.2024 | Regulation on Transfer of Personal Data Abroad (Official Gazette No. 32598) | Procedures for adequacy, safeguards, occasional transfers; standard contract notification (Art. 14) | High | Legal + KVKK Officer | 2024-09-01 | Closed |
+| 4 | 17.10.2024 | Board Decision 2024/1793 | Online Standard Contract Notification Module | Medium | KVKK Officer | 2024-11-30 | Closed |
+| 5 | 02.01.2025 | Authority guide on transfers abroad | Interpretation of Art. 9 and the Regulation | Medium | KVKK Officer | 2025-02-28 | Open; review wiki 07-aktarim |
+| 6 | 05.02.2025 | Authority announcement on standard contracts | Signatures, Turkish text, authority documents, signature dates, apostille | Medium | Legal | 2025-03-31 | Open |
+| 7 | 26.02.2025 | Guide on processing special-category data | Post-7499 Art. 6 conditions | Medium | KVKK Officer | 2025-04-30 | Open |
+| 8 | 10.06.2025 | Fines served via e-Tebligat | Litigation deadlines run from e-notification | Low | Legal | 2025-07-31 | Open |
+| 9 | 10.06.2025 | Principle Decision 2025/1072 (Official Gazette 26.06.2025, No. 32938) | SMS verification codes / bundled consents | Medium | Marketing + KVKK Officer | 2025-09-30 | Open |
+| 10 | July 2025 | Cookie guide, revised edition (Publication No. 69) | Criterion A/B; first-party analytics | Medium | Digital + KVKK Officer | 2025-10-31 | Open |
+| 11 | 04.09.2025 | Board Decision 2025/1572 (Official Gazette 01.10.2025, No. 33034) and 2025/2393 (25.12.2025) | VERBİS exemption for small controllers whose main activity is special-category data; employee-only criterion for non-balance-sheet books | Medium | KVKK Officer | 2026-01-31 | Open |
+| 12 | 06.11.2025 | Principle Decision 2025/2120 (Official Gazette 09.12.2025, No. 33102) | No ID-card photocopies at accommodation | Low–Medium (sector) | Operations | 2026-01-31 | Open |
+| 13 | 24.11.2025 | Generative AI guide (15 questions); 05.03.2026 workplace GenAI note; 12.03.2026 agentic AI note | AI use policy | Medium | IT + KVKK Officer | 2026-06-30 | Open |
+| 14 | 25.12.2025 | Board Decision 2025/2451 | Published breach notices limited to 60 days | Low | KVKK Officer | 2026-02-28 | Open |
+| 15 | 31.12.2025 | 2026 fine table (revaluation 25.49%) | Updated fine amounts | Low | Legal | 2026-01-31 | Open; see sanctions page |
+| 16 | 11.02.2026 | Principle Decision 2026/266 (Official Gazette 28.02.2026, No. 33182); extension 2026/1491 (Official Gazette 13.08.2026, No. 33339) | Loyalty card verification; deadline 28.02.2027 | Medium (retail) | Retail operations | 2027-02-28 | Open |
+| 17 | 18.02.2026 | Principle Decisions 2026/347 (Official Gazette 24.03.2026, No. 33203) and 2026/348 (Official Gazette 31.03.2026, No. 33210) | Separate notice and consent texts; no debt lists in common areas | High | KVKK Officer | 2026-05-31 | Open; review 03-aydinlatma-ve-acik-riza |
+| 18 | 29.04.2026 | Principle Decision 2026/921 (Official Gazette 02.06.2026, No. 33268); clarification 27.08.2026 | No biometric attendance tracking | High | HR + IT | 2026-07-31 | Open; see 10-ozel-konular/biometrik-veri.md |
+| 19 | 13.05.2026 | Board Decision 2026/1026 | VERBİS deadline for 2025 balance-sheet obligors extended to 05.06.2026 | Low | KVKK Officer | 2026-06-05 | Closed |
+| 20 | 20.05.2026 | Principle Decision 2026/1095 (Official Gazette 01.07.2026, No. 33297) | Accident-victim data (insurance, claims consultancy) | Low–Medium (sector) | Legal | 2026-08-31 | Open |
+| 21 | 01.07.2026 | Principle Decision 2026/1301 (Official Gazette 28.07.2026, No. 33323) | Public bodies publishing personal data online | Low (private sector) | Legal | 2026-09-30 | Open |
+| 22 | 16.09.2026 | Principle Decision 2026/2035 (Official Gazette 08.10.2026, No. 33394) | Employer monitoring of corporate e-mail and work channels | High | HR + IT + Legal | 2026-12-31 | Open; review 10-ozel-konular/ik-ve-calisan-verisi.md |
+| 23 | 01.10.2026 | Authority announcement on replies to data subject applications | Replies must be written or electronic | Medium | KVKK Officer | 2026-11-30 | Open; review 09-ilgili-kisi-basvurulari |
+| 24 | 19.03.2025 | Cyber Security Law 7545 (Official Gazette No. 32846; amended by Law 7590, Official Gazette 31.07.2026 No. 33326) | Parallel incident reporting; new offences on leaked data | High | CISO + KVKK Officer | 2026-12-31 | Open; tracked on the 7545 page |
+| 25 | 09.01.2026 | Reported bill to amend KVKK Art. 18; DOĞRULANMADI / UNVERIFIED (secondary source only); not enacted per the consolidated text | Platform liability for non-consensual AI-generated content | Watch | Legal | - | Watch |
+| 26 | (new) | ... | ... | ... | ... | ... | Open |
 
 ## 9. Training and Communication
 
@@ -258,7 +282,7 @@ When a regulatory change has impact:
 | Kaynak | URL / Erişim | İzleme Yöntemi | Sıklık |
 |--------|--------------|----------------|--------|
 | Resmi Gazete | resmigazete.gov.tr | RSS + e-posta abonelik (KVKK kelimesiyle filtre) | Günlük |
-| KVKK Kurumu | kvkk.gov.tr | RSS + bültene abonelik; Karar Özetleri sayfası | Haftalık |
+| KVKK Kurumu | kvkk.gov.tr | RSS + bültene abonelik; Duyurular, İlke Kararları, Karar Özetleri ve Rehberler sayfaları | Haftalık |
 | Mevzuat Bilgi Sistemi | mevzuat.gov.tr | Versiyon karşılaştırma | Aylık |
 | TBMM | tbmm.gov.tr / Komisyon Raporları | İzleme listesi: Adalet, Dijital Mecralar Komisyonları | Aylık |
 | Cumhurbaşkanlığı | cbiko.gov.tr | Cumhurbaşkanlığı Kararnameleri | Aylık |
@@ -299,7 +323,8 @@ Aşağıdaki durumlar için aylık takvimi beklemeden anında aksiyon:
 - Yönetmelik değişikliği
 - Tebliğ değişikliği
 - Genel ilke kararı (Kurul'un emsâl niteliğindeki kararı)
-- Yeniden değerleme oranı tebliği (idari para cezası miktar güncellemesi — Aralık)
+- Yeniden değerleme oranı (Gelir İdaresi, sonbahar) ve Kurum'un kvkk.gov.tr'de yayımladığı güncel ceza tablosu (yıl sonunda; örn. 2026 için 31.12.2025)
+- VERBİS süre veya eşik kararları (örn. kurumlar vergisi beyannamesinden sonraki 30 günlük kayıt süresi)
 
 Anlık aksiyon süreleri:
 - Hukuk + KVKK Sor. ön analiz: 24 saat
@@ -456,9 +481,32 @@ GRC platformunda merkezi takip defteri:
 
 | Sıra | Tarih | Mevzuat | Konu | Etki | Aksiyon Sahibi | Termin | Durum |
 |------|-------|---------|------|------|-----------------|--------|-------|
-| 1 | 12.03.2024 | 7499 sayılı K. — KVKK m.6 ve m.9 | Özel nitelikli ve yurt dışı aktarım rejimi | Kritik | Hukuk + KVKK Sor. | 2024-09-12 | Kapatıldı |
-| 2 | 04.06.2024 | 2024/959 Kurul Kararı | Standart sözleşmeler ve BCR | Yüksek | KVKK Sor. | 2024-12-04 | Kapatıldı |
-| 3 | (yeni) | ... | ... | ... | ... | ... | Açık |
+| 1 | 12.03.2024 | 7499 sayılı K.: KVKK m.6, m.9, m.18 ve geçici m.3 (RG Sayı 32487; yürürlük 01.06.2024) | Özel nitelikli veri şartları; yurt dışı aktarım rejimi; yeni m.18/1-d cezası; cezalara karşı idari yargı; eski m.9/1 01.09.2024'e kadar | Kritik | Hukuk + KVKK Sor. | 2024-09-01 | Kapatıldı |
+| 2 | 04.06.2024 | 2024/959 sayılı Kurul Kararı (ilan 10.07.2024) | Standart sözleşmeler (4 modül, değiştirilmeden kullanılır) ve BCR dokümanları | Yüksek | KVKK Sor. | 2024-09-01 | Kapatıldı |
+| 3 | 10.07.2024 | Yurt Dışı Aktarım Yönetmeliği (RG Sayı 32598) | Yeterlilik, uygun güvenceler, arızi aktarım usulü; standart sözleşme bildirimi (m.14) | Yüksek | Hukuk + KVKK Sor. | 2024-09-01 | Kapatıldı |
+| 4 | 17.10.2024 | 2024/1793 sayılı Kurul Kararı | Çevrim içi Standart Sözleşme Bildirim Modülü | Orta | KVKK Sor. | 2024-11-30 | Kapatıldı |
+| 5 | 02.01.2025 | Kurum'un yurt dışı aktarım rehberi | m.9 ve Yönetmelik yorumu | Orta | KVKK Sor. | 2025-02-28 | Açık; 07-aktarim gözden geçirilir |
+| 6 | 05.02.2025 | Standart sözleşmelere ilişkin Kurum duyurusu | İmza, Türkçe metin, yetki belgeleri, imza tarihleri, apostil | Orta | Hukuk | 2025-03-31 | Açık |
+| 7 | 26.02.2025 | Özel nitelikli verilerin işlenmesine ilişkin rehber | 7499 sonrası m.6 şartları | Orta | KVKK Sor. | 2025-04-30 | Açık |
+| 8 | 10.06.2025 | Cezaların E-Tebligat ile tebliği | Dava süreleri e-tebligattan işler | Düşük | Hukuk | 2025-07-31 | Açık |
+| 9 | 10.06.2025 | 2025/1072 sayılı İlke Kararı (RG 26.06.2025, Sayı 32938) | SMS doğrulama kodu / birleştirilmiş rızalar | Orta | Pazarlama + KVKK Sor. | 2025-09-30 | Açık |
+| 10 | Temmuz 2025 | Çerez rehberi güncel baskı (Yayın No: 69) | Kriter A/B; birinci taraf analitik | Orta | Dijital + KVKK Sor. | 2025-10-31 | Açık |
+| 11 | 04.09.2025 | 2025/1572 (RG 01.10.2025, Sayı 33034) ve 2025/2393 (25.12.2025) sayılı Kurul Kararları | Ana faaliyeti özel nitelikli veri olan küçük veri sorumlularına VERBİS istisnası; bilanço esasına göre defter tutmayanlarda yalnız çalışan sayısı | Orta | KVKK Sor. | 2026-01-31 | Açık |
+| 12 | 06.11.2025 | 2025/2120 sayılı İlke Kararı (RG 09.12.2025, Sayı 33102) | Konaklamada kimlik fotokopisi alınmaz | Düşük–Orta (sektörel) | Operasyon | 2026-01-31 | Açık |
+| 13 | 24.11.2025 | Üretken yapay zekâ rehberi (15 soruda); 05.03.2026 iş yerinde üretken YZ notu; 12.03.2026 etken YZ notu | YZ kullanım politikası | Orta | BT + KVKK Sor. | 2026-06-30 | Açık |
+| 14 | 25.12.2025 | 2025/2451 sayılı Kurul Kararı | İhlal ilanları en fazla 60 gün | Düşük | KVKK Sor. | 2026-02-28 | Açık |
+| 15 | 31.12.2025 | 2026 ceza tablosu (yeniden değerleme %25,49) | Güncel ceza tutarları | Düşük | Hukuk | 2026-01-31 | Açık; yaptırımlar sayfası |
+| 16 | 11.02.2026 | 2026/266 sayılı İlke Kararı (RG 28.02.2026, Sayı 33182); uzatma 2026/1491 (RG 13.08.2026, Sayı 33339) | Sadakat kartında doğrulama; son tarih 28.02.2027 | Orta (perakende) | Perakende operasyon | 2027-02-28 | Açık |
+| 17 | 18.02.2026 | 2026/347 (RG 24.03.2026, Sayı 33203) ve 2026/348 (RG 31.03.2026, Sayı 33210) sayılı İlke Kararları | Aydınlatma ve rıza metinleri ayrı; ortak alanlara borç listesi asılmaz | Yüksek | KVKK Sor. | 2026-05-31 | Açık; 03-aydinlatma-ve-acik-riza gözden geçirilir |
+| 18 | 29.04.2026 | 2026/921 sayılı İlke Kararı (RG 02.06.2026, Sayı 33268); açıklama 27.08.2026 | Mesai takibinde biyometrik veri yasak | Yüksek | İK + BT | 2026-07-31 | Açık; bkz. 10-ozel-konular/biometrik-veri.md |
+| 19 | 13.05.2026 | 2026/1026 sayılı Kurul Kararı | 2025 bilançosu nedeniyle yükümlü olanlar için VERBİS süresi 05.06.2026'ya uzatıldı | Düşük | KVKK Sor. | 2026-06-05 | Kapatıldı |
+| 20 | 20.05.2026 | 2026/1095 sayılı İlke Kararı (RG 01.07.2026, Sayı 33297) | Kaza mağdurlarının verileri (sigorta, hasar danışmanlığı) | Düşük–Orta (sektörel) | Hukuk | 2026-08-31 | Açık |
+| 21 | 01.07.2026 | 2026/1301 sayılı İlke Kararı (RG 28.07.2026, Sayı 33323) | Kamu kurumlarının internette kişisel veri paylaşması | Düşük (özel sektör) | Hukuk | 2026-09-30 | Açık |
+| 22 | 16.09.2026 | 2026/2035 sayılı İlke Kararı (RG 08.10.2026, Sayı 33394) | İşverenin kurumsal e-posta ve iş iletişim kanallarını denetlemesi | Yüksek | İK + BT + Hukuk | 2026-12-31 | Açık; 10-ozel-konular/ik-ve-calisan-verisi.md gözden geçirilir |
+| 23 | 01.10.2026 | İlgili kişi başvurularına verilecek cevaba ilişkin Kurum duyurusu | Cevap yazılı veya elektronik ortamda verilir | Orta | KVKK Sor. | 2026-11-30 | Açık; 09-ilgili-kisi-basvurulari gözden geçirilir |
+| 24 | 19.03.2025 | 7545 sayılı Siber Güvenlik Kanunu (RG Sayı 32846; RG 31.07.2026, Sayı 33326 ile yayımlanan 7590 sayılı Kanunla değişik) | Paralel olay bildirimi; sızdırılmış verilere ilişkin yeni suçlar | Yüksek | CISO + KVKK Sor. | 2026-12-31 | Açık; 7545 sayfasında izlenir |
+| 25 | 09.01.2026 | KVKK m.18 değişikliği için bildirilen kanun teklifi; DOĞRULANMADI (yalnız ikincil kaynak); güncel metne göre yasalaşmadı | Rızasız yapay zekâ içeriği için platform sorumluluğu | İzleme | Hukuk | - | İzlemede |
+| 26 | (yeni) | ... | ... | ... | ... | ... | Açık |
 
 ## 9. Eğitim ve İletişim
 
