@@ -3,10 +3,10 @@ Doküman / Document: Yurt Dışı Kişisel Veri Aktarım Rejimi / Cross-Border P
 Bölüm / Section: 07-aktarim
 Sahip / Owner: KVKK Sorumlusu / KVKK Officer
 Onaylayan / Approved by: Hukuk Müdürü + Bilgi Güvenliği Yöneticisi / Legal Director + Information Security Manager
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
+Versiyon / Version: 2.0
+Yürürlük / Effective: 2026-11-20
 Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (Board adequacy decision, regulatory change, new recipient country)
-İlgili Mevzuat / Legal Reference: KVKK Art. 9 (as amended by Law No. 7499 dated 12.03.2024, effective 01.06.2024); Board Decision No. 2024/959 dated 04.06.2024; Constitution Art. 20/3
+İlgili Mevzuat / Legal Reference: KVKK Art. 9 (as amended by Law No. 7499 dated 12.03.2024, effective 01.06.2024); Board Decision No. 2024/959 dated 04.06.2024 (announced 10.07.2024); Regulation on the Procedures and Principles for Transfer of Personal Data Abroad (Official Gazette 10.07.2024, No. 32598) / Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik; Board Decision No. 2024/1793 dated 17.10.2024 (Standard Contract Notification Module); Authority guide on transfers abroad (02.01.2025); Constitution Art. 20/3
 ---
 
 ## English
@@ -15,7 +15,11 @@ Gözden Geçirme / Review: Yıllık + tetiklenmiş / Annual + triggered (Board a
 
 ## 1. Framework of the New Regime
 
-By Article 34 of **Law No. 7499 on the Amendment of the Code of Criminal Procedure and Other Laws**, published in Official Gazette No. 32487 dated 12.03.2024, KVKK Art. 9 was amended; the new regime entered into force on **01.06.2024**.
+By Article 34 of **Law No. 7499 on the Amendment of the Code of Criminal Procedure and Other Laws**, published in Official Gazette No. 32487 dated 12.03.2024, KVKK Art. 9 was amended; the new regime entered into force on **01.06.2024**. Under KVKK Provisional Art. 3/1, the former Art. 9/1 (transfer with explicit consent) continued to apply alongside the new text only until **01.09.2024**.
+
+The procedures are set by the **Regulation on the Procedures and Principles for Transfer of Personal Data Abroad** (Official Gazette 10.07.2024, No. 32598, in force on publication): https://www.resmigazete.gov.tr/eskiler/2024/07/20240710-2.htm. The Authority's guide "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" was published on 02.01.2025: https://www.kvkk.gov.tr/Icerik/8143/
+
+Other Art. 9 rules not shown in the diagram: Art. 9/7; occasional grounds (a), (b) and (c) do not apply to public bodies' public-law activities; Art. 9/8; the same safeguards apply to **onward transfers** and transfers to international organisations; Art. 9/9; where Türkiye's or the data subject's interests would be seriously harmed, transfer only with Board permission after consulting the relevant public body; Art. 9/10; transfer rules in other laws are reserved. A transfer by a processor does not remove the controller's responsibility (Regulation).
 
 The new regime envisages a **tiered** architecture for cross-border transfer of personal data:
 
@@ -70,25 +74,27 @@ A novelty introduced by the new regulation: An adequacy decision may be issued n
 
 ### 2.2. Board's Assessment Criteria (Art. 9/3)
 
-In issuing an adequacy decision, the Board primarily considers (non-exhaustive):
+In issuing an adequacy decision, the Board primarily considers (Art. 9/3, as worded in the Law):
 
-- The level of personal data protection legislation and its implementation in the destination country,
-- The existence of an independent supervisory authority,
-- Possibility of data subjects to exercise their rights,
-- The destination country's status as a party to international agreements,
-- The scope of public authority access (especially law enforcement and intelligence),
-- Judicial remedies.
+- (a) Reciprocity regarding personal data transfers between Türkiye and the country, sector or international organisation,
+- (b) The relevant legislation and practice of the country, and the rules to which the international organisation is subject,
+- (c) The existence of an independent and effective data protection authority and of administrative and judicial remedies,
+- (ç) Being party to international conventions on data protection or member of international organisations,
+- (d) Membership of global or regional organisations of which Türkiye is a member,
+- (e) International conventions to which Türkiye is a party.
+
+*(Correction: the previous list included "scope of public authority access", which is not an Art. 9/3 criterion; it remains a relevant TIA factor; see §9.)*
 
 ### 2.3. Validity Period and Review (Art. 9/2)
 
-- Adequacy decisions are reviewed by the Board **every four years**.
+- Adequacy decisions are issued by the Board and **published in the Official Gazette**; they are reviewed **at least every four years**.
 - If no review is performed, the existing decision remains in force.
 - The Board may also review before the four-year mark.
 - Following its assessment, the Board may **modify, suspend or revoke** the decision (with prospective effect).
 
 ### 2.4. Current List
 
-The **List of Countries with Adequate Protection** issued by the Board is kept current on the Authority's website. Before deciding on a transfer, the list must be verified **at the moment** of decision. The list date and version are recorded in the TIA document.
+As of the check on 2026-11-20, **no adequacy decision** was found in the Official Gazette or in the Authority's announcements (DOĞRULANMADI / UNVERIFIED that none exists). Before deciding on a transfer, the Official Gazette and kvkk.gov.tr must be checked **at the moment** of decision; the date of the check is recorded in the TIA document. Until a decision exists, Tier 1 is not available and transfers use Tier 2 or, for occasional transfers only, Tier 3.
 
 ## 3. TIER 2 — Appropriate Safeguards (Art. 9/4)
 
@@ -108,7 +114,7 @@ If **prior-approved** Binding Corporate Rules covering the protection of persona
 
 **Typical use:** Transfer from a multinational group's Turkish company to its overseas affiliate within the same group.
 
-**Important:** BCR requires a one-time prior Board approval; once approved, no per-transfer authorization is required for intra-group transfers. For details: [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md)
+**Important:** BCR requires a one-time prior Board approval (Regulation Arts. 12–13; application forms and auxiliary guides for controllers and processors published 10.07.2024); once approved, no per-transfer authorization is required for intra-group transfers. The first BCR approval announced by the Authority was granted on 20.05.2026 (https://www.kvkk.gov.tr/Icerik/8757/). For details: [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md)
 
 ### 3.3. (c) Standard Contract + Notification to Authority
 
@@ -116,7 +122,7 @@ Signing a **standard contract** declared by the Board — covering data categori
 
 **Typical use:** Foreign SaaS provider, cloud hosting provider, transfer to a non-group partner.
 
-**Notification deadline:** Notified to the Authority within **5 business days** of signing. Notification does not require additional authorization; the notification obligation is part of compliance.
+**Notification deadline:** Notified to the Authority within **5 business days** of completion of signatures (Art. 9/5; Regulation Art. 14/5). Notification does not require additional authorization. Failure to notify is an administrative offence under **Art. 18/1-d** (fine may be imposed on the controller or the processor).
 
 For details: [standart-sozlesme-rehberi.md](standart-sozlesme-rehberi.md)
 
@@ -126,7 +132,7 @@ In situations where transfer cannot be made with a standard contract due to sect
 
 **Typical use:** Special situations not covered by the standard contract template (sector-specific confidentiality, distributed recipient structures, etc.).
 
-**Practical:** Not preferred for daily commercial transfers due to lengthy authorization process.
+**Practical:** Not preferred for daily commercial transfers due to lengthy authorization process. Minimum content is set in Regulation Art. 15/2 (including Turkish governing law and the recipient's undertaking to comply with Board decisions). Example: three undertakings permitted on 12.03.2025 (https://www.kvkk.gov.tr/Icerik/8261/).
 
 ### 3.5. Tier 2 Comparison
 
@@ -143,7 +149,7 @@ In situations where transfer cannot be made with a standard contract due to sect
 
 If no adequacy decision exists and no appropriate safeguard can be provided, transfer may be made **provided it is occasional/incidental**, in one of the 6 exhaustively listed cases under Art. 9/6.
 
-> **In light of Constitution Art. 20/3,** occasional cases are **narrowly construed** and apply to **occasional, irregular, rarely-occurring** transfers, not continuous ones.
+> **In light of Constitution Art. 20/3,** occasional cases are **narrowly construed**. Regulation Art. 16/1 defines occasional transfers as those that are **not regular, happen once or a few times, are not continuous and fall outside the ordinary course of business**. For ground (a), the data subject must be informed of the possible risks before giving explicit consent.
 
 ### 4.2. The Six Cases
 
@@ -229,7 +235,7 @@ For detailed analysis: [arizi-aktarim.md](arizi-aktarim.md)
 | Public interest project (limited/special) | Occasional (Art. 9/6-ç) |
 | Regular, recurring commercial transfer | **Never occasional** — appropriate safeguard is required |
 
-## 7. Standard Contract Types (Board Decision No. 2024/959 of 04.06.2024)
+## 7. Standard Contract Types (Board Decision No. 2024/959 of 04.06.2024, announced 10.07.2024)
 
 The Board has published four standard contract texts:
 
@@ -240,14 +246,17 @@ The Board has published four standard contract texts:
 | 3 | P → P | From Turkish processor to overseas processor |
 | 4 | P → C | From Turkish processor to overseas controller |
 
-Selecting the correct type is critical; the wrong type renders the contract invalid.
+Selecting the correct type is critical; the wrong type renders the contract invalid. Texts: https://www.kvkk.gov.tr/Icerik/7929/Standart-Sozlesmeler (an English translation of the Regulation and the contracts was announced on 29.08.2024; the Turkish text is the one signed).
 
 ## 8. Notification to the Authority (For Standard Contract)
 
-- **Deadline:** **5 business days** from contract signing.
-- **Method:** Electronic channel set by the Authority (Registry or system referenced in announcements).
-- **Content:** Parties to the contract, type, transfer categories, recipient country, signature date.
-- **Legal Nature:** Notification is **not authorization**; it is part of compliance. If notification is not made, despite the contract being signed, the transfer is **deemed made without an appropriate safeguard**.
+- **Deadline:** **5 business days** from completion of all signatures.
+- **Who notifies:** the party designated in the contract; if none, the **data exporter** (Regulation Art. 14/5). A processor that is a party notifies without needing the controller's instruction (Authority guide).
+- **Method:** by hand/post, **KEP** (registered e-mail), or the online **Standard Contract Notification Module** https://standartsozlesme.kvkk.gov.tr/ (Board Decision 2024/1793 of 17.10.2024; announcement 25.10.2024: https://www.kvkk.gov.tr/Icerik/8043/).
+- **Content:** the full signed contract of the correct module, signatory-authority documents naming the signatories, notarised translations of foreign-language documents (Regulation Art. 14/6); apostille/legalisation of foreign official documents where needed.
+- **Formal validity points (Authority announcement 05.02.2025, https://www.kvkk.gov.tr/Icerik/8170/):** both parties sign (otherwise invalid); signatures by authorised persons; in bilingual contracts both parties sign the **Turkish** text/column; both parties write their signature dates; party names consistent across contract and authority documents; no missing pages.
+- **Changes and termination:** changes of parties or content and termination are notified the same way (Regulation Art. 14/8).
+- **Legal Nature:** Notification is **not authorization**; it is part of compliance. Non-notification is sanctioned under **Art. 18/1-d** (2026: TRY 90,308 – 1,806,177). The Law does not state that a contract notified late is void; notify immediately and record the reason. *(Correction: the previous version said a non-notified transfer is "deemed made without an appropriate safeguard"; that is not stated in the Law or the Regulation.)*
 
 ## 9. Transfer Impact Assessment (TIA)
 
@@ -266,8 +275,9 @@ For TIA examples and template: [aktarim-degerlendirme-formu.md](aktarim-degerlen
 | Mistake | Result | Mitigation |
 |---------|--------|------------|
 | Transferring without verifying current adequacy list | Transfer non-compliant if list changed | Check the list at every TIA; record version/date |
-| Departure from standard contract (additions/changes) | Contract invalid | The standard text is not modified; supplementary clauses added separately |
-| Notification beyond 5 business days | Deemed without appropriate safeguard | Automatic notification as part of contract flow |
+| Departure from standard contract (additions/changes) | Contract invalid (Regulation Art. 14/3: text used without any change) | The standard text is not modified; commercial terms go into a separate agreement |
+| Notification beyond 5 business days | Administrative fine, Art. 18/1-d | Notification as a fixed step of the contract flow; signature dates written on the contract |
+| Signing only the foreign-language column/version | Contract not valid (Authority announcement 05.02.2025) | Both parties sign the Turkish text |
 | Wrong contract type (C-P used as C-C) | Contract invalid | Decision tree + Legal Department approval |
 | Using occasional case for regular transfer | Board may revoke; administrative fine | Regular transfer = appropriate safeguard |
 | Treating an EU provider as automatically adequate | EU country is not automatically adequate; Board list required | List check |
@@ -282,8 +292,9 @@ For TIA examples and template: [aktarim-degerlendirme-formu.md](aktarim-degerlen
 - [ ] If not adequate — appropriate safeguard path selected
 - [ ] Correct contract type (C-C, C-P, P-P, P-C)
 - [ ] Standard contract text not modified
-- [ ] Contract signed
-- [ ] Notification to Authority within 5 business days
+- [ ] Contract signed by authorised signatories on the Turkish text, signature dates written by both parties
+- [ ] Signatory-authority documents (naming the signatories) and notarised translations attached
+- [ ] Notification to Authority within 5 business days (KEP, by hand or Standard Contract Notification Module)
 - [ ] TIA (Transfer Impact Assessment) completed
 - [ ] Supplementary measures (encryption, pseudonymization) applied
 - [ ] Disclosure notice updated
@@ -296,8 +307,13 @@ For TIA examples and template: [aktarim-degerlendirme-formu.md](aktarim-degerlen
 - Article 34 of Law No. 7499 — Official Gazette No. 32487 dated 12.03.2024
 - Effective date: 01.06.2024
 - Personal Data Protection Board Decision No. 2024/959 of 04.06.2024 — Standard Contract Texts and BCR
-- Authority's "Public Announcement on Documents Regarding Standard Contracts and Binding Corporate Rules"
-- Authority's "List of Countries with Adequate Protection"
+- Authority's "Public Announcement on Documents Regarding Standard Contracts and Binding Corporate Rules" (10.07.2024): https://www.kvkk.gov.tr/Icerik/7938/
+- Regulation on the Procedures and Principles for Transfer of Personal Data Abroad; Official Gazette 10.07.2024, No. 32598
+- Board Decision No. 2024/1793 of 17.10.2024; Standard Contract Notification Module
+- Authority announcement of 05.02.2025 on points to observe in standard contracts
+- Authority guide "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" (02.01.2025)
+- KVKK Art. 18/1-d; fine for failure to notify a standard contract
+- Adequacy decisions: published in the Official Gazette when issued (none located as of 2026-11-20)
 - Constitution Art. 20/3
 
 ---
@@ -308,7 +324,11 @@ For TIA examples and template: [aktarim-degerlendirme-formu.md](aktarim-degerlen
 
 ## 1. Yeni Rejimin Çerçevesi
 
-12.03.2024 tarihli ve 32487 sayılı Resmî Gazete'de yayımlanan **7499 sayılı Ceza Muhakemesi Kanunu ile Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanun**'un 34. maddesi ile KVKK m.9 değiştirilmiş; yeni rejim **01.06.2024** tarihinde yürürlüğe girmiştir.
+12.03.2024 tarihli ve 32487 sayılı Resmî Gazete'de yayımlanan **7499 sayılı Ceza Muhakemesi Kanunu ile Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanun**'un 34. maddesi ile KVKK m.9 değiştirilmiş; yeni rejim **01.06.2024** tarihinde yürürlüğe girmiştir. KVKK geçici m.3/1 uyarınca eski m.9/1 (açık rıza ile aktarım), yeni metinle birlikte yalnızca **01.09.2024** tarihine kadar uygulanmıştır.
+
+Usul ve esaslar **Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik** ile belirlenmiştir (RG 10.07.2024, Sayı 32598, yayımı tarihinde yürürlüğe girdi): https://www.resmigazete.gov.tr/eskiler/2024/07/20240710-2.htm. Kurum'un "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" 02.01.2025'te yayımlanmıştır: https://www.kvkk.gov.tr/Icerik/8143/
+
+Şemada yer almayan diğer m.9 hükümleri: m.9/7; arızi hallerden (a), (b) ve (c) bentleri kamu kurum ve kuruluşlarının kamu hukukuna tabi faaliyetlerine uygulanmaz; m.9/8; yurt dışına aktarılan verilerin **sonraki aktarımları** ve uluslararası kuruluşlara aktarımlarda da aynı güvenceler sağlanır; m.9/9; Türkiye'nin veya ilgili kişinin menfaatinin ciddi şekilde zarar göreceği durumlarda ancak ilgili kamu kurumunun görüşü alınarak Kurul izniyle aktarım; m.9/10; diğer kanunlardaki aktarım hükümleri saklıdır. Veri işleyenin aktarım yapması veri sorumlusunun sorumluluğunu ortadan kaldırmaz (Yönetmelik).
 
 Yeni rejim, kişisel verilerin yurt dışına aktarımında **aşamalı** bir mimari öngörür:
 
@@ -360,25 +380,27 @@ Yeni düzenlemenin getirdiği yenilik: Yeterlilik kararı sadece bir ülkenin ge
 
 ### 2.2. Kurul'un Değerlendirme Ölçütleri (m.9/3)
 
-Kurul, yeterlilik kararı verirken aşağıdaki hususları öncelikli olarak dikkate alır (sınırlayıcı değildir):
+Kurul, yeterlilik kararı verirken öncelikle aşağıdaki hususları dikkate alır (m.9/3, Kanun metnindeki sırayla):
 
-- Aktarım yapılacak ülkede kişisel verilerin korunmasına ilişkin mevzuatın ve uygulamasının düzeyi,
-- Bağımsız bir denetim otoritesinin varlığı,
-- İlgili kişilerin haklarını kullanabilme imkânının bulunması,
-- Aktarım yapılacak ülkenin uluslararası anlaşmalara taraf olma durumu,
-- Kişisel verilere erişim yetkisinin kapsamı (özellikle kamu otoriteleri),
-- Yargısal koruma yolları.
+- (a) Aktarım yapılacak ülke, sektör veya uluslararası kuruluş ile Türkiye arasında kişisel veri aktarımına ilişkin karşılıklılık durumu,
+- (b) Ülkenin ilgili mevzuatı ve uygulaması ile uluslararası kuruluşun tabi olduğu kurallar,
+- (c) Bağımsız ve etkin bir veri koruma kurumunun varlığı ile idari ve adli başvuru yollarının bulunması,
+- (ç) Kişisel verilerin korunmasıyla ilgili uluslararası sözleşmelere taraf veya uluslararası kuruluşlara üye olma durumu,
+- (d) Türkiye'nin üye olduğu küresel veya bölgesel kuruluşlara üye olma durumu,
+- (e) Türkiye'nin taraf olduğu uluslararası sözleşmeler.
+
+*(Düzeltme: önceki listede yer alan "kamu otoritelerinin erişim yetkisinin kapsamı" m.9/3'te sayılan bir ölçüt değildir; TIA'da önemli bir etken olmaya devam eder; bkz. §9.)*
 
 ### 2.3. Süre ve Gözden Geçirme (m.9/2)
 
-- Yeterlilik kararları **dört yılda bir** Kurul tarafından gözden geçirilir.
+- Yeterlilik kararı Kurul tarafından verilir ve **Resmî Gazete'de yayımlanır**; **en geç dört yılda bir** değerlendirilir.
 - Bu süre içinde değerlendirme yapılmazsa mevcut karar geçerli olmaya devam eder.
 - Kurul, dört yılı beklemeden değerlendirme yapabilir.
 - Kurul, değerlendirmesi sonucunda kararı **değiştirebilir, askıya alabilir veya iptal edebilir** (ileriye dönük etkili).
 
 ### 2.4. Güncel Liste
 
-Kurul'un yayımladığı **Yeterli Korumanın Bulunduğu Ülkeler Listesi**, Kurum'un internet sitesinde güncel olarak yer alır. Aktarım kararı verilmeden önce listenin **anlık** olarak doğrulanması zorunludur. Listenin tarihi ve sürüm numarası TIA dokümanında belirtilir.
+2026-11-20 tarihli kontrolde Resmî Gazete'de veya Kurum duyurularında **herhangi bir yeterlilik kararı bulunamamıştır** (hiç bulunmadığı DOĞRULANMADI). Aktarım kararı verilmeden önce Resmî Gazete ve kvkk.gov.tr **anlık** olarak kontrol edilir; kontrol tarihi TIA dokümanına yazılır. Yeterlilik kararı yayımlanana kadar Aşama 1 kullanılamaz; aktarımlar Aşama 2 veya yalnızca arızi aktarımlarda Aşama 3 ile yapılır.
 
 ## 3. AŞAMA 2 — Uygun Güvenceler (m.9/4)
 
@@ -398,7 +420,7 @@ Aynı **teşebbüs grubu içindeki** şirketler arasında, Kurul tarafından **�
 
 **Tipik kullanım:** Çok uluslu şirket grubunun Türkiye'deki şirketinden, aynı grubun yabancı ülkedeki şirketine aktarım.
 
-**Önemli:** BCR, bir defaya mahsus Kurul ön onayı gerektirir; onaylandıktan sonra grup içi her aktarım için izin alınmaz. Detay için: [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md)
+**Önemli:** BCR, bir defaya mahsus Kurul ön onayı gerektirir (Yönetmelik m.12–13; veri sorumluları ve veri işleyenler için başvuru formları ve yardımcı kılavuzlar 10.07.2024'te yayımlandı); onaylandıktan sonra grup içi her aktarım için izin alınmaz. Kurum'un duyurduğu ilk BCR onayı 20.05.2026'da verilmiştir (https://www.kvkk.gov.tr/Icerik/8757/). Detay için: [baglayici-sirket-kurallari.md](baglayici-sirket-kurallari.md)
 
 ### 3.3. (c) Standart Sözleşme + Kuruma Bildirim
 
@@ -406,7 +428,7 @@ Kurul tarafından ilan edilen ve **veri kategorileri, aktarım amaçları, alıc
 
 **Tipik kullanım:** Yurt dışındaki SaaS sağlayıcısı, bulut hizmet sağlayıcısı, grup dışı ortakla aktarım.
 
-**Bildirim süresi:** Standart sözleşmenin imzalanmasından itibaren **5 iş günü** içinde Kurum'a bildirilir. Bildirim, ek izin gerektirmez; bildirim yükümlülüğü uyumun parçasıdır.
+**Bildirim süresi:** Standart sözleşme, imzaların tamamlanmasından itibaren **5 iş günü** içinde Kurum'a bildirilir (m.9/5; Yönetmelik m.14/5). Bildirim ek izin gerektirmez. Bildirmemek **m.18/1-d** kapsamında kabahattir (ceza veri sorumlusuna veya veri işleyene verilebilir).
 
 Detay için: [standart-sozlesme-rehberi.md](standart-sozlesme-rehberi.md)
 
@@ -416,7 +438,7 @@ Sektörel veya bölgesel zorunluluklar nedeniyle standart sözleşme ile aktarı
 
 **Tipik kullanım:** Standart sözleşme şablonunun karşılamadığı özel durumlar (sektör spesifik gizlilik, dağıtık alıcı yapısı vb.).
 
-**Pratik:** İzin süreci uzun olduğu için günlük ticari aktarımlar için tercih edilmez.
+**Pratik:** İzin süreci uzun olduğu için günlük ticari aktarımlar için tercih edilmez. Asgari içerik Yönetmelik m.15/2'de sayılmıştır (Türk hukukunun uygulanması ve alıcının Kurul kararlarına uyma taahhüdü dahil). Örnek: üç taahhütnameye 12.03.2025'te izin verilmiştir (https://www.kvkk.gov.tr/Icerik/8261/).
 
 ### 3.5. Aşama 2 Karşılaştırması
 
@@ -433,7 +455,7 @@ Sektörel veya bölgesel zorunluluklar nedeniyle standart sözleşme ile aktarı
 
 Yeterlilik kararı yoksa ve uygun güvencelerden biri sağlanamıyorsa, **arızi olmak kaydıyla**, m.9/6'da sınırlı sayıda belirtilen 6 hâlden birinin varlığı halinde aktarım yapılabilir.
 
-> **Anayasa m.20/3 ışığında** arızi haller **dar yorumlanır** ve sürekli değil **arızi, düzenli olmayan, nadiren gerçekleşen** aktarım için geçerlidir.
+> **Anayasa m.20/3 ışığında** arızi haller **dar yorumlanır**. Yönetmelik m.16/1 arızi aktarımı **düzenli olmayan, tek veya birkaç sefer gerçekleşen, süreklilik arz etmeyen ve olağan ticari faaliyetler dışında kalan** aktarım olarak tanımlar. (a) bendinde ilgili kişi, açık rıza vermeden önce muhtemel riskler hakkında bilgilendirilmelidir.
 
 ### 4.2. Altı Hâl
 
@@ -516,7 +538,7 @@ Detaylı analiz için: [arizi-aktarim.md](arizi-aktarim.md)
 | Kamu yararı projesi (sınırlı/özel) | Arızi (m.9/6-ç) |
 | Düzenli, tekrar eden ticari aktarım | **Asla arızi değil** — uygun güvence şarttır |
 
-## 7. Standart Sözleşme Türleri (Kurul'un 04.06.2024 / 2024/959 Kararı)
+## 7. Standart Sözleşme Türleri (Kurul'un 04.06.2024 / 2024/959 Kararı, 10.07.2024'te ilan edildi)
 
 Kurul, dört türde standart sözleşme metni yayımlamıştır:
 
@@ -527,14 +549,17 @@ Kurul, dört türde standart sözleşme metni yayımlamıştır:
 | 3 | Vİ → Vİ | Türkiye'deki veri işleyenden yurt dışındaki veri işleyene |
 | 4 | Vİ → VS | Türkiye'deki veri işleyenden yurt dışındaki veri sorumlusuna |
 
-Doğru türün seçilmesi kritik öneme sahiptir; yanlış tür sözleşmenin geçersizliğine yol açar.
+Doğru türün seçilmesi kritik öneme sahiptir; yanlış tür sözleşmenin geçersizliğine yol açar. Metinler: https://www.kvkk.gov.tr/Icerik/7929/Standart-Sozlesmeler (Yönetmelik ve sözleşmelerin İngilizce çevirisi 29.08.2024'te duyuruldu; imzalanan metin Türkçe metindir).
 
 ## 8. Kurum'a Bildirim (Standart Sözleşme İçin)
 
-- **Süre:** Sözleşmenin imza tarihinden itibaren **5 iş günü**.
-- **Yöntem:** Kurum'un belirlediği elektronik kanal (Sicil veya internet duyurusunda belirtilen sistem).
-- **Bildirimin İçeriği:** Sözleşmenin tarafları, türü, aktarım kategorileri, alıcı ülke, imza tarihi.
-- **Bildirimin Hukuki Niteliği:** Bildirim **izin değildir**; uyumun parçasıdır. Bildirim yapılmadan aktarım yapılırsa **uygun güvence sağlanmamış sayılır**.
+- **Süre:** Tüm imzaların tamamlanmasından itibaren **5 iş günü**.
+- **Bildirimi kim yapar:** Sözleşmede belirlenen taraf; belirlenmemişse **veri aktaran** (Yönetmelik m.14/5). Taraf olan veri işleyen, veri sorumlusunun talimatını beklemeden bildirir (Kurum rehberi).
+- **Yöntem:** Fiziki olarak (elden/posta), **KEP** ile veya çevrim içi **Standart Sözleşme Bildirim Modülü** https://standartsozlesme.kvkk.gov.tr/ (Kurul'un 17.10.2024 tarihli ve 2024/1793 sayılı Kararı; duyuru 25.10.2024: https://www.kvkk.gov.tr/Icerik/8043/).
+- **İçerik:** Doğru modüle ait imzalı sözleşmenin tamamı, imzacıların adlarını gösteren yetki belgeleri, yabancı dildeki belgelerin noter onaylı tercümeleri (Yönetmelik m.14/6); gerekiyorsa yabancı resmî belgeler için apostil/tasdik.
+- **Şekli geçerlilik noktaları (Kurum duyurusu 05.02.2025, https://www.kvkk.gov.tr/Icerik/8170/):** iki taraf da imzalar (aksi halde geçersiz); imzalar yetkili kişilerce atılır; iki dilli sözleşmede iki taraf da **Türkçe** metni/sütunu imzalar; her iki taraf imza tarihini yazar; taraf adları sözleşme ve yetki belgelerinde tutarlıdır; sayfa eksikliği olmaz.
+- **Değişiklik ve sona erme:** Taraf veya içerik değişikliği ile sona erme de aynı usulle bildirilir (Yönetmelik m.14/8).
+- **Bildirimin Hukuki Niteliği:** Bildirim **izin değildir**; uyumun parçasıdır. Bildirmeme **m.18/1-d** uyarınca cezalandırılır (2026: 90.308 – 1.806.177 TL). Kanun, geç bildirilen sözleşmenin geçersiz olduğunu öngörmez; derhal bildirim yapılır ve gecikme nedeni kayda alınır. *(Düzeltme: önceki sürümde bildirimsiz aktarımın "uygun güvence sağlanmamış sayılacağı" yazılmıştı; bu sonuç Kanun'da veya Yönetmelik'te yer almaz.)*
 
 ## 9. Aktarım Etki Değerlendirmesi (TIA)
 
@@ -553,8 +578,9 @@ TIA örnekleri ve şablon için: [aktarim-degerlendirme-formu.md](aktarim-degerl
 | Hata | Sonuç | Önlem |
 |------|-------|-------|
 | Yeterli ülke listesini güncel doğrulamadan aktarım | Liste değişmişse aktarım uygunsuz | Listeyi her TIA'da kontrol et; sürüm/tarih kaydet |
-| Standart sözleşmeden sapma (ek/değişiklik) | Sözleşme geçersiz | Standart metin değiştirilmez; ek hükümler ayrı eklenir |
-| Bildirim 5 iş gününü aştı | Uygun güvence sağlanmamış sayılır | Sözleşme akış sürecinin parçası olarak otomatik bildirim |
+| Standart sözleşmeden sapma (ek/değişiklik) | Sözleşme geçersiz (Yönetmelik m.14/3: metin değişiklik yapılmaksızın kullanılır) | Standart metin değiştirilmez; ticari hükümler ayrı bir sözleşmeye konur |
+| Bildirim 5 iş gününü aştı | İdari para cezası, m.18/1-d | Bildirim sözleşme akışının sabit adımı; imza tarihleri sözleşmeye yazılır |
+| Yalnızca yabancı dildeki sütunun/metnin imzalanması | Sözleşme geçerli sayılmaz (Kurum duyurusu 05.02.2025) | İki taraf da Türkçe metni imzalar |
 | Yanlış sözleşme türü (VS-Vİ yerine VS-VS) | Sözleşme geçersiz | Karar ağacı + Hukuk Müdürlüğü onayı |
 | Düzenli aktarım için arızi hâl kullanmak | Kurul iptal eder, idari para cezası | Düzenli aktarım = uygun güvence |
 | AB sağlayıcı diye otomatik yeterli kabul etmek | AB ülkesi otomatik yeterli sayılmaz; Kurul listesi gerekli | Liste kontrolü |
@@ -569,8 +595,9 @@ TIA örnekleri ve şablon için: [aktarim-degerlendirme-formu.md](aktarim-degerl
 - [ ] Yeterli değil — uygun güvence yolu seçildi
 - [ ] Sözleşme türü doğru (VS-VS, VS-Vİ, Vİ-Vİ, Vİ-VS)
 - [ ] Standart sözleşme metni değiştirilmedi
-- [ ] Sözleşme imzalandı
-- [ ] 5 iş günü içinde Kurum'a bildirim yapıldı
+- [ ] Sözleşme Türkçe metin üzerinden yetkili imzacılarca imzalandı, iki taraf imza tarihini yazdı
+- [ ] İmzacıların adlarını gösteren yetki belgeleri ve noter onaylı tercümeler eklendi
+- [ ] 5 iş günü içinde Kurum'a bildirim yapıldı (KEP, elden veya Standart Sözleşme Bildirim Modülü)
 - [ ] TIA (Aktarım Etki Değerlendirmesi) tamamlandı
 - [ ] Ek tedbirler (şifreleme, pseudonymization) uygulandı
 - [ ] Aydınlatma metni güncellendi
@@ -583,6 +610,11 @@ TIA örnekleri ve şablon için: [aktarim-degerlendirme-formu.md](aktarim-degerl
 - 7499 sayılı Kanun m.34 — 12.03.2024 tarihli ve 32487 sayılı Resmî Gazete
 - Yürürlük: 01.06.2024
 - Kurul'un 04.06.2024 tarihli ve 2024/959 sayılı kararı — Standart Sözleşme Metinleri ve BCR
-- Kurum'un yayımladığı "Standart Sözleşmeler ve Bağlayıcı Şirket Kurallarına İlişkin Dokümanlar Hakkında Kamuoyu Duyurusu"
-- Kurum'un yayımladığı "Yeterli Korumanın Bulunduğu Ülkeler" listesi
+- Kurum'un yayımladığı "Standart Sözleşmeler ve Bağlayıcı Şirket Kurallarına İlişkin Dokümanlar Hakkında Kamuoyu Duyurusu" (10.07.2024): https://www.kvkk.gov.tr/Icerik/7938/
+- Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik; RG 10.07.2024, Sayı 32598
+- Kurul'un 17.10.2024 tarihli ve 2024/1793 sayılı Kararı; Standart Sözleşme Bildirim Modülü
+- Kurum'un 05.02.2025 tarihli standart sözleşmelerde dikkat edilecek hususlar duyurusu
+- Kurum rehberi "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" (02.01.2025)
+- KVKK m.18/1-d; standart sözleşmeyi bildirmeme cezası
+- Yeterlilik kararları: verildiğinde Resmî Gazete'de yayımlanır (2026-11-20 itibarıyla bulunamadı)
 - Anayasa m.20/3
