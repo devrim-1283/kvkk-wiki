@@ -3,10 +3,10 @@ Doküman / Document: KVKK Kurulu Önemli Kararları — Özet ve Operasyonel Etk
 Bölüm / Section: 12-mevzuat-arsiv
 Sahip / Owner: Hukuk Müşavirliği + KVKK Sorumlusu — Legal Counsel + KVKK Officer
 Onaylayan / Approved by: KVKK Komitesi — KVKK Committee
-Versiyon / Version: 1.0
-Yürürlük / Effective: 2026-05-08
+Versiyon / Version: 2.0
+Yürürlük / Effective: 2026-11-20
 Gözden Geçirme / Review: Aylık tarama (yeni karar) + her yeni karar için anlık etki analizi — Monthly scan (new decisions) + immediate impact analysis for each new decision
-İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.22; KVKK Kurumu Çalışma Yönetmeliği — KVKK Art. 22; KVKK Authority Working Regulation
+İlgili Mevzuat / Legal Reference: 6698 sayılı KVKK m.15/6, m.22 (7499 sayılı Kanun ile değişik m.6, m.9, m.18); Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik (RG 10.07.2024, Sayı 32598); KVKK Kurumu Çalışma Yönetmeliği — KVKK Art. 22; KVKK Authority Working Regulation
 ---
 
 ## English
@@ -100,74 +100,84 @@ Controllers processing sensitive data must take the following adequate measures:
 
 **Wiki:** [08-ihlal-yonetimi](../08-ihlal-yonetimi/), [99-sablonlar/ihlal-bildirim.md](../99-sablonlar/ihlal-bildirim.md), [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
 
+**Update (2024–2026):**
+
+- **Publication of breach notifications limited to 60 days**: Board Decision 2025/2451 (25.12.2025), announced 20.01.2026: breach notifications published on the Authority's website stay online for at most 60 days, and are removed earlier if the controller proves that data subjects have been notified. The 72-hour rule of Decision 2019/10 is restated unchanged. Source: https://www.kvkk.gov.tr/Icerik/8595/
+- **Territorial scope ("effects principle")**: Board Decision 2025/601 (28.03.2025; summary published 10.08.2026): Decision 2019/10 requires a controller established abroad to notify a breach when it affects data subjects in Türkiye who use its products/services in Türkiye; a Hong Kong hotel company with no presence in Türkiye whose guests used the services in Hong Kong was held not to be under the notification duty. Source: https://www.kvkk.gov.tr/Icerik/8873/2025-601
+- **Late detection is sanctioned**: Board Decision 2024/1385 (08.08.2024): an e-commerce platform that detected credential-stuffing logins only after customer complaints was fined TRY 3,250,000 under Art. 18/1-b. Source: https://www.kvkk.gov.tr/Icerik/8140/2024-1385
+- **Cyber Security Law No. 7545** (Official Gazette 19.03.2025, No. 32846) adds a separate duty to report cyber incidents to the Cyber Security Presidency "without delay" (Art. 7/1-b); see [../11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) §9a.
+
 ---
 
 ### 3.3 Decision No. 2024/959 (04.06.2024) — Standard Contracts and BCR (Cross-Border Transfer)
 
-**Subject:** Following the amendment of KVKK Art. 9 by Law No. 7499 dated 12.03.2024, the principles for **standard contract texts** and **binding corporate rules (BCR)**.
+**Subject:** Following the amendment of KVKK Art. 9 by Law No. 7499 (Official Gazette 12.03.2024, No. 32487; in force 01.06.2024), the final texts of the **standard contracts** and the **binding corporate rules (BCR)** documents. The decision was announced on kvkk.gov.tr on **10.07.2024**, the same day the Regulation on the Procedures and Principles for Transfer of Personal Data Abroad was published (Official Gazette 10.07.2024, No. 32598). Source: https://www.kvkk.gov.tr/Icerik/7938/
 
 **Decision:**
 
 1. **Standard Contract Texts:**
-   - The Authority approved standard contract texts for four scenarios:
+   - The Board adopted four standard contract texts (modules):
      - Controller to controller
      - Controller to processor
      - Processor to processor
      - Processor to controller
-   - These contracts must conform exactly to the texts published by the Authority; **any modification requires Authority approval**.
-   - Once a standard contract is signed, it must be notified to the Authority **within 5 business days** (Art. 9/5).
+   - The text must be used **without any modification** (Transfer Regulation Art. 14/3). Nothing may be added, removed or changed; there is no approval route for modified texts. *(Correction: the previous version said modifications require Authority approval.)*
+   - The signed contract is notified to the Authority **within 5 business days** of completion of signatures (KVKK Art. 9/5; Regulation Art. 14/5): by hand/post, registered e-mail (KEP), or the online **Standard Contract Notification Module** (https://standartsozlesme.kvkk.gov.tr/, opened by Board Decision 2024/1793 of 17.10.2024, announced 25.10.2024). The parties may designate who notifies; otherwise the data exporter notifies. Changes of parties or content and termination are notified the same way (Regulation Art. 14/8).
+   - Non-notification: administrative fine under KVKK Art. 18/1-d (see the sanctions page for current amounts).
 
 2. **BCR (Binding Corporate Rules):**
-   - For multinational corporate groups, BCRs may be used for intra-group cross-border transfers.
-   - BCRs are subject to Authority **approval** (no automatic validity).
-   - Minimum document list, content standards, and assessment criteria for BCR applications.
+   - For groups of undertakings engaged in joint economic activity, BCRs may be used for intra-group transfers after Board **approval** (no automatic validity); separate application forms and auxiliary guides for controllers and processors were published.
+   - First BCR approval announced: Sosyo-Plus Bilgi Bilişim Teknolojileri Danışmanlık Hizmetleri A.Ş., approved 20.05.2026 under Art. 9/4-b. Source: https://www.kvkk.gov.tr/Icerik/8757/
 
-3. **Undertaking:**
-   - Controller / processor undertakings for specific transfer needs are subject to Authority approval.
+3. **Undertaking (taahhütname):**
+   - Under Art. 9/4-ç a written undertaking requires Board permission before transfer (Regulation Art. 15). Example under the new regime: three undertakings of VF Ege Giyim Sanayi ve Ticaret Ltd. Şti. permitted on 12.03.2025 (https://www.kvkk.gov.tr/Icerik/8261/). Undertaking permissions announced in January–May 2024 (Celltrion 25.01.2024, Bosch Termoteknik 02.05.2024, Huawei 28.05.2024) were granted under the **former** Art. 9/2-b.
+
+4. **Non-treaty agreement between public bodies (Art. 9/4-a):** first permission announced 10.11.2025; agreement between the Presidency of Migration Management and UNHCR, permitted on 21.10.2025 (https://www.kvkk.gov.tr/Icerik/8538/).
+
+**Practical points from the Authority's announcement of 05.02.2025** (https://www.kvkk.gov.tr/Icerik/8170/): the contract is invalid without valid signatures of both parties or their authorised signatories; signatures must meet the Code of Obligations; if the contract is bilingual, both parties sign the **Turkish** text/column; documents proving signatory authority (naming the signatories) are submitted with the contract; both parties write their signature dates on the contract; foreign official documents may require apostille or consular legalisation.
 
 **Operational Impact:**
 
-- All active cross-border transfers reviewed for compliance with the new regime.
-- Standard contract template uses the Authority text; legal templates cannot be customised.
-- 5-business-day Authority notification has a written process and ticket.
+- All active cross-border transfers reviewed for compliance with the new regime (consent-based transfers under the former Art. 9/1 were allowed only until 01.09.2024; KVKK Provisional Art. 3/1).
+- Standard contract template uses the Authority text verbatim; commercial terms go into a separate agreement.
+- 5-business-day notification has a written process, owner and ticket; signature dates recorded on the contract.
 - For intra-group transfers, BCR assessment: cost-benefit analysis.
-- Whether prior approvals (pre-Art. 9 amendment) remain valid is assessed by Legal.
+- Authority guide: "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" (02.01.2025): https://www.kvkk.gov.tr/Icerik/8143/
 
 **Wiki:** [07-aktarim](../07-aktarim/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
 
 ---
 
-### 3.4 Cookie Guide — June 2022
+### 3.4 Cookie Guide: June 2022, revised edition July 2025
 
-**Subject:** **Cookie** use on websites and disclosure obligation.
+**Subject:** **Cookie** use on websites and disclosure obligation. The guide "Çerez Uygulamaları Hakkında Rehber" was re-issued as KVKK Publication No. 69, **July 2025** (imprint page of the PDF; it now refers to the 10.07.2024 Transfer Regulation): https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf
 
-**Guide Content:**
+**Guide Content (July 2025 edition):**
 
-1. **Cookie Types:**
-   - Strictly necessary (technical): no consent required.
-   - Performance / analytics: user consent required.
-   - Functional: user consent required.
-   - Marketing / advertising: explicit consent required.
+1. **Legal basis:** Under KVKK there is only one consent concept; **explicit consent (açık rıza)**. Cookies that are strictly necessary for transmission (Criterion A) or for a service explicitly requested by the user (Criterion B) may rely on other Art. 5/2 conditions; all others need explicit consent.
+   - Strictly necessary: no consent.
+   - **First-party analytics** limited to audience/performance measurement of the site itself may fall under Criterion B (no consent), with data minimisation (e.g. IP truncation) recommended. *(Correction: the previous version said analytics always needs consent.)* Third-party analytics or analytics also used for advertising do not benefit from this.
+   - Functional: explicit consent unless the user clearly requested the function.
+   - Marketing / behavioural advertising: explicit consent.
 
-2. **Disclosure:**
-   - Cookie policy published as a separate page on the website.
-   - Information given to the user before cookies are used.
+2. **Disclosure:** Cookie policy and disclosure available at collection; a link in the cookie panel is good practice.
 
 3. **Consent:**
-   - "Accept" / "Reject" must be equally visible.
-   - Rejection must not impair use.
-   - Pre-ticked boxes invalid; affirmative action required.
-   - Granular (per cookie category) preferred.
+   - Good practice: panel with equally prominent "Accept", "Reject" and "Preferences" buttons (colour, size, font).
+   - Consent-requiring cookies are off by default (no pre-ticked boxes).
+   - Consent may not be bundled into terms of use or privacy notices.
+   - Avoid asking on every visit ("consent fatigue"); periodic reminder proportionate to cookie lifetime.
 
-4. **Withdrawal:**
-   - The user must be able to change preferences at any time.
-   - "Cookie preferences" link accessible on every page.
+4. **Withdrawal:** Must be as easy as giving consent; a small persistent icon/band is cited as good practice.
+
+5. **Cross-border:** Cookies placed by foreign providers are cross-border transfers and need an Art. 9 route.
 
 **Operational Impact:**
 
 - CMP (Consent Management Platform) mandatory.
 - Cookie scan quarterly.
-- Third-party tag manager (GTM, Tealium) configuration conditioned on consent state.
+- Tag manager configuration conditioned on consent state; first-party measurement assessed separately under Criterion B.
+- Board Decision 2024/1361 (08.08.2024): missing cookie panel and opt-in, combined with other breaches, was fined. Source: https://www.kvkk.gov.tr/Icerik/8884/2024-1361
 - KPI: consent rate, withdrawal rate, cookie policy visit count.
 
 **Wiki:** [10-ozel-konular](../10-ozel-konular/), [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/)
@@ -176,11 +186,11 @@ Controllers processing sensitive data must take the following adequate measures:
 
 ### 3.5 Adequate-Protection Country List
 
-**Subject:** Under KVKK Art. 9/4 (post-12.03.2024 Art. 9/2-a), the **list of countries with adequate protection** is determined by the Authority.
+**Subject:** Under KVKK Art. 9/1–9/3 (as amended by Law 7499), the Board may issue **adequacy decisions** for a country, sectors within a country, or an international organisation (replacing the former Art. 9/3 mechanism of a Board-announced list of countries with adequate protection).
 
-**Status (as of 2026):**
+**Status (as checked on 2026-11-20):**
 
-> The Authority's list of countries with an adequacy decision must always be verified at kvkk.gov.tr. The list is updated as the protection regime of a country is compared with Türkiye's standards. Without country-specific approvals, current cross-border transfers are assessed under **standard contracts**, **BCRs** or **derogations**.
+> Under the amended Art. 9/2, an adequacy decision is issued by the Board and **published in the Official Gazette**; it is reviewed at least every four years. In the Authority's announcements and principle-decision pages checked for 2024–2026 and in a web search, **no adequacy decision was found** (DOĞRULANMADI / UNVERIFIED that none exists; re-check the Official Gazette before each TIA). Until one is published, transfers rely on **appropriate safeguards** (Art. 9/4) or, for occasional transfers only, **Art. 9/6**.
 
 **Operational Impact:**
 
@@ -196,11 +206,19 @@ Controllers processing sensitive data must take the following adequate measures:
 
 **Subject:** Under KVKK Art. 16 and VERBİS Reg. Art. 16, criteria upon which the Authority may grant exemption from the registration obligation.
 
-**Authority Decisions (Historical):**
+**Authority Decisions (thresholds):**
 
-The Authority has granted exemptions of the following types in various decisions (references via kvkk.gov.tr archive):
+- **Decision 2018/87 (19.07.2018):** exempts controllers with **fewer than 50 employees and annual balance-sheet total below TRY 25 million**, whose main activity is not processing special-category data.
+- **Decision 2023/1154 (06.07.2023):** raised the balance-sheet threshold to **TRY 100 million**.
+- **Decision 2025/1572 (04.09.2025; Official Gazette 01.10.2025, No. 33034):** adds a new exemption; controllers **whose main activity is processing special-category data** are exempt if they have **fewer than 10 employees and an annual balance-sheet total below TRY 10 million**. Source: https://www.kvkk.gov.tr/Icerik/8388/
+- **Decision 2025/2393 (25.12.2025), announced 12.01.2026:** controllers that do not keep balance-sheet-basis books are assessed on the **employee-count criterion only**; balance-sheet-basis controllers must meet both criteria cumulatively. Source: https://www.kvkk.gov.tr/Icerik/8577/
+- **Deadline:** controllers that become obliged after 31.12.2021 must register within **30 days** (VERBİS Regulation Art. 8/2). For controllers obliged because of their 2025 balance sheet, Decision 2026/1026 (13.05.2026) extended the deadline to **05.06.2026**. Source: https://www.kvkk.gov.tr/Icerik/8752/
+- **Joint ventures/consortia** do not register in their own name; obliged partners enter the joint venture's processing in their own VERBİS records (Decision 2021/569, reminder 16.03.2026: https://www.kvkk.gov.tr/Icerik/8692/).
+- **Enforcement:** as of 01.08.2024 the Board had imposed TRY 503,935,000 in VERBİS fines on controllers that failed to register (about 16,350 of ~130,600 obliged controllers), using an algorithm based on balance-sheet totals. Source: https://www.kvkk.gov.tr/Icerik/7980/
+- VERBİS guide and "Sorularla VERBİS" were updated on 07.10.2025: https://www.kvkk.gov.tr/Icerik/8426/
 
-- Natural/legal persons whose annual employee count is **fewer than 50** and whose annual financial balance is below a specified threshold (whose primary activity is not sensitive data processing)
+Other exemption categories granted by earlier decisions (references via kvkk.gov.tr archive):
+
 - Notaries
 - Lawyers (special arrangement)
 - Pension funds, associations, foundations (depending on activity)
@@ -210,7 +228,7 @@ The Authority has granted exemptions of the following types in various decisions
 
 - If the Company's size exceeds the Authority's exemption thresholds, registration is mandatory.
 - Group companies below threshold are assessed separately.
-- Updates to Authority thresholds may have immediate effect.
+- Updates to Authority thresholds may have immediate effect; the 30-day registration clock starts when the obligation arises (e.g. after the corporate tax return showing the balance sheet).
 
 **Wiki:** [02-envanter-ve-sicil](../02-envanter-ve-sicil/), [12-mevzuat-arsiv/verbis-yonetmelik.md](verbis-yonetmelik.md)
 
@@ -228,6 +246,59 @@ The Authority has granted exemptions of the following types in various decisions
 | Various | Single-document consent | Disclosure + consent in one document | Invalid; separate documents required |
 | Various | Employer email monitoring | Disclosure + LIA | All monitoring activities must be framed by policy and disclosure |
 | Various | Sale / sharing of personal data | Sale to third parties | Explicit consent required outside Art. 5/2; otherwise breach |
+
+### 3.8 Principle Decisions (İlke Kararları) 2025–2026
+
+Principle decisions are taken under KVKK Art. 15/6 and published in the Official Gazette and on kvkk.gov.tr; non-compliance is sanctioned under Art. 18. List source: https://www.kvkk.gov.tr/Icerik/7201/ilke-kararlari
+
+| Decision | Official Gazette | Subject | Key rule |
+|----------|------------------|---------|----------|
+| 2025/1072 (10.06.2025) | 26.06.2025, No. 32938 | SMS verification codes during sales | Explain the purpose of the code; do not bundle membership, consent to processing and commercial e-message approval into one code; separate consents; consent to marketing must not be a condition of the sale. https://www.kvkk.gov.tr/Icerik/8339/ |
+| 2025/2120 (06.11.2025) | 09.12.2025, No. 33102 | ID-card photocopies at hotels | Recording name/surname/TR ID No. is lawful (Identity Reporting Law No. 1774); taking and keeping a **photocopy** of the ID card is excessive; stop and destroy existing copies. https://www.kvkk.gov.tr/Icerik/8554/ |
+| 2026/266 (11.02.2026) | 28.02.2026, No. 33182 | Loyalty cards used by third parties at checkout | Shopping on someone's loyalty card by quoting their phone/card number without verification has no Art. 5 basis and breaches accuracy and security; verification mechanism required. Compliance period 6 months, **extended to 28.02.2027** by Decision 2026/1491 (22.07.2026; Official Gazette 13.08.2026, No. 33339). https://www.kvkk.gov.tr/Icerik/8670/ · https://www.kvkk.gov.tr/Icerik/8899/ |
+| 2026/347 (18.02.2026) | 24.03.2026, No. 33203 | Separate privacy notice and consent texts | Disclosure is always required and is not consented to; where consent is the basis, notice and consent text are separate documents (or separate headings with separate statements); no copy-paste texts; plain language; avoid vague "Art. 5 and 6 conditions" wording. https://www.kvkk.gov.tr/Icerik/8710/ |
+| 2026/348 (18.02.2026) | 31.03.2026, No. 33210 | Posting residents' debts in apartment common areas | Posting debt lists in lifts/entrances has no Art. 5 basis and breaches Art. 12; use closed e-mail/messaging groups or dedicated apps. https://www.kvkk.gov.tr/Icerik/8719/ |
+| 2026/921 (29.04.2026) | 02.06.2026, No. 33268 | Biometric data for attendance tracking | Not permitted for attendance purposes even with explicit consent (proportionality); use card/PIN/RFID/manual alternatives. Clarification 27.08.2026: security-driven biometric access control is outside the decision, assessed case by case. https://www.kvkk.gov.tr/Icerik/8762/ · https://www.kvkk.gov.tr/Icerik/8912/ |
+| 2026/1095 (20.05.2026) | 01.07.2026, No. 33297 | Data of accident victims | Claims-consultancy firms and experts exceeding their authority have no processing basis; disclosure by insurance experts may constitute TCC Art. 136; role-based access, logging and training required. https://www.kvkk.gov.tr/Icerik/8787/ |
+| 2026/1301 (01.07.2026) | 28.07.2026, No. 33323 | Public bodies publishing personal data online | Publish only what is necessary; masking/anonymisation; set publication periods and remove afterwards; prefer e-Devlet or 2FA platforms for exam/lottery results; review existing publications. https://www.kvkk.gov.tr/Icerik/8835/ |
+| 2026/2035 (16.09.2026) | 08.10.2026, No. 33394 | Employer monitoring of corporate e-mail and work communication channels | Monitoring is subject to KVKK conditions, notice and security; clear business/private-use rules; graduated monitoring; content review only on concrete suspicion and limited to that purpose; account special-category and third-party data; restricted, logged access; post-employment processing needs its own basis. https://www.kvkk.gov.tr/Icerik/9044/ |
+
+### 3.9 Notable Decision Summaries and Announcements 2024–2026
+
+| Date | Item | Point for practice |
+|------|------|--------------------|
+| 08.02.2024 | Decision 2024/197 | University fingerprint attendance: stop, use alternatives, destroy data. https://www.kvkk.gov.tr/Icerik/8860/2024-197 |
+| 08.08.2024 | Decision 2024/1361 | Camera with audio recording, no notice, no cookie panel, marketing consent as a precondition of service; fines under Art. 18/1-a and 18/1-b totalling TRY 265,000. https://www.kvkk.gov.tr/Icerik/8884/2024-1361 |
+| 08.08.2024 | Decision 2024/1385 | E-commerce credential-stuffing breach detected late; TRY 3,250,000 under Art. 18/1-b. https://www.kvkk.gov.tr/Icerik/8140/2024-1385 |
+| 15.08.2024 | Decision 2024/1393 | In-flight Wi-Fi provider is the controller; making the service conditional on unnecessary explicit consent breaches Art. 4; TRY 90,000 under Art. 18/1-b. https://www.kvkk.gov.tr/Icerik/8885/2024-1393 |
+| 10.06.2026 | Decision 2026/1183 | Marketing SMS/calls to numbers collected through a "brand ambassador" referral scheme; TRY 1,000,000 under Art. 18/1-b. https://www.kvkk.gov.tr/Icerik/8887/2026-1183 ; related announcement 21.07.2026 on third-party-sourced marketing data: https://www.kvkk.gov.tr/Icerik/8830/ |
+| 14.01.2026 | Announcement | Push notifications from mobile apps must comply with Arts. 4 and 5. https://www.kvkk.gov.tr/Icerik/8578/ |
+| 29.01.2026 | Announcement | Public bodies must not make staff use foreign-origin messaging apps (e.g. WhatsApp) for official business (Presidential Circular 2019/12). https://www.kvkk.gov.tr/Icerik/8607/ |
+| 11.02.2026 / 20.02.2026 | Ex officio investigations | Opened into X Internet Unlimited Co. and X.AI Corp. (Grok), Google LLC (Google Assistant false activations), and children's data on TikTok, Instagram, Facebook, YouTube, X and Discord. https://www.kvkk.gov.tr/Icerik/8614/ · https://www.kvkk.gov.tr/Icerik/8613/ · https://www.kvkk.gov.tr/Icerik/8666/ |
+| 08.06.2026 | Announcements | Security cameras in workplaces and in apartment buildings (Condominium Law No. 634). https://www.kvkk.gov.tr/Icerik/8770/ · https://www.kvkk.gov.tr/Icerik/8769/ |
+| 23.06.2026 | Announcement | Municipal live tourist webcams showing faces/plates are processing; publish only non-identifying images. https://www.kvkk.gov.tr/Icerik/8777/ |
+| 01.10.2026 | Announcement | Replies to data subject applications must be **in writing or electronic**; phone or face-to-face replies do not count as the Art. 13 answer. https://www.kvkk.gov.tr/Icerik/9024/ |
+
+### 3.10 Guides and Information Notes 2024–2026
+
+| Date | Document | Link |
+|------|----------|------|
+| 16.01.2024 | Guide on processing TR identity numbers | https://www.kvkk.gov.tr/Icerik/7798/ |
+| 19.01.2024 | Deepfake information note | https://www.kvkk.gov.tr/Icerik/7807/ |
+| 24.01.2024 | Guide on personal data in election activities | https://www.kvkk.gov.tr/Icerik/7813/ |
+| 05.08.2024 | Information note on the "expressly provided by law" condition | https://www.kvkk.gov.tr/Icerik/7823/ |
+| 08.11.2024 | Chatbots (ChatGPT example) information note | https://www.kvkk.gov.tr/Icerik/8047/ |
+| 02.01.2025 | Guide on transfer of personal data abroad | https://www.kvkk.gov.tr/Icerik/8143/ |
+| 08.01.2025 | Banking sector good-practice guide (updated) | https://www.kvkk.gov.tr/Icerik/8148/ |
+| 26.02.2025 | Guide on processing special-category data (post-7499) | https://www.kvkk.gov.tr/Icerik/8184/ |
+| 11.04.2025 | Payment and e-money sector good-practice guide | https://www.kvkk.gov.tr/Icerik/8286/ |
+| July 2025 | Cookie guide, revised edition (Publication No. 69) | see §3.4 |
+| 24.11.2025 | Generative AI and personal data protection guide (15 questions) | https://www.kvkk.gov.tr/Icerik/8547/ |
+| 05.03.2026 | Use of generative AI tools in workplaces | https://www.kvkk.gov.tr/Icerik/8674/ |
+| 12.03.2026 | Agentic AI | https://www.kvkk.gov.tr/Icerik/8683/ |
+| 28.07.2026 | KVKK compliance guide for public institutions and public professional bodies | https://www.kvkk.gov.tr/Icerik/8833/ |
+| 22.09.2026 | Practice guide for lawyers' professional activities (with the Union of Turkish Bar Associations) | https://www.kvkk.gov.tr/Icerik/8990/ |
+| (undated in list) | Guide on processing in live reality-show programmes | https://www.kvkk.gov.tr/Icerik/2030/rehberler (publication date DOĞRULANMADI / UNVERIFIED) |
 
 ---
 
@@ -382,74 +453,84 @@ KVKK Kurulu, idari işlem niteliğindeki bağlayıcı kararları aracılığıyl
 
 **Wiki:** [08-ihlal-yonetimi](../08-ihlal-yonetimi/), [99-sablonlar/ihlal-bildirim.md](../99-sablonlar/ihlal-bildirim.md), [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
 
+**Güncelleme (2024–2026):**
+
+- **İhlal bildirimlerinin ilanı 60 günle sınırlandı**: Kurul'un 25.12.2025 tarihli ve 2025/2451 sayılı Kararı (duyuru 20.01.2026): Kurum internet sitesinde ilan edilen veri ihlali bildirimleri en fazla 60 gün yayında kalır; veri sorumlusu ilgili kişilere bildirim yaptığını belgelerse ilan daha erken kaldırılır. 2019/10 sayılı Karar'daki 72 saat kuralı aynen hatırlatılmıştır. Kaynak: https://www.kvkk.gov.tr/Icerik/8595/
+- **Yer bakımından uygulama ("etki ilkesi")**: Kurul'un 28.03.2025 tarihli ve 2025/601 sayılı Kararı (özet 10.08.2026'da yayımlandı): 2019/10 sayılı Karar, yurt dışında yerleşik veri sorumlusunun ihlali Türkiye'de yerleşik ve ürün/hizmetten Türkiye'de yararlanan ilgili kişileri etkiliyorsa bildirim yapmasını gerektirir; Türkiye'de hiçbir varlığı bulunmayan ve hizmetleri Hong Kong'da sunulan bir Hong Kong otel şirketinin bildirim yükümlülüğü bulunmadığına karar verilmiştir. Kaynak: https://www.kvkk.gov.tr/Icerik/8873/2025-601
+- **Geç tespit yaptırıma bağlanıyor**: Kurul'un 08.08.2024 tarihli ve 2024/1385 sayılı Kararı: kimlik bilgisi doldurma (credential stuffing) girişlerini ancak müşteri şikâyetleri sonrası fark eden bir e-ticaret platformuna m.18/1-b uyarınca 3.250.000 TL idari para cezası verilmiştir. Kaynak: https://www.kvkk.gov.tr/Icerik/8140/2024-1385
+- **7545 sayılı Siber Güvenlik Kanunu** (RG 19.03.2025, Sayı 32846), siber olayların Siber Güvenlik Başkanlığına "gecikmeksizin" bildirilmesine ilişkin ayrı bir yükümlülük getirir (m.7/1-b); bkz. [../11-denetim-ve-uyum/yaptirimlar-cezalar.md](../11-denetim-ve-uyum/yaptirimlar-cezalar.md) §9a.
+
 ---
 
 ### 3.3 04.06.2024 Tarih ve 2024/959 Sayılı Karar — Standart Sözleşmeler ve BCR (Yurt Dışı Aktarım)
 
-**Konu:** KVKK m.9'un 12.03.2024 tarihli ve 7499 sayılı Kanun ile değiştirilmesi sonrasında **standart sözleşme metinleri** ve **bağlayıcı şirket kuralları (BCR)** uygulamasına ilişkin esaslar.
+**Konu:** KVKK m.9'un 7499 sayılı Kanun ile değiştirilmesi (RG 12.03.2024, Sayı 32487; yürürlük 01.06.2024) sonrasında **standart sözleşme metinleri** ile **bağlayıcı şirket kuralları (BCR)** dokümanlarının nihai hali. Karar, Kişisel Verilerin Yurt Dışına Aktarılmasına İlişkin Usul ve Esaslar Hakkında Yönetmelik'in yayımlandığı **10.07.2024** tarihinde kvkk.gov.tr'de ilan edilmiştir (Yönetmelik: RG 10.07.2024, Sayı 32598). Kaynak: https://www.kvkk.gov.tr/Icerik/7938/
 
 **Karar İçeriği:**
 
 1. **Standart Sözleşme Metinleri:**
-   - Kurul, dört farklı senaryoya yönelik standart sözleşme metnini onaylamıştır:
+   - Kurul dört standart sözleşme metnini (modül) kabul etmiştir:
      - Veri sorumlusundan veri sorumlusuna
      - Veri sorumlusundan veri işleyene
      - Veri işleyenden veri işleyene
      - Veri işleyenden veri sorumlusuna
-   - Bu sözleşmeler Kurul'un yayımladığı metinlere bire bir uygun olmalıdır; **sözleşme metninde değişiklik yapılması Kurul'un onayına tâbidir**.
-   - İmzalanan standart sözleşme **5 iş günü içinde** Kurul'a bildirilir (m.9/5).
+   - Metin **hiçbir değişiklik yapılmaksızın** kullanılır (Yönetmelik m.14/3). Ekleme, çıkarma veya değişiklik yapılamaz; değiştirilmiş metin için bir onay yolu yoktur. *(Düzeltme: önceki sürümde değişikliğin Kurul onayına tabi olduğu yazılmıştı.)*
+   - İmzalanan sözleşme, imzaların tamamlanmasından itibaren **5 iş günü içinde** Kurum'a bildirilir (KVKK m.9/5; Yönetmelik m.14/5): fiziki olarak (elden/posta), KEP ile veya çevrim içi **Standart Sözleşme Bildirim Modülü** üzerinden (https://standartsozlesme.kvkk.gov.tr/; Kurul'un 17.10.2024 tarihli ve 2024/1793 sayılı Kararı, duyuru 25.10.2024). Bildirimi kimin yapacağı sözleşmede belirlenebilir; belirlenmemişse veri aktaran bildirir. Taraf veya içerik değişikliği ile sözleşmenin sona ermesi de aynı usulle bildirilir (Yönetmelik m.14/8).
+   - Bildirmeme: KVKK m.18/1-d uyarınca idari para cezası (güncel tutarlar için yaptırımlar sayfasına bakınız).
 
 2. **BCR (Bağlayıcı Şirket Kuralları):**
-   - Çok uluslu şirket grupları için, grup içi yurt dışı aktarımlarda BCR kullanılabilir.
-   - BCR'lerin Kurul **onayına** tâbi olduğu (otomatik geçerlilik yok).
-   - BCR başvurusu için asgari belge listesi, içerik standartları, değerlendirme kriterleri.
+   - Ortak ekonomik faaliyette bulunan teşebbüs grupları, grup içi aktarımlarda BCR'yi Kurul **onayı** sonrasında kullanabilir (otomatik geçerlilik yok); veri sorumluları ve veri işleyenler için ayrı başvuru formları ve yardımcı kılavuzlar yayımlanmıştır.
+   - İlan edilen ilk BCR onayı: Sosyo-Plus Bilgi Bilişim Teknolojileri Danışmanlık Hizmetleri A.Ş., m.9/4-b kapsamında 20.05.2026'da onaylandı. Kaynak: https://www.kvkk.gov.tr/Icerik/8757/
 
 3. **Taahhütname:**
-   - Belirli aktarım ihtiyaçları için "veri sorumlusu/veri işleyen taahhütnamesi" Kurul onayına tabi.
+   - m.9/4-ç uyarınca yazılı taahhütname ile aktarım için önceden Kurul izni gerekir (Yönetmelik m.15). Yeni rejimde örnek: VF Ege Giyim Sanayi ve Ticaret Ltd. Şti.'nin üç taahhütnamesine 12.03.2025'te izin verilmiştir (https://www.kvkk.gov.tr/Icerik/8261/). Ocak–Mayıs 2024'te duyurulan taahhütname izinleri (Celltrion 25.01.2024, Bosch Termoteknik 02.05.2024, Huawei 28.05.2024) **eski** m.9/2-b kapsamında verilmiştir.
+
+4. **Kamu kurumları arasında uluslararası sözleşme niteliğinde olmayan anlaşma (m.9/4-a):** ilk izin 10.11.2025'te duyurulmuştur; Göç İdaresi Başkanlığı ile BMMYK arasındaki anlaşma kapsamında aktarıma 21.10.2025'te izin verilmiştir (https://www.kvkk.gov.tr/Icerik/8538/).
+
+**Kurum'un 05.02.2025 tarihli duyurusundaki uygulama notları** (https://www.kvkk.gov.tr/Icerik/8170/): iki tarafın veya yetkili imzacılarının geçerli imzası yoksa sözleşme geçersizdir; imzalar Türk Borçlar Kanunu'na uygun olmalıdır; sözleşme iki dilliyse taraflar **Türkçe** metni/sütunu imzalar; imzacıların adlarını gösteren yetki belgeleri sözleşmeyle birlikte sunulur; her iki taraf imza tarihini sözleşmeye yazar; yabancı resmî belgeler için apostil veya konsolosluk onayı gerekebilir.
 
 **Operasyonel Etki:**
 
-- Tüm aktif yurt dışı aktarımlar yeni rejime uyumlu olarak gözden geçirilir.
-- Standart sözleşme şablonu Kurul'un yayımladığı metin esas alınır; hukuk şablonu özelleştirilemez.
-- 5 iş günü Kurul bildirimi için yazılı süreç ve ticket.
+- Tüm aktif yurt dışı aktarımlar yeni rejime göre gözden geçirilir (eski m.9/1 uyarınca açık rızaya dayalı aktarımlar yalnızca 01.09.2024'e kadar mümkündü; KVKK geçici m.3/1).
+- Standart sözleşmede Kurum metni aynen kullanılır; ticari hükümler ayrı bir sözleşmeye konur.
+- 5 iş günlük bildirim için yazılı süreç, sorumlu ve ticket; imza tarihleri sözleşmeye işlenir.
 - Grup içi aktarımlarda BCR değerlendirmesi: maliyet-fayda analizi.
-- Eski (m.9 değişiklik öncesi) onaylar yeni rejimde geçerli mi sorusu Hukuk değerlendirmesinde.
+- Kurum rehberi: "Kişisel Verilerin Yurt Dışına Aktarılması Rehberi" (02.01.2025): https://www.kvkk.gov.tr/Icerik/8143/
 
 **Wiki:** [07-aktarim](../07-aktarim/), [11-denetim-ve-uyum/kpi-ve-metrikler.md](../11-denetim-ve-uyum/kpi-ve-metrikler.md)
 
 ---
 
-### 3.4 Çerez Rehberi — Haziran 2022
+### 3.4 Çerez Rehberi: Haziran 2022, Temmuz 2025 güncel baskı
 
-**Konu:** Web sitelerinde **çerez (cookie) kullanımı** ve aydınlatma yükümlülüğü.
+**Konu:** Web sitelerinde **çerez (cookie) kullanımı** ve aydınlatma yükümlülüğü. "Çerez Uygulamaları Hakkında Rehber", KVKK Yayınları No: 69, **Temmuz 2025** baskısıyla yeniden yayımlanmıştır (PDF künye sayfası; 10.07.2024 tarihli Yurt Dışı Aktarım Yönetmeliği'ne atıf içerir): https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf
 
-**Rehber İçeriği:**
+**Rehber İçeriği (Temmuz 2025 baskısı):**
 
-1. **Çerez Türleri:**
-   - Zorunlu (teknik gereklilik): rıza aranmaz.
-   - Performans / analitik: kullanıcı izni gerekli.
-   - İşlevsellik: kullanıcı izni gerekli.
-   - Pazarlama / reklam: açık rıza gerekli.
+1. **Hukuki sebep:** KVKK'da tek bir rıza kavramı vardır; **açık rıza**. İletim için kesinlikle gerekli (Kriter A) veya kullanıcının açıkça talep ettiği hizmet için kesinlikle gerekli (Kriter B) çerezler m.5/2'deki diğer şartlara dayanabilir; diğer tüm çerezler açık rıza gerektirir.
+   - Zorunlu: rıza aranmaz.
+   - Sitenin kendi kitle/performans ölçümüyle sınırlı **birinci taraf analitik** çerezler Kriter B kapsamında değerlendirilebilir (açık rıza gerekmez); veri minimizasyonu (örn. IP kısaltma) önerilir. *(Düzeltme: önceki sürümde analitik çerezler için her durumda rıza gerektiği yazılmıştı.)* Üçüncü taraf analitik veya reklam amacıyla da kullanılan analitik bu kapsamda değildir.
+   - İşlevsel: kullanıcı işlevi açıkça talep etmedikçe açık rıza.
+   - Pazarlama / davranışsal reklam: açık rıza.
 
-2. **Aydınlatma:**
-   - Çerez politikası web sitesinde ayrı bir sayfa olarak yayımlanır.
-   - Çerezler kullanılmadan önce kullanıcıya bilgi verilir.
+2. **Aydınlatma:** Çerez politikası ve aydınlatma elde etme anında sunulur; çerez panelinde bağlantı verilmesi iyi uygulamadır.
 
 3. **Rıza:**
-   - "Kabul ediyorum" / "Reddediyorum" eşit görünürlükte olmalı.
-   - Reddetme, kullanımı zorlaştırmamalıdır.
-   - Önceden tıklı kutu (pre-ticked) geçersiz; aktif onay zorunlu.
-   - Granüler (her çerez kategorisi için ayrı tercih) önerilir.
+   - İyi uygulama: renk, büyüklük ve punto açısından eşit "Kabul et", "Reddet" ve "Tercihler" düğmeleri olan panel.
+   - Açık rızaya tabi çerezler varsayılan olarak pasif gelir (önceden işaretli kutu yok).
+   - Rıza, kullanım koşulları veya gizlilik bildirimlerine iliştirilemez.
+   - Her girişte rıza istenmez ("rıza yorgunluğu"); çerez ömrüyle orantılı periyodik hatırlatma uygundur.
 
-4. **Geri Alma:**
-   - Kullanıcı her zaman tercihlerini değiştirebilmelidir.
-   - "Çerez tercihleri" linki tüm sayfalarda erişilebilir.
+4. **Geri alma:** Rıza vermek kadar kolay olmalıdır; sayfa köşesinde küçük bir simge/bant iyi uygulama örneğidir.
+
+5. **Yurt dışı:** Yurt dışındaki sağlayıcıların yerleştirdiği çerezler yurt dışına aktarımdır; m.9 kapsamında bir yol gerekir.
 
 **Operasyonel Etki:**
 
 - CMP (Consent Management Platform) zorunlu.
 - Çerez taraması (cookie scan) çeyreklik.
-- Üçüncü taraf etiket yöneticisi (GTM, Tealium) yapılandırması rıza durumuna göre koşullandırılır.
+- Etiket yöneticisi yapılandırması rıza durumuna göre koşullandırılır; birinci taraf ölçüm Kriter B kapsamında ayrıca değerlendirilir.
+- Kurul'un 08.08.2024 tarihli ve 2024/1361 sayılı Kararı: çerez paneli ve opt-in bulunmaması diğer aykırılıklarla birlikte cezalandırılmıştır. Kaynak: https://www.kvkk.gov.tr/Icerik/8884/2024-1361
 - KPI: rıza oranı, geri alma oranı, çerez politikası ziyareti.
 
 **Wiki:** [10-ozel-konular](../10-ozel-konular/), [03-aydinlatma-ve-acik-riza](../03-aydinlatma-ve-acik-riza/)
@@ -458,11 +539,11 @@ KVKK Kurulu, idari işlem niteliğindeki bağlayıcı kararları aracılığıyl
 
 ### 3.5 Yeterli Korumanın Bulunduğu Ülkeler Listesi
 
-**Konu:** KVKK m.9/4 (12.03.2024 sonrası m.9/2-a) kapsamında **yeterli korumanın bulunduğu ülkeler** Kurul tarafından belirlenir.
+**Konu:** KVKK m.9/1–9/3 (7499 ile değişik) uyarınca Kurul; ülke, ülke içindeki sektörler veya uluslararası kuruluşlar hakkında **yeterlilik kararı** verebilir (eski m.9/3 uyarınca Kurulca ilan edilecek yeterli korumanın bulunduğu ülkeler listesi mekanizmasının yerine).
 
-**Durum (2026 itibarıyla):**
+**Durum (2026-11-20 itibarıyla kontrol edildi):**
 
-> Kurul'un yeterli koruma kararı verdiği ülke listesi her zaman kvkk.gov.tr üzerinden doğrulanmalıdır. Liste, ülkenin koruma rejiminin Türkiye standartlarıyla karşılaştırılması sonucu güncellenir. Belirli ülke onayları olmadan, mevcut yurt dışı aktarımlar için **standart sözleşme**, **BCR** veya **istisnalar** değerlendirilir.
+> Değişik m.9/2 uyarınca yeterlilik kararı Kurul tarafından verilir ve **Resmî Gazete'de yayımlanır**; en geç dört yılda bir değerlendirilir. 2024–2026 dönemi Kurum duyuruları, ilke kararı sayfası ve web araması üzerinden yapılan kontrolde **herhangi bir yeterlilik kararı bulunamamıştır** (hiç bulunmadığı DOĞRULANMADI; her TIA öncesinde Resmî Gazete yeniden kontrol edilir). Yeterlilik kararı yayımlanana kadar aktarımlar **uygun güvencelere** (m.9/4) veya yalnızca arızi aktarımlarda **m.9/6**'ya dayanır.
 
 **Operasyonel Etki:**
 
@@ -478,11 +559,19 @@ KVKK Kurulu, idari işlem niteliğindeki bağlayıcı kararları aracılığıyl
 
 **Konu:** KVKK m.16 ve VERBİS Yön. m.16 uyarınca Kurul'un kayıt yükümlülüğüne istisna getirebileceği kriterler.
 
-**Kurul Kararları (Tarihsel):**
+**Kurul Kararları (eşikler):**
 
-Kurul, çeşitli kararlarla aşağıdaki tipte istisnalar getirmiştir (referanslar için kvkk.gov.tr arşivi):
+- **2018/87 sayılı Karar (19.07.2018):** yıllık çalışan sayısı **50'den az ve yıllık mali bilanço toplamı 25 milyon TL'den az** olan ve ana faaliyet konusu özel nitelikli kişisel veri işleme olmayan veri sorumlularını istisna tutar.
+- **2023/1154 sayılı Karar (06.07.2023):** mali bilanço eşiğini **100 milyon TL**'ye yükseltmiştir.
+- **2025/1572 sayılı Karar (04.09.2025; RG 01.10.2025, Sayı 33034):** yeni istisna; **ana faaliyet konusu özel nitelikli kişisel veri işleme olan** veri sorumlularından **yıllık çalışan sayısı 10'dan az ve yıllık mali bilanço toplamı 10 milyon TL'den az** olanlar da istisna tutulur. Kaynak: https://www.kvkk.gov.tr/Icerik/8388/
+- **2025/2393 sayılı Karar (25.12.2025), duyuru 12.01.2026:** bilanço esasına göre defter tutmayan veri sorumluları bakımından **yalnızca çalışan sayısı** kriteri esas alınır; bilanço esasına göre defter tutanlarda iki kriter birlikte uygulanır. Kaynak: https://www.kvkk.gov.tr/Icerik/8577/
+- **Süre:** 31.12.2021'den sonra yükümlü hale gelenler **30 gün** içinde kaydolur (VERBİS Yönetmeliği m.8/2). 2025 mali bilanço toplamı nedeniyle yükümlü hale gelen kurumlar vergisi mükellefleri için son tarih, 13.05.2026 tarihli ve 2026/1026 sayılı Kararla **05.06.2026**'ya uzatılmıştır. Kaynak: https://www.kvkk.gov.tr/Icerik/8752/
+- **İş ortaklıkları/konsorsiyumlar** kendi adlarına kayıt olmaz; kayıt yükümlüsü ortaklar ortaklık faaliyetlerine ilişkin verileri kendi VERBİS kayıtlarına girer (2021/569 sayılı Karar, hatırlatma 16.03.2026: https://www.kvkk.gov.tr/Icerik/8692/).
+- **Denetim:** 01.08.2024 itibarıyla Kurul, kaydolmayan veri sorumlularına (yaklaşık 130.600 yükümlüden yaklaşık 16.350'si) mali bilanço toplamına dayalı algoritma ile toplam 503.935.000 TL VERBİS idari para cezası uygulamıştır. Kaynak: https://www.kvkk.gov.tr/Icerik/7980/
+- VERBİS Kılavuzu ve "Sorularla VERBİS" 07.10.2025'te güncellenmiştir: https://www.kvkk.gov.tr/Icerik/8426/
 
-- Yıllık çalışan sayısı **50'den az** ve yıllık mali bilanço toplamı belirli eşiğin altında olan gerçek/tüzel kişi veri sorumluları (ana faaliyeti özel nitelikli veri işleme olmayanlar)
+Önceki kararlarla getirilen diğer istisna kategorileri (referanslar için kvkk.gov.tr arşivi):
+
 - Noterler
 - Avukatlar (özel düzenleme)
 - Sandıklar, dernekler, vakıflar (faaliyet alanına bağlı)
@@ -492,7 +581,7 @@ Kurul, çeşitli kararlarla aşağıdaki tipte istisnalar getirmiştir (referans
 
 - Şirket büyüklüğü Kurul'un istisna eşiklerini aşıyorsa kayıt zorunlu.
 - Eşik altında olan grup şirketleri için ayrı değerlendirme.
-- Kurul'un istisna eşiklerini güncellemesi anlık etki yaratabilir.
+- Kurul'un istisna eşiklerini güncellemesi anlık etki yaratabilir; 30 günlük kayıt süresi yükümlülüğün doğduğu tarihten (örn. bilançoyu gösteren kurumlar vergisi beyannamesi) itibaren işler.
 
 **Wiki:** [02-envanter-ve-sicil](../02-envanter-ve-sicil/), [12-mevzuat-arsiv/verbis-yonetmelik.md](verbis-yonetmelik.md)
 
@@ -510,6 +599,59 @@ Kurul, çeşitli kararlarla aşağıdaki tipte istisnalar getirmiştir (referans
 | Çeşitli | Açık rıza tek metin | Aydınlatma + rıza tek dokümanda | Geçersiz; ayrı dokümanlar zorunlu |
 | Çeşitli | İşveren çalışan e-posta izleme | Aydınlatma + meşru menfaat değerlendirmesi | Tüm gözetim faaliyetleri politika ve aydınlatma ile çerçevelenmelidir |
 | Çeşitli | Kişisel veri satışı / paylaşımı | Üçüncü taraflara satılması | Açık rıza gerekli (m.5/2 dışında); aksi halde ihlal |
+
+### 3.8 İlke Kararları 2025–2026
+
+İlke kararları KVKK m.15/6 uyarınca alınır, Resmî Gazete'de ve kvkk.gov.tr'de yayımlanır; aykırılık m.18 uyarınca yaptırıma bağlanır. Liste kaynağı: https://www.kvkk.gov.tr/Icerik/7201/ilke-kararlari
+
+| Karar | Resmî Gazete | Konu | Temel kural |
+|-------|--------------|------|-------------|
+| 2025/1072 (10.06.2025) | 26.06.2025, Sayı 32938 | Satış sırasında SMS doğrulama kodu | Kodun amacı açıklanır; üyelik, veri işleme izni ve ticari ileti onayı tek kodla alınmaz; ayrı açık rızalar; pazarlama rızası satışın ön şartı yapılamaz. https://www.kvkk.gov.tr/Icerik/8339/ |
+| 2025/2120 (06.11.2025) | 09.12.2025, Sayı 33102 | Otellerde kimlik fotokopisi | Ad, soyad, T.C. kimlik no kaydı hukuka uygundur (1774 sayılı Kimlik Bildirme Kanunu); kimlik belgesinin **fotokopisinin** alınıp saklanması aşırıdır; uygulamaya son verilir, mevcut kopyalar imha edilir. https://www.kvkk.gov.tr/Icerik/8554/ |
+| 2026/266 (11.02.2026) | 28.02.2026, Sayı 33182 | Sadakat kartının üçüncü kişilerce kullanılması | Başkasının telefon/kart numarası söylenerek doğrulamasız alışveriş yapılması m.5'te bir şarta dayanmaz, doğruluk ve güvenlik ilkelerine aykırıdır; doğrulama mekanizması gerekir. 6 aylık uyum süresi 2026/1491 sayılı Kararla (22.07.2026; RG 13.08.2026, Sayı 33339) **28.02.2027**'ye uzatılmıştır. https://www.kvkk.gov.tr/Icerik/8670/ · https://www.kvkk.gov.tr/Icerik/8899/ |
+| 2026/347 (18.02.2026) | 24.03.2026, Sayı 33203 | Aydınlatma ve açık rıza metinlerinin ayrılması | Aydınlatma her durumda yapılır ve onaya bağlanmaz; açık rızaya dayanılıyorsa aydınlatma ve rıza metni ayrı metinlerdir (veya ayrı başlıklar ve ayrı beyanlar); başkasının metni kopyalanmaz; sade dil; "m.5 ve m.6'daki şartlar" gibi muğlak ifadeler kullanılmaz. https://www.kvkk.gov.tr/Icerik/8710/ |
+| 2026/348 (18.02.2026) | 31.03.2026, Sayı 33210 | Apartmanda borç listelerinin ortak alanlara asılması | Asansör/giriş gibi alanlara borç listesi asılması m.5'te bir şarta dayanmaz ve m.12'ye aykırıdır; kapalı e-posta/mesajlaşma grupları veya bu hizmete özgü uygulamalar kullanılır. https://www.kvkk.gov.tr/Icerik/8719/ |
+| 2026/921 (29.04.2026) | 02.06.2026, Sayı 33268 | Mesai takibinde biyometrik veri | Açık rıza olsa dahi mesai takibi amacıyla kullanılamaz (ölçülülük); kart/PIN/RFID/elle giriş alternatifleri. 27.08.2026 açıklaması: güvenlik amaçlı biyometrik erişim kontrolü karar kapsamı dışındadır, somut olay bazında değerlendirilir. https://www.kvkk.gov.tr/Icerik/8762/ · https://www.kvkk.gov.tr/Icerik/8912/ |
+| 2026/1095 (20.05.2026) | 01.07.2026, Sayı 33297 | Kaza mağdurlarının verileri | Yetkisini aşan hasar danışmanlık şirketleri ve eksperlerin işleme şartı yoktur; sigorta eksperinin verileri yetkisiz kişilere aktarması TCK m.136 suçunu oluşturabilir; rol tabanlı erişim, loglama ve eğitim gerekir. https://www.kvkk.gov.tr/Icerik/8787/ |
+| 2026/1301 (01.07.2026) | 28.07.2026, Sayı 33323 | Kamu kurumlarının internette kişisel veri paylaşması | Yalnızca gerekli veri; maskeleme/anonimleştirme; yayın süresi belirlenir ve sonunda kaldırılır; sınav/kura sonuçlarında e-Devlet veya iki faktörlü platformlar tercih edilir; mevcut yayınlar gözden geçirilir. https://www.kvkk.gov.tr/Icerik/8835/ |
+| 2026/2035 (16.09.2026) | 08.10.2026, Sayı 33394 | İşverenin kurumsal e-posta ve iş iletişim kanallarını denetlemesi | Denetim KVKK şartlarına, aydınlatmaya ve güvenliğe tabidir; iş amaçlı/özel kullanım kuralları açık olmalı; kademeli denetim; içerik incelemesi yalnızca somut şüphe veya olayla bağlantılı ve amaçla sınırlı; özel nitelikli ve üçüncü kişi verileri gözetilir; erişim sınırlı ve loglanır; iş ilişkisi sonrası işleme ayrıca hukuki dayanak gerektirir. https://www.kvkk.gov.tr/Icerik/9044/ |
+
+### 3.9 Öne Çıkan Karar Özetleri ve Duyurular 2024–2026
+
+| Tarih | Konu | Uygulama notu |
+|-------|------|---------------|
+| 08.02.2024 | 2024/197 sayılı Karar | Üniversitede parmak izi ile yoklama: durdurma, alternatife geçme, verilerin imhası. https://www.kvkk.gov.tr/Icerik/8860/2024-197 |
+| 08.08.2024 | 2024/1361 sayılı Karar | Sesli kamera kaydı, aydınlatma yokluğu, çerez paneli yokluğu, pazarlama rızasının hizmet ön şartı yapılması; m.18/1-a ve m.18/1-b uyarınca toplam 265.000 TL. https://www.kvkk.gov.tr/Icerik/8884/2024-1361 |
+| 08.08.2024 | 2024/1385 sayılı Karar | E-ticarette geç tespit edilen credential stuffing ihlali; m.18/1-b uyarınca 3.250.000 TL. https://www.kvkk.gov.tr/Icerik/8140/2024-1385 |
+| 15.08.2024 | 2024/1393 sayılı Karar | Uçak içi internette veri sorumlusu internet servis sağlayıcıdır; hizmetin gereksiz açık rızaya bağlanması m.4'e aykırıdır; m.18/1-b uyarınca 90.000 TL. https://www.kvkk.gov.tr/Icerik/8885/2024-1393 |
+| 10.06.2026 | 2026/1183 sayılı Karar | "Marka elçisi" yönlendirmesiyle toplanan numaralara pazarlama SMS/araması; m.18/1-b uyarınca 1.000.000 TL. https://www.kvkk.gov.tr/Icerik/8887/2026-1183 ; üçüncü kişilerden elde edilen verilerle pazarlamaya ilişkin 21.07.2026 duyurusu: https://www.kvkk.gov.tr/Icerik/8830/ |
+| 14.01.2026 | Duyuru | Mobil uygulama anlık bildirimleri m.4 ve m.5'e uygun olmalıdır. https://www.kvkk.gov.tr/Icerik/8578/ |
+| 29.01.2026 | Duyuru | Kamu kurumları resmî işlerde personeli yurt dışı menşeli haberleşme uygulamalarını (örn. WhatsApp) kullanmaya zorlamamalıdır (2019/12 sayılı Cumhurbaşkanlığı Genelgesi). https://www.kvkk.gov.tr/Icerik/8607/ |
+| 11.02.2026 / 20.02.2026 | Resen incelemeler | X Internet Unlimited Co. ve X.AI Corp. (Grok), Google LLC (Google Assistant yanlış tetiklenme) ile TikTok, Instagram, Facebook, YouTube, X ve Discord'da çocuk verileri hakkında resen inceleme başlatıldı. https://www.kvkk.gov.tr/Icerik/8614/ · https://www.kvkk.gov.tr/Icerik/8613/ · https://www.kvkk.gov.tr/Icerik/8666/ |
+| 08.06.2026 | Duyurular | İş yerlerinde ve apartmanlarda güvenlik kamerası kullanımı (634 sayılı Kat Mülkiyeti Kanunu). https://www.kvkk.gov.tr/Icerik/8770/ · https://www.kvkk.gov.tr/Icerik/8769/ |
+| 23.06.2026 | Duyuru | Belediyelerin turistik canlı yayınlarında yüz ve plakaların görünmesi kişisel veri işlemedir; tanımlayıcı olmayan görüntü yayımlanır. https://www.kvkk.gov.tr/Icerik/8777/ |
+| 01.10.2026 | Duyuru | İlgili kişi başvurularına cevap **yazılı veya elektronik ortamda** verilir; telefon veya yüz yüze bilgilendirme m.13 kapsamındaki cevap sayılmaz. https://www.kvkk.gov.tr/Icerik/9024/ |
+
+### 3.10 Rehberler ve Bilgi Notları 2024–2026
+
+| Tarih | Doküman | Bağlantı |
+|-------|---------|----------|
+| 16.01.2024 | T.C. Kimlik Numaralarının İşlenmesi Hakkında Rehber | https://www.kvkk.gov.tr/Icerik/7798/ |
+| 19.01.2024 | Deepfake Bilgi Notu | https://www.kvkk.gov.tr/Icerik/7807/ |
+| 24.01.2024 | Seçim Faaliyetlerinde Kişisel Verilerin Korunması Rehberi | https://www.kvkk.gov.tr/Icerik/7813/ |
+| 05.08.2024 | Kanunlarda Öngörülme Kişisel Veri İşleme Şartına İlişkin Bilgi Notu | https://www.kvkk.gov.tr/Icerik/7823/ |
+| 08.11.2024 | Sohbet Robotları (ChatGPT Örneği) Hakkında Bilgi Notu | https://www.kvkk.gov.tr/Icerik/8047/ |
+| 02.01.2025 | Kişisel Verilerin Yurt Dışına Aktarılması Rehberi | https://www.kvkk.gov.tr/Icerik/8143/ |
+| 08.01.2025 | Bankacılık Sektörü İyi Uygulamalar Rehberi (güncellendi) | https://www.kvkk.gov.tr/Icerik/8148/ |
+| 26.02.2025 | Özel Nitelikli Kişisel Verilerin İşlenmesine İlişkin Rehber (7499 sonrası) | https://www.kvkk.gov.tr/Icerik/8184/ |
+| 11.04.2025 | Ödeme ve Elektronik Para Sektörü İyi Uygulamalar Rehberi | https://www.kvkk.gov.tr/Icerik/8286/ |
+| Temmuz 2025 | Çerez Uygulamaları Hakkında Rehber, güncel baskı (Yayın No: 69) | bkz. §3.4 |
+| 24.11.2025 | Üretken Yapay Zekâ ve Kişisel Verilerin Korunması Rehberi (15 Soruda) | https://www.kvkk.gov.tr/Icerik/8547/ |
+| 05.03.2026 | İş Yerlerinde Üretken Yapay Zekâ Araçlarının Kullanımı | https://www.kvkk.gov.tr/Icerik/8674/ |
+| 12.03.2026 | Etken Yapay Zekâ (Agentic AI) | https://www.kvkk.gov.tr/Icerik/8683/ |
+| 28.07.2026 | Kamu Kurum ve Kuruluşları ile Kamu Kurumu Niteliğindeki Meslek Kuruluşları İçin KVKK'ya Uyum Rehberi | https://www.kvkk.gov.tr/Icerik/8833/ |
+| 22.09.2026 | Avukatların Mesleki Faaliyetlerinde Kişisel Verilerin Korunmasına İlişkin Uygulama Rehberi (TBB katkısıyla) | https://www.kvkk.gov.tr/Icerik/8990/ |
+| (listede tarihsiz) | Canlı Yayımlanan Reality Show Niteliğindeki Programlarda Kişisel Verilerin İşlenmesine Yönelik Rehber | https://www.kvkk.gov.tr/Icerik/2030/rehberler (yayım tarihi DOĞRULANMADI) |
 
 ---
 
